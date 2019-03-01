@@ -1,5 +1,5 @@
 let container = document.querySelector("#main");
-//criar(10);
+//criar(500);
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));

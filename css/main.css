@@ -7,6 +7,9 @@ body
 {
     margin: 0;
     padding:0;
+    display: grid;
+    grid-template-columns: 97% 3%
+    
 }
 
 #search-bar-div
@@ -18,15 +21,14 @@ body
 {
     border-style: none;
     outline: none;
-    padding-left: none;
-    width: 95%;
+    width: 98%;
 }
 
 #search-icon-div
 {
     text-align: center;
     padding-right: 0;
-    padding-left: 2em;
+    align-items: stretch;
 }
 
 #a-search-icon
