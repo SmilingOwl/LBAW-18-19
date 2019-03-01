@@ -20,4 +20,4 @@ lbaw project
 [GitLab A3](https://git.fe.up.pt/lbaw/lbaw18/lbaw1834/wikis/a3)
 
 
-[Bootstrap tutorial](https://www.w3schools.com/bootstrap/default.asp)
+[Bootstrap tutorial](https://www.w3schools.com/bootstrap4/default.asp)
