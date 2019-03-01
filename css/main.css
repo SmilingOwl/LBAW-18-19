@@ -1,3 +1,41 @@
+body
+{
+    background-color: rgb(236, 238, 253);
+}
+
+#search-container
+{
+    margin: 0;
+    padding:0;
+}
+
+#search-bar-div
+{
+    padding: 0;
+}
+
+#search-bar
+{
+    border-style: none;
+    outline: none;
+    padding-left: none;
+    width: 95%;
+}
+
+#search-icon-div
+{
+    text-align: center;
+    padding-right: 0;
+    padding-left: 2em;
+}
+
+#a-search-icon
+{
+    text-decoration: none;
+    color: default;
+
+}
+
 .btn
 {
     background-color: blue;

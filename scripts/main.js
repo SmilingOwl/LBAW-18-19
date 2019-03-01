@@ -1,6 +1,5 @@
 let container = document.querySelector("#main");
-console.log(container);
-criar(10);
+//criar(10);
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -13,12 +12,10 @@ async function criar(tempo) {
         novo.setAttribute("class", "spinner-border");
         container.appendChild(novo);
         await sleep(tempo);
-        
         let novo3 = document.createElement("div");
         novo3.setAttribute("class", "spinner-border text-primary");
         container.appendChild(novo3);
         await sleep(tempo);
-        
         let novo4 = document.createElement("div");
         novo4.setAttribute("class", "spinner-border text-success");
         container.appendChild(novo4);
