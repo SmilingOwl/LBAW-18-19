@@ -1,44 +1,75 @@
-body
-{
-    background-color: rgb(236, 238, 253);
+body {
+    background-color: rgb(214, 216, 185);
 }
 
-#search-container
-{
+#main {
+    text-align: center;
+}
+
+#logo {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+#search-container {
+    margin-bottom: 2em;
+
+}
+
+
+#search-container2 {
     margin: 0;
-    padding:0;
+    padding: 0;
     display: grid;
-    grid-template-columns: 97% 3%
-    
+    grid-template-columns: 33px auto 3%;
 }
 
-#search-bar-div
-{
+#search-bar-div {
     padding: 0;
 }
 
-#search-bar
-{
+#search-bar {
     border-style: none;
     outline: none;
     width: 98%;
+    padding-left: 0.5em;
 }
 
-#search-icon-div
-{
+#search-icon-div {
     text-align: center;
     padding-right: 0;
     align-items: stretch;
 }
 
-#a-search-icon
-{
+#a-search-icon {
     text-decoration: none;
     color: default;
 
 }
 
-.btn
+
+#expand-down {
+    position: fixed;
+    top: 90%;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    top: 99%;
+    transform: translate(-50%, -100%);
+}
+
+@media screen and (max-height: 518px){
+    #expand-down {
+        display: none;
+    }
+}
+
+#categories-page
 {
-    background-color: blue;
+    margin-top: 20em;
+}
+
+.cat-row
+{
+    margin-bottom: 0.4em;
 }
