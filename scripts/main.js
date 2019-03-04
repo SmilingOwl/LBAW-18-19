@@ -1,35 +1,53 @@
-//https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
-let on_view_point = document.querySelector("#logo");
-let bouding = on_view_point.getBoundingClientRect();
-let main=document.querySelector("#main");
-let more_cat_button=document.querySelector("#expand-down");
+window.onload = function () {
 
-let categories_page=document.querySelector("#categories-page");
+    let on_view_point = document.querySelector("#logo");
+    let bouding = on_view_point.getBoundingClientRect();
+    let main = document.querySelector("#main");
+    let more_cat_button = document.querySelector("#expand-down");
+    let expands_exists = true;
+    testExpandButton();
+    let categories_page = document.querySelector("#categories-page");
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
 
-more_cat_button.addEventListener("click",function()
-{
-    categories_page.scrollIntoView({block:"start",behavior:"smooth"});
+    more_cat_button.addEventListener("click", function () {
+        categories_page.scrollIntoView({
+            block: "start",
+            behavior: "smooth"
+        });
 
-});
+    });
+    window.onresize = testExpandButton;
+    function testExpandButton(){
+        if (window.innerHeight >= 600) {
+            more_cat_button.style.display = "flex";
+            expands_exists = true;
+        } else {
+            more_cat_button.style.display = "none";
+            expands_exists = false;
+        }
 
-window.onscroll = function()
-{
-    let x_offset=window.pageXOffset;
-    let y_offset=window.pageYOffset;
-    let per=y_offset*100.0/bouding.bottom;
-    per=1-(per/100.0);
-    more_cat_button.style.opacity=per;
-    if (bouding.bottom >= y_offset && bouding.right >= x_offset && bouding.left <= (window.innerWidth || document.documentElement.clientWidth)+x_offset && bouding.top <= (window.innerHeight || document.documentElement.clientHeight)+y_offset) {
-        more_cat_button.style.display="flex";
-    } else {
-        more_cat_button.style.display="none";
+    }
+    window.onscroll = function () {
+        if (!expands_exists) return;
+        let x_offset = window.pageXOffset;
+        let y_offset = window.pageYOffset;
+        let per = y_offset * 100.0 / bouding.bottom;
+        per = 1 - (per / 100.0);
+        more_cat_button.style.opacity = per;
+        //https://gomakethings.com/how-to-test-if-an-element-is-in-the-viewport-with-vanilla-javascript/
+        if (bouding.bottom >= y_offset && bouding.right >= x_offset && bouding.left <= (window.innerWidth || document.documentElement.clientWidth) + x_offset && bouding.top <= (window.innerHeight || document.documentElement.clientHeight) + y_offset) {
+            more_cat_button.style.display = "flex";
+        } else {
+            more_cat_button.style.display = "none";
+        }
+
     }
 
-}
-
-window.onbeforeunload=function()
-{
-    main.scrollIntoView();
+    window.onbeforeunload = function () {
+        main.scrollIntoView();
+    }
 }
 
 
