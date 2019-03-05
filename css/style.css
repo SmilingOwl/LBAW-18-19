@@ -12,7 +12,7 @@ main {
 
 .has-search-right {
     position: relative;
-    left: 60%;
+    left: 50%;
     transform: translateX(-50%);
     width: 70%;
 }
@@ -141,9 +141,10 @@ a.article:hover {
 
 ul.pagination {
     display: flex;
-    padding-left: 50%;
+    padding-left: 40%;
     list-style: none;
     border-radius: .25rem;
+    margin-bottom: 50px;
 }
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -152,7 +153,6 @@ ul.pagination {
 #content {
     width: 100%;
     padding: 20px;
-    min-height: 100vh;
     transition: all 0.3s;
 }
 

@@ -1,6 +1,6 @@
 body
 {
-  background: url('https://source.unsplash.com/twukN12EN7c/1920x1080') no-repeat center center fixed;
+  background: url() no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -8,7 +8,11 @@ body
     background-color: rgb(236, 238, 253);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+    --footer-color: rgb(245, 238, 238,0.1);
+
 }
+
+html, body { height: 100%; }
 
 #search-container
 {
@@ -53,12 +57,12 @@ body
   }
   
   /* style the container */
-  .container {
+  div#form.container {
     position: relative;
-    left: 50%;transform: translateX(-50%);
     border-radius: 5px;
     max-width: 800px;
     background-color:#f2f2f2;
+    margin-bottom: 80px;
   } 
   
   /* style inputs and link buttons */
@@ -131,7 +135,7 @@ body
     left: 50%;
     transform: translate(-50%);
     border: 2px solid #ddd;
-    height: 285px;
+    height: 310px;
   }
 
   
@@ -155,6 +159,7 @@ body
       margin-top: 15px;
       margin-bottom: 15px;
     }
+
     /* hide the vertical line */
     .vl {
       display: none;
@@ -164,12 +169,23 @@ body
       display: block;
       text-align: center;
     }
-    .container {
+    div#form.container {
       max-width: 330px;
+      margin-bottom:90px;
     }
+
+    footer{
+      line-height: 1;
+      max-height: 30px;
+    }
+
 
   }
 
+
+footer{
+
+}
 .logInText{
     text-decoration: none;
     font-size: 13px;
@@ -203,3 +219,44 @@ body
   input#customCheck1{
     width: 5%;
   }
+
+  
+.platform-info {
+  background-color: var(--footer-color);
+  box-shadow: 0 50vh 0 50vh var(--footer-color);
+  font-size: 13px;
+  font-weight: bold; 
+  max-height: 20px;
+  text-align: center;
+
+}
+
+#platform-link-info
+{
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+#platform-link-info a
+{
+  text-decoration: none;
+  color: black;
+
+}
+
+nav.navbar{
+  background-color: rgb(245, 238, 238,0.1);
+}
+ul.navbar-nav {
+ 
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+li.nav-item{
+  margin-right: 8px;
+}
