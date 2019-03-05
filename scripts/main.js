@@ -7,9 +7,9 @@ window.onload = function () {
     let expands_exists = true;
     testExpandButton();
     let categories_page = document.querySelector("#categories-page");
-    $(document).ready(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip(); 
+      });
 
     more_cat_button.addEventListener("click", function () {
         categories_page.scrollIntoView({
