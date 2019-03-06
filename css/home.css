@@ -17,7 +17,10 @@ body {
     text-align: center;
     height: 100vh;
     display: grid;
-    grid-template-rows: auto auto 25%;
+    grid-template-rows: 33% 17% 15% 35%;
+    grid-template-columns: auto;
+    justify-items: center;
+    padding: 0;
 }
 
 #logo {
@@ -25,12 +28,18 @@ body {
     padding-bottom: 2em;
     width: 400px;
 }
-
 #search-container {
     margin-bottom: 2em;
+    width: 35em;
+    align-items: center;
 
 }
-
+@media screen and (max-width: 770px) {
+    #search-container {
+        width: 100%;
+    
+    }
+}
 .div-cat
 {
     padding: 0.1em;

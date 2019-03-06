@@ -10,52 +10,95 @@ body {
     --footer-color: rgb(37, 37, 37);
 }
 
-#top-bar
+#search-container
 {
-    background-color: var(--footer-color);
-    color: white;
-    padding: 1em;
-}
-#search-container {
-}
-
-.div-cat
-{
-    padding: 0.1em;
-}
-
-
-#search-container2 {
     margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 33px auto 3%;
+    padding:0;
+    width: 20em;
+    margin-left: 1em;
+    
 }
 
-#search-bar-div {
+#search-bar-div
+{
     padding: 0;
 }
 
-#search-bar {
+#search-bar
+{
     border-style: none;
     outline: none;
     width: 98%;
-    padding-left: 0.5em;
 }
 
-#search-icon-div {
+#search-icon-div
+{
     text-align: center;
     padding-right: 0;
     align-items: stretch;
 }
 
-#a-search-icon {
+#a-search-icon
+{
     text-decoration: none;
     color: default;
-
 }
 
-#cat-icon
+
+#search-container2 {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  align-items: center;
+}
+
+#search-bar {
+  border-style: none;
+  outline: none;
+  width: 98%;
+  margin: 0;
+  padding-left: 0.5em;
+  height: 45px;
+}
+#search-bar-cat
 {
-    width: 22.67px;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
 }
+
+.nav-item
+{
+  margin-left: 1em;
+}
+#navbarResponsive
+{
+  align-self: flex-end;
+}
+
+#navbarResponsive a
+{
+  margin: 0.5em;
+}
+#form-bar
+{
+  width: 100%;
+}
+/* LOGIN */
+
+  
+  /* style inputs and link buttons */
+  input,
+  .btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 25px;
+    text-decoration: none; /* remove underline from anchors */
+  }
+  
