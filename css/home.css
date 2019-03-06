@@ -9,7 +9,11 @@ body {
     font-size: 14px;
     --footer-color: rgb(37, 37, 37);
 }
-
+.image
+{
+    width: 150px;
+    height: 150px;
+}
 #main {
     text-align: center;
     height: 100vh;
@@ -18,8 +22,9 @@ body {
 }
 
 #logo {
-    padding-top: 2em;
+    padding-top: 5em;
     padding-bottom: 2em;
+    width: 800px;
 }
 
 #search-container {
@@ -27,6 +32,10 @@ body {
 
 }
 
+.div-cat
+{
+    padding: 0.1em;
+}
 
 
 #search-container2 {
