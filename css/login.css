@@ -8,11 +8,11 @@ body
     background-color: rgb(236, 238, 253);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    --footer-color: rgb(245, 238, 238,0.1);
+    --footer-color: rgb(220, 224, 232,0.4)
 
 }
 
-html, body { height: 100%; }
+/*html, body { height: 100%; }*/
 
 #search-container
 {
@@ -63,6 +63,7 @@ html, body { height: 100%; }
     max-width: 800px;
     background-color:#f2f2f2;
     margin-bottom: 80px;
+    margin-top: 20px;
   } 
   
   /* style inputs and link buttons */
@@ -130,12 +131,20 @@ html, body { height: 100%; }
   }
   
   /* vertical line */
-  .vl {
+  #login.vl {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     border: 2px solid #ddd;
-    height: 310px;
+    height: 290px;
+  }
+
+  #register.vl {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px solid #ddd;
+    height: 322px;
   }
 
   
@@ -201,11 +210,12 @@ footer{
   }
 
   .icon {
-    margin: 5px 0;
+    margin: 0px 0px 0px 5px;
     padding: 20px;
     background: dodgerblue;
     color: white;
     min-width: 50px;
+    max-width: 50px;
     text-align: center;
   }
   form{
@@ -252,6 +262,7 @@ ul.navbar-nav {
  
   display: -ms-flexbox;
   display: flex;
+  float: right;
   flex-direction: row;
   padding-left: 0;
   margin-bottom: 0;
