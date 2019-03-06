@@ -2,148 +2,200 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>LearnIt</title>
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>LearnIt</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
+<body>  
+    <nav class="navbar navbar-expand-lg static-top" style="background-color:rgb(220, 224, 232,0.4)">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+                <img src="../images/logo.png" alt="logo" style="width:120px; height:50px;">
+          </a>
 
-<body>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <nav class="navbar navbar-expand-sm">
-                <!-- Brand/logo -->
-                <a class="navbar-brand" href="#">
-                  <img src="../images/logo.png" alt="logo" style="width:40px;">
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+
+              <form class="form-inline" action="/action_page.php">
+                <input class="form-control ml-auto" type="text" placeholder="Search">
+              </form>
+
+              <button type="button" class="btn btn-outline-primary ml-auto" style="width: 200px">Ask Question</button>
+
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a href="#"><i class="fa fa-fw fa-home"></i>Home
+                        <span class="sr-only">(current)</span>
+                      </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#"><i class="fa fa-fw fa-user"></i> Sign in</a>
+                </li>
+              </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+
+            <!-- Sidebar -->
+            <ul class="sidebar navbar-nav" id="admin" style="float: left">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                  <i class="fas fa-folder-open">Categories</i></a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link active" href="charts.html">
+                    <i class="fas fa-users">Users</i>
                 </a>
-                <!-- Links -->
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link 1</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link 2</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link 3</a>
-                  </li>
-                </ul>
-              </nav>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                        <i class="fas fa-star">Moderators</i></a>
+              </li>
+            </ul>
         
-        <div class="form-group has-search-right" >
-                <a href="#" class="form-control-feedback"><span class="fa fa-search"></span></a>
-                <input type="text" class="form-control" placeholder="Search">
-        </div>
-
-    <div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <ul class="list-unstyled components">            
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Users</a>
-                    <ul class="collapse list-unstyled" id="Submenu1">
-                        <li>
-                            <a href="#">List</a>
-                        </li>
-                        <li>
-                            <a href="#">Flagged</a>
-                        </li>
-                        <li>
-                            <a href="#">Banned</a>
-                        </li>
-                        <li>
-                            <a href="#">Promote</a>
-                        </li>
-                    </ul>
-                </li>
+            <div id="content-wrapper">
+        
+              <div class="container-fluid">
                 
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Moderators</a>
-                    <ul class="collapse list-unstyled" id="Submenu2">
-                        <li>
-                            <a href="#">List</a>
-                        </li>
-                        <li>
-                            <a href="#">Demote</a>
-                        </li>
-                    </ul>
-                </li>
+                <!-- DataTable -->
+               
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                          <tr>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Rank</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                    
+                        <tbody>
+                          <tr>
+                            <td>Tiger Nixon</td>
+                            <td>tiger@gmail.com</td>
+                            <td>Edinburgh</td>
+                            <td>61</td>
+                            
+                          </tr>
+                          <tr>
+                            <td>Garrett Winters</td>
+                            <td>ggarrett@gmail.com</td>
+                            <td>Tokyo</td>
+                            <td>63</td>
+                          
+                          </tr>
+                          <tr>
+                            <td>Ashton Cox</td>
+                            <td>foxcoxxx@gmail.com</td>
+                            <td>San Francisco</td>
+                            <td>66</td>
+                           
+                          </tr>
+                          <tr>
+                            <td>Cedric Kelly</td>
+                            <td>cedricBoxed@gmail.com</td>
+                            <td>Edinburgh</td>
+                            <td>22</td>
+                          </tr>
+                          <tr>
+                            <td>Airi Satou</td>
+                            <td>accountAir@hotmail.com</td>
+                            <td>Tokyo</td>
+                            <td>33</td>
+                          </tr>
+                          <tr>
+                            <td>Brielle Williamson</td>
+                            <td>brielle@hotmail.com</td>
+                            <td>New York</td>
+                            <td>61</td>
+                        </tr>
+                          <tr>
+                            <td>Herrod Chandler</td>
+                            <td>herold@gmail.cokm</td>
+                            <td>San Francisco</td>
+                            <td>59</td>
+                          </tr>
+                          <tr>
+                            <td>Rhona Davidson</td>
+                            <td>davidson1998@gmail.com</td>
+                            <td>Tokyo</td>
+                            <td>55</td>
+                          </tr>
+                          <tr>
+                            <td>Colleen Hurst</td>
+                            <td>develperCollen@hotmail.com</td>
+                            <td>San Francisco</td>
+                            <td>39</td>
+                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="card-footer small text-muted">Updated yesterday at 11:45 PM</div>
+                </div>
+        
+              </div>
+        
+            </div>
+        
+          </div>
+          <br>
+          <br>
+        
+          <footer class="platform-info" id="platform-link-info">
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <a href="../pages/about.html">
+                                About us
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="../pages/faq.html">
+                                FAQ
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="../pages/contacts.html">
+                                Contacts
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="#">
+                                Terms of Service
+                            </a>
+                        </div>
+                       
+                    </div>        
+                </div>
                 
-            </ul>
+                    <div class="container my-auto">
+                      <div class="copyright text-center my-auto">
+                        <span>Copyright © LearnIt 2019</span>
+                      </div>
+                    </div>
+              </footer>
 
-        </nav>
-
-        <!-- Page Content  -->
-
-        <div id="content">
-
-            <p>User1 .....</p>
-            
-            <div class="line"></div>
-
-            <p>Lorem Ipsum Dolor</p>
-           
-            <div class="line"></div>
-
-            <p>Lorem Ipsum Dolor</p>
-
-            <div class="line"></div>
-
-            <p>Lorem Ipsum Dolor</p>
-        </div>
-    </div>
-
-    <div>
-            <ul class="pagination">
-              <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item active"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-    </div>
 
 </body>
-<footer class="platform-info" id="platform-link-info">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <a href="../pages/about.html">
-                        About us
-                    </a>
-                </div>
-                <div class="col-3">
-                    <a href="../pages/faq.html">
-                        FAQ
-                    </a>
-                </div>
-                <div class="col-3">
-                    <a href="../pages/contacts.html">
-                        Contacts
-                    </a>
-                </div>
-                <div class="col-3">
-                    <a href="#">
-                        Terms of Service
-                    </a>
-                </div>
-               
-            </div>        
-        </div>
-        
-      </footer>
 </html>
