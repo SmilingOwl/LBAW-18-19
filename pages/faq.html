@@ -14,43 +14,44 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
 <body>  
-    <nav class="navbar navbar-expand-lg static-top" style="background-color:rgb(220, 224, 232,0.4)">
-        <div class="container">
-          <a class="navbar-brand" href="#">
-                <img src="../images/logo.png" alt="logo" style="width:140px; height:50px;">
-          </a>
+    <nav class="navbar navbar-expand-lg bg-light navbar-ligh sticky-top" id="form-bar">
+        <a class="navbar-brand" href="#">
+            <img src="../images/logo.png" alt="logo" style="width:170px; height:50px;">
+        </a>
+        <form class="form-inline" action="/action_page.php">
+            <div class="form-control form-control-lg" id="search-container">
+                <div id="search-container2">
+                    <div id="search-bar-cat">
+                        <img src="../images/dead.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">
+                    </div>
+                    <div id="search-bar-div">
+                        <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
+                    </div>
+                    <div id="search-icon-div">
+                        <a href="../pages/search.html" id="a-search-icon">
+                            <i class="fas fa-search" id="search-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">
+            <img src="../images/dead.png" class="mx-auto d-block img-fluid rounded image" width="30" height="30">
+        </button>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-
-              <form class="form-inline" action="/action_page.php">
-                <input class="form-control ml-auto" type="text" placeholder="Search">
-              </form>
-
-              <button type="button" class="btn btn-outline-primary ml-auto" style="width: 200px">Ask Question</button>
-
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a href="#"><i class="fa fa-fw fa-home"></i>Home
-                        <span class="sr-only">(current)</span>
-                      </a>
-                </li>
-                <li class="nav-item">
-                    <a href="#"><i class="fa fa-fw fa-user"></i> Sign in</a>
-                </li>
-              </ul>
-          </div>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
+            <button type="button" class="btn btn-dark " style="width: 9em">Ask Question</button>
+            <a href="#"><i class="fa fa-fw fa-user"></i> Sign in</a>
+            <a href="#"><i class="fa fa-fw fa-user"></i> Register</a>
         </div>
     </nav>
-
     
   <footer class="platform-info" id="platform-link-info">
 
