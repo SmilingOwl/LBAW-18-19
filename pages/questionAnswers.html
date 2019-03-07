@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" media="screen" href="../css/catg.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -18,46 +19,38 @@
 
 <body>  
 
-    <nav class="navbar navbar-transparent navbar-expand-sm">
-        <!-- Brand/logo --> 
-        <a class="navbar-brand" href="#">
-          <img src="../images/logo2.png" alt="logo" style="width:120px;">
-        </a>
-        <!-- Links -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link 3</a>
-          </li>
-        </ul>
-        <!--<form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-
-            <div class="input-group md-form form-sm form-2 pl-0 align-self-center">
-                    <div class="dropdown show">
-                            <a class="btn dropdown-toggle button-backg " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <!--   <a class="dropdown-item" href="#"><img src="../images/logo_lbaw.png" alt="all" style="width:40px;"></a>
-                                    <span class="caret"></span>-->
-                             </a>
-                          
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                              <a class="dropdown-item" href="#"><img src="../images/icon_dna.png" alt="biology" style="width:40px;"></a>
-                              <a class="dropdown-item" href="#"><img src="../images/test_tube.png" alt="chemistry" style="width:15px;"></a>
-                            </div>
-                          </div>
-                <input class="form-control my-0 py-1" type="text" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                  <span class="input-group-text lighten-3" id="basic-text1"><i class="fas fa-search text-grey"
-                      aria-hidden="true"></i></span>
+  <nav class="navbar navbar-expand-lg bg-light navbar-ligh sticky-top" id="form-bar">
+    <a class="navbar-brand" href="#">
+        <img src="../images/logo.png" alt="logo" style="width:170px; height:50px;">
+    </a>
+    <form class="form-inline" action="/action_page.php">
+        <div class="form-control form-control-lg" id="search-container">
+            <div id="search-container2">
+                <div id="search-bar-cat">
+                    <img src="../images/dead.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">
                 </div>
-              </div>
-      </nav>
+                <div id="search-bar-div">
+                    <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
+                </div>
+                <div id="search-icon-div">
+                    <a href="../pages/search.html" id="a-search-icon">
+                        <i class="fas fa-search" id="search-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">
+        <img src="../images/dead.png" class="mx-auto d-block img-fluid rounded image" width="30" height="30">
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
+        <button type="button" class="btn btn-dark " style="width: 9em">Ask Question</button>
+        <a href="#"><i class="fa fa-fw fa-user"></i> Sign in</a>
+        <a href="#"><i class="fa fa-fw fa-user"></i> Register</a>
+    </div>
+</nav>
 
       <div class="container pt-5 mb-5" id="category">
         <div class="row">
