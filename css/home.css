@@ -28,17 +28,12 @@ body {
     padding-bottom: 2em;
     width: 400px;
 }
-#search-container {
+#ask-search-bar {
     margin-bottom: 2em;
-    width: 35em;
+    width: 80%;
+    max-width: 785px;
     align-items: center;
 
-}
-@media screen and (max-width: 770px) {
-    #search-container {
-        width: 100%;
-    
-    }
 }
 .div-cat
 {
