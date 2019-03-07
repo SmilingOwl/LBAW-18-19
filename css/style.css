@@ -172,8 +172,4 @@ ul.pagination {
     }
 }
 
-tr {
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
-    border-collapse: collapse;
-}​
+td,th{ text-align: center;}
