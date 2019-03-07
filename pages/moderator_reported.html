@@ -55,27 +55,17 @@
 
         <div class="container">
             <ul class="nav nav-tabs">
+                   
                     <li class="nav-item">
-
-                      <a class="nav-link" href="../pages/admin_categories.html">
-                          <i class="fas fa-folder-open" style="margin-right: 10px;"></i>Categories
-                          </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="../pages/admin_users.html">
+                        <a class="nav-link" href="../pages/moderator_users.html">
                             <i class="fas fa-users" style="margin-right: 10px;"></i>Users
                         </a>
                     </li>
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../pages/admin_moderator.html">
-                            <i class="fas fa-user-shield" style="margin-right: 10px;"></i> Moderators</a>
-                      </li>
                     
                       <li class="nav-item">
 
-                            <a class="nav-link" href="../pages/admin_reported.html">
+                            <a class="nav-link active" href="../pages/moderator_reported.html">
                                 <i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i> Reported content
                                 </a>
                           </li>
@@ -92,9 +82,11 @@
                       <table class="table" width="100%" cellspacing="0">
                         <thead class="thead-dark">
                           <tr>
-                            <th>Username</th>
-                            <th>Email</th>
-                            <th>Rank</th>
+                            <th>Author</th>
+                            <th>Type</th>
+                            <th>Reported User</th>
+                            <th>Content</th>
+                            <th>Date</th>
                             <th>Actions</th>
                           </tr>
                         </thead>
@@ -102,12 +94,14 @@
                         <tbody>
                           <tr>
                             <td>Tiger Nixon</td>
-                            <td>tiger@gmail.com</td>
-                            <td>Rookie</td>
+                            <td>Commercial or spam</td>
+                            <td>Anna</td>
+                            <td>Content....</td>
+                            <td>13/02/19</td>
                             <td>
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                                            <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                                            <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                                            <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                                     </div>
                                     
                             </td>
@@ -115,101 +109,123 @@
                           </tr>
                           <tr>
                             <td>Garrett Winters</td>
-                            <td>ggarrett@gmail.com</td>
-                            <td>Beginner</td>
+                            <td>Inappropriate or offencive</td>
+                            <td>Marcos</td>
+                            <td>Content....</td>
+                            <td>13/02/19</td>
                             <td>
-                                
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                                            <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                                            <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                                            <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                                     </div>
+                                    
                             </td>
                           
                           </tr>
                           <tr>
                             <td>Ashton Cox</td>
-                            <td>foxcoxxx@gmail.com</td>
-                            <td>Intermediate</td>
+                            <td>Commercial or spam</td>
+                            <td>Anabela</td>
+                            <td>Content....</td>
+                            <td>13/02/19</td>
                             <td>
-                                
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                                            <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                                            <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                                            <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                                     </div>
+                                    
                             </td>
-                           
+                            
                           </tr>
                           <tr>
                             <td>Cedric Kelly</td>
-                            <td>cedricBoxed@gmail.com</td>
-                            <td>Enthusiast</td>
+                            <td>Inappropriate or offencive </td>
+                            <td>Pedro</td>
+                            <td>Content....</td>
+                            <td>13/02/19</td>
                             <td>
-                                
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                                            <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                                            <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                                            <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                                     </div>
+                                    
                             </td>
+                            
                           </tr>
                           <tr>
                             <td>Airi Satou</td>
-                            <td>accountAir@hotmail.com</td>
-                            <td>Advanced</td>
+                            <td>Inappropriate or offencive</td>
+                            <td>Anna</td>
+                            <td>Content....</td>
+                            <td>13/02/19</td>
                             <td>
-                                
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                                            <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                                            <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                                            <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                                     </div>
+                                    
                             </td>
+                            
                           </tr>
                           <tr>
                             <td>Brielle Williamson</td>
-                            <td>brielle@hotmail.com</td>
-                            <td>Veteran</td>
+                            <td>Safety issue or illegal</td>
+                            <td>Jack</td>
+                            <td>Content....</td>
+                            <td>13/02/19</td>
                             <td>
-                                
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                                            <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                                            <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                                            <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                                     </div>
+                                    
                             </td>
-                        </tr>
+                            
+                          </tr>
                           <tr>
                             <td>Herrod Chandler</td>
-                            <td>herold@gmail.cokm</td>
-                            <td>Rookie</td>
+                            <td>Commercial or spam</td>
+                            <td>Anna</td>
+                            <td>Content....</td>
+                            <td>13/02/19</td>
                             <td>
-                                
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                                            <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                                            <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                                            <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                                     </div>
+                                    
                             </td>
+                            
                           </tr>
                           <tr>
                             <td>Rhona Davidson</td>
-                            <td>davidson1998@gmail.com</td>
-                            <td>Advanced</td>
+                            <td>Inappropriate or offencive</td>
+                            <td>Margarida</td>
+                            <td>Content....</td>
+                            <td>13/02/19</td>
                             <td>
-                                
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                                            <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                                            <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                                            <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                                     </div>
+                                    
                             </td>
+                            
                           </tr>
                           <tr>
                             <td>Colleen Hurst</td>
-                            <td>develperCollen@hotmail.com</td>
-                            <td>Beginner</td>
+                            <td>Safety issue or illegal</td>
+                            <td>Justin</td>
+                            <td>Content....</td>
+                            <td>13/02/19</td>
                             <td>
-                                
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                            <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                                            <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                                            <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                                            <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                                     </div>
+                                    
                             </td>
+                            
                           </tr>
                          
                         </tbody>
