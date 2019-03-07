@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/home.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
 
 </head>
 
@@ -25,22 +26,25 @@
         <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded" id="logo" width="100px">
         <h2 style="text-align:center;"> Question everything, Learn something! </h2>
 
-        <div class="form-control form-control-lg" id="search-container">
-            <div id="search-container2">
-                <div id="search-bar-cat">
-                    <img src="../images/dead.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">
-                    
+        <div id="ask-search-bar">
+            <form class="form-inline" action="/action_page.php">
+                <div class="form-control form-control-lg" id="search-container">
+                    <div id="search-container2">
+                        <div id="search-bar-cat">
+                            <img src="../images/dead.png" class="mx-auto d-block img-fluid rounded-circle" width="33"
+                                id="cat-icon">
+                        </div>
+                        <div id="search-bar-div">
+                            <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
+                        </div>
+                        <div id="search-icon-div">
+                            <a href="../pages/search.html" id="a-search-icon">
+                                <i class="fas fa-search" id="search-icon"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-
-                <div id="search-bar-div">
-                    <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
-                </div>
-                <div id="search-icon-div">
-                    <a href="../pages/search.html" id="a-search-icon">
-                        <i class="fas fa-search" id="search-icon"></i>
-                    </a>
-                </div>
-            </div>
+            </form>
         </div>
         <a href="login.html">
             <button type="button" class="btn btn btn-dark btn-lg" id="ask-question-main">Ask a Question</button>
@@ -142,7 +146,7 @@
                 </div>
                 <div class="col-3">
                     <a href="../pages/faq.html">
-                        FQA page
+                        FAQ
                     </a>
                 </div>
                 <div class="col-3">
@@ -152,7 +156,7 @@
                 </div>
                 <div class="col-3">
                     <a href="../pages/contacts.html">
-                        Contact page
+                        Contacts
                     </a>
                 </div>
             </div>
@@ -162,6 +166,7 @@
         </div>
     </footer>
     <script src="../scripts/main.js"></script>
+    <script src="../scripts/search_bar.js"></script>
 </body>
 
 </html>

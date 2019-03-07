@@ -17,6 +17,7 @@
         crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
+    <script src="../scripts/bar_nav.js"></script>
 </head>
 
 
@@ -24,9 +25,9 @@
     <nav class="navbar navbar-expand-lg bg-light navbar-ligh sticky-top" id="form-bar">
         <div id="grid-bar">
             <div id="logo">
-                <img src="../images/logo.png" alt="logo" id="logo-image">
+                <a href="./home.html"><img src="../images/logo.png" alt="logo" id="logo-image"></a>
             </div>
-            <div id="search-bar">
+            <div id="ask-search-bar">
                 <form class="form-inline" action="/action_page.php">
                     <div class="form-control form-control-lg" id="search-container">
                         <div id="search-container2">
@@ -46,40 +47,42 @@
                     </div>
                 </form>
             </div>
-            <div id="ask-button">
-                <button type="button" class="btn btn btn-dark btn-md" id="ask-question-bar">Ask a Question</button>
-            </div>
-            <div id="info-user">
-                    <a href="#"><i class="fa fa-fw fa-user"></i> Sign in</a>
-                    <a href="#"><i class="fa fa-fw fa-user"></i> Register</a>
+            <div class="btn-group" id="info-user">
+                <button type="button" class="btn btn btn-dark">Ask a Question</button>
+                <button type="button" class="btn btn-outline-primary">
+                    <i class="fa fa-fw fa-user"></i> Sign in
+                </button>
+                <button type="button" class="btn btn-primary">
+                    <i class="fa fa-fw fa-user"></i> Register
+                </button>
             </div>
         </div>
     </nav>
 
     <div class="container" id="about">
-  
-  <br>
-  
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-  labore et dolore magna aliqua. Blandit libero volutpat sed cras ornare arcu dui. Aliquam ut 
-  porttitor leo a diam sollicitudin tempor id eu. Eu lobortis elementum nibh tellus molestie 
-  nunc non. Eget nunc scelerisque viverra mauris in aliquam sem fringilla ut. Et magnis dis 
-  parturient montes nascetur ridiculus mus mauris. A cras semper auctor neque vitae tempus. 
-  Volutpat commodo sed egestas egestas fringilla. Convallis a cras semper auctor neque vitae 
-  tempus quam pellentesque. Senectus et netus et malesuada fames. Justo eget magna fermentum 
-  iaculis eu non diam phasellus. Lacinia quis vel eros donec ac. Augue lacus viverra vitae 
-  congue eu consequat ac felis donec. Facilisis volutpat est velit egestas. At elementum eu 
-  facilisis sed odio morbi quis. Sollicitudin ac orci phasellus egestas tellus rutrum. 
-  Adipiscing elit ut aliquam purus sit amet luctus venenatis. In pellentesque massa placerat 
-  duis ultricies lacus sed. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim. Iaculis 
-  at erat pellentesque adipiscing commodo elit at.
 
-  </div>
+        <br>
 
-<br>
-<br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Blandit libero volutpat sed cras ornare arcu dui. Aliquam ut
+        porttitor leo a diam sollicitudin tempor id eu. Eu lobortis elementum nibh tellus molestie
+        nunc non. Eget nunc scelerisque viverra mauris in aliquam sem fringilla ut. Et magnis dis
+        parturient montes nascetur ridiculus mus mauris. A cras semper auctor neque vitae tempus.
+        Volutpat commodo sed egestas egestas fringilla. Convallis a cras semper auctor neque vitae
+        tempus quam pellentesque. Senectus et netus et malesuada fames. Justo eget magna fermentum
+        iaculis eu non diam phasellus. Lacinia quis vel eros donec ac. Augue lacus viverra vitae
+        congue eu consequat ac felis donec. Facilisis volutpat est velit egestas. At elementum eu
+        facilisis sed odio morbi quis. Sollicitudin ac orci phasellus egestas tellus rutrum.
+        Adipiscing elit ut aliquam purus sit amet luctus venenatis. In pellentesque massa placerat
+        duis ultricies lacus sed. Lorem dolor sed viverra ipsum nunc aliquet bibendum enim. Iaculis
+        at erat pellentesque adipiscing commodo elit at.
 
-  <footer class="platform-info" id="platform-link-info">
+    </div>
+
+    <br>
+    <br>
+
+    <footer class="platform-info" id="platform-link-info">
 
         <div class="container">
             <div class="row">
@@ -103,13 +106,12 @@
                         Terms of Service
                     </a>
                 </div>
-               
-            </div>        
+                x
+            </div>
         </div>
 
     </footer>
 
-    <script src="../scripts/bar_nav.js"></script>
 
 </body>
 
