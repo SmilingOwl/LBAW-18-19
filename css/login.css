@@ -18,8 +18,7 @@ body
 {
     margin: 0;
     padding:0;
-    display: grid;
-    grid-template-columns: 70% 30%
+    width: 20em;
     
 }
 
@@ -46,9 +45,48 @@ body
 {
     text-decoration: none;
     color: default;
-
 }
 
+
+#search-container2 {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 15% auto 15%;
+  align-items: center;
+}
+
+#search-bar {
+  border-style: none;
+  outline: none;
+  width: 98%;
+  margin: 0;
+  padding-left: 0.5em;
+  height: 45px;
+}
+#search-bar-cat
+{
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+
+.nav-item
+{
+  margin-left: 1em;
+}
+#navbarResponsive
+{
+  align-self: flex-end;
+}
+
+#navbarResponsive a
+{
+  margin: 0.5em;
+}
+#form-bar
+{
+  width: 100%;
+}
 /* LOGIN */
 
 
@@ -274,3 +312,8 @@ ul#admin.sidebar.navbar-nav{
 div#wrapper{
   margin: 5px 90px 5px 90px;
 }
+
+
+
+
+
