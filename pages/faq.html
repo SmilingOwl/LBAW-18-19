@@ -2,184 +2,255 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>LearnIt</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap include -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LearnIt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap include -->
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- End of Bootstrap include -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- End of Bootstrap include -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
+  <script src="../scripts/bar_nav.js"></script>
 </head>
 
 
 <body>
   <nav class="navbar navbar-expand-lg bg-light navbar-ligh sticky-top" id="form-bar">
-    <a class="navbar-brand" href="#">
-        <img src="../images/logo.png" alt="logo" style="width:180px; height:45px;">
-    </a>
-    <form class="form-inline" action="/action_page.php">
-        <div class="form-control form-control-lg" id="search-container">
+    <div id="grid-bar">
+      <div id="logo">
+        <a href="./home.html"><img src="../images/logo.png" alt="logo" id="logo-image"></a>
+      </div>
+      <div id="ask-search-bar">
+        <form class="form-inline" action="/action_page.php">
+          <div class="form-control form-control-lg" id="search-container">
             <div id="search-container2">
-                <div id="search-bar-cat">
-                    <img src="../images/logo_lbaw.png" class="mx-auto d-block img-fluid rounded-circle" width="25" id="cat-icon">
-                </div>
-                <div id="search-bar-div">
-                    <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
-                </div>
-                <div id="search-icon-div">
-                    <a href="../pages/search.html" id="a-search-icon">
-                        <i class="fas fa-search" id="search-icon"></i>
-                    </a>
-                </div>
+              <div id="search-bar-cat">
+                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">
+              </div>
+              <div id="search-bar-div">
+                <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
+              </div>
+              <div id="search-icon-div">
+                <a href="../pages/search.html" id="a-search-icon">
+                  <i class="fas fa-search" id="search-icon"></i>
+                </a>
+              </div>
             </div>
-        </div>
-    </form>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">
-        <img src="../images/dead.png" class="mx-auto d-block img-fluid rounded image" width="30" height="30">
-    </button>
+          </div>
+        </form>
+      </div>
+      <div class="btn-group" id="info-user">
+        <button type="button" class="btn btn btn-dark">Ask a Question</button>
+        <button type="button" class="btn btn-outline-primary">
+          <i class="fa fa-fw fa-user"></i> Sign in
+        </button>
+        <button type="button" class="btn btn-primary">
+          <i class="fa fa-fw fa-user"></i> Register
+        </button>
+      </div>
+    </div>
+    <div id="mobile-search-field" style="display:none">
+      <div id="ask-search-bar">
+        <form class="form-inline" action="/action_page.php">
+          <div class="form-control form-control-lg" id="search-container">
+            <div id="search-container2">
+              <div id="search-bar-cat">
+                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">
+              </div>
+              <div id="search-bar-div">
+                <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
+              </div>
+              <div id="search-icon-div">
+                <a href="../pages/search.html" id="a-search-icon">
+                  <i class="fas fa-search" id="search-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <button type="button" class="btn btn-dark" id="back-button"><i class="fas fa-angle-left"></i></button>
+    </div>
+  </nav>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-        <button type="button" class="btn btn-dark " style="width: 9em">Ask Question</button>
-        <a href="#"><i class="fa fa-fw fa-user"></i> Sign in</a>
-        <a href="#"><i class="fa fa-fw fa-user"></i> Register</a>
-    </div>
-</nav>
-
-	<br>
-	
-<div class="container" id="about">
-  
-  <div class="accordion" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne">
-      <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          How does LearnIt work?
-        </button>
-      </h5>
-    </div>
-
-    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          What does my rank mean?
-        </button>
-      </h5>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          What is a trusted user?
-        </button>
-      </h5>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingFour">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          How can I become a moderator?
-        </button>
-      </h5>
-    </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingFive">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-          What happens if I get banned?
-        </button>
-      </h5>
-    </div>
-    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingSix">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-          Where do I suggest features I would like to see on LearnIt?
-        </button>
-      </h5>
-    </div>
-    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-      <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div>
-    </div>
-  </div>
-</div>
-  
   <br>
-  
+
+  <div class="container" id="about">
+
+      <h1 class="h1-responsive font-weight-bold text-center my-4">FAQs</h1>
+      <!--Section description-->
+      <h6 class="text-center w-responsive mx-auto mb-5">Frequently asked questions.</h6>
+
+    <div class="accordion" id="accordionExample">
+      <div class="card">
+        <div class="card-header" id="headingOne" >
+          <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+              aria-controls="collapseOne">
+              How does LearnIt work?
+            </button>
+          </h5>
+        </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+            you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              What does my rank mean?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+            you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              What is a trusted user?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+            you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFour">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
+              How can I become a moderator?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+            you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingFive">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+              aria-expanded="false" aria-controls="collapseFive">
+              What happens if I get banned?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+            you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingSix">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+              aria-expanded="false" aria-controls="collapseSix">
+              Where do I suggest features I would like to see on LearnIt?
+            </button>
+          </h5>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
+            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
+            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
+            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
+            you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
   </div>
 
-    
+
   <footer class="platform-info" id="platform-link-info">
-	<br>
-        <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <a href="../pages/about.html">
-                        About us
-                    </a>
-                </div>
-                <div class="col-3">
-                    <a href="#">
-                        FAQ
-                    </a>
-                </div>
-                <div class="col-3">
-                    <a href="../pages/contacts.html">
-                        Contacts
-                    </a>
-                </div>
-                <div class="col-3">
-                    <a href="../pages/terms.html">
-                        Terms of Service
-                    </a>
-                </div>
-               
-            </div>        
+    <div class="card-footer small text-muted">
+      <div class="row">
+        <div class="col-3">
+          <a href="../pages/about.html">
+            About us
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="../pages/faq.html">
+            FAQ
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="../pages/contacts.html">
+            Contacts
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="../pages/terms.html">
+            Terms of Service
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="text-center font-weight-bold" id="copyright">Copyright © LearnIt 2019</p>
         </div>
         
-      </footer>
-      
-    </body>
-    </html>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
