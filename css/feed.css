@@ -1,0 +1,60 @@
+body{
+    font-family: 'Prompt', sans-serif;
+}
+
+ul{
+    list-style-type: none;  
+}
+
+#topBar{
+    font-family: 'Prompt', sans-serif;
+}
+
+#cat_icon{
+    text-decoration: none;
+    color: black;
+}
+
+#feed{
+    font-family: 'Prompt', sans-serif;
+}
+
+/*#feed{
+    display: inline-grid;
+    grid-template-columns: 75% 25%;
+}
+
+#results{
+    grid-column-start: 1;
+}
+
+#leaderBoard{
+    grid-column-start: 2;
+    grid-row-end: 1;
+}*/
+
+#feed{
+    display: inline-grid;
+    grid-template-columns: 75% 25%;
+}
+
+#results{
+    grid-column-start: 1;
+    margin: 10%;
+}
+
+#feed .result{
+    border-bottom: 20px;
+    border-bottom-color: black;
+    padding: 20px;
+}
+
+#leaderBoard{
+    grid-column-start: 2;
+    height: 300px;
+    margin-right: 0;
+}
+
+.card-title{
+    text-align: center;
+}
