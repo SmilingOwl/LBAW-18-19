@@ -14,8 +14,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- End of Bootstrap include -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-	crossorigin="anonymous">
-	
+    crossorigin="anonymous">
+
   <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
   <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
   <script src="../scripts/bar_nav.js"></script>
@@ -84,6 +84,11 @@
   <div id="wrapper">
 
     <div class="container">
+      <!-- Search form -->
+      <div class="row">
+        <input class="form-control" type="text" placeholder="Search an user..." aria-label="Search" style="margin-bottom: 20px;">
+      </div>
+
       <ul class="nav nav-tabs">
         <li class="nav-item">
 
@@ -112,146 +117,169 @@
       </ul>
 
     </div>
-
-    <div id="content-wrapper">
-
-      <div class="container-fluid">
-
-        <div class="card-body">
-          <div class="table-responsive">
-            <table class="table" width="100%" cellspacing="0">
-              <thead class="thead-dark">
-                <tr>
-                  <th>Username</th>
-                  <th>Email</th>
-                  <th>Rank</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                <tr>
-                  <td>Tiger Nixon</td>
-                  <td>tiger@gmail.com</td>
-                  <td>Rookie</td>
-                  <td>
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                      <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                    </div>
-
-                  </td>
-
-                </tr>
-                <tr>
-                  <td>Garrett Winters</td>
-                  <td>ggarrett@gmail.com</td>
-                  <td>Beginner</td>
-                  <td>
-
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                      <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                    </div>
-                  </td>
-
-                </tr>
-                <tr>
-                  <td>Ashton Cox</td>
-                  <td>foxcoxxx@gmail.com</td>
-                  <td>Intermediate</td>
-                  <td>
-
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                      <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                    </div>
-                  </td>
-
-                </tr>
-                <tr>
-                  <td>Cedric Kelly</td>
-                  <td>cedricBoxed@gmail.com</td>
-                  <td>Enthusiast</td>
-                  <td>
-
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                      <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Airi Satou</td>
-                  <td>accountAir@hotmail.com</td>
-                  <td>Advanced</td>
-                  <td>
-
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                      <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Brielle Williamson</td>
-                  <td>brielle@hotmail.com</td>
-                  <td>Veteran</td>
-                  <td>
-
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                      <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Herrod Chandler</td>
-                  <td>herold@gmail.cokm</td>
-                  <td>Rookie</td>
-                  <td>
-
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                      <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Rhona Davidson</td>
-                  <td>davidson1998@gmail.com</td>
-                  <td>Advanced</td>
-                  <td>
-
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                      <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td>Colleen Hurst</td>
-                  <td>develperCollen@hotmail.com</td>
-                  <td>Beginner</td>
-                  <td>
-
-                    <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                      <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                    </div>
-                  </td>
-                </tr>
-
-              </tbody>
-            </table>
+    <div id="mobile-search-field" style="display:none">
+      <div id="ask-search-bar">
+        <form class="form-inline" action="/action_page.php">
+          <div class="form-control form-control-lg" id="search-container">
+            <div id="search-container2">
+              <div id="search-bar-cat">
+                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">
+              </div>
+              <div id="search-bar-div">
+                <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
+              </div>
+              <div id="search-icon-div">
+                <a href="../pages/search.html" id="a-search-icon">
+                  <i class="fas fa-search" id="search-icon"></i>
+                </a>
+              </div>
+            </div>
           </div>
+        </form>
+      </div>
+      <button type="button" class="btn btn-dark" id="back-button"><i class="fas fa-angle-left"></i></button>
+    </div>
+    </nav>
+
+      <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table" width="100%" cellspacing="0">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Rank</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>tiger@gmail.com</td>
+                    <td>Rookie</td>
+                    <td>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>Garrett Winters</td>
+                    <td>ggarrett@gmail.com</td>
+                    <td>Beginner</td>
+                    <td>
+
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>Ashton Cox</td>
+                    <td>foxcoxxx@gmail.com</td>
+                    <td>Intermediate</td>
+                    <td>
+
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>Cedric Kelly</td>
+                    <td>cedricBoxed@gmail.com</td>
+                    <td>Enthusiast</td>
+                    <td>
+
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Airi Satou</td>
+                    <td>accountAir@hotmail.com</td>
+                    <td>Advanced</td>
+                    <td>
+
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Brielle Williamson</td>
+                    <td>brielle@hotmail.com</td>
+                    <td>Veteran</td>
+                    <td>
+
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Herrod Chandler</td>
+                    <td>herold@gmail.cokm</td>
+                    <td>Rookie</td>
+                    <td>
+
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Davidson</td>
+                    <td>davidson1998@gmail.com</td>
+                    <td>Advanced</td>
+                    <td>
+
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Colleen Hurst</td>
+                    <td>develperCollen@hotmail.com</td>
+                    <td>Beginner</td>
+                    <td>
+
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card-footer small">Updated yesterday at 11:45 PM</div>
         </div>
-        <div class="card-footer small">Updated yesterday at 11:45 PM</div>
+
       </div>
 
     </div>
-
-  </div>
 
   </div>
   <br>
