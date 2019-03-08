@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(255, 255, 249);
+    background-color: white;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -190,3 +190,4 @@ footer a {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+

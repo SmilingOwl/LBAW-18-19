@@ -3,7 +3,8 @@ let profile_bar;
 let search_bar;
 let grid_bar;
 let original_search_bar;
-window.onload = function () {
+window.addEventListener("load",onLoad);
+function onLoad() {
     img_logo = document.getElementById("logo-image");
     profile_bar = document.querySelector("#info-user");
     search_bar = document.getElementById("ask-search-bar");
