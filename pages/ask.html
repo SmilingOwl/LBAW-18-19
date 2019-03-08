@@ -12,11 +12,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <!-- End of Bootstrap include -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
     <script src="../scripts/bar_nav.js"></script>
 </head>
 
@@ -60,10 +64,9 @@
     </nav>
 
     <div class="container" id="categories">
-		<br>
-		<h5 style="text-align:center"> Select a category </h5>
+		<h2 style="text-align:center; margin-bottom: 25px; margin-top: 35px;"> Select a category for your question! </h2>
 		
-		<br>
+	
         <div class="row cat-row" style="font-size:100px;">
             <div class="col-md-1 div-cat">
                 <a href="#" data-toggle="tooltip" title="Art">
@@ -139,22 +142,39 @@
 	<br>
 
     </div>
+    
+    <div class="container">
+    <form>
+        <div class="form-group" class="col-4">
+          <input class="form-control form-control-lg" type="text" name="question" placeholder="Ask away!" style=" width: 100%;" required>
+          
+        </div>
+              
+        <div class="form-group">
+          <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" placeholder=" Describe your doubts here!" rows="5"></textarea>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="form-group">
+                <h6>Upload images for your question</h6>
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <span class="btn btn-default btn-file btn-dark">
+                            Browse… <input type="file" id="imgInp">
+                        </span>
+                    </span>
+                    <input type="text" class="form-control" readonly>
+                </div>
+                <img id='img-upload'/>
+            </div>
+        </div>
+    
+       
+        <div class="col text-center">
+            <button class="btn btn-dark " style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Post</button>
+        </div>
 
-	<div class="container">
-		<form action="action_page.php">
-
-			<input type="text" id="question" name="question" placeholder="Ask away!" required>
-
-			<input type="textarea" name="description" placeholder="Explain your question here"></textarea>
-
-			<br>
-			<br>
-			
-			<input type="submit" value="Submit" >
-			
-			<br>
-		
-		</form>
+      </form>		
 	</div>
 	
     <br>
