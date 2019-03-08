@@ -14,7 +14,7 @@ div_container2.setAttribute("id", "search-container2");
 let div_search_bar_cat = document.createElement("div");
 div_search_bar_cat.setAttribute("id", "search-bar-cat");
 div_search_bar_cat.setAttribute("class", "dropdown");
-div_search_bar_cat.innerHTML = '<button type="button" id="dropdown-bar-cat" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><img src="../images/logo.png" alt="logo" id="drop-menu-cat" value="all"></button>';
+div_search_bar_cat.innerHTML = '<button type="button" id="dropdown-bar-cat" class="btn dropdown-toggle" data-toggle="dropdown"><img src="../images/logo.png" alt="logo" id="drop-menu-cat" value="all"></button>';
 //div_search_bar_cat.innerHTML+='<img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">';
 let div_group_drop_down = document.createElement("div");
 div_group_drop_down.setAttribute("class", "dropdown-menu");

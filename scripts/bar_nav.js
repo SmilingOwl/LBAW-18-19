@@ -22,7 +22,7 @@ window.onload = function () {
     let div_search_bar_cat = document.createElement("div");
     div_search_bar_cat.setAttribute("id", "search-bar-cat");
     div_search_bar_cat.setAttribute("class", "dropdown");
-    div_search_bar_cat.innerHTML = '<button type="button" id="dropdown-bar-cat" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><img src="../images/logo.png" alt="logo" id="drop-menu-cat" value="all"></button>';
+    div_search_bar_cat.innerHTML = '<button type="button" id="dropdown-bar-cat" class="btn dropdown-toggle" data-toggle="dropdown"><img src="../images/logo.png" alt="logo" id="drop-menu-cat" value="all"></button>';
     //div_search_bar_cat.innerHTML+='<img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">';
     let div_group_drop_down = document.createElement("div");
     div_group_drop_down.setAttribute("class", "dropdown-menu");
@@ -57,80 +57,130 @@ window.onload = function () {
 
 }
 
-function searchButton()
-{
-    let search_button=document.getElementById("search-button");
-    let main_div=document.getElementById("grid-bar");
-    let secondary_div=document.getElementById("mobile-search-field");
-    search_button.addEventListener("click",function(){
-        main_div.style.display="none";
-        secondary_div.style.display="grid";
-        secondary_div.innerHTML=original_search_bar.innerHTML;
-        secondary_div.innerHTML+='<button type="button" class="btn btn-dark" id="back-button"><i class="fas fa-angle-left"></i></button>';
-        let button_back=document.getElementById("back-button");
-        button_back.addEventListener("click",function(){
-            main_div.style.display="grid";
-            secondary_div.style.display="none";
+function searchButton() {
+    let search_button = document.getElementById("search-button");
+    let main_div = document.getElementById("grid-bar");
+    let secondary_div = document.getElementById("mobile-search-field");
+    search_button.addEventListener("click", function () {
+        main_div.style.display = "none";
+        secondary_div.style.display = "grid";
+        secondary_div.innerHTML = original_search_bar.innerHTML;
+        secondary_div.innerHTML += '<button type="button" class="btn btn-dark" id="back-button"><i class="fas fa-angle-left"></i></button>';
+        let button_back = document.getElementById("back-button");
+        button_back.addEventListener("click", function () {
+            main_div.style.display = "grid";
+            secondary_div.style.display = "none";
         });
         addDropEvent();
     });
 }
 
-function addDropEvent()
-{
+function addDropEvent() {
     let images_dropdown = document.querySelectorAll(".dropdown-item");
     for (let i = 0; i < images_dropdown.length; i++) {
-        images_dropdown[i].addEventListener("click",changeImageDropdown);
+        images_dropdown[i].addEventListener("click", changeImageDropdown);
     }
 }
+
 function changeImageDropdown(e) {
-    let src=e.srcElement.querySelector("img").getAttribute("src");
-    let image=document.querySelector("#drop-menu-cat");
-    image.setAttribute("src",src);
-    image.setAttribute("value",e.srcElement.querySelector("img").getAttribute("alt"));
+    let src = e.srcElement.querySelector("img").getAttribute("src");
+    let image = document.querySelector("#drop-menu-cat");
+    image.setAttribute("src", src);
+    image.setAttribute("value", e.srcElement.querySelector("img").getAttribute("alt"));
 }
 
 function hyperSmallScreen() {
     img_logo.setAttribute("src", "../images/logo_lbaw.png");
-    profile_bar.innerHTML = '<button type="button" class="btn btn btn-dark" id="search-button"><i class="fas fa-search" id="search-icon"></i></button>';
-    profile_bar.innerHTML += '<button type="button" class="btn btn btn-dark"><i class="fas fa-question"></i></button>';
+    profile_bar.innerHTML = '<button type="button" class="btn btn  " id="search-button"><i class="fas fa-search" id="search-icon"></i></button>';
+    profile_bar.innerHTML += '<button type="button" class="btn btn  "><i class="fas fa-question"></i></button>';
+    let div_bell = document.createElement("div");
+    div_bell.setAttribute("class", "btn-group");
+    div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">4</span></button>';
+    let div_bell_menu = document.createElement("div");
+    div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 1</a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 2</a>';
+    div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
-    div.innerHTML += '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> </button>';
+    div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="#">Sign in</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="#">Register</a>';
     div.appendChild(div_menu);
+    profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
 }
 
 function superSmallScreen() {
     img_logo.setAttribute("src", "../images/logo_lbaw.png");
-    profile_bar.innerHTML = '<button type="button" class="btn btn btn-dark" id="search-button"><i class="fas fa-search" id="search-icon"></i></button>';
-    profile_bar.innerHTML += '<button type="button" class="btn btn btn-dark">Ask a Question</button>';
+    profile_bar.innerHTML = '<button type="button" class="btn  " id="search-button"><i class="fas fa-search" id="search-icon"></i></button>';
+    profile_bar.innerHTML += '<button type="button" class="btn  "><strong>Ask</strong></button>';
+    let div_bell = document.createElement("div");
+    div_bell.setAttribute("class", "btn-group");
+    div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">4</span></button>';
+    let div_bell_menu = document.createElement("div");
+    div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 1</a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 2</a>';
+    div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
-    div.innerHTML += '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> </button>';
+    div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="#">Sign in</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="#">Register</a>';
     div.appendChild(div_menu);
+    profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
+}
+
+function smallMScreen() {
+    img_logo.setAttribute("src", "../images/logo_lbaw.png");
+    profile_bar.innerHTML = '<button type="button" class="btn btn  "><strong>Ask</strong></button>';
+    let div_bell = document.createElement("div");
+    div_bell.setAttribute("class", "btn-group");
+    div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">4</span></button>';
+    let div_bell_menu = document.createElement("div");
+    div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 1</a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 2</a>';
+    div_bell.appendChild(div_bell_menu);
+    let div = document.createElement("div");
+    div.setAttribute("class", "btn-group");
+    div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
+    let div_menu = document.createElement("div");
+    div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
+    div_menu.innerHTML += '<a class="dropdown-item" href="#">Sign in</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="#">Register</a>';
+    div.appendChild(div_menu);
+    profile_bar.appendChild(div_bell);
+    profile_bar.appendChild(div);
+
 }
 
 function smallScreen() {
     img_logo.setAttribute("src", "../images/logo_lbaw.png");
-    profile_bar.innerHTML = '<button type="button" class="btn btn btn-dark">Ask a Question</button>';
+    profile_bar.innerHTML = '<button type="button" class="btn btn  "><strong>Ask a Question</strong></button>';
+    let div_bell = document.createElement("div");
+    div_bell.setAttribute("class", "btn-group");
+    div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">4</span></button>';
+    let div_bell_menu = document.createElement("div");
+    div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 1</a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 2</a>';
+    div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
-    div.innerHTML += '<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
+    div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="#">Sign in</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="#">Register</a>';
     div.appendChild(div_menu);
+    profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
 }
 
@@ -143,15 +193,19 @@ function testIcon() {
         search_bar.innerHTML = " ";
         superSmallScreen();
         searchButton();
+    } else if (window.innerWidth <= 700) {
+        smallMScreen();
+        search_bar.innerHTML = original_search_bar.innerHTML;
+        addDropEvent();
     } else if (window.innerWidth <= 765) {
         smallScreen();
         search_bar.innerHTML = original_search_bar.innerHTML;
         addDropEvent();
     } else {
         img_logo.setAttribute("src", "../images/logo.png");
-        profile_bar.innerHTML = '<button type="button" class="btn btn btn-dark">Ask a Question</button>';
-        profile_bar.innerHTML += '<button type="button" class="btn btn-outline-primary"><i class="fa fa-fw fa-user"></i> Sign in</button>';
-        profile_bar.innerHTML += '<button type="button" class="btn btn-primary"><i class="fa fa-fw fa-user"></i> Register</button>';
+        profile_bar.innerHTML = '<button type="button" class="btn btn  "><strong>Ask a Question</strong></button>';
+        profile_bar.innerHTML += '<button type="button" class="btn  "><i class="fa fa-fw fa-user"></i> Sign in</button>';
+        profile_bar.innerHTML += '<button type="button" class="btn  "><i class="fa fa-fw fa-user"></i> Register</button>';
         search_bar.innerHTML = original_search_bar.innerHTML;
         addDropEvent();
     }
