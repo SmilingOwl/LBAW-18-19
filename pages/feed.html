@@ -7,11 +7,12 @@
         <title>LearnIt</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" media="screen" href="../css/catg.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/feed.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="../scripts/search_bar.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
         <link href="https://fonts.googleapis.com/css?family=Prompt:100,200,300,400,500,600,700,800,900" rel="stylesheet">
@@ -55,7 +56,7 @@
             <div class="row">
             <div class="col">
                 <div class="container" id="catIcon">
-                    <button type="button" class="btn btn-link"><img src="../images/icon_dna.png" alt="biology" style="width:70px;">Biology</button>
+                    <button type="button" class="btn btn-link" id="cat_icon"><img src="../images/biology-01.svg" alt="biology" style="width:70px;">Biology</button>
                 </div>
             </div>
             <div class="col">
@@ -73,70 +74,118 @@
         </div>
 
     <div class="container" id="feed">
-        <div class="row">
-   
-        
-      <div class="container" id="results">
-          <h2>Here's what we found...</h2>
-            <ul class="results">
+          
+            <ul class="results" >
+                    <h2>Here's what we found...</h2>
                     <li class="result">
                         <div class="media">
                             <div class="media-left">
-                            <img src="img_avatar1.png" class="media-object" style="width:60px">
+                            <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
                             </div>
                             <div class="media-body">
-                            <h4 class="media-heading">John Doe</h4>
-                            <p>Lorem ipsum...</p>
+                            <h4 class="media-heading">yves127</h4>
+                            <p>The presence of three sex chromosomes in a persons cells is best explained by what cell process going wrong?​</p>
                             </div>
                         </div>
                     </li>
                     <li class="result">
                         <div class="media">
                             <div class="media-left">
-                            <img src="img_avatar1.png" class="media-object" style="width:60px">
+                            <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
                             </div>
                             <div class="media-body">
-                            <h4 class="media-heading">John Doe</h4>
-                            <p>Lorem ipsum...</p>
+                            <h4 class="media-heading">freshman_port</h4>
+                            <p>How does the size of a cell's surface area change compared to its volume when the cell grows?</p>
                             </div>
                         </div>
                     </li>
                     <li class="result">
                         <div class="media">
                             <div class="media-left">
-                            <img src="img_avatar1.png" class="media-object" style="width:60px">
+                            <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
                             </div>
                             <div class="media-body">
-                            <h4 class="media-heading">John Doe</h4>
-                            <p>Lorem ipsum...</p>
+                            <h4 class="media-heading">shebookworm4</h4>
+                            <p>Why is it important for microtubules or spindle fibers to attach to chromosomes?</p>
                             </div>
                         </div>
                     </li>
+                    <li class="result">
+                            <div class="media">
+                                <div class="media-left">
+                                <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
+                                </div>
+                                <div class="media-body">
+                                <h4 class="media-heading">allisonpp8</h4>
+                                <p>According to most scientific models, how many years ago did the first simple cells appear on Earth?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="result">
+                                <div class="media">
+                                    <div class="media-left">
+                                    <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
+                                    </div>
+                                    <div class="media-body">
+                                    <h4 class="media-heading">rickylovesbugs</h4>
+                                    <p>Where is the instruction for making new cell located in a cell?</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="result">
+                                    <div class="media">
+                                        <div class="media-left">
+                                        <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
+                                        </div>
+                                        <div class="media-body">
+                                        <h4 class="media-heading">heyimpierre</h4>
+                                        <p>How does the endosymbiotic theory explain the double membrane around the chloroplast?</p>
+                                        </div>
+                                    </div>
+                                </li>
                   </ul>
 
-      </div>
+     
  
 
-      <div class="container float-right" id="leaderBoard">
-            <div class="card">
+            <div class="card" id="leaderBoard">
                 <div class="card-body">
                     <h4 class="card-title">Leaderboard</h4>
                     <ul class="leaders">
                         <li class="leader">
-                            <a class="user" href="#">User 1</a>
+                                <div class="media">
+                                    <div class="media-left">
+                                    <img src="img_avatar1.png" class="media-object" style="width:60px">
+                                    </div>
+                                    <div class="media-body">
+                                    <h4 class="media-heading">John Doe</h4>
+                                    </div>
+                                </div>
                         </li>
                         <li class="leader">
-                            <a class="user" href="#">User 2</a>
+                                <div class="media">
+                                        <div class="media-left">
+                                        <img src="img_avatar1.png" class="media-object" style="width:60px">
+                                        </div>
+                                        <div class="media-body">
+                                        <h4 class="media-heading">John Doe</h4>
+                                        </div>
+                                    </div>
                         </li>
                         <li class="leader">
-                            <a class="user" href="#">User 3</a>
+                                <div class="media">
+                                        <div class="media-left">
+                                        <img src="img_avatar1.png" class="media-object" style="width:60px">
+                                        </div>
+                                        <div class="media-body">
+                                        <h4 class="media-heading">John Doe</h4>
+                                        </div>
+                                    </div>
                         </li>
                     </ul>
                 </div>
             </div>
 
-    </div>
-</div>
 </div>
 
 
