@@ -6,52 +6,84 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>LearnIt</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css">
+        <!-- Bootstrap include -->
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- End of Bootstrap include -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+            crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+
         <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-
-<body>  
-    <nav class="navbar navbar-expand-lg bg-light navbar-ligh sticky-top" id="form-bar">
-        <a class="navbar-brand" href="#">
-            <img src="../images/logo.png" alt="logo" style="width:180px; height:45px;">
-        </a>
-        <form class="form-inline" action="/action_page.php">
-            <div class="form-control form-control-lg" id="search-container">
-                <div id="search-container2">
-                    <div id="search-bar-cat">
-                        <img src="../images/logo_lbaw.png" class="mx-auto d-block img-fluid rounded-circle" width="25" id="cat-icon">
-                    </div>
-                    <div id="search-bar-div">
-                        <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
-                    </div>
-                    <div id="search-icon-div">
-                        <a href="../pages/search.html" id="a-search-icon">
-                            <i class="fas fa-search" id="search-icon"></i>
-                        </a>
-                    </div>
+        <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css">
+        <script src="../scripts/bar_nav.js"></script>
+    </head>
+    
+    
+    <body>
+        <nav class="navbar navbar-expand-lg bg-light navbar-ligh sticky-top" id="form-bar">
+            <div id="grid-bar">
+                <div id="logo">
+                    <a href="./home.html"><img src="../images/logo.png" alt="logo" id="logo-image"></a>
+                </div>
+                <div id="ask-search-bar">
+                    <form class="form-inline" action="/action_page.php">
+                        <div class="form-control form-control-lg" id="search-container">
+                            <div id="search-container2">
+                                <div id="search-bar-cat">
+                                    <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle" width="33"
+                                        id="cat-icon">
+                                </div>
+                                <div id="search-bar-div">
+                                    <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
+                                </div>
+                                <div id="search-icon-div">
+                                    <a href="../pages/search.html" id="a-search-icon">
+                                        <i class="fas fa-search" id="search-icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="btn-group" id="info-user">
+                    <button type="button" class="btn btn btn-dark">Ask a Question</button>
+                    <button type="button" class="btn btn-outline-primary">
+                        <i class="fa fa-fw fa-user"></i> Sign in
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fa fa-fw fa-user"></i> Register
+                    </button>
                 </div>
             </div>
-        </form>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">
-            <img src="../images/dead.png" class="mx-auto d-block img-fluid rounded image" width="30" height="30">
-        </button>
-    
-        <div class="collapse navbar-collapse justify-content-end" id="navbarResponsive">
-            <button type="button" class="btn btn-dark " style="width: 9em">Ask Question</button>
-            <a href="#"><i class="fa fa-fw fa-user"></i> Sign in</a>
-            <a href="#"><i class="fa fa-fw fa-user"></i> Register</a>
-        </div>
-    </nav>
+            <div id="mobile-search-field" style="display:none">
+                <div id="ask-search-bar">
+                    <form class="form-inline" action="/action_page.php">
+                        <div class="form-control form-control-lg" id="search-container">
+                            <div id="search-container2">
+                                <div id="search-bar-cat">
+                                    <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle" width="33"
+                                        id="cat-icon">
+                                </div>
+                                <div id="search-bar-div">
+                                    <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
+                                </div>
+                                <div id="search-icon-div">
+                                    <a href="../pages/search.html" id="a-search-icon">
+                                        <i class="fas fa-search" id="search-icon"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <button type="button" class="btn btn-dark" id="back-button"><i class="fas fa-angle-left"></i></button>
+            </div>
+        </nav>
 
 <div style="text-align:center">
     <h2 style=" margin-top:30px;
