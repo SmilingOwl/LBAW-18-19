@@ -57,6 +57,25 @@ window.onload = function () {
 
 }
 
+function searchButton()
+{
+    let search_button=document.getElementById("search-button");
+    let main_div=document.getElementById("grid-bar");
+    let secondary_div=document.getElementById("mobile-search-field");
+    search_button.addEventListener("click",function(){
+        main_div.style.display="none";
+        secondary_div.style.display="grid";
+        secondary_div.innerHTML=original_search_bar.innerHTML;
+        secondary_div.innerHTML+='<button type="button" class="btn btn-dark" id="back-button"><i class="fas fa-angle-left"></i></button>';
+        let button_back=document.getElementById("back-button");
+        button_back.addEventListener("click",function(){
+            main_div.style.display="grid";
+            secondary_div.style.display="none";
+        });
+        addDropEvent();
+    });
+}
+
 function addDropEvent()
 {
     let images_dropdown = document.querySelectorAll(".dropdown-item");
@@ -73,7 +92,7 @@ function changeImageDropdown(e) {
 
 function hyperSmallScreen() {
     img_logo.setAttribute("src", "../images/logo_lbaw.png");
-    profile_bar.innerHTML = '<button type="button" class="btn btn btn-dark"><i class="fas fa-search" id="search-icon"></i></button>';
+    profile_bar.innerHTML = '<button type="button" class="btn btn btn-dark" id="search-button"><i class="fas fa-search" id="search-icon"></i></button>';
     profile_bar.innerHTML += '<button type="button" class="btn btn btn-dark"><i class="fas fa-question"></i></button>';
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
@@ -88,7 +107,7 @@ function hyperSmallScreen() {
 
 function superSmallScreen() {
     img_logo.setAttribute("src", "../images/logo_lbaw.png");
-    profile_bar.innerHTML = '<button type="button" class="btn btn btn-dark"><i class="fas fa-search" id="search-icon"></i></button>';
+    profile_bar.innerHTML = '<button type="button" class="btn btn btn-dark" id="search-button"><i class="fas fa-search" id="search-icon"></i></button>';
     profile_bar.innerHTML += '<button type="button" class="btn btn btn-dark">Ask a Question</button>';
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
@@ -118,10 +137,12 @@ function smallScreen() {
 function testIcon() {
     if (window.innerWidth <= 320) {
         search_bar.innerHTML = " ";
-        hyperSmallScreen()
+        hyperSmallScreen();
+        searchButton();
     } else if (window.innerWidth <= 550) {
         search_bar.innerHTML = " ";
         superSmallScreen();
+        searchButton();
     } else if (window.innerWidth <= 765) {
         smallScreen();
         search_bar.innerHTML = original_search_bar.innerHTML;
