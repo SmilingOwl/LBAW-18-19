@@ -99,12 +99,12 @@ function hyperSmallScreen() {
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">4</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 1</a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 2</a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#"><img class="rounded" src="../images/user1.png" style="width: 1.2em;  border: 0.8px solid black; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);"></img> <p style="margin:0px;font-size:12px;" > Luis started follow you </p><span><i class="fa fa-clock-o" aria-hidden="true"></i><p>08/03/19</p></span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#"><img class="rounded" src="../images/user1.png" style="width: 1.2em; border: 0.8px solid black; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);"></img><p style="margin:0px;font-size:12px;"> Luis started follow you </p><span><i class="fa fa-clock-o" aria-hidden="true"></i><p>09/03/19</p></span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
-    div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i></button>';
+    div.innerHTML += '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user" style="margin-right:5px;"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="#">Sign in</a>';
@@ -123,8 +123,8 @@ function superSmallScreen() {
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">4</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 1</a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 2</a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="#"><img class="rounded" src="../images/user1.png" style="width: 1.2em; display: inline-block; border: 0.8px solid black; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);"></img><p style="margin:0px; font-size:12px;"> Luis started follow you </p><span><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i><p>08/03/19</p></span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="#"><img class="rounded" src="../images/user1.png" style="width: 1.2em; display: inline-block; border: 0.8px solid black; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);"></img><p style="margin:0px; font-size:12px;"> Luis started follow you </p><span><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i><p>08/03/19</p></span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
@@ -146,8 +146,8 @@ function smallMScreen() {
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">4</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 1</a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 2</a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="#"><img class="rounded" src="../images/user1.png" style="width: 1.2em;display: inline-block; border: 0.8px solid black; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);"></img><p style="margin:0px;font-size:12px;"> Luis started follow you </p><span><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i><p>08/03/19</p></span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="#"><img class="rounded" src="../images/user1.png" style="width: 1.2em;display: inline-block; border: 0.8px solid black; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);"></img><p style="margin:0px; font-size:12px;"> Luis started follow you </p><span><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i><p>08/03/19</p></span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
@@ -170,8 +170,8 @@ function smallScreen() {
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">4</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 1</a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="#">Note 2</a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="#"><img class="rounded " src="../images/user1.png" style="width: 1.2em; display: inline-block; border: 0.8px solid black; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);"></img><p style="margin:0px; font-size:12px;"> Luis started follow you </p><span><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i><p>08/03/19</p></span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="#"><img class="rounded " src="../images/user1.png" style="width: 1.2em; display: inline-block; border: 0.8px solid black; box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);"></img><p style="margin:0px; font-size:12px;"> Luis started follow you </p><span><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i><p>08/03/19</p></span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
