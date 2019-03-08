@@ -19,7 +19,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Prompt:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="../css/catg.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
     <script src="../scripts/bar_nav.js"></script>
 </head>
@@ -86,30 +86,86 @@
         </div>
     </nav>
 
-    <div class="container pt-5 mb-5" id="category">
-        <div class="row">
-            <div class="col">
-                <div class="container" id="catIcon">
-                    <button type="button" class="btn btn-link"><img src="../images/icon_dna.png" alt="biology" style="width:70px;">Biology</button>
+
+
+    <div class="container" id="question-big">
+        <div class="card">
+            <div class="card-header" id="question-header">
+                <span>
+                    <img src="../images/tech-05.svg" class="rounded dropdown-image-cat" alt="type-of-question">
+                    Technology
+                </span>
+                <a href="../pages/profile.html" id="user-name">
+                    <img src="../images/user1.png" class="rounded dropdown-image-cat" alt="type-of-question">
+                    u/João Alvaro Ferreira
+                </a>
+                <button type="button" class="btn btn-dark btn-sm"><i class="fas fa-edit"></i></button>
+            </div>
+            <div class="card-body">
+                <h1>I don't know how to mess with bootstrap!!!</h1>
+                <hr>
+                <span>
+                    <img src="https://picsum.photos/200/300/?random" alt="random" id="question-img">
+                    Today I learn that I don't know how to work with bootstrap and I want some tips and tricks so a I
+                    can perform better. Do you guys know any website that explains it?
+                </span>
+            </div>
+            <div class="card-footer" id="footer-question">
+                <span>
+                    <i class="fas fa-lightbulb" ></i>
+                    14.3K
+                    <i class="fas fa-lightbulb fa-rotate-180" style="color:rgb(115, 115, 167)"></i>
+                </span>
+                <span>Date:08/03/2019</span>
+
+            </div>
+        </div>
+
+        <div class="media border p-3 answer-question">
+            <div class="answer-up-votes">
+                <i class="fas fa-lightbulb" style="color:rgb(255, 217, 0)"></i>
+                100
+                <i class="fas fa-lightbulb fa-rotate-180" ></i>
+            </div>
+            <a href="../pages/profile.html"><img src="../images/user2.png" alt="User2" class="mr-3 mt-3 rounded-circle"
+                    style="width:4em;"></a>
+
+            <div class="media-body">
+
+                <small><span id="answer-user"><a href="../pages/profile.html"> u/Pedro Carvalho </a></span><i>Date:09/03/2019</i></small>
+                <p class="answer">Pelo que eu entendo deves ir ter ao link da documentação e ai deves encontrar o que
+                    precisas. Deixo aqui o link : <u><i><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">https://getbootstrap.com/docs/4.3/getting-started/introduction/</a></i></u>.
+                    <i class="far fa-comment make-comment" ></i>
+                </p>
+                
+                <div class="media p-3">
+                    <div class="answer-up-votes">
+                        <i class="fas fa-lightbulb" ></i>
+                        10
+                        <i class="fas fa-lightbulb fa-rotate-180" ></i>
+                    </div>
+                    <a href="../pages/profile.html"><img src="../images/user3.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle"
+                            style="width:3em;height: 3em; "></a>
+                    <div class="media-body">
+                        <small><a href="../pages/profile.html"> u/Anabela Lima </a><i>Date:10/03/2019</i></small>
+                        <p class="answer">Obrigada pela dica!!!<i class="far fa-comment make-comment" ></i></p>
+                    </div>
+                </div>
+                <div class="media p-3">
+                    <div class="answer-up-votes">
+                        <i class="fas fa-lightbulb" ></i>
+                        2
+                        <i class="fas fa-lightbulb fa-rotate-180"></i>
+                    </div>
+                    <a href="../pages/profile.html"><img src="../images/user.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle"
+                            style="width:3em;height: 3em; "></a>
+                    <div class="media-body">
+                        <small><a href="../pages/profile.html"> u/Elisabete Silva </a><i>Date:11/03/2019</i></small>
+                        <p class="answer">Ajudou bastante. A documentação era tudo o que precisava.<i class="far fa-comment make-comment" ></i></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="container" id="question">
-        <p>Here goes the question</p>
-        <a class="user" href="#">User 1</a>
-        <span>Date</span>
-        <button type="button" class="btn btn-link">Edit</button>
-        <p>Here is the description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi laoreet, diam a
-            suscipit condimentum, lacus tellus placerat sem, non imperdiet ipsum leo et turpis. Vivamus volutpat
-            finibus volutpat. Sed tincidunt pharetra aliquet. Vestibulum tristique cursus molestie. Mauris condimentum
-            ac mi sed placerat. Pellentesque a nulla orci. Proin iaculis odio sit amet tellus faucibus, quis facilisis
-            odio condimentum. Fusce consequat sed justo iaculis elementum. Mauris vitae facilisis metus. Cras leo ex,
-            dignissim vitae commodo quis, venenatis sit amet dui. Vivamus vehicula dapibus pharetra. Ut purus est,
-            consequat venenatis nibh ac, tempus consectetur neque. Integer lorem mauris, commodo a tortor nec,
-            venenatis placerat erat. Proin diam neque, varius at felis eget, tempus mattis mauris.
-        </p>
 
     </div>
 
