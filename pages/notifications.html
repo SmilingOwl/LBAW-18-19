@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LearnIt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap include -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- End of Bootstrap include -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
+  <script src="../scripts/bar_nav.js"></script>
+</head>
+
+div class="container">
+    <div class="row">
+
+        <div class="col-md-2 offset-1 text-collapse">
+            <div class="mt-4">
+                <h4 class="pt-4">Notifications</h4>
+                <div class="dropdown-divider"></div>
+                <ul class="no-bullets pl-0">
+                         <li class="d-flex justify-content-between"><a href="" class="text-muted">Questions</a> <div><span class="badge badge-danger ">{{notifications.Questions}}</span></div></li>
+                         <li class="d-flex justify-content-between"><a href="" class="text-muted">Answers</a> <div><span class="badge badge-danger ">{{notifications.Answers}}</span></div></li>
+                         <li class="d-flex justify-content-between"><a href="" class="text-muted">Comments</a> <div><span class="badge badge-danger ">{{notifications.Comments}}</span></div></li>
+                         <li class="d-flex justify-content-between"><a href="" class="text-muted">People</a> <div><span class="badge badge-danger ">{{notifications.Follows}}</span></div></li>
+                         <li class="d-flex justify-content-between"><a href="" class="text-muted">Upvotes</a> <div><span class="badge badge-danger ">{{notifications.Rating}}</span></div></li>
+                     </ul> 
+                <b-form-radio-group class="text-muted" v-on:change="filter($event)" v-model="selected"
+                    :options="typeOptions" stacked name="typeRadio"></b-form-radio-group>
+            </div>
+        </div>
+        <div class="col-md-9 mt-4">
+            <div class="list-group mt-4">
+                <h4 class="text-mobile">Notifications</h4>
+                <template v-for="notification in results.data">
+                    <notifications-card v-bind:notification="notification"></notifications-card>
+                </template>
+                <div class="col-md-6 offset-md-3 d-flex justify-content-center pt-4">
+                    <pagination ></pagination>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<footer class="platform-info" id="platform-link-info">
+        <div class="card-footer small text-muted">
+            <div class="row">
+                <div class="col-3">
+                    <a href="../pages/about.html">
+                        About us
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="../pages/faq.html">
+                        FAQ
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="../pages/contacts.html">
+                        Contacts
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="../pages/terms.html">
+                        Terms of Service
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="text-center font-weight-bold" id="copyright">Copyright © LearnIt 2019</p>
+                </div>
+               
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+
+</html>
+

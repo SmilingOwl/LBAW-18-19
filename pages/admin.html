@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LearnIt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap include -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- End of Bootstrap include -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
+  <script src="../scripts/bar_nav.js"></script>
+</head>
+
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-light navbar-ligh sticky-top" id="form-bar">
+    <div id="grid-bar">
+      <div id="logo">
+        <a href="./home.html"><img src="../images/logo.png" alt="logo" id="logo-image"></a>
+      </div>
+      <div id="ask-search-bar">
+        <form class="form-inline" action="/action_page.php">
+          <div class="form-control form-control-lg" id="search-container">
+            <div id="search-container2">
+              <div id="search-bar-cat">
+                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">
+              </div>
+              <div id="search-bar-div">
+                <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
+              </div>
+              <div id="search-icon-div">
+                <a href="../pages/search.html" id="a-search-icon">
+                  <i class="fas fa-search" id="search-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="btn-group" id="info-user">
+        <button type="button" class="btn btn btn-dark">Ask a Question</button>
+        <button type="button" class="btn btn-outline-primary">
+          <i class="fa fa-fw fa-user"></i> Sign in
+        </button>
+        <button type="button" class="btn btn-primary">
+          <i class="fa fa-fw fa-user"></i> Register
+        </button>
+      </div>
+    </div>
+    <div id="mobile-search-field" style="display:none">
+      <div id="ask-search-bar">
+        <form class="form-inline" action="/action_page.php">
+          <div class="form-control form-control-lg" id="search-container">
+            <div id="search-container2">
+              <div id="search-bar-cat">
+                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">
+              </div>
+              <div id="search-bar-div">
+                <input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">
+              </div>
+              <div id="search-icon-div">
+                <a href="../pages/search.html" id="a-search-icon">
+                  <i class="fas fa-search" id="search-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <button type="button" class="btn btn-dark" id="back-button"><i class="fas fa-angle-left"></i></button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <!-- Search form -->
+
+    <div class="row">
+      <input class="form-control" type="text" placeholder="Search an user..." aria-label="Search"
+        style="margin-bottom: 20px;">
+    </div>
+
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#home"><i class="fas fa-folder-open" style="margin-right: 10px;"></i>Categories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu1"><i class="fas fa-users" style="margin-right: 10px;"></i>Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#menu2"><i class="fas fa-user-shield" style="margin-right: 10px;"></i> Moderators</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#menu3"><i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i> Reported content</a>
+        </li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="home" class="container tab-pane active"><br>
+        <div class="card-body">
+            <div class="table-responsive">
+              <table class="table" width="100%" cellspacing="0">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Category name</th>
+                    <th>Questions done (%)</th>
+                    <th>Icon
+                    </th>
+                  </tr>
+                </thead>
+  
+                <tbody>
+                  <tr>
+                    <td>Biology</td>
+                    <td>13%</td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+                  </tr>
+  
+                  <tr>
+                    <td>Chemistry</td>
+                    <td>7%</td>
+                    <td><img src="../images/logo_lbaw.png" style="width: 40px;"></td>
+                  </tr>
+  
+                  <tr>
+                    <td>Maths</td>
+                    <td>15%</td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+                  </tr>
+  
+                  <tr>
+                    <td>Physics</td>
+                    <td>3,4%</td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+                  </tr>
+  
+                  <tr>
+                    <td>Geology</td>
+                    <td>1,6%</td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+                  </tr>
+  
+                  <tr>
+                    <td>Art</td>
+                    <td> 5,5% </td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+                  </tr>
+  
+                  <tr>
+                    <td>History</td>
+                    <td> 10% </td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+                  </tr>
+  
+                  <tr>
+                    <td>Linguistics</td>
+                    <td> 12% </td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+                  </tr>
+  
+                  <tr>
+                    <td>Health</td>
+                    <td> 7,2% </td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+                  </tr>
+  
+                  <tr>
+                    <td>Business</td>
+                    <td> 6% </td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+                  </tr>
+  
+                  <tr>
+                    <td>Technology</td>
+                    <td> 20% </td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+  
+                  </tr>
+  
+                  <tr>
+                    <td>Psychology</td>
+                    <td> 10% </td>
+                    <td> <img src="../images/logo_lbaw.png" style="width: 40px;"> </td>
+                  </tr>
+  
+                  <tr>
+                    <td>
+                      <input style=" text-align:center;" name="categoryName" placeholder="Add name..." required>
+                    </td>
+                    <td>
+                      ...%
+                    </td>
+                    <td>
+                      <div class="container">
+                        <div class="avatar-upload">
+                          <div class="avatar-edit">
+                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                            <label for="imageUpload"> <i class="fas fa-pencil-alt" style="margin-top: 5px;"></i></label>
+                          </div>
+                          <div class="avatar-preview">
+                            <div id="imagePreview"
+                              style="background-image: url(../images/logo_lbaw.png); width: 38px; margin-left: 2px;">
+                            </div>
+                          </div>
+  
+                        </div>
+  
+                      </div>
+  
+                    </td>
+  
+                  </tr>
+  
+                </tbody>
+  
+              </table>
+  
+            </div>
+          </div>
+      </div>
+
+      <div id="menu1" class="container tab-pane fade"><br>
+        <div class="card-body">
+            <div class="table-responsive">
+              <table class="table" width="100%" cellspacing="0">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Rank</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+  
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>tiger@gmail.com</td>
+                    <td>Rookie</td>
+                    <td>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                      </div>
+  
+                    </td>
+  
+                  </tr>
+                  <tr>
+                    <td>Garrett Winters</td>
+                    <td>ggarrett@gmail.com</td>
+                    <td>Beginner</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                      </div>
+                    </td>
+  
+                  </tr>
+                  <tr>
+                    <td>Ashton Cox</td>
+                    <td>foxcoxxx@gmail.com</td>
+                    <td>Intermediate</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                      </div>
+                    </td>
+  
+                  </tr>
+                  <tr>
+                    <td>Cedric Kelly</td>
+                    <td>cedricBoxed@gmail.com</td>
+                    <td>Enthusiast</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Airi Satou</td>
+                    <td>accountAir@hotmail.com</td>
+                    <td>Advanced</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Brielle Williamson</td>
+                    <td>brielle@hotmail.com</td>
+                    <td>Veteran</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Herrod Chandler</td>
+                    <td>herold@gmail.cokm</td>
+                    <td>Rookie</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Davidson</td>
+                    <td>davidson1998@gmail.com</td>
+                    <td>Advanced</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Colleen Hurst</td>
+                    <td>develperCollen@hotmail.com</td>
+                    <td>Beginner</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                      </div>
+                    </td>
+                  </tr>
+  
+                </tbody>
+              </table>
+            </div>
+          </div>
+       
+      </div>
+
+      <div id="menu2" class="container tab-pane fade"><br>
+        <div class="card-body">
+            <div class="table-responsive">
+              <table class="table" width="100%" cellspacing="0">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Rank</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+  
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>tiger@gmail.com</td>
+                    <td>Rookie</td>
+                    <td>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+  
+                    </td>
+  
+                  </tr>
+                  <tr>
+                    <td>Garrett Winters</td>
+                    <td>ggarrett@gmail.com</td>
+                    <td>Beginner</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+  
+                  </tr>
+                  <tr>
+                    <td>Ashton Cox</td>
+                    <td>foxcoxxx@gmail.com</td>
+                    <td>Intermediate</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+  
+                  </tr>
+                  <tr>
+                    <td>Cedric Kelly</td>
+                    <td>cedricBoxed@gmail.com</td>
+                    <td>Enthusiast</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Airi Satou</td>
+                    <td>accountAir@hotmail.com</td>
+                    <td>Advanced</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Brielle Williamson</td>
+                    <td>brielle@hotmail.com</td>
+                    <td>Veteran</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Herrod Chandler</td>
+                    <td>herold@gmail.cokm</td>
+                    <td>Rookie</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Rhona Davidson</td>
+                    <td>davidson1998@gmail.com</td>
+                    <td>Advanced</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Colleen Hurst</td>
+                    <td>develperCollen@hotmail.com</td>
+                    <td>Beginner</td>
+                    <td>
+  
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                        <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                      </div>
+                    </td>
+                  </tr>
+  
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      
+      <div id="menu3" class="container tab-pane fade"><br>
+          <div class="card-body">
+              <div class="table-responsive">
+                <table class="table" width="100%" cellspacing="0">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th>Author</th>
+                      <th>Type</th>
+                      <th>Reported User</th>
+                      <th>Content</th>
+                      <th>Date</th>
+                      <th>Actions</th>
+                    </tr>
+                  </thead>
+    
+                  <tbody>
+                    <tr>
+                      <td>Tiger Nixon</td>
+                      <td>Commercial or spam</td>
+                      <td>Anna</td>
+                      <td>Content....</td>
+                      <td>13/02/19</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                          <button type="button" class="btn btn-warning .btn-sm">Ignore</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
+                        </div>
+    
+                      </td>
+    
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>Inappropriate or offencive</td>
+                      <td>Marcos</td>
+                      <td>Content....</td>
+                      <td>13/02/19</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                          <button type="button" class="btn btn-warning .btn-sm">Ignore</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
+                        </div>
+    
+                      </td>
+    
+                    </tr>
+                    <tr>
+                      <td>Ashton Cox</td>
+                      <td>Commercial or spam</td>
+                      <td>Anabela</td>
+                      <td>Content....</td>
+                      <td>13/02/19</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                          <button type="button" class="btn btn-warning .btn-sm">Ignore</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
+                        </div>
+    
+                      </td>
+    
+                    </tr>
+                    <tr>
+                      <td>Cedric Kelly</td>
+                      <td>Inappropriate or offencive </td>
+                      <td>Pedro</td>
+                      <td>Content....</td>
+                      <td>13/02/19</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                          <button type="button" class="btn btn-warning .btn-sm">Ignore</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
+                        </div>
+    
+                      </td>
+    
+                    </tr>
+                    <tr>
+                      <td>Airi Satou</td>
+                      <td>Inappropriate or offencive</td>
+                      <td>Anna</td>
+                      <td>Content....</td>
+                      <td>13/02/19</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                          <button type="button" class="btn btn-warning .btn-sm">Ignore</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
+                        </div>
+    
+                      </td>
+    
+                    </tr>
+                    <tr>
+                      <td>Brielle Williamson</td>
+                      <td>Safety issue or illegal</td>
+                      <td>Jack</td>
+                      <td>Content....</td>
+                      <td>13/02/19</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                          <button type="button" class="btn btn-warning .btn-sm">Ignore</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
+                        </div>
+    
+                      </td>
+    
+                    </tr>
+                    <tr>
+                      <td>Herrod Chandler</td>
+                      <td>Commercial or spam</td>
+                      <td>Anna</td>
+                      <td>Content....</td>
+                      <td>13/02/19</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                          <button type="button" class="btn btn-warning .btn-sm">Ignore</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
+    
+                        </div>
+    
+                      </td>
+    
+                    </tr>
+                    <tr>
+                      <td>Rhona Davidson</td>
+                      <td>Inappropriate or offencive</td>
+                      <td>Margarida</td>
+                      <td>Content....</td>
+                      <td>13/02/19</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                          <button type="button" class="btn btn-warning .btn-sm">Ignore</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
+                        </div>
+    
+                      </td>
+    
+                    </tr>
+                    <tr>
+                      <td>Colleen Hurst</td>
+                      <td>Safety issue or illegal</td>
+                      <td>Justin</td>
+                      <td>Content....</td>
+                      <td>13/02/19</td>
+                      <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Delete content</button>
+                          <button type="button" class="btn btn-warning .btn-sm">Ignore</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
+                        </div>
+    
+                      </td>
+    
+                    </tr>
+    
+                  </tbody>
+                </table>
+              </div>
+            </div>
+      </div>
+
+      
+  <footer class="platform-info" id="platform-link-info">
+    <div class="card-footer small text-muted">
+      <div class="row">
+        <div class="col-3">
+          <a href="../pages/about.html">
+            About us
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="../pages/faq.html">
+            FAQ
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="../pages/contacts.html">
+            Contacts
+          </a>
+        </div>
+        <div class="col-3">
+          <a href="../pages/terms.html">
+            Terms of Service
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <p class="text-center font-weight-bold" id="copyright">Copyright © LearnIt 2019</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../scripts/addImage.js"></script>
+</body>
+
+</html>
