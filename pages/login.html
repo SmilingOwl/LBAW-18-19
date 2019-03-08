@@ -100,12 +100,12 @@
 
                     <div class="input-container">
                         <i class="fa fa-user icon"></i>
-                        <input type="text" name="username" placeholder="Username" required>
+                        <input  id="form" type="text" name="username" placeholder="Username" required>
                     </div>
 
-                    <div class="input-container">
+                    <div class="input-container" >
                         <i class="fa fa-key icon"></i>
-                        <input type="password" name="password" placeholder="Password" required>
+                        <input  id="form" type="password" name="password" placeholder="Password" required>
                     </div>
 
                     <div class="custom-control custom-checkbox mb-3">
@@ -113,7 +113,7 @@
                         <label class="custom-control-label" for="customCheck1">Remember password</label>
                     </div>
 
-                    <input type="submit" value="Sign in">
+                    <button class="btn btn-dark " style="width: 100%; margin-top: 20px; margin-bottom: 20px;">Sign in</button>
 
                     <a href="../pages/recoverPassword.html" class="logInText" style="color:black"> Forgot password?</a>
                     <a href="../pages/register.html" class="logInText" style="color:black"> New here? Create an
@@ -121,7 +121,7 @@
 
                 </div>
 
-                <div class="col">
+                <div class="col" id="socialBtn">
                     <a href="#" class="fb btn"> <i class="fa fa-facebook fa-fw"></i> Continue with Facebook</a>
                     <a href="#" class="google btn"><i class="fa fa-google fa-fw"></i> Sign in with Google</a>
                 </div>
