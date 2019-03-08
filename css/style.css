@@ -210,9 +210,9 @@ th {
 
 .avatar-preview {
     display: inline-grid;
-    width: 45px;
+    width: 60px;
     margin: 0px;
-    height: 45px;
+    height: 60px;
     position: relative;
     right: 0;
     border-radius: 100%;
