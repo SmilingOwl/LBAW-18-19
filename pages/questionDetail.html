@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
     <script src="../scripts/bar_nav.js"></script>
+    <script src="../scripts/footer_position.js"></script>
 </head>
 
 
@@ -36,14 +37,15 @@
                     <div class="form-control form-control-lg search-container" class="">
                         <div class="search-container2">
                             <div class="search-bar-cat">
-                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33">
+                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
+                                    width="33">
                             </div>
                             <div class="search-bar-div">
-                                <input type="text" class="fluid search-bar" placeholder="Let us know your doubts" >
+                                <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
                             </div>
                             <div class="search-icon-div">
                                 <a href="../pages/search.html" class="a-search-icon">
-                                    <i class="fas fa-search search-icon" ></i>
+                                    <i class="fas fa-search search-icon"></i>
                                 </a>
                             </div>
                         </div>
@@ -63,17 +65,18 @@
         <div class="mobile-search-field" style="display:none">
             <div class="ask-search-bar">
                 <form class="form-inline" action="/action_page.php">
-                    <div class="form-control form-control-lg search-container" >
+                    <div class="form-control form-control-lg search-container">
                         <div class="search-container2">
                             <div class="search-bar-cat">
-                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33">
+                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
+                                    width="33">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
                             </div>
                             <div class="search-icon-div">
                                 <a href="../pages/search.html" class="a-search-icon">
-                                    <i class="fas fa-search search-icon" ></i>
+                                    <i class="fas fa-search search-icon"></i>
                                 </a>
                             </div>
                         </div>
@@ -110,7 +113,7 @@
             </div>
             <div class="card-footer" id="footer-question">
                 <span>
-                    <i class="fas fa-lightbulb" ></i>
+                    <i class="fas fa-lightbulb"></i>
                     14.3K
                     <i class="fas fa-lightbulb fa-rotate-180" style="color:rgb(115, 115, 167)"></i>
                 </span>
@@ -123,7 +126,7 @@
             <div class="answer-up-votes">
                 <i class="fas fa-lightbulb" style="color:rgb(255, 217, 0)"></i>
                 100
-                <i class="fas fa-lightbulb fa-rotate-180" ></i>
+                <i class="fas fa-lightbulb fa-rotate-180"></i>
             </div>
             <a href="../pages/profile.html"><img src="../images/user2.png" alt="User2" class="mr-3 mt-3 rounded-circle"
                     style="width:4em;"></a>
@@ -133,25 +136,25 @@
                 <small><span id="answer-user"><a href="../pages/profile.html"> u/Pedro Carvalho </a></span><i>Date:09/03/2019</i></small>
                 <p class="answer">Pelo que eu entendo deves ir ter ao link da documentação e ai deves encontrar o que
                     precisas. Deixo aqui o link : <u><i><a href="https://getbootstrap.com/docs/4.3/getting-started/introduction/">https://getbootstrap.com/docs/4.3/getting-started/introduction/</a></i></u>.
-                    <i class="far fa-comment make-comment" ></i>
+                    <i class="far fa-comment make-comment"></i>
                 </p>
-                
+
                 <div class="media p-3">
                     <div class="answer-up-votes">
-                        <i class="fas fa-lightbulb" ></i>
+                        <i class="fas fa-lightbulb"></i>
                         10
-                        <i class="fas fa-lightbulb fa-rotate-180" ></i>
+                        <i class="fas fa-lightbulb fa-rotate-180"></i>
                     </div>
                     <a href="../pages/profile.html"><img src="../images/user3.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle"
                             style="width:3em;height: 3em; "></a>
                     <div class="media-body">
                         <small><a href="../pages/profile.html"> u/Anabela Lima </a><i>Date:10/03/2019</i></small>
-                        <p class="answer">Obrigada pela dica!!!<i class="far fa-comment make-comment" ></i></p>
+                        <p class="answer">Obrigada pela dica!!!<i class="far fa-comment make-comment"></i></p>
                     </div>
                 </div>
                 <div class="media p-3">
                     <div class="answer-up-votes">
-                        <i class="fas fa-lightbulb" ></i>
+                        <i class="fas fa-lightbulb"></i>
                         2
                         <i class="fas fa-lightbulb fa-rotate-180"></i>
                     </div>
@@ -159,10 +162,26 @@
                             style="width:3em;height: 3em; "></a>
                     <div class="media-body">
                         <small><a href="../pages/profile.html"> u/Elisabete Silva </a><i>Date:11/03/2019</i></small>
-                        <p class="answer">Ajudou bastante. A documentação era tudo o que precisava.<i class="far fa-comment make-comment" ></i></p>
+                        <p class="answer">Ajudou bastante. A documentação era tudo o que precisava.<i class="far fa-comment make-comment"></i></p>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="card" style="margin-bottom:1em;">
+            <div class="card-body add-comment-body">
+                <form action="/action_page.php" class="add-comment-body">
+                    <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
+                    </div>
+                    <div class="btn-group" style="align-self:flex-end;">
+                        <button type="button" class="btn btn-dark">Submit</button>
+                        <button type="button" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+
         </div>
 
     </div>

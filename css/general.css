@@ -82,7 +82,7 @@ body {
     width: 98%;
 }
 
-#search-icon-div {
+.search-icon-div {
     text-align: center;
     padding-right: 0;
     align-items: stretch;

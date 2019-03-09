@@ -11,13 +11,12 @@ function onLoad()
     {
         soma+=filhos[i].clientHeight;
     }
-    console.log(soma + " " + window.innerHeight);
     if(soma<window.innerHeight)
     {
-        let adicionar=window.innerHeight/filhos.length - nav.offsetHeight - footer.offsetHeight;
-        for(let i=0;i<filhos.length;i++)
-        {
-            filhos[i].style.height=adicionar + "px";
-        }
+        let adicionar=window.innerHeight - nav.offsetHeight - footer.offsetHeight;
+        filhos[filhos.length-1].addEventListener("click",function(){
+            filhos[filhos.length-1].style.height="auto";
+        });
+        filhos[filhos.length-1].style.height=adicionar + "px";
     }
 }

@@ -43,7 +43,7 @@ function onLoad() {
     div_search_bar_div.innerHTML = '<input type="text" class="fluid search-bar" placeholder="Let us know your doubts" >';
     let div_search_icon_div = document.createElement("div");
     div_search_icon_div.setAttribute("class", "search-icon-div");
-    div_search_icon_div.innerHTML = '<a href="../pages/search.html" class="a-search-icon"><i class="fas fa-search search-icon"></i></a>';
+    div_search_icon_div.innerHTML = '<a href="../pages/feed.html" class="a-search-icon"><i class="fas fa-search search-icon"></i></a>';
     div_container2.appendChild(div_search_bar_cat);
     div_container2.appendChild(div_search_bar_div);
     div_container2.appendChild(div_search_icon_div);
