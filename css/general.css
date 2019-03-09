@@ -201,3 +201,19 @@ footer a {
                         img span;
     grid-template-columns: 3.5em auto;
 }
+
+a.fb {
+    background-color: #3B5998;
+    color: white;
+    margin-bottom: 10px;
+    width: 100%;
+  
+  }
+
+  a.google {
+    background-color: #dd4b39;
+    color: white;
+    width:100%;
+   
+   
+  }
