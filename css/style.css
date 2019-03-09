@@ -433,10 +433,10 @@ td > input:focus {
     text-decoration-color:#FFCD34;
 }
 
-.card-header:active{
-    box-shadow: 0 0 8px transparent;
-    outline: 0 none;
-}
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
 
 .card-body {
     background-color:  #FFFDF8;
