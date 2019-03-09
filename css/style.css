@@ -428,7 +428,10 @@ td > input:focus {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
     background-color:  #FFFDF8;
-    border: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 4px solid black;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
     text-decoration: underline;
     text-decoration-color:#FFCD34;
 }
