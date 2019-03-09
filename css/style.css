@@ -1,11 +1,16 @@
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 300;
+    background: #FFFDF8;
 }
 
 main {
     width: 50%;
     margin: 50px auto;
+}
+
+li{
+    font-family: 'Prompt', sans-serif;
 }
 
 /* Bootstrap 4 text input with search icon on the right */
@@ -322,4 +327,119 @@ th {
 .search-bar-moderator
 {
     margin-top: 1em;
+}
+
+.form-control {
+    border: 0.12em solid black;
+    background-color: #FFFDF8;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {   
+  border: 0.15em solid black;
+  box-shadow: 0 0 8px #FFCD34;
+  background-color: #FFFDF8;
+  outline: 0 none;
+}
+
+.form-control > textarea:focus {
+    border: 0.15em solid black;
+    box-shadow: 0 0 8px #FFCD34;
+    background-color: #FFFDF8;
+    outline: 0 none;
+}
+
+td > input {
+    border: 0.12em solid black;
+    background-color: #FFFDF8;
+}
+
+td > input:focus {
+    border: 0.15em solid black;
+  box-shadow: 0 0 8px #FFCD34;
+  outline: 0 none;
+}
+
+
+/*.form-control:focus{
+    border: 0.15em solid black;
+}*/
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: black;
+    background-color: #FFFDF8;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: 1px solid black;
+}
+
+.nav-tabs {
+    border-bottom: 3px solid black;
+}
+
+.table .thead-dark th{
+    color: black;
+    background-color: #FFFDF8;
+    border-color: black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 0.3em;
+    font-size: 20px;
+    text-decoration: underline;
+    text-decoration-color:#FFCD34;
+}
+
+.table .thead-dark th:first-of-type{
+    color: black;
+    background-color: #FFFDF8;
+    border-color: black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-radius: 0.3em;
+}
+
+.table .thead-dark th:last-of-type{
+    color: black;
+    background-color: #FFFDF8;
+    border-color: black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    border-radius: 0.3em;
+}
+
+.table td { 
+    padding: .75rem;
+    vertical-align: middle;
+    border-top: 2px solid black;
+
+}
+
+.card-header{
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color:  #FFFDF8;
+    border: 3px solid black;
+    text-decoration: underline;
+    text-decoration-color:#FFCD34;
+}
+
+.card-header:active{
+    box-shadow: 0 0 8px transparent;
+    outline: 0 none;
 }

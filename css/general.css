@@ -208,6 +208,13 @@ footer a {
     font-size: 2.8rem;
     margin-top: 6%;
 }
+
+#about{
+    font-family: 'Prompt', sans-serif;
+    font-weight: 100;
+}
+
+
 a.fb {
     background-color: #3B5998;
     color: white;
