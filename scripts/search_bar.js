@@ -4,22 +4,19 @@ window.addEventListener("load", onLoad);
 
 function onLoad() {
 
-    search_bar = document.getElementById("ask-search-bar");
+    search_bar = document.querySelector(".ask-search-bar");
     original_search_bar = document.createElement("div");
-    original_search_bar.setAttribute("id", "ask-search-bar");
+    original_search_bar.setAttribute("class", "ask-search-bar");
     let form_search = document.createElement("form");
     form_search.setAttribute("class", "form-inline");
     form_search.setAttribute("action", "/action_page.php");
     let div_form = document.createElement("div");
-    div_form.setAttribute("class", "form-control form-control-lg");
-    div_form.setAttribute("id", "search-container");
+    div_form.setAttribute("class", "form-control form-control-lg search-container");
     let div_container2 = document.createElement("div");
-    div_container2.setAttribute("id", "search-container2");
+    div_container2.setAttribute("class", "search-container2");
     let div_search_bar_cat = document.createElement("div");
-    div_search_bar_cat.setAttribute("id", "search-bar-cat");
-    div_search_bar_cat.setAttribute("class", "dropdown");
-    div_search_bar_cat.innerHTML = '<button type="button" id="dropdown-bar-cat" class="btn dropdown-toggle" data-toggle="dropdown"><img src="../images/logo_lbaw.png" alt="logo" id="drop-menu-cat" value="all"></button>';
-    //div_search_bar_cat.innerHTML+='<img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle" width="33" id="cat-icon">';
+    div_search_bar_cat.setAttribute("class", "search-bar-cat dropdown");
+    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/logo_lbaw.png" alt="logo" class="drop-menu-cat" value="all"></button>';
     let div_group_drop_down = document.createElement("div");
     div_group_drop_down.setAttribute("class", "dropdown-menu");
     div_group_drop_down.innerHTML = '<a class="dropdown-item" href="#"><img src="../images/logo_lbaw.png" class="rounded dropdown-image-cat" alt="All"> All</a>';
@@ -37,11 +34,11 @@ function onLoad() {
     div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/psychology-11.svg" class="rounded dropdown-image-cat" alt="Psychology"> Psychology</a>';
     div_search_bar_cat.appendChild(div_group_drop_down);
     let div_search_bar_div = document.createElement("div");
-    div_search_bar_div.setAttribute("id", "search-bar-div");
-    div_search_bar_div.innerHTML = '<input type="text" class="fluid" placeholder="Let us know your doubts" id="search-bar">';
+    div_search_bar_div.setAttribute("class", "search-bar-div");
+    div_search_bar_div.innerHTML = '<input type="text" class="fluid search-bar" placeholder="Let us know your doubts" >';
     let div_search_icon_div = document.createElement("div");
-    div_search_icon_div.setAttribute("id", "search-icon-div");
-    div_search_icon_div.innerHTML = '<a href="../pages/search.html" id="a-search-icon"><i class="fas fa-search" id="search-icon"></i></a>';
+    div_search_icon_div.setAttribute("class", "search-icon-div");
+    div_search_icon_div.innerHTML = '<a href="../pages/search.html" class="a-search-icon"><i class="fas fa-search search-icon"></i></a>';
     div_container2.appendChild(div_search_bar_cat);
     div_container2.appendChild(div_search_bar_div);
     div_container2.appendChild(div_search_icon_div);
@@ -62,7 +59,7 @@ function addDropEvent() {
 
 function changeImageDropdown(e) {
     let src = e.srcElement.querySelector("img").getAttribute("src");
-    let image = document.querySelector("#drop-menu-cat");
+    let image = document.querySelector(".drop-menu-cat");
     image.setAttribute("src", src);
     image.setAttribute("value", e.srcElement.querySelector("img").getAttribute("alt"));
 }
