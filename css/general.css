@@ -4,7 +4,7 @@ body {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Prompt', Arial, Helvetica, sans-serif;
     font-size: 14px;
     --footer-color: white;
 }
@@ -200,4 +200,11 @@ footer a {
     grid-template-areas:img p
                         img span;
     grid-template-columns: 3.5em auto;
+}
+
+#notFound {
+    font-family: 'Prompt', sans-serif;
+    font-weight: 800;
+    font-size: 2.8rem;
+    margin-top: 6%;
 }

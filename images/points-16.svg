@@ -37,41 +37,23 @@
 	.st31{fill:none;stroke:#000000;stroke-width:15.2025;stroke-miterlimit:10;}
 	.st32{fill:none;stroke:#000000;stroke-width:14.4884;stroke-miterlimit:10;}
 	.st33{fill:none;stroke:#000000;stroke-width:17.5311;stroke-miterlimit:10;}
-	.st34{fill:#9BB6DF;stroke:#9BB6DF;stroke-width:12.1979;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st35{fill:#FFCF45;stroke:#000000;stroke-width:5.0299;stroke-miterlimit:10;}
-	.st36{fill:none;stroke:#FFE4A0;stroke-width:3.8633;stroke-miterlimit:10;}
-	.st37{fill:#FFFFFF;stroke:#000000;stroke-width:3.7724;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st38{fill:#FFCF45;stroke:#000000;stroke-width:16.45;stroke-miterlimit:10;}
-	.st39{fill:none;stroke:#FFE4A0;stroke-width:10.9842;stroke-miterlimit:10;}
-	.st40{fill:#FFFFFF;stroke:#000000;stroke-width:13.7083;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st41{fill:#BE4627;stroke:#BE4627;stroke-width:4.3973;stroke-miterlimit:10;}
-	.st42{fill:none;stroke:#BE4627;stroke-width:1.0993;stroke-miterlimit:10;}
-	.st43{fill:none;stroke:#FFFFFF;stroke-width:1.0993;stroke-miterlimit:10;}
-	.st44{fill:none;stroke:#000000;stroke-width:14.2912;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st45{fill:none;stroke:#000000;stroke-width:18.5705;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st46{fill:#9BB6DF;stroke:#9BB6DF;stroke-width:9.188;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st47{fill:#FFCF45;stroke:#000000;stroke-width:13.8234;stroke-miterlimit:10;}
-	.st48{fill:none;stroke:#000000;stroke-width:13.8234;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st34{fill:#9BB6DF;stroke:#9BB6DF;stroke-width:12;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st35{fill:#FFCF45;stroke:#FFCF45;stroke-width:12;stroke-miterlimit:10;}
+	.st36{fill:#FFCF45;stroke:#000000;stroke-width:5.0299;stroke-miterlimit:10;}
+	.st37{fill:none;stroke:#FFE4A0;stroke-width:3.8633;stroke-miterlimit:10;}
+	.st38{fill:#FFFFFF;stroke:#000000;stroke-width:3.7724;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st39{fill:#FFCF45;stroke:#000000;stroke-width:16.45;stroke-miterlimit:10;}
+	.st40{fill:none;stroke:#FFE4A0;stroke-width:10.9842;stroke-miterlimit:10;}
+	.st41{fill:#FFFFFF;stroke:#000000;stroke-width:13.7083;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st42{fill:#BE4627;stroke:#BE4627;stroke-width:4.3973;stroke-miterlimit:10;}
+	.st43{fill:none;stroke:#BE4627;stroke-width:1.0993;stroke-miterlimit:10;}
+	.st44{fill:none;stroke:#FFFFFF;stroke-width:1.0993;stroke-miterlimit:10;}
+	.st45{fill:none;stroke:#000000;stroke-width:14.2912;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st46{fill:none;stroke:#000000;stroke-width:18.5705;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st47{fill:#9BB6DF;stroke:#9BB6DF;stroke-width:9.188;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st48{fill:#FFCF45;stroke:#000000;stroke-width:13.8234;stroke-miterlimit:10;}
+	.st49{fill:none;stroke:#000000;stroke-width:13.8234;stroke-linejoin:round;stroke-miterlimit:10;}
 </style>
-<g>
-	<polyline class="st12" points="238.2,327.4 238.2,384.9 262.6,364.4 286.9,384.9 286.9,325 	"/>
-	<g>
-		<path class="st24" d="M230.8,323.1c-1.3-65.1,0-131.2-1.3-196.3c0-1.1-2.6-3.4-5.1-4.6c-26.8-9.1-54.9-11.4-82.9-13.7
-			c-26.8-1.1-81.6,3.4-81.7,4.6c-1.1,71.3-1.3,140.7-2.2,211.9"/>
-		<path class="st24" d="M58.3,325.5c58.8-6.7,116-9.6,172.6-1.6"/>
-	</g>
-	<g>
-		<path class="st24" d="M230.5,322.8c1.3-65.1,0-131.2,1.3-196.3c0-1.1,2.6-3.4,5.1-4.6c26.8-9.1,54.9-11.4,82.9-13.7
-			c26.8-1.1,81.6,3.4,81.7,4.6c1.1,71.3,1.3,140.7,2.2,211.9"/>
-		<path class="st24" d="M403.1,325.3c-58.8-6.7-116-9.6-172.6-1.6"/>
-	</g>
-	<path class="st26" d="M268.1,156.3c30.7-3.2,62.2-4.4,94.4-3.3c1.2,0,2.3,0.1,3.5,0.1"/>
-	<path class="st26" d="M268.7,196.4c30.7-3.2,62.2-4.4,94.4-3.3c1.2,0,2.3,0.1,3.5,0.1"/>
-	<path class="st26" d="M269.9,237.5c30.7-3.2,62.2-4.4,94.4-3.3c1.2,0,2.3,0.1,3.5,0.1"/>
-	<path class="st26" d="M269.5,277.6c30.7-3.2,62.2-4.4,94.4-3.3c1.2,0,2.3,0.1,3.5,0.1"/>
-	<path class="st26" d="M193.4,156.3c-30.7-3.2-62.2-4.4-94.4-3.3c-1.2,0-2.3,0.1-3.5,0.1"/>
-	<path class="st26" d="M193.1,196.4c-30.7-3.2-62.2-4.4-94.4-3.3c-1.2,0-2.3,0.1-3.5,0.1"/>
-	<path class="st26" d="M194.3,237.5c-30.7-3.2-62.2-4.4-94.4-3.3c-1.2,0-2.3,0.1-3.5,0.1"/>
-	<path class="st26" d="M194.3,278.7c-30.7-3.2-62.2-4.4-94.4-3.3c-1.2,0-2.3,0.1-3.5,0.1"/>
-</g>
+<polygon class="st46" points="61.5,228.3 226.5,43.3 394.4,228.3 229.4,415.4 "/>
+<polygon class="st47" points="136.1,228.8 226.2,127.8 317.8,228.8 227.8,331 "/>
 </svg>
