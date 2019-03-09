@@ -84,138 +84,161 @@
         </div>
     </nav>
 
-    <div class="container pt-5 mb-5" id="topBar">
-        <div class="row">
-            <div class="col">
-                <div class="container" id="catIcon">
-                    <button type="button" class="btn btn-link" id="cat_icon"><img src="../images/biology-01.svg" alt="biology" style="width:70px;">Biology</button>
-                </div>
-            </div>
-            <div class="col">
-                <div class="dropdown show">
-                    <a class="btn dropdown-toggle" href="#" role="button" id="sortBy" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Sort By </a>
+    <h2>Here's what we found...</h2>
 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="#">Date</a>
-                        <a class="dropdown-item" href="#">Most Upvoted</a>
-                    </div>
+    <div class="container" id="topBar">
+            <div class="container" id="catIcon">
+                <button type="button" class="btn btn-link" id="cat_icon"><img src="../images/biology-01.svg" alt="biology" style="width:70px;">Biology</button>
+            </div>
+            <div class="dropdown show" id="sortBy">
+                <a class="btn dropdown-toggle" href="#" role="button" id="sortByButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Sort By </a>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Date</a>
+                    <a class="dropdown-item" href="#">Most Upvoted</a>
                 </div>
             </div>
-        </div>
     </div>
 
     <div class="container" id="feed">
           
-            <ul class="results" >
-                    <h2>Here's what we found...</h2>
-                    <li class="result">
-                        <div class="media">
-                            <div class="media-left">
-                            <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
+            <div class="results" >
+                        <div class="media result">
+                            <div class="media-left d-flex">
                             </div>
-                            <div class="media-body">
-                            <h4 class="media-heading">yves127</h4>
-                            <p>The presence of three sex chromosomes in a persons cells is best explained by what cell process going wrong?​</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="result">
-                        <div class="media">
-                            <div class="media-left">
-                            <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
-                            </div>
-                            <div class="media-body">
-                            <h4 class="media-heading">freshman_port</h4>
-                            <p>How does the size of a cell's surface area change compared to its volume when the cell grows?</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="result">
-                        <div class="media">
-                            <div class="media-left">
-                            <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
-                            </div>
-                            <div class="media-body">
-                            <h4 class="media-heading">shebookworm4</h4>
-                            <p>Why is it important for microtubules or spindle fibers to attach to chromosomes?</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="result">
-                            <div class="media">
-                                <div class="media-left">
-                                <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
+                            <div class="media-body"> 
+                                <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic" style="width:3rem">yves127</h4>
+                                <div class="container">
+                                    <a id="question" href="#">The presence of three sex chromosomes in a persons cells is best explained by what cell process going wrong?​</a>
                                 </div>
-                                <div class="media-body">
-                                <h4 class="media-heading">allisonpp8</h4>
-                                <p>According to most scientific models, how many years ago did the first simple cells appear on Earth?</p>
+                                <div class="row footerResult">
+                                    <img src="../images/answered-13.svg" class="media-object align-self-center column" style="width:2rem" id="catQuestion">
+                                    <p class="resultFooter align-self-center">3 answers</p>
+                                    <p class="resultFooter align-self-center">10 points</p>
+                                    <p class="resultFooter align-self-center">10 Jan 2019</p>
+                                    <img src="../images/biology-01.svg" class="media-object" style="width:2rem; height: 2rem;">
                                 </div>
                             </div>
-                        </li>
-                        <li class="result">
-                                <div class="media">
-                                    <div class="media-left">
-                                    <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
+                        </div>
+
+                        <div class="media result">
+                            <div class="media-left d-flex">
+                            </div> 
+                                <div class="media-body"> 
+                                    <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic" style="width:3rem">freshman_port</h4>
+                                    <div class="container">
+                                        <a id="question" href="#">How does the size of a cell's surface area change compared to its volume when the cell grows?</a>
                                     </div>
-                                    <div class="media-body">
-                                    <h4 class="media-heading">rickylovesbugs</h4>
-                                    <p>Where is the instruction for making new cell located in a cell?</p>
+                                    <div class="row footerResult">
+                                        <p class="resultFooter align-self-center">0 answers</p>
+                                        <p class="resultFooter align-self-center">1 point</p>
+                                        <p class="resultFooter align-self-center">8 Jan 2019</p>
+                                        <img src="../images/biology-01.svg" class="media-object" style="width:2rem; height: 2rem;">
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="media result">
+                            <div class="media-left d-flex">
+                            </div> 
+                                <div class="media-body"> 
+                                    <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic" style="width:3rem">shebookworm4</h4>
+                                    <div class="container">
+                                        <a id="question" href="#">Why is it important for microtubules or spindle fibers to attach to chromosomes?</a>
+                                    </div>
+                                    <div class="row footerResult">
+                                        <p class="resultFooter align-self-center">5 answers</p>
+                                        <p class="resultFooter align-self-center">5 points</p>
+                                        <p class="resultFooter align-self-center">7 Jan 2019</p>
+                                        <img src="../images/biology-01.svg" class="media-object" style="width:2rem; height: 2rem;">
                                     </div>
                                 </div>
-                            </li>
-                            <li class="result">
-                                    <div class="media">
-                                        <div class="media-left">
-                                        <img src="../images/logo_lbaw.png" class="media-object align-self-center" style="width:30px">
+                        </div>
+
+                        <div class="media result">
+                                <div class="media-left d-flex">
+                                </div> 
+                                    <div class="media-body"> 
+                                        <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic" style="width:3rem">allisonpp8</h4>
+                                        <div class="container">
+                                            <a id="question" href="#">According to most scientific models, how many years ago did the first simple cells appear on Earth?</a>
                                         </div>
-                                        <div class="media-body">
-                                        <h4 class="media-heading">heyimpierre</h4>
-                                        <p>How does the endosymbiotic theory explain the double membrane around the chloroplast?</p>
+                                        <div class="row footerResult">
+                                            <p class="resultFooter align-self-center">8 answers</p>
+                                            <p class="resultFooter align-self-center">13 points</p>
+                                            <p class="resultFooter align-self-center">5 Jan 2019</p>
+                                            <img src="../images/biology-01.svg" class="media-object" style="width:2rem; height: 2rem;">
                                         </div>
                                     </div>
-                                </li>
-                  </ul>
+                            </div>
+
+                            <div class="media result">
+                                    <div class="media-left d-flex">
+                                    </div> 
+                                        <div class="media-body"> 
+                                            <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic" style="width:3rem">rickylovesbugs</h4>
+                                            <div class="container">
+                                                <a id="question" href="#">Where is the instruction for making new cell located in a cell?</a>
+                                            </div>
+                                            <div class="row footerResult">
+                                                <p class="resultFooter align-self-center">2 answers</p>
+                                                <p class="resultFooter align-self-center">7 points</p>
+                                                <p class="resultFooter align-self-center">5 Jan 2019</p>
+                                                <img src="../images/biology-01.svg" class="media-object" style="width:2rem; height: 2rem;">
+                                            </div>
+                                        </div>
+                                </div>
+
+                                <div class="media result">
+                                        <div class="media-left d-flex">
+                                        </div> 
+                                            <div class="media-body"> 
+                                                <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic" style="width:3rem">heyimpierre</h4>
+                                                <div class="container">
+                                                    <a id="question" href="#">How does the endosymbiotic theory explain the double membrane around the chloroplast?</a>
+                                                </div>
+                                                <div class="row footerResult">
+                                                    <p class="resultFooter align-self-center">9 answers</p>
+                                                    <p class="resultFooter align-self-center">15 points</p>
+                                                    <p class="resultFooter align-self-center">5 Jan 2019</p>
+                                                    <img src="../images/biology-01.svg" class="media-object" style="width:2rem; height: 2rem;">
+                                                </div>
+                                            </div>
+                                    </div>
+                       
+                    </div>
 
      
  
 
             <div class="card" id="leaderBoard">
-                <div class="card-body">
+                <div class="card-body leaders">
                     <h4 class="card-title">Leaderboard</h4>
-                    <ul class="leaders">
-                        <li class="leader">
-                                <div class="media">
-                                    <div class="media-left">
-                                    <img src="img_avatar1.png" class="media-object" style="width:60px">
-                                    </div>
-                                    <div class="media-body">
-                                    <h4 class="media-heading">John Doe</h4>
-                                    </div>
+                        <div class="media leader">
+                            <div class="media-left">
+                            </div>
+                            <div class="media-body" >
+                            <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic" style="width:1.75rem">John Doe</h4>
+                            </div>
+                        </div>
+                        <div class="media leader">
+                                <div class="media-left">
                                 </div>
-                        </li>
-                        <li class="leader">
-                                <div class="media">
-                                        <div class="media-left">
-                                        <img src="img_avatar1.png" class="media-object" style="width:60px">
-                                        </div>
-                                        <div class="media-body">
-                                        <h4 class="media-heading">John Doe</h4>
-                                        </div>
-                                    </div>
-                        </li>
-                        <li class="leader">
-                                <div class="media">
-                                        <div class="media-left">
-                                        <img src="img_avatar1.png" class="media-object" style="width:60px">
-                                        </div>
-                                        <div class="media-body">
-                                        <h4 class="media-heading">John Doe</h4>
-                                        </div>
-                                    </div>
-                        </li>
-                    </ul>
+                                <div class="media-body" >
+                                <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic" style="width:1.75rem">John Doe</h4>
+                                </div>
+                        </div>
+                        <div class="media leader">
+                                <div class="media-left">
+                                </div>
+                                <div class="media-body" >
+                                <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic" style="width:1.75rem">John Doe</h4>
+                                </div>
+                        </div>
+                        </div>
+                      
                 </div>
             </div>
 

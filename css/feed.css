@@ -2,12 +2,30 @@ body{
     font-family: 'Prompt', sans-serif;
 }
 
-ul{
-    list-style-type: none;  
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
+
+h2{
+    margin-top: 4%;
+    margin-left: 6%;
+    padding: 2%;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 800;
+    font-size: 2.8rem;
+
 }
 
 #topBar{
     font-family: 'Prompt', sans-serif;
+    margin-bottom: 0;
+    display: inline-grid;
+    grid-template-columns: 65% 5%;
+}
+
+#catIcon{
+    grid-column-start: 1;
 }
 
 #cat_icon{
@@ -15,46 +33,99 @@ ul{
     color: black;
 }
 
+#sortBy{
+    grid-column-start: 2;
+    align-self: center;
+}
+
+#sortByButton{
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
 #feed{
     font-family: 'Prompt', sans-serif;
 }
 
-/*#feed{
-    display: inline-grid;
-    grid-template-columns: 75% 25%;
-}
-
-#results{
-    grid-column-start: 1;
-}
-
-#leaderBoard{
-    grid-column-start: 2;
-    grid-row-end: 1;
-}*/
-
 #feed{
+    width: 100%;
     display: inline-grid;
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 75% 5% 25%;
+    margin-top: 0;
+    margin-left: 3%;
+    margin-right: 1%;
 }
 
 #results{
     grid-column-start: 1;
+    padding: 5%;
     margin: 10%;
 }
 
-#feed .result{
-    border-bottom: 20px;
-    border-bottom-color: black;
-    padding: 20px;
+.result{
+    border-bottom: 0.3em solid black;
+    padding: 2% 2% 1%;
+}
+
+.resultHeader{
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+#question{
+    font-family: 'Prompt', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+}
+
+#question:hover{
+    color: #FFCD34;
+}
+
+
+.footerResult{
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+.resultFooter{
+    margin: 0 1%;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.profilePic{
+    padding: 1%;
 }
 
 #leaderBoard{
-    grid-column-start: 2;
+    grid-column-start: 3;
     height: 300px;
     margin-right: 0;
+    border: 0.4em solid black;
+    background-color: rgb(255, 255, 249);
 }
 
 .card-title{
     text-align: center;
+    font-weight: 700;
+    margin-bottom: 15%;
+    text-decoration: underline;
+    text-decoration-color:#FFCD34;
+}
+
+.leader{
+    margin: 1% 0;
+    border-bottom: 0.1em solid #FFCD34;
+}
+
+.leaderInfo{
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+    font-size: 1.1rem;
+    
 }
