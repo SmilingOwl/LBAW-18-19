@@ -16,10 +16,10 @@ function onLoad() {
     div_container2.setAttribute("class", "search-container2");
     let div_search_bar_cat = document.createElement("div");
     div_search_bar_cat.setAttribute("class", "search-bar-cat dropdown");
-    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/logo_lbaw.png" alt="logo" class="drop-menu-cat" value="all"></button>';
+    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/icon-14.svg" alt="logo" class="drop-menu-cat" value="all"></button>';
     let div_group_drop_down = document.createElement("div");
     div_group_drop_down.setAttribute("class", "dropdown-menu");
-    div_group_drop_down.innerHTML = '<a class="dropdown-item" href="#"><img src="../images/logo_lbaw.png" class="rounded dropdown-image-cat" alt="All"> All</a>';
+    div_group_drop_down.innerHTML = '<a class="dropdown-item" href="#"><img src="../images/icon-14.svg" class="rounded dropdown-image-cat" alt="All"> All</a>';
     div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/biology-01.svg" class="rounded dropdown-image-cat" alt="Biology"> Biology</a>';
     div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/chemistry-03.svg" class="rounded dropdown-image-cat" alt="Chemistry"> Chemistry</a>';
     div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/maths-12.svg" class="rounded dropdown-image-cat" alt="Maths"> Maths</a>';

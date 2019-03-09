@@ -183,7 +183,6 @@ th {
 
 .avatar-upload {
     position: relative;
-    max-width: 205px;
     margin: 0px;
 }
 
@@ -321,6 +320,13 @@ th {
     position: absolute;
     bottom: 0.3em;
     right: 0.3em;
+}
+
+
+
+.search-bar-moderator
+{
+    margin-top: 1em;
 }
 
 .form-control {

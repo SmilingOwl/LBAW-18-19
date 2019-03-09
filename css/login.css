@@ -12,7 +12,7 @@ body
 }
 
   /* style the container */
-  div#form.container {
+  div.form.container {
     position: relative;
     border-radius: 5px;
     max-width: 800px;
@@ -51,14 +51,14 @@ body
    
    
   }
-  div#form.input-container{
+  div.form.input-container{
     width:100%;
   }
   div.input-container{
     padding-bottom: 10px;
   }
 
-  input#form{
+  input.form{
     width: 100%;
     border:0px;
     border-radius: 0.25rem;
@@ -134,7 +134,7 @@ body
       display: block;
       text-align: center;
     }
-    div#form.container {
+    div.form.container {
       max-width: 330px;
       margin-bottom:90px;
     }
@@ -250,3 +250,9 @@ div.col-lg-4.col-md-4.col-sm-4.col-xs-12{
 }
 
 
+
+
+.img-profile
+{
+    margin-bottom: 0.5em;
+}

@@ -21,10 +21,10 @@ function onLoad() {
     div_container2.setAttribute("class", "search-container2");
     let div_search_bar_cat = document.createElement("div");
     div_search_bar_cat.setAttribute("class", "search-bar-cat dropdown");
-    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/logo_lbaw.png" alt="logo" class="drop-menu-cat" value="all"></button>';
+    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/icon-14.svg" alt="logo" class="drop-menu-cat" value="all"></button>';
     let div_group_drop_down = document.createElement("div");
     div_group_drop_down.setAttribute("class", "dropdown-menu");
-    div_group_drop_down.innerHTML = '<a class="dropdown-item" href="#"><img src="../images/logo_lbaw.png" class="rounded dropdown-image-cat" alt="All"> All</a>';
+    div_group_drop_down.innerHTML = '<a class="dropdown-item" href="#"><img src="../images/icon-14.svg" class="rounded dropdown-image-cat" alt="All"> All</a>';
     div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/biology-01.svg" class="rounded dropdown-image-cat" alt="Biology"> Biology</a>';
     div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/chemistry-03.svg" class="rounded dropdown-image-cat" alt="Chemistry"> Chemistry</a>';
     div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/maths-12.svg" class="rounded dropdown-image-cat" alt="Maths"> Maths</a>';
@@ -88,7 +88,7 @@ function changeImageDropdown(e) {
 }
 
 function hyperSmallScreen() {
-    img_logo.setAttribute("src", "../images/logo_lbaw.png");
+    img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button"><i class="fas fa-search search-icon"></i></button>';
     profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button"><button type="button" class="btn btn  "><i class="fas fa-question"></i></button></a>';
     let div_bell = document.createElement("div");
@@ -112,7 +112,7 @@ function hyperSmallScreen() {
 }
 
 function superSmallScreen() {
-    img_logo.setAttribute("src", "../images/logo_lbaw.png");
+    img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon" ></i></button>';
     profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button"><button type="button" class="btn  "><strong>Ask</strong></button></a>';
     let div_bell = document.createElement("div");
@@ -136,7 +136,7 @@ function superSmallScreen() {
 }
 
 function smallMScreen() {
-    img_logo.setAttribute("src", "../images/logo_lbaw.png");
+    img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button"><button type="button" class="btn btn"><strong>Ask</strong></button></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
@@ -159,7 +159,7 @@ function smallMScreen() {
 }
 
 function smallScreen() {
-    img_logo.setAttribute("src", "../images/logo_lbaw.png");
+    img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button"><button type="button" class="btn btn  "><strong>Ask a Question</strong></button></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
