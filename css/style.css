@@ -33,10 +33,11 @@ main {
     text-align: center;
     color: #aaa;
 }
+
 p {
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
-    color:black;
+    color: black;
 }
 
 a,
@@ -47,13 +48,6 @@ a:focus {
     transition: all 0.3s;
 }
 
-.navbar {
-    padding: 10px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 40px;
-}
 
 .line {
     width: 100%;
@@ -86,7 +80,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-  
+
 }
 
 #sidebar ul.components {
@@ -94,7 +88,7 @@ a:focus {
 }
 
 #sidebar ul p {
-    color:black;
+    color: black;
     padding: 10px;
 }
 
@@ -105,22 +99,23 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color:black;
-   
+    color: black;
+
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-    color:black;
-    
+    color: black;
+
 }
 
 
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-   
+
 }
+
 ul.CTAs {
     padding: 20px;
 }
@@ -135,7 +130,7 @@ ul.CTAs a {
 
 a.article,
 a.article:hover {
-   
+
     color: black !important;
 }
 
@@ -146,6 +141,7 @@ ul.pagination {
     border-radius: .25rem;
     margin-bottom: 50px;
 }
+
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -164,15 +160,20 @@ ul.pagination {
     #sidebar {
         margin-left: -250px;
     }
+
     #sidebar.active {
         margin-left: 0;
     }
+
     #sidebarCollapse span {
         display: none;
     }
 }
 
-td,th{ text-align: center;}
+td,
+th {
+    text-align: center;
+}
 
 
 .avatar-upload {
@@ -180,56 +181,60 @@ td,th{ text-align: center;}
     max-width: 205px;
     margin: 0px;
 }
+
 .avatar-upload.avatar-edit {
-        position: absolute;
-        right: 12px;
-        z-index: 1;
-        top: 10px;
+    position: absolute;
+    right: 12px;
+    z-index: 1;
+    top: 10px;
 }
 
 .avatar-edit input {
-            display: none;
+    display: none;
 }
 
-.avatar-edit input + label {
-                
-                width: 25px;
-                height: 25px;
-                margin-bottom: 3px;
-                margin-left: 30px;
-                border-radius: 100%;
-                background: #FFFFFF;
-                border: 1px solid transparent;
-                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
-                cursor: pointer;
-                font-weight: normal;
-                transition: all .2s ease-in-out;
+.avatar-edit input+label {
+
+    width: 25px;
+    height: 25px;
+    margin-bottom: 3px;
+    margin-left: 30px;
+    border-radius: 100%;
+    background: #FFFFFF;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all .2s ease-in-out;
 }
+
 .avatar-preview {
     display: inline-grid;
-    width: 45px;
+    width: 60px;
     margin: 0px;
-    height: 45px;
+    height: 60px;
     position: relative;
     right: 0;
     border-radius: 100%;
     border: 2px solid black;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-    }
-.avatar-preview > div {
-            width: 100%;
-            height: 100%;
-            border-radius: 100%;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-preview>div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 /**........Ask...........**/
 .btn-file {
     position: relative;
     overflow: hidden;
 }
+
 .btn-file input[type=file] {
     position: absolute;
     top: 0;
@@ -246,6 +251,69 @@ td,th{ text-align: center;}
     display: block;
 }
 
-#img-upload{
+#img-upload {
     width: 100%;
+}
+
+
+#question-big {
+    padding-top: 1em;
+}
+
+#user-name {
+    padding-left: 1em;
+}
+
+#question-img {
+    max-width: 100%;
+    max-height: 300px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    clear: both;
+    float: left;
+}
+
+#footer-question {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#question-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.answer-question
+{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: rgb(238, 238, 238);
+    border-radius: 0.3em;
+    justify-items: center;
+}
+.answer-up-votes
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.2em;
+    padding-right: 0.5em;
+}
+.answer
+{
+    border-style: dashed;
+    border: solid #000;
+    border-width: 1px;
+    border-radius: 0.3em;
+    padding: 0.3em;
+    position: relative;
+    padding-bottom: 1.2em;
+}
+.make-comment
+{
+    position: absolute;
+    bottom: 0.3em;
+    right: 0.3em;
 }

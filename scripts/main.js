@@ -1,4 +1,6 @@
-window.onload = function () {
+
+window.addEventListener("load",onLoad);
+function onLoad(){
 
     let on_view_point = document.querySelector("#logo");
     let bouding = on_view_point.getBoundingClientRect();
