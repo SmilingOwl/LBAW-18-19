@@ -439,6 +439,8 @@ td > input:focus {
 .btn:focus,.btn:active {
     outline: none !important;
     box-shadow: none;
+    text-decoration: underline;
+    text-decoration-color:#FFCD34;
  }
 
 .card-body {
