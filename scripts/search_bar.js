@@ -19,19 +19,19 @@ function onLoad() {
     div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/icon-14.svg" alt="logo" class="drop-menu-cat" value="all"></button>';
     let div_group_drop_down = document.createElement("div");
     div_group_drop_down.setAttribute("class", "dropdown-menu");
-    div_group_drop_down.innerHTML = '<a class="dropdown-item" href="#"><img src="../images/icon-14.svg" class="rounded dropdown-image-cat" alt="All"> All</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/biology-01.svg" class="rounded dropdown-image-cat" alt="Biology"> Biology</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/chemistry-03.svg" class="rounded dropdown-image-cat" alt="Chemistry"> Chemistry</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/maths-12.svg" class="rounded dropdown-image-cat" alt="Maths"> Maths</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/physics-02.svg" class="rounded dropdown-image-cat" alt="Physics"> Physics</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/geology-10.svg" class="rounded dropdown-image-cat" alt="Geology"> Geology</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/art-06.svg" class="rounded dropdown-image-cat" alt="Art"> Art</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/history-08.svg" class="rounded dropdown-image-cat" alt="History"> History</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/linguistics-09.svg" class="rounded dropdown-image-cat" alt="Linguistics"> Linguistics</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/health-04.svg" class="rounded dropdown-image-cat" alt="Health"> Health</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/business-07.svg" class="rounded dropdown-image-cat" alt="Business"> Business</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/tech-05.svg" class="rounded dropdown-image-cat" alt="Technology"> Technology</a>';
-    div_group_drop_down.innerHTML += '<a class="dropdown-item" href="#"><img src="../images/psychology-11.svg" class="rounded dropdown-image-cat" alt="Psychology"> Psychology</a>';
+    div_group_drop_down.innerHTML = '<a class="dropdown-item drop-cat" href="#"><img src="../images/icon-14.svg" class="rounded dropdown-image-cat" alt="All"> All</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/biology-01.svg" class="rounded dropdown-image-cat" alt="Biology"> Biology</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/chemistry-03.svg" class="rounded dropdown-image-cat" alt="Chemistry"> Chemistry</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/maths-12.svg" class="rounded dropdown-image-cat" alt="Maths"> Maths</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/physics-02.svg" class="rounded dropdown-image-cat" alt="Physics"> Physics</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/geology-10.svg" class="rounded dropdown-image-cat" alt="Geology"> Geology</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/art-06.svg" class="rounded dropdown-image-cat" alt="Art"> Art</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/history-08.svg" class="rounded dropdown-image-cat" alt="History"> History</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/linguistics-09.svg" class="rounded dropdown-image-cat" alt="Linguistics"> Linguistics</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/health-04.svg" class="rounded dropdown-image-cat" alt="Health"> Health</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/business-07.svg" class="rounded dropdown-image-cat" alt="Business"> Business</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/tech-05.svg" class="rounded dropdown-image-cat" alt="Technology"> Technology</a>';
+    div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" href="#"><img src="../images/psychology-11.svg" class="rounded dropdown-image-cat" alt="Psychology"> Psychology</a>';
     div_search_bar_cat.appendChild(div_group_drop_down);
     let div_search_bar_div = document.createElement("div");
     div_search_bar_div.setAttribute("class", "search-bar-div");
@@ -51,7 +51,7 @@ function onLoad() {
 
 
 function addDropEvent() {
-    let images_dropdown = document.querySelectorAll(".dropdown-item");
+    let images_dropdown = document.querySelectorAll(".drop-cat");
     for (let i = 0; i < images_dropdown.length; i++) {
         images_dropdown[i].addEventListener("click", changeImageDropdown);
     }
