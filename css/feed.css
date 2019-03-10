@@ -20,8 +20,9 @@ h2{
 #topBar{
     font-family: 'Prompt', sans-serif;
     margin-bottom: 0;
-    display: inline-grid;
-    grid-template-columns: 65% 5%;
+    padding: 2% 0 4%;
+ /*   display: inline-grid;
+    grid-template-columns: 65% 5%;*/
 }
 
 #catIcon{
@@ -33,14 +34,16 @@ h2{
     color: black;
 }
 
-#sortBy{
-    grid-column-start: 2;
-    align-self: center;
+#sortBar{
+    width: 70%;
+    margin-left: 3%;
 }
+
+
 
 #sortByButton{
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 1.1rem;
 }
 
 #feed{
@@ -54,6 +57,7 @@ h2{
     margin-top: 0;
     margin-left: 3%;
     margin-right: 1%;
+    margin-bottom: 5%;
 }
 
 #results{
@@ -113,13 +117,14 @@ h2{
 .card-title{
     text-align: center;
     font-weight: 700;
-    margin-bottom: 15%;
+    font-size: 1.7rem;
+    margin-bottom: 2%;
     text-decoration: underline;
     text-decoration-color:#FFCD34;
 }
 
 .leader{
-    margin: 1% 0;
+    padding: 2% 0;
     border-bottom: 0.1em solid #FFCD34;
 }
 
@@ -127,5 +132,16 @@ h2{
     font-family: 'Prompt', sans-serif;
     font-weight: 400;
     font-size: 1.1rem;
+    margin:0; 
     
+}
+
+#points{
+    margin-left: 6%;
+    margin-bottom: 0;
+    padding-top: 1.5%;
+}
+
+.leaderResult{
+    margin: 5% 0;
 }
