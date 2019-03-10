@@ -106,6 +106,7 @@ function hyperSmallScreen() {
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -130,6 +131,7 @@ function superSmallScreen() {
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -153,6 +155,8 @@ function smallMScreen() {
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
+
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
 
@@ -176,6 +180,7 @@ function smallScreen() {
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
