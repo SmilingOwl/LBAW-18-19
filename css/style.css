@@ -583,3 +583,16 @@ td > input:focus {
 .fa-pen:hover{
     color: #FFCD34;
 }
+
+.settings-items .row
+{
+    justify-content: center;
+    justify-self: center;
+}
+@media (min-width:404px)
+{
+    .social-buttons a
+    {
+        white-space: nowrap;
+    }
+}
