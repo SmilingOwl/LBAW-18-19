@@ -471,3 +471,58 @@ td > input:focus {
     border: none;
 }
 
+.jumbotron {
+    background-color:  #FFFDF8;
+}
+
+#statsTitle{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-bottom: 10%;
+    text-decoration: underline;
+    text-decoration-color:#FFCD34;
+}
+
+#stats{
+    border: 3px solid black;
+}
+
+.result{
+    border-bottom: 0.3em solid black;
+    padding: 2% 2% 1%;
+}
+
+#question{
+    font-family: 'Prompt', sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+}
+
+#question:hover{
+    color: #FFCD34;
+}
+
+.resultFooter{
+    margin: 0 1%;
+    font-family: 'Prompt', sans-serif;
+    font-weight: 400;
+    font-size: 0.7rem;
+}
+
+.footerResult{
+    margin-left: 1%;
+    margin-top: 2%;
+}
+
+#editBtn:hover {
+    color: #FFCD34;
+}
+
+.follow:hover {
+    color: #FFCD34;
+}
+
+

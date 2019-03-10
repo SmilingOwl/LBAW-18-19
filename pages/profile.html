@@ -13,8 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- End of Bootstrap include -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css">
@@ -86,7 +86,7 @@
         </div>
     </nav>
 
-    <div class="mt-5 grey-background container" >
+    <div class="mt-5 grey-background container">
 
         <section>
             <div class="jumbotron profile-jumbotron">
@@ -94,28 +94,29 @@
                     <div class="row align-items-center">
 
                         <div class="col-md-3 text-center">
-                            <img class="rounded-circle img-fluid img-profile" src="../images/user.png" style=" width:100%;max-width: 230px; max-height: 230px;"></img>
+                            <img class="rounded-circle img-fluid img-profile" src="../images/sophie.jpg"
+                                style=" width:90%; max-width: 230px; max-height: 230px;"></img>
                         </div>
 
                         <div class="col-md-6 text-left">
                             <h2 class="h2-adapt">Sofia_12
 
                                 <a href="./edit_profile.html">
-                                    <div class="btn btn-outline-primary" style="max-width: 40px; margin-left: 1em;">
-                                        <i class="far fa-edit"></i>
+                                    <div class="btn" id="editBtn" style="max-width: 40px;">
+                                        <i class="fas fa-pen"></i>
                                     </div>
                                 </a>
 
                                 <div>
                                     <span class="fa-layers fa-fw">
-                                        <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2">Enthusiast</i>
+                                        <i style="font-family: 'Prompt', sans-serif; font-size: 18px;">Enthusiast</i>
 
                                     </span>
                                 </div>
                             </h2>
 
                             <div class="mt-2">
-                                <p>
+                                <p style="font-family: 'Prompt', sans-serif;">
                                     I love this forum!
                                 </p>
 
@@ -123,7 +124,8 @@
 
                                     <div>
                                         <h5>100
-                                            <a href="../pages/followers.html"><small style="margin-right: 30px;">followers
+                                            <a href="../pages/followers.html" class="follow"><small
+                                                    style="margin-right: 30px;">followers
                                                 </small></a>
                                         </h5>
                                     </div>
@@ -131,7 +133,7 @@
 
                                     <div>
                                         <h5>70
-                                            <a href="../pages/following.html"><small> following</small></a>
+                                            <a href="../pages/following.html" class="follow"><small> following</small></a>
                                         </h5>
                                     </div>
 
@@ -142,13 +144,13 @@
                         </div>
                         <!--Bio-->
                         <div class="col-md-3" style="align-content: flex-end;">
-                            <div class="card card-body">
-                                <h5 class="text-dark" style=" text-align: center">Stats</h5>
-                                <div class="dropdown-divider"></div>
+                            <div class="card card-body pt-1 pb-1" id="stats">
+                                <div class="container m-3 align-self-center" id="newBorder">
+                                <h5 class="text-dark" id="statsTitle" style=" text-align: center">Stats</h5>
                                 <div class="d-flex flex-column justify-content-around flex-wrap">
                                     <div class="d-flex p-1">
                                         <div class="mx-2">
-                                            <i class="fas fa-gem"></i>
+                                            <img src="../images/points-16.svg" style="width: 1.2em"></img>
                                         </div>
                                         <h6>300
                                             <small>points</small>
@@ -157,7 +159,7 @@
 
                                     <div class="d-flex p-1">
                                         <div class="mx-2">
-                                            <i class="far fa-question-circle"></i>
+                                            <img src="../images/question-17.svg" style="width: 1.2em"></img>
                                         </div>
                                         <h6>33
                                             <small>questions</small>
@@ -166,7 +168,7 @@
 
                                     <div class="d-flex p-1">
                                         <div class="mx-2">
-                                            <i class="fas fa-pencil-alt"></i>
+                                            <img src="../images/edit-18.svg" style="width: 1.2em"></img>
                                         </div>
                                         <h6>50
                                             <small>answers</small>
@@ -175,7 +177,7 @@
 
                                     <div class="d-flex p-1">
                                         <div class="mx-2">
-                                            <i class="fas fa-check"></i>
+                                            <img src="../images/answered-13.svg" style="width: 1.2em"></img>
                                         </div>
                                         <h6>3
                                             <small>best answers</small>
@@ -185,24 +187,20 @@
                                 </div>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!--separadores-->
-        <div class="container">
+        <div class="container mb-5">
             <ul class="nav nav-tabs profile-tabs" role="tablist">
                 <li class="nav-item">
 
                     <a class="nav-link active" data-toggle="tab" href="#Questions">
                         <i class="fas fa-question"></i>
                         Questions</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#Answers">
-                        <i class="fas fa-pencil-alt"></i> Answers</a>
                 </li>
 
                 <li class="nav-item">
@@ -219,9 +217,65 @@
             <div class="tab-content">
 
                 <div id="Questions" class="container tab-pane active"><br>
-                </div>
+                        <div class="container pb-3">
+                                <div class="row-lg-4 row-md-4 row-sm-4 row-xs-4">
+                                        <div class="media result">
+                                                <div class="media-left d-flex">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="container">
+                                                        <a id="question" href="#">The presence of three sex chromosomes in a persons cells is
+                                                            best
+                                                            explained by what cell process going wrong?​</a>
+                                                    </div>
+                                                    <div class="row footerResult">
+                                                        <img src="../images/answered-13.svg" class="media-object align-self-center column"
+                                                            style="width:2rem" id="catQuestion">
+                                                        <p class="resultFooter align-self-center">3 answers</p>
+                                                        <p class="resultFooter align-self-center">10 upvotes  2 downvotes</p>
+                                                        <p class="resultFooter align-self-center">10 Jan 2019</p>
+                                                        <img src="../images/biology-01.svg" class="media-object" style="width:2rem; height: 2rem;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                </div>
+                                <div class="row-lg-4 row-md-4 row-sm-4 row-xs-4">
+                                        <div class="media result">
+                                                <div class="media-left d-flex">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="container">
+                                                        <a id="question" href="#">What programming language do hackers use?</a>
+                                                    </div>
+                                                    <div class="row footerResult">
+                                                        <p class="resultFooter align-self-center">0 answers</p>
+                                                        <p class="resultFooter align-self-center">1 upvote</p>
+                                                        <p class="resultFooter align-self-center">8 Jan 2019</p>
+                                                        <img src="../images/tech-05.svg" class="media-object" style="width:2rem; height: 2rem;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                </div>
+                                <div class="row-lg-4 row-md-4 row-sm-4 row-xs-4">
+                                        <div class="media result">
+                                                <div class="media-left d-flex">
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="container">
+                                                        <a id="question" href="#">How do black holes impact time?</a>
+                                                    </div>
+                                                    <div class="row footerResult">
+                                                        <p class="resultFooter align-self-center">5 answers</p>
+                                                        <p class="resultFooter align-self-center">5 upvotes</p>
+                                                        <p class="resultFooter align-self-center">7 Jan 2019</p>
+                                                        <img src="../images/physics-02.svg" class="media-object" style="width:2rem; height: 2rem;">
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                </div>
+                        </div>
 
-                <div id="Answers" class="container tab-pane fade"><br>
+                    
                 </div>
 
                 <div id="Followers" class="container tab-pane fade"><br>
@@ -233,8 +287,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                             margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -242,8 +296,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -254,8 +308,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                 margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -263,8 +317,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -275,8 +329,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                     margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -284,8 +338,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -295,8 +349,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                         margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -304,8 +358,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -315,8 +369,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                             margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -324,8 +378,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -335,8 +389,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                 margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -344,49 +398,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -397,8 +410,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                     margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -406,8 +419,28 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                         margin-bottom: 8px;">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -418,8 +451,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                             margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -427,8 +460,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -439,8 +472,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                                 margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -448,19 +481,20 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                                            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                 margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -468,8 +502,28 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                             margin-bottom: 8px;">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -492,8 +546,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                     margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -501,8 +555,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -513,8 +567,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                         margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -522,8 +576,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -534,8 +588,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                             margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -543,8 +597,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -554,8 +608,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                 margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -563,8 +617,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -574,8 +628,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                     margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -583,8 +637,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -594,8 +648,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                         margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -603,49 +657,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -656,8 +669,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                             margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -665,8 +678,28 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                                 margin-bottom: 8px;">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -677,8 +710,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                                    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                                     margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -686,8 +719,8 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -698,8 +731,8 @@
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                                        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                                         margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -707,19 +740,19 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded" src="../images/user1.png" style="width: 150px; height: 200px;  border: 2px solid black;
-                                                                                            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1); margin-bottom: 8px;">
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                                             margin-bottom: 8px;">
 
                                         <div class="title">
 
@@ -727,8 +760,28 @@
                                                 <h3>LuisRocha</h3>
                                             </a>
 
-                                            <i class="far fa-lightbulb" style="font-size: 18px;" data-fa-transform="up-2 grow-2"
-                                                style="margin-right: 5px;"></i> Rookie
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
+                                                                                                 margin-bottom: 8px;">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
 
                                         </div>
 
@@ -746,38 +799,38 @@
         </div>
     </div>
 
-        <footer class="platform-info" id="platform-link-info">
-            <div class="card-footer small text-muted">
-                <div class="row">
-                    <div class="col-3">
-                        <a href="../pages/about.html">
-                            About us
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="../pages/faq.html">
-                            FAQ
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="../pages/contacts.html">
-                            Contacts
-                        </a>
-                    </div>
-                    <div class="col-3">
-                        <a href="../pages/terms.html">
-                            Terms of Service
-                        </a>
-                    </div>
+    <footer class="platform-info" id="platform-link-info">
+        <div class="card-footer small text-muted">
+            <div class="row">
+                <div class="col-3">
+                    <a href="../pages/about.html">
+                        About us
+                    </a>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <p class="text-center font-weight-bold" id="copyright">Copyright © LearnIt 2019</p>
-                    </div>
-
+                <div class="col-3">
+                    <a href="../pages/faq.html">
+                        FAQ
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="../pages/contacts.html">
+                        Contacts
+                    </a>
+                </div>
+                <div class="col-3">
+                    <a href="../pages/terms.html">
+                        Terms of Service
+                    </a>
                 </div>
             </div>
-        </footer>
+            <div class="row">
+                <div class="col">
+                    <p class="text-center font-weight-bold" id="copyright">Copyright © LearnIt 2019</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 
 </body>
 
