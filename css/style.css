@@ -574,3 +574,11 @@ td > input:focus {
 {
     width: 100%;
 }
+
+.fa-pen{
+    background: none;
+}
+
+.fa-pen:hover{
+    color: #FFCD34;
+}
