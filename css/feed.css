@@ -136,6 +136,10 @@ h2{
     margin: 5% 0;
 }
 
+#active{
+    border: 2px solid black;
+}
+
 @media screen and (max-width: 992px) 
 {
     #leaderBoard
