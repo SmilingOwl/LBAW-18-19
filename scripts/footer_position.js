@@ -14,9 +14,6 @@ function onLoad()
     if(soma<window.innerHeight)
     {
         let adicionar=window.innerHeight - nav.offsetHeight - footer.offsetHeight;
-        filhos[filhos.length-1].addEventListener("click",function(){
-            filhos[filhos.length-1].style.height="auto";
-        });
         filhos[filhos.length-1].style.height=adicionar + "px";
     }
 }
