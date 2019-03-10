@@ -41,7 +41,7 @@ body
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border-left: 3px solid black;
+
   }
   
   a.google {
@@ -83,15 +83,21 @@ body
     clear: both;
   }
   
-  /* vertical line 
-  #login.vl,  #register.vl {
+  #login.vl {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
-    border: 2px solid #ddd;
-    height: 100%;
-  }*/
+    border: 2px solid black;
+    height: 53.7%;
+  }
 
+  #register.vl {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: 2px solid black;
+    height: 61%;
+  }
 
 
   

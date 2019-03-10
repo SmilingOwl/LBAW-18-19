@@ -87,17 +87,17 @@
     </nav>
 
     <div classs="container">
-        <h1 class="h1-responsive font-weight-bold text-center my-5">Edit your profile</h1>
+        <h1 class="h1-responsive font-weight-bold text-center my-4">Edit your profile</h1>
         <div class="container" >
             <div class="row" >
-                <div class="col-md text-center " id="columnAvatar" style="max-width: 500px;">
-                    <div class="container pl-3" >
-                        <div class="avatar-upload ml-5 pl-3"  style="justify-content: center;">
+                <div class="col-md text-center ">
+                    <div class="container" >
+                        <div class="avatar-upload" style="justify-content: center">
                             <div class="avatar-edit" id=edit >
                                 <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
-                                <label for="imageUpload"> <img src="../images/edit-18.svg" class="m-0" style="margin-top: 5px;"></i></label>
+                                <label for="imageUpload" style="margin:0; margin-bottom: 1em;"> <i class="fas fa-pencil-alt" style="margin-top: 5px;"></i></label>
                             </div>
-                            <div class="avatar-preview"style="width: 100px; height: 100px;" id="edit">
+                            <div class="avatar-preview" style="width: 150px; height: 150px;" id="edit">
                                 <div id="imagePreview" style="background-image: url(../images/user.png); width: 100%;">
                                 </div>
                             </div>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
 
-                <div class="col-md mobile-center text-shadow edit-content pt-5 mb-5 pb-5">
+                <div class="col-md mobile-center text-shadow edit-content">
 
                     <input id="nameInput" type="text" class="form-control input-h2" placeholder="Your username..."
                         required>
@@ -119,8 +119,8 @@
 
                 </div>
             </div>
-            <div class="row ml-1 mt-3" style="justify-content: center; padding-bottom: 10px;">
-                    <a href="../pages/profile.html" class="btn btn-dark " style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Save</a>
+            <div class="row" style="justify-content: center">
+                    <button class="btn btn-dark " style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Save</button>
             </div>
 
         </div>
