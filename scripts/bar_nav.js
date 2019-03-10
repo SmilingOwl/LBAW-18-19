@@ -199,12 +199,12 @@ function testIcon() {
         search_bar.innerHTML = original_search_bar.innerHTML;
         addDropEvent();
     } else {
-        img_logo.setAttribute("src", "../images/logo.png");
-        profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button"><button type="button" class="btn btn"><strong>Ask a Question</strong></button></a>';
+        /*profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button"><button type="button" class="btn btn"><strong>Ask a Question</strong></button></a>';
         profile_bar.innerHTML += '<a href="../pages/login.html" class="ask-button"><button type="button" class="btn  "><i class="fa fa-fw fa-user"></i> Sign in</button></a>';
-        profile_bar.innerHTML += '<a href="../pages/register.html" class="ask-button"><button type="button" class="btn  "><i class="fa fa-fw fa-user"></i> Register</button></a>';
+        profile_bar.innerHTML += '<a href="../pages/register.html" class="ask-button"><button type="button" class="btn  "><i class="fa fa-fw fa-user"></i> Register</button></a>';*/
+        smallScreen();
+        img_logo.setAttribute("src", "../images/logo.png");
         search_bar.innerHTML = original_search_bar.innerHTML;
-        console.log("here");
         addDropEvent();
     }
 }
