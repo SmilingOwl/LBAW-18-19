@@ -380,22 +380,23 @@ input[type="week"]:focus,
 input[type="number"]:focus,
 input[type="email"]:focus,
 input[type="url"]:focus,
-input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {   
-  border: 0.15em solid black;
-  box-shadow: 0 0 8px #FFCD34;
+  border: 1.5px solid black;
   background-color: #FFFDF8;
   outline: 0 none;
+  box-shadow: none;
 }
 
-.form-control > textarea:focus {
-    border: 0.15em solid black;
-    box-shadow: 0 0 8px #FFCD34;
-    background-color: #FFFDF8;
-    outline: 0 none;
+textarea:focus, input:focus, .uneditable-input:focus {   
+    border: 4px solid black!important;
+    background-color: #FFFDF8!important;
+    outline: 0 none!important;
+    box-shadow: none!important;
+
 }
+
 
 td > input {
     border: 0.12em solid black;

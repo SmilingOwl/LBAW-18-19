@@ -259,3 +259,13 @@ a.fb {
 {
     justify-content: center;
 }
+
+#navSearch{
+    border:none!important;
+    box-shadow: none!important;
+}
+
+input.fluid.search-bar:focus{
+    border:none!important;
+    box-shadow: none!important;
+}

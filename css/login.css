@@ -256,6 +256,39 @@ div.col-lg-4.col-md-4.col-sm-4.col-xs-12{
   background-color:  #FFFDF8;
 }
 
+input.form :active{
+  border:none!important;
+  box-shadow: none!important;
+}
+
+input.form{
+  background-color:  #FFFDF8;
+}
+
+#insideInput1:focus{
+  border:none!important;
+  box-shadow: none!important;
+  background-color:  #FFFDF8;
+}
+
+#insideInput2:focus{
+  border:none!important;
+  box-shadow: none!important;
+  background-color:  #FFFDF8;
+}
+
+#insideInput3:focus{
+  border:none!important;
+  box-shadow: none!important;
+  background-color:  #FFFDF8;
+}
+
+#insideInput4:focus{
+  border:none!important;
+  box-shadow: none!important;
+  background-color:  #FFFDF8;
+}
+
 
 
 
