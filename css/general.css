@@ -13,6 +13,9 @@ body {
     background-color: #FFFDF8!important;
 }
 
+nav.navbar{
+    background-color: #FFFDF8;
+}
 
 /* 750 */
 .grid-bar {
@@ -85,6 +88,7 @@ body {
     outline: none;
     margin-left: 0.2em;
     width: 98%;
+    background-color: #FFFDF8;
 }
 
 .search-icon-div {

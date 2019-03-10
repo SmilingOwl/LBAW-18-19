@@ -36,6 +36,4 @@ function profileIcon()
         select[1].innerHTML='<i class="fas fa-user-plus"></i> Followers';
         select[2].innerHTML='<i class="fas fa-plus"></i> Following';
     }
-
-
 }
