@@ -519,7 +519,7 @@ td > input:focus {
     border-top: 1px solid black;
 }
 
-#cardAdmin {
+.tab-content .tabela-mod {
     background-color:  #FFFDF8;
     border: none;
 }
