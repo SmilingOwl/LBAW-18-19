@@ -105,7 +105,7 @@ function hyperSmallScreen() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Settings</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -129,7 +129,7 @@ function superSmallScreen() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Settings</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -152,7 +152,7 @@ function smallMScreen() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Settings</a>';
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
 
@@ -175,7 +175,7 @@ function smallScreen() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Settings</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);

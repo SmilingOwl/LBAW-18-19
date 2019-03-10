@@ -13,6 +13,9 @@ body {
     background-color: #FFFDF8!important;
 }
 
+nav.navbar{
+    background-color: white;
+}
 
 /* 750 */
 .grid-bar {
