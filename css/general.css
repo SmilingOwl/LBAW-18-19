@@ -52,7 +52,7 @@ nav.navbar{
     height: 100%;
 }
 
-.ask-search-bar form .search-container {
+.navbar .search-container {
     width: 100%;
     margin-right: 1em;
     margin-left: 1em;
