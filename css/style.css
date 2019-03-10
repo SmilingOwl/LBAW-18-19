@@ -581,6 +581,18 @@ td > input:focus {
     color: #FFCD34;
 }
 
+.settings-items .row
+{
+    justify-content: center;
+    justify-self: center;
+}
+@media (min-width:404px)
+{
+    .social-buttons a
+    {
+        white-space: nowrap;
+    }
+}
 div#terms >p{
     font-family: 'Prompt', sans-serif;
     font-weight: 100;
