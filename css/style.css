@@ -1,6 +1,5 @@
 body {
     font-family: 'Prompt', sans-serif;
-    font-weight: 300;
     background: #FFFDF8;
 }
 
@@ -582,4 +581,9 @@ td > input:focus {
 
 .fa-pen:hover{
     color: #FFCD34;
+}
+
+div#terms >p{
+    font-family: 'Prompt', sans-serif;
+    font-weight: 100;
 }
