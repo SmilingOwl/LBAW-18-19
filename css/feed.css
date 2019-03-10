@@ -35,8 +35,8 @@ h2{
 }
 
 #sortBar{
-    width: 70%;
-    margin-left: 3%;
+    width: 65%;
+    margin-left: 0.1%;
 }
 
 
@@ -98,10 +98,10 @@ h2{
 
 #leaderBoard{
     grid-column-start: 3;
-    height: 300px;
     margin-right: 0;
-    border: 0.4em solid black;
+    border: 4px solid black;
     background-color: #FFFDF8;
+    border-radius: 0.25rem;
 }
 
 .card-title{
@@ -141,5 +141,10 @@ h2{
     #leaderBoard
     {
         display: none;
+    }
+
+    #sortBar{
+        width: 100%;
+        margin-left: 0.1%;
     }
 }
