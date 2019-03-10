@@ -263,6 +263,35 @@ th {
     padding-top: 1em;
 }
 
+#question-header{
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-bottom: none;
+}
+
+#question-body{
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    border-top: none;
+}
+
+#answer-header{
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid black;
+}
+
+#no-thin-line, #no-thin-line2 {
+    border: none;
+}
+
+#commentAdd{
+    border: none;
+}
+
 #user-name {
     padding-left: 1em;
 }
@@ -322,7 +351,7 @@ th {
 {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-    background-color: rgb(238, 238, 238);
+    background-color: #FFFDF8;
     border-radius: 0.3em;
     justify-items: center;
 }
