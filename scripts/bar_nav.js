@@ -204,6 +204,7 @@ function testIcon() {
         profile_bar.innerHTML += '<a href="../pages/login.html" class="ask-button"><button type="button" class="btn  "><i class="fa fa-fw fa-user"></i> Sign in</button></a>';
         profile_bar.innerHTML += '<a href="../pages/register.html" class="ask-button"><button type="button" class="btn  "><i class="fa fa-fw fa-user"></i> Register</button></a>';
         search_bar.innerHTML = original_search_bar.innerHTML;
+        console.log("here");
         addDropEvent();
     }
 }
