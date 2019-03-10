@@ -464,3 +464,8 @@ td > input:focus {
     border-right: 3px solid black;
     border-top: 1px solid black;
 }
+
+#cardAdmin {
+    background-color:  #FFFDF8;
+    border: none;
+}

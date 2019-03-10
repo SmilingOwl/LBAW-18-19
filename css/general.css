@@ -9,6 +9,11 @@ body {
     --footer-color: white;
 }
 
+.navbar-default {
+    background-color: #FFFDF8!important;
+}
+
+
 /* 750 */
 .grid-bar {
     display: grid;
