@@ -11,7 +11,7 @@ function onLoad()
     {
         soma+=filhos[i].clientHeight;
     }
-    if(soma<window.innerHeight)
+    if(soma<window.innerHeight && filhos.length>0)
     {
         let adicionar=window.innerHeight - nav.offsetHeight - footer.offsetHeight;
         filhos[filhos.length-1].style.height=adicionar + "px";
