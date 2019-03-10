@@ -209,6 +209,11 @@ footer a {
     margin-top: 6%;
 }
 
+div#about.container{
+    font-weight: 100;
+    font-family: 'Prompt', sans-serif;
+
+}
 #about{
     font-family: 'Prompt', sans-serif;
     font-weight: 100;

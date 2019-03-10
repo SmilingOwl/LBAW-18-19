@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
     <script src="../scripts/bar_nav.js"></script>
     <script src="../scripts/footer_position.js"></script>
 </head>
@@ -88,33 +89,33 @@
     margin-bottom: 50px;">Let's start sharing knowlegde!</h2>
     </div>
 
-    <div class="container" id="form">
+    <div class="container" class="form">
 
         <form action="/action_page.php">
-            <div class="row">
+            <div class="row" id="formBorder">
                 <div class="vl" id="register"></div>
 
-                <div class="col" id="socialBtn">
+                <div class="col">
 
                     <div class="input-container">
                         <i class="fa fa-user icon"></i>
-                        <input class="input-field" id="form" type="text" placeholder="Username" name="usrnm">
+                        <input class="form" id="form" type="text" placeholder="Username" name="usrnm">
                     </div>
-
+ 
 
                     <div class="input-container">
                         <i class="fa fa-envelope icon"></i>
-                        <input class="input-field" id="form" type="text" placeholder="Email" name="email">
+                        <input class="form" id="form" type="text" placeholder="Email" name="email">
                     </div>
 
                     <div class="input-container">
                         <i class="fa fa-key icon"></i>
-                        <input class="input-field" id="form" type="password" placeholder="Password" name="psw">
+                        <input class="form" id="form" type="password" placeholder="Password" name="psw">
                     </div>
 
                     <div class="input-container">
                         <i class="fa fa-gift icon"></i>
-                        <input class="input-field" id="form" type="date" placeholder="bithdate" name="psw">
+                        <input class="form" id="form" type="date" placeholder="bithdate" name="psw">
                     </div>
 
                     <button class="btn btn-dark " style="width: 100%;">Register</button>
