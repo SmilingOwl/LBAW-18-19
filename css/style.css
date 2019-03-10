@@ -1,6 +1,5 @@
 body {
     font-family: 'Prompt', sans-serif;
-    font-weight: 300;
     background: #FFFDF8;
 }
 
@@ -40,7 +39,7 @@ li{
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Prompt', sans-serif;
     font-size: 1em;
     color: black;
 }
@@ -481,8 +480,6 @@ td > input:focus {
 .btn:focus,.btn:active {
     outline: none !important;
     box-shadow: none;
-    text-decoration: underline;
-    text-decoration-color:#FFCD34;
  }
 
 .card-body {
@@ -595,4 +592,8 @@ td > input:focus {
     {
         white-space: nowrap;
     }
+}
+div#terms >p{
+    font-family: 'Prompt', sans-serif;
+    font-weight: 100;
 }
