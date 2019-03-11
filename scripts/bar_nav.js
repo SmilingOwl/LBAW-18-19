@@ -555,6 +555,7 @@ function testIconModerator(){
 function testIcon()
 {
     let type=document.getElementById("type").getAttribute("value");
+    let logo_redirect=document.querySelector(".logo a");
     if(type=="unlogged")
     {
         testIconUnLogged();
@@ -562,6 +563,7 @@ function testIcon()
     else if(type=="logged")
     {
         testIconLogged();
+        logo_redirect.setAttribute("href","./feed.html");
     }
     else if(type=="admin")
     {

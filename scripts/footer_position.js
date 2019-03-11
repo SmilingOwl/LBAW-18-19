@@ -7,7 +7,7 @@ function onLoad()
     let nav=document.querySelector("body > nav");
     let footer=document.querySelector("body > footer");
     let soma=0;
-    for(let i=0;i<filhos.length;i++)
+    /*for(let i=0;i<filhos.length;i++)
     {
         soma+=filhos[i].clientHeight;
     }
@@ -15,5 +15,5 @@ function onLoad()
     {
         let adicionar=window.innerHeight - nav.offsetHeight - footer.offsetHeight;
         filhos[filhos.length-1].style.height=adicionar + "px";
-    }
+    }*/
 }
