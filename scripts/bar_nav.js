@@ -554,8 +554,8 @@ function testIconModerator(){
 
 function testIcon()
 {
-    //testIconLogged();
-    testIconUnLogged();
+    testIconLogged();
+    //testIconUnLogged();
     //testIconAdmin();
     //testIconModerator();
 }
