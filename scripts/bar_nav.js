@@ -554,8 +554,21 @@ function testIconModerator(){
 
 function testIcon()
 {
-    testIconLogged();
-    //testIconUnLogged();
-    //testIconAdmin();
-    //testIconModerator();
+    let type=document.getElementById("type").getAttribute("value");
+    if(type=="unlogged")
+    {
+        testIconUnLogged();
+    }
+    else if(type=="logged")
+    {
+        testIconLogged();
+    }
+    else if(type=="admin")
+    {
+        testIconAdmin();
+    }
+    else if(type=="moderator")
+    {
+        testIconModerator();
+    }
 }
