@@ -265,9 +265,8 @@ function hyperSmallScreenAdmin() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -291,9 +290,8 @@ function superSmallScreenAdmin() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -316,9 +314,8 @@ function smallMScreenAdmin() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -342,9 +339,8 @@ function smallScreenAdmin() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -368,9 +364,8 @@ function hyperSmallScreenModerator() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -394,9 +389,8 @@ function superSmallScreenModerator() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -419,9 +413,8 @@ function smallMScreenModerator() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -445,9 +438,8 @@ function smallScreenModerator() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -562,8 +554,8 @@ function testIconModerator(){
 
 function testIcon()
 {
-    testIconLogged();
-    //testIconUnLogged();
+    //testIconLogged();
+    testIconUnLogged();
     //testIconAdmin();
     //testIconModerator();
 }
