@@ -626,3 +626,11 @@ div#terms >p{
     font-family: 'Prompt', sans-serif;
     font-weight: 100;
 }
+
+@media (max-width:992px)
+{
+    .social-buttons
+    {
+        text-align: center;
+    }
+}
