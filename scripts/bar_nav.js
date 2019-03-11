@@ -568,9 +568,11 @@ function testIcon()
     else if(type=="admin")
     {
         testIconAdmin();
+        logo_redirect.setAttribute("href","./feed.html");
     }
     else if(type=="moderator")
     {
         testIconModerator();
+        logo_redirect.setAttribute("href","./feed.html");
     }
 }
