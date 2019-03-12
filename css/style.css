@@ -615,6 +615,11 @@ td > input:focus {
     justify-content: center;
     justify-self: center;
 }
+
+.nav-link {
+    font-weight: 800;
+}
+
 @media (min-width:404px)
 {
     .social-buttons a
