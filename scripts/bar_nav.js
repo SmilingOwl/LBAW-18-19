@@ -154,7 +154,7 @@ function smallMScreen() {
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    ddiv_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./home.html">Sign out</a>';
     div.appendChild(div_menu);
@@ -221,7 +221,16 @@ function superSmallScreenUnLogged() {
 
 function smallMScreenUnLogged() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
+    img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button"><button type="button" class="btn btn"><strong>Ask</strong></button></a>';
+    let div_bell = document.createElement("div");
+    div_bell.setAttribute("class", "btn-group");
+    div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
+    let div_bell_menu = document.createElement("div");
+    div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./profile.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./questionDetail.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question  </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
