@@ -429,6 +429,7 @@ textarea:focus, input:focus, .uneditable-input:focus {
 td > input {
     border: 0.12em solid black;
     background-color: #FFFDF8;
+    border-radius: 0.25rem;
 }
 
 td > input:focus {
