@@ -64,19 +64,7 @@ h2{
 .resultHeader{
     font-family: 'Prompt', sans-serif;
     font-weight: 400;
-    font-size: 1.1rem;
-}
-
-#question{
-    font-family: 'Prompt', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: black;
-}
-
-#question:hover{
-    color: #FFCD34;
+    font-size: 0.9rem;
 }
 
 
@@ -139,6 +127,20 @@ h2{
 #active{
     border: 2px solid black;
 }
+
+#loadMore{
+    width: 9em;
+    margin-top: 4%; 
+    margin-bottom: 4%;
+    background-color: #FFFDF8;
+    border-radius: 0.25rem;
+    font-weight: 800;
+}
+
+#loadMore:hover{
+    color: #FFCD34;
+}
+
 
 @media screen and (max-width: 992px) 
 {
