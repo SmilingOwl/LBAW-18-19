@@ -267,6 +267,7 @@ input.form :active{
 
 input.form{
   background-color:  #FFFDF8;
+  width: 90%;
 }
 
 #insideInput1:focus{
