@@ -19,11 +19,14 @@ h2{
 
 #topBar{
     font-family: 'Prompt', sans-serif;
-    margin-bottom: 0;
+    margin-bottom: 4%;
+    margin-top: 2%;
     padding: 2% 0 4%;
+    align-items: center;
  /*   display: inline-grid;
     grid-template-columns: 65% 5%;*/
 }
+
 
 #catIcon{
     grid-column-start: 1;
@@ -50,6 +53,14 @@ h2{
     font-family: 'Prompt', sans-serif;
 }
 
+.icon{
+    width: 70%;
+}
+
+.icon:hover{
+    width: 100%;
+}
+
 #results{
     grid-column-start: 1;
     padding: 5%;
@@ -59,6 +70,10 @@ h2{
 .result{
     border-bottom: 0.3em solid black;
     padding: 2% 2% 1%;
+}
+
+.result:first-of-type{
+    border-top: 0.3em solid black;
 }
 
 .resultHeader{
@@ -104,11 +119,12 @@ h2{
 .leader{
     padding: 2% 0;
     border-bottom: 0.1em solid #FFCD34;
+    font-weight: 500;
 }
 
 .leaderInfo{
     font-family: 'Prompt', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.1rem;
     margin:0; 
     
@@ -124,8 +140,10 @@ h2{
     margin: 5% 0;
 }
 
-#active{
-    border: 2px solid black;
+.icon#active{
+    border: 3px solid black;
+    width: 100%;
+
 }
 
 #loadMore{
