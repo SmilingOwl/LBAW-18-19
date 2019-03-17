@@ -501,12 +501,14 @@ td > input:focus {
     padding: .75rem 1.25rem;
     margin-bottom: 0;
     background-color:  #FFFDF8;
-    border-left: 3px solid black;
-    border-bottom: 4px solid black;
-    border-right: 3px solid black;
-    border-top: 3px solid black;
-    /*text-decoration: underline;*/
-    text-decoration-color:#FFCD34;
+    border-bottom: 3px solid black;
+}
+
+
+
+.faq_line{
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .btn:focus,.btn:active {
@@ -696,6 +698,13 @@ h6 {
     font-weight: 600;
     margin-right: 0.8%;
     font-size: 0.8rem;
+}
+
+.faq {
+    width: 85%;
+    margin-left: 8%;
+    margin-bottom: 2%;
+    border: none!important;
 }
 
 
