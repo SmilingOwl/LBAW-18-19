@@ -91,7 +91,7 @@ function changeImageDropdown(e) {
 function hyperSmallScreen() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button"><i class="fas fa-search search-icon"></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn" role="button"><i class="fas fa-question"></i></a>';
+    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><i class="fas fa-question"></i></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -116,7 +116,7 @@ function hyperSmallScreen() {
 function superSmallScreen() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon" ></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask</strong></a>';
+    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -140,7 +140,7 @@ function superSmallScreen() {
 
 function smallMScreen() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask</strong></a>';
+    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -165,7 +165,7 @@ function smallMScreen() {
 
 function smallScreen() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask a Question</strong></a>';
+    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask a Question</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -192,7 +192,7 @@ function smallScreen() {
 function hyperSmallScreenUnLogged() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon"></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn" role="button"><i class="fas fa-question"></i></a>';
+    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><i class="fas fa-question"></i></a>';
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user" style="margin-right:5px;"></i></button>';
@@ -207,7 +207,7 @@ function hyperSmallScreenUnLogged() {
 function superSmallScreenUnLogged() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon" ></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask</strong></a>';
+    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask</strong></a>';
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i></button>';
@@ -222,7 +222,7 @@ function superSmallScreenUnLogged() {
 function smallMScreenUnLogged() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
     img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask</strong></a>';
+    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -245,7 +245,7 @@ function smallMScreenUnLogged() {
 
 function smallScreenUnLogged() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask a Question</strong></a>';
+    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask a Question</strong></a>';
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
@@ -260,7 +260,7 @@ function smallScreenUnLogged() {
 function hyperSmallScreenAdmin() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button"><i class="fas fa-search search-icon"></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn" role="button"><i class="fas fa-question"></i></a>';
+    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><i class="fas fa-question"></i></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -286,7 +286,7 @@ function hyperSmallScreenAdmin() {
 function superSmallScreenAdmin() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon" ></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask</strong></a>';
+    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -311,7 +311,7 @@ function superSmallScreenAdmin() {
 
 function smallMScreenAdmin() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask</strong></a>';
+    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -337,7 +337,7 @@ function smallMScreenAdmin() {
 
 function smallScreenAdmin() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask a Question</strong></a>';
+    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask a Question</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -363,7 +363,7 @@ function smallScreenAdmin() {
 function hyperSmallScreenModerator() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button"><i class="fas fa-search search-icon"></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn" role="button"><i class="fas fa-question"></i></a>';
+    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><i class="fas fa-question"></i></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -389,7 +389,7 @@ function hyperSmallScreenModerator() {
 function superSmallScreenModerator() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon" ></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask</strong></a>';
+    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -414,7 +414,7 @@ function superSmallScreenModerator() {
 
 function smallMScreenModerator() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn" role="button"<strong>Ask</strong></a>';
+    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"<strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -439,7 +439,7 @@ function smallMScreenModerator() {
 
 function smallScreenModerator() {
     img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn" role="button"><strong>Ask a Question</strong></a>';
+    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button"><strong>Ask a Question</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
@@ -510,7 +510,7 @@ function testIconUnLogged(){
         search_bar.innerHTML = original_search_bar.innerHTML;
         addDropEvent();
     } else {
-        profile_bar.innerHTML = '<a href="../pages/login.html" class="ask-button btn" role="button"><strong>Ask a Question</strong></a>';
+        profile_bar.innerHTML = '<a href="../pages/login.html" class="ask-button btn btn-dark" role="button"><strong>Ask a Question</strong></a>';
         profile_bar.innerHTML += '<a href="../pages/login.html" class="ask-button btn" role="button"><i class="fa fa-fw fa-user"></i> Sign in</a>';
         profile_bar.innerHTML += '<a href="../pages/register.html" class="ask-button btn" role="button"><i class="fa fa-fw fa-user"></i> Register</a>';
         img_logo.setAttribute("src", "../images/logo.png");
