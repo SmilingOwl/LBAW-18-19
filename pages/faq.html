@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -27,191 +27,179 @@
 
 
 <body>
-    <div id="type" value="unlogged"></div>
+  <input type="hidden" value="unlogged" id="type">
   <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
-      <div class="grid-bar">
-          <div class="logo">
-              <a href="./home.html"><img src="../images/logo.png" alt="logo" class="logo-image"></a>
-          </div>
-          <div class="ask-search-bar">
-              <form class="form-inline" action="/action_page.php">
-                  <div class="form-control form-control-lg search-container" class="">
-                      <div class="search-container2">
-                          <div class="search-bar-cat">
-                              <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33">
-                          </div>
-                          <div class="search-bar-div">
-                              <input type="text" class="fluid search-bar" placeholder="Let us know your doubts" >
-                          </div>
-                          <div class="search-icon-div">
-                              <a href="../pages/search.html" class="a-search-icon">
-                                  <i class="fas fa-search search-icon" ></i>
-                              </a>
-                          </div>
-                      </div>
-                  </div>
-              </form>
-          </div>
-          <div class="btn-group info-user">
-              <button type="button" class="btn btn btn-dark">Ask a Question</button>
-              <button type="button" class="btn btn-outline-primary">
-                  <i class="fa fa-fw fa-user"></i> Sign in
-              </button>
-              <button type="button" class="btn btn-primary">
-                  <i class="fa fa-fw fa-user"></i> Register
-              </button>
-          </div>
+    <div class="grid-bar">
+      <div class="logo">
+        <a href="./home.html"><img src="../images/logo.png" alt="logo" class="logo-image"></a>
       </div>
-      <div class="mobile-search-field" style="display:none">
-          <div class="ask-search-bar">
-              <form class="form-inline" action="/action_page.php">
-                  <div class="form-control form-control-lg search-container" >
-                      <div class="search-container2">
-                          <div class="search-bar-cat">
-                              <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33">
-                          </div>
-                          <div class="search-bar-div">
-                              <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
-                          </div>
-                          <div class="search-icon-div">
-                              <a href="../pages/search.html" class="a-search-icon">
-                                  <i class="fas fa-search search-icon" ></i>
-                              </a>
-                          </div>
-                      </div>
-                  </div>
-              </form>
+      <div class="ask-search-bar">
+        <form class="form-inline" action="/action_page.php">
+          <div class="form-control form-control-lg search-container">
+            <div class="search-container2">
+              <div class="search-bar-cat">
+                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33" alt="logo">
+              </div>
+              <div class="search-bar-div">
+                <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
+              </div>
+              <div class="search-icon-div">
+                <a href="../pages/search.html" class="a-search-icon">
+                  <i class="fas fa-search search-icon"></i>
+                </a>
+              </div>
+            </div>
           </div>
-          <button type="button" class="btn btn-dark back-button"><i class="fas fa-angle-left"></i></button>
+        </form>
       </div>
+      <div class="btn-group info-user">
+        <button type="button" class="btn btn btn-dark">Ask a Question</button>
+        <button type="button" class="btn btn-outline-primary">
+          <i class="fa fa-fw fa-user"></i> Sign in
+        </button>
+        <button type="button" class="btn btn-primary">
+          <i class="fa fa-fw fa-user"></i> Register
+        </button>
+      </div>
+    </div>
+    <div class="mobile-search-field" style="display:none">
+      <div class="ask-search-bar">
+        <form class="form-inline" action="/action_page.php">
+          <div class="form-control form-control-lg search-container">
+            <div class="search-container2">
+              <div class="search-bar-cat">
+                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33" alt="logo">
+              </div>
+              <div class="search-bar-div">
+                <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
+              </div>
+              <div class="search-icon-div">
+                <a href="../pages/search.html" class="a-search-icon">
+                  <i class="fas fa-search search-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <button type="button" class="btn btn-dark back-button"><i class="fas fa-angle-left"></i></button>
+    </div>
   </nav>
 
 
   <div class="container mb-5" id="about">
 
-      <h1 class="h1-responsive font-weight-bold text-center my-4">FAQs</h1>
-      <!--Section description-->
-      <h6 class="text-center w-responsive mx-auto mb-5">Frequently asked questions</h6>
+    <h1 class="h1-responsive font-weight-bold text-center mt-5 mb-3 py-3">FAQs</h1>
+    <!--Section description-->
+    <h6 class="text-center w-responsive mx-auto mb-5">Frequently asked questions</h6>
 
     <div class="accordion" id="accordionExample">
-      <div class="card">
-        <div class="card-header" id="heading" >
+      <div class="card faq">
+        <div class="card-header" >
           <h5 class="mb-0">
-            <button class="btn btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+            <button class="btn btn faq_line" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
               aria-controls="collapseOne">
               How does LearnIt work?
             </button>
           </h5>
         </div>
 
-        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-            you probably haven't heard of them accusamus labore sustainable VHS.
+              LearnIt is a Q&A community with an academic setting. Users can ask their own questions and answer questions posted by other people, as well as cast votes on posts in order to verify the quality of the information. You can vote a post positively or negatively, and the question owner can choose one of the answers as the best one.
+              Each question can be set to one of 12 distinct categories: Art, Biology, Business, Chemistry, Geology, History, Linguistics, Math, Medicine, Physics, Psychology and Technology; whose hubs can be freely browsed. 
+              There is a permanent search bar on top of most pages with a wide variety of search options to find previously asked questions faster.
+              There are also achievements that an user can win. Try to collect them all and become the ultimate Learner!
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header" id="heading">
+      <div class="card faq">
+        <div class="card-header" >
           <h5 class="mb-0">
-            <button class="btn btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+            <button class="btn btn collapsed faq_line" type="button" data-toggle="collapse" data-target="#collapseTwo"
               aria-expanded="false" aria-controls="collapseTwo">
               What does my rank mean?
             </button>
           </h5>
         </div>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-            you probably haven't heard of them accusamus labore sustainable VHS.
+              Each user has an assigned rank, based on their number of points. As you ask or answer questions, and taking into account how other users rate your questions and answers, you can gain or lose points. 
+
+              Asking or answering a question will give you 1 point. Each positive vote on any of your posts (questions and answers) will also give you 1 point, and each negative vote will take away 1 point. If your answer to a question is voted by the enquirer as the best answer, you will gain 5 points.
+              
+              Here is a list of all ranks and their thresholds:
+              
+              Rookie - 0 points
+              Beginner - 30 points
+              Intermediate - 100 points
+              Enthusiast - 250 points
+              Advanced - 500 points
+              Veteran - 1000 points
+              
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header" id="heading">
+      <div class="card faq">
+        <div class="card-header" >
           <h5 class="mb-0">
-            <button class="btn btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+            <button class="btn btn collapsed faq_line" type="button" data-toggle="collapse" data-target="#collapseThree"
               aria-expanded="false" aria-controls="collapseThree">
               What is a trusted user?
             </button>
           </h5>
         </div>
-        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div id="collapseThree" class="collapse" data-parent="#accordionExample">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-            you probably haven't heard of them accusamus labore sustainable VHS.
+              A trusted user is a user who has greatly contributed to the platform, often posting the best answers and therefore a reliable source of information and knowledge.
+              In order to become a trusted user, at least 90% of your answers must be upvoted and more than 70% need to be classified as best answer.
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header" id="heading">
+      <div class="card faq">
+        <div class="card-header" >
           <h5 class="mb-0">
-            <button class="btn btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+            <button class="btn btn collapsed faq_line" type="button" data-toggle="collapse" data-target="#collapseFour"
               aria-expanded="false" aria-controls="collapseFour">
               How can I become a moderator?
             </button>
           </h5>
         </div>
-        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+        <div id="collapseFour" class="collapse" data-parent="#accordionExample">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-            you probably haven't heard of them accusamus labore sustainable VHS.
+              In order for an user to become a moderator, they must be approved by the site administrator, who can also demote a moderator to a regular user.
+              Moderators can manage general aspects of the sites, such as users, questions and answers, as well as review reported content.
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header" id="heading">
+      <div class="card faq">
+        <div class="card-header" >
           <h5 class="mb-0">
-            <button class="btn btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+            <button class="btn btn collapsed faq_line" type="button" data-toggle="collapse" data-target="#collapseFive"
               aria-expanded="false" aria-controls="collapseFive">
               What happens if I get banned?
             </button>
           </h5>
         </div>
-        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+        <div id="collapseFive" class="collapse" data-parent="#accordionExample">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-            you probably haven't heard of them accusamus labore sustainable VHS.
+              If a user often posts inappropriate content, moderators and administrators have the ability to ban them. If this happens, said user will no longer be able to log in, rendering the account useless.
+              Contrarily, if a user decides to delete their account, their profiles will be deleted but their questions and answers will remain. If you wish to delete any of your posts, do so before deleting your account as you will not be able to log in afterwards.
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header" id="heading">
+      <div class="card faq">
+        <div class="card-header" >
           <h5 class="mb-0">
-            <button class="btn btn collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+            <button class="btn btn collapsed faq_line" type="button" data-toggle="collapse" data-target="#collapseSix"
               aria-expanded="false" aria-controls="collapseSix">
               Where do I suggest features I would like to see on LearnIt?
             </button>
           </h5>
         </div>
-        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+        <div id="collapseSix" class="collapse" data-parent="#accordionExample">
           <div class="card-body">
-            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon
-            officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3
-            wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
-            Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan
-            excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt
-            you probably haven't heard of them accusamus labore sustainable VHS.
+              Simply contact us, using the contact form on the bottom part of any of the pages on the site. User feedback is always appreciated, and will help us to build a stronger platform for our community.
           </div>
         </div>
       </div>
@@ -224,7 +212,7 @@
     <div class="card-footer small text-muted">
       <div class="row">
         <div class="col-3">
-          <a href="../pages/about.html">
+          <a href="../pages/aboutUs.html">
             About us
           </a>
         </div>
@@ -248,7 +236,7 @@
         <div class="col">
           <p class="text-center font-weight-bold" id="copyright">Copyright © LearnIt 2019</p>
         </div>
-        
+
       </div>
     </div>
   </footer>

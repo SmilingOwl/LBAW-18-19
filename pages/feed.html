@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -14,8 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- End of Bootstrap include -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Prompt:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
@@ -28,7 +28,7 @@
 
 
 <body>
-        <div id="type" value="moderator"></div>
+    <input type="hidden" value="moderator" id="type">
     <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
         <div class="grid-bar">
             <div class="logo">
@@ -36,11 +36,11 @@
             </div>
             <div class="ask-search-bar">
                 <form class="form-inline" action="/action_page.php">
-                    <div class="form-control form-control-lg search-container" class="">
+                    <div class="form-control form-control-lg search-container">
                         <div class="search-container2">
                             <div class="search-bar-cat">
                                 <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
-                                    width="33">
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
@@ -71,7 +71,7 @@
                         <div class="search-container2">
                             <div class="search-bar-cat">
                                 <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
-                                    width="33">
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
@@ -95,72 +95,72 @@
         <div class="container" id="categories">
 
             <div class="row cat-row" style="font-size:100px;">
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Art">
-                        <img src="../images/art-06.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/art-06.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Biology">
-                        <img src="../images/biology-01.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/biology-01.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
 
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Business">
-                        <img src="../images/business-07.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/business-07.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
 
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Chemistry">
-                        <img src="../images/chemistry-03.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/chemistry-03.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
 
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Geology">
-                        <img src="../images/geology-10.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/geology-10.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="History">
-                        <img src="../images/history-08.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/history-08.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
 
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Math">
-                        <img src="../images/maths-12.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/maths-12.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
 
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Medicine">
-                        <img src="../images/health-04.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/health-04.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
 
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Linguistics">
-                        <img src="../images/linguistics-09.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/linguistics-09.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Physics">
-                        <img src="../images/physics-02.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/physics-02.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
 
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Psychology">
-                        <img src="../images/psychology-11.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/psychology-11.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
 
                 </div>
-                <div class="col-sm-1 col-2 div-cat">
+                <div class="col-md-1 col-2 div-cat">
                     <a href="#" data-toggle="tooltip" title="Technology">
-                        <img src="../images/tech-05.svg" class="mx-auto d-block img-fluid rounded image">
+                        <img src="../images/tech-05.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                     </a>
 
                 </div>
@@ -177,7 +177,7 @@
                 aria-haspopup="true" aria-expanded="false">
                 Sort By </a>
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <div class="dropdown-menu">
                 <a class="dropdown-item" href="#">Newest</a>
                 <a class="dropdown-item" href="#">Most Upvoted up</a>
                 <a class="dropdown-item" href="#">Most Upvoted down</a>
@@ -188,135 +188,135 @@
 
     </div>
 
-    </div>
 
     <div class="container" id="feed">
-            <div class="row">
-                <div class="col-lg ">
-                    <div class="results">
-                        <div class="media result">
-                            <div class="media-left d-flex">
+        <div class="row">
+            <div class="col-md ">
+                <div class="results">
+                    <div class="media result">
+                        <div class="media-left d-flex">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" alt="profile_pic" class="media-object rounded-circle profilePic"
+                                    style="width:3rem">yves127</h4>
+                            <div class="container">
+                                <a class="question" href="#">The presence of three sex chromosomes in a persons cells is
+                                    best
+                                    explained by what cell process going wrong?</a>
                             </div>
-                            <div class="media-body">
-                                <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic"
-                                        style="width:3rem">yves127</h4>
-                                <div class="container">
-                                    <a id="question" href="#">The presence of three sex chromosomes in a persons cells is
-                                        best
-                                        explained by what cell process going wrong?</a>
-                                </div>
-                                <div class="row footerResult">
-                                    <img src="../images/answered-13.svg" class="media-object align-self-center column"
-                                        style="width:2rem" id="catQuestion">
-                                    <p class="resultFooter align-self-center">3 answers</p>
-                                    <p class="resultFooter align-self-center">10 points</p>
-                                    <p class="resultFooter align-self-center">10 Jan 2019</p>
-                                    <img src="../images/biology-01.svg" class="media-object" style="width:2rem; height: 2rem;">
-                                </div>
+                            <div class="row footerResult">
+                                <img src="../images/answered-13.svg" alt="answered" class="media-object align-self-center column"
+                                    style="width:2rem" id="catQuestion">
+                                <p class="resultFooter align-self-center">3 answers</p>
+                                <p class="resultFooter align-self-center">10 points</p>
+                                <p class="resultFooter align-self-center">10 Jan 2019</p>
+                                <img src="../images/biology-01.svg" alt="categorie" class="media-object" style="width:2rem; height: 2rem;">
                             </div>
                         </div>
-    
-                        <div class="media result">
-                            <div class="media-left d-flex">
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic"
-                                        style="width:3rem">freshman_port</h4>
-                                <div class="container">
-                                    <a id="question" href="#">What programming language do hackers use?</a>
-                                </div>
-                                <div class="row footerResult">
-                                    <p class="resultFooter align-self-center">0 answers</p>
-                                    <p class="resultFooter align-self-center">1 point</p>
-                                    <p class="resultFooter align-self-center">8 Jan 2019</p>
-                                    <img src="../images/tech-05.svg" class="media-object" style="width:2rem; height: 2rem;">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="media result">
-                            <div class="media-left d-flex">
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic"
-                                        style="width:3rem">shebookworm4</h4>
-                                <div class="container">
-                                    <a id="question" href="#">How do black holes impact time?</a>
-                                </div>
-                                <div class="row footerResult">
-                                    <p class="resultFooter align-self-center">5 answers</p>
-                                    <p class="resultFooter align-self-center">5 points</p>
-                                    <p class="resultFooter align-self-center">7 Jan 2019</p>
-                                    <img src="../images/physics-02.svg" class="media-object" style="width:2rem; height: 2rem;">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="media result">
-                            <div class="media-left d-flex">
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic"
-                                        style="width:3rem">allisonpp8</h4>
-                                <div class="container">
-                                    <a id="question" href="#">How do you solve the equation cos(x)=sin(x)?</a>
-                                </div>
-                                <div class="row footerResult">
-                                    <p class="resultFooter align-self-center">8 answers</p>
-                                    <p class="resultFooter align-self-center">13 points</p>
-                                    <p class="resultFooter align-self-center">5 Jan 2019</p>
-                                    <img src="../images/maths-12.svg" class="media-object" style="width:2rem; height: 2rem;">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="media result">
-                            <div class="media-left d-flex">
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic"
-                                        style="width:3rem">rickylovesbugs</h4>
-                                <div class="container">
-                                    <a id="question" href="#">The Indus Valley Civilization was one of the most advanced
-                                        civilizations. Yet India is a poor country now. What went wrong?</a>
-                                </div>
-                                <div class="row footerResult">
-                                    <p class="resultFooter align-self-center">2 answers</p>
-                                    <p class="resultFooter align-self-center">7 points</p>
-                                    <p class="resultFooter align-self-center">5 Jan 2019</p>
-                                    <img src="../images/history-08.svg" class="media-object" style="width:2rem; height: 2rem;">
-                                </div>
-                            </div>
-                        </div>
-    
-                        <div class="media result">
-                            <div class="media-left d-flex">
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" class="media-object rounded-circle profilePic"
-                                        style="width:3rem">heyimpierre</h4>
-                                <div class="container">
-                                    <a id="question" href="#">Could British people easily talk without a British accent if
-                                        they
-                                        wanted to? Do they keep the accent because it causes people to identify them as
-                                        British?</a>
-                                </div>
-                                <div class="row footerResult">
-                                    <p class="resultFooter align-self-center">9 answers</p>
-                                    <p class="resultFooter align-self-center">15 points</p>
-                                    <p class="resultFooter align-self-center">5 Jan 2019</p>
-                                    <img src="../images/linguistics-09.svg" class="media-object" style="width:2rem; height: 2rem;">
-                                </div>
-                            </div>
-                        </div>
-    
                     </div>
-                    <div class="row" style="justify-content: center">
-                            <a href="#" class="btn btn-dark " style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Load More</a>
+
+                    <div class="media result">
+                        <div class="media-left d-flex">
                         </div>
+                        <div class="media-body">
+                            <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" alt="profile_pic" class="media-object rounded-circle profilePic"
+                                    style="width:3rem">freshman_port</h4>
+                            <div class="container">
+                                <a class="question" href="#">What programming language do hackers use?</a>
+                            </div>
+                            <div class="row footerResult">
+                                <p class="resultFooter align-self-center">0 answers</p>
+                                <p class="resultFooter align-self-center">1 point</p>
+                                <p class="resultFooter align-self-center">8 Jan 2019</p>
+                                <img src="../images/tech-05.svg" alt="categorie" class="media-object" style="width:2rem; height: 2rem;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media result">
+                        <div class="media-left d-flex">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" alt="profile_pic" class="media-object rounded-circle profilePic"
+                                    style="width:3rem">shebookworm4</h4>
+                            <div class="container">
+                                <a class="question" href="#">How do black holes impact time?</a>
+                            </div>
+                            <div class="row footerResult">
+                                <p class="resultFooter align-self-center">5 answers</p>
+                                <p class="resultFooter align-self-center">5 points</p>
+                                <p class="resultFooter align-self-center">7 Jan 2019</p>
+                                <img src="../images/physics-02.svg" alt="categorie" class="media-object" style="width:2rem; height: 2rem;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media result">
+                        <div class="media-left d-flex">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" alt="profile_pic" class="media-object rounded-circle profilePic"
+                                    style="width:3rem">allisonpp8</h4>
+                            <div class="container">
+                                <a class="question" href="#">How do you solve the equation cos(x)=sin(x)?</a>
+                            </div>
+                            <div class="row footerResult">
+                                <p class="resultFooter align-self-center">8 answers</p>
+                                <p class="resultFooter align-self-center">13 points</p>
+                                <p class="resultFooter align-self-center">5 Jan 2019</p>
+                                <img src="../images/maths-12.svg" alt="categorie" class="media-object" style="width:2rem; height: 2rem;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media result">
+                        <div class="media-left d-flex">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" alt="profile_pic" class="media-object rounded-circle profilePic"
+                                    style="width:3rem">rickylovesbugs</h4>
+                            <div class="container">
+                                <a class="question" href="#">The Indus Valley Civilization was one of the most advanced
+                                    civilizations. Yet India is a poor country now. What went wrong?</a>
+                            </div>
+                            <div class="row footerResult">
+                                <p class="resultFooter align-self-center">2 answers</p>
+                                <p class="resultFooter align-self-center">7 points</p>
+                                <p class="resultFooter align-self-center">5 Jan 2019</p>
+                                <img src="../images/history-08.svg" alt="categorie" class="media-object" style="width:2rem; height: 2rem;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="media result">
+                        <div class="media-left d-flex">
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading resultHeader"><img src="../images/yves.jpg" alt="profile_pic" class="media-object rounded-circle profilePic"
+                                    style="width:3rem">heyimpierre</h4>
+                            <div class="container">
+                                <a class="question" href="#">Could British people easily talk without a British accent if
+                                    they
+                                    wanted to? Do they keep the accent because it causes people to identify them as
+                                    British?</a>
+                            </div>
+                            <div class="row footerResult">
+                                <p class="resultFooter align-self-center">9 answers</p>
+                                <p class="resultFooter align-self-center">15 points</p>
+                                <p class="resultFooter align-self-center">5 Jan 2019</p>
+                                <img src="../images/linguistics-09.svg" alt="categorie" class="media-object" style="width:2rem; height: 2rem;">
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-    
-            <div class="col-lg-4 ">
+                <div class="row" style="justify-content: center">
+                    <a href="#" class="btn btn-dark " style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Load
+                        More</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 ">
                 <div class="card">
                     <div class="card-body leaders" id="leaderBoard">
                         <h4 class="card-title">Leaderboard</h4>
@@ -326,10 +326,9 @@
                             <div class="media-body">
                                 <div class="row leaderResult">
                                     <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg"
-                                            class="media-object rounded-circle profilePic" style="width:1.75rem">John
+                                            alt="profile_pic" class="media-object rounded-circle profilePic" style="width:1.75rem">John
                                         Doe</h4>
-                                    <p id="points"><img src="../images/points-16.svg" class="media-object"
-                                            style="width:1rem">120
+                                    <p class="points"><img src="../images/points-16.svg" alt="categorie" class="media-object" style="width:1rem">120
                                         points</p>
                                 </div>
                             </div>
@@ -340,10 +339,9 @@
                             <div class="media-body">
                                 <div class="row leaderResult">
                                     <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg"
-                                            class="media-object rounded-circle profilePic" style="width:1.75rem">John
+                                            alt="profile_pic" class="media-object rounded-circle profilePic" style="width:1.75rem">John
                                         Doe</h4>
-                                    <p id="points"><img src="../images/points-16.svg" class="media-object"
-                                            style="width:1rem">120
+                                    <p class="points"><img src="../images/points-16.svg" alt="categorie" class="media-object" style="width:1rem">120
                                         points</p>
                                 </div>
                             </div>
@@ -354,10 +352,9 @@
                             <div class="media-body">
                                 <div class="row leaderResult">
                                     <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg"
-                                            class="media-object rounded-circle profilePic" style="width:1.75rem">John
+                                            alt="profile_pic" class="media-object rounded-circle profilePic" style="width:1.75rem">John
                                         Doe</h4>
-                                    <p id="points"><img src="../images/points-16.svg" class="media-object"
-                                            style="width:1rem">120
+                                    <p class="points"><img src="../images/points-16.svg" alt="categorie" class="media-object" style="width:1rem">120
                                         points</p>
                                 </div>
                             </div>
@@ -368,10 +365,9 @@
                             <div class="media-body">
                                 <div class="row leaderResult">
                                     <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg"
-                                            class="media-object rounded-circle profilePic" style="width:1.75rem">John
+                                            alt="profile_pic" class="media-object rounded-circle profilePic" style="width:1.75rem">John
                                         Doe</h4>
-                                    <p id="points"><img src="../images/points-16.svg" class="media-object"
-                                            style="width:1rem">120
+                                    <p class="points"><img src="../images/points-16.svg" alt="categorie" class="media-object" style="width:1rem">120
                                         points</p>
                                 </div>
                             </div>
@@ -384,16 +380,12 @@
         </div>
     </div>
 
-    </div>
-
-
-
 
     <footer class="platform-info" id="platform-link-info">
         <div class="card-footer small text-muted">
             <div class="row">
                 <div class="col-3">
-                    <a href="../pages/about.html">
+                    <a href="../pages/aboutUs.html">
                         About us
                     </a>
                 </div>

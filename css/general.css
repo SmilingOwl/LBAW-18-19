@@ -226,10 +226,6 @@ div#about.container{
     font-family: 'Prompt', sans-serif;
 
 }
-#about{
-    font-family: 'Prompt', sans-serif;
-    font-weight: 300;
-}
 
 
 a.fb {
@@ -272,4 +268,7 @@ input.fluid.search-bar:focus{
     border:none!important;
     box-shadow: none!important;
 }
-
+footer
+{
+    margin-top: 20em;
+}

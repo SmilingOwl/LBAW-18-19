@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -28,7 +28,7 @@
 
 
 <body>
-    <div id="type" value="logged"></div>
+    <input type="hidden" value="logged" id="type">
     <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
         <div class="grid-bar">
             <div class="logo">
@@ -36,11 +36,11 @@
             </div>
             <div class="ask-search-bar">
                 <form class="form-inline" action="/action_page.php">
-                    <div class="form-control form-control-lg search-container" class="">
+                    <div class="form-control form-control-lg search-container" >
                         <div class="search-container2">
                             <div class="search-bar-cat">
                                 <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
-                                    width="33">
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
@@ -71,7 +71,7 @@
                         <div class="search-container2">
                             <div class="search-bar-cat">
                                 <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
-                                    width="33">
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
@@ -89,18 +89,18 @@
         </div>
     </nav>
 
-    <div classs="container">
+    <div class="container">
         <h1 class="h1-responsive font-weight-bold text-center my-4">Edit your profile</h1>
         <div class="container" >
             <div class="row" >
                 <div class="col-md-3 text-center ">
                     <div class="container" >
                         <div class="avatar-upload" style="justify-content: center">
-                            <div class="avatar-edit" id=edit >
+                            <div class="avatar-edit edit" >
                                 <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
                                 <label for="imageUpload" style="margin:0; margin-bottom: 1em;"> <i class="fas fa-pen" style="margin-top: 5px;"></i></label>
                             </div>
-                            <div class="avatar-preview" style="width: 150px; height: 150px;" id="edit">
+                            <div class="avatar-preview edit" style="width: 150px; height: 150px;" >
                                 <div id="imagePreview" style="background-image: url(../images/sophie.jpg); width: 100%;">
                                 </div>
                             </div>
@@ -128,14 +128,13 @@
 
         </div>
     </div>
-    </div>
 
 
     <footer class="platform-info" id="platform-link-info">
         <div class="card-footer small text-muted">
             <div class="row">
                 <div class="col-3">
-                    <a href="../pages/about.html">
+                    <a href="../pages/aboutUs.html">
                         About us
                     </a>
                 </div>

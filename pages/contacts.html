@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -26,25 +26,26 @@
 
 
 <body>
-    <div id="type" value="unlogged"></div>
-    <nav class="navbar navbar-expand-lg navbar-ligh sticky-top form-bar">
+    <input type="hidden" value="unlogged" id="type">
+    <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
         <div class="grid-bar">
             <div class="logo">
                 <a href="./home.html"><img src="../images/logo.png" alt="logo" class="logo-image"></a>
             </div>
             <div class="ask-search-bar">
                 <form class="form-inline" action="/action_page.php">
-                    <div class="form-control form-control-lg search-container" class="">
+                    <div class="form-control form-control-lg search-container" >
                         <div class="search-container2">
                             <div class="search-bar-cat">
-                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33">
+                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
-                                <input type="text" class="fluid search-bar" placeholder="Let us know your doubts" >
+                                <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
                             </div>
                             <div class="search-icon-div">
                                 <a href="../pages/search.html" class="a-search-icon">
-                                    <i class="fas fa-search search-icon" ></i>
+                                    <i class="fas fa-search search-icon"></i>
                                 </a>
                             </div>
                         </div>
@@ -64,17 +65,18 @@
         <div class="mobile-search-field" style="display:none">
             <div class="ask-search-bar">
                 <form class="form-inline" action="/action_page.php">
-                    <div class="form-control form-control-lg search-container" >
+                    <div class="form-control form-control-lg search-container">
                         <div class="search-container2">
                             <div class="search-bar-cat">
-                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33">
+                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
                             </div>
                             <div class="search-icon-div">
                                 <a href="../pages/search.html" class="a-search-icon">
-                                    <i class="fas fa-search search-icon" ></i>
+                                    <i class="fas fa-search search-icon"></i>
                                 </a>
                             </div>
                         </div>
@@ -88,56 +90,53 @@
         <section class="mb-4">
 
             <!--Section heading-->
-            <h1 class="h1-responsive font-weight-bold text-center my-4">Contact us</h1>
+            <h1 class="h1-responsive font-weight-bold text-center mt-5 mb-3 py-3">Contact us</h1>
             <!--Section description-->
             <h6 class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to
                 contact us!</h6>
 
             <div class="row">
 
+                    <div class="col-md-1">
+                        </div>
+
                 <!--Grid column-->
-                <div class="col-md-9">
+                <div class="col-md-6">
                     <form id="contact-form" name="contact-form" action="mail.php" method="POST">
 
 
-                        <div class="row">
-                            <div class="col-md-12" class="form-group">
-                                <div class="form-group">
+                        <div class="row form-group">
+                            <div class="col-md-12" >
                                     <input class="form-control form-control-lg" type="text" id="name" name="name"
-                                        placeholder="Your name" class="form-control" style="margin-bottom: 1rem;">
-                                </div>
+                                        placeholder="Your name">
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-12" class="form-group">
-                                <div class="form-group">
+                        <div class="row form-group">
+                            <div class="col-md-12">
                                     <input class="form-control form-control-lg" type="text" id="email" name="email"
-                                        placeholder="Your email" class="form-control">
-                                </div>
+                                        placeholder="Your email">
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-12" class="form-group">
-                                <div class="form-group">
+                        <div class="row form-group">
+                            <div class="col-md-12">
                                     <input class="form-control form-control-lg" type="text" id="subject" name="subject"
-                                        placeholder="Subject" class="form-control">
-                                </div>
+                                        placeholder="Subject">
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-12" class="form-group">
+                        <div class="row form-group">
+                            <div class="col-md-12">
 
                                 <div class="md-form">
-                                    <textarea class="form-control form-control-lg" type="text" id="message" name="message"
-                                        rows="4" placeholder="Your message" class="form-control md-textarea"></textarea>
+                                    <textarea class="form-control form-control-lg  md-textarea" id="message" name="message"
+                                        rows="4" placeholder="Your message" ></textarea>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row form-group">
                             <div class="col-md-12 col text-center">
                                 <a href="../pages/feed.html" class="btn btn-dark " style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Send</a>
                             </div>
@@ -149,7 +148,7 @@
                 </div>
 
                 <!-- icons column-->
-                <div class="col-md-3 text-center">
+                <div class="col-md text-center">
                     <ul class="list-unstyled mb-0">
                         <li><i class="fas fa-map-marker-alt fa-2x"></i>
                             <p style="font-family: 'Prompt', sans-serif;">Porto, 56789, Portugal</p>
@@ -168,14 +167,13 @@
             </div>
         </section>
     </div>
-    </div>
 
 
     <footer class="platform-info" id="platform-link-info">
         <div class="card-footer small text-muted">
             <div class="row">
                 <div class="col-3">
-                    <a href="../pages/about.html">
+                    <a href="../pages/aboutUs.html">
                         About us
                     </a>
                 </div>

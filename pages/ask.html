@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -22,29 +22,32 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../css/general.css">
     <script src="../scripts/bar_nav.js"></script>
     <script src="../scripts/footer_position.js"></script>
+    <script src="../scripts/toolTip.js"></script>
+    <script src="../scripts/ask.js"></script>
 </head>
 
 
 <body>
-    <div id="type" value="logged"></div>
-    <nav class="navbar navbar-expand-lg navbar-ligh sticky-top form-bar">
+    <input type="hidden" value="logged" id="type">
+    <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
         <div class="grid-bar">
             <div class="logo">
                 <a href="./home.html"><img src="../images/logo.png" alt="logo" class="logo-image"></a>
             </div>
             <div class="ask-search-bar">
                 <form class="form-inline" action="/action_page.php">
-                    <div class="form-control form-control-lg search-container" class="">
+                    <div class="form-control form-control-lg search-container" >
                         <div class="search-container2">
                             <div class="search-bar-cat">
-                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33">
+                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
-                                <input type="text" class="fluid search-bar" id="navSearch" placeholder="Let us know your doubts" >
+                                <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
                             </div>
                             <div class="search-icon-div">
                                 <a href="../pages/search.html" class="a-search-icon">
-                                    <i class="fas fa-search search-icon" ></i>
+                                    <i class="fas fa-search search-icon"></i>
                                 </a>
                             </div>
                         </div>
@@ -64,17 +67,18 @@
         <div class="mobile-search-field" style="display:none">
             <div class="ask-search-bar">
                 <form class="form-inline" action="/action_page.php">
-                    <div class="form-control form-control-lg search-container" >
+                    <div class="form-control form-control-lg search-container">
                         <div class="search-container2">
                             <div class="search-bar-cat">
-                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33">
+                                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
                             </div>
                             <div class="search-icon-div">
                                 <a href="../pages/search.html" class="a-search-icon">
-                                    <i class="fas fa-search search-icon" ></i>
+                                    <i class="fas fa-search search-icon"></i>
                                 </a>
                             </div>
                         </div>
@@ -85,80 +89,79 @@
         </div>
     </nav>
 
-    <h1 class="h1-responsive font-weight-bold text-center my-4">Want to ask something?</h1>
+    <h1 class="h1-responsive font-weight-bold text-center mt-5 mb-3 py-3">Want to ask something?</h1>
 
-    <div class="container" id="categories" style="margin-bottom: 20px;"> 
+    <div class="container my-5"> 
 
-            <h5 style="text-align:left; margin-bottom: 25px; margin-top: 35px;"> Select a category for your question!
-                </h5>
+            <h5 class="h5-responsive font-weight-bold text-left mb-3 py-3"> Select a category for your question!</h5>
 
         <div class="row cat-row" style="font-size:100px;">
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Art">
-                    <img src="../images/art-06.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/art-06.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Biology">
-                    <img src="../images/biology-01.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/biology-01.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
 
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Business">
-                    <img src="../images/business-07.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/business-07.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
 
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Chemistry">
-                    <img src="../images/chemistry-03.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/chemistry-03.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
 
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Geology">
-                    <img src="../images/geology-10.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/geology-10.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="History">
-                    <img src="../images/history-08.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/history-08.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
 
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Math">
-                    <img src="../images/maths-12.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/maths-12.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
 
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Medicine">
-                    <img src="../images/health-04.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/health-04.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
 
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Linguistics">
-                    <img src="../images/linguistics-09.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/linguistics-09.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Physics">
-                    <img src="../images/physics-02.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/physics-02.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
 
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Psychology">
-                    <img src="../images/psychology-11.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/psychology-11.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
 
             </div>
             <div class="col-sm-1 col-2 div-cat">
                 <a href="#" data-toggle="tooltip" title="Technology">
-                    <img src="../images/tech-05.svg" class="mx-auto d-block img-fluid rounded image">
+                    <img src="../images/tech-05.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
                 </a>
 
             </div>
@@ -166,23 +169,26 @@
 
     </div>
 
-    <div class="container">
+    <div class="container align-items-center">
 
         <form>
-               
+        <div class="row">
+            <div class="col-md-1"></div>
 
-            <div class="form-group" class="col-4">
-                <input class="form-control form-control-lg" type="text" name="question" placeholder="Ask away!" style=" width: 100%;"
+            <div class="col-md-10">
+
+            <div class="form-group col-md-12 mb-5">
+                <input class="form-control form-control-lg question_line" type="text" name="question" placeholder="Ask away!"
                     required>
 
             </div>
 
-            <div class="form-group">
-                <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" placeholder=" Describe your doubts here!"
+            <div class="form-group col-md-12 mb-5">
+                <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" placeholder="Describe your doubts here!"
                     rows="5"></textarea>
             </div>
 
-                <div class="form-group">
+                <div class="form-group col-md-12">
                     <h6>Upload images for your question</h6>
                     <div class="input-group">
                         <span class="input-group-btn">
@@ -192,25 +198,25 @@
                         </span>
                         <input type="text" class="form-control" readonly>
                     </div>
-                    <img id='img-upload' />
                 </div>
 
 
-            <div class="col text-center">
-                <a href="../pages/questionDetail.html" class="btn btn-dark " style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Post</a>
+            <div class="col-md-12 text-center">
+                <a href="../pages/questionDetail.html" class="btn btn-dark submit" style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Post</a>
             </div>
 
-        </form>
+        </div>
     </div>
 
-    <br>
-    <br>
+        </form>
+    
+</div>
 
     <footer class="platform-info" id="platform-link-info">
         <div class="card-footer small text-muted">
             <div class="row">
                 <div class="col-3">
-                    <a href="../pages/about.html">
+                    <a href="../pages/aboutUs.html">
                         About us
                     </a>
                 </div>

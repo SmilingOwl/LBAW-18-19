@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -15,7 +15,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- End of Bootstrap include -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous">
+    crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Prompt:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" media="screen" href="../css/style.css">
@@ -28,18 +28,18 @@
 
 
 <body>
-    <div id="type" value="moderator"></div>
-  <nav class="navbar navbar-expand-lg navbar-ligh sticky-top form-bar">
+  <input type="hidden" value="moderator" id="type">
+  <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
     <div class="grid-bar">
       <div class="logo">
         <a href="./home.html"><img src="../images/logo.png" alt="logo" class="logo-image"></a>
       </div>
       <div class="ask-search-bar">
         <form class="form-inline" action="/action_page.php">
-          <div class="form-control form-control-lg search-container" class="">
+          <div class="form-control form-control-lg search-container">
             <div class="search-container2">
               <div class="search-bar-cat">
-                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33">
+                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33" alt="logo">
               </div>
               <div class="search-bar-div">
                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
@@ -69,7 +69,7 @@
           <div class="form-control form-control-lg search-container">
             <div class="search-container2">
               <div class="search-bar-cat">
-                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33">
+                <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon" width="33" alt="logo">
               </div>
               <div class="search-bar-div">
                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
@@ -109,9 +109,9 @@
     <div class="tab-content">
 
       <div id="home" class="container tab-pane active"><br>
-        <div class="card-body tabela-mod" >
+        <div class="card-body tabela-mod">
           <div class="table-responsive">
-            <table class="table" width="100%" cellspacing="0">
+            <table class="table" style="width:100%">
               <thead class="thead-dark">
                 <tr>
                   <th>Username</th>
@@ -244,7 +244,7 @@
       <div id="menu1" class="container tab-pane fade"><br>
         <div class="card-body tabela-mod">
           <div class="table-responsive">
-            <table class="table" width="100%" cellspacing="0">
+            <table class="table" style="width:100%">
               <thead class="thead-dark">
                 <tr>
                   <th>Author</th>
@@ -417,7 +417,7 @@
     <div class="card-footer small text-muted">
       <div class="row">
         <div class="col-3">
-          <a href="../pages/about.html">
+          <a href="../pages/aboutUs.html">
             About us
           </a>
         </div>
