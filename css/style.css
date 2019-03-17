@@ -3,6 +3,7 @@ body {
     background: #FFFDF8;
 }
 
+
 main {
     width: 50%;
     margin: 50px auto;
@@ -261,16 +262,17 @@ ul.pagination {
 }
 
 #question-header{
-    border-top: 3px solid black;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-    border-bottom: none;
+    border: none;
+}
+
+.card.detail{
+    border: none!important;
 }
 
 #question-body{
     border-bottom: 3px solid black;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border-left: none;
+    border-right: none;
     border-top: none;
 }
 
