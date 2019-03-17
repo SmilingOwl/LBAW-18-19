@@ -270,17 +270,11 @@ ul.pagination {
 }
 
 #question-body{
-    border-bottom: 3px solid black;
-    border-left: none;
-    border-right: none;
-    border-top: none;
+    border: none;
 }
 
 #answer-header{
-    border-left: none;
-    border-right: none;
-    border-top: none;
-    border-bottom: 2px solid black;
+    border: none;
 }
 
 #no-thin-line, #no-thin-line2 {
@@ -601,9 +595,8 @@ td > input:focus {
 }
 .comment-title
 {
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
+    border-top: 3px solid black;
+    border-bottom: none;
 }
 .bottom-answer
 {
