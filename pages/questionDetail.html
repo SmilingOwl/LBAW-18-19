@@ -28,7 +28,7 @@
 
 
 <body>
-        <input type="hidden" value="logged" id="type">
+    <input type="hidden" value="logged" id="type">
     <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
         <div class="grid-bar">
             <div class="logo">
@@ -36,11 +36,11 @@
             </div>
             <div class="ask-search-bar">
                 <form class="form-inline" action="/action_page.php">
-                    <div class="form-control form-control-lg search-container" >
+                    <div class="form-control form-control-lg search-container">
                         <div class="search-container2">
                             <div class="search-bar-cat">
                                 <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
-                                    width="33">
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
@@ -71,7 +71,7 @@
                         <div class="search-container2">
                             <div class="search-bar-cat">
                                 <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
-                                    width="33">
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
@@ -96,14 +96,16 @@
             <div class="card-header" id="question-header">
                 <div class="name-aproved">
                     <h4 class="media-heading resultHeader text-nowrap text-truncate" style="max-width:235px ;"><a href="./profile.html"><img
-                                src="../images/yves.jpg" class="media-object rounded-circle profilePic " style="width:3rem; ">
+                                src="../images/yves.jpg" alt="profile_pic" class="media-object rounded-circle profilePic "
+                                style="width:3rem; ">
                             shebookworm4</a></h4>
-                            <img src="../images/answered-13.svg" class="media-object" style="width:2rem; height: 2rem;">
+                    <img src="../images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">
                 </div>
                 <div class="cat-date">
                     <p class="resultFooter align-self-center">7 Jan 2019</p>
                     <div>
-                        <a href="./topic.html"><img src="../images/physics-02.svg" class="media-object" style="width:2rem; height: 2rem;">Physics</a>
+                        <a href="./topic.html"><img src="../images/physics-02.svg" alt="categorie" class="media-object"
+                                style="width:2rem; height: 2rem;">Physics</a>
                     </div>
                 </div>
             </div>
@@ -115,9 +117,9 @@
                     <div class="card" style="border-style:none;">
                         <div class="card-header title-upvotes">
                             <div class="answer-up-votes-mainquestion">
-                                <img src="../images/icon-14.svg" class="media-object" style="width:1.5rem; height: 1.5rem;">
+                                <img src="../images/icon-14.svg" alt="up-vote" class="media-object" style="width:1.5rem; height: 1.5rem;">
                                 14.3K
-                                <img src="../images/broken-19.svg" class="media-object" style="width:1.5rem; height: 1.5rem;">
+                                <img src="../images/broken-19.svg" alt="down-vote" class="media-object" style="width:1.5rem; height: 1.5rem;">
                             </div>
                             <a class="card-link" data-toggle="collapse" href="#description">
                                 <h2>How do black holes impact time?</h2>
@@ -129,37 +131,39 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</i></a>
+                <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</a>
             </div>
         </div>
         <div id="accordion2">
             <div class="card" id="no-thin-line">
                 <div class="card-header" id="answer-header">
                     <a class="card-link" data-toggle="collapse" href="#answers-to-question">
-                        </p><span class="info-answers expand-icon"><i class="fas fa-minus-circle"></i>
+                        <span class="info-answers expand-icon"><i class="fas fa-minus-circle"></i>
                             1 answer </span>
                     </a>
                 </div>
                 <div id="answers-to-question" class="collapse show" data-parent="#accordion2">
-                    <div class="card-body answer-body-all" >
+                    <div class="card-body answer-body-all">
                         <div id="accordion3">
                             <div class="card" style="border-style:none;">
                                 <div class="card-header comment-title">
-                                    <a class="card-link answer-header-icon" data-toggle="collapse" href="#collapse3">
+                                    <div class="card-link answer-header-icon" data-toggle="collapse" data-target="#collapse3">
 
                                         <span class="info-answers expand-icon"><i class="fas fa-plus-circle"></i>
                                             100 votes </span>
-                                        <span class="answer-user">
-                                            <a href="../pages/profile.html"><img src="../images/user2.png" alt="User2"
-                                                    class="rounded-circle" style="width:2em; margin:0;"></a>
-                                            <a href="../pages/profile.html"> Pedro Carvalho </a>
-                                        </span>
+                                        <div class="answer-user">
+                                            <a href="../pages/profile.html">
+                                                <img src="../images/user2.png" alt="User2" class="rounded-circle" style="width:2em; margin:0;">
+                                            </a>
+                                            <a href="../pages/profile.html">
+                                                Pedro Carvalho
+                                            </a>
+                                        </div>
                                         <small>
                                             <i>9 March 2019</i>
                                         </small>
-                                    </a>
+                                    </div>
                                 </div>
                                 <div id="collapse3" class="collapse show" data-parent="#accordion3">
                                     <div class="card-body comment-body">
@@ -167,7 +171,7 @@
 
                                             <div class="media-body">
 
-                                                <span>
+                                                <div>
                                                     <p style="margin: 1em 1em 1em 1em;">
                                                         A black hole is a place in space where gravity pulls so
                                                         much that even
@@ -204,15 +208,17 @@
                                                         can become very significant when spacetime
                                                         is curved by a massive object, such as a black hole.
                                                     </p>
-                                                </span>
+                                                </div>
 
                                                 <div class="bottom-answer">
-                                                        <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</i></a>
+                                                    <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</a>
                                                     <div class="answer-up-votes">
-                                                        
-                                                        <img src="../images/icon-14.svg" class="media-object" style="width:1.2rem; height: 1.2rem;">
+
+                                                        <img src="../images/icon-14.svg" alt="up-vote" class="media-object"
+                                                            style="width:1.2rem; height: 1.2rem;">
                                                         100
-                                                        <img src="../images/broken-19.svg" class="media-object" style="width:1.2rem; height: 1.2rem;">
+                                                        <img src="../images/broken-19.svg" alt="down-vote" class="media-object"
+                                                            style="width:1.2rem; height: 1.2rem;">
                                                     </div>
                                                     <i class="far fa-comment make-comment"></i>
                                                 </div>
@@ -233,8 +239,8 @@
                                                                     <div id="accordion5">
                                                                         <div class="card" style="border-style:none;">
                                                                             <div class="card-header comment-title">
-                                                                                <a class="card-link answer-header-icon"
-                                                                                    data-toggle="collapse" href="#collapse4">
+                                                                                <div class="card-link answer-header-icon"
+                                                                                    data-toggle="collapse" data-target="#collapse4">
 
                                                                                     <span class="info-answers expand-icon"><i
                                                                                             class="fas fa-plus-circle"></i>
@@ -251,7 +257,7 @@
                                                                                     <small>
                                                                                         <i>10 March 2019</i>
                                                                                     </small>
-                                                                                </a>
+                                                                                </div>
                                                                             </div>
                                                                             <div id="collapse4" class="collapse "
                                                                                 data-parent="#accordion5">
@@ -268,11 +274,17 @@
                                                                                             </span>
 
                                                                                             <div class="bottom-answer">
-                                                                                                <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</i></a>
+                                                                                                <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</a>
                                                                                                 <div class="answer-up-votes">
-                                                                                                        <img src="../images/icon-14.svg" class="media-object" style="width:1.2rem; height: 1.2rem;">
-                                                                                                        3
-                                                                                                        <img src="../images/broken-19.svg" class="media-object" style="width:1.2rem; height: 1.2rem;">
+                                                                                                    <img src="../images/icon-14.svg"
+                                                                                                        alt="up-vote"
+                                                                                                        class="media-object"
+                                                                                                        style="width:1.2rem; height: 1.2rem;">
+                                                                                                    3
+                                                                                                    <img src="../images/broken-19.svg"
+                                                                                                        alt="down-vote"
+                                                                                                        class="media-object"
+                                                                                                        style="width:1.2rem; height: 1.2rem;">
                                                                                                 </div>
                                                                                                 <i class="far fa-comment make-comment"></i>
                                                                                             </div>
