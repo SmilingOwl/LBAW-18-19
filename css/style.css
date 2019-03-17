@@ -571,7 +571,7 @@ td > input:focus {
     margin-top: 3%;
 }
 
-#editBtn:hover {
+.editBtn:hover {
     color: #FFCD34;
 }
 
