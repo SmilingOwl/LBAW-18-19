@@ -273,11 +273,15 @@ ul.pagination {
     border: none;
 }
 
-#answer-header{
+.card-header.answer-header{
+    border: none!important;
+}
+
+#no-thin-line2 {
     border: none;
 }
 
-#no-thin-line, #no-thin-line2 {
+.no-thin-line {
     border: none;
 }
 
@@ -347,6 +351,7 @@ ul.pagination {
     background-color: #FFFDF8;
     border-radius: 0.3em;
     justify-items: center;
+    border: none!important;
 }
 .answer-up-votes-mainquestion
 {
