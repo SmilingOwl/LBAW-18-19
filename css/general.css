@@ -248,18 +248,21 @@ a.fb {
    
    
   }
-.ask-button
+.btn-group .ask-button
 {
     text-decoration: none;
+    border-radius: 1em;
 }
 .ask-button:hover
 {
     text-decoration: none;
+    border-radius: 0.3em;
 }
 
 .info-user
 {
-    justify-content: center;
+    justify-content: space-around;
+    justify-self: center;
 }
 
 #navSearch{
