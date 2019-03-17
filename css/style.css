@@ -547,7 +547,7 @@ td > input:focus {
     padding: 3% 2% 6%;
 }
 
-#question{
+.question{
     font-family: 'Prompt', sans-serif;
     font-weight: 500;
     font-size: 1.2rem;
@@ -555,7 +555,7 @@ td > input:focus {
     color: black;
 }
 
-#question:hover{
+.question:hover{
     color: #FFCD34;
 }
 
@@ -640,3 +640,4 @@ div#terms >p{
         text-align: center;
     }
 }
+

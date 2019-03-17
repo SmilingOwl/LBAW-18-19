@@ -28,7 +28,7 @@
 
 
 <body>
-    <div id="type" value="unlogged"></div>
+    <input type="hidden" value="unlogged" id="type">
     <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
         <div class="grid-bar">
             <div class="logo">
@@ -36,11 +36,11 @@
             </div>
             <div class="ask-search-bar">
                 <form class="form-inline" action="/action_page.php">
-                    <div class="form-control form-control-lg search-container" class="">
+                    <div class="form-control form-control-lg search-container" >
                         <div class="search-container2">
                             <div class="search-bar-cat">
                                 <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
-                                    width="33">
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
@@ -71,7 +71,7 @@
                         <div class="search-container2">
                             <div class="search-bar-cat">
                                 <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
-                                    width="33">
+                                    width="33" alt="logo">
                             </div>
                             <div class="search-bar-div">
                                 <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
@@ -167,22 +167,6 @@
             </div>
 
         </div>
-        <!--   <div class="container" id="catIcon">
-                <button type="button" class="btn btn-link" id="cat_icon"><img src="../images/biology-01.svg" alt="biology" style="width:70px;">Biology</button>
-            </div>
-            <div class="dropdown show" id="sortBy">
-                <a class="btn dropdown-toggle" href="#" role="button" id="sortByButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Sort By </a>
-
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <a class="dropdown-item" href="#">Newest</a>
-                    <a class="dropdown-item" href="#">Most Upvoted up</a>
-                    <a class="dropdown-item" href="#">Most Upvoted down</a>
-                    <a class="dropdown-item" href="#">More Answers</a>
-                    <a class="dropdown-item" href="#">Less Answers</a>
-                </div>
-            </div>-->
     </div>
 
     <div class="container d-flex justify-content-end" id="sortBar">
@@ -219,7 +203,7 @@
                                         style="width:3rem">yves127</h4>
                             </a>
                             <div class="container">
-                                <a id="question" href="../pages/questionDetail.html">The presence of three sex
+                                <a class="question" href="../pages/questionDetail.html">The presence of three sex
                                     chromosomes in a persons cells is
                                     best
                                     explained by what cell process going wrong?​</a>
@@ -244,7 +228,7 @@
                                         style="width:3rem">freshman_port</h4>
                             </a>
                             <div class="container">
-                                <a id="question" href="../pages/questionDetail.html">How does the size of a cell's
+                                <a class="question" href="../pages/questionDetail.html">How does the size of a cell's
                                     surface area change compared to
                                     its
                                     volume when the cell grows?</a>
@@ -267,7 +251,7 @@
                                         style="width:3rem">shebookworm4</h4>
                             </a>
                             <div class="container">
-                                <a id="question" href="../pages/questionDetail.html">Why is it important for
+                                <a class="question" href="../pages/questionDetail.html">Why is it important for
                                     microtubules or spindle fibers to
                                     attach to
                                     chromosomes?</a>
@@ -290,7 +274,7 @@
                                         style="width:3rem">allisonpp8</h4>
                             </a>
                             <div class="container">
-                                <a id="question" href="../pages/questionDetail.html">According to most scientific
+                                <a class="question" href="../pages/questionDetail.html">According to most scientific
                                     models, how many years ago did
                                     the first
                                     simple cells appear on Earth?</a>
@@ -314,7 +298,7 @@
                             </a>
                             </h4>
                             <div class="container">
-                                <a id="question" href="../pages/questionDetail.html">Where is the instruction for
+                                <a class="question" href="../pages/questionDetail.html">Where is the instruction for
                                     making new cell located in a
                                     cell?</a>
                             </div>
@@ -336,7 +320,7 @@
                                         style="width:3rem">heyimpierre</h4>
                             </a>
                             <div class="container">
-                                <a id="question" href="../pages/questionDetail.html">How does the endosymbiotic theory
+                                <a class="question" href="../pages/questionDetail.html">How does the endosymbiotic theory
                                     explain the double membrane
                                     around
                                     the chloroplast?</a>
@@ -370,7 +354,7 @@
                                     <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg"
                                             class="media-object rounded-circle profilePic" style="width:1.75rem">John
                                         Doe</h4>
-                                    <p id="points"><img src="../images/points-16.svg" class="media-object" style="width:1rem">120
+                                    <p class="points"><img src="../images/points-16.svg" class="media-object" style="width:1rem">120
                                         points</p>
                                 </div>
                             </div>
@@ -383,7 +367,7 @@
                                     <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg"
                                             class="media-object rounded-circle profilePic" style="width:1.75rem">John
                                         Doe</h4>
-                                    <p id="points"><img src="../images/points-16.svg" class="media-object" style="width:1rem">120
+                                    <p class="points"><img src="../images/points-16.svg" class="media-object" style="width:1rem">120
                                         points</p>
                                 </div>
                             </div>
@@ -396,7 +380,7 @@
                                     <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg"
                                             class="media-object rounded-circle profilePic" style="width:1.75rem">John
                                         Doe</h4>
-                                    <p id="points"><img src="../images/points-16.svg" class="media-object" style="width:1rem">120
+                                    <p class="points"><img src="../images/points-16.svg" class="media-object" style="width:1rem">120
                                         points</p>
                                 </div>
                             </div>
@@ -409,7 +393,7 @@
                                     <h4 class="media-heading align-self-center leaderInfo"><img src="../images/yves.jpg"
                                             class="media-object rounded-circle profilePic" style="width:1.75rem">John
                                         Doe</h4>
-                                    <p id="points"><img src="../images/points-16.svg" class="media-object" style="width:1rem">120
+                                    <p class="points"><img src="../images/points-16.svg" class="media-object" style="width:1rem">120
                                         points</p>
                                 </div>
                             </div>
@@ -431,7 +415,7 @@
         <div class="card-footer small text-muted">
             <div class="row">
                 <div class="col-3">
-                    <a href="../pages/about.html">
+                    <a href="../pages/aboutUs.html">
                         About us
                     </a>
                 </div>

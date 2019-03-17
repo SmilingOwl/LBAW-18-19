@@ -67,7 +67,7 @@ function onLoad(){
 
 
 
-
+/*
 
 let container = document.querySelector("#main");
 //criar(500);
@@ -107,4 +107,4 @@ async function criar(tempo) {
         container.appendChild(novo8);
         await sleep(tempo);
     }
-}
+}*/
