@@ -14,8 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- End of Bootstrap include -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Prompt:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" media="screen" href="../css/login.css">
@@ -27,7 +27,7 @@
 
 
 <body>
-        <input type="hidden" value="logged" id="type">
+    <input type="hidden" value="logged" id="type">
     <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
         <div class="grid-bar">
             <div class="logo">
@@ -144,49 +144,49 @@
                         </div>
                         <!--Bio-->
                         <div class="col-md-3" style="align-content: flex-end;">
-                            <div class="card card-body pt-1 pb-1" id="stats">
+                            <div class="card card-body p-1" id="stats">
                                 <div class="container m-3 align-self-center" id="newBorder">
-                                <h5 class="text-dark" id="statsTitle" style=" text-align: center">Stats</h5>
-                                <div class="d-flex flex-column justify-content-around flex-wrap">
-                                    <div class="d-flex p-1">
-                                        <div class="mx-2">
-                                            <img src="../images/points-16.svg" style="width: 1.2em"></img>
+                                    <h5 class="text-dark" id="statsTitle" style=" text-align: center">Stats</h5>
+                                    <div class="d-flex flex-column justify-content-around flex-wrap">
+                                        <div class="d-flex p-1 stat">
+                                            <div class="mx-2">
+                                                <img src="../images/points-16.svg" style="width: 1.7em"></img>
+                                            </div>
+                                            <h6>300
+                                                <small>points</small>
+                                            </h6>
                                         </div>
-                                        <h6>300
-                                            <small>points</small>
-                                        </h6>
-                                    </div>
 
-                                    <div class="d-flex p-1">
-                                        <div class="mx-2">
-                                            <img src="../images/question-17.svg" style="width: 1.2em"></img>
+                                        <div class="d-flex p-1 stat">
+                                            <div class="mx-2">
+                                                <img src="../images/question-17.svg" style="width: 1.7em"></img>
+                                            </div>
+                                            <h6>33
+                                                <small>questions</small>
+                                            </h6>
                                         </div>
-                                        <h6>33
-                                            <small>questions</small>
-                                        </h6>
-                                    </div>
 
-                                    <div class="d-flex p-1">
-                                        <div class="mx-2">
-                                            <img src="../images/edit-18.svg" style="width: 1.2em"></img>
+                                        <div class="d-flex p-1 stat">
+                                            <div class="mx-2">
+                                                <img src="../images/edit-18.svg" style="width: 1.7em"></img>
+                                            </div>
+                                            <h6>50
+                                                <small>answers</small>
+                                            </h6>
                                         </div>
-                                        <h6>50
-                                            <small>answers</small>
-                                        </h6>
-                                    </div>
 
-                                    <div class="d-flex p-1">
-                                        <div class="mx-2">
-                                            <img src="../images/answered-13.svg" style="width: 1.2em"></img>
+                                        <div class="d-flex p-1 stat">
+                                            <div class="mx-2">
+                                                <img src="../images/answered-13.svg" style="width: 1.7em"></img>
+                                            </div>
+                                            <h6>3
+                                                <small>best answers</small>
+                                            </h6>
                                         </div>
-                                        <h6>3
-                                            <small>best answers</small>
-                                        </h6>
-                                    </div>
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -210,72 +210,77 @@
 
                 <li class="nav-item">
                     <a class="nav-link" data-toggle="tab" href="#Following">
-                            <i class="fas fa-plus"></i> Following</a>
+                        <i class="fas fa-plus"></i> Following</a>
                 </li>
 
             </ul>
             <div class="tab-content">
 
                 <div id="Questions" class="container tab-pane active"><br>
-                        <div class="container pb-3">
-                                <div class="row-lg-4 row-md-4 row-sm-4 row-xs-4">
-                                        <div class="media result">
-                                                <div class="media-left d-flex">
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="container">
-                                                        <a id="question" href="#">The presence of three sex chromosomes in a persons cells is
-                                                            best
-                                                            explained by what cell process going wrong?​</a>
-                                                    </div>
-                                                    <div class="row footerResult">
-                                                        <img src="../images/answered-13.svg" class="media-object align-self-center column"
-                                                            style="width:2rem" id="catQuestion">
-                                                        <p class="resultFooter align-self-center">3 answers</p>
-                                                        <p class="resultFooter align-self-center">10 upvotes  2 downvotes</p>
-                                                        <p class="resultFooter align-self-center">10 Jan 2019</p>
-                                                        <img src="../images/biology-01.svg" class="media-object" style="width:2rem; height: 2rem;">
-                                                    </div>
-                                                </div>
-                                            </div>
+                    <div class="container pb-3">
+                        <div class="row-lg-4 row-md-4 row-sm-4 row-xs-4">
+                            <div class="media profile_result">
+                                <div class="media-left d-flex">
                                 </div>
-                                <div class="row-lg-4 row-md-4 row-sm-4 row-xs-4">
-                                        <div class="media result">
-                                                <div class="media-left d-flex">
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="container">
-                                                        <a id="question" href="#">What programming language do hackers use?</a>
-                                                    </div>
-                                                    <div class="row footerResult">
-                                                        <p class="resultFooter align-self-center">0 answers</p>
-                                                        <p class="resultFooter align-self-center">1 upvote</p>
-                                                        <p class="resultFooter align-self-center">8 Jan 2019</p>
-                                                        <img src="../images/tech-05.svg" class="media-object" style="width:2rem; height: 2rem;">
-                                                    </div>
-                                                </div>
-                                            </div>
+                                <div class="media-body">
+                                    <div class="container">
+                                        <a class="question" href="#">The presence of three sex chromosomes in a persons
+                                            cells is
+                                            best
+                                            explained by what cell process going wrong?​</a>
+                                    </div>
+                                    <div class="row footerResult">
+                                        <img src="../images/answered-13.svg"
+                                            class="media-object align-self-center column" style="width:2rem"
+                                            id="catQuestion">
+                                        <p class="resultFooter align-self-center">3 answers</p>
+                                        <p class="resultFooter align-self-center">10 upvotes 2 downvotes</p>
+                                        <p class="resultFooter align-self-center">10 Jan 2019</p>
+                                        <img src="../images/biology-01.svg" class="media-object"
+                                            style="width:2rem; height: 2rem;">
+                                    </div>
                                 </div>
-                                <div class="row-lg-4 row-md-4 row-sm-4 row-xs-4">
-                                        <div class="media result">
-                                                <div class="media-left d-flex">
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="container">
-                                                        <a id="question" href="#">How do black holes impact time?</a>
-                                                    </div>
-                                                    <div class="row footerResult">
-                                                        <p class="resultFooter align-self-center">5 answers</p>
-                                                        <p class="resultFooter align-self-center">5 upvotes</p>
-                                                        <p class="resultFooter align-self-center">7 Jan 2019</p>
-                                                        <img src="../images/physics-02.svg" class="media-object" style="width:2rem; height: 2rem;">
-                                                    </div>
-                                                </div>
-                                            </div>  
-                                </div>
+                            </div>
                         </div>
+                        <div class="row-lg-4 row-md-4 row-sm-4 row-xs-4">
+                            <div class="media profile_result">
+                                <div class="media-left d-flex">
+                                </div>
+                                <div class="media-body">
+                                    <div class="container">
+                                        <a class="question" href="#">What programming language do hackers use?</a>
+                                    </div>
+                                    <div class="row footerResult">
+                                        <p class="resultFooter align-self-center">0 answers</p>
+                                        <p class="resultFooter align-self-center">1 upvote</p>
+                                        <p class="resultFooter align-self-center">8 Jan 2019</p>
+                                        <img src="../images/tech-05.svg" class="media-object"
+                                            style="width:2rem; height: 2rem;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-lg-4 row-md-4 row-sm-4 row-xs-4">
+                            <div class="media profile_result">
+                                <div class="media-left d-flex">
+                                </div>
+                                <div class="media-body">
+                                    <div class="container">
+                                        <a class="question" href="#">How do black holes impact time?</a>
+                                    </div>
+                                    <div class="row footerResult">
+                                        <p class="resultFooter align-self-center">5 answers</p>
+                                        <p class="resultFooter align-self-center">5 upvotes</p>
+                                        <p class="resultFooter align-self-center">7 Jan 2019</p>
+                                        <img src="../images/physics-02.svg" class="media-object"
+                                            style="width:2rem; height: 2rem;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    
+
                 </div>
 
                 <div id="Followers" class="container tab-pane fade"><br>
@@ -283,12 +288,11 @@
                         <div class="container">
                             <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                             margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -304,12 +308,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                 margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -325,72 +328,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                     margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;"
-                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                         margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;"
-                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                             margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;"
-                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                 margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -406,32 +348,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                     margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;"
-                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                         margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -447,12 +368,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                             margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -468,12 +388,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                                 margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -489,12 +408,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                 margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -509,12 +427,92 @@
 
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                             margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -542,12 +540,11 @@
                         <div class="container">
                             <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                     margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -563,12 +560,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                         margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -584,72 +580,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                             margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;"
-                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                 margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;"
-                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                     margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;"
-                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                         margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -665,32 +600,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                             margin-bottom: 8px;">
-
-                                        <div class="title">
-
-                                            <a href="#">
-                                                <h3>LuisRocha</h3>
-                                            </a>
-
-                                            <i class="far fa-lightbulb" style="font-size: 18px;"
-                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
-
-                                        </div>
-
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
-
-                                    <div class="box-part text-center">
-
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                                 margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -706,12 +620,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                                     margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -727,12 +640,11 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                                         margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -747,12 +659,12 @@
 
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                                             margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 
@@ -767,12 +679,92 @@
 
                                     </div>
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" style="margin-bottom: 40px;">
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
 
                                     <div class="box-part text-center">
 
-                                        <img class="rounded-circle" src="../images/yves.jpg" style="width: 150px; height: 150px;  border: 2px solid black;
-                                                                                                 margin-bottom: 8px;">
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
+
+                                        <div class="title">
+
+                                            <a href="#">
+                                                <h3>LuisRocha</h3>
+                                            </a>
+
+                                            <i class="far fa-lightbulb" style="font-size: 18px;"
+                                                data-fa-transform="up-2 grow-2" style="margin-right: 5px;"></i> Rookie
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
+
+                                    <div class="box-part text-center">
+
+                                        <img class="rounded-circle followering" src="../images/yves.jpg">
 
                                         <div class="title">
 

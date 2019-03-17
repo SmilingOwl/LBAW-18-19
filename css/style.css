@@ -454,6 +454,8 @@ td > input:focus {
 
 .nav-tabs {
     border-bottom: 3px solid black;
+    width: 85%;
+    margin-left: 5%;
 }
 
 .table .thead-dark th{
@@ -545,6 +547,13 @@ td > input:focus {
 .result{
     border-bottom: 0.3em solid black;
     padding: 3% 2% 6%;
+}
+
+.profile_result{
+    border-bottom: 0.3em solid black;
+    padding: 4% 2% 3%;
+    width: 85%;
+    margin-left: 5%;
 }
 
 .question{
@@ -640,4 +649,22 @@ div#terms >p{
         text-align: center;
     }
 }
+
+.box {
+    width: 80%;
+    margin-left: 8%;
+}
+
+.followering {
+    width: 100px; 
+    height: 100px; 
+    margin-bottom: 8px;
+}
+
+h6 {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+
 
