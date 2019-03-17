@@ -174,10 +174,7 @@ ul.pagination {
     }
 }
 
-td,
-th {
-    text-align: center;
-}
+
 
 
 .avatar-upload {
@@ -465,9 +462,10 @@ td > input:focus {
     border-top: 3px solid black;
     border-bottom: 3px solid black;
     border-radius: 0.3em;
-    font-size: 20px;
+    font-size: 0.86rem;
     text-decoration: underline;
     text-decoration-color:#FFCD34;
+    padding-left: 1.1rem;
 }
 
 .table .thead-dark th:first-of-type{
@@ -491,9 +489,11 @@ td > input:focus {
 }
 
 .table td { 
-    padding: .75rem;
+    padding: 1.5rem;
     vertical-align: middle;
     border-top: 2px solid black;
+    font-weight: 600;
+    font-size: 1rem;
 
 }
 
@@ -666,5 +666,36 @@ h6 {
     font-size: 1.2rem;
 }
 
+.nav-tabs.admin-tabs{
+    width: 95%;
+    margin-left: 1.5%;
+}
+
+.btn-success{
+    color: black;
+    background-color: transparent;
+    border: 3px solid #28a745;
+    font-weight: 600;
+    margin-right: 0.8%;
+    font-size: 0.8rem;
+}
+
+.btn-danger {
+    color: black;
+    background-color: transparent;
+    border: 3px solid #dc3545;
+    font-weight: 600;
+    margin-right: 0.8%;
+    font-size: 0.8rem;
+}
+
+.btn-warning {
+    color: black;
+    background-color: transparent;
+    border: 3px solid #ffc107;
+    font-weight: 600;
+    margin-right: 0.8%;
+    font-size: 0.8rem;
+}
 
 
