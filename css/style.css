@@ -264,6 +264,10 @@ ul.pagination {
     border: none;
 }
 
+.card.detail{
+    border: none!important;
+}
+
 #question-body{
     border-bottom: 3px solid black;
     border-left: none;
