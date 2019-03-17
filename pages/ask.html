@@ -23,6 +23,7 @@
     <script src="../scripts/bar_nav.js"></script>
     <script src="../scripts/footer_position.js"></script>
     <script src="../scripts/toolTip.js"></script>
+    <script src="../scripts/ask.js"></script>
 </head>
 
 
@@ -88,12 +89,11 @@
         </div>
     </nav>
 
-    <h1 class="h1-responsive font-weight-bold text-center my-4">Want to ask something?</h1>
+    <h1 class="h1-responsive font-weight-bold text-center mt-5 mb-3 py-3">Want to ask something?</h1>
 
-    <div class="container" id="categories" style="margin-bottom: 20px;"> 
+    <div class="container my-5"> 
 
-            <h5 style="text-align:left; margin-bottom: 25px; margin-top: 35px;"> Select a category for your question!
-                </h5>
+            <h5 class="h5-responsive font-weight-bold text-left mb-3 py-3"> Select a category for your question!</h5>
 
         <div class="row cat-row" style="font-size:100px;">
             <div class="col-sm-1 col-2 div-cat">
@@ -169,23 +169,26 @@
 
     </div>
 
-    <div class="container">
+    <div class="container align-items-center">
 
         <form>
-               
+        <div class="row">
+            <div class="col-md-1"></div>
 
-            <div class="form-group col-4">
-                <input class="form-control form-control-lg" type="text" name="question" placeholder="Ask away!" style=" width: 100%;"
+            <div class="col-md-10">
+
+            <div class="form-group col-md-12 mb-5">
+                <input class="form-control form-control-lg question_line" type="text" name="question" placeholder="Ask away!"
                     required>
 
             </div>
 
-            <div class="form-group">
-                <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" placeholder=" Describe your doubts here!"
+            <div class="form-group col-md-12 mb-5">
+                <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" placeholder="Describe your doubts here!"
                     rows="5"></textarea>
             </div>
 
-                <div class="form-group">
+                <div class="form-group col-md-12">
                     <h6>Upload images for your question</h6>
                     <div class="input-group">
                         <span class="input-group-btn">
@@ -198,15 +201,16 @@
                 </div>
 
 
-            <div class="col text-center">
-                <a href="../pages/questionDetail.html" class="btn btn-dark " style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Post</a>
+            <div class="col-md-12 text-center">
+                <a href="../pages/questionDetail.html" class="btn btn-dark submit" style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Post</a>
             </div>
 
-        </form>
+        </div>
     </div>
 
-    <br>
-    <br>
+        </form>
+    
+</div>
 
     <footer class="platform-info" id="platform-link-info">
         <div class="card-footer small text-muted">
