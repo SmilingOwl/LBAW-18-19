@@ -176,16 +176,22 @@
             <div class="col-md-1"></div>
 
             <div class="col-md-10">
-                <form action="../pages/questionDetail.html" method="get" id="form-ask">
+                <form class="needs-validation" action="../pages/questionDetail.html" method="get" id="form-ask" novalidate>
                     <div class="form-group col-md-12 mb-5">
                         <input class="form-control form-control-lg question_line" type="text" name="question"
                             placeholder="Ask away!" required>
+                            <div class="invalid-feedback">
+                                There needs to be a title
+                            </div>
 
                     </div>
 
                     <div class="form-group col-md-12 mb-5">
                         <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" placeholder="Describe your doubts here!"
                             rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                There needs to be a description
+                            </div>
                     </div>
 
                     <div class="form-group col-md-12">
