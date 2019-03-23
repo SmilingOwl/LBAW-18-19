@@ -54,7 +54,7 @@ $$ LANGUAGE plpgsql;
 
 CREATE FUNCTION reportQuestionDate(id_question integer,data date) RETURNS boolean AS $$
 BEGIN
-    IF id_question = null THEN RETURN false;
+    IF id_question IS NULL THEN RETURN false;
     ELSE 
         RETURN (select "date" From question where $1 = question.id_question)<data;
     END IF;
@@ -63,23 +63,13 @@ $$ LANGUAGE plpgsql;
 
 CREATE FUNCTION reportAnswerDate(id_answer integer,data date) RETURNS boolean AS $$
 BEGIN
-    IF id_answer = null THEN RETURN false;
+    IF id_answer IS NULL THEN RETURN false;
     ELSE RETURN (select "date" From answer where $1 = answer.id_answer)<data;
     END IF;
 END;
 $$ LANGUAGE plpgsql;
 
 --Tables
-
-CREATE TABLE user2 (
-    points integer PRIMARY KEY,
-    id_rank integer NOT NULL
-);
-
-CREATE TABLE user3 (
-    banned boolean PRIMARY KEY,
-    deleted boolean NOT NULL
-);
 
 CREATE TABLE user1 (
     id_user SERIAL PRIMARY KEY,
@@ -89,8 +79,6 @@ CREATE TABLE user1 (
     bioDescription text,
     birthdate date NOT NULL,
     profilePhoto text DEFAULT defaultPhoto(),
-    banned boolean NOT NULL REFERENCES user3 (banned) ON UPDATE CASCADE ON DELETE CASCADE,
-    points integer NOT NULL CONSTRAINT points_ck CHECK (points >= 0) REFERENCES user2 (points) ON UPDATE CASCADE ON DELETE CASCADE,
     id_role integer NOT NULL
 );
 
@@ -112,6 +100,19 @@ CREATE TABLE rank (
     name rankType NOT NULL DEFAULT 'rookie' CONSTRAINT name_uk UNIQUE,
     minValue integer CONSTRAINT minValue_ck CHECK (minValue>=0),
     maxValue integer CONSTRAINT maxValue_ck CHECK ((maxValue > 0) AND (maxValue>minValue))
+);
+
+
+CREATE TABLE user2 (
+    id_user integer PRIMARY KEY REFERENCES user1 (id_user)  ON UPDATE CASCADE ON DELETE CASCADE,
+    points integer NOT NULL CONSTRAINT points_ck CHECK (points >= 0),
+    id_rank integer NOT NULL REFERENCES rank (id_rank)
+);
+
+CREATE TABLE user3 (
+    id_user integer PRIMARY KEY REFERENCES user1 (id_user) ON UPDATE CASCADE ON DELETE CASCADE,
+    banned boolean NOT NULL,
+    deleted boolean NOT NULL
 );
 
 CREATE TABLE notification (
@@ -169,22 +170,20 @@ CREATE TABLE comment(
     PRIMARY KEY (firstAnswer,secondAnswer)
 );
 
-CREATE TABLE bestAnswer2 (
-    deleted boolean PRIMARY KEY,
-    active boolean NOT NULL
-);
-
 CREATE TABLE bestAnswer1 (
-    id_bestAnswer integer NOT NULL REFERENCES answer (id_answer) ON UPDATE CASCADE ON DELETE CASCADE,
+    id_bestAnswer integer PRIMARY KEY REFERENCES answer (id_answer) ON UPDATE CASCADE ON DELETE CASCADE,
     attributionDate date NOT NULL CONSTRAINT attributionDate_ck CHECK (answerDate(id_bestAnswer) < attributionDate),
     "text" text NOT NULL,
     "date" date NOT NULL DEFAULT now() CONSTRAINT date_ck CHECK (categoriequestionDate(id_bestAnswer) < "date"),
     votes integer NOT NULL DEFAULT 0,
-    photo text,
-    deleted boolean NOT NULL REFERENCES bestAnswer2 (deleted) ON UPDATE CASCADE ON DELETE CASCADE 
+    photo text
 );
 
-
+CREATE TABLE bestAnswer2 (
+    id_bestAnswer integer PRIMARY KEY REFERENCES bestAnswer1 (id_bestAnswer) ON UPDATE CASCADE ON DELETE CASCADE ,
+    deleted boolean NOT NULL,
+    active boolean NOT NULL
+);
 
 CREATE TABLE faq(
     id_faq SERIAL PRIMARY KEY,
