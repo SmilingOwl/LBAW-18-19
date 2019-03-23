@@ -71,6 +71,27 @@ $$ LANGUAGE plpgsql;
 
 --Tables
 
+
+CREATE TABLE rank (
+    id_rank SERIAL PRIMARY KEY,
+    name rankType NOT NULL DEFAULT 'rookie' CONSTRAINT name_uk UNIQUE,
+    minValue integer CONSTRAINT minValue_ck CHECK (minValue>=0),
+    maxValue integer CONSTRAINT maxValue_ck CHECK ((maxValue > 0) AND (maxValue>minValue))
+);
+
+
+CREATE TABLE user2 (
+    id_user SERIAL PRIMARY KEY,
+    points integer NOT NULL CONSTRAINT points_ck CHECK (points >= 0),
+    id_rank integer NOT NULL REFERENCES rank (id_rank)
+);
+
+CREATE TABLE user3 (
+    id_user SERIAL PRIMARY KEY ,
+    banned boolean NOT NULL,
+    deleted boolean NOT NULL
+);
+
 CREATE TABLE user1 (
     id_user SERIAL PRIMARY KEY,
     username text NOT NULL CONSTRAINT username_uk UNIQUE,
@@ -79,6 +100,8 @@ CREATE TABLE user1 (
     bioDescription text,
     birthdate date NOT NULL,
     profilePhoto text DEFAULT defaultPhoto(),
+    id_user2 integer NOT NULL REFERENCES user2 (id_user) ON UPDATE CASCADE ON DELETE CASCADE,
+    id_user3 integer NOT NULL REFERENCES user3 (id_user) ON UPDATE CASCADE ON DELETE CASCADE,
     id_role integer NOT NULL
 );
 
@@ -95,25 +118,6 @@ CREATE TABLE role  (
     endDate date CONSTRAINT endDateBigger_ck CHECK (endDate > beginningDate)
 );
 
-CREATE TABLE rank (
-    id_rank SERIAL PRIMARY KEY,
-    name rankType NOT NULL DEFAULT 'rookie' CONSTRAINT name_uk UNIQUE,
-    minValue integer CONSTRAINT minValue_ck CHECK (minValue>=0),
-    maxValue integer CONSTRAINT maxValue_ck CHECK ((maxValue > 0) AND (maxValue>minValue))
-);
-
-
-CREATE TABLE user2 (
-    id_user integer PRIMARY KEY REFERENCES user1 (id_user)  ON UPDATE CASCADE ON DELETE CASCADE,
-    points integer NOT NULL CONSTRAINT points_ck CHECK (points >= 0),
-    id_rank integer NOT NULL REFERENCES rank (id_rank)
-);
-
-CREATE TABLE user3 (
-    id_user integer PRIMARY KEY REFERENCES user1 (id_user) ON UPDATE CASCADE ON DELETE CASCADE,
-    banned boolean NOT NULL,
-    deleted boolean NOT NULL
-);
 
 CREATE TABLE notification (
     id_notification SERIAL PRIMARY KEY,
