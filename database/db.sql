@@ -1,49 +1,86 @@
---Types
+
+DROP TABLE IF EXISTS user1 CASCADE;
+DROP TABLE IF EXISTS user2 CASCADE;
+DROP TABLE IF EXISTS user3 CASCADE;
+DROP TABLE IF EXISTS follow CASCADE;
+DROP TABLE IF EXISTS role CASCADE;
+DROP TABLE IF EXISTS rank CASCADE;
+DROP TABLE IF EXISTS category CASCADE;
+DROP TABLE IF EXISTS question CASCADE;
+DROP TABLE IF EXISTS voteQuestion CASCADE;
+DROP TABLE IF EXISTS answer CASCADE;
+DROP TABLE IF EXISTS voteAnswer CASCADE;
+DROP TABLE IF EXISTS comment CASCADE;
+DROP TABLE IF EXISTS bestAnswer2 CASCADE;
+DROP TABLE IF EXISTS bestAnswer1 CASCADE;
+DROP TABLE IF EXISTS faq CASCADE;
+DROP TABLE IF EXISTS report CASCADE;
+DROP TABLE IF EXISTS userReport CASCADE;
+DROP TABLE IF EXISTS notification CASCADE;
 DROP TYPE IF EXISTS notificationType;
-CREATE TYPE notificationType AS ENUM ('question', 'answer', 'comment', 'follow', 'vote');
 DROP TYPE IF EXISTS rankType;
-CREATE TYPE rankType AS ENUM ('rookie', 'beginner', 'intermediate', 'enthusiastic', 'adanced', 'veteran');
 DROP TYPE IF EXISTS roleType;
+DROP FUNCTION IF EXISTS defaultphoto();
+DROP FUNCTION IF EXISTS categoriequestionDate(id_category integer);
+DROP FUNCTION IF EXISTS answerDate(id_answer integer);
+DROP FUNCTION IF EXISTS reportQuestionDate(id_question integer,data date);
+DROP FUNCTION IF EXISTS reportAnswerDate(id_answer integer,data date);
+
+
+--Types
+CREATE TYPE notificationType AS ENUM ('question', 'answer', 'comment', 'follow', 'vote');
+CREATE TYPE rankType AS ENUM ('rookie', 'beginner', 'intermediate', 'enthusiastic', 'advanced', 'veteran');
 CREATE TYPE roleType AS ENUM ('member','moderator', 'administrator');
 
 --Functions --
 
-DROP FUNCTION IF EXISTS defaultphoto();
 CREATE FUNCTION defaultphoto() RETURNS text AS $$
 BEGIN
     RETURN 'defaultPhoto.png';
 END;
 $$ LANGUAGE plpgsql;
 
-DROP FUNCTION IF EXISTS categoriequestionDate();
 CREATE FUNCTION categoriequestionDate(id_category integer) RETURNS date AS $$
 BEGIN
     RETURN (select "date" From question where $1 = question.id_question);
 END;
 $$ LANGUAGE plpgsql;
 
-DROP FUNCTION IF EXISTS answerDate();
 CREATE FUNCTION answerDate(id_answer integer) RETURNS date AS $$
 BEGIN
     RETURN (select "date" From answer where $1 = answer.id_answer);
 END;
 $$ LANGUAGE plpgsql;
 
+CREATE FUNCTION reportQuestionDate(id_question integer,data date) RETURNS boolean AS $$
+BEGIN
+    IF id_question = null THEN RETURN false;
+    ELSE 
+        RETURN (select "date" From question where $1 = question.id_question)<data;
+    END IF;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE FUNCTION reportAnswerDate(id_answer integer,data date) RETURNS boolean AS $$
+BEGIN
+    IF id_answer = null THEN RETURN false;
+    ELSE RETURN (select "date" From answer where $1 = answer.id_answer)<data;
+    END IF;
+END;
+$$ LANGUAGE plpgsql;
+
 --Tables
 
-DROP TABLE IF EXISTS user2;
 CREATE TABLE user2 (
     points integer PRIMARY KEY,
     id_rank integer NOT NULL
 );
 
-DROP TABLE IF EXISTS user3;
 CREATE TABLE user3 (
     banned boolean PRIMARY KEY,
     deleted boolean NOT NULL
 );
 
-DROP TABLE IF EXISTS user1;
 CREATE TABLE user1 (
     id_user SERIAL PRIMARY KEY,
     username text NOT NULL CONSTRAINT username_uk UNIQUE,
@@ -57,14 +94,12 @@ CREATE TABLE user1 (
     id_role integer NOT NULL
 );
 
-DROP TABLE IF EXISTS follow;
 CREATE TABLE follow (
     follower integer NOT NULL REFERENCES user1 (id_user) ON UPDATE CASCADE,
     following integer NOT NULL REFERENCES user1 (id_user) ON UPDATE CASCADE,
     PRIMARY KEY(follower,following)
 );
 
-DROP TABLE IF EXISTS role;
 CREATE TABLE role  (
     id_role SERIAL PRIMARY KEY,
     type roleType NOT NULL DEFAULT 'member',
@@ -72,7 +107,6 @@ CREATE TABLE role  (
     endDate date CONSTRAINT endDateBigger_ck CHECK (endDate > beginningDate)
 );
 
-DROP TABLE IF EXISTS rank;
 CREATE TABLE rank (
     id_rank SERIAL PRIMARY KEY,
     name rankType NOT NULL DEFAULT 'rookie' CONSTRAINT name_uk UNIQUE,
@@ -80,7 +114,6 @@ CREATE TABLE rank (
     maxValue integer CONSTRAINT maxValue_ck CHECK ((maxValue > 0) AND (maxValue>minValue))
 );
 
-DROP TABLE IF EXISTS notification;
 CREATE TABLE notification (
     id_notification SERIAL PRIMARY KEY,
     description text NOT NULL,
@@ -90,13 +123,11 @@ CREATE TABLE notification (
     id_user integer NOT NULL REFERENCES user1 (id_user) ON UPDATE CASCADE
 );
 
-DROP TABLE IF EXISTS category;
 CREATE TABLE category(
     id_category SERIAL PRIMARY KEY,
     name text NOT NULL CONSTRAINT categoryname_uk UNIQUE
 );
 
-DROP TABLE IF EXISTS question;
 CREATE TABLE question(
     id_question integer PRIMARY KEY NOT NULL REFERENCES category (id_category) ON UPDATE CASCADE ON DELETE CASCADE,
     name text NOT NULL,
@@ -109,14 +140,12 @@ CREATE TABLE question(
     id_user integer NOT NULL REFERENCES user1 (id_user) ON UPDATE CASCADE
 );
 
-DROP TABLE IF EXISTS voteQuestion;
 CREATE TABLE voteQuestion(
     username integer NOT NULL REFERENCES user1 (id_user) ON UPDATE CASCADE,
     id_question integer NOT NULL REFERENCES question (id_question) ON UPDATE CASCADE,
     PRIMARY KEY (username,id_question)
 );
 
-DROP TABLE IF EXISTS answer;
 CREATE TABLE answer(
     id_answer SERIAL PRIMARY KEY,
     "text" text NOT NULL,
@@ -128,27 +157,23 @@ CREATE TABLE answer(
     user_post integer NOT NULL REFERENCES user1 (id_user)
 );
 
-DROP TABLE IF EXISTS voteAnswer;
 CREATE TABLE voteAnswer(
     username integer NOT NULL REFERENCES user1 (id_user) ON UPDATE CASCADE,
     id_answer integer NOT NULL REFERENCES answer (id_answer) ON UPDATE CASCADE,
     PRIMARY KEY (username,id_answer)
 );
 
-DROP TABLE IF EXISTS comment;
 CREATE TABLE comment(
     firstAnswer integer NOT NULL REFERENCES answer (id_answer) ON UPDATE CASCADE,
     secondAnswer integer NOT NULL REFERENCES answer (id_answer) ON UPDATE CASCADE,
     PRIMARY KEY (firstAnswer,secondAnswer)
 );
 
-DROP TABLE IF EXISTS bestAnswer2;
 CREATE TABLE bestAnswer2 (
     deleted boolean PRIMARY KEY,
     active boolean NOT NULL
 );
 
-DROP TABLE IF EXISTS bestAnswer1;
 CREATE TABLE bestAnswer1 (
     id_bestAnswer integer NOT NULL REFERENCES answer (id_answer) ON UPDATE CASCADE ON DELETE CASCADE,
     attributionDate date NOT NULL CONSTRAINT attributionDate_ck CHECK (answerDate(id_bestAnswer) < attributionDate),
@@ -161,23 +186,20 @@ CREATE TABLE bestAnswer1 (
 
 
 
-DROP TABLE IF EXISTS faq;
 CREATE TABLE faq(
     id_faq SERIAL PRIMARY KEY,
     question text NOT NULL,
     answer text NOT NULL
 );
 
-DROP TABLE IF EXISTS report;
 CREATE TABLE report(
     id_report SERIAL PRIMARY KEY,
-    "date" date NOT NULL , -- Não sei como fazer este check
+    "date" date NOT NULL CONSTRAINT reportDate_ck CHECK (reportQuestionDate(id_question,"date") = true OR reportAnswerDate(id_answer,"date") = false),
     reason text NOT NULL,
     id_question integer REFERENCES question (id_question),
     id_answer integer REFERENCES answer (id_answer)
 );
 
-DROP TABLE IF EXISTS userReport;
 CREATE TABLE userReport(
     username integer NOT NULL REFERENCES user1 (id_user) ON UPDATE CASCADE,
     id_report integer NOT NULL REFERENCES report (id_report) ON UPDATE CASCADE,
