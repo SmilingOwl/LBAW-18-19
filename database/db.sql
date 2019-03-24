@@ -32,6 +32,7 @@ CREATE TYPE notificationType AS ENUM ('question', 'answer', 'comment', 'follow',
 CREATE TYPE rankType AS ENUM ('rookie', 'beginner', 'intermediate', 'enthusiastic', 'advanced', 'veteran');
 CREATE TYPE roleType AS ENUM ('member','moderator', 'administrator');
 
+
 --Functions --
 
 CREATE FUNCTION defaultphoto() RETURNS text AS $$
@@ -40,17 +41,20 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+
 CREATE FUNCTION categoriequestionDate(id_category integer) RETURNS date AS $$
 BEGIN
     RETURN (select "date" From question where $1 = question.id_question);
 END;
 $$ LANGUAGE plpgsql;
 
+
 CREATE FUNCTION answerDate(id_answer integer) RETURNS date AS $$
 BEGIN
     RETURN (select "date" From answer where $1 = answer.id_answer);
 END;
 $$ LANGUAGE plpgsql;
+
 
 CREATE FUNCTION reportQuestionDate(id_question integer,data date) RETURNS boolean AS $$
 BEGIN
@@ -61,6 +65,7 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+
 CREATE FUNCTION reportAnswerDate(id_answer integer,data date) RETURNS boolean AS $$
 BEGIN
     IF id_answer IS NULL THEN RETURN false;
@@ -69,8 +74,8 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
---Tables
 
+--Tables
 
 CREATE TABLE rank (
     id_rank SERIAL PRIMARY KEY,
