@@ -174,19 +174,20 @@ CREATE TABLE comment(
     PRIMARY KEY (firstAnswer,secondAnswer)
 );
 
+CREATE TABLE bestAnswer2 (
+    id_bestAnswer SERIAL PRIMARY KEY ,
+    deleted boolean NOT NULL,
+    active boolean NOT NULL
+);
+
 CREATE TABLE bestAnswer1 (
     id_bestAnswer integer PRIMARY KEY REFERENCES answer (id_answer) ON UPDATE CASCADE ON DELETE CASCADE,
     attributionDate date NOT NULL CONSTRAINT attributionDate_ck CHECK (answerDate(id_bestAnswer) < attributionDate),
     "text" text NOT NULL,
     "date" date NOT NULL DEFAULT now() CONSTRAINT date_ck CHECK (categoriequestionDate(id_bestAnswer) < "date"),
+    id_bestAnswer2 integer NOT NULL REFERENCES bestAnswer2 (id_bestAnswer) ON UPDATE CASCADE ON DELETE CASCADE ,
     votes integer NOT NULL DEFAULT 0,
     photo text
-);
-
-CREATE TABLE bestAnswer2 (
-    id_bestAnswer integer PRIMARY KEY REFERENCES bestAnswer1 (id_bestAnswer) ON UPDATE CASCADE ON DELETE CASCADE ,
-    deleted boolean NOT NULL,
-    active boolean NOT NULL
 );
 
 CREATE TABLE faq(
