@@ -27,7 +27,8 @@ DROP FUNCTION IF EXISTS reportQuestionDate(id_question integer,data date);
 DROP FUNCTION IF EXISTS reportAnswerDate(id_answer integer,data date);
 
 
---Types
+--Types--
+
 CREATE TYPE notificationType AS ENUM ('question', 'answer', 'comment', 'follow', 'vote');
 CREATE TYPE rankType AS ENUM ('rookie', 'beginner', 'intermediate', 'enthusiastic', 'advanced', 'veteran');
 CREATE TYPE roleType AS ENUM ('member','moderator', 'administrator');
@@ -75,7 +76,8 @@ END;
 $$ LANGUAGE plpgsql;
 
 
---Tables
+
+--Tables--
 
 CREATE TABLE rank (
     id_rank SERIAL PRIMARY KEY,
@@ -83,7 +85,6 @@ CREATE TABLE rank (
     minValue integer CONSTRAINT minValue_ck CHECK (minValue>=0),
     maxValue integer CONSTRAINT maxValue_ck CHECK ((maxValue > 0) AND (maxValue>minValue))
 );
-
 
 CREATE TABLE user2 (
     id_user SERIAL PRIMARY KEY,
