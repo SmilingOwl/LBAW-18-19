@@ -1,7 +1,6 @@
 
 DROP TABLE IF EXISTS user1 CASCADE;
 DROP TABLE IF EXISTS user2 CASCADE;
-DROP TABLE IF EXISTS user3 CASCADE;
 DROP TABLE IF EXISTS follow CASCADE;
 DROP TABLE IF EXISTS role CASCADE;
 DROP TABLE IF EXISTS rank CASCADE;
@@ -11,8 +10,7 @@ DROP TABLE IF EXISTS voteQuestion CASCADE;
 DROP TABLE IF EXISTS answer CASCADE;
 DROP TABLE IF EXISTS voteAnswer CASCADE;
 DROP TABLE IF EXISTS comment CASCADE;
-DROP TABLE IF EXISTS bestAnswer2 CASCADE;
-DROP TABLE IF EXISTS bestAnswer1 CASCADE;
+DROP TABLE IF EXISTS bestAnswer CASCADE;
 DROP TABLE IF EXISTS faq CASCADE;
 DROP TABLE IF EXISTS report CASCADE;
 DROP TABLE IF EXISTS userReport CASCADE;
@@ -91,11 +89,6 @@ CREATE TABLE user2 (
     id_rank integer NOT NULL REFERENCES rank (id_rank)
 );
 
-CREATE TABLE user3 (
-    banned boolean PRIMARY KEY,
-    deleted boolean NOT NULL
-);
-
 CREATE TABLE user1 (
     id_user SERIAL PRIMARY KEY,
     username text NOT NULL CONSTRAINT username_uk UNIQUE,
@@ -105,7 +98,8 @@ CREATE TABLE user1 (
     birthdate date NOT NULL,
     profilePhoto text DEFAULT defaultPhoto(),
     points integer NOT NULL REFERENCES user2 (points) ON UPDATE CASCADE ON DELETE CASCADE,
-    banned integer NOT NULL REFERENCES user3 (banned) ON UPDATE CASCADE ON DELETE CASCADE,
+    banned boolean NOT NULL,
+    deleted boolean NOT NULL,
     id_role integer NOT NULL
 );
 
