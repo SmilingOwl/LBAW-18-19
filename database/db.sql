@@ -87,14 +87,12 @@ CREATE TABLE rank (
 );
 
 CREATE TABLE user2 (
-    id_user SERIAL PRIMARY KEY,
-    points integer NOT NULL CONSTRAINT points_ck CHECK (points >= 0),
+    points integer PRIMARY KEY CONSTRAINT points_ck CHECK (points >= 0),
     id_rank integer NOT NULL REFERENCES rank (id_rank)
 );
 
 CREATE TABLE user3 (
-    id_user SERIAL PRIMARY KEY ,
-    banned boolean NOT NULL,
+    banned boolean PRIMARY KEY,
     deleted boolean NOT NULL
 );
 
@@ -106,8 +104,8 @@ CREATE TABLE user1 (
     bioDescription text,
     birthdate date NOT NULL,
     profilePhoto text DEFAULT defaultPhoto(),
-    id_user2 integer NOT NULL REFERENCES user2 (id_user) ON UPDATE CASCADE ON DELETE CASCADE,
-    id_user3 integer NOT NULL REFERENCES user3 (id_user) ON UPDATE CASCADE ON DELETE CASCADE,
+    points integer NOT NULL REFERENCES user2 (points) ON UPDATE CASCADE ON DELETE CASCADE,
+    banned integer NOT NULL REFERENCES user3 (banned) ON UPDATE CASCADE ON DELETE CASCADE,
     id_role integer NOT NULL
 );
 
@@ -180,18 +178,13 @@ CREATE TABLE comment(
     PRIMARY KEY (firstAnswer,secondAnswer)
 );
 
-CREATE TABLE bestAnswer2 (
-    id_bestAnswer SERIAL PRIMARY KEY ,
-    deleted boolean NOT NULL,
-    active boolean NOT NULL
-);
-
-CREATE TABLE bestAnswer1 (
+CREATE TABLE bestAnswer (
     id_bestAnswer integer PRIMARY KEY REFERENCES answer (id_answer) ON UPDATE CASCADE ON DELETE CASCADE,
     attributionDate date NOT NULL CONSTRAINT attributionDate_ck CHECK (answerDate(id_bestAnswer) < attributionDate),
     "text" text NOT NULL,
     "date" date NOT NULL DEFAULT now() CONSTRAINT date_ck CHECK (categoriequestionDate(id_bestAnswer) < "date"),
-    id_bestAnswer2 integer NOT NULL REFERENCES bestAnswer2 (id_bestAnswer) ON UPDATE CASCADE ON DELETE CASCADE ,
+    deleted boolean NOT NULL,
+    active boolean NOT NULL,
     votes integer NOT NULL DEFAULT 0,
     photo text
 );
