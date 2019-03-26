@@ -18,4 +18,10 @@ INSERT INTO "voteAnswer"(username, id_answer) VALUES();
 
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES();
 
-INSERT INTO "bestAnswer"() VALUES();
+INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
+
+INSERT INTO "faq"(id_faq, question, answer) VALUES();
+
+INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES();
+
+INSERT INTO "userReport"(username, id_report) VALUES();
