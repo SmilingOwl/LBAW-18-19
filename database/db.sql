@@ -191,7 +191,7 @@ CREATE TABLE faq(
 
 CREATE TABLE report(
     id_report SERIAL PRIMARY KEY,
-    "date" date NOT NULL CONSTRAINT reportDate_ck CHECK (reportQuestionDate(id_question,"date") = true OR reportAnswerDate(id_answer,"date") = false),
+    "date" date NOT NULL CONSTRAINT reportDate_ck CHECK (reportQuestionDate(id_question,"date") = true OR reportAnswerDate(id_answer,"date") = true),
     reason text NOT NULL,
     id_question integer REFERENCES question (id_question),
     id_answer integer REFERENCES answer (id_answer)
