@@ -6,9 +6,21 @@ INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES();
 
 INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES();
 
-INSERT INTO "category"(id_category, name) VALUES();
+INSERT INTO "category"(id_category, name) VALUES(1, "art");
+INSERT INTO "category"(id_category, name) VALUES(2, "biology");
+INSERT INTO "category"(id_category, name) VALUES(3, "business");
+INSERT INTO "category"(id_category, name) VALUES(4, "chemistry");
+INSERT INTO "category"(id_category, name) VALUES(5, "geology");
+INSERT INTO "category"(id_category, name) VALUES(6, "history");
+INSERT INTO "category"(id_category, name) VALUES(7, "math");
+INSERT INTO "category"(id_category, name) VALUES(8, "health");
+INSERT INTO "category"(id_category, name) VALUES(9, "linguistics");
+INSERT INTO "category"(id_category, name) VALUES(10, "physics");
+INSERT INTO "category"(id_category, name) VALUES(11, "psychology");
+INSERT INTO "category"(id_category, name) VALUES(12, "technology");
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES();
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(1, );
 
 INSERT INTO "voteQuestion"(username, id_question) VALUES();
 
