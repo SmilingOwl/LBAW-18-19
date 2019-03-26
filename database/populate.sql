@@ -20,6 +20,13 @@ INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdat
 INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (20,"HappyCat","alduyf123", "catskittens@pic.com", "looking for inspiration", "2001-12-05", "photo5.png", 200, false, false, "" );
 
 
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(1, "rookie",0, 199);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(2, "beginner", 200, 499);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(3, "intermediate",500, 899);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(4, "enthusiast", 900, 1499);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(5, "advanced", 1500, 4999);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(6, "veteran", 5000,100000);
+
 INSERT INTO "follow"(follower, following) VALUES();
 
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES();
