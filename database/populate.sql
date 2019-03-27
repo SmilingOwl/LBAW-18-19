@@ -217,6 +217,62 @@ If somebody helps me with scientific evidences, it would be highly appreciated!'
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(38, 'physics', 'Are photons avoiding destructive angles of diffraction in a single photon at a time experiment?', 
 'Are photons avoiding the angles of diffraction where destructive interference would occur if they weren''t alone in a one photon at a time double slit experiment? Is the number of photons detected on the wall equal to the number of photons went through the slits in a single photon at a time experiment?', '2016-05-05 11:25:03', 11, NULL, false, 8);
 
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(39, 'art', 'What is the name of this film editing technique?', 
+'What is it called when a seemingly short or contiguous conversation/dialogue is spread over a few scenes that take place in different places that are apparently far from each other?
+In "Snatch" (2000), for instance, there is a scene where Jason Statham''s character provides a brief explanation of the term ''coursing'', which is contiguous but it spans over a few scenes at different places.
+If you close your eyes and listen to the conversation, you''ll believe that it''s contiguous and happens in less than 25 seconds. But if pay attention to the video you''ll know that it is (logically) not.
+
+Does this technique of filming/editing have a name?', '2017-05-05 11:22:33', 9, NULL, false, 2);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(40, 'technology', 'How do I rename a LINUX host without needing to reboot for the rename to take effect?', 
+'I searched for an answer to this question on serverfault and shockingly could not find it. I know it is possible, but I can''t remember how to fdo it. How do I change a LINUX host''s hostname and get that change to take effect without a reboot?
+
+I am using Ubuntu 16 and Ubuntu 18.
+
+A big feature of Ubuntu is the graphical desktop and graphical system utilities. However, we are running Ubuntu in our production environment so we chose not to use the graphical desktop or utilities in order not to have those features consume resources we need in our production environment.
+
+I know that to rename the host, I edit the files:
+
+/etc/hostname
+/etc/hosts
+
+In the /etc/hostname one just replaces the current hostname (soon to be former hostname) with the new hostname.
+
+Ubuntu in the /etc/hosts file has the line:
+
+127.0.1.1 your-hostname your-hostname
+
+It acts as bootstrapping while your host is booting up and establishing itself within your network. Prior to changing the hostname, your-hostname is the current (soon to be former hostname) and as a part of changing your host''s hostname, one replaces that name with the new name.
+
+What I am familiar with is executing the above two steps and then rebooting your host. But plenty of times, like with a production server, one would like to execute that rename, but not reboot one''s host.
+
+How can I change hostname on a host and get that change to take effect without rebooting the host?', '2016-04-15 16:25:08', 12, NULL, false, 7);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(41, 'psychology', 'Voltage of sounds of mp3 files', 'As a computer programmer, I have noticed an interesting phenomenon: If I am stuck on a particular problem in my work, often if I stop thinking about the problem and do something else, the answer will suddenly come to me.
+
+Is there a name for this phenomenon? How does this work? Has any research been done on this? How is it that taking a break from a problem sometimes allows you to figure out the answer?', '2016-04-03 09:28:17', 28, NULL, false, 26);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(42, 'physics', 'Why is delta-v is the most useful quantity for planning space travel?', 'Many of the papers I''ve seen on the matter make use of the concept of delta-v. Is there an easy to understand reason why delta-v, the magnitude of the change of the velocity, |v|, is so useful for understanding orbital mechanics and planning travel?
+
+My experience in solving physics problems in mechanics has taught me that energy, linear momentum, or angular momentum are usually the most useful quantities. Delta-v doesn''t seem to be a good proxy for any of these quantities, since it''s not squared like the kinetic energy, but it''s also not a vector like the linear and angular momenta.', '2017-04-25 09:51:26', 4, NULL, false, 8);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(43, 'linguistics', 'Is exact Kanji stroke length important?', 'I am currently on a quest to learn how to hand write the 2000 most commonly used Kanji in the Japanese language. This requires lots of memorization, so efficiency is important.
+
+I have come across Kanji that have strokes with little "extra tails", created from a slightly extra-long stroke. Or in English, they can be called "jumps". Take my image as an example.
+When splitting this kanji into three separate parts:
+
+1. the left part has two jumps on the bottom, with the left tail being slightly longer
+2. the upper right part has no jumps
+3. the lower right part has two jumps on the bottom, of equal length.
+
+Question:
+
+How important are the jumps?
+
+When handwriting Kanji, does it matter if these jumps are of the correct length? Would the Kanji still be understandable without correct jumps? Would natives find it annoying, for example, if I didn''t include the jumps at all?
+
+I am asking because the less little things I have to memorize, the faster I can learn the Kanji.', '2017-04-14 13:09:17', 5, NULL, false, 12);
+
 
 INSERT INTO "voteQuestion"(username, id_question) VALUES();
 
