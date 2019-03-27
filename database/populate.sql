@@ -187,10 +187,12 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(32, 'technology', 'Voltage of sounds of mp3 files', 'What is the maximum voltage for common music files? When playing back on a smartphone, if the volume of the smartphone is set to max, how much voltage does the electric signal of the voltage be sent to the earphones?', '2017-11-05 11:36:42', 4, NULL, false, 18);
 
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(33, 'art', 'What abstract painters made the most interesting use of color?', NULL, '2016-07-29 10:57:48', 2, NULL, false, 19);
+
 
 INSERT INTO "voteQuestion"(username, id_question) VALUES();
 
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(30, 'It is necessary for the students to have real time experiences in order to understand any topic in studies. Such experiences help them to know the problems that occur apart from books and hence they can understand how people actually behave in real life to solve them.
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(29, 'It is necessary for the students to have real time experiences in order to understand any topic in studies. Such experiences help them to know the problems that occur apart from books and hence they can understand how people actually behave in real life to solve them.
 
 Such examples can be studies by doing case studies of events. Similarly in the filed of law, doing business law case study assignment help in achieving that motive.
 
@@ -424,7 +426,7 @@ One way of breaking the rules that novice poets often fall into and shouldn''t i
 The most revered modern poets often (not always) write very compressed language that also seems modern and moves smoothly. When they break these patterns, the impact adds to the theme and feel of the poem, it is not capricious. As a poet you''ll have to learn how to do this as well.', '2017-03-11 11:11:12', 8, NULL, false, 30, 5);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(58, 'Sillimanite is strictly speaking a mineral rather than a rock type. 
 It is found in metamorphic rocks that were high aluminium sediments, particularly ones that contained a lot of feldspar or clay. 
-They are usually found in high grade metamorphic rocks (gneisses) formed at over 600 Celsius.', '2016-10-05 10:23:24', 2, NULL, false, 11);
+They are usually found in high grade metamorphic rocks (gneisses) formed at over 600 Celsius.', '2016-10-05 10:23:24', 2, NULL, false, 31, 11);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(59, 'It does not depend on the music file, but at the amplifier sending the music to a speaker, or to a headphone/earplug connector.
 
 A music file only contains ''values'', and mostly in a compressed form. After uncompressing, you get values which has a certain amount on bits per value (typically 16 or more).
@@ -433,8 +435,10 @@ A microcontroller can send these values to a speaker via an pre- and/or amplifie
 
 Also note that sending continuous ''max values'' do not result in a loud sound, actually it would breaks the speaker (to prevent this, in the amplifier a so-called DC speaker protection is present). A wave is needed to let the speaker move outwards and inwards very fast, and this is done by sending changing values to the speaker.
 
-If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2017-11-05 14:35:42', 8, NULL, false, 13);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(60, 'Normally it''s limited by the cellphone battery voltage, which is about 3.7V. However there are other limits in play like the EU volume limit of 100dB - which is specified as SPL rather than a voltage.', '2017-11-06 16:36:22', 8, NULL, false, 13);
+If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2017-11-05 14:35:42', 8, NULL, false, 32, 13);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(60, 'Normally it''s limited by the cellphone battery voltage, which is about 3.7V. However there are other limits in play like the EU volume limit of 100dB - which is specified as SPL rather than a voltage.', '2017-11-06 16:36:22', 8, NULL, false, 32, 13);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(61, 'Wassily Kandinsky immediately comes to mind. His work always seemed like a piano composition, his use of lines and shapes creating a rhythm filled and enhanced with color. One can almost hear the music.', '2016-07-29 22:57:31', 1, 'main-qimg.jpg', false, 33, 13);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(62, 'There are also my two favorite artists, Richard Diebenkorn and Helen Frankenthaler, both use color in a rich and lively fashion, in broad abstract and form. Their works are like the high church of color, one can stand in front of them in awe and reverence.', '2016-07-29 23:10:21', 1, NULL, false, 33, 13);
 
 
 INSERT INTO "voteAnswer"(username, id_answer) VALUES();
@@ -442,6 +446,7 @@ INSERT INTO "voteAnswer"(username, id_answer) VALUES();
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(35, 36);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(49, 50);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(50, 51);
+INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(61, 62);
 
 INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
 
