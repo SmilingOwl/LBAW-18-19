@@ -175,11 +175,11 @@ L is Laplacian of an undirected graph, hence real symmetric and singular. B is a
 
 I want to show that if I increase the magnitude of eigenvalues of L, the eigenvalues of A will also increase. However, all I could find was a trace inequality relationship, and inequality doesn''t necessarily lead to any conclusion.', '2018-01-11 14:46:12', 9, NULL, false, 7);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(27, 'health', 'What’s the difference between primary and secondary dysmenorrhea?', NULL, '2017-08-05 04:54:05', 9, NULL, false, 21);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(27, 'medicine', 'What’s the difference between primary and secondary dysmenorrhea?', NULL, '2017-08-05 04:54:05', 9, NULL, false, 21);
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(28, 'physics', 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', '2018-01-30 15:08:23', 5, NULL, false, 16);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(29, 'health', 'What is the possible diagnosis for symptoms including fever, leucocitosys and abdominal pain', NULL, '2017-02-24 08:03:14', 2, NULL, false, 21);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(29, 'medicine', 'What is the possible diagnosis for symptoms including fever, leucocitosys and abdominal pain', NULL, '2017-02-24 08:03:14', 2, NULL, false, 21);
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(30, 'linguistics', 'How many liberties can one take with syntax and grammar rules when writing poetry?', NULL, '2017-03-10 22:05:47', 12, NULL, false, 15);
 
@@ -188,6 +188,34 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(32, 'technology', 'Voltage of sounds of mp3 files', 'What is the maximum voltage for common music files? When playing back on a smartphone, if the volume of the smartphone is set to max, how much voltage does the electric signal of the voltage be sent to the earphones?', '2017-11-05 11:36:42', 4, NULL, false, 18);
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(33, 'art', 'What abstract painters made the most interesting use of color?', NULL, '2016-07-29 10:57:48', 2, NULL, false, 19);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(34, 'history', 'Why did the Ottoman Empire not industrialize like France, Germany or Belgium?', NULL, '2016-07-13 17:29:01', 0, NULL, false, 9);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(35, 'psychology', 'Timeframe in which thoughts are concieved', 'Are thoughts concieved in realtime or are they preprocessed chains ready to be thought or both (depending on the prospective) or am I asking a too generalized question to have any sense?', '2016-02-13 18:45:02', 1, NULL, false, 21);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(36, 'linguistics', '“enables users to” vs “allows users to” – both correct?', 'I’m editing a colleague who habitually uses phrases like:
+
+The password enables users to log in.
+
+This sounds wrong to me, and I want to suggest alternatives like:
+
+The password allows users to log in.
+
+After some cursory research, I think the problem here is me, not the pattern in question. Are “enables” and “allows” interchangeable, here?', '2017-11-25 12:44:21', 4, NULL, false, 26);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(37, 'medicine', 'Significantly reduced absorption of Ciprofloxacin with concurrently administered Sucralfate is utilized intentionally to treat Colitis?', 
+'Many studies proved that concurrent administration of Ciprofloxacin and Sucralfate reduces the maximum concentration of Ciprofloxacin in plasma to approximately 1/10 level.
+
+Like Rifaximin, the unabsorbed Ciprofloxacin is more effective to act directly inside the colon?
+
+Or because of the chelate of Ciprofloxacin-Aluminum (of Sucralfate), the chelated Ciprofloxacin is no more effective?
+
+I''ve tried to find long time but no luck.
+
+If somebody helps me with scientific evidences, it would be highly appreciated!', '2016-05-22 08:09:10', 5, NULL, false, 17);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(38, 'physics', 'Are photons avoiding destructive angles of diffraction in a single photon at a time experiment?', 
+'Are photons avoiding the angles of diffraction where destructive interference would occur if they weren''t alone in a one photon at a time double slit experiment? Is the number of photons detected on the wall equal to the number of photons went through the slits in a single photon at a time experiment?', '2016-05-05 11:25:03', 11, NULL, false, 8);
 
 
 INSERT INTO "voteQuestion"(username, id_question) VALUES();
@@ -439,6 +467,34 @@ If you want to measure, you can use an oscilloscope to measure the audio output 
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(60, 'Normally it''s limited by the cellphone battery voltage, which is about 3.7V. However there are other limits in play like the EU volume limit of 100dB - which is specified as SPL rather than a voltage.', '2017-11-06 16:36:22', 8, NULL, false, 32, 13);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(61, 'Wassily Kandinsky immediately comes to mind. His work always seemed like a piano composition, his use of lines and shapes creating a rhythm filled and enhanced with color. One can almost hear the music.', '2016-07-29 22:57:31', 1, 'main-qimg.jpg', false, 33, 13);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(62, 'There are also my two favorite artists, Richard Diebenkorn and Helen Frankenthaler, both use color in a rich and lively fashion, in broad abstract and form. Their works are like the high church of color, one can stand in front of them in awe and reverence.', '2016-07-29 23:10:21', 1, NULL, false, 33, 13);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(63, 'This is a very broad question, but I''ll try to be brief:
+
+No scientific renaissance
+No capital accumulation
+Sclerotic societal problems
+No coal
+Not friendly to Europe, where the action was happening.', '2016-07-13 20:44:56', 1, NULL, false, 34, 14);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(64, 'This is hard to answer because no-one really knows what a thought is. If you make it narrower, like "a plan of action for catching a ball" you might get more detailed answers! But then it''s not clear how well those answers would transfer to things like language or deciding what to eat for dinner. Having said that, you might enjoy "The mind is flat" by Nick Chater. One thing we do know for sure about thoughts is that they''re really fast. Chater describes some experiments suggesting that the brain is always improvising, so the answer is probably more down the "real-time" end', '2016-02-13 18:45:02', 1, NULL, false, 35, 19);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(65, 'Enables implies that this uncovers a new ability for the user to log in.
+
+Using a different wording:
+
+The password gives the user the ability to login.
+
+Whereas allows implies that the user has been given the permission to login as if they weren''t allowed before.
+
+Attempting to put this into a different wording:
+
+The password gives the user the permission to login
+
+This is erroneous as the permission may in this case already be granted and they simply haven''t been given the ability to login yet', '2017-11-25 23:55:23', 1, NULL, false, 36, 22);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(66, 'But gramatically, they''re identical. They just carry different meanings? (And in the example, it sounds like “enables” better describes what passwords do?)', '2017-11-26 01:14:56', 1, NULL, false, 36, 22);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(67, 'Grammatically yes, they''re identical. But they carry different meanings. So you''re right to think that the problem was within you when perceiving the phrase as erroneous. ''Enables'' definitely describes the function of the user being given the password better than ''allow'' would. As I''ve attempted to lay out in my answer.', '2017-11-26 09:55:16', 1, NULL, false, 36, 22);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(68, 'Officially, I requested to Bayer who is innovator of Ciprofloxacin and received 1 in-vitro study article.
+
+The author of the in-vitro study concluded that there''s possibility as strategic option for intestinal sterilization but clinical study with patients must be confirmed.
+
+Again, this is a in-vitro study but not human clinical study.', '2016-05-22 12:21:33', 3, NULL, false, 37, 21);
 
 
 INSERT INTO "voteAnswer"(username, id_answer) VALUES();
@@ -447,6 +503,8 @@ INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(35, 36);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(49, 50);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(50, 51);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(61, 62);
+INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(66, 67);
+
 
 INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
 
