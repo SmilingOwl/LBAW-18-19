@@ -40,15 +40,18 @@ INSERT INTO "category"(id_category, name) VALUES(11, 'psychology');
 INSERT INTO "category"(id_category, name) VALUES(12, 'technology');
 
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(1, 'math', 'Tyesha found that the z-statistic was 2.1 and that the critical z-values were -1.96 and 1.96. Which of the following is a valid conclusion based on these results?', 'One can reject the null hypothesis. One can reject the alternate hypothesis. One can accept the null hypothesis. One cannot accept or reject the null hypothesis.','2017-05-06 16:18:36' , 6, null, false, 5);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(2, 'math', 'What are the solutions to this equation?', null,'2017-05-06 16:18:36' , 2, 'img1.jpg', false, 8);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(3, 'technology', 'What are the best C++ books?', null,'2017-01-10 16:35:44', 30, null, false, 9);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(1, 'math', 'Tyesha found that the z-statistic was 2.1 and that the critical z-values were -1.96 and 1.96. Which of the following is a valid conclusion based on these results?', 'One can reject the null hypothesis. One can reject the alternate hypothesis. One can accept the null hypothesis. One cannot accept or reject the null hypothesis.','2017-05-06 16:18:36' , 6, null, false, 4);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(2, 'math', 'What are the solutions to this equation?', null,'2017-05-06 16:18:36' , 2, 'img1.jpg', false, 15);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(3, 'technology', 'What are the best C++ books?', null,'2017-01-10 16:35:44', 30, null, false, 33);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(4, 'business', 'How do I study business law?', null,'2016-09-13 10:14:12', 5, null, false, 6);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(5, 'medicine', 'What CBRNE agent inhibits the enzyme AChE allowing ACh to accumulate affecting the way cells transmit signals to the body?', 'I cannot find anything on my textbooks.', '2016-07-07 06:05:00' , 10, null, false, 3);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(6, 'physics', 'Based on the second law of thermodynamics why must a machine always be less than 100% efficient?', 'A.Heat never moves from cold to hot. B.Heat is never converted completely into mechanical energy. C.Heat never flows from hot to cold. D.Entropy never increases.','2018-01-30 15:08:23' , 2, null, false, 4);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(7, 'physics', 'What is the electrostatic potential energy of an electron that is .02 meters from a Van de Graaff machine that has a negative charge of -4.0 Couloumbs?', null,'2017-09-19 19:46:44' , 0, null, false, 12);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(8, 'chemistry', 'How many grams of silver chloride are produced when 45 g of calcium chloride react with excess silver nitrate?​', null ,'2017-06-01 08:44:35', 7, null, false, 22);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(9, 'linguistics', 'Why do the five basic questions in the English language (what, why, when, who and where) all start with the letter “w”?', null, '2017-12-19 05:52:53', 15, null, false, 19);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(5, 'medicine', 'What CBRNE agent inhibits the enzyme AChE allowing ACh to accumulate affecting the way cells transmit signals to the body?', 'I cannot find anything on my textbooks.', '2016-07-07 06:05:00' , 10, null, false, 21);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(6, 'physics', 'Based on the second law of thermodynamics why must a machine always be less than 100% efficient?', 'A.Heat never moves from cold to hot. 
+B.Heat is never converted completely into mechanical energy. 
+C.Heat never flows from hot to cold. 
+D.Entropy never increases.','2018-01-30 15:08:23' , 2, null, false, 16);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(7, 'physics', 'What is the electrostatic potential energy of an electron that is .02 meters from a Van de Graaff machine that has a negative charge of -4.0 Couloumbs?', null,'2017-09-19 19:46:44' , 0, null, false, 8);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(8, 'chemistry', 'How many grams of silver chloride are produced when 45 g of calcium chloride react with excess silver nitrate?​', null ,'2017-06-01 08:44:35', 7, null, false, 28);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(9, 'linguistics', 'Why do the five basic questions in the English language (what, why, when, who and where) all start with the letter “w”?', null, '2017-12-19 05:52:53', 15, null, false, 31);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(10, 'linguistics', 'What is the opposite of "gravitas"?', 'I''m having difficulty coming up with a valid antonym for gravitas.
 
 Online searches return results like superficiality, cheerfulness, frivolity, facetiousness etc. which don''t work for me. They seem to be opposites of gravitas as it is understood by the person who has it.
@@ -273,6 +276,201 @@ When handwriting Kanji, does it matter if these jumps are of the correct length?
 
 I am asking because the less little things I have to memorize, the faster I can learn the Kanji.', '2017-04-14 13:09:17', 5, '9r7wF.png', false, 12);
 
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(44, 'art', 'Creating high quality animated backgrounds from Illustrator files', 
+'I have some artwork in illustrator that I would like to animate and get a gif.
+
+Say I have a background pattern and I want to randomly move the elements inside to get a natural look of particles moving for a website background (should I use a gif for an animated background on a website ?)
+
+The simple way is just to create many backgrounds with different locations of the elements, which takes long time and never look natural.
+
+How would you do that on a mac ? Do I need After Effects ? or other software to make it quickly?', '2016-03-22 08:31:24', 2, NULL, false, 27);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(45, 'math', 'What is the use of introduction of term univalent function?', 
+'What is the use of defining a new term univalent function although there already existed a definition of bijective, one-to-one functions?', '2018-05-16 15:26:19', 0, NULL, false, 30);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(46, 'technology', 'Difference between i++ and (i)++ in C', 
+'int i = 3;
+int j = (i)++;
+
+vs
+
+int i = 3;
+int j = i ++;
+
+Is there a difference between how the above two cases are evaluated?
+
+Is the first case equivalent to incrementing an rvalue or is it undefined behaviour?', '2018-07-09 17:51:28', 17, NULL, false, 26);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(47, 'chemistry', 'Why don''t the electrons move through the electrolyte (instead of the circuit) in a galvanic cell?', 
+'I was learning about galvanic cells and I had a problem understanding why electrons do not travel through the electrolyte solutions themselves, instead preferring to travel through metals. Can electrons travel through an electrolytic solution?
+
+Imagine a galvanic cell, without the wiring between the two electrodes and instead we only have the salt bridge. Won''t the electrons (although it is very unfavorable to happen) travel through the salt bridge and the solutions? In other terms will the transformation of the electrodes occur?', '2016-04-02 18:57:46', 28, NULL, false, 3);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(48, 'linguistics', 'What is the significance of the traveler carrying writing materials in Ivanhoe?', 
+'The Jew''s dress, which appeared to have suffered considerably from the storm, was a plain russet cloak of many folds, covering a dark purple tunic. He had large boots lined with fur, and a belt around his waist, which sustained a small knife, together with a case for writing materials, but no weapon. He wore a high square yellow cap of a peculiar fashion, assigned to his nation to distinguish them from Christians, and which he doffed with great humility at the door of the hall.
+
+Strange but true: this snippet, apparently about a scribe''s tools, has been haunting me rather obsessively lately. I didn''t recall that the bearer was the Jew. I suppose a lender/usurer would want to keep records of his debtors.
+
+Am I missing something else? Was it particularly rare to be able to write, even among certain strata of the upper class?
+
+Why does he say "a small knife, but no weapon"?
+
+Is Sir Walter Scott''s mention of writing tools here used primarily to distinguish his social class/ his occupation, or perhaps something else?
+
+Am I mistaken in thinking it might have been a little bit odd for a traveler to be carrying a sack full of pens? (which lacking further descriptive language is what most readers will assume...)', '2018-06-08 14:09:57', 10, NULL, false, 12);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(49, 'biology', 'What exactly is this small puffer fish doing and how did it manage to accomplish such a feat?', 
+'I recently saw a video on youtube where it shows a puffer fish making intricate designs in the sand.
+
+The puffer fish made this design on the image.
+
+What exactly is the puffer fish doing and how is it capable of accomplishing such a feat? Is this behavior learnt, or innate?', '2016-08-19 16:41:55', 7, 'yv0Wh.jpg', false, 29);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(50, 'geology', 'Rayleigh waves generation', 
+'Good day,
+
+I do not fully understand the physical mechanism of formation of Rayleigh waves at the free surface. While their derivation is quite clear and obey free-boundary conditions, it is not clear their physical mechanism.
+
+Could you please correct me in my discussion. Incident P-wave can transform to reflected P and SV waves. When the angle of incidence of P wave reaches 2nd critical angle, both outgoing P and SV waves propagate along the surface forming Rayleigh wave. So, P-wave by itself can form Rayleigh wave. At the same time, incident SV wave can transform to reflected P and SV waves. When the angle of incidence of SV wave (again) reaches second critical angle - both outgoing P and SV waves propagate along the surface forming Rayleigh wave.
+
+Can then Rayleigh wave be formed by interference of both incident P and SV waves on the free surface or Rayleigh waves are formed only separately by incident P or SV waves? Does it mean that right under the epicenter Rayleigh waves cannot form but at some distance from it in order to reach second critical angles?
+
+Thank you', '2016-11-23 09:24:12', 3, NULL, false, 28);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(51, 'linguistics', 'Diacritics and non-English letters in anglicized loan words: keep ''em, dump ''em, italicize the words, or what?', 
+'Take an expression like déjà vu. This is a French term which is frequently seen in English. In fact, it is included in English dictionaries. But it is often seen in English in a variety of forms:
+
+déjà vu
+
+déjà vu
+
+deja vu
+
+Now, one would probably not consider using frisson or soupçon, both proper unanglicized French words [uh-oh, see edit], without italics to indicate that they were foreign words. But once anglicized, do the words require non-English diacritical marks? Or, if such are used, does that push the word back into foreign status, so that italics are again required?
+
+There''s probably a continuum in operation here, during which a word goes from foreign with foreign markings to English with only English markings (or lack thereof). What I want to know is how one can tell where to draw the line. Does anybody have any useful information about this? Guidelines? Or is it on a case-by-case basis?
+
+Honestly, I feel affected writing à la carte when every damn diner you walk into has an "a la carte" (or "ala carte" or "a la cart") category on the menu.
+
+Edit: For example, see the Free Online Dictionary''s schizophrenic listing for soupçon:
+
+Soup`con´ n. 1. A suspicion; a suggestion; hence, a very small portion; a taste; as, coffee with a soupçon of brandy; a soupçon of coquetry.
+
+and then in the Thesaurus part:
+
+soupcon - a slight but appreciable amount; "this dish could use a touch of garlic"
+
+So if dictionary entries can''t even remain consistent within the same definition, what chance does a mere mortal have?', '2017-04-15 23:05:26', 8, NULL, false, 22);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(52, 'history', 'Apart from the Inuit, and candlefish on the northwest coast, did pre-Columbian America have lamps or candles?', 
+'Lamps have been around in the Old World since the Palaeolithic (one was found in the Lascaux cave). Candles are thought to have originated in the Bronze Age, but were certainly used by ancient Greeks, Romans, and Chinese within the 1st millennium BC. Were they used in the Americas before the arrival of Columbus?
+Lamps were certainly used in the arctic, where they were known as Kudlik.  The arctic peoples were of course late arrivals to America.
+
+Candles of a sort were used by the northwest coast peoples. A local fish called the Eulachon, but known more colloquially as the candlefish, contains a lot of oil. The locals simply inserted a wick into a dried fish, and lit it. 
+There are some videos of people lighting fish on YouTube and the like.
+
+Apart from these two examples, I have not found any references to candles or lamps in early America. It is always harder to show an absence of course. Is anyone out there aware of examples? Otherwise I guess people just huddled around their fires at night...', '2016-02-10 20:48:15', 11, NULL, false, 14);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(53, 'physics', 'How do I know that I am observing a quasar?', 
+'When I find a faint object on the sky that looks like a star or a far away galaxy how do I know that it really is a quasar?
+
+I guess that I could first compare the apparent magnitude (how bright it appears) and the redshift of spectral lines in light from the object.
+
+Then if I interpret the redshift as Hubble redshift and that interpretation tells me that if the object in question shines brighter than some threshold value it must be a quasar?
+
+Is there such a treshold value or how do astronomers know from observations what objects are quasars or not quasars?', '2018-04-22 15:24:36', 0, NULL, false, 25);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(54, 'psychology', 'How does this experiment prove a causal relation between coherence and good feelings?', 
+'I''m reading Thinking, Fast and Slow by Daniel Kahneman and I came across the following text:
+
+"The Remote Association Test has more to tell us about the link between cognitive ease and positive effect. Briefly consider the two triads of words:
+
+sleep mail switch 
+salt deep foam
+
+You could not know it of course, but measurements of electrical activity in the muscles of your face would probably have shown a slight smile when you read the second triad, which is coherent (sea is the solution). 
+This smiling reaction to coherence appears in subjects who are told nothing about common associates; they are merely shown a vertically arranged triad of words and instructed to press the space bar after they have read it. 
+The impression of cognitive ease that comes with the presentation of a coherent triad appears to be mildly pleasurable in itself. 
+The evidence that we have about good feelings, cognitive ease, and the intuition of coherence is, as scientists say, correlational but not necessarily causal. 
+Cognitive ease and smiling occur together, but do the good feelings actually lead to intuitions of coherence? Yes, they do. 
+The proof comes from a clever experimental approach that has become increasingly popular. 
+Some participants were given a cover story that provided an alternative interpretation for their good feeling: they were told about music played in their earphones that "previous research showed that this music influences the emotional reaction of its individuals". 
+This story completely eliminates the intuition of coherence. 
+The finding shows that the brief emotional response that follows the presentation of a triad of words (pleasant if the triad is coherent, unpleasant otherwise) is actually the basis of judgments of coherence. 
+There is nothing here that system 1 cannot do. Emotional changes are now expected, and because they are unsurprising they are not linked causally to the words."
+
+(Kahneman refers to the automatic and intuitive way of thinking as system 1)
+
+My Question: Why does the adding of the cover story in this experiment show that good feelings lead to intuitions of coherence (that there is a causal relation)? I find this conclusion rather strange. 
+I''m probably mistaken but it seems to me that Kahneman is saying: the fact that there was no intuition of coherence when these participants were expecting to respond emotionally to music, shows that there is a causal relation between the good feelings and the intuition of coherence. 
+Why would this make sense?', '2018-01-30 15:08:23', 6, NULL, false, 31);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(55, 'geology', 'Why doesn''t Earth absorb our carbon emissions?', 
+'If we look at the carbon cycle, we see that man-made carbon emission only account for a tiny fraction of all CO2 emissions.
+
+However, we see a steady rise in atmospheric CO2-levels.
+
+Wouldn''t it be logical to assume that earth would somehow adapt to this increase, e.g. through increased plant growth and why isn''t this happening?', '2017-03-29 07:28:22', 12, NULL, false, 25);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(56, 'art', 'How do I clean dried brushes?', 
+'I have a bunch of brushes with dried paint and glue. I''ve tried to clean them up but they''re still hard. What medium is best to restore my brushes?', '2017-01-17 05:52:05', 0, NULL, false, 24);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(57, 'medicine', 'What’s the active principle of a NSAID?', NULL, '2017-05-12 09:14:13', 21, NULL, false, 17);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(58, 'biology', 'What is the difference between polar and charged amino acids?', 
+'Chemically polar amino acids have an uneven (AKA polar) distribution of electrons over their surface.
+
+Charged amino acids have a charged ion in their structure. This is probably where my knowledge is a little shaky!
+
+I guess I am confused at this point. Does this just mean that charged amino acids are really polar amino acids? If that is correct that would explain why I have seen histidine categorised as a charged amino acid, but has no clear ions.', '2016-11-26 07:22:57', 15, NULL, false, 3);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(59, 'technology', 'Recursive HTTP calls - piping parsed data', 
+'I''d like to make recursive HTTP calls. I understand that I can make the initial call and then use pipe and expand to repeat the HTTP call. But how do I pipe the parsed response? Following is pseudo-code demonstrating the question.
+
+fetchPage().pipe(
+expand((response) => {
+  const parsed = parse(response);
+  if (parsed.last == true) {
+    return EMPTY
+  } else {
+    return fetchPage(parsed.nextPage);
+  }
+}),
+// I believe response not parsed will be piped here; how can I pipe parsed instead?
+concatMap(response) => response));', '2016-05-22 12:21:33', 16, NULL, false, 7);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(60, 'chemistry', 'Is oxalic acid dihydrate considered a primary acid standard in analytical chemistry?', 
+'Using oxalic acid dihydrate as a primary standard just seems really odd to me. I''d expect a primary standard to be oven dried. I just seems weird that a hydrate would be used.
+
+Granted I saw numerous references to using oxalic acid dihydrate on the web to standardize NaOH. I assume that for high school and freshman labs that it is "good enough." Using student grade burettes and open air pan balances would greatly limit the possible precision.
+
+Also I''d guess that "good enough purity" oxalic acid dihydrate can be purchased much more cheaply than potassium hydrogen phthalate (KHP) which would be my choice.
+
+The analytical method as I remember from nearly 50 years ago...
+
+Prepare a concentrated stock solution (4 molar?) of NaOH using distilled water. That went in a jug with a spout just above the bottom. It was capped with a dedicator tube filled with NaOH to absorb CO2 from the atmosphere. It sat for a couple of days to allow sodium carbonate to settle out. (NaOH will have some carbonate.)
+
+Dried KHP on oven at 120 C for four hours and then put that in a desiccator to cool.
+
+Boiled distilled water to remove dissolved CO2 and stoppered that to cool.
+
+Using the cooled boiled distilled water made an approximately 0.1 molar solution of NaOH by diluting the concentrated stock solution.
+
+Using an analytical weighed out 3 samples of KHP to nearest 0.0001 g into flasks and carefully dissolved them in the cooled boiled distilled water with swirling to minimize introducing bubbles into the solution.
+
+Then using NaOH as the titrant, phenolphthalein was used as the indicator. Again careful to swirl solution, not shake, to prevent bubbles.
+
+Using class 1 50 ml burette which was marked to 0.1 mls but read to 0.01 ml.', '2018-03-17 13:19:11', 0, NULL, false, 34);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(61, 'business', 'What would you call a real market that is close to perfect competition?', 
+'I want to explain perfect competition to students using a few practical examples without going into much of the theory. But I want it to be theoretically accurate and I don''t want to claim that those are examples of ''perfect competition''. I am thinking about calling it ''near perfect competition'', but I wonder if there is a conventional term for a market that is close to perfect competition. This wikipedia article mentions ''close-to-perfect competition'' but I''m not sure if that''s a conventional term.', '2017-11-06 16:18:36', 5, NULL, false, 23);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(62, 'history', 'In early WW2, how much of the merchant marine was American?', 
+'WW2, before the US entered, ran from 1939 Sep 01 to 1941 Dec 07. During this time, a lot of merchant vessels sailed in convoy to Britain.
+
+I am wondering, of all the people who crewed those vessels, how many were American, versus how many were Canadian or British.
+
+Note, I''m not asking for a death toll. I''m asking for a composition of them all.', '2017-05-06 02:09:37', 4, NULL, false, 35);
 
 INSERT INTO "voteQuestion"(username, id_question) VALUES();
 
