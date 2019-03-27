@@ -179,7 +179,7 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(28, 'physics', 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', '2018-01-30 15:08:23', 5, NULL, false, 16);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(29, 'health', 'What is the possible diagnosis for symptoms including fever, leucopenia and abdominal pain', NULL, '2017-02-24 08:03:14', 2, NULL, false, 21);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(29, 'health', 'What is the possible diagnosis for symptoms including fever, leucocitosys and abdominal pain', NULL, '2017-02-24 08:03:14', 2, NULL, false, 21);
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(30, 'linguistics', 'How many liberties can one take with syntax and grammar rules when writing poetry?', NULL, '2017-03-10 22:05:47', 12, NULL, false, 15);
 
