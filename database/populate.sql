@@ -271,7 +271,7 @@ How important are the jumps?
 
 When handwriting Kanji, does it matter if these jumps are of the correct length? Would the Kanji still be understandable without correct jumps? Would natives find it annoying, for example, if I didn''t include the jumps at all?
 
-I am asking because the less little things I have to memorize, the faster I can learn the Kanji.', '2017-04-14 13:09:17', 5, NULL, false, 12);
+I am asking because the less little things I have to memorize, the faster I can learn the Kanji.', '2017-04-14 13:09:17', 5, '9r7wF.png', false, 12);
 
 
 INSERT INTO "voteQuestion"(username, id_question) VALUES();
