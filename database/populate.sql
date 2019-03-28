@@ -15,9 +15,25 @@ INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdat
 INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (15, "FieryBoy", "zxc&+12", "fieryboy123@piripiri.com", "Mathssssssss", "2002-02-17", "photo98.png", 320, false, false, ""   );
 INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (16, "FateTalk", "AbAb45", "sadfate98@gmail.com", "anti-social behaviour is a trait of intelligence in a world full of conformists", "1984-09-17", "photo1.png", 500, false, false, ""  );
 INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (17, "LittleRoses","jsoud0987", "blueroses@gmail.com", null, "2005-06-28", "photooo.png", 40, false, false, ""  );
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (18, "RainbowRecipe","kvsy986", "diamondspot@oreo.org", null, "1974-02-17", null, 300, false, false, "" );
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (19, "YoungerDivision","agsd12%p", "divisionbell@yahoo.com", "music is life", "1981-02-10", "photo1.png", 120, false, false, "");
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (18, "RainbowRecipe","kvsy986", "diamondspot@oreo.org", "music is life", "1974-02-17", null, 300, false, false, "" );
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (19, "YoungerDivision","agsd12%p", "divisionbell@yahoo.com", null, "1981-02-10", "photo1.png", 120, false, false, "");
 INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (20,"HappyCat","alduyf123", "catskittens@pic.com", "looking for inspiration", "2001-12-05", "photo5.png", 200, false, false, "" );
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (21,"Light", "tahcgvd13", "infectedsea166@gmail.com", "photography lover", "1980-05-17", "photo1.png", 120, false, false, "" );
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (22, "Sofia_15", "hsfid28", "avocadoroxy@Hi.com","just learning things..", "1993-02-07", "user12.png", 530, false, false, "");
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (23, "Zodiacrocket","auyd45", "peppernsalt@yahoo.com", "quantum physicist", "1997-03-20", "user3.png", 100, false, false, "");
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (24, "SerratedCounty", "aihcf5163", "creaturesss12@sapo.com", "admirer of nature", "2000-08-30", "user4.png", 210, false, false, "" );
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (25, "alpinebonfire", "hskhu78", "activist178@gmail.com", "getting smarter", "1998-02-17", "photo1.png", 300, false, false, "");
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (26, "Hexapod","pli123", "flyingbird@io.org", null, "1975-02-17",null, 330, false, false, "");
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (27, "EdgeofSoul", "poiuy1234","moonlight@mimi.com", "engineering master", "1965-02-17", null, 30, false, false, "" );
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (28, "Nero", "mnbv67", "chessLover@beans.com", "simplicity is prerequisite for reliability", "2000-02-17", , "photo12.png", 209, false, false, "");
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (29, "ParisCat",".1.2.3.a.b.c", "lumi123@gamil.com", null, "1957-02-17", , "photo49.png", 205, false, false, "" );
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (30, "Infinitesimal","osjd123", "pizzaAndChips@yahoo.com", "coffee and pizza! ", "1993-02-17", "olght.png", 520, false, false, "");
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (31, "Psychmaster","ju1we2-06", "sleepingsheep@hotmail.com", "always tired..", "1999-02-17", null, 400, false, false, "");
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (32, "Yuan", "#jsdy", "sparkytube@sapo.com", null, "1996-02-17", "pho.png", 100, true, false, ""   );
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (33, "Glitcher", "6h7sdBB", "doccooper@un02.com", null, "1888-02-17","photott.png", 600, false, true, ""   );
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (34, "Ned21", "poife17_", "vikingargh@hotmail.com", "we are made by history", "2017-02-17", "photo45.png", 50, false, false, "");
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (35, "Modernzoic", "poife17_", "vikingargh@hotmail.com", "we are made by history", "2017-02-17", "photo45.png", 50, false, false, "");
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (36, "Graphite", "poife17_", "vikingargh@hotmail.com", "quantum physicist", "2017-02-17", "photo45.png", 50, false, false, "");
 
 
 INSERT INTO "follow"(follower, following) VALUES();
@@ -473,6 +489,36 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 I am wondering, of all the people who crewed those vessels, how many were American, versus how many were Canadian or British.
 
 Note, I''m not asking for a death toll. I''m asking for a composition of them all.', '2017-05-06 02:09:37', 4, NULL, false, 35);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(63, 'biology', 'Is there a relationship between HDL-C and LDL-C?', 
+'Whenever I read about how to deal with cholesterol level, the rule is to keep a low LDL fraction, ad a high HDL one.
+
+How to achieve this usually falls into the categories of a healthy body (sport), a healthy diet and possibly medicamentation.
+
+Since generally the advice is more or less the same for both goals (lowering one fraction and increasing the other one), I was wondering if there is a strong relationship between these fractions. In other words - is moving one in the right directions automatically drags the other one (also in the right direction)?
+
+Anecdotally (and this is what triggered my question), I saw my LDL crash almost by 250% (not by chance but through a good diet, etc. - over a few months) and, surprisingly, the HDL go down by 30% as well.', '2017-03-17 12:59:47', 11, NULL, false, 3);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(64, 'business', 'Can corporate tax loss carryforward function like a sort of insurance policy?', 
+'I''m a graduate student in mathematics, with a casual knowledge of economics, so please let me know if this question is a non-sequitur or off base.
+
+Here''s the intuition I''m trying to capture: Suppose corporation A has a good year and makes a lot of profit, and corporation B, their competitor, has a bad year wherein they have a net loss. It seems that the following year, corporation B has a relative competitive advantage, in that they have a lower tax burden.
+
+In a system with no corporate tax—and thus no tax loss carryforward—it seems that corporation B wouldn''t have this advantage which might give them some time to recover. In a system with a very high corporate tax, this benefit would be even greater.
+
+Value judgments about the utility of a high corporate tax aside, is there anything to the idea that corporate taxes can serve as a sort of "insurance policy" wherein companies with a bad year are more likely to survive?', '2016-09-11 14:35:15', 3, NULL, false, 23);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(65, 'physics', 'Refraction of light with destructive interference', 
+'The wavelength of light determines its refraction in a prism.
+
+But, what if two beams of light destructively interfere as they pass through a small prism, so there is no apparent wave or wavelength at that point in space?
+
+For example, suppose you have two otherwise identical infrared laser beams traveling in almost the same direction intersecting at a prism with one beam 180 degrees out of phase producing total destructive interference at that small area in space. The beams intersect at the prism at a slight angle like an elongated x.
+
+The index of refraction is wavelength dependent but if the waves are totally cancelled in the prism, would the beams exit the prism at same angle as if the beams constructively interfered?
+
+I assume there are no “waves” and thus no detectable wavelength per se while beams are in the glass if there is total destructive interference at that point in space.', '2017-02-07 21:34:44', 9, 'jbTdW.jpg', false, 28);
+
 
 INSERT INTO "voteQuestion"(username, id_question) VALUES();
 
@@ -936,7 +982,10 @@ We know what a triangle is. But in the real world, it is impossible to draw a pe
 Similarly, we have just learnt what perfect competition is. But in the real world, there do not exist examples of perfect competition. Nonetheless, here are some examples of real-world markets that come "close to" perfect competition ...
 
 We stress that these markets are not actual examples of perfect competition. (To repeat, such examples do not exist.) Instead, these are merely examples that come "close to" perfect competition.', '2017-11-07 07:56:02', 7, NULL, false, 61, 6);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(96, 'Prior to the beginning of World War II there about 55,000 civilian sailors employed in the U.S. merchant marine. This number increased to as many as 250,000 men who served in the U.S. merchant marine by the end of the war. A pre-war merchant fleet of 1,340 cargo ships and tankers expanded to at least 4,221 U.S. merchant ships by the end of World War II.', '2017-05-06 13:22:55', 1, NULL, false, 12, 14);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(96, 'Prior to the beginning of World War II there about 55,000 civilian sailors employed in the U.S. merchant marine. This number increased to as many as 250,000 men who served in the U.S. merchant marine by the end of the war. A pre-war merchant fleet of 1,340 cargo ships and tankers expanded to at least 4,221 U.S. merchant ships by the end of World War II.', '2017-05-06 13:22:55', 1, NULL, false, 62, 14);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(97, 'Thinking about water waves; interference is only a temporary thing. If 2 waves travel cross a pond from opposite sides, but let''s say they are opposite in phase, in the middle of the pond when they meet they cancel, BUT this is only temporary. After they pass each other, they are visible again and continue along to the opposites shores!. 
+Waves cancelling or "interference" is one of the most poorly explained phenomenons in physics, because they really don''t literally cancel, they just temporarily interact with each other. The same could be said for light waves, 2 photons never cancel, that''s a violation of energy conservation. In fact the only way to ever observe photons it to have them interact with matter (i.e. an electron in an atom/molecule). 
+2 photons arriving at an atom that are out of phase are very difficult for the atom to observe and 2 photons in phase increase the probability of observation greatly, it''s all Quantum Mechanics or probability.', '2017-02-07 23:36:48', 0, NULL, false, 65, 14);
 
 
 
