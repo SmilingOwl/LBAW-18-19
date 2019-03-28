@@ -55,7 +55,9 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(6, 'physics', 'Based on the second law of thermodynamics why must a machine always be less than 100% efficient?', 'A.Heat never moves from cold to hot. 
 B.Heat is never converted completely into mechanical energy. 
 C.Heat never flows from hot to cold. 
-D.Entropy never increases.','2018-01-30 15:08:23' , 2, null, false, 16);
+D.Entropy never increases.
+
+What''s the right answer?','2018-01-30 15:08:23' , 2, null, false, 16);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(7, 'physics', 'What is the electrostatic potential energy of an electron that is .02 meters from a Van de Graaff machine that has a negative charge of -4.0 Couloumbs?', null,'2017-09-19 19:46:44' , 0, null, false, 8);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(8, 'chemistry', 'How many grams of silver chloride are produced when 45 g of calcium chloride react with excess silver nitrate?​', null ,'2017-06-01 08:44:35', 7, null, false, 28);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(9, 'linguistics', 'Why do the five basic questions in the English language (what, why, when, who and where) all start with the letter “w”?', null, '2017-12-19 05:52:53', 15, null, false, 31);
@@ -258,7 +260,7 @@ What I am familiar with is executing the above two steps and then rebooting your
 
 How can I change hostname on a host and get that change to take effect without rebooting the host?', '2016-04-15 16:25:08', 12, NULL, false, 7);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(41, 'psychology', 'Voltage of sounds of mp3 files', 'As a computer programmer, I have noticed an interesting phenomenon: If I am stuck on a particular problem in my work, often if I stop thinking about the problem and do something else, the answer will suddenly come to me.
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(41, 'technology', 'Voltage of sounds of mp3 files', 'As a computer programmer, I have noticed an interesting phenomenon: If I am stuck on a particular problem in my work, often if I stop thinking about the problem and do something else, the answer will suddenly come to me.
 
 Is there a name for this phenomenon? How does this work? Has any research been done on this? How is it that taking a break from a problem sometimes allows you to figure out the answer?', '2016-04-03 09:28:17', 28, NULL, false, 26);
 
@@ -293,7 +295,7 @@ The simple way is just to create many backgrounds with different locations of th
 How would you do that on a mac ? Do I need After Effects ? or other software to make it quickly?', '2016-03-22 08:31:24', 2, NULL, false, 27);
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(45, 'math', 'What is the use of introduction of term univalent function?', 
-'What is the use of defining a new term univalent function although there already existed a definition of bijective, one-to-one functions?', '2018-05-16 15:26:19', 0, NULL, false, 30);
+'What is the use of defining a new term univalent function although there already existed a definition of bijective, one-to-one functions?', '2017-01-14 07:16:54', 0, NULL, false, 30);
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(46, 'technology', 'Difference between i++ and (i)++ in C', 
 'int i = 3;
@@ -314,7 +316,7 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 Imagine a galvanic cell, without the wiring between the two electrodes and instead we only have the salt bridge. Won''t the electrons (although it is very unfavorable to happen) travel through the salt bridge and the solutions? In other terms will the transformation of the electrodes occur?', '2016-04-02 18:57:46', 28, NULL, false, 3);
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(48, 'linguistics', 'What is the significance of the traveler carrying writing materials in Ivanhoe?', 
-'The Jew''s dress, which appeared to have suffered considerably from the storm, was a plain russet cloak of many folds, covering a dark purple tunic. He had large boots lined with fur, and a belt around his waist, which sustained a small knife, together with a case for writing materials, but no weapon. He wore a high square yellow cap of a peculiar fashion, assigned to his nation to distinguish them from Christians, and which he doffed with great humility at the door of the hall.
+'"The Jew''s dress, which appeared to have suffered considerably from the storm, was a plain russet cloak of many folds, covering a dark purple tunic. He had large boots lined with fur, and a belt around his waist, which sustained a small knife, together with a case for writing materials, but no weapon. He wore a high square yellow cap of a peculiar fashion, assigned to his nation to distinguish them from Christians, and which he doffed with great humility at the door of the hall."
 
 Strange but true: this snippet, apparently about a scribe''s tools, has been haunting me rather obsessively lately. I didn''t recall that the bearer was the Jew. I suppose a lender/usurer would want to keep records of his debtors.
 
@@ -478,6 +480,36 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 I am wondering, of all the people who crewed those vessels, how many were American, versus how many were Canadian or British.
 
 Note, I''m not asking for a death toll. I''m asking for a composition of them all.', '2017-05-06 02:09:37', 4, NULL, false, 35);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(63, 'biology', 'Is there a relationship between HDL-C and LDL-C?', 
+'Whenever I read about how to deal with cholesterol level, the rule is to keep a low LDL fraction, ad a high HDL one.
+
+How to achieve this usually falls into the categories of a healthy body (sport), a healthy diet and possibly medicamentation.
+
+Since generally the advice is more or less the same for both goals (lowering one fraction and increasing the other one), I was wondering if there is a strong relationship between these fractions. In other words - is moving one in the right directions automatically drags the other one (also in the right direction)?
+
+Anecdotally (and this is what triggered my question), I saw my LDL crash almost by 250% (not by chance but through a good diet, etc. - over a few months) and, surprisingly, the HDL go down by 30% as well.', '2017-03-17 12:59:47', 11, NULL, false, 3);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(64, 'business', 'Can corporate tax loss carryforward function like a sort of insurance policy?', 
+'I''m a graduate student in mathematics, with a casual knowledge of economics, so please let me know if this question is a non-sequitur or off base.
+
+Here''s the intuition I''m trying to capture: Suppose corporation A has a good year and makes a lot of profit, and corporation B, their competitor, has a bad year wherein they have a net loss. It seems that the following year, corporation B has a relative competitive advantage, in that they have a lower tax burden.
+
+In a system with no corporate tax—and thus no tax loss carryforward—it seems that corporation B wouldn''t have this advantage which might give them some time to recover. In a system with a very high corporate tax, this benefit would be even greater.
+
+Value judgments about the utility of a high corporate tax aside, is there anything to the idea that corporate taxes can serve as a sort of "insurance policy" wherein companies with a bad year are more likely to survive?', '2016-09-11 14:35:15', 3, NULL, false, 23);
+
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(65, 'physics', 'Refraction of light with destructive interference', 
+'The wavelength of light determines its refraction in a prism.
+
+But, what if two beams of light destructively interfere as they pass through a small prism, so there is no apparent wave or wavelength at that point in space?
+
+For example, suppose you have two otherwise identical infrared laser beams traveling in almost the same direction intersecting at a prism with one beam 180 degrees out of phase producing total destructive interference at that small area in space. The beams intersect at the prism at a slight angle like an elongated x.
+
+The index of refraction is wavelength dependent but if the waves are totally cancelled in the prism, would the beams exit the prism at same angle as if the beams constructively interfered?
+
+I assume there are no “waves” and thus no detectable wavelength per se while beams are in the glass if there is total destructive interference at that point in space.', '2017-02-07 21:34:44', 9, 'jbTdW.jpg', false, 28);
+
 
 INSERT INTO "voteQuestion"(username, id_question) VALUES();
 
@@ -756,6 +788,196 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 The author of the in-vitro study concluded that there''s possibility as strategic option for intestinal sterilization but clinical study with patients must be confirmed.
 
 Again, this is a in-vitro study but not human clinical study.', '2016-05-22 12:21:33', 3, NULL, false, 37, 21);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(69, 'The answer to your first question is, in a sense, yes, the photon avoids the angles that would produce destructive interference. But probably not in the way you are thinking.
+
+Photons are not little balls of something. They are not particles as we understand the word in our classical macroscopic world. The word "particle" has a different meaning in the quantum microscopic world. A particle is an excitation of a field, in this case, the EM field. When the field gives up a quantum of excitation during an interaction with another object, it does so 1.) at a point 2.) gives up its energy to the other object and 2.) gives up its momentum. That''s just what happens in a classical collision. But unlike the classical collision, the "particle" vanishes. Clearly the classical particle picture has a problem.
+
+In the quantum mechanical picture, we start with the EM field. The field fills all of the space between the source and the screen (even if there is no source, the zero-point field exists), and it exists in whatever slits are available. If there are two slits there are nodes (points of zero field) on the screen due to what you might call interference, but you might also call it diffraction, the way the field arranges itself around objects. The field, and thus the excitation (photon) fills all of space, but the field, and thus the excitation, has zero amplitude at a node. No interaction will occur at the points on the screen where a node exists. As if those locations are avoided, even though there is only one photon. (By the way, this picture explains the statement "A photon interferes only with itself.")
+
+I don''t know quite how to interpret your second question. I''ll say this: In the quantum mechanical picture, the field exists in both slits, so the excitation exists in both slits. If you call the excitation a photon, then the photon goes through both slits. But this is a dangerous statement because it mixes up classical, quantum, and everyday meanings of words.
+
+By the way, this is not the only way to "explain" these things. There are other mental pictures that are consistent with the theoretical physics. There''s no one correct picture. I think (my opinion) that this fact speaks to our brain''s limitations, its inability to understand the "true" nature of what''s going on. Our limited brains create metaphors based on things that we can understand or visualize. But this is just my personal point of view.', '2016-05-06 09:27:01', 16, NULL, false, 38, 16);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(70, 'This is enlightening. My second question simply if there are two counters at the source and screen c1 and c2 is c1= c2 at the end of a single photon at a time experiment (assuming all emitted photons will make it through the slits regardless of which slit or both at the same time)', '2016-05-08 02:23:55', 8, NULL, false, 38, 8);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(71, 'This version of the question really requires a long answer. The presence of two detectors complicates the picture. If the detector near the source "detects a photon" (records an interaction), that excitation (photon) is gone. If the detector near the screen records an interaction, it will be a different excitation of the same field. Is this a different photon? Uhhh... the language is getting in the way. A time-resolved experiment will not detect that second photon a time d/c later. But there will be a tendency for detections to occur near each other. We''re off the rails now! ', '2016-05-06 17:28:33', 2, NULL, false, 12, 16);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(72, 'I''d call it a montage:
+
+"Montage is a technique in film editing in which a series of short shots are edited into a sequence to condense space, time, and information."
+
+It shows several conversations that took place over a long time, but compresses them into a shorter sequence for viewers.
+
+To me it bares a similarity to the traditional montage sequence where a character is training or learning a skill. Here, the one character is learning what "coursing" is. It took several conversations to make the point, but we only see the relevant parts.', '2017-05-10 18:15:42', 5, NULL, false, 39, 24);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(73, 'You can change the kernel''s idea of the hostname on a systemd-based system using the hostnamectl tool. For example:
+
+hostnamectl set-hostname whatever
+You can view the system''s current idea of the hostname with:
+
+hostnamectl             # equivalent to hostnamectl status
+Keep in mind that this does not change a running process''s idea of the hostname. Such a process would have to check the hostname again in order to be updated, and almost no process does. Thus such a process would need to be restarted. In order for every process to begin using the new hostname, they must be restarted. It''s generally easier to just reboot the system than to restart every service individually.', '2016-04-16 10:18:32', 26, NULL, false, 40, 1);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(74, 'Amplification
+
+It does not depend on the music file, but at the amplifier sending the music to a speaker, or to a headphone/earplug connector.
+
+Music file
+
+A music file only contains ''values'', and mostly in a compressed form. After uncompressing, you get values which has a certain amount on bits per value (typically 16 or more).
+
+Conversion
+
+A microcontroller can send these values to a speaker via an pre- and/or amplifier, which converts it into actual voltages. So it depends on the amount of amplification.
+
+Protection
+
+Also note that sending continuous ''max values'' do not result in a loud sound, actually it would breaks the speaker (to prevent this, in the amplifier a so-called DC speaker protection is present). A wave is needed to let the speaker move outwards and inwards very fast, and this is done by sending changing values to the speaker.
+
+Measure
+
+If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2016-04-09 18:18:46', 17, NULL, false, 41, 13);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(75, 'Your orbit is uniquely determined by a current position (three coordinates) and velocity (three more quantities to give magnitude and direction). Going places involves changing your orbit. For instance, from a circular orbit about Earth, enter an elliptical transfer orbit to the moon, then circularize your orbit about the moon. Everything you do in space travel involves changing from one orbit to another orbit, and that is done by changing your velocity.
+
+Heavy spaceships have to change their momentum more than light spaceships, but they both have to change their velocities by the same amount. It can be done with a long, slow acceleration, or a short, fast acceleration. Whatever ship you have, and however you do it, the delta-V is the end result that you must achieve.
+
+Your new orbit definitely does depend on your vector delta-V, but pointing your spaceship is basically a freebie. And you don''t get any of your fuel back if you accelerate first in one direction and then in the opposite direction. So, as a characteristic of your spacecraft, it really kind of is a scalar quantity, even if direction does matter when you use it.', '2017-04-30 12:15:47', 6, NULL, false, 42, 16);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(76, 'Notice how in some fonts, the letter "A" has little things that stick out, too.
+
+But you wouldn''t write those little tails in handwriting, would you?
+
+Same thing with this kanji. I don''t think I''ve met anyone who writes them with the "jumps".', '2017-04-14 13:45:29', 17, NULL, 'JBcRK.png', 43, 22);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(77, 'These "jumps" that you brought up are not part of the kanji, they are part of the typeface.
+
+(More specifically, they may be treated like serifs - or little decorations at the edge of certain lines)
+
+When you are learning kanji, you should definitely not be copying or referencing printed characters. You should learn from hand-written characters. The basics of how to write kanji are not taught or learned from printed or typeface forms.
+
+The best online reference I know of for hand-written Japanese characters is the kakijun website', '2017-04-14 18:18:42', 19, NULL, false, 43, 5);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(78, 'If you want animated backgrounds which is vector form there are many aspects to do this but according to your after effect point, there are many uses of it.
+
+If you thinking about after effects then its already good cuz of some core feature of After Effects like Motion Blur and Easy Ease will let you make animations flawless and natural. You can watch some examples here.
+
+The good thing is that you don''t need to be a pro to create some natural motion graphics. So as per my suggestion I would recommend you to go with After Effects for now!', '2016-03-22 17:09:21', 0, NULL, false, 44, 2);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(79, 'Well let''s at least look at the definition. The definition has 3 parts (in bold) to it, so it is more convenient to create a definition instead of writing it out every time:
+
+A univalent function is a holomorphic function on an open subset of C that is injective (one-to-one)
+
+So they are functions who, on some open subset U of the complex plane, satisfy these strong conditions:
+
+1) Holomorphic (Differentiable in a neighborhood around every point in U)
+
+2) Injective (One-to-one)', '2017-01-14 13:22:48', 1, NULL, false, 45, 4);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(80, 'i++ and (i)++ behave identically. C 2018 6.5.1 5 says:
+
+A parenthesized expression is a primary expression. Its type and value are identical to those of the unparenthesized expression. It is an lvalue, a function designator, or a void expression if the unparenthesized expression is, respectively, an lvalue, a function designator, or a void expression.
+
+The wording is the same in C 1999.', '2018-07-09 22:19:24', 90, NULL, false, 46, 7);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(81, 'Not in water. Free electron in water is really unfavorable, so no significant concentration of them can be generated chemically, and it almost immediately reduces water itself to hydrogen (but I heard rumors about generation of solvated electrons in water in very special experiment with short half-life)
+
+In liquid NH3, however, solvated electrons can occur, so self-discharge of galvanic cells with NH3-based electrolyte may occur through travel of electrons via electrolyte.', '2016-04-03 07:09:13', 12, NULL, false, 47, 9);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(82, 'Electrons cannot survive in aqueous state. Being a charged subatomic particle, the electron has to stay close to protons which are located at the center of the atom. Hence, the electron can move from one atom to another which are closely-packed, what we have in a solid.', '2016-04-04 05:46:21', 3, NULL, false, 47, 34);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(83, 'It was rare for laity to be able to read and write; everyone carried a knife but generally only nobility and soldiers carried weapons; Scott mentions the writing materials in chapter V because they will be used in chapter VI; the writing materials included parchment, quills and ink.', '2018-06-08 18:15:04', 6, NULL, false, 48, 22);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(84, 'I found this on the BBC:
+"A tiny Japanese puffer fish creates a grand sand sculpture on the featureless seabed by using his fins to dig furrows. He uses this to attract the attention of passing females."
+
+The following papers analyse said structures and the ethology in more depth:
+
+"We report that male pufferfishes (Torquigener sp., Tetraodontidae) constructed large geometric circular structures on the seabed that played an important role in female mate choice. Males dug valleys at various angles in a radial direction, constructing nests surrounded by radially aligned peaks and valleys. Furthermore, they created irregular patterns in the nest comprising fine sand particles. 
+The circular structure not only influences female mate choice but also functions to gather fine sand particles in nests, which are important in female mate choice. Strangely enough, the males never reuse the nest, always constructing a new circular structure at the huge cost of construction. This is because the valleys may not contain sufficient fine sand particles for multiple reproductive cycles."
+
+Role of Huge Geometric Circular Structures in the Reproduction of a Marine Pufferfish (2013)
+
+"Here, we examined the process of the outer ring construction, and extracted the ‘rules’ followed by the pufferfish. During construction, the pufferfish repeatedly excavates ditches from the outside in. 
+Generally, excavation starts at lower positions, and occurs in straight lines... A simulation program based on these data successfully reproduced the circle pattern, suggesting that the complex circle structure can be created by the repetition of simple actions by the pufferfish."
+
+Simple rules for construction of a geometric nest structure by pufferfish (2018)', '2016-08-19 18:49:56', 6, NULL, false, 49, 11);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(85, 'I think this is a case where authors can decide for themselves where to draw the line. Or, if the writing is for a certain publication, the editors will have a policy for whether a given word should or should not [have diacritics].
+
+Various publications will have strict rules about what diacritics are used and when. For example, The New Yorker always uses diaeresis. Each publication seems to have its own rules for bolding, headers, section numbering, hyphenation, capitalization, reference citation, and so on. And there is no definitive format.
+
+I believe that diacritics fall into this category, as evidenced by their generally inconsistent use (though internally consistent within many publications).', '2017-04-16 08:15:42', 6, NULL, false, 51, 5);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(86, 'As you say in your question, "It is always harder to show an absence" but there really does not appear to be evidence for lamps or candles in pre-Columbian America, aside from the Arctic & Subarctic regions (see this AD 500–1100 Kachemak lamp from Cook Inlet, Alaska).
+
+There is, though, one piece of evidence which partly supports the absence of candles and lamps. The Spanish chronicler Antonio de Herrera y Tordesillas (1549 - 1626)
+
+"tells of a wise Indian who, when asked to name the most important things he and his fellows had received from the Castilians, put chicken eggs at the top of his list, because they were plentiful, “fresh every day, and good cooked or not cooked for young and Old.” (The other items on his list were horses, candles, and lamps.)"
+
+Cited by A. W. Crosby in ''The Columbian Exchange'' (30th anniversary edition, 2003)
+
+Unfortunately, it''s not clear which culture he''s talking about. Other ''evidence'' mostly relates to its absence. For example, Jacques Soustelle in Daily Life of the Aztecs (1961), says:
+
+"resinous torches of pine-wood (ocotl) were used indoors, and outside links and huge braziers piled with resinous wood served for public lighting when circumstances -- a religious ceremony, for example -- called for it."
+
+link = a torch of pitch and tow for lighting the way in dark streets
+
+brazier = a container for hot coals, generally taking the form of an upright standing or hanging metal bowl or box
+
+Charles C. Mann, in 1491: New Revelations of the Americas before Columbus mentions only torches for ''Native Americans'', while the reference cited in drewbenn''s comment seems is at best inconclusive and probably wrong if this translation of the poem (Prayer to the Sun) the author cites is correct. The other source cited by drewbenn looks more promising but is far from conclusive (as Orange comments).
+
+The idea that the Seneca''s easy access to oil meant they must have used lamps can also probably be discounted:
+
+the Seneca tribe, part of the Iroquois nation, collected seep oil for hundreds of years, using it as a salve, insect repellent, and tonic. Europeans called the dark, gooey substance Seneca Oil and found it effective for treating sprains and rheumatism. It also burned, but was unappealing as a lamp oil due to its unpleasant odor and smoke.
+
+Gary Prost & Benjamin Prost''s The Geology Companion: Essentials for Understanding the Earth also mentions the Seneca, saying they used oil for body paint and medicine (but no mention of lamps).
+
+On the items on auction sites mentioned by Denis de Bernardy in his comment, googling has turned up nothing convincing. Related to this, in The Maya Indians of southern Yucatan and northern British Honduras (1918), author T. W. F. Gann mentions a ''small soapstone lamp'' find but concludes that it is post-Columbian as the style is "totally unlike" that of ancient Maya culture.
+
+(all emphasis is mine)', '2016-02-12 14:20:57', 8, NULL, false, 12, 35);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(87, 'In addition to measuring the redshift and the apparent brightness of a faint object, astronomers also measure the spectrum of the light coming from it. These three things are used to identify whether or not a faint object really is a quasar, and the details of this identification are available on the web and in any good introductory text on astronomy.', '2018-04-22 19:28:55', 0, NULL, false, 53, 16);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(88, 'This excerpt refers to an experiment described in Topolinski & Strack (2009) and Topolinski & Strack (2009), and is part of a series of experiments that used a variety of different methods to demonstrate the causal relation between affect and coherence, of which only 1 is described above, so even if it isn''t convincing by itself, a lot of additional evidence would need to be questioned to thwart the conclusion.
+
+This particular experiment uses a popular paradigm developed by Schwarz & Clore (1983) (which in turn is based on a previous experiment by Zanna & Cooper (1974); for reviews see Schwarz & Clore (1988), Schwarz & Clore (1996), Schwarz (2012), and Wikipedia), that has been used many times to demonstrate a causal relation between affective experience and intuition or metacognition. The premise behind this experimental paradigm is that once an affective experience is attributed to a particular cause, it is no longer used as information for subsequent judgments. This assumption has been demonstrated in many experiments, but contrast it with Payne et al (2005) and Allen et al (1989) who report that attempts to correct misattribution failed in their studies, suggesting that affective experience information can be reused in some circumstances. Luckily, this latter possibility does not impact the experiment in question.
+
+The authors of this experiment propose a detailed mechanism for how subjects make judgments of coherence: As the word triad is read, the processing fluency (cognitive ease, or the rate that the words are processed) causes an affective response (subtle smiling reaction), that subjects become aware of, and attribute to subsequent intuitive judgments (such as coherence).
+
+This particular experiment tests the hypothesis by manipulating subjects to misattribute the affective response (to background music). Thus, if affect does not inform coherence judgments, then misattributing it to another source should have no effect on results. On the other hand, if affect does cause coherence judgments, then attributing affective response to another cause should eliminate it as a source of information for coherence judgments, resulting in poorer performance. The control group listened to the same music, and was also directed to misattribute something to it, but it was fluency rather than affect.
+
+The results of the experiment indeed demonstrated that once subjects reattribute positive affect to background music, they no longer use it for coherence judgments, and this results in a significant reduction of correct responses, leading to the conclusion that affect is an important indicator (cause) of coherence.', '2018-01-30 23:54:16', 3, '6eJhC.png', false, 54, 19);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(89, 'You need a Brush Cleaner and Restorer formulated for this task. There are a few of these available, only in art supply stores; you''ll want to check with the ones around you to see what you can purchase.
+
+If you are in the United States, Winsor & Newton makes a widely available product I have used with great results; it''s formulated for dried acrylic and oil paints, but I have also used it to dissolve away dried latex (house) paint, as well as years-long set dry varnishes. With this product, you''ll let the brush soak up the solution, checking periodically to monitor the progress. In a low quality brush, it may end up damaging it by damaging any glues holding the bristles in place in the ferrule, but at the point you''re using a restorer on a brush, it''s typically ruined anyway, so there''s no risk in trying. In my experience, I''ve only had one or two brushes lost this way out of dozens.
+
+Unfortunately, this particular product is not available outside of the United States, but other companies do make similar products that you''ll be able to find by asking your friendly local art supply shop. The employees there should be able to recommend a product to you with which they''re familiar.
+
+Ultimately, the best option is to avoid needing a restorer in the first place; take proper care of your brushes, cleaning them right away instead of letting paints dry in them. Avoid getting paint up into the ferrule, and dry them bristles down so paint and water don''t soak down into the ferrule and cause damage.', '2017-01-17 18:25:12', 2, NULL, false, 56, 2);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(90, 'NSAID is a non-steroidal anti-inflammatory drug that inhibits various citokines responsible for the normal inflammatory response in your body. Some examples include TNF-alpha, IL-2, IL-6', '2017-05-14 16:57:42', 1, NULL, false, 57, 21);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(91, 'All amino acids with side chains that are charged at physiological pH are, by definition, also amino acids with polar side chains (e.g., lysine or glutamic acid). The converse is not true; in other words not all amino acids with polar side chains are necessarily amino acids with side chains that are charged at physiological pH (e.g., threonine or asparagine). The pKa of the nitrogen in histidine''s imidazole ring is quite close to physiological pH, and in some situations would be charged and in other environments would be uncharged. In either case it would be considered polar (or largely hydrophilic in nature).', '2016-11-26 18:26:45', 9, NULL, false, 58, 29);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(92, 'You should do parsing before you expand it.
+
+E.g.
+
+const fetchPageParsed = () => {
+  return fetchPage().pipe(
+    map(response => parse(response))
+  );
+};
+
+fetchPageParsed().pipe(
+  expand(parsed => {
+    if (parsed.last) {
+      return EMPTY;
+    }
+
+    return fetchPageParsed(parsed.nextPage);
+  })
+)', '2016-05-22 20:25:36', 0, NULL, false, 59, 33);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(93, 'Jander-Blasius (14. Ed., 1995) uses nonhygroscopic sodium oxalate, dried at 230-250°C (it decomposes above 250 according to wikipedia), to standardise permanganate titer solution against. They give no other useable standard for manganometry, so I assume this is it.
+
+I have no idea why anybody would want to use (or recommend using) the free acid instead, except perhaps to insult his first-year students'' intelligence. Can''t imagine it''s much cheaper, in analytical grade.
+
+For NaOH titer solution, Jander recommends using a secondary standard, e.g. HCl solution. HCl itself is standardised against freshly precipitated and dried sodium carbonate, or HgO (+4KI+H2O -> K2[HgI4]+2KOH) dried over conc. sulfuric acid.', '2018-03-17 14:19:45', 1, NULL, false, 60, 9);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(94, 'I don''t think there is a standard term for what you''d want to refer to. I''d consider the following good candidates though:
+
+Near-perfect / almost-perfect / close-to-perfect / epsilon-perfect competition (the last of course comes from the notion of epsilon-equilibrium in game theory)
+Markets with low concentration, or lowly / sparsely concentrated markets (based on the empirical measure of concentration ratio)', '2017-11-06 20:15:22', 3, NULL, false, 61, 32);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(95, 'I do not have a special term, but I give this analogy:
+
+We know what a triangle is. But in the real world, it is impossible to draw a perfect triangle and there do not exist examples of perfect triangles.
+
+Similarly, we have just learnt what perfect competition is. But in the real world, there do not exist examples of perfect competition. Nonetheless, here are some examples of real-world markets that come "close to" perfect competition ...
+
+We stress that these markets are not actual examples of perfect competition. (To repeat, such examples do not exist.) Instead, these are merely examples that come "close to" perfect competition.', '2017-11-07 07:56:02', 7, NULL, false, 61, 6);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(96, 'Prior to the beginning of World War II there about 55,000 civilian sailors employed in the U.S. merchant marine. This number increased to as many as 250,000 men who served in the U.S. merchant marine by the end of the war. A pre-war merchant fleet of 1,340 cargo ships and tankers expanded to at least 4,221 U.S. merchant ships by the end of World War II.', '2017-05-06 13:22:55', 1, NULL, false, 62, 14);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(97, 'Thinking about water waves; interference is only a temporary thing. If 2 waves travel cross a pond from opposite sides, but let''s say they are opposite in phase, in the middle of the pond when they meet they cancel, BUT this is only temporary. After they pass each other, they are visible again and continue along to the opposites shores!. 
+Waves cancelling or "interference" is one of the most poorly explained phenomenons in physics, because they really don''t literally cancel, they just temporarily interact with each other. The same could be said for light waves, 2 photons never cancel, that''s a violation of energy conservation. In fact the only way to ever observe photons it to have them interact with matter (i.e. an electron in an atom/molecule). 
+2 photons arriving at an atom that are out of phase are very difficult for the atom to observe and 2 photons in phase increase the probability of observation greatly, it''s all Quantum Mechanics or probability.', '2017-02-07 23:36:48', 0, NULL, false, 65, 14);
+
 
 
 INSERT INTO "voteAnswer"(username, id_answer) VALUES();
@@ -765,6 +987,8 @@ INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(49, 50);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(50, 51);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(61, 62);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(66, 67);
+INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(69, 70);
+INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(70, 71);
 
 
 INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
