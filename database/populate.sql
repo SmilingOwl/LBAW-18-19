@@ -30,6 +30,20 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(9, 'linguistics', 'Why do the five basic questions in the English language (what, why, when, who and where) all start with the letter “w”?', null, '2017-12-19 05:52:53', 15, null, false, 19);
 
 
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(30, 'psychology', '', null, '2017-11-16 11:41:48' , 15, null, false, 2);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(31, 'psychology', '', null, '2017-11-05 15:22:04' , 1, null, false, 1);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(32, 'geology', '', null, '2016-11-05 02:55:10' , 18, null, false, 25);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(33, 'geology', '', null, '2017-02-04 22:58:52' , 7, null, false, 13);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(34, 'biology', '', null, '2018-02-04 12:08:41' , 5, null, false, 16);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(35, 'biology', '', null, '2018-01-11 14:46:12' , 11, null, false, 28);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(36, 'art', '', null, '2017-03-10 22:05:47' , 2, null, false, 4);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(37, 'art', '', null, '2017-01-16 23:34:23' , 3, null, false, 22);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(38, 'history', '', null, '2017-01-16 16:24:01' , 10, null, false, 9);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(39, 'history', '', null, '2018-01-11 09:13:10' , 4, null, false, 12);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(40, 'linguistics', '', null, '2016-11-07 22:53:19' , 16, null, false, 11);
+
+
+
 
 
 INSERT INTO "voteQuestion"(username, id_question) VALUES();
