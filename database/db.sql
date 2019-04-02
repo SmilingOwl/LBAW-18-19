@@ -88,6 +88,8 @@ $$ LANGUAGE plpgsql;
 DROP DOMAIN If EXISTS DateTime;
 CREATE DOMAIN DateTime AS date 
     CONSTRAINT date_ck CHECK (VALUE > '1900-01-01'::date AND VALUE <=now());
+
+
 --Tables--
 
 

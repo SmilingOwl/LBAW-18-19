@@ -1,37 +1,37 @@
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (1,"Infectedsea", "tahcgvd13", "infectedsea166@gmail.com", "photography lover", "1980-05-17", "photo1.png", 120, false, false,1);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (2, "Avocadoroxy", "hsfid28", "avocadoroxy@Hi.com","just learning things..", "1993-02-07", "user12.png", 530, false, false,2);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (3, "Pepperliving","auyd45", "pepper&salt@yahoo.com", "quantum physicist", "1997-03-20", "user3.png", 100, false, false, 3);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (4, "Unlinedminiature", "aihcf5163", "creaturesss12@sapo.com", "admirer of nature", "2000-08-30", "user4.png", 210, false, false, 4);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (5, "Activisthaiku", "hskhu78", "activist178@gmail.com", "getting smarter", "1998-02-17", "photo1.png", 300, false, false, 5);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (6, "Flycommon","pli123", "flyingbird@io.org", null, "1975-02-17",null, 330, false, false, 6);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (7, "Moonshadows", "poiuy1234","moonlight@mimi.com", "engineering master", "1965-02-17", null, 30, false, false,7);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (8, "Chessbeans", "mnbv67", "chessLover@beans.com", "simplicity is prerequisite for reliability", "2000-02-17","photo12.png", 209, false, false, 8);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (9, "Luminous",".1.2.3.a.b.c", "lumi123@gamil.com", null, "1957-02-17","photo49.png", 205, false, false, 9);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (10, "Pizzazz","osjd123", "pizzaAndChips@yahoo.com", "coffee and pizza! ", "1993-02-17", "olght.png", 520, false, false,10);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (11, "Pantaloons","ju1we2-06", "sleepingsheep@hotmail.com", "always tired..", "1999-02-17", null, 400, false, false, 11);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (12, "Sparky", "#jsdy", "sparkytube@sapo.com", null, "1996-02-17", "pho.png", 100, true, false, 12);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (13, "Cooper", "6h7sdBB", "doccooper@un02.com", null, "1888-02-17","photott.png", 600, false, true, 13);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (14, "Vikingkong", "poife17_", "vikingargh@hotmail.com", "we are made by history", "2017-02-17", "photo45.png", 50, false, false, 14);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (15, "FieryBoy", "zxc&+12", "fieryboy123@piripiri.com", "Mathssssssss", "2002-02-17", "photo98.png", 320, false, false, 15);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (16, "FateTalk", "AbAb45", "sadfate98@gmail.com", "anti-social behaviour is a trait of intelligence in a world full of conformists", "1984-09-17", "photo1.png", 500, false, false, 16);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (17, "LittleRoses","jsoud0987", "blueroses@gmail.com", null, "2005-06-28", "photooo.png", 40, false, false, 17);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (18, "RainbowRecipe","kvsy986", "diamondspot@oreo.org", null, "1974-02-17", null, 300, false, false, 18);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (19, "YoungerDivision","agsd12%p", "divisionbell@yahoo.com", "music is life", "1981-02-10", "photo1.png", 120, false, false, 19);
-INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (20,"HappyCat","alduyf123", "catskittens@pic.com", "looking for inspiration", "2001-12-05", "photo5.png", 200, false, false, 20);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (1,'Infectedsea', 'tahcgvd13', 'infectedsea166@gmail.com', 'photography lover', '1980-05-17', 'photo1.png', 120, false, false,1);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (2, 'Avocadoroxy', 'hsfid28', 'avocadoroxy@Hi.com','just learning things..', '1993-02-07', 'user12.png', 530, false, false,2);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (3, 'Pepperliving','auyd45', 'pepper&salt@yahoo.com', 'quantum physicist', '1997-03-20', 'user3.png', 100, false, false, 3);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (4, 'Unlinedminiature', 'aihcf5163', 'creaturesss12@sapo.com', 'admirer of nature', '2000-08-30', 'user4.png', 210, false, false, 4);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (5, 'Activisthaiku', 'hskhu78', 'activist178@gmail.com', 'getting smarter', '1998-02-17', 'photo1.png', 300, false, false, 5);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (6, 'Flycommon','pli123', 'flyingbird@io.org', null, '1975-02-17',null, 330, false, false, 6);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (7, 'Moonshadows', 'poiuy1234','moonlight@mimi.com', 'engineering master', '1965-02-17', null, 30, false, false,7);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (8, 'Chessbeans', 'mnbv67', 'chessLover@beans.com', 'simplicity is prerequisite for reliability', '2000-02-17','photo12.png', 209, false, false, 8);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (9, 'Luminous','.1.2.3.a.b.c', 'lumi123@gamil.com', null, '1957-02-17','photo49.png', 205, false, false, 9);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (10, 'Pizzazz','osjd123', 'pizzaAndChips@yahoo.com', 'coffee and pizza! ', '1993-02-17', 'olght.png', 520, false, false,10);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (11, 'Pantaloons','ju1we2-06', 'sleepingsheep@hotmail.com', 'always tired..', '1999-02-17', null, 400, false, false, 11);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (12, 'Sparky', '#jsdy', 'sparkytube@sapo.com', null, '1996-02-17', 'pho.png', 100, true, false, 12);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (13, 'Cooper', '6h7sdBB', 'doccooper@un02.com', null, '1888-02-17','photott.png', 600, false, true, 13);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (14, 'Vikingkong', 'poife17_', 'vikingargh@hotmail.com', 'we are made by history', '2017-02-17', 'photo45.png', 50, false, false, 14);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (15, 'FieryBoy', 'zxc&+12', 'fieryboy123@piripiri.com', 'Mathssssssss', '2002-02-17', 'photo98.png', 320, false, false, 15);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (16, 'FateTalk', 'AbAb45', 'sadfate98@gmail.com', 'anti-social behaviour is a trait of intelligence in a world full of conformists', '1984-09-17', 'photo1.png', 500, false, false, 16);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (17, 'LittleRoses','jsoud0987', 'blueroses@gmail.com', null, '2005-06-28', 'photooo.png', 40, false, false, 17);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (18, 'RainbowRecipe','kvsy986', 'diamondspot@oreo.org', null, '1974-02-17', null, 300, false, false, 18);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (19, 'YoungerDivision','agsd12%p', 'divisionbell@yahoo.com', 'music is life', '1981-02-10', 'photo1.png', 120, false, false, 19);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, banned, deleted, id_role) VALUES (20,'HappyCat','alduyf123', 'catskittens@pic.com', 'looking for inspiration', '2001-12-05', 'photo5.png', 200, false, false, 20);
 
 
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(1, "rookie",0, 199);
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(2, "beginner", 200, 499);
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(3, "intermediate",500, 899);
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(4, "enthusiast", 900, 1499);
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(5, "advanced", 1500, 4999);
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(6, "veteran", 5000,100000);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(1, 'rookie',0, 199);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(2, 'beginner', 200, 499);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(3, 'intermediate',500, 899);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(4, 'enthusiast', 900, 1499);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(5, 'advanced', 1500, 4999);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(6, 'veteran', 5000,100000);
 
-INSERT INTO "follow"(follower, following) VALUES();
+--INSERT INTO 'follow'(follower, following) VALUES();
 
-INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES();
+--INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES();
 
-INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES();
+--INSERT INTO 'notification'(id_notification, description, type, view, "date", id_user) VALUES();
 
 INSERT INTO "category"(id_category, name) VALUES(1, 'art');
 INSERT INTO "category"(id_category, name) VALUES(2, 'biology');
@@ -61,11 +61,11 @@ What''s the right answer?','2018-01-30 15:08:23' , 2, null, false, 16);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(7, 'physics', 'What is the electrostatic potential energy of an electron that is .02 meters from a Van de Graaff machine that has a negative charge of -4.0 Couloumbs?', null,'2017-09-19 19:46:44' , 0, null, false, 8);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(8, 'chemistry', 'How many grams of silver chloride are produced when 45 g of calcium chloride react with excess silver nitrate?​', null ,'2017-06-01 08:44:35', 7, null, false, 28);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(9, 'linguistics', 'Why do the five basic questions in the English language (what, why, when, who and where) all start with the letter “w”?', null, '2017-12-19 05:52:53', 15, null, false, 31);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(10, 'linguistics', 'What is the opposite of "gravitas"?', 'I''m having difficulty coming up with a valid antonym for gravitas.
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(10, 'linguistics', 'What is the opposite of gravitas ?', 'I''m having difficulty coming up with a valid antonym for gravitas.
 
 Online searches return results like superficiality, cheerfulness, frivolity, facetiousness etc. which don''t work for me. They seem to be opposites of gravitas as it is understood by the person who has it.
 
-As in, "We need to undertake this project with gravitas", "he carried himself with gravitas".
+As in, We need to undertake this project with gravitas, he carried himself with gravitas.
 
 This is taken to mean seriousness.
 
@@ -121,8 +121,7 @@ Should I first develop their personalities and then name them accordingly? Pleas
 '2018-01-22 17:35:44', 0, NULL, false, 20);
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(19, 'business', 'Can somebody explain “leveraged debt investment positions” and “exposures” in this context for me, please?', 
-'"The strong bond performance has led to a surge in leveraged debt investment positions that are ultimately funded by the banks'' interbank exposures and WMPs. But nobody really knows how levered these positions are, who has financed them, and by how much," S&P said. "The contagion risks for the financial sector could be high."', 
-'2018-02-16 12:47:38', 14, NULL, false, 6);
+'The strong bond performance has led to a surge in leveraged debt investment positions that are ultimately funded by the banks interbank exposures and WMPs. But nobody really knows how levered these positions are, who has financed them, and by how much, S&P said. The contagion risks for the financial sector could be high.', '2018-02-16 12:47:38', 14, NULL, false, 6);
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(20, 'history', 'Why were Madagascar and New Zealand discovered so late?', 
 'Considering how exploration over long distances into the unknown has been a part of human nature right at the beginning, it''s surprising that some fairly large places have been discovered relatively recently. 
@@ -231,7 +230,7 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(39, 'art', 'What is the name of this film editing technique?', 
 'What is it called when a seemingly short or contiguous conversation/dialogue is spread over a few scenes that take place in different places that are apparently far from each other?
-In "Snatch" (2000), for instance, there is a scene where Jason Statham''s character provides a brief explanation of the term ''coursing'', which is contiguous but it spans over a few scenes at different places.
+In Snatch (2000), for instance, there is a scene where Jason Statham''s character provides a brief explanation of the term ''coursing'', which is contiguous but it spans over a few scenes at different places.
 If you close your eyes and listen to the conversation, you''ll believe that it''s contiguous and happens in less than 25 seconds. But if pay attention to the video you''ll know that it is (logically) not.
 
 Does this technique of filming/editing have a name?', '2017-05-05 11:22:33', 9, NULL, false, 2);
@@ -270,7 +269,7 @@ My experience in solving physics problems in mechanics has taught me that energy
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(43, 'linguistics', 'Is exact Kanji stroke length important?', 'I am currently on a quest to learn how to hand write the 2000 most commonly used Kanji in the Japanese language. This requires lots of memorization, so efficiency is important.
 
-I have come across Kanji that have strokes with little "extra tails", created from a slightly extra-long stroke. Or in English, they can be called "jumps". Take my image as an example.
+I have come across Kanji that have strokes with little extra tails, created from a slightly extra-long stroke. Or in English, they can be called jumps. Take my image as an example.
 When splitting this kanji into three separate parts:
 
 1. the left part has two jumps on the bottom, with the left tail being slightly longer
@@ -316,13 +315,13 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 Imagine a galvanic cell, without the wiring between the two electrodes and instead we only have the salt bridge. Won''t the electrons (although it is very unfavorable to happen) travel through the salt bridge and the solutions? In other terms will the transformation of the electrodes occur?', '2016-04-02 18:57:46', 28, NULL, false, 3);
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(48, 'linguistics', 'What is the significance of the traveler carrying writing materials in Ivanhoe?', 
-'"The Jew''s dress, which appeared to have suffered considerably from the storm, was a plain russet cloak of many folds, covering a dark purple tunic. He had large boots lined with fur, and a belt around his waist, which sustained a small knife, together with a case for writing materials, but no weapon. He wore a high square yellow cap of a peculiar fashion, assigned to his nation to distinguish them from Christians, and which he doffed with great humility at the door of the hall."
+'The Jew`s dress, which appeared to have suffered considerably from the storm, was a plain russet cloak of many folds, covering a dark purple tunic. He had large boots lined with fur, and a belt around his waist, which sustained a small knife, together with a case for writing materials, but no weapon. He wore a high square yellow cap of a peculiar fashion, assigned to his nation to distinguish them from Christians, and which he doffed with great humility at the door of the hall.
 
-Strange but true: this snippet, apparently about a scribe''s tools, has been haunting me rather obsessively lately. I didn''t recall that the bearer was the Jew. I suppose a lender/usurer would want to keep records of his debtors.
+Strange but true: this snippet, apparently about a scribe`s tools, has been haunting me rather obsessively lately. I didn''t recall that the bearer was the Jew. I suppose a lender/usurer would want to keep records of his debtors.
 
 Am I missing something else? Was it particularly rare to be able to write, even among certain strata of the upper class?
 
-Why does he say "a small knife, but no weapon"?
+Why does he say a small knife, but no weapon?
 
 Is Sir Walter Scott''s mention of writing tools here used primarily to distinguish his social class/ his occupation, or perhaps something else?
 
@@ -367,7 +366,7 @@ Soup`con´ n. 1. A suspicion; a suggestion; hence, a very small portion; a taste
 
 and then in the Thesaurus part:
 
-soupcon - a slight but appreciable amount; "this dish could use a touch of garlic"
+soupcon - a slight but appreciable amount; this dish could use a touch of garlic
 
 So if dictionary entries can''t even remain consistent within the same definition, what chance does a mere mortal have?', '2017-04-15 23:05:26', 8, NULL, false, 22);
 
@@ -392,7 +391,7 @@ Is there such a treshold value or how do astronomers know from observations what
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(54, 'psychology', 'How does this experiment prove a causal relation between coherence and good feelings?', 
 'I''m reading Thinking, Fast and Slow by Daniel Kahneman and I came across the following text:
 
-"The Remote Association Test has more to tell us about the link between cognitive ease and positive effect. Briefly consider the two triads of words:
+The Remote Association Test has more to tell us about the link between cognitive ease and positive effect. Briefly consider the two triads of words:
 
 sleep mail switch 
 salt deep foam
@@ -403,10 +402,10 @@ The impression of cognitive ease that comes with the presentation of a coherent 
 The evidence that we have about good feelings, cognitive ease, and the intuition of coherence is, as scientists say, correlational but not necessarily causal. 
 Cognitive ease and smiling occur together, but do the good feelings actually lead to intuitions of coherence? Yes, they do. 
 The proof comes from a clever experimental approach that has become increasingly popular. 
-Some participants were given a cover story that provided an alternative interpretation for their good feeling: they were told about music played in their earphones that "previous research showed that this music influences the emotional reaction of its individuals". 
+Some participants were given a cover story that provided an alternative interpretation for their good feeling: they were told about music played in their earphones that previous research showed that this music influences the emotional reaction of its individuals. 
 This story completely eliminates the intuition of coherence. 
 The finding shows that the brief emotional response that follows the presentation of a triad of words (pleasant if the triad is coherent, unpleasant otherwise) is actually the basis of judgments of coherence. 
-There is nothing here that system 1 cannot do. Emotional changes are now expected, and because they are unsurprising they are not linked causally to the words."
+There is nothing here that system 1 cannot do. Emotional changes are now expected, and because they are unsurprising they are not linked causally to the words.
 
 (Kahneman refers to the automatic and intuitive way of thinking as system 1)
 
@@ -453,7 +452,7 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 
 Granted I saw numerous references to using oxalic acid dihydrate on the web to standardize NaOH. I assume that for high school and freshman labs that it is "good enough." Using student grade burettes and open air pan balances would greatly limit the possible precision.
 
-Also I''d guess that "good enough purity" oxalic acid dihydrate can be purchased much more cheaply than potassium hydrogen phthalate (KHP) which would be my choice.
+Also I''d guess that good enough purity oxalic acid dihydrate can be purchased much more cheaply than potassium hydrogen phthalate (KHP) which would be my choice.
 
 The analytical method as I remember from nearly 50 years ago...
 
@@ -511,7 +510,7 @@ The index of refraction is wavelength dependent but if the waves are totally can
 I assume there are no “waves” and thus no detectable wavelength per se while beams are in the glass if there is total destructive interference at that point in space.', '2017-02-07 21:34:44', 9, 'jbTdW.jpg', false, 28);
 
 
-INSERT INTO "voteQuestion"(username, id_question) VALUES();
+--INSERT INTO 'voteQuestion'(username, id_question) VALUES();
 
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(29, 'It is necessary for the students to have real time experiences in order to understand any topic in studies. Such experiences help them to know the problems that occur apart from books and hence they can understand how people actually behave in real life to solve them.
 
@@ -535,8 +534,8 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 They are software created by security professionals, follow strict development rules, and are tested by a lot of people, and attacked by a lot of people. They have better chance of protecting your passwords than anything invented by the average, even the above average user.', '2017-01-10 18:15:42', 23, NULL, false, 12, 3);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(33, 'You''re probably referring to the recent articles about flaws in password managers.
 
-"Password managers have a security flaw. But you should still use one." (Washington Post)
-"Password managers leaking data in memory, but you should still use one." (Sophos)
+"Password managers have a security flaw. But you should still use one."(Washington Post)
+"Password managers leaking data in memory, but you should still use one."" (Sophos)
 
 It''s right there in the titles, password managers have flaws and you should still use one because they''re more secure than what many folks do, like keeping passwords in Excel, emailing them around, pasting them into chat where they''ll be logged by everyone...
 
@@ -585,7 +584,7 @@ This result is due to A.L.S. (Tony) Corner, and is the case r=2 of the theorem d
 It is shown that for any positive integer r there exists a countable torsion-free abelian group G such that the direct sum of m copies of G is isomorphic to the direct sum of n copies of G if and only if m≡n(modr). 
 This remarkable result is obtained from the author''s theorem on the existence of torsion-free groups having a prescribed countable, reduced, torsion-free endomorphism ring by constructing a ring with suitable properties. 
 It should be mentioned that the question of the existence of algebraic systems with the property stated above has been considered by several mathematicians. 
-The author has been too generous in crediting this "conjecture" to the reviewer.', 83, NULL, false, 17, 13);
+The author has been too generous in crediting this conjecture to the reviewer.', 83, NULL, false, 17, 13);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(39, 'You should write your story first, using any names that come to mind. The important thing is writing and completing a draft of your story to determine as quickly as you can if the story is something you are invested in.
 
 
@@ -595,7 +594,7 @@ This is a part of the normal creative process of the tug of war that occurs betw
 
 The best thing about fantasy is that it''s totally open. After you write your story, you can make up names that have subtle meanings or are related to other things or are entirely made up based on an entire mythology that you create.
 
-As Alexander Graham Bell once said, "There are no rules here! We are trying to accomplish something."
+As Alexander Graham Bell once said, There are no rules here! We are trying to accomplish something.
 
 And don''t forget: character names often emerge as you write: for now, just use any name that comes to you quickly and later as you get a sense of who the character is you will probably find that the character''s name will emerge from that anyways.', '2018-01-23 07:21:19', 5, NULL, false, 18, 22);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(40, 'Exposure is the amount of money that you are at risk of losing on a given position (i.e. on a UST 10 year bond), portfolio of positions, strategy (selling covered calls for example), or counterparty, usually represented as a percentage of your total assets.
@@ -661,23 +660,24 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 
 According to the movie''s Wikipedia page:
 
-Cuarón''s initial idea for maintaining continuity during the roadside ambush scene was dismissed by production experts as an "impossible shot to do". 
+Cuarón''s initial idea for maintaining continuity during the roadside ambush scene was dismissed by production experts as an impossible shot to do. 
 Fresh from the visual effects-laden Harry Potter and the Prisoner of Azkaban, Cuarón suggested using computer-generated imagery to film the scene. 
-Emmanuel Lubezki refused to allow it, reminding the director that they had intended to make a film akin to a "raw documentary". 
+Emmanuel Lubezki refused to allow it, reminding the director that they had intended to make a film akin to a raw documentary. 
 Instead, a special camera rig invented by Gary Thieltges of Doggicam Systems was employed, allowing Cuarón to develop the scene as one extended shot. 
 A vehicle was modified to enable seats to tilt and lower actors out of the way of the camera, and the windshield was designed to tilt out of the way to allow camera movement in and out through the front windscreen. 
 A crew of four, including the director of photography and camera operator, rode on the roof.
 
-You can check one of the extras on the DVD/Blu-ray, called "Under Attack", which addresses this scene.
+You can check one of the extras on the DVD/Blu-ray, called Under Attack, which addresses this scene.
 But these single shot action scenes are still composites of multiple shots. Again citing the movie''s Wikipedia page:
 
 However, the commonly reported statement that the action scenes are continuous shots is not entirely true. 
-Visual effects supervisor Frazer Churchill explains that the effects team had to "combine several takes to create impossibly long shots", where their job was to "create the illusion of a continuous camera move." 
-Once the team was able to create a "seamless blend", they would move on to the next shot.
+Visual effects supervisor Frazer Churchill explains that the effects team had to combine several takes to create impossibly long shots, where their job was to "create the illusion of a continuous camera move."
+Once the team was able to create a seamless blend, they would move on to the next shot.
 
 [...]
 
-The car ambush was shot in "six sections and at four different locations over one week and required five seamless digital transitions"', '2017-03-26 22:16:46', 2, NULL, false, 4);
+The car ambush was shot in six sections and at four different locations over one week and required five seamless digital transitions', '2017-03-26 22:16:46', 2, NULL, false, 4);
+
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(45, 'It will work if you use the standard method --- which is to metalize the surface first. Metalization can be done by vacuum deposition (used for very fine/small objects), or by electroplating (used for objects that are not very fine/small), or by flame deposition (used for objects that are coarse/large).
 
 Electroplating is a three step process that also requires an intermediate metal surface, and that surface is done by deposition plating on to an etched ionic surface. The first step is surface etching, which exposes an ionic surface, then deposition plating, then electroplating.
@@ -702,26 +702,26 @@ The paint is generally not conductive. This means that opposite charge builds up
 
 However, all this works by keeping the underlying object at a significantly different potential than the paint gun nozzle (and thereby the paint particles). The object needs to be conductive to do this. First, it needs to be conductive to establish the potential all along its surface in the first place. Second it needs to be conductive to counter act at least the initial opposite charge of the first layer of droplets which touch the conductive material directly. The charged paint droplets moving from the nozzle to the object is essentially a electrical current. 
 If you can''t drain that current from the object, then even a little paint will rapidly charge it up to the reverse polarity.', '2016-11-13 12:33:17', 1, NULL, false, 24);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(48, '"Why do we have water vapors when our body temperature is also <100°C in the first place?"
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(48, 'Why do we have water vapors when our body temperature is also <100°C in the first place?
 
 At normal pressure, water boils at 100°C, meaning that bubbles of pure steam form under water. At lower temperatures, water molecules reversibly move from the liquid to the gas phase and back. The higher the temperature, the higher the vapor pressure, and the higher the equilibrium concentration (partial pressure) of water in air. On the geological scale, there is no equilibrium, and we experience different temperatures, different humidity (related to partial pressure of water in air), and different pressures depending on location.
 
-"Why does ice not exist at T>0°C?"
+Why does ice not exist at T>0°C?
 
 Ice, as a pure solid, and water, as a pure liquid, have defined concentration at given pressure and temperature (the equilibrium constant expression for melting includes neither liquid nor solid water, it is simply 1). Above the melting temperature, all the ice melts, there is no equilibrium. This is different from the liquid:gas equilibrium, which exists at temperatures below the boiling point, with lower and lower concentrations of the gas as the temperature drops (here, the equilibrium constant expression included the concentration or partial pressure of water vapor).
 
-"If liquid water can evaporate into" gas at T<100°C, then why not ice turns into liquid at T<0°C?"
+If liquid water can evaporate into gas at T<100°C, then why not ice turns into liquid at T<0°C?
 
 Again, this has to do with pure liquids and pure solids having a constant (or nearly constant) concentration. If you add salt to the liquid, however, ice will turn into liquid below the freezing point (effectively lowering the concentration of water in the liquid). Also, the surface of the ice melts at lower temperature than the bulk, so even for pure water, there can be liquid at temperatures below the bulk freezing point.
 
-"When I exhale on a wall, no water droplets form."
+When I exhale on a wall, no water droplets form.
 
 I would do an experiment and check. I think the water droplets are easier to see on a mirror. Try a grand piano (i.e a smooth surface painted with shiny black paint), you might see the water droplets there as well. Or take a long hot shower and check whether water droplets form on surfaces other than a mirror.', '', 14, NULL, false, 3);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(49, 'It should be noted that ice does turn into a gas at T<0°C readily enough.', '2016-10-05 11:12:31', 3, NULL, false, 8);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(50, 'If you count geometric multiplicities, eigenvalues may disappear. Does that count as "increasing"? 
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(50, 'If you count geometric multiplicities, eigenvalues may disappear. Does that count as increasing? 
 If you consider this image as an example, then going from L1 to L2 changes the eigenvalues from 0 and 0 to 0 and 2, certainly as good an increase as we can hope for given that the Ls are always singular. But the eigenvalues of L1B are 0 and 0 whereas L2B only has a single 0. Is that an increase? ', '2018-01-12 11:42:15', 2, 'Ki29S.png', false, 4);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(51, 'Thank you for the response. 
-Regarding your first question, I could not understand the difference between the two in "eigenvalues of L1B are 0 and 0 whereas L2B only has a single 0". 
+Regarding your first question, I could not understand the difference between the two in eigenvalues of L1B are 0 and 0 whereas L2B only has a single 0. 
 And were you trying to give a counterexample for the statement? If B is an identity matrix, then L2B would have eigenvalues 0 and 2. 
 I am looking for an analytical proof which says that by increasing eigenvalue of one matrix, the eigenvalue of the product is also increased. 
 I am getting that trend in my case while using the values, but an analytical proof is what I am after.', '2018-01-14 08:41:26', 1, NULL, false, 7);
@@ -730,7 +730,7 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 
 Another potential example would be the vibrator on your phone, which vibrates in a circular manner.
 
-But in the end, the key is that atoms in a sound wave don''t vibrate "left and right." They are a longitudinal wave, in which particles move in the direction of the wave''s motion and back.
+But in the end, the key is that atoms in a sound wave don''t vibrate left and right. They are a longitudinal wave, in which particles move in the direction of the wave''s motion and back.
 
 So when something causes a sound, the waves propagate outward from the object creating the sound, as molecules of gas move away from the source and towards the source. This is typically a 3 dimensional pattern', '2018-01-30 15:36:08', 17, NULL, false, 8);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(54, 'A sound wave is not a transverse wave, as you may have thought. That means the vibration and the direction of propagation for sound wave are parallel. And the vibration is caused by difference in air pressure at different places. To the question "how I can listen to it" thats because the pressure difference propagates toward your ear and force your eardrum to vibrate.', '2018-01-30 18:19:23', 8, NULL, false, 16);
@@ -742,7 +742,7 @@ In my own poetry writing I''ve found that I am greatly helped by first learning 
 
 The really famous uses of all of these formal structures for poetry usually, although not always, end up breaking the rules or at least bending them. The key is that there is a structure to be twisted, and in knowing what the impact of that structure is and how twisting it in certain ways has certain impacts. For example if the poem is in iambic pentameter and there is an additional syllable on the line to make it longer or the stress falls on two syllables back to back, the reader will notice that line or those syllables more than other parts of the poem which might be comfortable.
 
-One way of breaking the rules that novice poets often fall into and shouldn''t is using antiquated language or awkward language constructs because "that''s the way poetry is written." Actually, it is not. A poem by John Donne reads the way that it does because John Donne was writing somewhat in the vernacular of his time but also in a time before the English language was as standardized as it is now. The modern poetry-reading public does not tend to have a high tolerance for poetic license with grammatical constructs unless it really has a great, positive impact on your poem. You can''t just re-structure sentences to fit a rhyme scheme and call it good poetry - you have to fit the rhyme scheme in a way that serves the grammar of your sentence, too.
+One way of breaking the rules that novice poets often fall into and shouldn''t is using antiquated language or awkward language constructs because "that`s the way poetry is written." Actually, it is not. A poem by John Donne reads the way that it does because John Donne was writing somewhat in the vernacular of his time but also in a time before the English language was as standardized as it is now. The modern poetry-reading public does not tend to have a high tolerance for poetic license with grammatical constructs unless it really has a great, positive impact on your poem. You can''t just re-structure sentences to fit a rhyme scheme and call it good poetry - you have to fit the rhyme scheme in a way that serves the grammar of your sentence, too.
 
 The most revered modern poets often (not always) write very compressed language that also seems modern and moves smoothly. When they break these patterns, the impact adds to the theme and feel of the poem, it is not capricious. As a poet you''ll have to learn how to do this as well.', '2017-03-11 11:11:12', 8, NULL, false, 30, 5);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(58, 'Sillimanite is strictly speaking a mineral rather than a rock type. 
@@ -767,7 +767,7 @@ No capital accumulation
 Sclerotic societal problems
 No coal
 Not friendly to Europe, where the action was happening.', '2016-07-13 20:44:56', 1, NULL, false, 34, 14);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(64, 'This is hard to answer because no-one really knows what a thought is. If you make it narrower, like "a plan of action for catching a ball" you might get more detailed answers! But then it''s not clear how well those answers would transfer to things like language or deciding what to eat for dinner. Having said that, you might enjoy "The mind is flat" by Nick Chater. One thing we do know for sure about thoughts is that they''re really fast. Chater describes some experiments suggesting that the brain is always improvising, so the answer is probably more down the "real-time" end', '2016-02-13 18:45:02', 1, NULL, false, 35, 19);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(64, 'This is hard to answer because no-one really knows what a thought is. If you make it narrower, like a plan of action for catching a ball you might get more detailed answers! But then it''s not clear how well those answers would transfer to things like language or deciding what to eat for dinner. Having said that, you might enjoy "The mind is flat" by Nick Chater. One thing we do know for sure about thoughts is that they''re really fast. Chater describes some experiments suggesting that the brain is always improvising, so the answer is probably more down the "real-time" end', '2016-02-13 18:45:02', 1, NULL, false, 35, 19);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(65, 'Enables implies that this uncovers a new ability for the user to log in.
 
 Using a different wording:
@@ -801,7 +801,7 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(71, 'This version of the question really requires a long answer. The presence of two detectors complicates the picture. If the detector near the source "detects a photon" (records an interaction), that excitation (photon) is gone. If the detector near the screen records an interaction, it will be a different excitation of the same field. Is this a different photon? Uhhh... the language is getting in the way. A time-resolved experiment will not detect that second photon a time d/c later. But there will be a tendency for detections to occur near each other. We''re off the rails now! ', '2016-05-06 17:28:33', 2, NULL, false, 12, 16);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(72, 'I''d call it a montage:
 
-"Montage is a technique in film editing in which a series of short shots are edited into a sequence to condense space, time, and information."
+"Montage is a technique in film editing in which a series of short shots are edited into a sequence to condense space, time, and information.""
 
 It shows several conversations that took place over a long time, but compresses them into a shorter sequence for viewers.
 
@@ -841,7 +841,7 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 
 But you wouldn''t write those little tails in handwriting, would you?
 
-Same thing with this kanji. I don''t think I''ve met anyone who writes them with the "jumps".', '2017-04-14 13:45:29', 17, NULL, 'JBcRK.png', 43, 22);
+Same thing with this kanji. I don''t think I''ve met anyone who writes them with the jumps.', '2017-04-14 13:45:29', 17, NULL, 'JBcRK.png', 43, 22);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(77, 'These "jumps" that you brought up are not part of the kanji, they are part of the typeface.
 
 (More specifically, they may be treated like serifs - or little decorations at the edge of certain lines)
@@ -874,17 +874,17 @@ In liquid NH3, however, solvated electrons can occur, so self-discharge of galva
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(82, 'Electrons cannot survive in aqueous state. Being a charged subatomic particle, the electron has to stay close to protons which are located at the center of the atom. Hence, the electron can move from one atom to another which are closely-packed, what we have in a solid.', '2016-04-04 05:46:21', 3, NULL, false, 47, 34);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(83, 'It was rare for laity to be able to read and write; everyone carried a knife but generally only nobility and soldiers carried weapons; Scott mentions the writing materials in chapter V because they will be used in chapter VI; the writing materials included parchment, quills and ink.', '2018-06-08 18:15:04', 6, NULL, false, 48, 22);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(84, 'I found this on the BBC:
-"A tiny Japanese puffer fish creates a grand sand sculpture on the featureless seabed by using his fins to dig furrows. He uses this to attract the attention of passing females."
+A tiny Japanese puffer fish creates a grand sand sculpture on the featureless seabed by using his fins to dig furrows. He uses this to attract the attention of passing females.
 
 The following papers analyse said structures and the ethology in more depth:
 
-"We report that male pufferfishes (Torquigener sp., Tetraodontidae) constructed large geometric circular structures on the seabed that played an important role in female mate choice. Males dug valleys at various angles in a radial direction, constructing nests surrounded by radially aligned peaks and valleys. Furthermore, they created irregular patterns in the nest comprising fine sand particles. 
-The circular structure not only influences female mate choice but also functions to gather fine sand particles in nests, which are important in female mate choice. Strangely enough, the males never reuse the nest, always constructing a new circular structure at the huge cost of construction. This is because the valleys may not contain sufficient fine sand particles for multiple reproductive cycles."
+We report that male pufferfishes (Torquigener sp., Tetraodontidae) constructed large geometric circular structures on the seabed that played an important role in female mate choice. Males dug valleys at various angles in a radial direction, constructing nests surrounded by radially aligned peaks and valleys. Furthermore, they created irregular patterns in the nest comprising fine sand particles. 
+The circular structure not only influences female mate choice but also functions to gather fine sand particles in nests, which are important in female mate choice. Strangely enough, the males never reuse the nest, always constructing a new circular structure at the huge cost of construction. This is because the valleys may not contain sufficient fine sand particles for multiple reproductive cycles.
 
 Role of Huge Geometric Circular Structures in the Reproduction of a Marine Pufferfish (2013)
 
-"Here, we examined the process of the outer ring construction, and extracted the ‘rules’ followed by the pufferfish. During construction, the pufferfish repeatedly excavates ditches from the outside in. 
-Generally, excavation starts at lower positions, and occurs in straight lines... A simulation program based on these data successfully reproduced the circle pattern, suggesting that the complex circle structure can be created by the repetition of simple actions by the pufferfish."
+Here, we examined the process of the outer ring construction, and extracted the ‘rules’ followed by the pufferfish. During construction, the pufferfish repeatedly excavates ditches from the outside in. 
+Generally, excavation starts at lower positions, and occurs in straight lines... A simulation program based on these data successfully reproduced the circle pattern, suggesting that the complex circle structure can be created by the repetition of simple actions by the pufferfish.
 
 Simple rules for construction of a geometric nest structure by pufferfish (2018)', '2016-08-19 18:49:56', 6, NULL, false, 49, 11);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(85, 'I think this is a case where authors can decide for themselves where to draw the line. Or, if the writing is for a certain publication, the editors will have a policy for whether a given word should or should not [have diacritics].
@@ -896,13 +896,13 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 
 There is, though, one piece of evidence which partly supports the absence of candles and lamps. The Spanish chronicler Antonio de Herrera y Tordesillas (1549 - 1626)
 
-"tells of a wise Indian who, when asked to name the most important things he and his fellows had received from the Castilians, put chicken eggs at the top of his list, because they were plentiful, “fresh every day, and good cooked or not cooked for young and Old.” (The other items on his list were horses, candles, and lamps.)"
+tells of a wise Indian who, when asked to name the most important things he and his fellows had received from the Castilians, put chicken eggs at the top of his list, because they were plentiful, “fresh every day, and good cooked or not cooked for young and Old.” (The other items on his list were horses, candles, and lamps.)
 
-Cited by A. W. Crosby in ''The Columbian Exchange'' (30th anniversary edition, 2003)
+Cited by A. W. Crosby in The Columbian Exchange (30th anniversary edition, 2003)
 
-Unfortunately, it''s not clear which culture he''s talking about. Other ''evidence'' mostly relates to its absence. For example, Jacques Soustelle in Daily Life of the Aztecs (1961), says:
+Unfortunately, it`s not clear which culture he`s talking about. Other ''evidence'' mostly relates to its absence. For example, Jacques Soustelle in Daily Life of the Aztecs (1961), says:
 
-"resinous torches of pine-wood (ocotl) were used indoors, and outside links and huge braziers piled with resinous wood served for public lighting when circumstances -- a religious ceremony, for example -- called for it."
+resinous torches of pine-wood (ocotl) were used indoors, and outside links and huge braziers piled with resinous wood served for public lighting when circumstances -- a religious ceremony, for example -- called for it.
 
 link = a torch of pitch and tow for lighting the way in dark streets
 
@@ -975,12 +975,12 @@ Similarly, we have just learnt what perfect competition is. But in the real worl
 We stress that these markets are not actual examples of perfect competition. (To repeat, such examples do not exist.) Instead, these are merely examples that come "close to" perfect competition.', '2017-11-07 07:56:02', 7, NULL, false, 61, 6);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(96, 'Prior to the beginning of World War II there about 55,000 civilian sailors employed in the U.S. merchant marine. This number increased to as many as 250,000 men who served in the U.S. merchant marine by the end of the war. A pre-war merchant fleet of 1,340 cargo ships and tankers expanded to at least 4,221 U.S. merchant ships by the end of World War II.', '2017-05-06 13:22:55', 1, NULL, false, 62, 14);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(97, 'Thinking about water waves; interference is only a temporary thing. If 2 waves travel cross a pond from opposite sides, but let''s say they are opposite in phase, in the middle of the pond when they meet they cancel, BUT this is only temporary. After they pass each other, they are visible again and continue along to the opposites shores!. 
-Waves cancelling or "interference" is one of the most poorly explained phenomenons in physics, because they really don''t literally cancel, they just temporarily interact with each other. The same could be said for light waves, 2 photons never cancel, that''s a violation of energy conservation. In fact the only way to ever observe photons it to have them interact with matter (i.e. an electron in an atom/molecule). 
+Waves cancelling or 'interference' is one of the most poorly explained phenomenons in physics, because they really don''t literally cancel, they just temporarily interact with each other. The same could be said for light waves, 2 photons never cancel, that''s a violation of energy conservation. In fact the only way to ever observe photons it to have them interact with matter (i.e. an electron in an atom/molecule). 
 2 photons arriving at an atom that are out of phase are very difficult for the atom to observe and 2 photons in phase increase the probability of observation greatly, it''s all Quantum Mechanics or probability.', '2017-02-07 23:36:48', 0, NULL, false, 65, 14);
 
 
 
-INSERT INTO "voteAnswer"(username, id_answer) VALUES();
+--INSERT INTO 'voteAnswer'(username, id_answer) VALUES();
 
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(35, 36);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(49, 50);
@@ -991,7 +991,7 @@ INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(69, 70);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(70, 71);
 
 
-INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
+--INSERT INTO 'bestAnswer'(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
 
 INSERT INTO "faq"(id_faq, question, answer) VALUES(1, 'How does LearnIt work?', 'LearnIt is a Q&A community with an academic setting. Users can ask their own questions and answer questions posted by other people, as well as cast votes on posts in order to verify the quality of the information. You can vote a post positively or negatively, and the question owner can choose one of the answers as the best one. <br>
               Each question can be set to one of 12 distinct categories: Art, Biology, Business, Chemistry, Geology, History, Linguistics, Math, Medicine, Physics, Psychology and Technology; whose hubs can be freely browsed. <br>
@@ -1022,6 +1022,6 @@ INSERT INTO "faq"(id_faq, question, answer) VALUES(5, 'What happens if I get ban
 INSERT INTO "faq"(id_faq, question, answer) VALUES(6, 'Where do I suggest features I would like to see on LearnIt?', 'Simply contact us, using the contact form on the bottom part of any of the pages on the site.  <br>
               User feedback is always appreciated, and will help us to build a stronger platform for our community.');
 
-INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES();
+--INSERT INTO 'report'(id_report, "date", reason, id_question, id_answer) VALUES();
 
-INSERT INTO "userReport"(username, id_report) VALUES();
+--INSERT INTO 'userReport'(username, id_report) VALUES();
