@@ -5,27 +5,26 @@ INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(4, 'enthusiast'
 INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(5, 'advanced', 1500, 4999);
 INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(6, 'veteran', 5000,100000);
 
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(1,'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(2, 'administrator');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(3, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(4, 'moderator');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(5, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(6, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(7, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(8, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(9, 'moderator');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(10,'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(11, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(12, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(13, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(14, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(15, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(16, 'moderator');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(17, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(18, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(19, 'member');
-INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES(20, 'member');
-
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(1,'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(2, 'administrator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(3, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(4, 'moderator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(5, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(6, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(7, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(8, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(9, 'moderator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(10,'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(11, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(12, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(13, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(14, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(15, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(16, 'moderator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(17, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(18, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(19, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(20, 'member');
 
 
 INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (1,'Infectedsea', 'tahcgvd13', 'infectedsea166@gmail.com', 'photography lover', '1980-05-17', 'photo1.png', 120, 1, false, false,1);
@@ -49,12 +48,10 @@ INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdat
 INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (19, 'YoungerDivision','agsd12%p', 'divisionbell@yahoo.com', 'music is life', '1981-02-10', 'photo1.png', 120, 2, false, false, 19);
 INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (20,'HappyCat','alduyf123', 'catskittens@pic.com', 'looking for inspiration', '2001-12-05', 'photo5.png', 200, 5, false, false, 20);
 
+--TODO
+--INSERT INTO "follow"(follower, following) VALUES();
 
-
-
---INSERT INTO 'follow'(follower, following) VALUES();
-
---INSERT INTO 'notification'(id_notification, description, type, view, "date", id_user) VALUES();
+--INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES();
 
 INSERT INTO "category"(id_category, name) VALUES(1, 'art');
 INSERT INTO "category"(id_category, name) VALUES(2, 'biology');
@@ -532,8 +529,8 @@ The index of refraction is wavelength dependent but if the waves are totally can
 
 I assume there are no “waves” and thus no detectable wavelength per se while beams are in the glass if there is total destructive interference at that point in space.', '2017-02-07 21:34:44', 9, 'jbTdW.jpg', false, 28);
 
-
---INSERT INTO 'voteQuestion'(username, id_question) VALUES();
+--TODO
+--INSERT INTO "voteQuestion"(username, id_question) VALUES();
 
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(29, 'It is necessary for the students to have real time experiences in order to understand any topic in studies. Such experiences help them to know the problems that occur apart from books and hence they can understand how people actually behave in real life to solve them.
 
@@ -1013,8 +1010,8 @@ INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(66, 67);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(69, 70);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(70, 71);
 
-
---INSERT INTO 'bestAnswer'(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
+--TODO
+--INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
 
 INSERT INTO "faq"(id_faq, question, answer) VALUES(1, 'How does LearnIt work?', 'LearnIt is a Q&A community with an academic setting. Users can ask their own questions and answer questions posted by other people, as well as cast votes on posts in order to verify the quality of the information. You can vote a post positively or negatively, and the question owner can choose one of the answers as the best one. <br>
               Each question can be set to one of 12 distinct categories: Art, Biology, Business, Chemistry, Geology, History, Linguistics, Math, Medicine, Physics, Psychology and Technology; whose hubs can be freely browsed. <br>
@@ -1045,6 +1042,7 @@ INSERT INTO "faq"(id_faq, question, answer) VALUES(5, 'What happens if I get ban
 INSERT INTO "faq"(id_faq, question, answer) VALUES(6, 'Where do I suggest features I would like to see on LearnIt?', 'Simply contact us, using the contact form on the bottom part of any of the pages on the site.  <br>
               User feedback is always appreciated, and will help us to build a stronger platform for our community.');
 
---INSERT INTO 'report'(id_report, "date", reason, id_question, id_answer) VALUES();
+--TODO
+--INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES();
 
---INSERT INTO 'userReport'(username, id_report) VALUES();
+--INSERT INTO "userReport"(username, id_report) VALUES();
