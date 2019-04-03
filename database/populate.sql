@@ -45,11 +45,53 @@ INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(4, 'enthusiast'
 INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(5, 'advanced', 1500, 4999);
 INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(6, 'veteran', 5000,100000);
 
---INSERT INTO 'follow'(follower, following) VALUES();
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(1,'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(2, 'administrator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(3, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(4, 'moderator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(5, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(6, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(7, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(8, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(9, 'moderator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(10,'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(11, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(12, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(13, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(14, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(15, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(16, 'moderator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(17, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(18, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(19, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(20, 'member');
 
---INSERT INTO 'role'(id_role, type, beginningDate, endDate) VALUES();
 
---INSERT INTO 'notification'(id_notification, description, type, view, "date", id_user) VALUES();
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (1,'Infectedsea', 'tahcgvd13', 'infectedsea166@gmail.com', 'photography lover', '1980-05-17', 'photo1.png', 120, 1, false, false,1);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (2, 'Avocadoroxy', 'hsfid28', 'avocadoroxy@Hi.com','just learning things..', '1993-02-07', 'user12.png', 530, 2, false, false,2);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (3, 'Pepperliving','auyd45', 'pepper&salt@yahoo.com', 'quantum physicist', '1997-03-20', 'user3.png', 100, 3, false, false, 3);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (4, 'Unlinedminiature', 'aihcf5163', 'creaturesss12@sapo.com', 'admirer of nature', '2000-08-30', 'user4.png', 210, 4, false, false, 4);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (5, 'Activisthaiku', 'hskhu78', 'activist178@gmail.com', 'getting smarter', '1998-02-17', 'photo1.png', 300, 5, false, false, 5);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (6, 'Flycommon','pli123', 'flyingbird@io.org', null, '1975-02-17',null, 330, 6, false, false, 6);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (7, 'Moonshadows', 'poiuy1234','moonlight@mimi.com', 'engineering master', '1965-02-17', null, 30, 1, false, false,7);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (8, 'Chessbeans', 'mnbv67', 'chessLover@beans.com', 'simplicity is prerequisite for reliability', '2000-02-17','photo12.png', 209, 2, false, false, 8);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (9, 'Luminous','.1.2.3.a.b.c', 'lumi123@gamil.com', null, '1957-02-17','photo49.png', 205, 3, false, false, 9);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (10, 'Pizzazz','osjd123', 'pizzaAndChips@yahoo.com', 'coffee and pizza! ', '1993-02-17', 'olght.png', 520, 4, false, false,10);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (11, 'Pantaloons','ju1we2-06', 'sleepingsheep@hotmail.com', 'always tired..', '1999-02-17', null, 400, 5, false, false, 11);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (12, 'Sparky', '#jsdy', 'sparkytube@sapo.com', null, '1996-02-17', 'pho.png', 100, 6, true, false, 12);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (13, 'Cooper', '6h7sdBB', 'doccooper@un02.com', null, '1888-02-17','photott.png', 600, 6, false, true, 13);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (14, 'Vikingkong', 'poife17_', 'vikingargh@hotmail.com', 'we are made by history', '2017-02-17', 'photo45.png', 50, 1, false, false, 14);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (15, 'FieryBoy', 'zxc&+12', 'fieryboy123@piripiri.com', 'Mathssssssss', '2002-02-17', 'photo98.png', 320, 3, false, false, 15);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (16, 'FateTalk', 'AbAb45', 'sadfate98@gmail.com', 'anti-social behaviour is a trait of intelligence in a world full of conformists', '1984-09-17', 'photo1.png', 500, 4, false, false, 16);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (17, 'LittleRoses','jsoud0987', 'blueroses@gmail.com', null, '2005-06-28', 'photooo.png', 40, 1, false, false, 17);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (18, 'RainbowRecipe','kvsy986', 'diamondspot@oreo.org', null, '1974-02-17', null, 300,5, false, false, 18);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (19, 'YoungerDivision','agsd12%p', 'divisionbell@yahoo.com', 'music is life', '1981-02-10', 'photo1.png', 120, 2, false, false, 19);
+INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (20,'HappyCat','alduyf123', 'catskittens@pic.com', 'looking for inspiration', '2001-12-05', 'photo5.png', 200, 5, false, false, 20);
+
+--TODO
+--INSERT INTO "follow"(follower, following) VALUES();
+
+--INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES();
 
 INSERT INTO "category"(id_category, name) VALUES(1, 'art');
 INSERT INTO "category"(id_category, name) VALUES(2, 'biology');
@@ -527,8 +569,8 @@ The index of refraction is wavelength dependent but if the waves are totally can
 
 I assume there are no “waves” and thus no detectable wavelength per se while beams are in the glass if there is total destructive interference at that point in space.', '2017-02-07 21:34:44', 9, 'jbTdW.jpg', false, 28);
 
-
---INSERT INTO 'voteQuestion'(username, id_question) VALUES();
+--TODO
+--INSERT INTO "voteQuestion"(username, id_question) VALUES();
 
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(29, 'It is necessary for the students to have real time experiences in order to understand any topic in studies. Such experiences help them to know the problems that occur apart from books and hence they can understand how people actually behave in real life to solve them.
 
@@ -1008,8 +1050,8 @@ INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(66, 67);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(69, 70);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(70, 71);
 
-
---INSERT INTO 'bestAnswer'(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
+--TODO
+--INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
 
 INSERT INTO "faq"(id_faq, question, answer) VALUES(1, 'How does LearnIt work?', 'LearnIt is a Q&A community with an academic setting. Users can ask their own questions and answer questions posted by other people, as well as cast votes on posts in order to verify the quality of the information. You can vote a post positively or negatively, and the question owner can choose one of the answers as the best one. <br>
               Each question can be set to one of 12 distinct categories: Art, Biology, Business, Chemistry, Geology, History, Linguistics, Math, Medicine, Physics, Psychology and Technology; whose hubs can be freely browsed. <br>
@@ -1040,6 +1082,7 @@ INSERT INTO "faq"(id_faq, question, answer) VALUES(5, 'What happens if I get ban
 INSERT INTO "faq"(id_faq, question, answer) VALUES(6, 'Where do I suggest features I would like to see on LearnIt?', 'Simply contact us, using the contact form on the bottom part of any of the pages on the site.  <br>
               User feedback is always appreciated, and will help us to build a stronger platform for our community.');
 
---INSERT INTO 'report'(id_report, "date", reason, id_question, id_answer) VALUES();
+--TODO
+--INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES();
 
---INSERT INTO 'userReport'(username, id_report) VALUES();
+--INSERT INTO "userReport"(username, id_report) VALUES();
