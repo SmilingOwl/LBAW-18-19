@@ -149,11 +149,10 @@ EXECUTE PROCEDURE updateUserRankFunction();
 
 -- TODO--
 
--- A member is notified when someone else follows him.
--- A member is notified when someone else upvotes/downvotes his question/ answer/comment
--- A member is notified when someone else leaves a comment/ answer on his question
+--A member is notified when someone else follows him.
+--A member is notified when someone else upvotes/downvotes his question/ answer/comment
+--A member is notified when someone else leaves a comment/ answer on his question
 --A member’s score is updated when there is activity on his content (upvotes)
--- A member’s score is updated when there is activity from his account (new questions and/or answers).
+--A member’s score is updated when there is activity from his account (new questions and/or answers).
 --A question must always have one category
--- A member cannot report his own content (questions, comments and answers)
---
+--A member cannot report his own content (questions, comments and answers)
