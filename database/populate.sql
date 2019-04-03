@@ -45,14 +45,14 @@ INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(4, 'enthusiast'
 INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(5, 'advanced', 1500, 4999);
 INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(6, 'veteran', 5000,100000);
 
-INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(1,'member');
-INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(2, 'administrator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(1,'administrator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(2, 'moderator');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(3, 'member');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(4, 'moderator');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(5, 'member');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(6, 'member');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(7, 'member');
-INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(8, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(8, 'moderator');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(9, 'moderator');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(10,'member');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(11, 'member');
@@ -65,6 +65,24 @@ INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(17, 'member');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(18, 'member');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(19, 'member');
 INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(20, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(21, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(22, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(23, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(24, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(25, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(26, 'moderator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(27, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(28, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(29, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(30, 'moderator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(31, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(32, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(33, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(34, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(35, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(36, 'moderator');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(37, 'member');
+INSERT INTO "role"(id_role, type, beginningDate, endDate) VALUES(38, 'member');
 
 
 INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted, id_role) VALUES (1,'Infectedsea', 'tahcgvd13', 'infectedsea166@gmail.com', 'photography lover', '1980-05-17', 'photo1.png', 120, 1, false, false,1);
