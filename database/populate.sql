@@ -105,7 +105,7 @@ INSERT INTO "category"(id_category, name) VALUES(12, 'technology');
 
 
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(1, 'math', 'Tyesha found that the z-statistic was 2.1 and that the critical z-values were -1.96 and 1.96. Which of the following is a valid conclusion based on these results?', 'One can reject the null hypothesis. One can reject the alternate hypothesis. One can accept the null hypothesis. One cannot accept or reject the null hypothesis.','2017-05-06 16:18:36' , 6, null, false, 4);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(2, 'math', 'What are the solutions to this equation?', null,'2017-05-06 16:18:36' , 2, 'img1.jpg', false, 15);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(2, 'art', 'What is required to start sculpting clay (tools, experience…)?', null,'2017-05-06 16:18:36' , 2, null, false, 28);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(3, 'technology', 'What are the best C++ books?', null,'2017-01-10 16:35:44', 30, null, false, 33);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(4, 'business', 'How do I study business law?', null,'2016-09-13 10:14:12', 5, null, false, 6);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(5, 'medicine', 'What CBRNE agent inhibits the enzyme AChE allowing ACh to accumulate affecting the way cells transmit signals to the body?', 'I cannot find anything on my textbooks.', '2016-07-07 06:05:00' , 10, null, false, 21);
@@ -115,8 +115,8 @@ C.Heat never flows from hot to cold.
 D.Entropy never increases.
 
 What''s the right answer?','2018-01-30 15:08:23' , 2, null, false, 16);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(7, 'physics', 'What is the electrostatic potential energy of an electron that is .02 meters from a Van de Graaff machine that has a negative charge of -4.0 Couloumbs?', null,'2017-09-19 19:46:44' , 0, null, false, 8);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(8, 'chemistry', 'How many grams of silver chloride are produced when 45 g of calcium chloride react with excess silver nitrate?​', null ,'2017-06-01 08:44:35', 7, null, false, 28);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(7, 'physics', 'Is every open circuit a capacitor?', 'I think that even open-ended wires can let AC current flow through them, just with a low capacitance. I also think an antenna could be a capacitor and open ended. Am I thinking correctly?','2017-09-19 19:46:44' , 28, null, false, 8);
+INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(8, 'chemistry', 'Melting and boiling points of benzene and fluorobenzene', null ,'2017-06-01 08:44:35', 7, null, false, 28);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(9, 'linguistics', 'Why do the five basic questions in the English language (what, why, when, who and where) all start with the letter “w”?', null, '2017-12-19 05:52:53', 15, null, false, 31);
 INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(10, 'linguistics', 'What is the opposite of gravitas ?', 'I''m having difficulty coming up with a valid antonym for gravitas.
 
@@ -569,11 +569,173 @@ I assume there are no “waves” and thus no detectable wavelength per se while
 --TODO
 --INSERT INTO "voteQuestion"(username, id_question) VALUES();
 
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(29, 'It is necessary for the students to have real time experiences in order to understand any topic in studies. Such experiences help them to know the problems that occur apart from books and hence they can understand how people actually behave in real life to solve them.
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(1, 'One can reject the null hypothesis.
+
+This is a 2-sided hypothesis test since we have 2 critical values; -1.96 and 1.96. The test is usually to compute the test statistic then reject the null hypothesis if the test statistic lies in the critical/rejection region.
+
+In our case, we reject the null hypothesis since 2.1 lies to the right of 1.96 which forms a part of the critical region', '2017-03-17 11:12:24', 34, NULL, false, 1, 30);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(2, 'There are a few different options for sculpting materials that fall withing the broad definition of ''clay''
+
+Water based clays
+
+These are essentially the same stuff used for pottery and are widely used for ''fine art'' type sculpture. The big advantage of water based clay is that its plasticity and hardness can be controlled according to how wet it is so you can use wet clay to quickly rough out a form and then allow it to dry a bit to firm up to allow you to refine surface detail.
+Their disadvantage is that they tend not to be very string when wet and usually need some sort of internal support armature to support their own weight. You can get clays filled with paper or nylon fibres which are a bit stronger when dry but, in my experience aren''t that nice to work with as the fibres can interfere with the surface.
+
+
+Oil based Clays
+
+Also known as ''Plasticine'' common professional brands are Chavant and Monster Clay
+These are available in a range of hardness and, unlike some cheaper brands can be used with RVT silicone to make moulds.
+
+These tend to be a bit firmer than water based clay and as such lend themselves well to small, finely detailed models and is also a bit cleaner to work with. It has reasonable strength and tends to be less reliant on internal armatures. 
+The downside of this is that it can be more time consuming to build up the bulk of the model and tends not to be so good for sweeping organic surfaces, although then can be softened a bit with heat and the professional brands can be melted and cast.
+
+These give very good detail and can be smoothed very effectively. They also don''t dry out and as such can be worked into and reused more or less indefinitely (although they will gradually decline in quality over time).
+
+
+Modelling Putty
+
+This includes epoxy putties like milliput these are mixed from 2 parts to a firm putty and will dry hard after a few hours. This has the advantage that they are hard and string enough to be used as a finished piece and a such are frequently used for converting and modifying existing miniatures.
+Obviously the downside of this is that you only have a few hours to sculpt it before it sets, although you can still drill, sand and carve it once it has set which can be useful in some situations.
+
+
+Wax
+
+There are a variety of sculpting waxes available. Their big advantage is that their harness can be controlled easily by both heating and blending different wax grades. They can be both sculpted and carved depending on relative hardness.
+Waxes especially harder ones tend to be good for getting very crisp detail.
+
+
+Tools
+
+There are a few broad categories of sculpting tools:
+
+Wax carving/dental tools : these tend to be stainless steel and are good for fine detail. I would say that a set of these is a good starting point.
+Ball stylus tools : designed for creating consistent fillets but can also be useful for sculpting fine detail and undercuts.
+Hardwood clay tools : these tend to be geared more towards larger pieces in relatively soft media.
+Silicone tipped shapers : best suited to final smoothing and polishing, specifically in conjunction with solvents and/or lubricants.
+etc etc
+
+Tool selection is really a case of what works for you but all of the above are likely to be potentially useful.
+
+
+Casting
+
+Casting is a whole separate subject in itself....
+Silicone rubber is probably the most versatile mould material and is reasonably easy to use.
+For small scale casting you are really looking at catalysed or 2 part resins which include Polyester, Epoxy and Acrylic. In general PU resins are a good bet as they cast well, aren''t too expensive, have good mechanical properties and are reasonably easy to use.
+Figurine casting also tends to use resin with powder fillers added. Different fillers give different properties to the casting.
+PVC and ABS need to be extruded or injection moulded and aren''t really practical for small scale casting.
+
+
+General Advice
+
+I would suggest starting out with a relatively soft medium such as water based clay or the softest grades of oil clay. These are easy to work with and will let you ''sketch'' figures reasonably quickly to get a feel for working in 3 dimensions. 
+As you progress you may want to try harder grades to allow you to get a smoother finish and crisper detail. As your style evolves you will start to learn exactly what properties you need.', '2016-02-17 22:09:24', 2, NULL, false, 2, 2);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(3, 'I''d recommend:
+C++: The Complete Reference, 4th Edition: Herbert Schildt
+Thinking in C++: Introduction to Standard C++, (2nd Edition) : Bruce Eckel
+C++ FAQ (2nd Edition): Marshall P. Cline 
+
+If you''re just starting, try to follow this order:
+
+Introduction
+Data types
+Input (cin) / output (cout)
+Selection statement (if , if/else, switch)
+Loops (While, for, Do while)
+Manipulators
+Precedence
+File streaming
+Functions
+Scopes
+Arrays
+Structs
+Classes', '2017-02-17 08:07:24', 6, NULL, false, 3, 7);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(4, 'It is necessary for the students to have real time experiences in order to understand any topic in studies. Such experiences help them to know the problems that occur apart from books and hence they can understand how people actually behave in real life to solve them.
 
 Such examples can be studies by doing case studies of events. Similarly in the filed of law, doing business law case study assignment help in achieving that motive.
 
 The data for case studies can be extracted from anywhere from internet to libraries. It would be good to ask about some popular case studies from your guide or professor.', '2016-09-13 14:18:09', 1, NULL, false, 4, 23);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(5, 'I think these agents are called Vesicant agents, but I may be wrong.', '2016-04-15 11:11:23', 0, NULL, false, 5, 38);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(6, 'It''s ''A''', '2016-02-15 17:52:24', 0, NULL, false, 10, 20);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(7, 'You are right, every circuit possesses some unintended capacitance, which is called "stray" capacitance. Whether or not it affects the operation of the circuit depends on the frequencies that the circuit is intended to operate at. 
+The amount of stray capacitance that a circuit has is typically tiny, but at high enough frequencies even a very tiny amount of capacitance will couple parts of the circuit together and make it malfunction.
+
+For example, the circuit inside a plug that connects together computer routers and switches in a big router farm has to operate at ultrahigh frequencies, at which two adjacent traces on a circuit board can present enough stray capacitance to stop the device from functioning.
+
+And the capacitance between a long piece of wire strung between two trees as a shortwave transmitting antenna and the ground beneath it is enough to alter the resonant frequency of the antenna, which must be taken into account when designing and building the antenna.', '2017-03-16 14:28:36', 33, NULL, false, 7, 36);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(8, 'This species is a derivative of benzene, with a single fluorine atom attached. 
+Its melting point is -44 °C, which is lower than that of benzene, indicative of the remarkable effect of fluorination on the intermolecular interactions as seen throughout organofluorine chemistry. In contrast, the boiling points of PhF and benzene differ by only 4 °C.
+
+Why is this true? 
+
+From what I understand the melting point is the point at which the solid and liquid forms are in equilibrium.
+
+Boiling point is the point at which the liquid and gas phases are in equilibrium.
+
+I know that intermolecular forces play an integral role in melting and boiling point. However, why does it seem that the strength of the intermolecular forces in the solid phase is stronger than that in the liquid phase for fluorobenzene?', '2016-11-22 22:11:33', 4, NULL, false, 8, 34);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(9, 'They do come from the same language! But they’re even more connected to each other than that!
+
+To run down the interrogative words, we currently have:
+
+Who(m), what, where, when, why, which, whose, whether, and how.
+To add to these, there are a couple that have been dying out in recent centuries:
+
+Whence (where from), and whither (where to).
+You might notice that all of them (except “how”) begin with “wh”. For most of us, that “h” is silent. But originally, the combination “wh” meant a w sound that was de-voiced, like a whisper (and still is in some dialects).
+
+Anyway, all of these words can be traced directly back to Old English:
+
+hwa → who
+hwam → whom
+hwaet → what
+hwaer → where
+hwaenne → when
+hwi → why
+hwilc → which
+(the final c was pronounced like “ch”)
+hwaes → whose
+hwaeder→ whether
+hu → how
+hwanone → whence
+hwider → whither
+Note that instead of “wh”, they wrote “hw”… but the sound was the same.
+
+(By the way, you might be wondering why “how” doesn’t begin with w. The way double-u was originally written was literally with a double-u. For example, hwa was written as huua. Since hu already had a u, writing a bunch more of the same letter in there was probably seen as redundant.)
+
+In fact, these words are even older. You can find them in proto-Germanic, the language spoken by the Angles and Saxons before they ever even left for Britain. This why similar words can be found in German: wer, welch, wann, wenn, wo, woher, wohin, etc.
+
+And they go even further back!
+
+Long, long, long before the Anglo-Saxon invasion, before the Romans, before the Germans ever even lived in Germany, there were the Indo-Europeans. This was a tribe of herders from around the Black Sea that were so successful at invading everywhere that their language… well… see the image.
+
+So why do all the question words sound so similar? Because they all came from the same word!
+
+One thing to understand about the language of the Indo-Europeans is that it used declensions. For each noun, you changed the ending based on what role it had in the sentence. In Modern English, we mostly use prepositions instead. Consider the sentence:
+
+I am taking the bus, to the library, and returning the book, into the box.
+
+A language with declensions would say something more like:
+
+I-subject am returning the book-object, the box-into, the bus-using, the library-to.
+
+This used to be everywhere in Indo-European languages; ancient Greek had it, Latin had it, German still has it to a limited extent… even Finnish, despite being completely unrelated, has a staggering array of them. We still use them a tiny bit in our pronouns: it’s the reason why “I” and “me” are different.
+
+So all these words — every one of them — came out of a single word that’s at least 4000 years old:
+
+kwod.
+
+This word was closest to “what”, but it took a different form based on whether it was someone or something, whether is was the actor or the actee, whether it was describing an object, place, or method, and so. These words made it into proto-Germanic, then to Old English (a few more were made a long the way: “which” came from hwilc, which was just hwi+lic, or “who-like”)
+
+You might notice that kwod begins with a k. It turns out that, for some reason, all the words beginning with the k sound switched to an h sound in proto-Germanic.
+
+But they didn’t in Latin! Latin kept the k sound, and with the w, often writing it as “qu”, giving the words:
+
+quis, quod, quorum, cur, quat, qualis, quota, quantus, and of course, Quora!
+
+Some of these live on in English (“quota”, “quantity”, “qualify”, “quorum”). But they’re most obvious in other Romance languages, such as Spanish.
+
+To answer your question, yes, they are all from the same language, but also the same word, and so are many other words too!', 16, 'kwod.png', false, 9, 5);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(30, 'You could try ''levity''.
 
 Levity may refer to: a sense of amusement, the opposite of gravitas', '2017-02-17 11:12:24', 76, NULL, false, 10, 20);
