@@ -53,7 +53,8 @@ FROM question INNER JOIN "user" ON question.id_user = "user".id_user;
 
 -- Obtain all the answers to a question
 SELECT "user".username, "user".profilePhoto, answer.description, answer.date
-FROM answer INNER JOIN question ON answer.id_question = question.id_question INNER JOIN "user" ON question.id_user = "user".id_user;
+FROM answer INNER JOIN question ON answer.id_question = question.id_question 
+INNER JOIN "user" ON question.id_user = "user".id_user;
 
 
 -- Obtain the top users (highest score)
@@ -97,7 +98,9 @@ SET view = true;
 
 -- Update comment
 
+
 -- rate a question
+
 
 -- rate an answer
 
@@ -107,24 +110,43 @@ SET view = true;
 --------------DELETES--------------
 
 -- delete a question
+DELETE FROM question WHERE id = $id;
 
 -- delete an answer
+DELETE FROM answer WHERE id = $id;
 
 -- delete a comment
+DELETE FROM comment WHERE id = $id;
 
 -- delete account
+DELETE FROM "user" WHERE id = $id;
 
 
 -------------ADD INFO--------------
 
 -- add new notification to an user
+INSERT INTO notification (type, date, content, member_id)
+VALUES ($type, $date,$content, $member_id);
+
 
 -- add new user
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto) 
+VALUES ($username, $password, $email, $bioDescription, $birthdate, $profilePhoto);
+
 
 -- add new category
+INSERT INTO category(name)
+VALUES($name);
+
 
 -- add new question
+INSERT INTO question(name, title, description, date, photo, id_user) 
+VALUES($name, $title, $description, $date, $photo, $id_user);
+
 
 -- add new answer
+INSERT INTO answer("text","date", photo, id_question, user_post)
+VALUES($"text",$"date", $photo, $id_question, $user_post);
+
 
 -- report
