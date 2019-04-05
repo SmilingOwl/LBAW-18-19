@@ -83,16 +83,16 @@ BETWEEN $beginning_date AND $end_date;
 
 
 -- Obtain all the comments to an answer
-SELECT id_answer,"text","date",votes,photo,deleted,id_question,user_post
+SELECT id_answer, "text", "date", votes, photo, deleted, id_question, user_post
 FROM 
 (SELECT firstAnswer,secondAnswer AS id_comment
 FROM comment
-WHERE firstAnswer=$answer)
-INNER JOIN answer ON (id_comment=answer.id_answer);
+WHERE firstAnswer = $answer)
+INNER JOIN answer ON (id_comment = answer.id_answer);
 
 
 -- Obtain questions matching a search input
-SELECT id_question,title
+SELECT id_question, title
 FROM question
 WHERE search @@ plainto_tsquery('english',$search)
 ORDER BY ts_rank(search,plainto_tsquery('english',$search)) DESC;
@@ -121,7 +121,6 @@ SET "text" = $"text", photo = $photo
 WHERE id_answer = $id;
 
 
-
 -- Mark notification as read
 UPDATE notification
 SET view = true
@@ -130,14 +129,14 @@ WHERE id_notification = $id;
 
 -- rate a question
 UPDATE  question
-SET votes=votes+$quantidade
-WHERE id_question=$id_question;
+SET votes = votes + $quantidade
+WHERE id_question = $id_question;
 
 
 -- rate an answer/comment
-UPDATE  answer
-SET votes=votes+$quantidade
-WHERE id_answer=$id_answer;
+UPDATE answer
+SET votes = votes + $quantidade
+WHERE id_answer = $id_answer;
 
 
 --------------DELETES--------------

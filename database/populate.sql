@@ -1316,14 +1316,59 @@ INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(66, 67);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(69, 70);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(70, 71);
 
-INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(1,'2016-08-01 14:55:21',true,61);
-INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(2,'2017-11-26 02:14:23',false,65);
-INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(3,'2016-05-09 09:27:01',true,69);
-INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(4,'2016-04-11 14:33:46',true,74);
-INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(5,'2017-04-15 22:18:42',true,77);
-INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(6,'2016-04-03 15:14:57',false,81);
-INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(7,'2016-04-06 17:05:22',true,82);
-INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(8,'2016-02-18 01:31:14',true,88);
+
+INSERT INTO "bestanswer"(id_bestAnswer, attributionDate,"text" , "date", active, votes, photo) VALUES(1,'2018-12-01 14:55:21','Wassily Kandinsky immediately comes to mind. His work always seemed like a piano composition, his use of lines and shapes creating a rhythm filled and enhanced with color. One can almost hear the music.', '2018-07-29 22:57:31',true,63,'main-qimg.jpg');
+INSERT INTO "bestanswer"(id_bestAnswer, attributionDate,"text" , "date", active, votes, photo) VALUES(2,'2018-11-26 02:14:23', 'Enables implies that this uncovers a new ability for the user to log in.
+
+Using a different wording:
+
+The password gives the user the ability to login.
+
+Whereas allows implies that the user has been given the permission to login as if they weren''t allowed before.
+
+Attempting to put this into a different wording:
+
+The password gives the user the permission to login
+
+This is erroneous as the permission may in this case already be granted and they simply haven''t been given the ability to login yet', '2018-11-25 23:55:23',false, 1, NULL);
+INSERT INTO "bestanswer"(id_bestAnswer, attributionDate,"text" , "date", active, votes, photo) VALUES(3,'2018-05-09 09:27:01', 'The answer to your first question is, in a sense, yes, the photon avoids the angles that would produce destructive interference. But probably not in the way you are thinking.
+
+Photons are not little balls of something. They are not particles as we understand the word in our classical macroscopic world. The word "particle" has a different meaning in the quantum microscopic world. A particle is an excitation of a field, in this case, the EM field. When the field gives up a quantum of excitation during an interaction with another object, it does so 1.) at a point 2.) gives up its energy to the other object and 2.) gives up its momentum. That''s just what happens in a classical collision. But unlike the classical collision, the "particle" vanishes. Clearly the classical particle picture has a problem.
+
+In the quantum mechanical picture, we start with the EM field. The field fills all of the space between the source and the screen (even if there is no source, the zero-point field exists), and it exists in whatever slits are available. If there are two slits there are nodes (points of zero field) on the screen due to what you might call interference, but you might also call it diffraction, the way the field arranges itself around objects. The field, and thus the excitation (photon) fills all of space, but the field, and thus the excitation, has zero amplitude at a node. No interaction will occur at the points on the screen where a node exists. As if those locations are avoided, even though there is only one photon. (By the way, this picture explains the statement "A photon interferes only with itself.")
+
+I don''t know quite how to interpret your second question. I`ll say this: In the quantum mechanical picture, the field exists in both slits, so the excitation exists in both slits. If you call the excitation a photon, then the photon goes through both slits. But this is a dangerous statement because it mixes up classical, quantum, and everyday meanings of words.
+
+By the way, this is not the only way to "explain" these things. There are other mental pictures that are consistent with the theoretical physics. There''s no one correct picture. I think (my opinion) that this fact speaks to our brain''s limitations, its inability to understand the "true" nature of what''s going on. Our limited brains create metaphors based on things that we can understand or visualize. But this is just my personal point of view.', '2018-05-06 09:27:01',true, 16, NULL);
+INSERT INTO "bestanswer"(id_bestAnswer, attributionDate,"text" , "date", active, votes, photo) VALUES(4,'2018-04-11 14:33:46', 'Amplification
+
+It does not depend on the music file, but at the amplifier sending the music to a speaker, or to a headphone/earplug connector.
+
+Music file
+
+A music file only contains ''values'', and mostly in a compressed form. After uncompressing, you get values which has a certain amount on bits per value (typically 16 or more).
+
+Conversion
+
+A microcontroller can send these values to a speaker via an pre- and/or amplifier, which converts it into actual voltages. So it depends on the amount of amplification.
+
+Protection
+
+Also note that sending continuous ''max values'' do not result in a loud sound, actually it would breaks the speaker (to prevent this, in the amplifier a so-called DC speaker protection is present). A wave is needed to let the speaker move outwards and inwards very fast, and this is done by sending changing values to the speaker.
+
+Measure
+
+If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2018-04-09 18:18:46',false, 17, NULL);
+INSERT INTO "bestanswer"(id_bestAnswer, attributionDate,"text" , "date", active, votes, photor) VALUES(5,'2018-05-15 22:18:42', 'These "jumps" that you brought up are not part of the kanji, they are part of the typeface.
+
+(More specifically, they may be treated like serifs - or little decorations at the edge of certain lines)
+
+When you are learning kanji, you should definitely not be copying or referencing printed characters. You should learn from hand-written characters. The basics of how to write kanji are not taught or learned from printed or typeface forms.
+
+The best online reference I know of for hand-written Japanese characters is the kakijun website', '2018-04-14 18:18:42',true, 19, NULL);
+INSERT INTO "bestanswer"(id_bestAnswer, attributionDate,"text" , "date", active, votes, photo) VALUES(6,'2018-08-03 15:14:57', 'Not in water. Free electron in water is really unfavorable, so no significant concentration of them can be generated chemically, and it almost immediately reduces water itself to hydrogen (but I heard rumors about generation of solvated electrons in water in very special experiment with short half-life)
+
+In liquid NH3, however, solvated electrons can occur, so self-discharge of galvanic cells with NH3-based electrolyte may occur through travel of electrons via electrolyte.', '2018-04-03 07:09:13', false, 12, NULL);
 
 INSERT INTO "faq"(id_faq, question, answer) VALUES(1, 'How does LearnIt work?', 'LearnIt is a Q&A community with an academic setting. Users can ask their own questions and answer questions posted by other people, as well as cast votes on posts in order to verify the quality of the information. You can vote a post positively or negatively, and the question owner can choose one of the answers as the best one. <br>
               Each question can be set to one of 12 distinct categories: Art, Biology, Business, Chemistry, Geology, History, Linguistics, Math, Medicine, Physics, Psychology and Technology; whose hubs can be freely browsed. <br>
