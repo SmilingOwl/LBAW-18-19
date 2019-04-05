@@ -64,13 +64,28 @@ ORDER BY points DESC
 LIMIT 10;
 
 
--- Obtain all the comments to an answer
-
--- Obtain questions matching a search input
-
 -- Obtain trending category (category with the most questions associated)
+SELECT category.name
+FROM category INNER JOIN question 
+ON category.id_category = question.name
+GROUP BY  category.name
+ORDER BY count(*) DESC
+LIMIT 5;
+
 
 -- Obtain questions posted in a specific date period
+SELECT "user".username, question.title, question.description, question."date"
+FROM question INNER JOIN "user"
+ON question.id_user = "user".id_user
+WHERE question."date" 
+BETWEEN $beginning_date AND $end_date;
+
+
+/*TODO*/
+-- Obtain all the comments to an answer
+
+
+-- Obtain questions matching a search input
 
 
 --------------UPDATES--------------
@@ -96,6 +111,8 @@ SET "text" = $"text", photo = $photo;
 UPDATE notification
 SET view = true;
 
+
+/*TODO*/
 -- Update comment
 
 
@@ -103,6 +120,7 @@ SET view = true;
 
 
 -- rate an answer
+
 
 -- rate a comment
 
@@ -148,5 +166,5 @@ VALUES($name, $title, $description, $date, $photo, $id_user);
 INSERT INTO answer("text","date", photo, id_question, user_post)
 VALUES($"text",$"date", $photo, $id_question, $user_post);
 
-
+/*TODO*/
 -- report

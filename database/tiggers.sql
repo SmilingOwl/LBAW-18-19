@@ -14,10 +14,12 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
+
 CREATE TRIGGER report_association 
 BEFORE INSERT OR UPDATE ON report
 FOR EACH ROW 
 EXECUTE PROCEDURE report_asso();
+
 
 DROP TRIGGER IF EXISTS answerDate ON answer;
 DROP FUNCTION IF EXISTS answerDateCheck();
@@ -59,6 +61,7 @@ BEGIN
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
+
 
 CREATE TRIGGER bestAnswerDate
 BEFORE INSERT OR UPDATE ON bestAnswer
