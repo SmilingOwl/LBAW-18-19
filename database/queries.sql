@@ -115,7 +115,7 @@ WHERE id_question = $id;
 
 
 
--- Update answer
+-- Update answer/commet
 UPDATE answer
 SET "text" = $"text", photo = $photo
 WHERE id_answer = $id;
@@ -128,24 +128,16 @@ SET view = true
 WHERE id_notification = $id;
 
 
-
-/*TODO*/
--- Update comment (é como se fosse uma answer)
-
-
 -- rate a question
 UPDATE  question
 SET votes=votes+$quantidade
 WHERE id_question=$id_question;
 
 
--- rate an answer
+-- rate an answer/comment
 UPDATE  answer
 SET votes=votes+$quantidade
 WHERE id_answer=$id_answer;
-
-
--- rate a comment(é como se fosse uma answer)
 
 
 --------------DELETES--------------
