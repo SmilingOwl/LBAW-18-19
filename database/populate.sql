@@ -746,7 +746,7 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 Such examples can be studies by doing case studies of events. Similarly in the filed of law, doing business law case study assignment help in achieving that motive.
 
 The data for case studies can be extracted from anywhere from internet to libraries. It would be good to ask about some popular case studies from your guide or professor.', '2018-01-13 14:18:09', 1, NULL, false, 4, 23);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(5, 'I think these agents are called Vesicant agents, but I may be wrong.', '2018-04-15 11:11:23', 0, NULL, false, 5, 38);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(5, 'I think these agents are called Vesicant agents, but I may be wrong.', '2018-04-12 11:11:23', 0, NULL, false, 5, 38);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(6, 'It''s ''A''', '2018-02-15 17:52:24', 0, NULL, false, 10, 20);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(7, 'You are right, every circuit possesses some unintended capacitance, which is called "stray" capacitance. Whether or not it affects the operation of the circuit depends on the frequencies that the circuit is intended to operate at. 
 The amount of stray capacitance that a circuit has is typically tiny, but at high enough frequencies even a very tiny amount of capacitance will couple parts of the circuit together and make it malfunction.
@@ -1410,10 +1410,10 @@ INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(5
 INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(6, '2019-01-09 14:37:05', 'Safety issue or illegal', NULL, 91);
 INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(7, '2019-01-09 15:17:26', 'Commercial or spam', NULL, 94);
 
-INSERT INTO "userReport"(username, id_report) VALUES(25, 1);
-INSERT INTO "userReport"(username, id_report) VALUES(27, 2);
-INSERT INTO "userReport"(username, id_report) VALUES(19,3);
-INSERT INTO "userReport"(username, id_report) VALUES(35,4);
-INSERT INTO "userReport"(username, id_report) VALUES(7,5);
-INSERT INTO "userReport"(username, id_report) VALUES(29,6);
-INSERT INTO "userReport"(username, id_report) VALUES(32,7);
+INSERT INTO "userreport"(username, id_report) VALUES(24, 1);
+INSERT INTO "userreport"(username, id_report) VALUES(27, 2);
+INSERT INTO "userreport"(username, id_report) VALUES(20,3);
+INSERT INTO "userreport"(username, id_report) VALUES(33,4);
+INSERT INTO "userreport"(username, id_report) VALUES(2,5);
+INSERT INTO "userreport"(username, id_report) VALUES(9,6);
+INSERT INTO "userreport"(username, id_report) VALUES(36,7);
