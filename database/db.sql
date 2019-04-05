@@ -114,7 +114,8 @@ CREATE TABLE question(
     photo text,
     deleted boolean NOT NULL,
     id_category integer NOT NULL REFERENCES category (id_category) ON UPDATE CASCADE,
-    id_user integer NOT NULL REFERENCES "user" (id_user) ON UPDATE CASCADE
+    id_user integer NOT NULL REFERENCES "user" (id_user) ON UPDATE CASCADE,
+    search tsvector
 );
 
 CREATE TABLE voteQuestion(
@@ -142,7 +143,7 @@ CREATE TABLE voteAnswer(
 
 CREATE TABLE comment(
     firstAnswer integer NOT NULL REFERENCES answer (id_answer) ON UPDATE CASCADE,
-    secondAnswer integer NOT NULL REFERENCES answer (id_answer) ON UPDATE CASCADE,
+    secondAnswer integer NOT NULL REFERENCES answer (id_answer) ON UPDATE CASCADE ON DELETE CASCADE,
     PRIMARY KEY (firstAnswer,secondAnswer)
 );
 
