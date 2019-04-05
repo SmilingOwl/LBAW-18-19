@@ -117,7 +117,7 @@ CREATE FUNCTION userAnswerVoteFunction() RETURNS TRIGGER AS $$
 DECLARE
     answer_owner integer;
 BEGIN
-    SELECT id_user INTO answer_owner FROM answer WHERE NEW.id_answer=answer.id_answer;
+    SELECT user_post INTO answer_owner FROM answer WHERE NEW.id_answer=answer.id_answer;
     IF (NEW.username = answer_owner) THEN
         RAISE EXCEPTION 'A user cannot vote on his own answer';
     END IF;
