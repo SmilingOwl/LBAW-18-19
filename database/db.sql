@@ -55,15 +55,6 @@ CREATE DOMAIN DateTime AS date
 
 --Tables--
 
-
-CREATE TABLE role  (
-    id_role SERIAL PRIMARY KEY,
-    type roleType NOT NULL DEFAULT 'member',
-    beginningDate DateTime,
-    endDate DateTime CONSTRAINT endDateBigger_ck CHECK (endDate > beginningDate),
-    id_user integer REFERENCES "user" (id_user) ON UPDATE CASCADE
-);
-
 CREATE TABLE rank (
     id_rank SERIAL PRIMARY KEY,
     name rankType NOT NULL DEFAULT 'rookie' CONSTRAINT name_uk UNIQUE,
@@ -83,6 +74,14 @@ CREATE TABLE "user" (
     id_rank integer NOT NULL DEFAULT rookieID() REFERENCES rank (id_rank) ON UPDATE CASCADE,
     banned boolean NOT NULL,
     deleted boolean NOT NULL
+);
+
+CREATE TABLE role  (
+    id_role SERIAL PRIMARY KEY,
+    type roleType NOT NULL DEFAULT 'member',
+    beginningDate DateTime,
+    endDate DateTime CONSTRAINT endDateBigger_ck CHECK (endDate > beginningDate),
+    id_user integer REFERENCES "user" (id_user) ON UPDATE CASCADE
 );
 
 CREATE TABLE follow (
