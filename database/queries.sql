@@ -94,22 +94,29 @@ BETWEEN $beginning_date AND $end_date;
 UPDATE "user"
 SET username = $name, password = $password, photo = $photo,
 bioDescription = $bioDescription, profilePhoto = $profilePhoto,
-points = $points;
+points = $points
+WHERE id_user = $id;
 
 
 -- Update question
 UPDATE question
-SET title = $title , description = $description, name = $name;
+SET title = $title , description = $description, name = $name
+WHERE id_question = $id;
+
 
 
 -- Update answer
 UPDATE answer
-SET "text" = $"text", photo = $photo;
+SET "text" = $"text", photo = $photo
+WHERE id_answer = $id;
+
 
 
 -- Mark notification as read
 UPDATE notification
-SET view = true;
+SET view = true
+WHERE id_notification = $id;
+
 
 
 /*TODO*/
@@ -128,16 +135,16 @@ SET view = true;
 --------------DELETES--------------
 
 -- delete a question
-DELETE FROM question WHERE id = $id;
+DELETE FROM question WHERE id_question = $id;
 
 -- delete an answer
-DELETE FROM answer WHERE id = $id;
-
--- delete a comment
-DELETE FROM comment WHERE id = $id;
+DELETE FROM answer WHERE id_answer = $id;
 
 -- delete account
-DELETE FROM "user" WHERE id = $id;
+DELETE FROM "user" WHERE id_user = $id;
+
+/*TOD*/
+-- delete a comment
 
 
 -------------ADD INFO--------------
