@@ -230,6 +230,31 @@ BEFORE INSERT ON userReport
 FOR EACH ROW
 EXECUTE PROCEDURE reportSelfFunction();
 
+
+--Pre-calculate FTS
+DROP TRIGGER IF EXISTS updateSearch ON question;
+DROP FUNCTION IF EXISTS updateSearchFunction();
+CREATE FUNCTION updateSearchFunction() RETURNS TRIGGER AS $$
+BEGIN
+  IF TG_OP = 'INSERT' THEN
+    NEW.search = to_tsvector('english', NEW.title);
+  END IF;
+  IF TG_OP = 'UPDATE' THEN
+      IF NEW.title <> OLD.title THEN
+        NEW.search = to_tsvector('english', NEW.title);
+      END IF;
+  END IF;
+  RETURN NEW;
+END
+$$ LANGUAGE 'plpgsql';
+
+
+CREATE TRIGGER updateSearch
+AFTER INSERT OR UPDATE ON question
+FOR EACH ROW
+EXECUTE PROCEDURE updateSearchFunction();
+
+
 -- TODO--
 
 

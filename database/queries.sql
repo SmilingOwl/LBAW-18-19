@@ -81,11 +81,21 @@ WHERE question."date"
 BETWEEN $beginning_date AND $end_date;
 
 
-/*TODO*/
+
 -- Obtain all the comments to an answer
+SELECT id_answer,"text","date",votes,photo,deleted,id_question,user_post
+FROM 
+(SELECT firstAnswer,secondAnswer AS id_comment
+FROM comment
+WHERE firstAnswer=$answer)
+INNER JOIN answer ON (id_comment=answer.id_answer);
 
 
 -- Obtain questions matching a search input
+SELECT id_question,title
+FROM question
+WHERE search @@ plainto_tsquery('english',$search)
+ORDER BY ts_rank(search,plainto_tsquery('english',$search)) DESC;
 
 
 --------------UPDATES--------------
@@ -120,16 +130,22 @@ WHERE id_notification = $id;
 
 
 /*TODO*/
--- Update comment
+-- Update comment (é como se fosse uma answer)
 
 
 -- rate a question
+UPDATE  question
+SET votes=votes+$quantidade
+WHERE id_question=$id_question;
 
 
 -- rate an answer
+UPDATE  answer
+SET votes=votes+$quantidade
+WHERE id_answer=$id_answer;
 
 
--- rate a comment
+-- rate a comment(é como se fosse uma answer)
 
 
 --------------DELETES--------------
@@ -143,35 +159,41 @@ DELETE FROM answer WHERE id_answer = $id;
 -- delete account
 DELETE FROM "user" WHERE id_user = $id;
 
-/*TOD*/
 -- delete a comment
-
+DELETE FROM comment WHERE secondAnswer=$id;
 
 -------------ADD INFO--------------
 
 -- add new notification to an user
-INSERT INTO notification (type, date, content, member_id)
-VALUES ($type, $date,$content, $member_id);
+INSERT INTO notification (id_notification, description, type, view,"date",id_user)
+VALUES (DEFAULT,$description, $type,$view, now(),$id_user);
 
 
 -- add new user
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto) 
-VALUES ($username, $password, $email, $bioDescription, $birthdate, $profilePhoto);
+INSERT INTO "user" (id_user,username, password, email, bioDescription, birthdate, profilePhoto) 
+VALUES (DEFAULT,$username, $password, $email, $bioDescription, $birthdate, $profilePhoto);
 
 
 -- add new category
-INSERT INTO category(name)
-VALUES($name);
+INSERT INTO category(id_category,name,icon)
+VALUES(DEFAULT,$name,$icon);
 
 
 -- add new question
-INSERT INTO question(name, title, description, date, photo, id_user) 
-VALUES($name, $title, $description, $date, $photo, $id_user);
+INSERT INTO question(id_question,name, title, description, "date", photo, id_user,search) 
+VALUES(DEFAULT,$name, $title, $description, now(), $photo, $id_user,NULL);
 
 
 -- add new answer
-INSERT INTO answer("text","date", photo, id_question, user_post)
-VALUES($"text",$"date", $photo, $id_question, $user_post);
+INSERT INTO answer(id_answer,"text","date", photo, id_question, user_post)
+VALUES(DEFAULT,$"text",now(), $photo, $id_question, $user_post);
 
-/*TODO*/
--- report
+-- add new report
+
+INSERT INTO report(id_report,"date", reason, id_question, id_answer)
+VALUES(DEFAULT,now(), $reason, $id_question, $id_answer);
+
+-- add new connection user report
+
+INSERT INTO userReport(username,id_report)
+VALUES($username,$id_report);
