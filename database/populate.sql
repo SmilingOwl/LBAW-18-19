@@ -162,35 +162,35 @@ INSERT INTO "notification"(id_notification, description, type, view, "date", id_
 INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES(7, 'Hexapod started following you', 'follow', true, '2019-01-25 16:27:38', 7);
 INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES(8, 'Triangletopic started following you', 'follow', false, '2019-02-15 22:04:35', 38);
 
-INSERT INTO "category"(id_category, name) VALUES(1, 'art');
-INSERT INTO "category"(id_category, name) VALUES(2, 'biology');
-INSERT INTO "category"(id_category, name) VALUES(3, 'business');
-INSERT INTO "category"(id_category, name) VALUES(4, 'chemistry');
-INSERT INTO "category"(id_category, name) VALUES(5, 'geology');
-INSERT INTO "category"(id_category, name) VALUES(6, 'history');
-INSERT INTO "category"(id_category, name) VALUES(7, 'math');
-INSERT INTO "category"(id_category, name) VALUES(8, 'medicine');
-INSERT INTO "category"(id_category, name) VALUES(9, 'linguistics');
-INSERT INTO "category"(id_category, name) VALUES(10, 'physics');
-INSERT INTO "category"(id_category, name) VALUES(11, 'psychology');
-INSERT INTO "category"(id_category, name) VALUES(12, 'technology');
+INSERT INTO "category"(id_category, name, icon) VALUES(1, 'art', 'art-06.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(2, 'biology', 'biology-01.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(3, 'business', 'business-07.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(4, 'chemistry', 'chemistry-03.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(5, 'geology', 'geology-10.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(6, 'history','history-08.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(7, 'math', 'maths-12.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(8, 'medicine', 'health-04.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(9, 'linguistics', 'linguistics-09.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(10, 'physics', 'physics-02.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(11, 'psychology', 'psychology-11.svg');
+INSERT INTO "category"(id_category, name, icon) VALUES(12, 'technology', 'tech-05.svg');
 
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(1, 'math', 'Tyesha found that the z-statistic was 2.1 and that the critical z-values were -1.96 and 1.96. Which of the following is a valid conclusion based on these results?', 'One can reject the null hypothesis. One can reject the alternate hypothesis. One can accept the null hypothesis. One cannot accept or reject the null hypothesis.','2017-05-06 16:18:36' , 6, null, false, 4);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(2, 'art', 'What is required to start sculpting clay (tools, experience…)?', null,'2017-05-06 16:18:36' , 2, null, false, 28);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(3, 'technology', 'What are the best C++ books?', null,'2017-01-10 16:35:44', 30, null, false, 33);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(4, 'business', 'How do I study business law?', null,'2016-09-13 10:14:12', 5, null, false, 6);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(5, 'medicine', 'What CBRNE agent inhibits the enzyme AChE allowing ACh to accumulate affecting the way cells transmit signals to the body?', 'I cannot find anything on my textbooks.', '2016-07-07 06:05:00' , 10, null, false, 21);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(6, 'physics', 'Based on the second law of thermodynamics why must a machine always be less than 100% efficient?', 'A.Heat never moves from cold to hot. 
+INSERT INTO "question"(id_question, title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(1,'Tyesha found that the z-statistic was 2.1 and that the critical z-values were -1.96 and 1.96. Which of the following is a valid conclusion based on these results?', 'One can reject the null hypothesis. One can reject the alternate hypothesis. One can accept the null hypothesis. One cannot accept or reject the null hypothesis.','2017-05-06 16:18:36' , 6, null, false,7, 4);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(2,'What is required to start sculpting clay (tools, experience…)?', null,'2017-05-06 16:18:36' , 2, null, false,1, 28);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(3, 'What are the best C++ books?', null,'2017-01-10 16:35:44', 30, null, false,12, 33);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(4,'How do I study business law?', null,'2016-09-13 10:14:12', 5, null, false,3, 6);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(5, 'What CBRNE agent inhibits the enzyme AChE allowing ACh to accumulate affecting the way cells transmit signals to the body?', 'I cannot find anything on my textbooks.', '2016-07-07 06:05:00' , 10, null, false, 8, 21);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(6, 'Based on the second law of thermodynamics why must a machine always be less than 100% efficient?', 'A.Heat never moves from cold to hot. 
 B.Heat is never converted completely into mechanical energy. 
 C.Heat never flows from hot to cold. 
 D.Entropy never increases.
 
-What''s the right answer?','2018-01-30 15:08:23' , 2, null, false, 16);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(7, 'physics', 'Is every open circuit a capacitor?', 'I think that even open-ended wires can let AC current flow through them, just with a low capacitance. I also think an antenna could be a capacitor and open ended. Am I thinking correctly?','2017-09-19 19:46:44' , 28, null, false, 8);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(8, 'chemistry', 'Melting and boiling points of benzene and fluorobenzene', null ,'2017-06-01 08:44:35', 7, null, false, 28);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(9, 'linguistics', 'Why do the five basic questions in the English language (what, why, when, who and where) all start with the letter “w”?', null, '2017-12-19 05:52:53', 15, null, false, 31);
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(10, 'linguistics', 'What is the opposite of gravitas ?', 'I''m having difficulty coming up with a valid antonym for gravitas.
+What''s the right answer?','2018-01-30 15:08:23' , 2, null, false,10, 16);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(7, 'Is every open circuit a capacitor?', 'I think that even open-ended wires can let AC current flow through them, just with a low capacitance. I also think an antenna could be a capacitor and open ended. Am I thinking correctly?','2017-09-19 19:46:44' , 28, null, false,10, 8);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(8, 'Melting and boiling points of benzene and fluorobenzene', null ,'2017-06-01 08:44:35', 7, null, false,4, 28);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(9, 'Why do the five basic questions in the English language (what, why, when, who and where) all start with the letter “w”?', null, '2017-12-19 05:52:53', 15, null, false,9, 31);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(10, 'What is the opposite of gravitas ?', 'I''m having difficulty coming up with a valid antonym for gravitas.
 
 Online searches return results like superficiality, cheerfulness, frivolity, facetiousness etc. which don''t work for me. They seem to be opposites of gravitas as it is understood by the person who has it.
 
@@ -202,85 +202,86 @@ There''s another sense of the word, as the quality of a person having gravitas. 
 
 What if what someone has to say is automatically disregarded because of... the opposite of gravitas.
 
-What would that word be?', '2017-02-17 09:41:14', 28, NULL, false, 12);
+What would that word be?', '2017-02-17 09:41:14', 28, NULL, false,9, 12);
 
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(11, 'chemistry', 'Organic chemistry Iodoform Reaction', 'Why does 2'',6''dimethyl-acetophenone not give iodofom test?', '2016-12-23 02:11:35', 8, 'BvxPv.jpg', false, 3);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(11, 'Organic chemistry Iodoform Reaction', 'Why does 2'',6''dimethyl-acetophenone not give iodofom test?', '2016-12-23 02:11:35', 8, 'BvxPv.jpg', false,4, 3);
 
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(12, 'technology', 'Is there a good way to store credentials outside of a password manager?', 'A lot of the users in my company are using their agendas to write down their password and usernames, or Excel sheets with a protected password. I''m hesitant to install software for password management after reading recommendations/feedback on them. 
-Is there any other secure and user-friendly solution to store passwords?', '2017-01-10 16:35:44', 10, NULL, false, 7);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(12, 'Is there a good way to store credentials outside of a password manager?', 'A lot of the users in my company are using their agendas to write down their password and usernames, or Excel sheets with a protected password. I''m hesitant to install software for password management after reading recommendations/feedback on them. 
+Is there any other secure and user-friendly solution to store passwords?', '2017-01-10 16:35:44', 10, NULL, false,12, 7);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(13, 'art', 'What is the term when two people sing in harmony, but they aren''t singing the same notes?', 'I''m not a musician, and I know basically nothing about music, and music theory and what-not. (I basically just know a few common terms, and how to play chords)
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(13, 'What is the term when two people sing in harmony, but they aren''t singing the same notes?', 'I''m not a musician, and I know basically nothing about music, and music theory and what-not. (I basically just know a few common terms, and how to play chords)
 
-In most songs with two or more people singing, (Duets specifically) the singers almost always sing in harmony, but not the same notes. What term is used to describe this? I want to be able to learn how to do it, but I don''t know the specific term to do more research on it.', '2016-08-05 06:51:24', 7, NULL, false, 11);
+In most songs with two or more people singing, (Duets specifically) the singers almost always sing in harmony, but not the same notes. What term is used to describe this? I want to be able to learn how to do it, but I don''t know the specific term to do more research on it.', '2016-08-05 06:51:24', 7, NULL, false,1, 11);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(14, 'physics', 'In a ball with random thread/strings, how does the density of threads/strings change with radius?', 'A large plastic ball full of holes is given. (So the holes are in a plastic shell.) Straight threads connect these holes randomly, by passing through the interior of the ball/shell.
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(14, 'In a ball with random thread/strings, how does the density of threads/strings change with radius?', 'A large plastic ball full of holes is given. (So the holes are in a plastic shell.) Straight threads connect these holes randomly, by passing through the interior of the ball/shell.
 
 For a big ball or shell, say a meter in size, with thousands of holes, this makes (1/2 times) thousands of straight threads inside it. (Each hole has the diameter of the thread, so that each hole can only have on string passing through it.)
 
-Now the question: Inside the ball/shell (assumed to be large), is the density of the random threads homogeneous, or does it depend on the radius?', '2017-04-13 08:21:33', 2, NULL, false, 8);
+Now the question: Inside the ball/shell (assumed to be large), is the density of the random threads homogeneous, or does it depend on the radius?', '2017-04-13 08:21:33', 2, NULL, false,10, 8);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(15, 'biology', 'Where do the protons in the mitochondrial intermembrane space originally come from?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(15, 'Where do the protons in the mitochondrial intermembrane space originally come from?', 
 'I''m currently reviewing this concept in cellular respiration. The book which I''m using is Reece, Minorsky, Campbell''s Biology and while it does a good job at explaining the process involved in the electron chain transport. I think it lacks of clearing out my doubts concerning initial protons.
 
 Let me explain, the part where I''m stuck at is, where do originally the protons in the mitochondrial intermembrane space come from?. I understand that there is a proton gradient and the translocation of this protons in the proton pump is key during the electron shuttle process but, how did those initial protons come?. In other words, during the formation of the mitochondria in the cell, have they always been there? or are they part of some bigger molecule and that those protons are detached from them so that there is an initial gradient that triggers the process for the first time?. In other words, how does that initial spark or kick off begins?.
 
 In most animations I''ve found, the explanations take for granted that the protons are freely moving in the intermembrane space such as here and also here but what do those videos lack is the explanation of how (as mentioned above) do those protons got there in the first place.
 
-I''d like somebody could help me to clear out this doubt. I feel that as an addition to the answer, I''d like to know how does the mitochondria forms in the cell?. Since I believe there might be steps involved, I''d appreciate that the answer could explain those steps so I could easily understand, because as mentioned. I''m still confused on that part as well.', '2018-02-11 21:02:44', 3, NULL, false, 3);
+I''d like somebody could help me to clear out this doubt. I feel that as an addition to the answer, I''d like to know how does the mitochondria forms in the cell?. Since I believe there might be steps involved, I''d appreciate that the answer could explain those steps so I could easily understand, because as mentioned. I''m still confused on that part as well.', '2018-02-11 21:02:44', 3, NULL, false,2, 3);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(16, 'psychology', 'Is there a foveal explanation for the duck-rabbit illusion?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(16, 'Is there a foveal explanation for the duck-rabbit illusion?', 
 'Myself when I look at the duck-rabbit image, I see a duck if focus on the left (i.e. the beak) or a rabbit if I focus on the right (the nose).
 
 Is this how it works for most people, i.e. is the foveal shift what drives the change in interpretation? (I obviously meant to ask if there''s an empirical study on this.) 
-If so, is the duck-rabbit a part of a wider class of illusions that rely on smaller or larger changes in what''s foveated?', '2017-07-31 07:56:01', 17, 'V2pW9.png', false, 19);
+If so, is the duck-rabbit a part of a wider class of illusions that rely on smaller or larger changes in what''s foveated?', '2017-07-31 07:56:01', 17, 'V2pW9.png', false,11, 19);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(17, 'math', 'When is A isomorphic to A^3?', 
+
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(17, 'When is A isomorphic to A^3?', 
 'This is totally elementary, but I have no idea how to solve it: let A be an abelian group such that A is isomorphic to A^3. is then A isomorphic to A^2? probably no, but how construct a counterexample? 
 you can also ask this in other categories as well, for example rings. if you restrict to Boolean rings, the question becomes a topological one which makes you think about fractals: let X be stone space such that X=X+X+X, does it follow that X=X+X (here + means disjoint union)?', 
-'2018-01-30 15:08:23', 32, NULL, false, 15);
+'2018-01-30 15:08:23', 32, NULL, false,7, 15);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(18, 'linguistics', 'Naming my characters', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(18, 'Naming my characters', 
 'I''m writing a fantasy novel. The story takes place in England (1900''s) No matter how much I research I''m unable to move forward in naming my characters. 
 For example, when we look at all the characters JK Rowling created, their names are so unique and suit to their personalities.
 
 My question is are there any methods to name my characters? Should the naming be based on the period when the story takes place?
 Should I first develop their personalities and then name them accordingly? Please explain.', 
-'2018-01-22 17:35:44', 0, NULL, false, 20);
+'2018-01-22 17:35:44', 0, NULL, false,9, 20);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(19, 'business', 'Can somebody explain “leveraged debt investment positions” and “exposures” in this context for me, please?', 
-'The strong bond performance has led to a surge in leveraged debt investment positions that are ultimately funded by the banks interbank exposures and WMPs. But nobody really knows how levered these positions are, who has financed them, and by how much, S&P said. The contagion risks for the financial sector could be high.', '2018-02-16 12:47:38', 14, NULL, false, 6);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(19, 'Can somebody explain “leveraged debt investment positions” and “exposures” in this context for me, please?', 
+'The strong bond performance has led to a surge in leveraged debt investment positions that are ultimately funded by the banks interbank exposures and WMPs. But nobody really knows how levered these positions are, who has financed them, and by how much, S&P said. The contagion risks for the financial sector could be high.', '2018-02-16 12:47:38', 14, NULL, false,3, 6);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(20, 'history', 'Why were Madagascar and New Zealand discovered so late?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(20, 'Why were Madagascar and New Zealand discovered so late?', 
 'Considering how exploration over long distances into the unknown has been a part of human nature right at the beginning, it''s surprising that some fairly large places have been discovered relatively recently. 
 The island of Madagascar, for example, is large and very close to Africa, yet it was discovered in 500 AD. Even then, it wasn''t by nearby Africans, but by faraway Indonesians. 
 New Zealand, which was just as tantalizingly close to Australia, was discovered by Polynesian sailors 800 years later.
 
 So why were these large and incredibly close landmasses discovered so late in the history of human existence? 
 What was stopping the settlers from getting there a lot earlier, like before the Common Era?', 
-'2018-02-04 12:08:41', 5, NULL, false, 14);
+'2018-02-04 12:08:41', 5, NULL, false,6, 14);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(21, 'geology', 'Exoplanets geology', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(21, 'Exoplanets geology', 
 'Science fiction sometimes plays with the concept of a planet with different geological structure than earth (for instance traveling through liquid water core in Star Wars) yet such imaginations often lack scientific plausibility.
 
 What is scientifically plausible and what is not then? Are there any serious research (or at least data-justified scientific speculation) about geology of exoplanets and how it differs from earth?', 
-'2018-01-26 12:33:09', 8, NULL, false, 20);
+'2018-01-26 12:33:09', 8, NULL, false,5, 20);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(22, 'geology', 'What sets the length scale of stratified rock formations?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(22, 'What sets the length scale of stratified rock formations?', 
 'Driving through areas of the American Southwest such as Utah and Arizona, you notice stratified rock formations everywhere. The grand canyon is the best known example. 
 One striking thing is that the thickness (or height) of individual layers of rock seems to be roughly constant, within an order of magnitude. (Perhaps 20 feet tall? Hard to tell from the road.) 
 This is true even for very tall cliffs which have dozens of layers. Does this imply some kind of very long-term periodicity in climate over geologic time scales? 
 If so, what is it? If not, why is there a dominant length scale in these features? What sets this scale?', 
-'2018-01-22 17:35:44', 4, NULL, false, 15);
+'2018-01-22 17:35:44', 4, NULL, false,5, 15);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(23, 'art', 'How does a camera move freely inside a car in a movie scene?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(23, 'How does a camera move freely inside a car in a movie scene?', 
 'In Children Of Men, there is an uncut scene wherein a camera moves freely inside a car full of people. It starts with a front shot with the camera in the dashboard position facing back towards the passengers, then the camera moves forward through the front seats and towards the back seat area and turns around to face the windshield.
 
 Movement looked seamless with no visible rigs, and no room for a cameraman inside. So how do they do it?', 
-'2017-03-26 01:06:54', 16, NULL, false, 20);
+'2017-03-26 01:06:54', 16, NULL, false,1, 20);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(24, 'technology', 'Electrostatic painting on plastic', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(24, 'Electrostatic painting on plastic', 
 'I''m attempting to create an electrostatic painting process for small plastic parts. The material is ABS and is about 4 inches by 6 inches by 1 inch high. I''m somewhat familiar with electrostatic painting of metal objects, but I am dismissive, perhaps uneducatedly so, of the necessity of the objects to be metallic.
 
 To help the matter, I will be using a painting system that allows the paint droplets to be extremely small -- an airbrush.
@@ -288,9 +289,9 @@ To help the matter, I will be using a painting system that allows the paint drop
 I''m hypothesizing that I can connect the negative side of a high-voltage low-current source to the tip of the airbrush, through which the paint flows, while I connect the positive side of the high-voltage source to the plastic part to be painted and mist the paint over the highly-contoured part as it is attracted to the surface.
 
 Will this work?', 
-'2016-11-12 16:50:24', 6, NULL, false, 13);
+'2016-11-12 16:50:24', 6, NULL, false,12, 13);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(25, 'chemistry', 'Why does liquid water form when we exhale on a mirror?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(25, 'Why does liquid water form when we exhale on a mirror?', 
 'In the descriptions below, I always assume external pressure to be constant at 1 atm, the condition where daily observations are made.
 
 1) When I exhale on a mirror, liquid water forms on the mirror. That''s condensation. Obviously, the temperature of mirror must be < 100 °C, so water vapor condensing on mirror makes sense. However, in that case why do we have water vapor in our breath when our body temperature is also < 100 °C in the first place?
@@ -300,9 +301,9 @@ INSERT INTO "question"(id_question, name, title, description, "date", votes, pho
 3) If liquid water can evaporate into gas at T < 100 °C, then why doesn''t ice turn into liquid at T < 0 °C? (I never use the term ''melt'' here, just like evaporate≠boil) (both have hydrogen bonds, intermolecular forces should be the same?)
 
 4) When I exhale on a wall, no water droplets form. Why do water droplets form on mirror but not on wall (just an example)? The mirror must have the same temperature as that of the wall, both of them must have achieved thermal equilibrium with their surroundings a long time ago.', 
-'2016-10-05 01:36:42', 13, NULL, false, 9);
+'2016-10-05 01:36:42', 13, NULL, false,4, 9);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(26, 'math', 'Matrix product and eigen values', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(26,'Matrix product and eigen values', 
 'Is there any relationship between eigenvalues(or spectrum) of graph Laplacian matrix and the eigenvalues of the product of a real symmetric matrix and the Laplacian matrix?
 
 My problem at hand is as follows :
@@ -313,27 +314,29 @@ What is the relationship between spectrum (or eigenvalues) of L with the spectru
 
 L is Laplacian of an undirected graph, hence real symmetric and singular. B is a real symmetric matrix.
 
-I want to show that if I increase the magnitude of eigenvalues of L, the eigenvalues of A will also increase. However, all I could find was a trace inequality relationship, and inequality doesn''t necessarily lead to any conclusion.', '2018-01-11 14:46:12', 9, NULL, false, 7);
+I want to show that if I increase the magnitude of eigenvalues of L, the eigenvalues of A will also increase. However, all I could find was a trace inequality relationship, and inequality doesn''t necessarily lead to any conclusion.', '2018-01-11 14:46:12', 9, NULL, false,7, 7);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(27, 'medicine', 'What’s the difference between primary and secondary dysmenorrhea?', NULL, '2017-08-05 04:54:05', 9, NULL, false, 21);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(28, 'physics', 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', '2018-01-30 15:08:23', 5, NULL, false, 16);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(29, 'medicine', 'What is the possible diagnosis for symptoms including fever, leucocitosys and abdominal pain', NULL, '2017-02-24 08:03:14', 2, NULL, false, 21);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(27, 'What’s the difference between primary and secondary dysmenorrhea?', NULL, '2017-08-05 04:54:05', 9, NULL, false,8, 21);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(30, 'linguistics', 'How many liberties can one take with syntax and grammar rules when writing poetry?', NULL, '2017-03-10 22:05:47', 12, NULL, false, 15);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(28, 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', '2018-01-30 15:08:23', 5, NULL, false,11, 16);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(31, 'geology', 'How do sillimanite rocks form?', NULL, '2016-10-05 01:36:42', 1, NULL, false, 14);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(29, 'What is the possible diagnosis for symptoms including fever, leucocitosys and abdominal pain', NULL, '2017-02-24 08:03:14', 2, NULL, false,8, 21);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(32, 'technology', 'Voltage of sounds of mp3 files', 'What is the maximum voltage for common music files? When playing back on a smartphone, if the volume of the smartphone is set to max, how much voltage does the electric signal of the voltage be sent to the earphones?', '2017-11-05 11:36:42', 4, NULL, false, 18);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(30, 'How many liberties can one take with syntax and grammar rules when writing poetry?', NULL, '2017-03-10 22:05:47', 12, NULL, false,9, 15);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(33, 'art', 'What abstract painters made the most interesting use of color?', NULL, '2016-07-29 10:57:48', 2, NULL, false, 19);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(31, 'How do sillimanite rocks form?', NULL, '2016-10-05 01:36:42', 1, NULL, false,5, 14);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(34, 'history', 'Why did the Ottoman Empire not industrialize like France, Germany or Belgium?', NULL, '2016-07-13 17:29:01', 0, NULL, false, 9);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(32, 'Voltage of sounds of mp3 files', 'What is the maximum voltage for common music files? When playing back on a smartphone, if the volume of the smartphone is set to max, how much voltage does the electric signal of the voltage be sent to the earphones?', '2017-11-05 11:36:42', 4, NULL, false,12, 18);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(35, 'psychology', 'Timeframe in which thoughts are concieved', 'Are thoughts concieved in realtime or are they preprocessed chains ready to be thought or both (depending on the prospective) or am I asking a too generalized question to have any sense?', '2016-02-13 18:45:02', 1, NULL, false, 21);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(33, 'What abstract painters made the most interesting use of color?', NULL, '2016-07-29 10:57:48', 2, NULL, false,1, 19);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(36, 'linguistics', '“enables users to” vs “allows users to” – both correct?', 'I’m editing a colleague who habitually uses phrases like:
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(34, 'Why did the Ottoman Empire not industrialize like France, Germany or Belgium?', NULL, '2016-07-13 17:29:01', 0, NULL, false,6, 9);
+
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(35, 'Timeframe in which thoughts are concieved', 'Are thoughts concieved in realtime or are they preprocessed chains ready to be thought or both (depending on the prospective) or am I asking a too generalized question to have any sense?', '2016-02-13 18:45:02', 1, NULL, false,11, 21);
+
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(36, '“enables users to” vs “allows users to” – both correct?', 'I’m editing a colleague who habitually uses phrases like:
 
 The password enables users to log in.
 
@@ -341,9 +344,11 @@ This sounds wrong to me, and I want to suggest alternatives like:
 
 The password allows users to log in.
 
-After some cursory research, I think the problem here is me, not the pattern in question. Are “enables” and “allows” interchangeable, here?', '2017-11-25 12:44:21', 4, NULL, false, 26);
+After some cursory research, I think the problem here is me, not the pattern in question. Are “enables” and “allows” interchangeable, here?', '2017-11-25 12:44:21', 4, NULL, false,9, 26);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(37, 'medicine', 'Significantly reduced absorption of Ciprofloxacin with concurrently administered Sucralfate is utilized intentionally to treat Colitis?', 
+
+
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(37, 'Significantly reduced absorption of Ciprofloxacin with concurrently administered Sucralfate is utilized intentionally to treat Colitis?', 
 'Many studies proved that concurrent administration of Ciprofloxacin and Sucralfate reduces the maximum concentration of Ciprofloxacin in plasma to approximately 1/10 level.
 
 Like Rifaximin, the unabsorbed Ciprofloxacin is more effective to act directly inside the colon?
@@ -352,19 +357,19 @@ Or because of the chelate of Ciprofloxacin-Aluminum (of Sucralfate), the chelate
 
 I''ve tried to find long time but no luck.
 
-If somebody helps me with scientific evidences, it would be highly appreciated!', '2016-05-22 08:09:10', 5, NULL, false, 17);
+If somebody helps me with scientific evidences, it would be highly appreciated!', '2016-05-22 08:09:10', 5, NULL, false,8, 17);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(38, 'physics', 'Are photons avoiding destructive angles of diffraction in a single photon at a time experiment?', 
-'Are photons avoiding the angles of diffraction where destructive interference would occur if they weren''t alone in a one photon at a time double slit experiment? Is the number of photons detected on the wall equal to the number of photons went through the slits in a single photon at a time experiment?', '2016-05-05 11:25:03', 11, NULL, false, 8);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(38, 'Are photons avoiding destructive angles of diffraction in a single photon at a time experiment?', 
+'Are photons avoiding the angles of diffraction where destructive interference would occur if they weren''t alone in a one photon at a time double slit experiment? Is the number of photons detected on the wall equal to the number of photons went through the slits in a single photon at a time experiment?', '2016-05-05 11:25:03', 11, NULL, false,10, 8);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(39, 'art', 'What is the name of this film editing technique?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(39, 'What is the name of this film editing technique?', 
 'What is it called when a seemingly short or contiguous conversation/dialogue is spread over a few scenes that take place in different places that are apparently far from each other?
 In Snatch (2000), for instance, there is a scene where Jason Statham''s character provides a brief explanation of the term ''coursing'', which is contiguous but it spans over a few scenes at different places.
 If you close your eyes and listen to the conversation, you''ll believe that it''s contiguous and happens in less than 25 seconds. But if pay attention to the video you''ll know that it is (logically) not.
 
-Does this technique of filming/editing have a name?', '2017-05-05 11:22:33', 9, NULL, false, 2);
+Does this technique of filming/editing have a name?', '2017-05-05 11:22:33', 9, NULL, false,1, 2);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(40, 'technology', 'How do I rename a LINUX host without needing to reboot for the rename to take effect?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(40, 'How do I rename a LINUX host without needing to reboot for the rename to take effect?', 
 'I searched for an answer to this question on serverfault and shockingly could not find it. I know it is possible, but I can''t remember how to fdo it. How do I change a LINUX host''s hostname and get that change to take effect without a reboot?
 
 I am using Ubuntu 16 and Ubuntu 18.
@@ -386,17 +391,18 @@ It acts as bootstrapping while your host is booting up and establishing itself w
 
 What I am familiar with is executing the above two steps and then rebooting your host. But plenty of times, like with a production server, one would like to execute that rename, but not reboot one''s host.
 
-How can I change hostname on a host and get that change to take effect without rebooting the host?', '2016-04-15 16:25:08', 12, NULL, false, 7);
+How can I change hostname on a host and get that change to take effect without rebooting the host?', '2016-04-15 16:25:08', 12, NULL, false,12, 7);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(41, 'technology', 'Voltage of sounds of mp3 files', 'As a computer programmer, I have noticed an interesting phenomenon: If I am stuck on a particular problem in my work, often if I stop thinking about the problem and do something else, the answer will suddenly come to me.
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(41, 'Voltage of sounds of mp3 files', 'As a computer programmer, I have noticed an interesting phenomenon: If I am stuck on a particular problem in my work, often if I stop thinking about the problem and do something else, the answer will suddenly come to me.
 
-Is there a name for this phenomenon? How does this work? Has any research been done on this? How is it that taking a break from a problem sometimes allows you to figure out the answer?', '2016-04-03 09:28:17', 28, NULL, false, 26);
+Is there a name for this phenomenon? How does this work? Has any research been done on this? How is it that taking a break from a problem sometimes allows you to figure out the answer?', '2016-04-03 09:28:17', 28, NULL, false,12, 26);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(42, 'physics', 'Why is delta-v is the most useful quantity for planning space travel?', 'Many of the papers I''ve seen on the matter make use of the concept of delta-v. Is there an easy to understand reason why delta-v, the magnitude of the change of the velocity, |v|, is so useful for understanding orbital mechanics and planning travel?
 
-My experience in solving physics problems in mechanics has taught me that energy, linear momentum, or angular momentum are usually the most useful quantities. Delta-v doesn''t seem to be a good proxy for any of these quantities, since it''s not squared like the kinetic energy, but it''s also not a vector like the linear and angular momenta.', '2017-04-25 09:51:26', 4, NULL, false, 8);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(42, 'Why is delta-v is the most useful quantity for planning space travel?', 'Many of the papers I''ve seen on the matter make use of the concept of delta-v. Is there an easy to understand reason why delta-v, the magnitude of the change of the velocity, |v|, is so useful for understanding orbital mechanics and planning travel?
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(43, 'linguistics', 'Is exact Kanji stroke length important?', 'I am currently on a quest to learn how to hand write the 2000 most commonly used Kanji in the Japanese language. This requires lots of memorization, so efficiency is important.
+My experience in solving physics problems in mechanics has taught me that energy, linear momentum, or angular momentum are usually the most useful quantities. Delta-v doesn''t seem to be a good proxy for any of these quantities, since it''s not squared like the kinetic energy, but it''s also not a vector like the linear and angular momenta.', '2017-04-25 09:51:26', 4, NULL, false,10, 8);
+
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(43, 'Is exact Kanji stroke length important?', 'I am currently on a quest to learn how to hand write the 2000 most commonly used Kanji in the Japanese language. This requires lots of memorization, so efficiency is important.
 
 I have come across Kanji that have strokes with little extra tails, created from a slightly extra-long stroke. Or in English, they can be called jumps. Take my image as an example.
 When splitting this kanji into three separate parts:
@@ -411,21 +417,21 @@ How important are the jumps?
 
 When handwriting Kanji, does it matter if these jumps are of the correct length? Would the Kanji still be understandable without correct jumps? Would natives find it annoying, for example, if I didn''t include the jumps at all?
 
-I am asking because the less little things I have to memorize, the faster I can learn the Kanji.', '2017-04-14 13:09:17', 5, '9r7wF.png', false, 12);
+I am asking because the less little things I have to memorize, the faster I can learn the Kanji.', '2017-04-14 13:09:17', 5, '9r7wF.png', false,9, 12);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(44, 'art', 'Creating high quality animated backgrounds from Illustrator files', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(44,'Creating high quality animated backgrounds from Illustrator files', 
 'I have some artwork in illustrator that I would like to animate and get a gif.
 
 Say I have a background pattern and I want to randomly move the elements inside to get a natural look of particles moving for a website background (should I use a gif for an animated background on a website ?)
 
 The simple way is just to create many backgrounds with different locations of the elements, which takes long time and never look natural.
 
-How would you do that on a mac ? Do I need After Effects ? or other software to make it quickly?', '2016-03-22 08:31:24', 2, NULL, false, 27);
+How would you do that on a mac ? Do I need After Effects ? or other software to make it quickly?', '2016-03-22 08:31:24', 2, NULL, false,1, 27);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(45, 'math', 'What is the use of introduction of term univalent function?', 
-'What is the use of defining a new term univalent function although there already existed a definition of bijective, one-to-one functions?', '2017-01-14 07:16:54', 0, NULL, false, 30);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(45, 'What is the use of introduction of term univalent function?', 
+'What is the use of defining a new term univalent function although there already existed a definition of bijective, one-to-one functions?', '2017-01-14 07:16:54', 0, NULL, false,7, 30);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(46, 'technology', 'Difference between i++ and (i)++ in C', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(46, 'Difference between i++ and (i)++ in C', 
 'int i = 3;
 int j = (i)++;
 
@@ -436,14 +442,14 @@ int j = i ++;
 
 Is there a difference between how the above two cases are evaluated?
 
-Is the first case equivalent to incrementing an rvalue or is it undefined behaviour?', '2018-07-09 17:51:28', 17, NULL, false, 26);
+Is the first case equivalent to incrementing an rvalue or is it undefined behaviour?', '2018-07-09 17:51:28', 17, NULL, false,12, 26);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(47, 'chemistry', 'Why don''t the electrons move through the electrolyte (instead of the circuit) in a galvanic cell?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(47, 'Why don''t the electrons move through the electrolyte (instead of the circuit) in a galvanic cell?', 
 'I was learning about galvanic cells and I had a problem understanding why electrons do not travel through the electrolyte solutions themselves, instead preferring to travel through metals. Can electrons travel through an electrolytic solution?
 
-Imagine a galvanic cell, without the wiring between the two electrodes and instead we only have the salt bridge. Won''t the electrons (although it is very unfavorable to happen) travel through the salt bridge and the solutions? In other terms will the transformation of the electrodes occur?', '2016-04-02 18:57:46', 28, NULL, false, 3);
+Imagine a galvanic cell, without the wiring between the two electrodes and instead we only have the salt bridge. Won''t the electrons (although it is very unfavorable to happen) travel through the salt bridge and the solutions? In other terms will the transformation of the electrodes occur?', '2016-04-02 18:57:46', 28, NULL, false,4, 3);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(48, 'linguistics', 'What is the significance of the traveler carrying writing materials in Ivanhoe?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(48, 'What is the significance of the traveler carrying writing materials in Ivanhoe?', 
 'The Jew`s dress, which appeared to have suffered considerably from the storm, was a plain russet cloak of many folds, covering a dark purple tunic. He had large boots lined with fur, and a belt around his waist, which sustained a small knife, together with a case for writing materials, but no weapon. He wore a high square yellow cap of a peculiar fashion, assigned to his nation to distinguish them from Christians, and which he doffed with great humility at the door of the hall.
 
 Strange but true: this snippet, apparently about a scribe`s tools, has been haunting me rather obsessively lately. I didn''t recall that the bearer was the Jew. I suppose a lender/usurer would want to keep records of his debtors.
@@ -454,16 +460,16 @@ Why does he say a small knife, but no weapon?
 
 Is Sir Walter Scott''s mention of writing tools here used primarily to distinguish his social class/ his occupation, or perhaps something else?
 
-Am I mistaken in thinking it might have been a little bit odd for a traveler to be carrying a sack full of pens? (which lacking further descriptive language is what most readers will assume...)', '2018-06-08 14:09:57', 10, NULL, false, 12);
+Am I mistaken in thinking it might have been a little bit odd for a traveler to be carrying a sack full of pens? (which lacking further descriptive language is what most readers will assume...)', '2018-06-08 14:09:57', 10, NULL, false,9, 12);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(49, 'biology', 'What exactly is this small puffer fish doing and how did it manage to accomplish such a feat?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(49, 'What exactly is this small puffer fish doing and how did it manage to accomplish such a feat?', 
 'I recently saw a video on youtube where it shows a puffer fish making intricate designs in the sand.
 
 The puffer fish made this design on the image.
 
-What exactly is the puffer fish doing and how is it capable of accomplishing such a feat? Is this behavior learnt, or innate?', '2016-08-19 16:41:55', 7, 'yv0Wh.jpg', false, 29);
+What exactly is the puffer fish doing and how is it capable of accomplishing such a feat? Is this behavior learnt, or innate?', '2016-08-19 16:41:55', 7, 'yv0Wh.jpg', false,2, 29);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(50, 'geology', 'Rayleigh waves generation', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(50,'Rayleigh waves generation', 
 'Good day,
 
 I do not fully understand the physical mechanism of formation of Rayleigh waves at the free surface. While their derivation is quite clear and obey free-boundary conditions, it is not clear their physical mechanism.
@@ -472,9 +478,9 @@ Could you please correct me in my discussion. Incident P-wave can transform to r
 
 Can then Rayleigh wave be formed by interference of both incident P and SV waves on the free surface or Rayleigh waves are formed only separately by incident P or SV waves? Does it mean that right under the epicenter Rayleigh waves cannot form but at some distance from it in order to reach second critical angles?
 
-Thank you', '2016-11-23 09:24:12', 3, NULL, false, 28);
+Thank you', '2016-11-23 09:24:12', 3, NULL, false,5, 28);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(51, 'linguistics', 'Diacritics and non-English letters in anglicized loan words: keep ''em, dump ''em, italicize the words, or what?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(51, 'Diacritics and non-English letters in anglicized loan words: keep ''em, dump ''em, italicize the words, or what?', 
 'Take an expression like déjà vu. This is a French term which is frequently seen in English. In fact, it is included in English dictionaries. But it is often seen in English in a variety of forms:
 
 déjà vu
@@ -497,27 +503,27 @@ and then in the Thesaurus part:
 
 soupcon - a slight but appreciable amount; this dish could use a touch of garlic
 
-So if dictionary entries can''t even remain consistent within the same definition, what chance does a mere mortal have?', '2017-04-15 23:05:26', 8, NULL, false, 22);
+So if dictionary entries can''t even remain consistent within the same definition, what chance does a mere mortal have?', '2017-04-15 23:05:26', 8, NULL, false,9, 22);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(52, 'history', 'Apart from the Inuit, and candlefish on the northwest coast, did pre-Columbian America have lamps or candles?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(52, 'Apart from the Inuit, and candlefish on the northwest coast, did pre-Columbian America have lamps or candles?', 
 'Lamps have been around in the Old World since the Palaeolithic (one was found in the Lascaux cave). Candles are thought to have originated in the Bronze Age, but were certainly used by ancient Greeks, Romans, and Chinese within the 1st millennium BC. Were they used in the Americas before the arrival of Columbus?
 Lamps were certainly used in the arctic, where they were known as Kudlik.  The arctic peoples were of course late arrivals to America.
 
 Candles of a sort were used by the northwest coast peoples. A local fish called the Eulachon, but known more colloquially as the candlefish, contains a lot of oil. The locals simply inserted a wick into a dried fish, and lit it. 
 There are some videos of people lighting fish on YouTube and the like.
 
-Apart from these two examples, I have not found any references to candles or lamps in early America. It is always harder to show an absence of course. Is anyone out there aware of examples? Otherwise I guess people just huddled around their fires at night...', '2016-02-10 20:48:15', 11, NULL, false, 14);
+Apart from these two examples, I have not found any references to candles or lamps in early America. It is always harder to show an absence of course. Is anyone out there aware of examples? Otherwise I guess people just huddled around their fires at night...', '2016-02-10 20:48:15', 11, NULL, false,6, 14);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(53, 'physics', 'How do I know that I am observing a quasar?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(53, 'How do I know that I am observing a quasar?', 
 'When I find a faint object on the sky that looks like a star or a far away galaxy how do I know that it really is a quasar?
 
 I guess that I could first compare the apparent magnitude (how bright it appears) and the redshift of spectral lines in light from the object.
 
 Then if I interpret the redshift as Hubble redshift and that interpretation tells me that if the object in question shines brighter than some threshold value it must be a quasar?
 
-Is there such a treshold value or how do astronomers know from observations what objects are quasars or not quasars?', '2018-04-22 15:24:36', 0, NULL, false, 25);
+Is there such a treshold value or how do astronomers know from observations what objects are quasars or not quasars?', '2018-04-22 15:24:36', 0, NULL, false,10, 25);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(54, 'psychology', 'How does this experiment prove a causal relation between coherence and good feelings?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(54, 'How does this experiment prove a causal relation between coherence and good feelings?', 
 'I''m reading Thinking, Fast and Slow by Daniel Kahneman and I came across the following text:
 
 The Remote Association Test has more to tell us about the link between cognitive ease and positive effect. Briefly consider the two triads of words:
@@ -540,28 +546,28 @@ There is nothing here that system 1 cannot do. Emotional changes are now expecte
 
 My Question: Why does the adding of the cover story in this experiment show that good feelings lead to intuitions of coherence (that there is a causal relation)? I find this conclusion rather strange. 
 I''m probably mistaken but it seems to me that Kahneman is saying: the fact that there was no intuition of coherence when these participants were expecting to respond emotionally to music, shows that there is a causal relation between the good feelings and the intuition of coherence. 
-Why would this make sense?', '2018-01-30 15:08:23', 6, NULL, false, 31);
+Why would this make sense?', '2018-01-30 15:08:23', 6, NULL, false, 11, 31);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(55, 'geology', 'Why doesn''t Earth absorb our carbon emissions?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(55, 'Why doesn''t Earth absorb our carbon emissions?', 
 'If we look at the carbon cycle, we see that man-made carbon emission only account for a tiny fraction of all CO2 emissions.
 
 However, we see a steady rise in atmospheric CO2-levels.
 
-Wouldn''t it be logical to assume that earth would somehow adapt to this increase, e.g. through increased plant growth and why isn''t this happening?', '2017-03-29 07:28:22', 12, NULL, false, 25);
+Wouldn''t it be logical to assume that earth would somehow adapt to this increase, e.g. through increased plant growth and why isn''t this happening?', '2017-03-29 07:28:22', 12, NULL, false,5, 25);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(56, 'art', 'How do I clean dried brushes?', 
-'I have a bunch of brushes with dried paint and glue. I''ve tried to clean them up but they''re still hard. What medium is best to restore my brushes?', '2017-01-17 05:52:05', 0, NULL, false, 24);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(56, 'How do I clean dried brushes?', 
+'I have a bunch of brushes with dried paint and glue. I''ve tried to clean them up but they''re still hard. What medium is best to restore my brushes?', '2017-01-17 05:52:05', 0, NULL, false,1, 24);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(57, 'medicine', 'What’s the active principle of a NSAID?', NULL, '2017-05-12 09:14:13', 21, NULL, false, 17);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(57, 'What’s the active principle of a NSAID?', NULL, '2017-05-12 09:14:13', 21, NULL, false,8, 17);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(58, 'biology', 'What is the difference between polar and charged amino acids?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(58, 'What is the difference between polar and charged amino acids?', 
 'Chemically polar amino acids have an uneven (AKA polar) distribution of electrons over their surface.
 
 Charged amino acids have a charged ion in their structure. This is probably where my knowledge is a little shaky!
 
-I guess I am confused at this point. Does this just mean that charged amino acids are really polar amino acids? If that is correct that would explain why I have seen histidine categorised as a charged amino acid, but has no clear ions.', '2016-11-26 07:22:57', 15, NULL, false, 3);
+I guess I am confused at this point. Does this just mean that charged amino acids are really polar amino acids? If that is correct that would explain why I have seen histidine categorised as a charged amino acid, but has no clear ions.', '2016-11-26 07:22:57', 15, NULL, false,2, 3);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(59, 'technology', 'Recursive HTTP calls - piping parsed data', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(59, 'Recursive HTTP calls - piping parsed data', 
 'I''d like to make recursive HTTP calls. I understand that I can make the initial call and then use pipe and expand to repeat the HTTP call. But how do I pipe the parsed response? Following is pseudo-code demonstrating the question.
 
 fetchPage().pipe(
@@ -574,9 +580,9 @@ expand((response) => {
   }
 }),
 // I believe response not parsed will be piped here; how can I pipe parsed instead?
-concatMap(response) => response));', '2016-05-22 12:21:33', 16, NULL, false, 7);
+concatMap(response) => response));', '2016-05-22 12:21:33', 16, NULL, false,12, 7);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(60, 'chemistry', 'Is oxalic acid dihydrate considered a primary acid standard in analytical chemistry?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(60, 'Is oxalic acid dihydrate considered a primary acid standard in analytical chemistry?', 
 'Using oxalic acid dihydrate as a primary standard just seems really odd to me. I''d expect a primary standard to be oven dried. I just seems weird that a hydrate would be used.
 
 Granted I saw numerous references to using oxalic acid dihydrate on the web to standardize NaOH. I assume that for high school and freshman labs that it is "good enough." Using student grade burettes and open air pan balances would greatly limit the possible precision.
@@ -597,37 +603,38 @@ Using an analytical weighed out 3 samples of KHP to nearest 0.0001 g into flasks
 
 Then using NaOH as the titrant, phenolphthalein was used as the indicator. Again careful to swirl solution, not shake, to prevent bubbles.
 
-Using class 1 50 ml burette which was marked to 0.1 mls but read to 0.01 ml.', '2018-03-17 13:19:11', 0, NULL, false, 34);
+Using class 1 50 ml burette which was marked to 0.1 mls but read to 0.01 ml.', '2018-03-17 13:19:11', 0, NULL, false,4, 34);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(61, 'business', 'What would you call a real market that is close to perfect competition?', 
-'I want to explain perfect competition to students using a few practical examples without going into much of the theory. But I want it to be theoretically accurate and I don''t want to claim that those are examples of ''perfect competition''. I am thinking about calling it ''near perfect competition'', but I wonder if there is a conventional term for a market that is close to perfect competition. This wikipedia article mentions ''close-to-perfect competition'' but I''m not sure if that''s a conventional term.', '2017-11-06 16:18:36', 5, NULL, false, 23);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(62, 'history', 'In early WW2, how much of the merchant marine was American?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(61, 'What would you call a real market that is close to perfect competition?', 
+'I want to explain perfect competition to students using a few practical examples without going into much of the theory. But I want it to be theoretically accurate and I don''t want to claim that those are examples of ''perfect competition''. I am thinking about calling it ''near perfect competition'', but I wonder if there is a conventional term for a market that is close to perfect competition. This wikipedia article mentions ''close-to-perfect competition'' but I''m not sure if that''s a conventional term.', '2017-11-06 16:18:36', 5, NULL, false,3, 23);
+
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(62, 'In early WW2, how much of the merchant marine was American?', 
 'WW2, before the US entered, ran from 1939 Sep 01 to 1941 Dec 07. During this time, a lot of merchant vessels sailed in convoy to Britain.
 
 I am wondering, of all the people who crewed those vessels, how many were American, versus how many were Canadian or British.
 
-Note, I''m not asking for a death toll. I''m asking for a composition of them all.', '2017-05-06 02:09:37', 4, NULL, false, 35);
+Note, I''m not asking for a death toll. I''m asking for a composition of them all.', '2017-05-06 02:09:37', 4, NULL, false,6, 35);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(63, 'biology', 'Is there a relationship between HDL-C and LDL-C?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(63, 'Is there a relationship between HDL-C and LDL-C?', 
 'Whenever I read about how to deal with cholesterol level, the rule is to keep a low LDL fraction, ad a high HDL one.
 
 How to achieve this usually falls into the categories of a healthy body (sport), a healthy diet and possibly medicamentation.
 
 Since generally the advice is more or less the same for both goals (lowering one fraction and increasing the other one), I was wondering if there is a strong relationship between these fractions. In other words - is moving one in the right directions automatically drags the other one (also in the right direction)?
 
-Anecdotally (and this is what triggered my question), I saw my LDL crash almost by 250% (not by chance but through a good diet, etc. - over a few months) and, surprisingly, the HDL go down by 30% as well.', '2017-03-17 12:59:47', 11, NULL, false, 3);
+Anecdotally (and this is what triggered my question), I saw my LDL crash almost by 250% (not by chance but through a good diet, etc. - over a few months) and, surprisingly, the HDL go down by 30% as well.', '2017-03-17 12:59:47', 11, NULL, false,2, 3);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(64, 'business', 'Can corporate tax loss carryforward function like a sort of insurance policy?', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(64, 'Can corporate tax loss carryforward function like a sort of insurance policy?', 
 'I''m a graduate student in mathematics, with a casual knowledge of economics, so please let me know if this question is a non-sequitur or off base.
 
 Here''s the intuition I''m trying to capture: Suppose corporation A has a good year and makes a lot of profit, and corporation B, their competitor, has a bad year wherein they have a net loss. It seems that the following year, corporation B has a relative competitive advantage, in that they have a lower tax burden.
 
 In a system with no corporate tax—and thus no tax loss carryforward—it seems that corporation B wouldn''t have this advantage which might give them some time to recover. In a system with a very high corporate tax, this benefit would be even greater.
 
-Value judgments about the utility of a high corporate tax aside, is there anything to the idea that corporate taxes can serve as a sort of "insurance policy" wherein companies with a bad year are more likely to survive?', '2016-09-11 14:35:15', 3, NULL, false, 23);
+Value judgments about the utility of a high corporate tax aside, is there anything to the idea that corporate taxes can serve as a sort of "insurance policy" wherein companies with a bad year are more likely to survive?', '2016-09-11 14:35:15', 3, NULL, false,3, 23);
 
-INSERT INTO "question"(id_question, name, title, description, "date", votes, photo, deleted, id_user) VALUES(65, 'physics', 'Refraction of light with destructive interference', 
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(65, 'Refraction of light with destructive interference', 
 'The wavelength of light determines its refraction in a prism.
 
 But, what if two beams of light destructively interfere as they pass through a small prism, so there is no apparent wave or wavelength at that point in space?
@@ -636,7 +643,7 @@ For example, suppose you have two otherwise identical infrared laser beams trave
 
 The index of refraction is wavelength dependent but if the waves are totally cancelled in the prism, would the beams exit the prism at same angle as if the beams constructively interfered?
 
-I assume there are no “waves” and thus no detectable wavelength per se while beams are in the glass if there is total destructive interference at that point in space.', '2017-02-07 21:34:44', 9, 'jbTdW.jpg', false, 28);
+I assume there are no “waves” and thus no detectable wavelength per se while beams are in the glass if there is total destructive interference at that point in space.', '2017-02-07 21:34:44', 9, 'jbTdW.jpg', false,10, 28);
 
 INSERT INTO "voteQuestion"(username, id_question) VALUES(1, 59);
 INSERT INTO "voteQuestion"(username, id_question) VALUES(13, 59);
