@@ -150,12 +150,89 @@ FOR EACH ROW
 EXECUTE PROCEDURE updateUserRankFunction();
 
 
--- TODO--
 
---A member is notified when someone else follows him.
---A member is notified when someone else upvotes/downvotes his question/ answer/comment
---A member is notified when someone else leaves a comment/ answer on his question
 --A member’s score is updated when there is activity on his content (upvotes)
 --A member’s score is updated when there is activity from his account (new questions and/or answers).
---A question must always have one category
+DROP TRIGGER IF EXISTS updateScoreQuestion ON question;
+DROP FUNCTION IF EXISTS updateScoreQuestionFunction();
+CREATE FUNCTION updateScoreQuestionFunction() RETURNS TRIGGER AS $$
+DECLARE
+    adicionar integer;
+BEGIN
+    adicionar =  NEW.votes - OLD.votes;
+    UPDATE "user" SET points=points+adicionar WHERE NEW.id_user = "user".id_user;
+    RETURN NULL;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER updateScoreQuestion
+AFTER UPDATE ON question
+FOR EACH ROW
+EXECUTE PROCEDURE updateScoreQuestionFunction();
+
+DROP TRIGGER IF EXISTS updateScoreAnswer ON answer;
+DROP FUNCTION IF EXISTS updateScoreAnswerFunction();
+CREATE FUNCTION updateScoreAnswerFunction() RETURNS TRIGGER AS $$
+DECLARE
+    adicionar integer;
+BEGIN
+    adicionar =  NEW.votes - OLD.votes;
+    UPDATE "user" SET points=points+adicionar WHERE NEW.user_post = "user".id_user;
+    RETURN NULL;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER updateScoreAnswer
+AFTER UPDATE ON answer
+FOR EACH ROW
+EXECUTE PROCEDURE updateScoreAnswerFunction();
+
+DROP TRIGGER IF EXISTS updateScoreBestAnswer ON bestAnswer;
+DROP FUNCTION IF EXISTS updateScoreBestAnswerFunction();
+CREATE FUNCTION updateScoreBestAnswerFunction() RETURNS TRIGGER AS $$
+DECLARE
+    user_posted integer;
+BEGIN
+    SELECT user_post INTO user_posted FROM answer WHERE NEW.id_bestAnswer=answer.id_answer;
+    UPDATE "user" SET points=points+3 WHERE user_posted = "user".id_user;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER updateScoreBestAnswer
+BEFORE INSERT ON bestAnswer
+FOR EACH ROW
+EXECUTE PROCEDURE updateScoreBestAnswerFunction();
+
 --A member cannot report his own content (questions, comments and answers)
+DROP TRIGGER IF EXISTS reportSelf ON userReport;
+DROP FUNCTION IF EXISTS reportSelfFunction();
+CREATE FUNCTION reportSelfFunction() RETURNS TRIGGER AS $$
+DECLARE
+    id_answered integer;
+    user_question integer;
+    user_answer integer;
+BEGIN
+    SELECT question.id_user INTO user_question FROM question INNER JOIN report ON (question.id_question=report.id_question) WHERE report.id_report=NEW.id_report;
+    SELECT answer.user_post INTO user_answer FROM answer INNER JOIN report ON (answer.id_answer=report.id_answer) WHERE report.id_report=NEW.id_report;
+    IF (NEW.username = user_question) THEN
+        RAISE EXCEPTION 'A user can not report his own question';
+    END IF;
+    IF (NEW.username = user_answer) THEN
+        RAISE EXCEPTION 'A user can not report his own answer';
+    END IF;
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER reportSelf
+BEFORE INSERT ON userReport
+FOR EACH ROW
+EXECUTE PROCEDURE reportSelfFunction();
+
+-- TODO--
+
+
+
+
+
