@@ -29,7 +29,7 @@ DECLARE
     question_date DateTime;
 BEGIN
     SELECT "date" INTO question_date FROM question WHERE question.id_question = NEW.id_question;
-    IF (question_data >= NEW."date") THEN
+    IF (question_date >= NEW."date") THEN
         RAISE EXCEPTION 'An answer post date must be bigger than the question post date';
     END IF;
     RETURN NEW;
