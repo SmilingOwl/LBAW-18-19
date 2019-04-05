@@ -745,7 +745,7 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 
 Such examples can be studies by doing case studies of events. Similarly in the filed of law, doing business law case study assignment help in achieving that motive.
 
-The data for case studies can be extracted from anywhere from internet to libraries. It would be good to ask about some popular case studies from your guide or professor.', '2018-09-13 14:18:09', 1, NULL, false, 4, 23);
+The data for case studies can be extracted from anywhere from internet to libraries. It would be good to ask about some popular case studies from your guide or professor.', '2018-01-13 14:18:09', 1, NULL, false, 4, 23);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(5, 'I think these agents are called Vesicant agents, but I may be wrong.', '2018-04-15 11:11:23', 0, NULL, false, 5, 38);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(6, 'It''s ''A''', '2018-02-15 17:52:24', 0, NULL, false, 10, 20);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(7, 'You are right, every circuit possesses some unintended capacitance, which is called "stray" capacitance. Whether or not it affects the operation of the circuit depends on the frequencies that the circuit is intended to operate at. 
@@ -840,7 +840,7 @@ Merriam-Webster defines frivolous (adj.) as: lacking in seriousness
 There''s also insouciance: Blithe lack of concern; nonchalance.', '2018-02-17 19:42:32', 24, NULL, false, 10, 5);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(32, 'Install a password manager. A good password manager is much, much better than anything you can do by yourself.
 
-They are software created by security professionals, follow strict development rules, and are tested by a lot of people, and attacked by a lot of people. They have better chance of protecting your passwords than anything invented by the average, even the above average user.', '2017-01-10 18:15:42', 23, NULL, false, 12, 3);
+They are software created by security professionals, follow strict development rules, and are tested by a lot of people, and attacked by a lot of people. They have better chance of protecting your passwords than anything invented by the average, even the above average user.', '2018-01-10 18:15:42', 23, NULL, false, 12, 3);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(33, 'You''re probably referring to the recent articles about flaws in password managers.
 
 "Password managers have a security flaw. But you should still use one."(Washington Post)
@@ -1039,7 +1039,7 @@ And were you trying to give a counterexample for the statement? If B is an ident
 I am looking for an analytical proof which says that by increasing eigenvalue of one matrix, the eigenvalue of the product is also increased. 
 I am getting that trend in my case while using the values, but an analytical proof is what I am after.', '2018-01-14 08:41:26', 1, NULL, false, 7,10);
 
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(52, 'Primary dysmenorrhea is the presence of pain at the time of a woman’s menstruation due to a high level of prostaglandins. Secondary dysmenorrhea is associated with anatomical or hormonal changes.', '2017-08-05 11:57:22', 2, NULL, false, 17,23);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(52, 'Primary dysmenorrhea is the presence of pain at the time of a woman’s menstruation due to a high level of prostaglandins. Secondary dysmenorrhea is associated with anatomical or hormonal changes.', '2018-08-05 11:57:22', 2, NULL, false, 17,23);
 
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(53, 'This is not generally true. As a trivial example, one could the movements of water in a pond where a few small rocks have been tossed. The motion is definitely a wave behavior, and could even be called vibration, but it is most definitely not one dimensional.
 
@@ -1341,7 +1341,7 @@ I don''t know quite how to interpret your second question. I`ll say this: In the
 
 By the way, this is not the only way to "explain" these things. There are other mental pictures that are consistent with the theoretical physics. There''s no one correct picture. I think (my opinion) that this fact speaks to our brain''s limitations, its inability to understand the "true" nature of what''s going on. Our limited brains create metaphors based on things that we can understand or visualize. But this is just my personal point of view.', '2018-05-06 09:27:01',false, true, 16, NULL);
 
-INSERT INTO "bestanswer"(id_bestAnswer, attributionDate,"text" , "date", deleted, active, votes, photo) VALUES(4,'2018-12-11 14:33:46', 'Amplification
+INSERT INTO "bestanswer"(id_bestAnswer, attributionDate, "text" , "date", deleted, active, votes, photo) VALUES(4,'2018-12-11 14:33:46', 'Amplification
 
 It does not depend on the music file, but at the amplifier sending the music to a speaker, or to a headphone/earplug connector.
 
@@ -1361,7 +1361,7 @@ Measure
 
 If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2018-04-09 18:18:46',false, false, 17, NULL);
 
-INSERT INTO "bestanswer"(id_bestAnswer, attributionDate,"text" , "date", deleted, active, votes, photor) VALUES(5,'2018-12-15 22:18:42', 'These "jumps" that you brought up are not part of the kanji, they are part of the typeface.
+INSERT INTO "bestanswer"(id_bestAnswer, attributionDate,"text" , "date", deleted, active, votes, photo) VALUES(5,'2018-12-15 22:18:42', 'These "jumps" that you brought up are not part of the kanji, they are part of the typeface.
 
 (More specifically, they may be treated like serifs - or little decorations at the edge of certain lines)
 
