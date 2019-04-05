@@ -256,7 +256,7 @@ $$ LANGUAGE 'plpgsql';
 
 
 CREATE TRIGGER updateSearch
-AFTER INSERT OR UPDATE ON question
+BEFORE INSERT OR UPDATE ON question
 FOR EACH ROW
 EXECUTE PROCEDURE updateSearchFunction();
 
