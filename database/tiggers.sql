@@ -7,9 +7,11 @@ CREATE FUNCTION report_asso() RETURNS TRIGGER AS $$
 DECLARE
     num integer;
 BEGIN
-    SELECT Count(*) INTO num FROM ((SELECT NEW.id_question FROM NEW) UNION ALL (SELECT NEW.id_answer FROM NEW)) AS quantity;
-    IF num <> 1  THEN
-        RAISE EXCEPTION 'A report most be associated with one answer or question.';
+    IF (NEW.id_question IS NULL AND NEW.id_answer IS NULL) THEN
+        RAISE EXCEPTION 'A report (%) most be associated with one answer or question.',NEW.id_report;
+    END IF;
+    IF (NEW.id_question IS NOT NULL AND NEW.id_answer IS NOT NULL) THEN
+        RAISE EXCEPTION 'A report (%) most be associated with one answer or question.',NEW.id_report;
     END IF;
     RETURN NEW;
 END;
@@ -29,8 +31,8 @@ DECLARE
     question_date DateTime;
 BEGIN
     SELECT "date" INTO question_date FROM question WHERE question.id_question = NEW.id_question;
-    IF (question_date >= NEW."date") THEN
-        RAISE EXCEPTION 'An answer post date must be bigger than the question post date';
+    IF (question_date > NEW."date") THEN
+        RAISE EXCEPTION 'An answer (%) post date must be bigger than the question post date',NEW.id_answer;
     END IF;
     RETURN NEW;
 END;
@@ -50,15 +52,15 @@ DECLARE
     answer_date DateTime;
 BEGIN
     SELECT "date" INTO answer_date FROM answer WHERE answer.id_answer = NEW.id_bestAnswer;
-    SELECT "date" INTO question_date FROM question WHERE question.id_question = NEW.id_question;
-    IF (question_data > answer_date) THEN
-        RAISE EXCEPTION 'A best answer post date must be bigger than the question post date';
+    SELECT question."date" INTO question_date FROM question INNER JOIN answer ON (answer.id_answer = NEW.id_bestAnswer) WHERE question.id_question = answer.id_question;
+    IF (question_date > answer_date) THEN
+        RAISE EXCEPTION 'A answer post date (%) must be more recent than the question post date (%)',answer_date,question_date;
     END IF;
     IF (answer_date > NEW."date") THEN
-        RAISE EXCEPTION 'A best answer post date must be bigger than the answer post date';
+        RAISE EXCEPTION 'A best answer post date (%) must be more recent than the answer post date (%)',NEW."date",answer_date;
     END IF;
     IF (answer_date > NEW.attributionDate) THEN
-        RAISE EXCEPTION 'A best answer post attibution date must be bigger than the answer post date';
+        RAISE EXCEPTION 'A best answer post attibution (%) date must be more recent than the answer post date (%)',NEW.attributionDate,answer_date;
     END IF;
     RETURN NEW;
 END;
@@ -79,7 +81,7 @@ DECLARE
 BEGIN
     SELECT (DATE_PART('year', now()) -  DATE_PART('year', NEW.birthdate)) INTO age;
     IF (age<13) THEN
-        RAISE EXCEPTION 'A user must be at least 13 years old';
+        RAISE EXCEPTION 'A user (%) must be at least 13 years old',NEW.id_user;
     END IF;
     RETURN NEW;
 END;
@@ -99,7 +101,7 @@ DECLARE
 BEGIN
     SELECT id_user INTO question_owner FROM question WHERE NEW.id_question=question.id_question;
     IF (NEW.username = question_owner) THEN
-        RAISE EXCEPTION 'A user cannot vote on his own question';
+        RAISE EXCEPTION 'A user (%) cannot vote on his own question (%)',NEW.username,question_owner;
     END IF;
     RETURN NEW;
 END;
@@ -119,7 +121,7 @@ DECLARE
 BEGIN
     SELECT user_post INTO answer_owner FROM answer WHERE NEW.id_answer=answer.id_answer;
     IF (NEW.username = answer_owner) THEN
-        RAISE EXCEPTION 'A user cannot vote on his own answer';
+        RAISE EXCEPTION 'A user (%) cannot vote on his own answer (%)',NEW.username,answer_owner;
     END IF;
     RETURN NEW;
 END;
@@ -139,7 +141,7 @@ DECLARE
     maxV integer;
 BEGIN
     SELECT minValue,maxValue Into minV,maxV FROM rank WHERE NEW.id_rank = rank.id_rank;
-    IF (NEW.points < minValue OR NEW.points > maxValue) THEN
+    IF (NEW.points < minV OR NEW.points > maxV) THEN
         SELECT id_rank INTO NEW.id_rank FROM rank WHERE NEW.points >= rank.minValue AND rank.maxValue > NEW.points;
     END IF;
     RETURN NEW;
@@ -220,10 +222,10 @@ BEGIN
     SELECT question.id_user INTO user_question FROM question INNER JOIN report ON (question.id_question=report.id_question) WHERE report.id_report=NEW.id_report;
     SELECT answer.user_post INTO user_answer FROM answer INNER JOIN report ON (answer.id_answer=report.id_answer) WHERE report.id_report=NEW.id_report;
     IF (NEW.username = user_question) THEN
-        RAISE EXCEPTION 'A user can not report his own question';
+        RAISE EXCEPTION 'A user (%) can not report his own question (%)',NEW.username,user_question;
     END IF;
     IF (NEW.username = user_answer) THEN
-        RAISE EXCEPTION 'A user can not report his own answer';
+        RAISE EXCEPTION 'A user (%) can not report his own answer (%)',NEW.username,user_answer;
     END IF;
     RETURN NEW;
 END;
