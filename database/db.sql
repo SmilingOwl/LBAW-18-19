@@ -101,18 +101,19 @@ CREATE TABLE notification (
 
 CREATE TABLE category(
     id_category SERIAL PRIMARY KEY,
-    name text NOT NULL CONSTRAINT categoryname_uk UNIQUE
+    name text NOT NULL CONSTRAINT categoryname_uk UNIQUE,
+    icon text NOT NULL CONSTRAINT catIcon_uk UNIQUE
 );
 
 CREATE TABLE question(
-    id_question integer PRIMARY KEY NOT NULL REFERENCES category (id_category) ON UPDATE CASCADE ON DELETE CASCADE,
-    name text NOT NULL,
+    id_question SERIAL PRIMARY KEY,
     title text NOT NULL,
     description text,
     "date" DateTime NOT NULL DEFAULT now(),
     votes integer NOT NULL DEFAULT 0,
     photo text,
     deleted boolean NOT NULL,
+    id_category integer NOT NULL REFERENCES category (id_category) ON UPDATE CASCADE,
     id_user integer NOT NULL REFERENCES "user" (id_user) ON UPDATE CASCADE
 );
 
