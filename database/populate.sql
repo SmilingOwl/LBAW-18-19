@@ -1,9 +1,9 @@
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(1, 'rookie',0, 199);
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(2, 'beginner', 200, 499);
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(3, 'intermediate',500, 899);
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(4, 'enthusiast', 900, 1499);
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(5, 'advanced', 1500, 4999);
-INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(6, 'veteran', 5000,100000);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(1, 'rookie',0, 29);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(2, 'beginner', 30, 99);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(3, 'intermediate', 100, 249);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(4, 'enthusiast', 250, 499);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(5, 'advanced', 500, 999);
+INSERT INTO "rank"(id_rank, rankType, minValue, maxValue) VALUES(6, 'veteran', 1000, 100000);
 
 
 INSERT INTO "role"(id_role, type, beginningDate, endDate, id_user) VALUES(1,'administrator', '2000-09-17', null, 1);
@@ -86,9 +86,83 @@ INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdat
 INSERT INTO "user" (id_user, username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES (38, 'Ankara','kvsy986', 'zodiacrocket@yahoo.com', null, '1974-02-17', null, 300,2, false, false);
 
 
---INSERT INTO "follow"(follower, following) VALUES();
+INSERT INTO "follow"(following, follower) VALUES(1,2);
+INSERT INTO "follow"(following, follower) VALUES(2,1);
+INSERT INTO "follow"(following, follower) VALUES(3,9);
+INSERT INTO "follow"(following, follower) VALUES(3,29);
+INSERT INTO "follow"(following, follower) VALUES(3,34);
+INSERT INTO "follow"(following, follower) VALUES(4,3);
+INSERT INTO "follow"(following, follower) VALUES(4,7);
+INSERT INTO "follow"(following, follower) VALUES(5,12);
+INSERT INTO "follow"(following, follower) VALUES(5,14);
+INSERT INTO "follow"(following, follower) VALUES(5,20);
+INSERT INTO "follow"(following, follower) VALUES(5,22);
+INSERT INTO "follow"(following, follower) VALUES(7,1);
+INSERT INTO "follow"(following, follower) VALUES(7,4);
+INSERT INTO "follow"(following, follower) VALUES(7,5);
+INSERT INTO "follow"(following, follower) VALUES(7,8);
+INSERT INTO "follow"(following, follower) VALUES(7,13);
+INSERT INTO "follow"(following, follower) VALUES(10,3);
+INSERT INTO "follow"(following, follower) VALUES(10,19);
+INSERT INTO "follow"(following, follower) VALUES(10,3);
+INSERT INTO "follow"(following, follower) VALUES(10,19);
+INSERT INTO "follow"(following, follower) VALUES(11,14);
+INSERT INTO "follow"(following, follower) VALUES(11,25);
+INSERT INTO "follow"(following, follower) VALUES(11,35);
+INSERT INTO "follow"(following, follower) VALUES(12,5);
+INSERT INTO "follow"(following, follower) VALUES(13,4);
+INSERT INTO "follow"(following, follower) VALUES(13,8);
+INSERT INTO "follow"(following, follower) VALUES(13,16);
+INSERT INTO "follow"(following, follower) VALUES(14,5);
+INSERT INTO "follow"(following, follower) VALUES(14,6);
+INSERT INTO "follow"(following, follower) VALUES(15,4);
+INSERT INTO "follow"(following, follower) VALUES(15,7);
+INSERT INTO "follow"(following, follower) VALUES(15,8);
+INSERT INTO "follow"(following, follower) VALUES(15,13);
+INSERT INTO "follow"(following, follower) VALUES(15,30);
+INSERT INTO "follow"(following, follower) VALUES(18,11);
+INSERT INTO "follow"(following, follower) VALUES(20,5);
+INSERT INTO "follow"(following, follower) VALUES(20,14);
+INSERT INTO "follow"(following, follower) VALUES(20,25);
+INSERT INTO "follow"(following, follower) VALUES(21,17);
+INSERT INTO "follow"(following, follower) VALUES(21,38);
+INSERT INTO "follow"(following, follower) VALUES(23,6);
+INSERT INTO "follow"(following, follower) VALUES(24,2);
+INSERT INTO "follow"(following, follower) VALUES(24,27);
+INSERT INTO "follow"(following, follower) VALUES(25,14);
+INSERT INTO "follow"(following, follower) VALUES(26,7);
+INSERT INTO "follow"(following, follower) VALUES(26,13);
+INSERT INTO "follow"(following, follower) VALUES(27,24);
+INSERT INTO "follow"(following, follower) VALUES(28,4);
+INSERT INTO "follow"(following, follower) VALUES(28,6);
+INSERT INTO "follow"(following, follower) VALUES(28,8);
+INSERT INTO "follow"(following, follower) VALUES(28,9);
+INSERT INTO "follow"(following, follower) VALUES(28,12);
+INSERT INTO "follow"(following, follower) VALUES(28,25);
+INSERT INTO "follow"(following, follower) VALUES(29,11);
+INSERT INTO "follow"(following, follower) VALUES(31,19);
+INSERT INTO "follow"(following, follower) VALUES(32,22);
+INSERT INTO "follow"(following, follower) VALUES(33,1);
+INSERT INTO "follow"(following, follower) VALUES(33,7);
+INSERT INTO "follow"(following, follower) VALUES(33,26);
+INSERT INTO "follow"(following, follower) VALUES(34,3);
+INSERT INTO "follow"(following, follower) VALUES(34,9);
+INSERT INTO "follow"(following, follower) VALUES(35,11);
+INSERT INTO "follow"(following, follower) VALUES(36,8);
+INSERT INTO "follow"(following, follower) VALUES(36,13);
+INSERT INTO "follow"(following, follower) VALUES(38,10);
+INSERT INTO "follow"(following, follower) VALUES(38,17);
+INSERT INTO "follow"(following, follower) VALUES(38,19);
+INSERT INTO "follow"(following, follower) VALUES(38,21);
 
---INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES();
+INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES(1, 'FateTalk commented on your post', 'comment', false, '2016-05-06 17:28:33', 8);
+INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES(2, 'Orbital upvoted your answer', 'vote', false, '2017-02-08 01:32:18', 16);
+INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES(3, 'Chessbeans upvoted your question', 'vote', true, '2017-02-08 12:14:41', 28);
+INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES(4, 'Vikingkong upvoted your question', 'vote', true, '2017-02-09 13:25:40', 28);
+INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES(5, 'Vikingkong answered your question', 'answer', false, '2017-05-06 13:22:55', 35);
+INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES(6, 'FateTalk answered your question', 'answer', false, '2017-02-07 23:36:48', 28);
+INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES(7, 'Hexapod started following you', 'follow', true, '2019-01-25 16:27:38', 7);
+INSERT INTO "notification"(id_notification, description, type, view, "date", id_user) VALUES(8, 'Triangletopic started following you', 'follow', false, '2019-02-15 22:04:35', 38);
 
 INSERT INTO "category"(id_category, name) VALUES(1, 'art');
 INSERT INTO "category"(id_category, name) VALUES(2, 'biology');
@@ -566,8 +640,18 @@ The index of refraction is wavelength dependent but if the waves are totally can
 
 I assume there are no “waves” and thus no detectable wavelength per se while beams are in the glass if there is total destructive interference at that point in space.', '2017-02-07 21:34:44', 9, 'jbTdW.jpg', false, 28);
 
---TODO
---INSERT INTO "voteQuestion"(username, id_question) VALUES();
+INSERT INTO "voteQuestion"(username, id_question) VALUES(1, 59);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(13, 59);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(33, 59);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(9, 60);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(6, 61);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(11, 62);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(14, 62);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(10, 63);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(34, 63);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(32, 64);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(8, 65);
+INSERT INTO "voteQuestion"(username, id_question) VALUES(14, 65);
 
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(1, 'One can reject the null hypothesis.
 
@@ -735,7 +819,7 @@ quis, quod, quorum, cur, quat, qualis, quota, quantus, and of course, Quora!
 
 Some of these live on in English (“quota”, “quantity”, “qualify”, “quorum”). But they’re most obvious in other Romance languages, such as Spanish.
 
-To answer your question, yes, they are all from the same language, but also the same word, and so are many other words too!', 16, 'kwod.png', false, 9, 5);
+To answer your question, yes, they are all from the same language, but also the same word, and so are many other words too!', 16, 'kwod.jpg', false, 9, 5);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(30, 'You could try ''levity''.
 
 Levity may refer to: a sense of amusement, the opposite of gravitas', '2017-02-17 11:12:24', 76, NULL, false, 10, 20);
@@ -1017,7 +1101,7 @@ I don''t know quite how to interpret your second question. I''ll say this: In th
 
 By the way, this is not the only way to "explain" these things. There are other mental pictures that are consistent with the theoretical physics. There''s no one correct picture. I think (my opinion) that this fact speaks to our brain''s limitations, its inability to understand the "true" nature of what''s going on. Our limited brains create metaphors based on things that we can understand or visualize. But this is just my personal point of view.', '2016-05-06 09:27:01', 16, NULL, false, 38, 16);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(70, 'This is enlightening. My second question simply if there are two counters at the source and screen c1 and c2 is c1= c2 at the end of a single photon at a time experiment (assuming all emitted photons will make it through the slits regardless of which slit or both at the same time)', '2016-05-08 02:23:55', 8, NULL, false, 38, 8);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(71, 'This version of the question really requires a long answer. The presence of two detectors complicates the picture. If the detector near the source "detects a photon" (records an interaction), that excitation (photon) is gone. If the detector near the screen records an interaction, it will be a different excitation of the same field. Is this a different photon? Uhhh... the language is getting in the way. A time-resolved experiment will not detect that second photon a time d/c later. But there will be a tendency for detections to occur near each other. We''re off the rails now! ', '2016-05-06 17:28:33', 2, NULL, false, 12, 16);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(71, 'This version of the question really requires a long answer. The presence of two detectors complicates the picture. If the detector near the source "detects a photon" (records an interaction), that excitation (photon) is gone. If the detector near the screen records an interaction, it will be a different excitation of the same field. Is this a different photon? Uhhh... the language is getting in the way. A time-resolved experiment will not detect that second photon a time d/c later. But there will be a tendency for detections to occur near each other. We''re off the rails now! ', '2016-05-06 17:28:33', 2, NULL, false, 38, 16);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(72, 'I''d call it a montage:
 
 "Montage is a technique in film editing in which a series of short shots are edited into a sequence to condense space, time, and information.""
@@ -1194,12 +1278,19 @@ Similarly, we have just learnt what perfect competition is. But in the real worl
 We stress that these markets are not actual examples of perfect competition. (To repeat, such examples do not exist.) Instead, these are merely examples that come "close to" perfect competition.', '2017-11-07 07:56:02', 7, NULL, false, 61, 6);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(96, 'Prior to the beginning of World War II there about 55,000 civilian sailors employed in the U.S. merchant marine. This number increased to as many as 250,000 men who served in the U.S. merchant marine by the end of the war. A pre-war merchant fleet of 1,340 cargo ships and tankers expanded to at least 4,221 U.S. merchant ships by the end of World War II.', '2017-05-06 13:22:55', 1, NULL, false, 62, 14);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(97, 'Thinking about water waves; interference is only a temporary thing. If 2 waves travel cross a pond from opposite sides, but let''s say they are opposite in phase, in the middle of the pond when they meet they cancel, BUT this is only temporary. After they pass each other, they are visible again and continue along to the opposites shores!. 
-Waves cancelling or 'interference' is one of the most poorly explained phenomenons in physics, because they really don''t literally cancel, they just temporarily interact with each other. The same could be said for light waves, 2 photons never cancel, that''s a violation of energy conservation. In fact the only way to ever observe photons it to have them interact with matter (i.e. an electron in an atom/molecule). 
-2 photons arriving at an atom that are out of phase are very difficult for the atom to observe and 2 photons in phase increase the probability of observation greatly, it''s all Quantum Mechanics or probability.', '2017-02-07 23:36:48', 0, NULL, false, 65, 14);
+Waves cancelling or ''interference'' is one of the most poorly explained phenomenons in physics, because they really don''t literally cancel, they just temporarily interact with each other. The same could be said for light waves, 2 photons never cancel, that''s a violation of energy conservation. In fact the only way to ever observe photons it to have them interact with matter (i.e. an electron in an atom/molecule). 
+2 photons arriving at an atom that are out of phase are very difficult for the atom to observe and 2 photons in phase increase the probability of observation greatly, it''s all Quantum Mechanics or probability.', '2017-02-07 23:36:48', 0, NULL, false, 65, 16);
 
 
 
---INSERT INTO 'voteAnswer'(username, id_answer) VALUES();
+INSERT INTO 'voteAnswer'(username, id_answer) VALUES(3, 93);
+INSERT INTO 'voteAnswer'(username, id_answer) VALUES(34, 93);
+INSERT INTO 'voteAnswer'(username, id_answer) VALUES(12, 94);
+INSERT INTO 'voteAnswer'(username, id_answer) VALUES(12, 95);
+INSERT INTO 'voteAnswer'(username, id_answer) VALUES(11, 96);
+INSERT INTO 'voteAnswer'(username, id_answer) VALUES(35, 96);
+INSERT INTO 'voteAnswer'(username, id_answer) VALUES(13, 97);
+INSERT INTO 'voteAnswer'(username, id_answer) VALUES(36, 97);
 
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(35, 36);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(49, 50);
@@ -1209,8 +1300,14 @@ INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(66, 67);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(69, 70);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(70, 71);
 
---TODO
---INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, "text", "date", deleted, active, votes, photo) VALUES();
+INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(1,'2016-08-01 14:55:21',true,61);
+INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(2,'2017-11-26 02:14:23',false,65);
+INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(3,'2016-05-09 09:27:01',true,69);
+INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(4,'2016-04-11 14:33:46',true,74);
+INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(5,'2017-04-15 22:18:42',true,77);
+INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(6,'2016-04-03 15:14:57',false,81);
+INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(7,'2016-04-06 17:05:22',true,82);
+INSERT INTO "bestAnswer"(id_bestAnswer, attributionDate, active, id_answer) VALUES(8,'2016-02-18 01:31:14',true,88);
 
 INSERT INTO "faq"(id_faq, question, answer) VALUES(1, 'How does LearnIt work?', 'LearnIt is a Q&A community with an academic setting. Users can ask their own questions and answer questions posted by other people, as well as cast votes on posts in order to verify the quality of the information. You can vote a post positively or negatively, and the question owner can choose one of the answers as the best one. <br>
               Each question can be set to one of 12 distinct categories: Art, Biology, Business, Chemistry, Geology, History, Linguistics, Math, Medicine, Physics, Psychology and Technology; whose hubs can be freely browsed. <br>
@@ -1241,7 +1338,18 @@ INSERT INTO "faq"(id_faq, question, answer) VALUES(5, 'What happens if I get ban
 INSERT INTO "faq"(id_faq, question, answer) VALUES(6, 'Where do I suggest features I would like to see on LearnIt?', 'Simply contact us, using the contact form on the bottom part of any of the pages on the site.  <br>
               User feedback is always appreciated, and will help us to build a stronger platform for our community.');
 
---TODO
---INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES();
+INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(1, '2019-01-07 11:47:23', 'Commercial or spam', 55, NULL);
+INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(2, '2019-01-08 08:42:52', 'Inappropriate or offensive', 57, NULL);
+INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(3, '2019-01-08 09:37:31', 'Commercial or spam', NULL, 88);
+INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(4, '2019-01-08 11:17:44', 'Inappropriate or offensive', 62, NULL);
+INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(5, '2019-01-09 12:43:18', 'Inappropriate or offensive', 59, NULL);
+INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(6, '2019-01-09 14:37:05', 'Safety issue or illegal', NULL, 91);
+INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(7, '2019-01-09 15:17:26', 'Commercial or spam', NULL, 94);
 
---INSERT INTO "userReport"(username, id_report) VALUES();
+INSERT INTO "userReport"(username, id_report) VALUES(25, 1);
+INSERT INTO "userReport"(username, id_report) VALUES(27, 2);
+INSERT INTO "userReport"(username, id_report) VALUES(19,3);
+INSERT INTO "userReport"(username, id_report) VALUES(35,4);
+INSERT INTO "userReport"(username, id_report) VALUES(7,5);
+INSERT INTO "userReport"(username, id_report) VALUES(29,6);
+INSERT INTO "userReport"(username, id_report) VALUES(32,7);
