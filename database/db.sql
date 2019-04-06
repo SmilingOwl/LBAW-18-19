@@ -1,4 +1,8 @@
 
+-----------------------------------------
+-- Drop old schmema
+-----------------------------------------
+
 DROP TABLE IF EXISTS "user" CASCADE;
 DROP TABLE IF EXISTS follow CASCADE;
 DROP TABLE IF EXISTS role CASCADE;
@@ -15,16 +19,33 @@ DROP TABLE IF EXISTS report CASCADE;
 DROP TABLE IF EXISTS userReport CASCADE;
 DROP TABLE IF EXISTS notification CASCADE;
 
---Types--
+
+-----------------------------------------
+--Types
+-----------------------------------------
 
 DROP TYPE IF EXISTS notificationType;
 CREATE TYPE notificationType AS ENUM ('question', 'answer', 'comment', 'follow', 'vote');
+
 DROP TYPE IF EXISTS rankType;
 CREATE TYPE rankType AS ENUM ('rookie', 'beginner', 'intermediate', 'enthusiastic', 'advanced', 'veteran');
+
 DROP TYPE IF EXISTS roleType;
 CREATE TYPE roleType AS ENUM ('member','moderator', 'administrator');
 
---Functions --
+
+-----------------------------------------
+--DOMAINS
+-----------------------------------------
+
+DROP DOMAIN If EXISTS DateTime CASCADE;
+CREATE DOMAIN DateTime AS date 
+    CONSTRAINT date_ck CHECK (VALUE > '1900-01-01'::date AND VALUE <=now());
+
+
+-----------------------------------------
+--Functions 
+-----------------------------------------
 
 DROP FUNCTION IF EXISTS defaultphoto();
 CREATE FUNCTION defaultphoto() RETURNS text AS $$
@@ -46,23 +67,19 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
--- DOMAINS--
 
-DROP DOMAIN If EXISTS DateTime CASCADE;
-CREATE DOMAIN DateTime AS date 
-    CONSTRAINT date_ck CHECK (VALUE > '1900-01-01'::date AND VALUE <=now());
+-----------------------------------------
+--Tables
+-----------------------------------------
 
-
---Tables--
-
-CREATE TABLE rank (
+CREATE TABLE rank(
     id_rank SERIAL PRIMARY KEY,
     name rankType NOT NULL DEFAULT 'rookie' CONSTRAINT name_uk UNIQUE,
     minValue integer CONSTRAINT minValue_ck CHECK (minValue>=0),
     maxValue integer CONSTRAINT maxValue_ck CHECK ((maxValue > 0) AND (maxValue>minValue))
 );
 
-CREATE TABLE "user" (
+CREATE TABLE "user"(
     id_user SERIAL PRIMARY KEY,
     username text NOT NULL CONSTRAINT username_uk UNIQUE,
     password text NOT NULL,
@@ -76,7 +93,7 @@ CREATE TABLE "user" (
     deleted boolean NOT NULL
 );
 
-CREATE TABLE role  (
+CREATE TABLE role(
     id_role SERIAL PRIMARY KEY,
     type roleType NOT NULL DEFAULT 'member',
     beginningDate DateTime,
@@ -147,7 +164,7 @@ CREATE TABLE comment(
     PRIMARY KEY (firstAnswer,secondAnswer)
 );
 
-CREATE TABLE bestAnswer (
+CREATE TABLE bestAnswer(
     id_bestAnswer integer PRIMARY KEY REFERENCES answer (id_answer) ON UPDATE CASCADE ON DELETE CASCADE,
     attributionDate DateTime NOT NULL,
     "text" text NOT NULL,
@@ -177,5 +194,3 @@ CREATE TABLE userReport(
     id_report integer NOT NULL REFERENCES report (id_report) ON UPDATE CASCADE,
     PRIMARY KEY (username,id_report)
 );
-
-
