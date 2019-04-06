@@ -1,4 +1,6 @@
---TRIGGERS--
+-----------------------------------------
+--TRIGGERS
+-----------------------------------------
 
 --Report must be associated with one answer or one question
 DROP TRIGGER IF EXISTS report_association ON report;
@@ -17,11 +19,11 @@ BEGIN
 END;
 $$ LANGUAGE plpgsql;
 
-
 CREATE TRIGGER report_association 
 BEFORE INSERT OR UPDATE ON report
 FOR EACH ROW 
 EXECUTE PROCEDURE report_asso();
+
 
 --Answer date must be bigger than question date
 DROP TRIGGER IF EXISTS answerDate ON answer;
@@ -42,6 +44,7 @@ CREATE TRIGGER answerDate
 BEFORE INSERT OR UPDATE on answer
 FOR EACH ROW
 EXECUTE PROCEDURE answerDateCheck();
+
 
 --Bestanswer date must be bigger than question date it's belongs and answer date and attribution date bigger than answer date
 DROP TRIGGER IF EXISTS bestAnswerDate ON bestAnswer;
@@ -72,6 +75,7 @@ BEFORE INSERT OR UPDATE ON bestAnswer
 FOR EACH ROW
 EXECUTE PROCEDURE bestAnswerDateCheck();
 
+
 --A user must be at least 13 years old
 DROP TRIGGER IF EXISTS ageCheck ON "user";
 DROP FUNCTION IF EXISTS ageCheckFunction();
@@ -91,6 +95,7 @@ CREATE TRIGGER ageCheck
 BEFORE INSERT OR UPDATE ON "user"
 FOR EACH ROW
 EXECUTE PROCEDURE ageCheckFunction();
+
 
 --A user cannot vote his own question
 DROP TRIGGER IF EXISTS userQuestionVote ON voteQuestion;
@@ -112,6 +117,7 @@ BEFORE INSERT OR UPDATE ON voteQuestion
 FOR EACH ROW
 EXECUTE PROCEDURE userQuestionVoteFunction();
 
+
 --A user cannot vote his own answer
 DROP TRIGGER IF EXISTS userAnswerVote ON voteAnswer;
 DROP FUNCTION IF EXISTS userAnswerVoteFunction();
@@ -131,6 +137,7 @@ CREATE TRIGGER userAnswerVote
 BEFORE INSERT OR UPDATE ON voteAnswer
 FOR EACH ROW
 EXECUTE PROCEDURE userAnswerVoteFunction();
+
 
 --Update user rank when user is modified
 DROP TRIGGER IF EXISTS updateUserRank ON "user";
@@ -154,7 +161,6 @@ FOR EACH ROW
 EXECUTE PROCEDURE updateUserRankFunction();
 
 
-
 --Update user score when a question is modified
 DROP TRIGGER IF EXISTS updateScoreQuestion ON question;
 DROP FUNCTION IF EXISTS updateScoreQuestionFunction();
@@ -173,7 +179,8 @@ AFTER UPDATE ON question
 FOR EACH ROW
 EXECUTE PROCEDURE updateScoreQuestionFunction();
 
---Update user score when a answer is modified
+
+--Update user score when an answer is modified
 DROP TRIGGER IF EXISTS updateScoreAnswer ON answer;
 DROP FUNCTION IF EXISTS updateScoreAnswerFunction();
 CREATE FUNCTION updateScoreAnswerFunction() RETURNS TRIGGER AS $$
@@ -209,6 +216,7 @@ CREATE TRIGGER updateScoreBestAnswer
 BEFORE INSERT ON bestAnswer
 FOR EACH ROW
 EXECUTE PROCEDURE updateScoreBestAnswerFunction();
+
 
 --A member cannot report his own content (questions, comments and answers)
 DROP TRIGGER IF EXISTS reportSelf ON userReport;
@@ -259,11 +267,3 @@ CREATE TRIGGER updateSearch
 BEFORE INSERT OR UPDATE ON question
 FOR EACH ROW
 EXECUTE PROCEDURE updateSearchFunction();
-
-
--- TODO--
-
-
-
-
-
