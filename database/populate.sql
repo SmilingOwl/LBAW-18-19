@@ -208,7 +208,7 @@ B.Heat is never converted completely into mechanical energy.
 C.Heat never flows from hot to cold. 
 D.Entropy never increases.
 
-What''s the right answer?','2016-01-30 15:08:23' , 2, null, false,10, 16);
+What''s the right answer?','2016-01-30 15:08:23' , 2, null, false,10, 28);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(7, 'Is every open circuit a capacitor?', 'I think that even open-ended wires can let AC current flow through them, just with a low capacitance. I also think an antenna could be a capacitor and open ended. Am I thinking correctly?','2016-09-19 19:46:44' , 28, null, false,10, 8);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(8, 'Melting and boiling points of benzene and fluorobenzene', null ,'2016-06-01 08:44:35', 7, null, false,4, 28);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(9, 'Why do the five basic questions in the English language (what, why, when, who and where) all start with the letter “w”?', null, '2016-12-19 05:52:53', 15, null, false,9, 31);
@@ -321,7 +321,7 @@ L is Laplacian of an undirected graph, hence real symmetric and singular. B is a
 
 I want to show that if I increase the magnitude of eigenvalues of L, the eigenvalues of A will also increase. However, all I could find was a trace inequality relationship, and inequality doesn''t necessarily lead to any conclusion.', '2017-01-11 14:46:12', 9, NULL, false,7, 7);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(27, 'What’s the difference between primary and secondary dysmenorrhea?', NULL, '2016-08-05 04:54:05', 9, NULL, false,8, 21);
-INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(28, 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', '2017-01-30 15:08:23', 5, NULL, false,11, 16);
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(28, 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', 'If sound is a longitudinal wave, why can we hear it if our ears aren''t aligned with the propagation direction?', '2017-01-30 15:08:23', 5, NULL, false,10, 16);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(29, 'What is the possible diagnosis for symptoms including fever, leucocitosys and abdominal pain', NULL, '2016-02-24 08:03:14', 2, NULL, false,8, 21);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(30, 'How many liberties can one take with syntax and grammar rules when writing poetry?', NULL, '2016-03-10 22:05:47', 12, NULL, false,9, 15);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(31, 'How do sillimanite rocks form?', NULL, '2016-10-05 01:36:42', 1, NULL, false,5, 14);
@@ -428,7 +428,7 @@ INSERT INTO "question"(id_question , title, description, "date", votes, photo, d
 
 Imagine a galvanic cell, without the wiring between the two electrodes and instead we only have the salt bridge. Won''t the electrons (although it is very unfavorable to happen) travel through the salt bridge and the solutions? In other terms will the transformation of the electrodes occur?', '2016-04-02 18:57:46', 28, NULL, false,4, 3);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(48, 'What is the significance of the traveler carrying writing materials in Ivanhoe?', 
-'The Jew`s dress, which appeared to have suffered considerably from the storm, was a plain russet cloak of many folds, covering a dark purple tunic. He had large boots lined with fur, and a belt around his waist, which sustained a small knife, together with a case for writing materials, but no weapon. He wore a high square yellow cap of a peculiar fashion, assigned to his nation to distinguish them from Christians, and which he doffed with great humility at the door of the hall.
+'"The Jew`s dress, which appeared to have suffered considerably from the storm, was a plain russet cloak of many folds, covering a dark purple tunic. He had large boots lined with fur, and a belt around his waist, which sustained a small knife, together with a case for writing materials, but no weapon. He wore a high square yellow cap of a peculiar fashion, assigned to his nation to distinguish them from Christians, and which he doffed with great humility at the door of the hall."
 
 Strange but true: this snippet, apparently about a scribe`s tools, has been haunting me rather obsessively lately. I didn''t recall that the bearer was the Jew. I suppose a lender/usurer would want to keep records of his debtors.
 
@@ -709,11 +709,11 @@ Structs
 Classes', '2018-02-17 08:07:24', 6, NULL, false, 3, 7);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(4, 'It is necessary for the students to have real time experiences in order to understand any topic in studies. Such experiences help them to know the problems that occur apart from books and hence they can understand how people actually behave in real life to solve them.
 
-Such examples can be studies by doing case studies of events. Similarly in the filed of law, doing business law case study assignment help in achieving that motive.
+Such examples can be studies by doing case studies of events. Similarly in the field of law, doing business law case study assignment help in achieving that motive.
 
 The data for case studies can be extracted from anywhere from internet to libraries. It would be good to ask about some popular case studies from your guide or professor.', '2018-01-13 14:18:09', 1, NULL, false, 4, 23);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(5, 'I think these agents are called Vesicant agents, but I may be wrong.', '2018-04-12 11:11:23', 0, NULL, false, 5, 38);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(6, 'It''s ''A''', '2018-02-15 17:52:24', 0, NULL, false, 10, 20);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(6, 'I think it''s ''A'', but it could be ''B'' too.', '2018-02-15 17:52:24', 0, NULL, false, 6, 16);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(7, 'You are right, every circuit possesses some unintended capacitance, which is called "stray" capacitance. Whether or not it affects the operation of the circuit depends on the frequencies that the circuit is intended to operate at. 
 The amount of stray capacitance that a circuit has is typically tiny, but at high enough frequencies even a very tiny amount of capacitance will couple parts of the circuit together and make it malfunction.
 
@@ -742,19 +742,19 @@ You might notice that all of them (except “how”) begin with “wh”. For mo
 
 Anyway, all of these words can be traced directly back to Old English:
 
-hwa → who
-hwam → whom
-hwaet → what
-hwaer → where
-hwaenne → when
-hwi → why
-hwilc → which
+hwa -> who
+hwam -> whom
+hwaet -> what
+hwaer -> where
+hwaenne -> when
+hwi -> why
+hwilc -> which
 (the final c was pronounced like “ch”)
-hwaes → whose
-hwaeder→ whether
-hu → how
-hwanone → whence
-hwider → whither
+hwaes -> whose
+hwaeder -> whether
+hu -> how
+hwanone -> whence
+hwider -> whither
 Note that instead of “wh”, they wrote “hw”… but the sound was the same.
 
 (By the way, you might be wondering why “how” doesn’t begin with w. The way double-u was originally written was literally with a double-u. For example, hwa was written as huua. Since hu already had a u, writing a bunch more of the same letter in there was probably seen as redundant.)
@@ -949,21 +949,21 @@ Once the team was able to create a seamless blend, they would move on to the nex
 
 [...]
 
-The car ambush was shot in six sections and at four different locations over one week and required five seamless digital transitions', '2018-03-26 22:16:46', 2, NULL, false, 4,23);
+The car ambush was shot in six sections and at four different locations over one week and required five seamless digital transitions', '2018-03-26 22:16:46', 2, NULL, false, 23, 2);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(45, 'It will work if you use the standard method --- which is to metalize the surface first. Metalization can be done by vacuum deposition (used for very fine/small objects), or by electroplating (used for objects that are not very fine/small), or by flame deposition (used for objects that are coarse/large).
 
 Electroplating is a three step process that also requires an intermediate metal surface, and that surface is done by deposition plating on to an etched ionic surface. The first step is surface etching, which exposes an ionic surface, then deposition plating, then electroplating.
 
 This suggests two options: You could use electrostatic painting after the deposition stage. That will probably work.
 
-Or you could try electrostic painting after the first, etching stage. You can probably find examples of dust deposition onto an ionic surface around your house. The process is very slow, and requires very fine particles with very low surface tension. If you work on it, you may be able to get a paint and a process to make it work for you. Don''t expect it to be easy.', '2018-11-12 18:00:15', 3, NULL, false, 4, 24);
+Or you could try electrostic painting after the first, etching stage. You can probably find examples of dust deposition onto an ionic surface around your house. The process is very slow, and requires very fine particles with very low surface tension. If you work on it, you may be able to get a paint and a process to make it work for you. Don''t expect it to be easy.', '2018-11-12 18:00:15', 3, NULL, false, 24, 33);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(46, 'As you say, this attempt is reasonable, and it is even done for things like painting aircraft.
 
 Lufthansa says they like this process because more of the expensive paint ends up being on the aircraft and not in the hangar.
 
 However, make sure that there is no danger of igniting your paint with sparks caused by electro-static discharge.
 
-I guess if you use a metal object behind your plastic parts to be painted, you could still achieve good results.', '2018-11-12 21:05:21', 1, NULL, false, 7, 23);
+I guess if you use a metal object behind your plastic parts to be painted, you could still achieve good results.', '2018-11-12 21:05:21', 1, NULL, false, 24, 2);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(47, 'The object you paint needs to be electrically conductive, which in most practical situations means it needs to be metallic.
 
 Electrostatic painting works by charging up each tiny droplet of paint, and then setting up a E field so that the electrostatic force on the charged particles pushes them towards the object you want to paint. Car companies have used this process for a long time now. It not only saves on paint and reduces particulates in the air, but does a better job of coating the surface evenly with the paint.
@@ -973,7 +973,7 @@ It can even somewhat paint the back sides of small objects. The sprayer only nee
 The paint is generally not conductive. This means that opposite charge builds up on the surface of the object as the paint builds up. This attracts less new paint particles, thereby automatically evening out the paint thickness somewhat.
 
 However, all this works by keeping the underlying object at a significantly different potential than the paint gun nozzle (and thereby the paint particles). The object needs to be conductive to do this. First, it needs to be conductive to establish the potential all along its surface in the first place. Second it needs to be conductive to counter act at least the initial opposite charge of the first layer of droplets which touch the conductive material directly. The charged paint droplets moving from the nozzle to the object is essentially a electrical current. 
-If you can''t drain that current from the object, then even a little paint will rapidly charge it up to the reverse polarity.', '2018-11-13 12:33:17', 1, NULL, false,7, 24);
+If you can''t drain that current from the object, then even a little paint will rapidly charge it up to the reverse polarity.', '2018-11-13 12:33:17', 1, NULL, false, 24, 26);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(48, 'Why do we have water vapors when our body temperature is also <100°C in the first place?
 
 At normal pressure, water boils at 100°C, meaning that bubbles of pure steam form under water. At lower temperatures, water molecules reversibly move from the liquid to the gas phase and back. The higher the temperature, the higher the vapor pressure, and the higher the equilibrium concentration (partial pressure) of water in air. On the geological scale, there is no equilibrium, and we experience different temperatures, different humidity (related to partial pressure of water in air), and different pressures depending on location.
@@ -988,26 +988,26 @@ Again, this has to do with pure liquids and pure solids having a constant (or ne
 
 When I exhale on a wall, no water droplets form.
 
-I would do an experiment and check. I think the water droplets are easier to see on a mirror. Try a grand piano (i.e a smooth surface painted with shiny black paint), you might see the water droplets there as well. Or take a long hot shower and check whether water droplets form on surfaces other than a mirror.', '2018-10-05 11:12:31', 14, NULL, false, 3,20);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(49, 'It should be noted that ice does turn into a gas at T<0°C readily enough.', '2018-10-05 11:12:31', 3, NULL, false, 8,20);
+I would do an experiment and check. I think the water droplets are easier to see on a mirror. Try a grand piano (i.e a smooth surface painted with shiny black paint), you might see the water droplets there as well. Or take a long hot shower and check whether water droplets form on surfaces other than a mirror.', '2018-10-05 11:12:31', 14, NULL, false, 25, 34);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(49, 'It should be noted that ice does turn into a gas at T<0°C readily enough.', '2018-10-05 11:12:31', 3, NULL, false, 26, 3);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(50, 'If you count geometric multiplicities, eigenvalues may disappear. Does that count as increasing? 
-If you consider this image as an example, then going from L1 to L2 changes the eigenvalues from 0 and 0 to 0 and 2, certainly as good an increase as we can hope for given that the Ls are always singular. But the eigenvalues of L1B are 0 and 0 whereas L2B only has a single 0. Is that an increase? ', '2018-01-12 11:42:15', 2, 'Ki29S.png', false, 4,26);
+If you consider this image as an example, then going from L1 to L2 changes the eigenvalues from 0 and 0 to 0 and 2, certainly as good an increase as we can hope for given that the Ls are always singular. But the eigenvalues of L1B are 0 and 0 whereas L2B only has a single 0. Is that an increase? ', '2018-01-12 11:42:15', 2, 'Ki29S.png', false, 26, 4);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(51, 'Thank you for the response. 
 Regarding your first question, I could not understand the difference between the two in eigenvalues of L1B are 0 and 0 whereas L2B only has a single 0. 
 And were you trying to give a counterexample for the statement? If B is an identity matrix, then L2B would have eigenvalues 0 and 2. 
 I am looking for an analytical proof which says that by increasing eigenvalue of one matrix, the eigenvalue of the product is also increased. 
-I am getting that trend in my case while using the values, but an analytical proof is what I am after.', '2018-01-14 08:41:26', 1, NULL, false, 7,10);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(52, 'Primary dysmenorrhea is the presence of pain at the time of a woman’s menstruation due to a high level of prostaglandins. Secondary dysmenorrhea is associated with anatomical or hormonal changes.', '2018-08-05 11:57:22', 2, NULL, false, 17,23);
+I am getting that trend in my case while using the values, but an analytical proof is what I am after.', '2018-01-14 08:41:26', 1, NULL, false, 26, 7);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(52, 'Primary dysmenorrhea is the presence of pain at the time of a woman’s menstruation due to a high level of prostaglandins. Secondary dysmenorrhea is associated with anatomical or hormonal changes.', '2018-08-05 11:57:22', 2, NULL, false, 27, 17);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(53, 'This is not generally true. As a trivial example, one could the movements of water in a pond where a few small rocks have been tossed. The motion is definitely a wave behavior, and could even be called vibration, but it is most definitely not one dimensional.
 
 Another potential example would be the vibrator on your phone, which vibrates in a circular manner.
 
 But in the end, the key is that atoms in a sound wave don''t vibrate left and right. They are a longitudinal wave, in which particles move in the direction of the wave''s motion and back.
 
-So when something causes a sound, the waves propagate outward from the object creating the sound, as molecules of gas move away from the source and towards the source. This is typically a 3 dimensional pattern', '2018-01-30 15:36:08', 17, NULL, false, 8,10);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(54, 'A sound wave is not a transverse wave, as you may have thought. That means the vibration and the direction of propagation for sound wave are parallel. And the vibration is caused by difference in air pressure at different places. To the question "how I can listen to it" thats because the pressure difference propagates toward your ear and force your eardrum to vibrate.', '2018-01-30 18:19:23', 8, NULL, false, 16,10);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(55, 'Note, sound can be also a transverse wave, but only in solid materials (others don''t have a shear stress). It has different properties than the longitudinal sound. This is how the internal properties of the Earth were discovered (liquid mantle, solid core). Also the electromagnetic and gravitational fields propagate as transverse waves.', '2018-01-30 19:18:32', 2, NULL, false, 8,20);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(56, 'Like most symptomatologies this question is a little vague and I''d need more data. The first diagnosis that comes to mind is appendicitis, especially due to the existence of leucocitosys since it can also be a diverticulum, or an obstruction in the intestines', '2018-02-24 13:06:28', 4, NULL, false, 17,7);
+So when something causes a sound, the waves propagate outward from the object creating the sound, as molecules of gas move away from the source and towards the source. This is typically a 3 dimensional pattern', '2018-01-30 15:36:08', 17, NULL, false, 28, 8);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(54, 'A sound wave is not a transverse wave, as you may have thought. That means the vibration and the direction of propagation for sound wave are parallel. And the vibration is caused by difference in air pressure at different places. To the question "how I can listen to it" thats because the pressure difference propagates toward your ear and force your eardrum to vibrate.', '2018-01-30 18:19:23', 8, NULL, false, 28, 36);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(55, 'Note, sound can be also a transverse wave, but only in solid materials (others don''t have a shear stress). It has different properties than the longitudinal sound. This is how the internal properties of the Earth were discovered (liquid mantle, solid core). Also the electromagnetic and gravitational fields propagate as transverse waves.', '2018-01-30 19:18:32', 2, NULL, false, 28, 8);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(56, 'Like most symptomatologies this question is a little vague and I''d need more data. The first diagnosis that comes to mind is appendicitis, especially due to the existence of leucocitosys since it can also be a diverticulum, or an obstruction in the intestines', '2018-02-24 13:06:28', 4, NULL, false, 29,17);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(57, 'The answer, like most things in writing, is that it depends.
 
 In my own poetry writing I''ve found that I am greatly helped by first learning and strictly following all stylistic guidelines. I have often been drawn towards formal verse structures such as the villanelle, Shakespearian-style sonnet, or sestina. By forcing myself to follow these guidelines, I really challenge my own creative process. I also learn what the rules do to the poem. I learn the impact of, say, repeating the same line at the end of every other stanza or how a certain rhythm and rhyme scheme hits the ear.
@@ -1019,7 +1019,7 @@ One way of breaking the rules that novice poets often fall into and shouldn''t i
 The most revered modern poets often (not always) write very compressed language that also seems modern and moves smoothly. When they break these patterns, the impact adds to the theme and feel of the poem, it is not capricious. As a poet you''ll have to learn how to do this as well.', '2018-03-11 11:11:12', 8, NULL, false, 30, 5);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(58, 'Sillimanite is strictly speaking a mineral rather than a rock type. 
 It is found in metamorphic rocks that were high aluminium sediments, particularly ones that contained a lot of feldspar or clay. 
-They are usually found in high grade metamorphic rocks (gneisses) formed at over 600 Celsius.', '2018-10-05 10:23:24', 2, NULL, false, 31, 11);
+They are usually found in high grade metamorphic rocks (gneisses) formed at over 600 Celsius.', '2018-10-05 10:23:24', 2, NULL, false, 31, 25);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(59, 'It does not depend on the music file, but at the amplifier sending the music to a speaker, or to a headphone/earplug connector.
 
 A music file only contains ''values'', and mostly in a compressed form. After uncompressing, you get values which has a certain amount on bits per value (typically 16 or more).
@@ -1053,7 +1053,7 @@ Attempting to put this into a different wording:
 The password gives the user the permission to login
 
 This is erroneous as the permission may in this case already be granted and they simply haven''t been given the ability to login yet', '2018-11-25 23:55:23', 1, NULL, false, 36, 22);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(66, 'But gramatically, they''re identical. They just carry different meanings? (And in the example, it sounds like “enables” better describes what passwords do?)', '2018-11-26 01:14:56', 1, NULL, false, 36, 22);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(66, 'But gramatically, they''re identical. They just carry different meanings? (And in the example, it sounds like “enables” better describes what passwords do?)', '2018-11-26 01:14:56', 1, NULL, false, 36, 26);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(67, 'Grammatically yes, they''re identical. But they carry different meanings. So you''re right to think that the problem was within you when perceiving the phrase as erroneous. ''Enables'' definitely describes the function of the user being given the password better than ''allow'' would. As I''ve attempted to lay out in my answer.', '2018-11-26 09:55:16', 1, NULL, false, 36, 22);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(68, 'Officially, I requested to Bayer who is innovator of Ciprofloxacin and received 1 in-vitro study article.
 
@@ -1073,7 +1073,7 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(71, 'This version of the question really requires a long answer. The presence of two detectors complicates the picture. If the detector near the source "detects a photon" (records an interaction), that excitation (photon) is gone. If the detector near the screen records an interaction, it will be a different excitation of the same field. Is this a different photon? Uhhh... the language is getting in the way. A time-resolved experiment will not detect that second photon a time d/c later. But there will be a tendency for detections to occur near each other. We''re off the rails now! ', '2018-05-06 17:28:33', 2, NULL, false, 38, 16);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(72, 'I''d call it a montage:
 
-"Montage is a technique in film editing in which a series of short shots are edited into a sequence to condense space, time, and information.""
+"Montage is a technique in film editing in which a series of short shots are edited into a sequence to condense space, time, and information."
 
 It shows several conversations that took place over a long time, but compresses them into a shorter sequence for viewers.
 
@@ -1190,7 +1190,7 @@ Gary Prost & Benjamin Prost''s The Geology Companion: Essentials for Understandi
 
 On the items on auction sites mentioned by Denis de Bernardy in his comment, googling has turned up nothing convincing. Related to this, in The Maya Indians of southern Yucatan and northern British Honduras (1918), author T. W. F. Gann mentions a ''small soapstone lamp'' find but concludes that it is post-Columbian as the style is "totally unlike" that of ancient Maya culture.
 
-(all emphasis is mine)', '2018-02-12 14:20:57', 8, NULL, false, 12, 35);
+(all emphasis is mine)', '2018-02-12 14:20:57', 8, NULL, false, 52, 35);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(87, 'In addition to measuring the redshift and the apparent brightness of a faint object, astronomers also measure the spectrum of the light coming from it. These three things are used to identify whether or not a faint object really is a quasar, and the details of this identification are available on the web and in any good introductory text on astronomy.', '2018-04-22 19:28:55', 0, NULL, false, 53, 16);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(88, 'This excerpt refers to an experiment described in Topolinski & Strack (2009) and Topolinski & Strack (2009), and is part of a series of experiments that used a variety of different methods to demonstrate the causal relation between affect and coherence, of which only 1 is described above, so even if it isn''t convincing by itself, a lot of additional evidence would need to be questioned to thwart the conclusion.
 
@@ -1270,7 +1270,9 @@ INSERT INTO "voteanswer"(username, id_answer) VALUES(36, 97);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(35, 36);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(49, 50);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(50, 51);
+INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(54, 55);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(61, 62);
+INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(65, 66);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(66, 67);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(69, 70);
 INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(70, 71);
