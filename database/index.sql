@@ -16,7 +16,7 @@ CREATE INDEX answers ON "answer" USING hash (id_question);
 
 CREATE INDEX question_date ON "question" USING btree ("date");
 
---SELECT14 (comments), HIGH CARDINALITY, CLUSTERING
+--SELECT14 (comments), MEDIUM CARDINALITY, CLUSTERING
 
 CREATE INDEX comments ON "comment" USING hash (firstAnswer);
 
