@@ -198,7 +198,7 @@ INSERT INTO "category"(id_category, name, icon) VALUES(12, 'technology', 'tech-0
 -----------------------------------------
 --QUESTION
 -----------------------------------------
-INSERT INTO "question"(id_question, title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(1,'Tyesha found that the z-statistic was 2.1 and that the critical z-values were -1.96 and 1.96. Which of the following is a valid conclusion based on these results?', 'One can reject the null hypothesis. One can reject the alternate hypothesis. One can accept the null hypothesis. One cannot accept or reject the null hypothesis.','2016-01-06 16:18:36' , 6, null, false,7, 4);
+INSERT INTO "question"(id_question, title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(1,'Tyesha found that the z-statistic was 2.1 and that the critical z-values were -1.96 and 1.96. Which of the following is a valid conclusion based on these results?', 'One can reject the null hypothesis. One can reject the alternate hypothesis. One can accept the null hypothesis. One cannot accept or reject the null hypothesis.','2016-01-06 16:18:36' , 6, null, false,7, 4); 	
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(2,'What is required to start sculpting clay (tools, experience…)?', null,'2016-05-06 16:18:36' , 2, null, false,1, 28);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(3, 'What are the best C++ books?', null,'2016-01-10 16:35:44', 30, null, false,12, 33);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(4,'How do I study business law?', null,'2015-09-13 10:14:12', 5, null, false,3, 6);
@@ -379,9 +379,9 @@ It acts as bootstrapping while your host is booting up and establishing itself w
 What I am familiar with is executing the above two steps and then rebooting your host. But plenty of times, like with a production server, one would like to execute that rename, but not reboot one''s host.
 
 How can I change hostname on a host and get that change to take effect without rebooting the host?', '2016-04-15 16:25:08', 12, NULL, false,12, 7);
-INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(41, 'Voltage of sounds of mp3 files', 'As a computer programmer, I have noticed an interesting phenomenon: If I am stuck on a particular problem in my work, often if I stop thinking about the problem and do something else, the answer will suddenly come to me.
+INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(41, 'How is it that taking a break from a problem sometimes allows you to figure out the answer?', 'As a computer programmer, I have noticed an interesting phenomenon: If I am stuck on a particular problem in my work, often if I stop thinking about the problem and do something else, the answer will suddenly come to me.
 
-Is there a name for this phenomenon? How does this work? Has any research been done on this? How is it that taking a break from a problem sometimes allows you to figure out the answer?', '2016-04-03 09:28:17', 28, NULL, false,12, 26);
+Is there a name for this phenomenon? How does this work? Has any research been done on this? How is it that taking a break from a problem sometimes allows you to figure out the answer?', '2016-04-03 09:28:17', 28, NULL, false,11, 26);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(42, 'Why is delta-v is the most useful quantity for planning space travel?', 'Many of the papers I''ve seen on the matter make use of the concept of delta-v. Is there an easy to understand reason why delta-v, the magnitude of the change of the velocity, |v|, is so useful for understanding orbital mechanics and planning travel?
 
 My experience in solving physics problems in mechanics has taught me that energy, linear momentum, or angular momentum are usually the most useful quantities. Delta-v doesn''t seem to be a good proxy for any of these quantities, since it''s not squared like the kinetic energy, but it''s also not a vector like the linear and angular momenta.', '2017-04-25 09:51:26', 4, NULL, false,10, 8);
@@ -579,7 +579,7 @@ I am wondering, of all the people who crewed those vessels, how many were Americ
 
 Note, I''m not asking for a death toll. I''m asking for a composition of them all.', '2017-05-06 02:09:37', 4, NULL, false,6, 35);
 INSERT INTO "question"(id_question , title, description, "date", votes, photo, deleted, id_category, id_user) VALUES(63, 'Is there a relationship between HDL-C and LDL-C?', 
-'Whenever I read about how to deal with cholesterol level, the rule is to keep a low LDL fraction, ad a high HDL one.
+'Whenever I read about how to deal with cholesterol level, the rule is to keep a low LDL fraction, as a high HDL one.
 
 How to achieve this usually falls into the categories of a healthy body (sport), a healthy diet and possibly medicamentation.
 
@@ -713,7 +713,7 @@ Such examples can be studies by doing case studies of events. Similarly in the f
 
 The data for case studies can be extracted from anywhere from internet to libraries. It would be good to ask about some popular case studies from your guide or professor.', '2018-01-13 14:18:09', 1, NULL, false, 4, 23);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(5, 'I think these agents are called Vesicant agents, but I may be wrong.', '2018-04-12 11:11:23', 0, NULL, false, 5, 38);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(6, 'I think it''s ''A'', but it could be ''B'' too.', '2018-02-15 17:52:24', 0, NULL, false, 6, 16);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(6, 'I think it''s ''A'', but it could be ''B'' too. ''A'' is always true, but I believe ''B'' suits the question being asked the best.', '2018-02-15 17:52:24', 0, NULL, false, 6, 16);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(7, 'You are right, every circuit possesses some unintended capacitance, which is called "stray" capacitance. Whether or not it affects the operation of the circuit depends on the frequencies that the circuit is intended to operate at. 
 The amount of stray capacitance that a circuit has is typically tiny, but at high enough frequencies even a very tiny amount of capacitance will couple parts of the circuit together and make it malfunction.
 
@@ -1020,13 +1020,23 @@ The most revered modern poets often (not always) write very compressed language 
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(58, 'Sillimanite is strictly speaking a mineral rather than a rock type. 
 It is found in metamorphic rocks that were high aluminium sediments, particularly ones that contained a lot of feldspar or clay. 
 They are usually found in high grade metamorphic rocks (gneisses) formed at over 600 Celsius.', '2018-10-05 10:23:24', 2, NULL, false, 31, 25);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(59, 'It does not depend on the music file, but at the amplifier sending the music to a speaker, or to a headphone/earplug connector.
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(59, 'Amplification
+
+It does not depend on the music file, but at the amplifier sending the music to a speaker, or to a headphone/earplug connector.
+
+Music file
 
 A music file only contains ''values'', and mostly in a compressed form. After uncompressing, you get values which has a certain amount on bits per value (typically 16 or more).
 
+Conversion
+
 A microcontroller can send these values to a speaker via an pre- and/or amplifier, which converts it into actual voltages. So it depends on the amount of amplification.
 
+Protection
+
 Also note that sending continuous ''max values'' do not result in a loud sound, actually it would breaks the speaker (to prevent this, in the amplifier a so-called DC speaker protection is present). A wave is needed to let the speaker move outwards and inwards very fast, and this is done by sending changing values to the speaker.
+
+Measure
 
 If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2018-11-05 14:35:42', 8, NULL, false, 32, 13);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(60, 'Normally it''s limited by the cellphone battery voltage, which is about 3.7V. However there are other limits in play like the EU volume limit of 100dB - which is specified as SPL rather than a voltage.', '2018-11-06 16:36:22', 8, NULL, false, 32, 13);
@@ -1085,25 +1095,21 @@ You can view the system''s current idea of the hostname with:
 
 hostnamectl             # equivalent to hostnamectl status
 Keep in mind that this does not change a running process''s idea of the hostname. Such a process would have to check the hostname again in order to be updated, and almost no process does. Thus such a process would need to be restarted. In order for every process to begin using the new hostname, they must be restarted. It''s generally easier to just reboot the system than to restart every service individually.', '2018-04-16 10:18:32', 26, NULL, false, 40, 1);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(74, 'Amplification
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(74, 'It sounds like you''re talking about a classic example of Incubation.
 
-It does not depend on the music file, but at the amplifier sending the music to a speaker, or to a headphone/earplug connector.
+Incubation is defined as a process of unconscious recombination of thought elements that were stimulated through conscious work at one point in time, resulting in novel ideas at some later point in time.
 
-Music file
+There is a great article by John F. Kihlstrom: Intuition, Incubation, and Insight: Implicit Cognition in Problem Solving. Basically it is believed that Incubation or stopping conscious thought on a problem allows one to find more creative solutions to a problem:
 
-A music file only contains ''values'', and mostly in a compressed form. After uncompressing, you get values which has a certain amount on bits per value (typically 16 or more).
+"In these cases, Wallas argued, thinkers enter an incubation stage in which they no longer consciously think about the problem. Wallas (1926) actually distinguished this phenomenon between two forms of incubation: "the period of abstention may be spent either in conscious mental work on other problems, or in a relaxation from all conscious mental work" (p. 86).
 
-Conversion
+Wallas believed that there might be certain economies of thought achieved by leaving certain problems unfinished while working on others, but he also believed that solutions achieved by this approach suffered in depth and richness. In many cases of difficult and complex creative thought, he believed, deeper and richer solutions could be achieved by a suspension of conscious thought altogether, permitting "the free working of the unconscious or partially conscious processes of the mind" (p. 87).1 In either case, Wallas noted that the incubation period was often followed by the illumination stage, the "flash" (p. 93) in which the answer appears in the consciousness of the thinker."
 
-A microcontroller can send these values to a speaker via an pre- and/or amplifier, which converts it into actual voltages. So it depends on the amount of amplification.
+Kihlstrom''s references contain many good experiments backing up the claims made.
 
-Protection
+A reason incubation may work is because it releases "fixation"; that case of being "stuck" which is a sort of mental rut which prevents one from thinking of new answers or methods of solving a problem.
 
-Also note that sending continuous ''max values'' do not result in a loud sound, actually it would breaks the speaker (to prevent this, in the amplifier a so-called DC speaker protection is present). A wave is needed to let the speaker move outwards and inwards very fast, and this is done by sending changing values to the speaker.
-
-Measure
-
-If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2018-04-09 18:18:46', 17, NULL, false, 41, 13);
+We become stuck on an idea that we believe should work but doesn''t, which may hold us back from thinking of a different solution which actually does work, one we may have previously not considered or disregarded.', '2018-04-09 18:18:46', 17, NULL, false, 41, 31);
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(75, 'Your orbit is uniquely determined by a current position (three coordinates) and velocity (three more quantities to give magnitude and direction). Going places involves changing your orbit. For instance, from a circular orbit about Earth, enter an elliptical transfer orbit to the moon, then circularize your orbit about the moon. Everything you do in space travel involves changing from one orbit to another orbit, and that is done by changing your velocity.
 
 Heavy spaceships have to change their momentum more than light spaceships, but they both have to change their velocities by the same amount. It can be done with a long, slow acceleration, or a short, fast acceleration. Whatever ship you have, and however you do it, the delta-V is the end result that you must achieve.
@@ -1249,6 +1255,7 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(97, 'Thinking about water waves; interference is only a temporary thing. If 2 waves travel cross a pond from opposite sides, but let''s say they are opposite in phase, in the middle of the pond when they meet they cancel, BUT this is only temporary. After they pass each other, they are visible again and continue along to the opposites shores!. 
 Waves cancelling or ''interference'' is one of the most poorly explained phenomenons in physics, because they really don''t literally cancel, they just temporarily interact with each other. The same could be said for light waves, 2 photons never cancel, that''s a violation of energy conservation. In fact the only way to ever observe photons it to have them interact with matter (i.e. an electron in an atom/molecule). 
 2 photons arriving at an atom that are out of phase are very difficult for the atom to observe and 2 photons in phase increase the probability of observation greatly, it''s all Quantum Mechanics or probability.', '2018-02-07 23:36:48', 0, NULL, false, 65, 16);
+INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(98, 'Electrons cannot survive in aqueous state. Being a charged subatomic particle, the electron has to stay close to protons which are located at the center of the atom. Hence, the electron can move from one atom to another which are closely-packed, what we have in a solid.', '2019-01-28 02:33:48', 0, NULL, false, 47, 8);
 
 
 -----------------------------------------
@@ -1322,7 +1329,7 @@ Also note that sending continuous ''max values'' do not result in a loud sound, 
 
 Measure
 
-If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2018-04-09 18:18:46',false, false, 17, NULL);
+If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2018-11-05 14:35:42',false, false, 8, NULL);
 INSERT INTO "bestanswer"(id_bestAnswer, attributionDate,"text" , "date", deleted, active, votes, photo) VALUES(5,'2018-12-15 22:18:42', 'These "jumps" that you brought up are not part of the kanji, they are part of the typeface.
 
 (More specifically, they may be treated like serifs - or little decorations at the edge of certain lines)
