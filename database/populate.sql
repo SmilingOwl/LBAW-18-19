@@ -1255,7 +1255,6 @@ INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_questio
 INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(97, 'Thinking about water waves; interference is only a temporary thing. If 2 waves travel cross a pond from opposite sides, but let''s say they are opposite in phase, in the middle of the pond when they meet they cancel, BUT this is only temporary. After they pass each other, they are visible again and continue along to the opposites shores!. 
 Waves cancelling or ''interference'' is one of the most poorly explained phenomenons in physics, because they really don''t literally cancel, they just temporarily interact with each other. The same could be said for light waves, 2 photons never cancel, that''s a violation of energy conservation. In fact the only way to ever observe photons it to have them interact with matter (i.e. an electron in an atom/molecule). 
 2 photons arriving at an atom that are out of phase are very difficult for the atom to observe and 2 photons in phase increase the probability of observation greatly, it''s all Quantum Mechanics or probability.', '2018-02-07 23:36:48', 0, NULL, false, 65, 16);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(98, 'Electrons cannot survive in aqueous state. Being a charged subatomic particle, the electron has to stay close to protons which are located at the center of the atom. Hence, the electron can move from one atom to another which are closely-packed, what we have in a solid.', '2019-01-28 02:33:48', 0, NULL, false, 47, 8);
 
 
 -----------------------------------------
@@ -1387,8 +1386,8 @@ INSERT INTO "report"(id_report, "date", reason, id_question, id_answer) VALUES(7
 -----------------------------------------
 INSERT INTO "userreport"(username, id_report) VALUES(24, 1);
 INSERT INTO "userreport"(username, id_report) VALUES(27, 2);
-INSERT INTO "userreport"(username, id_report) VALUES(20,3);
-INSERT INTO "userreport"(username, id_report) VALUES(33,4);
-INSERT INTO "userreport"(username, id_report) VALUES(2,5);
-INSERT INTO "userreport"(username, id_report) VALUES(9,6);
-INSERT INTO "userreport"(username, id_report) VALUES(36,7);
+INSERT INTO "userreport"(username, id_report) VALUES(20, 3);
+INSERT INTO "userreport"(username, id_report) VALUES(33, 4);
+INSERT INTO "userreport"(username, id_report) VALUES(2, 5);
+INSERT INTO "userreport"(username, id_report) VALUES(9, 6);
+INSERT INTO "userreport"(username, id_report) VALUES(36, 7);
