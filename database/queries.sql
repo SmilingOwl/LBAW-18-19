@@ -9,7 +9,7 @@ Where  "user".id_rank=rank.id_rank AND "user".id_user = $id_user;
 
 
 -- Obtain a member´s number of followers 
-SELECT COUNT (*) as number_of_followers
+SELECT COUNT (follower) as number_of_followers
 FROM follow 
 WHERE follow.following = $id_user;
 
@@ -21,7 +21,7 @@ WHERE follow.following = $id_user;
 
 
 -- Obtain a member´s number of following
-SELECT COUNT (*) as number_of_following
+SELECT COUNT (following) as number_of_following
 FROM follow 
 WHERE follow.follower = $id_user;
 
@@ -175,45 +175,45 @@ WHERE "user".id_user = $id_user;
 -----------------------------------------
 
 -- add new notification to an user
-INSERT INTO notification (id_notification, description, type, view,"date",id_user)
-VALUES (DEFAULT,$description, $type,$view, now(),$id_user);
+INSERT INTO notification (description, type, view,"date",id_user)
+VALUES ($description, $type, $view, now(), $id_user);
 
 
 -- add new user
-INSERT INTO "user" (id_user,username, password, email, bioDescription, birthdate, profilePhoto,points,id_rank,banned,deleted) 
-VALUES (DEFAULT,$username, $password, $email, $bioDescription, $birthdate, $profilePhoto,0,$id_rank,false,false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) 
+VALUES ($username, $password, $email, $bioDescription, $birthdate, $profilePhoto, 0, $id_rank, false, false);
 
 
 -- add new category
-INSERT INTO category(id_category,name,icon)
-VALUES(DEFAULT,$name,$icon);
+INSERT INTO category(name, icon)
+VALUES($name, $icon);
 
 
 -- add new question
-INSERT INTO question(id_question, title, description, "date",votes, photo,deleted,id_category, id_user,search) 
-VALUES(DEFAULT, $title, $description, now(),0, $photo,false,$id_category, $id_user,NULL);
+INSERT INTO question( title, description, "date",votes, photo, deleted, id_category, id_user,search) 
+VALUES( $title, $description, now(), 0, $photo, false, $id_category, $id_user,NULL);
 
 
 -- add new answer
-INSERT INTO answer(id_answer,"text", "date", votes, photo,deleted, id_question, user_post)
-VALUES(DEFAULT, $"text", now(), 0, $photo, false, $id_question, $user_post);
+INSERT INTO answer("text", "date", votes, photo,deleted, id_question, user_post)
+VALUES( $"text", now(), 0, $photo, false, $id_question, $user_post);
 
 -- add new report
-INSERT INTO report(id_report,"date", reason, id_question, id_answer)
-VALUES(DEFAULT,now(), $reason, $id_question, $id_answer);
+INSERT INTO report("date", reason, id_question, id_answer)
+VALUES(now(), $reason, $id_question, $id_answer);
 
 -- add new connection between user and report
-INSERT INTO userReport(username,id_report)
-VALUES($username,$id_report);
+INSERT INTO userReport(username, id_report)
+VALUES($username, $id_report);
 
 -- add new connection between report and comment
-INSERT INTO userReport(firstAnswer,secondAnswer)
-VALUES($firstAnswer,$secondAnswer);
+INSERT INTO userReport(firstAnswer, secondAnswer)
+VALUES($firstAnswer, $secondAnswer);
 
 -- add new connection between Answer and report
-INSERT INTO userReport(username,id_answer)
-VALUES($username,$id_answer);
+INSERT INTO userReport(username, id_answer)
+VALUES($username, $id_answer);
 
 -- add new connection betweeb report and question
-INSERT INTO userReport(username,id_question)
-VALUES($username,$id_question);
+INSERT INTO userReport(username, id_question)
+VALUES($username, $id_question);
