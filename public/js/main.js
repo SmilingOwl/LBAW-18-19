@@ -1,6 +1,8 @@
 
+$('html, body').css({ 'overflow': 'hidden', 'height': '100%' })
 window.addEventListener("load",onLoad);
 function onLoad(){
+    $('html, body').removeAttr('style')
 
     let on_view_point = document.querySelector("#logo");
     let bouding = on_view_point.getBoundingClientRect();

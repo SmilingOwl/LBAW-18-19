@@ -1,4 +1,5 @@
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,9 +12,16 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('login');
-});
+//Static pages
+
+Route::get('/', 'StaticPages\HomeController@create')->name('UI04');
+Route::get('/home', 'StaticPages\HomeController@create');
+Route::get('/about', 'StaticPages\InformationController@createAbout')->name('UI05');
+Route::get('/contacts', 'StaticPages\InformationController@createContacts')->name('UI08');
+Route::post('/contacts', 'StaticPages\InformationController@sendContacts');
+Route::get('/terms', 'StaticPages\InformationController@createTerms')->name('UI06');
+Route::get('/faq', 'StaticPages\InformationController@createFaq')->name('UI07');
+Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
 
 // Cards
 Route::get('cards', 'CardController@list');

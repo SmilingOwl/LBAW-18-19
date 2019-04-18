@@ -108,7 +108,9 @@ nav.navbar{
 
 .a-search-icon {
     text-decoration: none;
-    color: #343a40;
+    color: black;
+    background-color: none;
+    border: none;
 
 }
 
@@ -277,4 +279,9 @@ input.fluid.search-bar:focus{
 footer
 {
     margin-top: 20em;
+}
+
+.dropdown-menu .drop-cat
+{
+    cursor: pointer;
 }

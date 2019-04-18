@@ -79,7 +79,9 @@ body {
 
 .a-search-icon {
     text-decoration: none;
-    color: default;
+    color: black;
+    background-color: none;
+    border: none;
 
 }
 #expand-down {
