@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
          $index = 'resources/sql/index.sql';
          $triggers = 'resources/sql/triggers.sql';
          $populate = 'resources/sql/populate.sql';
+         
          DB::unprepared(file_get_contents($db) . file_get_contents($triggers) . file_get_contents($populate) . file_get_contents($index));
          $this->command->info('Database seeded!');
      }

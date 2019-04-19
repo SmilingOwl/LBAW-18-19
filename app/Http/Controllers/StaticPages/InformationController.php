@@ -24,9 +24,9 @@ class InformationController extends Controller
     {
         return view('staticpages.contacts')->with('catinfo',Category::all());
     }
-    public function sendContacts()
+    public function sendContacts(Request $request)
     {
-        return request()->all();
+        return $request->all();
     }
     public function createTerms()
     {
