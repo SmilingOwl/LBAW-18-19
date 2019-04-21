@@ -1,11 +1,10 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
-
+use App\Models\Follow;
 
 /**
  * @property int $id_user
@@ -37,7 +36,8 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
     /**
      * The table associated with the model.
      */
-    protected $table = 'member';
+    protected $table = 'user';
+    protected $primaryKey = 'id_user';
 
     protected $fillable = ['username', 'email', 'password', 'birthdate', 'id_rank',
                             'bioDescription', 'profilePhoto', 'nr_questions',
@@ -62,22 +62,22 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
     public function notifications()
     {
-        return $this->hasMany('App\Notification');
+        return $this->hasMany('App\Models\Notification');
     }
 
     public function questions()
     {
-        return $this->hasMany('App\Question', 'id_user');
+        return $this->hasMany('App\Models\Question', 'id_user');
     }
 
     public function answers()
     {
-        return $this->hasMany('App\Answer', 'id_user');
+        return $this->hasMany('App\Models\Answer', 'id_user');
     }
 
     public function comments()
     {
-        return $this->hasMany('App\Comment', 'id_user');
+        return $this->hasMany('App\Models\Comment', 'id_user');
     }
 
 
@@ -89,6 +89,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
     public function followings()
     {
         return $this->belongsToMany(Member::class, 'follow_member', 'follower_id', 'following_id');
+    }
+
+    public function roles()
+    {
+        return $this->hasMany(Role::class,'id_user');
+    }
+
+    public function currentRole($id)
+    {
+        return $this->find($id)->roles->where('endDate',null);
     }
 
 }

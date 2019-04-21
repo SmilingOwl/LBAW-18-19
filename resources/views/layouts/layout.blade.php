@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 
 <head>
     @include('includes')
@@ -11,6 +11,12 @@
 </head>
 
 <body>
+    @if (Auth::check())
+        <input type="hidden" value="logged" id="type">
+    @else
+        <input type="hidden" value="unlogged" id="type">
+    @endif
+
     @include('layouts.nav_bar')
 
     <div class="conteudo">

@@ -115,7 +115,7 @@ function hyperSmallScreen() {
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="/">Sign out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -140,7 +140,7 @@ function superSmallScreen() {
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="/">Sign out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -164,7 +164,7 @@ function smallMScreen() {
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="/">Sign out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -189,7 +189,7 @@ function smallScreen() {
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="/">Sign out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -285,7 +285,7 @@ function hyperSmallScreenAdmin() {
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Sign Out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -311,7 +311,7 @@ function superSmallScreenAdmin() {
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Sign Out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -336,7 +336,7 @@ function smallMScreenAdmin() {
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Sign Out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -362,7 +362,7 @@ function smallScreenAdmin() {
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Sign Out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -388,7 +388,7 @@ function hyperSmallScreenModerator() {
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Sign Out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -414,7 +414,7 @@ function superSmallScreenModerator() {
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Sign Out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -464,7 +464,7 @@ function smallScreenModerator() {
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile.html">Profile page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Sign Out</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -519,9 +519,9 @@ function testIconUnLogged(){
         img_logo.setAttribute("style","max-width: 50px;");
         addDropEvent();
     } else {
-        profile_bar.innerHTML = '<a href="../pages/login" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
-        profile_bar.innerHTML += '<a href="../pages/login" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Sign in</a>';
-        profile_bar.innerHTML += '<a href="../pages/register" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Register</a>';
+        profile_bar.innerHTML = '<a href="login" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
+        profile_bar.innerHTML += '<a href="login" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Sign in</a>';
+        profile_bar.innerHTML += '<a href="register" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Register</a>';
         img_logo.setAttribute("src", "../images/logo.png");
         img_logo.setAttribute("style","max-width: 160px;");
         search_bar.innerHTML = original_search_bar.innerHTML;
@@ -581,8 +581,7 @@ function testIconModerator(){
 
 function testIcon()
 {
-    //let type=document.getElementById("type").getAttribute("value");
-    let type="unlogged";
+    let type=document.getElementById("type").getAttribute("value");
     let logo_redirect=document.querySelector(".logo a");
     if(type=="unlogged")
     {

@@ -90,7 +90,8 @@ CREATE TABLE "user"(
     points integer NOT NULL,
     id_rank integer NOT NULL DEFAULT rookieID() REFERENCES rank (id_rank) ON UPDATE CASCADE,
     banned boolean NOT NULL,
-    deleted boolean NOT NULL
+    deleted boolean NOT NULL,
+    remember_token text
 );
 
 CREATE TABLE role(

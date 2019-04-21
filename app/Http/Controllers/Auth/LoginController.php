@@ -4,9 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Models\Category;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    var $catinfo;
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -25,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/cards';
+    protected $redirectTo = '/faq';
 
     /**
      * Create a new controller instance.
@@ -35,5 +39,22 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        $this->catinfo = Category::all();
     }
+
+    public function showLoginForm()
+    {
+        return view('auth.login')->with('catinfo', $this->catinfo);
+    }
+
+    public function username()
+    {
+        return 'username';
+    }
+
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect()->back();
+      }
+
 }

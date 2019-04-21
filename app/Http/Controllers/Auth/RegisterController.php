@@ -6,6 +6,8 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Models\Member;
+use App\Models\Category;
 
 class RegisterController extends Controller
 {
@@ -21,13 +23,14 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
+    var $catinfo;
 
     /**
      * Where to redirect users after registration.
      *
      * @var string
      */
-    protected $redirectTo = '/cards';
+    protected $redirectTo = '/faq';
 
     /**
      * Create a new controller instance.
@@ -37,6 +40,7 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+        $this->catinfo = Category::all();
     }
 
     /**
@@ -48,8 +52,8 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'username' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:user',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -62,10 +66,20 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+        redirect('login');
+        return Member::create([
+            'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'birthdate' => '1980-05-17',
+            'points' => 0,
+            'banned' => false,
+            'deleted' => false
         ]);
+    }
+
+    public function showRegistrationForm()
+    {
+        return view('auth.register')->with('catinfo', $this->catinfo);
     }
 }
