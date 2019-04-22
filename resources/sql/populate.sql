@@ -626,7 +626,7 @@ INSERT INTO "votequestion"(username, id_question) VALUES(14, 65);
 -----------------------------------------
 --ANSWER
 -----------------------------------------
-INSERT INTO "answer"("text","date", votes, photo, deleted, user_post) VALUES('One can reject the null hypothesis.
+INSERT INTO "answer"("text","date", votes, photo, deleted,id_question, user_post) VALUES('One can reject the null hypothesis.
 
 This is a 2-sided hypothesis test since we have 2 critical values; -1.96 and 1.96. The test is usually to compute the test statistic then reject the null hypothesis if the test statistic lies in the critical/rejection region.
 In our case, we reject the null hypothesis since 2.1 lies to the right of 1.96 which forms a part of the critical region', '2018-03-17 11:12:24', 34, NULL, false, 1, 30);
@@ -1039,10 +1039,10 @@ Also note that sending continuous ''max values'' do not result in a loud sound, 
 Measure
 
 If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2018-11-05 14:35:42', 8, NULL, false, 32, 13);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(60, 'Normally it''s limited by the cellphone battery voltage, which is about 3.7V. However there are other limits in play like the EU volume limit of 100dB - which is specified as SPL rather than a voltage.', '2018-11-06 16:36:22', 8, NULL, false, 32, 13);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(61, 'Wassily Kandinsky immediately comes to mind. His work always seemed like a piano composition, his use of lines and shapes creating a rhythm filled and enhanced with color. One can almost hear the music.', '2018-07-29 22:57:31', 1, 'main-qimg.jpg', false, 33, 13);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(62, 'There are also my two favorite artists, Richard Diebenkorn and Helen Frankenthaler, both use color in a rich and lively fashion, in broad abstract and form. Their works are like the high church of color, one can stand in front of them in awe and reverence.', '2018-07-29 23:10:21', 1, NULL, false, 33, 13);
-INSERT INTO "answer"(id_answer, "text","date", votes, photo, deleted, id_question, user_post) VALUES(63, 'This is a very broad question, but I''ll try to be brief:
+INSERT INTO "answer"("text","date", votes, photo, deleted, id_question, user_post) VALUES( 'Normally it''s limited by the cellphone battery voltage, which is about 3.7V. However there are other limits in play like the EU volume limit of 100dB - which is specified as SPL rather than a voltage.', '2018-11-06 16:36:22', 8, NULL, false, 32, 13);
+INSERT INTO "answer"("text","date", votes, photo, deleted, id_question, user_post) VALUES( 'Wassily Kandinsky immediately comes to mind. His work always seemed like a piano composition, his use of lines and shapes creating a rhythm filled and enhanced with color. One can almost hear the music.', '2018-07-29 22:57:31', 1, 'main-qimg.jpg', false, 33, 13);
+INSERT INTO "answer"("text","date", votes, photo, deleted, id_question, user_post) VALUES( 'There are also my two favorite artists, Richard Diebenkorn and Helen Frankenthaler, both use color in a rich and lively fashion, in broad abstract and form. Their works are like the high church of color, one can stand in front of them in awe and reverence.', '2018-07-29 23:10:21', 1, NULL, false, 33, 13);
+INSERT INTO "answer"("text","date", votes, photo, deleted, id_question, user_post) VALUES( 'This is a very broad question, but I''ll try to be brief:
 
 No scientific renaissance
 No capital accumulation
@@ -1260,14 +1260,14 @@ Waves cancelling or ''interference'' is one of the most poorly explained phenome
 -----------------------------------------
 --VOTEANSWER
 -----------------------------------------
-INSERT INTO "voteanswer"(username, id_answer) VALUES(3, 93);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(34, 93);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(12, 94);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(12, 95);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(11, 96);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(35, 96);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(13, 97);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(36, 97);
+INSERT INTO "voteanswer"(username, id_answer) VALUES(3, 73);
+INSERT INTO "voteanswer"(username, id_answer) VALUES(34, 73);
+INSERT INTO "voteanswer"(username, id_answer) VALUES(12, 74);
+INSERT INTO "voteanswer"(username, id_answer) VALUES(12, 75);
+INSERT INTO "voteanswer"(username, id_answer) VALUES(11, 76);
+INSERT INTO "voteanswer"(username, id_answer) VALUES(35, 76);
+INSERT INTO "voteanswer"(username, id_answer) VALUES(13, 77);
+INSERT INTO "voteanswer"(username, id_answer) VALUES(36, 77);
 
 
 -----------------------------------------
@@ -1287,8 +1287,8 @@ INSERT INTO "comment"(firstAnswer, secondAnswer) VALUES(70, 71);
 -----------------------------------------
 --BESTANSWER
 -----------------------------------------
-INSERT INTO "bestanswer"(attributionDate,"text" , "date", deleted, active, votes, photo) VALUES('2018-12-01 14:55:21','Wassily Kandinsky immediately comes to mind. His work always seemed like a piano composition, his use of lines and shapes creating a rhythm filled and enhanced with color. One can almost hear the music.', '2018-07-29 22:57:31',false,true,63,'main-qimg.jpg');
-INSERT INTO "bestanswer"(attributionDate,"text" , "date", deleted, active, votes, photo) VALUES('2018-12-26 02:14:23', 'Enables implies that this uncovers a new ability for the user to log in.
+INSERT INTO "bestanswer"(id_bestAnswer,attributionDate,"text" , "date", deleted, active, votes, photo) VALUES(41,'2018-12-01 14:55:21','Wassily Kandinsky immediately comes to mind. His work always seemed like a piano composition, his use of lines and shapes creating a rhythm filled and enhanced with color. One can almost hear the music.', '2018-07-29 22:57:31',false,true,63,'main-qimg.jpg');
+INSERT INTO "bestanswer"(id_bestAnswer,attributionDate,"text" , "date", deleted, active, votes, photo) VALUES(45,'2018-12-26 02:14:23', 'Enables implies that this uncovers a new ability for the user to log in.
 
 Using a different wording:
 
@@ -1301,7 +1301,7 @@ Attempting to put this into a different wording:
 The password gives the user the permission to login
 
 This is erroneous as the permission may in this case already be granted and they simply haven''t been given the ability to login yet', '2018-11-25 23:55:23',false,false, 1, NULL);
-INSERT INTO "bestanswer"(attributionDate,"text" , "date",deleted, active, votes, photo) VALUES('2018-12-09 09:27:01', 'The answer to your first question is, in a sense, yes, the photon avoids the angles that would produce destructive interference. But probably not in the way you are thinking.
+INSERT INTO "bestanswer"(id_bestAnswer,attributionDate,"text" , "date",deleted, active, votes, photo) VALUES(49,'2018-12-09 09:27:01', 'The answer to your first question is, in a sense, yes, the photon avoids the angles that would produce destructive interference. But probably not in the way you are thinking.
 
 Photons are not little balls of something. They are not particles as we understand the word in our classical macroscopic world. The word "particle" has a different meaning in the quantum microscopic world. A particle is an excitation of a field, in this case, the EM field. When the field gives up a quantum of excitation during an interaction with another object, it does so 1.) at a point 2.) gives up its energy to the other object and 2.) gives up its momentum. That''s just what happens in a classical collision. But unlike the classical collision, the "particle" vanishes. Clearly the classical particle picture has a problem.
 
@@ -1310,7 +1310,7 @@ In the quantum mechanical picture, we start with the EM field. The field fills a
 I don''t know quite how to interpret your second question. I`ll say this: In the quantum mechanical picture, the field exists in both slits, so the excitation exists in both slits. If you call the excitation a photon, then the photon goes through both slits. But this is a dangerous statement because it mixes up classical, quantum, and everyday meanings of words.
 
 By the way, this is not the only way to "explain" these things. There are other mental pictures that are consistent with the theoretical physics. There''s no one correct picture. I think (my opinion) that this fact speaks to our brain''s limitations, its inability to understand the "true" nature of what''s going on. Our limited brains create metaphors based on things that we can understand or visualize. But this is just my personal point of view.', '2018-05-06 09:27:01',false, true, 16, NULL);
-INSERT INTO "bestanswer"(attributionDate, "text" , "date", deleted, active, votes, photo) VALUES('2018-12-11 14:33:46', 'Amplification
+INSERT INTO "bestanswer"(id_bestAnswer,attributionDate, "text" , "date", deleted, active, votes, photo) VALUES(39,'2018-12-11 14:33:46', 'Amplification
 
 It does not depend on the music file, but at the amplifier sending the music to a speaker, or to a headphone/earplug connector.
 
@@ -1329,14 +1329,14 @@ Also note that sending continuous ''max values'' do not result in a loud sound, 
 Measure
 
 If you want to measure, you can use an oscilloscope to measure the audio output while sending a sine wave with a maximum amplitude.', '2018-11-05 14:35:42',false, false, 8, NULL);
-INSERT INTO "bestanswer"(attributionDate,"text" , "date", deleted, active, votes, photo) VALUES('2018-12-15 22:18:42', 'These "jumps" that you brought up are not part of the kanji, they are part of the typeface.
+INSERT INTO "bestanswer"(id_bestAnswer,attributionDate,"text" , "date", deleted, active, votes, photo) VALUES(57,'2018-12-15 22:18:42', 'These "jumps" that you brought up are not part of the kanji, they are part of the typeface.
 
 (More specifically, they may be treated like serifs - or little decorations at the edge of certain lines)
 
 When you are learning kanji, you should definitely not be copying or referencing printed characters. You should learn from hand-written characters. The basics of how to write kanji are not taught or learned from printed or typeface forms.
 
 The best online reference I know of for hand-written Japanese characters is the kakijun website', '2018-04-14 18:18:42',false, true, 19, NULL);
-INSERT INTO "bestanswer"(attributionDate,"text" , "date", deleted, active, votes, photo) VALUES('2018-12-03 15:14:57', 'Not in water. Free electron in water is really unfavorable, so no significant concentration of them can be generated chemically, and it almost immediately reduces water itself to hydrogen (but I heard rumors about generation of solvated electrons in water in very special experiment with short half-life)
+INSERT INTO "bestanswer"(id_bestAnswer,attributionDate,"text" , "date", deleted, active, votes, photo) VALUES(61,'2018-12-03 15:14:57', 'Not in water. Free electron in water is really unfavorable, so no significant concentration of them can be generated chemically, and it almost immediately reduces water itself to hydrogen (but I heard rumors about generation of solvated electrons in water in very special experiment with short half-life)
 
 In liquid NH3, however, solvated electrons can occur, so self-discharge of galvanic cells with NH3-based electrolyte may occur through travel of electrons via electrolyte.', '2018-04-03 07:09:13',false, false, 12, NULL);
 
@@ -1374,11 +1374,11 @@ INSERT INTO "faq"(question, answer) VALUES('Where do I suggest features I would 
 -----------------------------------------
 INSERT INTO "report"("date", reason, id_question, id_answer) VALUES('2019-01-07 11:47:23', 'Commercial or spam', 55, NULL);
 INSERT INTO "report"("date", reason, id_question, id_answer) VALUES('2019-01-08 08:42:52', 'Inappropriate or offensive', 57, NULL);
-INSERT INTO "report"("date", reason, id_question, id_answer) VALUES('2019-01-08 09:37:31', 'Commercial or spam', NULL, 88);
+INSERT INTO "report"("date", reason, id_question, id_answer) VALUES('2019-01-08 09:37:31', 'Commercial or spam', NULL, 68);
 INSERT INTO "report"("date", reason, id_question, id_answer) VALUES('2019-01-08 11:17:44', 'Inappropriate or offensive', 62, NULL);
 INSERT INTO "report"("date", reason, id_question, id_answer) VALUES('2019-01-09 12:43:18', 'Inappropriate or offensive', 59, NULL);
-INSERT INTO "report"("date", reason, id_question, id_answer) VALUES('2019-01-09 14:37:05', 'Safety issue or illegal', NULL, 91);
-INSERT INTO "report"("date", reason, id_question, id_answer) VALUES('2019-01-09 15:17:26', 'Commercial or spam', NULL, 94);
+INSERT INTO "report"("date", reason, id_question, id_answer) VALUES('2019-01-09 14:37:05', 'Safety issue or illegal', NULL, 21);
+INSERT INTO "report"("date", reason, id_question, id_answer) VALUES('2019-01-09 15:17:26', 'Commercial or spam', NULL, 14);
 
 
 -----------------------------------------
