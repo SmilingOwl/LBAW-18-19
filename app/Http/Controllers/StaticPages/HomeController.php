@@ -12,6 +12,6 @@ class HomeController extends AppBaseController
     public function create()
     {
         $all = Category::all();
-        return view('staticpages.home')->with('catinfo',$all);
+        return view('pages.staticpages.home')->with('catinfo',$all);
     }
 }
