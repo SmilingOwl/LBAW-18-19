@@ -4,17 +4,16 @@ namespace App\Http\Controllers\Question;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Category;
+use App\Question;
 
 class QuestionController extends Controller
 {
-    
-    var $catinfo;
 
     public function __construct()
     {
-        $this->catinfo = Category::all();
+        $this->middleware('auth')->except(['get', 'getAnswers']);
     }
+
     /**
      * Display a listing of the resource.
      *
@@ -66,7 +65,7 @@ class QuestionController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('pages.question.show', compact('question'));
     }
 
     /**
@@ -87,19 +86,42 @@ class QuestionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Question $question)
     {
-        //
+        $this->authorize('update', $question);
+        
+        $this->validate(request(), [
+            'title' => 'required',
+            'description' => 'required',
+            'category' => 'required'
+        ]);
+        $question->title = request('title');
+        $question->content = request('description');
+        $question->category = request('name');
+
+        $question->save();
+        $response = [
+            'title' => $question->title,
+            'description' => $question->description,
+            'category' => $question->name
+        ];
+        return $response;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  Question $question
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Question $question)
     {
-        //
+        $this->authorize('delete', $question);
+        $result = false;
+       
+        if($question->delete())
+            $result = true;
+       
+            return compact('result');
     }
 }

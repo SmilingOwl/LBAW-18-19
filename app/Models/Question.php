@@ -51,6 +51,15 @@ class Question extends Model
      * Relations
      */
 
+    public function member()
+    {
+        return $this->belongsTo('App\Models\Member', 'id_user');
+    }
+
+    public function answers()
+    {
+        return $this->hasMany('App\Models\Answer');
+    }
 
 
 
