@@ -24,9 +24,10 @@ Route::get('/faq', 'StaticPages\InformationController@createFaq')->name('UI07');
 Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
 Route::get('/profile/{username}', 'Users\InformationController@createprofile')->name('UI09');
 
-// Cards
-Route::get('cards', 'CardController@list');
-Route::get('cards/{id}', 'CardController@show');
+// Profile
+Route::resource('profile', 'Profile\ProfileController');
+// Question
+Route::resource('profile', 'Question\QuestionController');//TODO
 
 // API
 Route::put('api/cards', 'CardController@create');
