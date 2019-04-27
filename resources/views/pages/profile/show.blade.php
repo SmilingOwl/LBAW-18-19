@@ -25,7 +25,7 @@
     <script src="../scripts/profile.js"></script>
 </head>
 
-
+@section('content')
 <body>
     <input type="hidden" value="logged" id="type">
     <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
@@ -821,3 +821,4 @@
 </body>
 
 </html>
+@endsection
