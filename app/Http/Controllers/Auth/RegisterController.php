@@ -71,7 +71,7 @@ class RegisterController extends Controller
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
-            'birthdate' => '1980-05-17',
+            'birthdate' => $data['birthdate'],
             'points' => 0,
             'banned' => false,
             'deleted' => false
