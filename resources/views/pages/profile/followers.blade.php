@@ -13,7 +13,7 @@
 <body class="grey-background">
     <main role="main" class="my-5">
 
-        @include('pages.profile.profile')
+        @include('pages.profile.profile_card')
 
         <!-- content -->
         <section class="container">

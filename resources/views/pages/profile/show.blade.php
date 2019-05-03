@@ -1,6 +1,8 @@
 @extends('layouts.layout')
 
-<?php use App\Models\Question; ?>
+<?php use App\Models\Question; 
+use App\Models\Member;
+?>
 @section('include')
     
     <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/general.css')}}>
@@ -41,8 +43,7 @@
                 /* QUESTIONS */
                 <div id="Questions" class="container tab-pane active"><br>
                     <div class="container pb-3">
-                        @foreach($member->questions->sortByDesc('date') as $question)
-                        @endforeach
+                        
                     </div>
                 </div>
 

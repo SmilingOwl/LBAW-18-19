@@ -84,16 +84,12 @@ use App\Models\Follow;
 
     public function followers()
     {
-        return $this->find (id_user,username , profilePhoto , points, id_rank)
-        ->follow
-        ->join("user"', 'follow.follower','=','"user".id_user')
-        ->where('follow.following = $id_user')
-        ->get();
+       //TODO
     }
 
     public function followings()
     {
-        return $this->
+        //TODO
     }
 
     public function roles()

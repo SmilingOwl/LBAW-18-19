@@ -1,3 +1,4 @@
+<?php use App\Models\Question;?>
 <section>
     <div class="jumbotron profile-jumbotron">
         <div class="container">
@@ -31,16 +32,12 @@
                         <div class="d-flex justify-content-sm-start">
 
                             <div>
-                                <h5>{{count($member->followers)}}
-                                    <small style="margin-right: 30px;">followers</small>
-                                </h5>
+                                
                             </div>
 
 
                             <div>
-                                <h5 style="margin-left: 30px;">{{count($member->following)}}
-                                    <small> following</small>
-                                </h5>
+                                
                             </div>
 
 
