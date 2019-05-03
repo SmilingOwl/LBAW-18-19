@@ -22,7 +22,7 @@ Route::post('/contacts', 'StaticPages\InformationController@sendContacts');
 Route::get('/terms', 'StaticPages\InformationController@createTerms')->name('UI06');
 Route::get('/faq', 'StaticPages\InformationController@createFaq')->name('UI07');
 Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
-Route::get('/profile/{username}', 'Users\InformationController@createprofile')->name('UI09');
+Route::get('/profile/{username}', 'Profile\ProfileController@show')->name('UI09');
 
 // Profile
 Route::resource('profile', 'Profile\ProfileController');
