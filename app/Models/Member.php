@@ -19,6 +19,7 @@ use App\Models\Follow;
  * @property boolean deleted
  * @property int $nr_questions
  * @property int $nr_answers
+ * @property int $nr_best_answer
  * @property Notification[] $notifications
  * @property Question[] $questions
  * @property Answer[] $answers
