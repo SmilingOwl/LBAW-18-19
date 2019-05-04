@@ -54,11 +54,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-//Profile
-Route::get('/profile/{username}', 'Profile\ProfileController@show')->name('UI09');
-
-
 //Aux
-Route::get('/auth/type', 'Profile\ProfileController@getType');
+Route::get('/auth/info', 'Profile\ProfileController@getType');
 Route::get('/category/all', 'CategoryController@getCategories');
+
+
+//Profile
+Route::resource('/profile/{username}', 'Profile\ProfileController@show');
 
