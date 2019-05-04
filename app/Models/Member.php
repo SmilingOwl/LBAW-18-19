@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Follow;
 
@@ -84,7 +85,10 @@ use App\Models\Follow;
 
     public function followers()
     {
-       //TODO
+        $followers= DB::select('select id_user, username , profilePhoto , points, id_rank 
+        from follow inner join "user" on follow.following ="user".id_user
+        where follow.follower = "user".id_user;', [1]);
+       return $followers;
     }
 
     public function followings()
