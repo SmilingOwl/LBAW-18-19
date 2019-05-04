@@ -13,6 +13,6 @@ class HomeController extends AppBaseController
 
     public function create()
     {
-        return view('pages.staticpages.home');
+        return view('pages.staticpages.home')->with('catinfo',Category::all());
     }
 }
