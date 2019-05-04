@@ -1,8 +1,5 @@
 @extends('layouts.layout')
 
-<?php use App\Models\Question; 
-use App\Models\Member;
-?>
 @section('include')
     
     <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/general.css')}}>
@@ -40,31 +37,31 @@ use App\Models\Member;
             </ul>
             <div class="tab-content">
 
-                /* QUESTIONS */
+               <!--
                 <div id="Questions" class="container tab-pane active"><br>
                     <div class="container pb-3">
                         
                     </div>
                 </div>
 
-                /*FOLLOWERS*/
+                
                 <div id="Followers" class="container tab-pane fade"><br>
                     <div class="box">
                         <div class="container">
-                            @include('pages.profile.followers')
+    
                         </div>
                     </div>
                 </div>
 
-                /*FOLLOWING*/
+             
                 <div id="Followers" class="container tab-pane fade"><br>
                     <div class="box">
                         <div class="container">
-                            @include('pages.profile.following')
+                        
                         </div>
                     </div>
                 </div>
-                
+            -->
             </div>
 
         </div>

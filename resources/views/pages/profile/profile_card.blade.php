@@ -5,7 +5,7 @@
             <div class="row align-items-center">
               
                 <div class="col-md-4 text-center">
-                    <img class="rounded-circle img-fluid img-profile" alt="profile_pic" src="{{$member->profile_picture}}"
+                    <img class="rounded-circle img-fluid img-profile" alt="profile_pic" src="{{$member->profilePhoto}}"
                         style=" width:90%; max-width: 230px; max-height: 230px;">
                 </div>
 
@@ -51,7 +51,7 @@
                                 <div class="d-flex flex-column justify-content-around flex-wrap">
                                     <div class="d-flex p-1 stat">
                                         <div class="mx-2">
-                                            <img src="../images/points-16.svg" alt="category" style="width: 1.7em"></img>
+                                            <img src="../images/points-16.svg" alt="category" style="width: 1.7em">
                                         </div>
                                         <h6>{{$member->points}}
                                             <small>points</small>
@@ -60,7 +60,7 @@
 
                                     <div class="d-flex p-1 stat">
                                         <div class="mx-2">
-                                            <img src="../images/question-17.svg" alt="category" style="width: 1.7em"></img>
+                                            <img src="../images/question-17.svg" alt="category" style="width: 1.7em">
                                         </div>
                                         <h6>{{$member->nr_questions}}
                                             <small>questions</small>
@@ -69,7 +69,7 @@
 
                                     <div class="d-flex p-1 stat">
                                         <div class="mx-2">
-                                            <img src="../images/edit-18.svg" alt="category" style="width: 1.7em"></img>
+                                            <img src="../images/edit-18.svg" alt="category" style="width: 1.7em">
                                         </div>
                                         <h6>{{$member->nr_answers}}
                                             <small>answers</small>
@@ -78,7 +78,7 @@
 
                                     <div class="d-flex p-1 stat">
                                         <div class="mx-2">
-                                            <img src="../images/answered-13.svg" alt="category" style="width: 1.7em"></img>
+                                            <img src="../images/answered-13.svg" alt="category" style="width: 1.7em">
                                         </div>
                                         <h6>{{$member->nr_best_answers}}
                                             <small>best answers</small>

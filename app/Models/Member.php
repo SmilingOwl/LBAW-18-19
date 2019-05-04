@@ -83,18 +83,6 @@ use App\Models\Follow;
     }
 
 
-    public function followers()
-    {
-        $followers= DB::select('select id_user, username , profilePhoto , points, id_rank 
-        from follow inner join "user" on follow.following ="user".id_user
-        where follow.follower = "user".id_user;', [1]);
-       return $followers;
-    }
-
-    public function followings()
-    {
-        //TODO
-    }
 
     public function roles()
     {
