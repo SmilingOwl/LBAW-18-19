@@ -25,6 +25,8 @@ Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
 
 // Profile
 Route::resource('profile', 'Profile\ProfileController');
+Route::post('profile', 'Profile\ProfileController@update');
+Route::post('updatepic', 'Profile\ProfileController@updateupdatePicture');
 // Question
 Route::resource('question', 'Question\QuestionController');//TODO
 

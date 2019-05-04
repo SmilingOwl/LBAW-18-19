@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Models\Follow;
 
@@ -19,6 +20,7 @@ use App\Models\Follow;
  * @property boolean deleted
  * @property int $nr_questions
  * @property int $nr_answers
+ * @property int $nr_best_answer
  * @property Notification[] $notifications
  * @property Question[] $questions
  * @property Answer[] $answers
@@ -83,12 +85,15 @@ use App\Models\Follow;
 
     public function followers()
     {
-        return $this->belongsToMany(Member::class, 'follow_member', 'following_id', 'follower_id');
+        $followers= DB::select('select id_user, username , profilePhoto , points, id_rank 
+        from follow inner join "user" on follow.following ="user".id_user
+        where follow.follower = "user".id_user;', [1]);
+       return $followers;
     }
 
     public function followings()
     {
-        return $this->belongsToMany(Member::class, 'follow_member', 'follower_id', 'following_id');
+        //TODO
     }
 
     public function roles()
