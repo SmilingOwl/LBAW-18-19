@@ -19,7 +19,7 @@
         <section class="container">
             <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
-                    @foreach($member->followers as $follower)
+                  /**  @foreach($member->followers as $follower)
                         <div onclick="location.assign('{{Route('profile', $follower->username)}}');" class="list-group-item list-group-item-action flex-column align-items-start">
                             <div class="box-part text-center">
                                 <img class="rounded-circle followering" alt="profile_pic" src="{{$follower->profile_picture}}">
@@ -40,7 +40,7 @@
 
                             </div>
                         </div>
-                    @endforeach
+                    @endforeach**/
                 </div>
             </div>
         </section>
