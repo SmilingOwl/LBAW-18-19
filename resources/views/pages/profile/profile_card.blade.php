@@ -1,4 +1,3 @@
-<?php use App\Models\Question;?>
 <section>
     <div class="jumbotron profile-jumbotron">
         <div class="container">
