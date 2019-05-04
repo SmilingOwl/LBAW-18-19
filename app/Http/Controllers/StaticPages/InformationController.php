@@ -18,11 +18,11 @@ class InformationController extends Controller
 
     public function createAbout()
     {
-        return view('pages.staticpages.about')->with('catinfo',Category::all());
+        return view('pages.staticpages.about');
     }
     public function createContacts()
     {
-        return view('pages.staticpages.contacts')->with('catinfo',Category::all());
+        return view('pages.staticpages.contacts');
     }
     public function sendContacts(Request $request)
     {
@@ -30,14 +30,14 @@ class InformationController extends Controller
     }
     public function createTerms()
     {
-        return view('pages.staticpages.terms')->with('catinfo',Category::all());
+        return view('pages.staticpages.terms');
     }
     public function createFaq()
     {
-        return view('pages.staticpages.faq')->with('catinfo',Category::all())->with('faqInfo',Faq::all());
+        return view('pages.staticpages.faq')->with('faqInfo',Faq::all());
     }
     public function create404()
     {
-        return view('pages.staticpages.404')->with('catinfo',Category::all());
+        return view('pages.staticpages.404');
     }
 }

@@ -23,7 +23,6 @@ class RegisterController extends Controller
     */
 
     use RegistersUsers;
-    var $catinfo;
 
     /**
      * Where to redirect users after registration.
@@ -40,7 +39,6 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
-        $this->catinfo = Category::all();
     }
 
     /**
@@ -80,6 +78,6 @@ class RegisterController extends Controller
 
     public function showRegistrationForm()
     {
-        return view('auth.register')->with('catinfo', $this->catinfo);
+        return view('auth.register');
     }
 }

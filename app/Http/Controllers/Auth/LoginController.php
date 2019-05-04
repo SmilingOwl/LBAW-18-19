@@ -7,10 +7,10 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Member;
 
 class LoginController extends Controller
 {
-    var $catinfo;
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -39,12 +39,12 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
-        $this->catinfo = Category::all();
     }
 
     public function showLoginForm()
     {
-        return view('auth.login')->with('catinfo', $this->catinfo);
+        //
+        return view('auth.login');
     }
 
     public function username()
@@ -52,9 +52,9 @@ class LoginController extends Controller
         return 'username';
     }
 
-    public function logout(Request $request) {
+    public function logout(Request $request)
+    {
         Auth::logout();
         return redirect()->back();
-      }
-
+    }
 }

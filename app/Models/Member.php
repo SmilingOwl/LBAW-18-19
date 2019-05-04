@@ -101,4 +101,10 @@ use App\Models\Follow;
         return $this->find($id)->roles->where('endDate',null);
     }
 
+
+    public function role($username)
+    {
+        return $this->where('username',$username)->first();
+    }
+
 }

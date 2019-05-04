@@ -22,12 +22,11 @@ Route::post('/contacts', 'StaticPages\InformationController@sendContacts');
 Route::get('/terms', 'StaticPages\InformationController@createTerms')->name('UI06');
 Route::get('/faq', 'StaticPages\InformationController@createFaq')->name('UI07');
 Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
-Route::get('/profile/{username}', 'Users\InformationController@createprofile')->name('UI09');
 
 // Profile
 Route::resource('profile', 'Profile\ProfileController');
 // Question
-Route::resource('profile', 'Question\QuestionController');//TODO
+Route::resource('question', 'Question\QuestionController');//TODO
 
 // API
 Route::put('api/cards', 'CardController@create');
@@ -51,3 +50,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//Profile
+Route::get('/profile/{username}', 'Profile\ProfileController@show')->name('UI09');
+
+
+//Aux
+Route::get('/auth/type', 'Profile\ProfileController@getType');
+Route::get('/category/all', 'CategoryController@getCategories');
+

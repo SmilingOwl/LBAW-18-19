@@ -3,15 +3,15 @@
 
 <head>
     @include('includes')
-    <script>
-        let info = @json($catinfo);
-    </script>
     @yield('include')
 
 </head>
 
 <body>
     @if (Auth::check())
+        @if (Auth::user()['username'])
+            
+        @endif
         <input type="hidden" value="logged" id="type">
     @else
         <input type="hidden" value="unlogged" id="type">

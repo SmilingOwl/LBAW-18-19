@@ -5,15 +5,13 @@ namespace App\Http\Controllers\Profile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use App\Member;
+use Illuminate\Support\Facades\DB;
+use App\Models\Member;
 
 class ProfileController extends Controller
 {
-     
-    var $catinfo;
-
     public function __construct(){
-        $this->middleware('auth')->except(['show','followers','following']);
+        $this->middleware('auth')->except(['show','followers','following','getType']);
     }
 
     /**
@@ -193,5 +191,12 @@ class ProfileController extends Controller
     */ 
     public function settings(){
         return view('pages.profile.settings');  
+    }
+
+    public function getType()
+    {
+        if(!Auth::check())return 'null';
+        $response = DB::select('select role.type as type from "user",role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user');
+        return response()->json($response);
     }
 }

@@ -3,62 +3,32 @@ let profile_bar;
 let search_bar;
 let grid_bar;
 let original_search_bar;
-window.addEventListener("load",onLoad);
-window.addEventListener("resize",testIcon);
-https://getbootstrap.com/docs/4.0/components/forms/#validation
-window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault();
-          event.stopPropagation();
-        }
-        form.classList.add('was-validated');
-      }, false);
-    });
-  }, false);
+let user = null;
+
+
+
+window.addEventListener("load", onLoad);
+window.addEventListener("resize", testIcon);
+https: //getbootstrap.com/docs/4.0/components/forms/#validation
+
+    window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+            form.addEventListener('submit', function (event) {
+                if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    }, false);
+
 function onLoad() {
-    img_logo = document.querySelector(".logo-image");
-    profile_bar = document.querySelector(".info-user");
-    search_bar = document.querySelector(".ask-search-bar");
-    grid_bar = document.querySelector(".grid-bar");
-    original_search_bar = document.createElement("div");
-    original_search_bar.setAttribute("class", "ask-search-bar");
-    let form_search = document.createElement("form");
-    form_search.setAttribute("class", "form-inline");
-    form_search.setAttribute("action", "/action_page.php");
-    let div_form = document.createElement("div");
-    div_form.setAttribute("class", "form-control form-control-lg search-container");
-    let div_container2 = document.createElement("div");
-    div_container2.setAttribute("class", "search-container2");
-    let div_search_bar_cat = document.createElement("div");
-    div_search_bar_cat.setAttribute("class", "search-bar-cat dropdown");
-    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/icon-14.svg" class="drop-menu-cat" alt="all"></button>';
-    let div_group_drop_down = document.createElement("div");
-    div_group_drop_down.setAttribute("class", "dropdown-menu");
-    div_group_drop_down.innerHTML = '<a class="dropdown-item drop-cat" ><img src="../images/icon-14.svg" class="rounded dropdown-image-cat" alt="All"> All</a>';
-    for(let i=0;i<info.length;i++)
-    {
-        let name= info[i].name.charAt(0).toUpperCase() + info[i].name.slice(1)
-        div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" ><img src="../images/'+ info[i].icon +'" class="rounded dropdown-image-cat" alt="'+ name +'"> '+ name +'</a>';
-    }
-    div_search_bar_cat.appendChild(div_group_drop_down);
-    let div_search_bar_div = document.createElement("div");
-    div_search_bar_div.setAttribute("class", "search-bar-div");
-    div_search_bar_div.innerHTML = '<input type="text" class="fluid search-bar" placeholder="Want to learn something?" >';
-    let div_search_icon_div = document.createElement("div");
-    div_search_icon_div.setAttribute("class", "search-icon-div");
-    div_search_icon_div.innerHTML = '<button type="submit" class="btn btn-outline-light a-search-icon"><i class="fas fa-search search-icon"></i></a>';
-    div_container2.appendChild(div_search_bar_cat);
-    div_container2.appendChild(div_search_bar_div);
-    div_container2.appendChild(div_search_icon_div);
-    div_form.appendChild(div_container2);
-    form_search.appendChild(div_form);
-    original_search_bar.appendChild(form_search);
-    testIcon();
+    getCategories();
+    getMessage();
 
 
 }
@@ -500,7 +470,7 @@ function testIconLogged() {
     }
 }
 
-function testIconUnLogged(){
+function testIconUnLogged() {
     if (window.innerWidth <= 320) {
         search_bar.innerHTML = " ";
         hyperSmallScreenUnLogged();
@@ -516,20 +486,20 @@ function testIconUnLogged(){
     } else if (window.innerWidth <= 880) {
         smallScreenUnLogged();
         search_bar.innerHTML = original_search_bar.innerHTML;
-        img_logo.setAttribute("style","max-width: 50px;");
+        img_logo.setAttribute("style", "max-width: 50px;");
         addDropEvent();
     } else {
         profile_bar.innerHTML = '<a href="login" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
         profile_bar.innerHTML += '<a href="login" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Sign in</a>';
         profile_bar.innerHTML += '<a href="register" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Register</a>';
         img_logo.setAttribute("src", "../images/logo.png");
-        img_logo.setAttribute("style","max-width: 160px;");
+        img_logo.setAttribute("style", "max-width: 160px;");
         search_bar.innerHTML = original_search_bar.innerHTML;
         addDropEvent();
     }
 }
 
-function testIconAdmin(){
+function testIconAdmin() {
     if (window.innerWidth <= 320) {
         search_bar.innerHTML = " ";
         hyperSmallScreenAdmin();
@@ -553,7 +523,8 @@ function testIconAdmin(){
         addDropEvent();
     }
 }
-function testIconModerator(){
+
+function testIconModerator() {
     if (window.innerWidth <= 320) {
         search_bar.innerHTML = " ";
         hyperSmallScreenModerator();
@@ -577,29 +548,100 @@ function testIconModerator(){
         addDropEvent();
     }
 }
+let user_type;
+
+function getMessage() {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        method: 'get',
+        url: '/auth/type',
+        success: function (data) {
+            if(data=="null") 
+                user_type=null;
+            else
+                user_type = data[0].type;
+            testIcon();
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
+}
+
+function getCategories() {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        method: 'get',
+        url: '/category/all',
+        success: function (data) {
+            showCategories(data);
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
+}
+
+function showCategories(info) {
+    img_logo = document.querySelector(".logo-image");
+    profile_bar = document.querySelector(".info-user");
+    search_bar = document.querySelector(".ask-search-bar");
+    grid_bar = document.querySelector(".grid-bar");
+    original_search_bar = document.createElement("div");
+    original_search_bar.setAttribute("class", "ask-search-bar");
+    let form_search = document.createElement("form");
+    form_search.setAttribute("class", "form-inline");
+    form_search.setAttribute("action", "/action_page.php");
+    let div_form = document.createElement("div");
+    div_form.setAttribute("class", "form-control form-control-lg search-container");
+    let div_container2 = document.createElement("div");
+    div_container2.setAttribute("class", "search-container2");
+    let div_search_bar_cat = document.createElement("div");
+    div_search_bar_cat.setAttribute("class", "search-bar-cat dropdown");
+    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/icon-14.svg" class="drop-menu-cat" alt="all"></button>';
+    let div_group_drop_down = document.createElement("div");
+    div_group_drop_down.setAttribute("class", "dropdown-menu");
+    div_group_drop_down.innerHTML = '<a class="dropdown-item drop-cat" ><img src="../images/icon-14.svg" class="rounded dropdown-image-cat" alt="All"> All</a>';
+    for (let i = 0; i < info.length; i++) {
+        let name = info[i].name.charAt(0).toUpperCase() + info[i].name.slice(1)
+        div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" ><img src="../images/' + info[i].icon + '" class="rounded dropdown-image-cat" alt="' + name + '"> ' + name + '</a>';
+    }
+    div_search_bar_cat.appendChild(div_group_drop_down);
+    let div_search_bar_div = document.createElement("div");
+    div_search_bar_div.setAttribute("class", "search-bar-div");
+    div_search_bar_div.innerHTML = '<input type="text" class="fluid search-bar" placeholder="Want to learn something?" >';
+    let div_search_icon_div = document.createElement("div");
+    div_search_icon_div.setAttribute("class", "search-icon-div");
+    div_search_icon_div.innerHTML = '<button type="submit" class="btn btn-outline-light a-search-icon"><i class="fas fa-search search-icon"></i></a>';
+    div_container2.appendChild(div_search_bar_cat);
+    div_container2.appendChild(div_search_bar_div);
+    div_container2.appendChild(div_search_icon_div);
+    div_form.appendChild(div_container2);
+    form_search.appendChild(div_form);
+    original_search_bar.appendChild(form_search);
+}
 
 
-function testIcon()
-{
-    let type=document.getElementById("type").getAttribute("value");
-    let logo_redirect=document.querySelector(".logo a");
-    if(type=="unlogged")
-    {
+function testIcon() {
+    let logo_redirect = document.querySelector(".logo a");
+    if (user_type == null) {
         testIconUnLogged();
-    }
-    else if(type=="logged")
-    {
+    } else if (user_type == "member") {
         testIconLogged();
-        logo_redirect.setAttribute("href","./feed.html");
-    }
-    else if(type=="admin")
-    {
+        logo_redirect.setAttribute("href", "./feed.html");
+    } else if (user_type == "administrator") {
         testIconAdmin();
-        logo_redirect.setAttribute("href","./feed.html");
-    }
-    else if(type=="moderator")
-    {
+        logo_redirect.setAttribute("href", "./feed.html");
+    } else if (user_type == "moderator") {
         testIconModerator();
-        logo_redirect.setAttribute("href","./feed.html");
+        logo_redirect.setAttribute("href", "./feed.html");
     }
 }
