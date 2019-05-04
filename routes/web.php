@@ -26,8 +26,10 @@ Route::get('/profile/{username}', 'Profile\ProfileController@show')->name('UI09'
 
 // Profile
 Route::resource('profile', 'Profile\ProfileController');
+Route::post('profile', 'Profile\ProfileController@update');
+Route::post('updatepic', 'Profile\ProfileController@updateupdatePicture');
 // Question
-Route::resource('profile', 'Question\QuestionController');//TODO
+Route::resource('question', 'Question\QuestionController');//TODO
 
 // API
 Route::put('api/cards', 'CardController@create');
