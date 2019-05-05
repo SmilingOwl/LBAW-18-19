@@ -95,18 +95,20 @@ class ProfileController extends Controller
      * @param  int  $username
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update()
     {
         $member = Auth::user();
        
         $this->validate(request(), [
     
         ]);
-        $member->username = $request['username'];
-        $member->email = $request['email'];
-        $member->biodescription = $request['biodescription'];
+        $member->username = request('username');
+        $member->email = request('email');
+        $member->biodescription = request('biodescription');
+        
         $member->save();
-        return redirect()->action('Profile\ProfileController@show', $member);
+        
+        return redirect()->route('profile', $member);
     }
 
     /**
