@@ -25,10 +25,11 @@ Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
 
 
 // Profile
-Route::resource('profile', 'Profile\ProfileController');
 Route::post('profile', 'Profile\ProfileController@update');
 Route::post('updatepic', 'Profile\ProfileController@updateupdatePicture');
-Route::get('/profile/{username}/edit', 'Profile\ProfileController@editProfile');
+Route::resource('/profile/{username}', 'Profile\ProfileController@show');
+Route::get('profile/{username}/edit', 'Profile\ProfileController@update');
+Route::get('/{username}/settings', 'Profile\ProfileController@update');
 // Question
 Route::resource('question', 'Question\QuestionController');//TODO
 
@@ -61,7 +62,5 @@ Route::get('/auth/info', 'Profile\ProfileController@getType');
 Route::get('/category/all', 'CategoryController@getCategories');
 
 
-//Profile
-Route::resource('/profile/{username}', 'Profile\ProfileController@show');
-Route::get('profile/{username}/edit', 'Profile\ProfileController@update');
+
 
