@@ -13,7 +13,7 @@ class ProfileController extends Controller
 {
 
     public function __construct(){
-        $this->middleware('auth')->except(['show','followers','following','getType']);
+        $this->middleware('auth')->except(['getType']);
     }
 
     /**
