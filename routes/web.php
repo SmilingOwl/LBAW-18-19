@@ -27,9 +27,11 @@ Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
 // Profile
 Route::post('profile', 'Profile\ProfileController@update');
 Route::post('updatepic', 'Profile\ProfileController@updateupdatePicture');
-Route::resource('/profile/{username}', 'Profile\ProfileController@show');
+Route::get('/profile/{username}', 'Profile\ProfileController@show');
 Route::get('profile/{username}/edit', 'Profile\ProfileController@update');
 Route::get('/{username}/settings', 'Profile\ProfileController@update');
+
+
 // Question
 Route::resource('question', 'Question\QuestionController');//TODO
 
@@ -48,13 +50,9 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
-Auth::routes();
+//Search
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('search','Question\SearchController@search')->name('search');
 
 
 //Aux

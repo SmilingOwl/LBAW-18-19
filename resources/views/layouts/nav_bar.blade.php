@@ -4,7 +4,8 @@
                 <a href="/"><img src="../images/logo.png" alt="logo" class="logo-image"></a>
             </div>
             <div class="ask-search-bar">
-                <form class="form-inline" action="/action_page.php">
+                <form class="search-bar-form" method="GET" action={{route('search')}}>
+                    {{ csrf_field() }}
                     <div class="form-control form-control-lg search-container">
                         <div class="search-container2">
                             <div class="search-bar-cat">
