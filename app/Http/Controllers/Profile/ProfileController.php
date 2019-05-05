@@ -192,15 +192,20 @@ class ProfileController extends Controller
    /**
     * Redirects to the followers page
     */ 
-    public function followers(Member $member){
+    public function followers($username){
+        $member = collect(DB::select('SELECT id_user, username , profilePhoto , points, id_rank from follow inner join "user" on (follow.following="user".id_user) where follow.follower = (SELECT "user".id_user  where "user".username = \''. $username .'\''))->first();
+
         return view('pages.profile.followers', compact('member'));
     }
 
     /**
     * Redirects to the following page
     */ 
-    public function following(Member $member){
-        return view('pages.profile.following', compact('member'));
+
+    public function following($username){
+        $member = collect(DB::select('SELECT id_user, username , profilePhoto , points, id_rank from follow inner join "user" on (follow.follower="user".id_user) where follow.following = (SELECT "user".id_user  where "user".username = \''. $username .'\''))->first();
+       
+        return view('pages.profile.following', compact('$member'));
     }
 
     /**
@@ -213,7 +218,7 @@ class ProfileController extends Controller
     public function getType()
     {
         if(!Auth::check())return 'null';
-        $response = DB::select('select "user".username as username ,role.type as type from "user",role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user');
+        $response = DB::select('select "user".username as username ,role.type as type from "user", role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user');
         return response()->json($response);
     }
 

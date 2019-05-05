@@ -32,8 +32,7 @@
                                         data-fa-transform="up-2 grow-2"></i> {{$following->rank}}
                                         
                                 </div>
-                        
-                                
+                          
                             </div>
         
                     @endforeach
