@@ -13,7 +13,7 @@
             <div class="row align-items-center">
 
                 <div class="col-md-4 text-center">
-                    <img class="rounded-circle img-fluid img-profile" alt="profile_pic" src="{{$member->profilephoto}}"
+                    <img class="rounded-circle img-fluid img-profile" alt="profile_pic" src={{asset('/images/' . $member->profilephoto)}}
                         style=" width:90%; max-width: 230px; max-height: 230px;">
                 </div>
 
