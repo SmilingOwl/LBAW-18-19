@@ -83,7 +83,6 @@ use App\Models\Follow;
     }
 
 
-
     public function roles()
     {
         return $this->hasMany(Role::class,'id_user');
@@ -98,6 +97,16 @@ use App\Models\Follow;
     public function role($username)
     {
         return $this->where('username',$username)->first();
+    }
+
+    public function followers()
+    {
+        return $this->belongsToMany(Member::class, 'follow', 'following', 'follower');
+    }
+
+    public function followings()
+    {
+        return $this->belongsToMany(Member::class, 'follow', 'follower', 'following');
     }
 
 }

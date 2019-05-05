@@ -16,7 +16,7 @@ trait Follow
      */
     public function isFollowing(Member $member)
     {
-        return !! $this->followings()->where('following_id', $member->id)->count();
+        return !! $this->followings()->where('following', $member->id)->count();
     }
 
     /**
@@ -27,7 +27,7 @@ trait Follow
      */
     public function isFollowedBy(Member $member)
     {
-        return !! $this->followers()->where('follower_id', $member->id)->count();
+        return !! $this->followers()->where('follower', $member->id)->count();
     }
 
     /**
