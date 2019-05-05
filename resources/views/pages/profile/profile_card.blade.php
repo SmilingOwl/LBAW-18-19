@@ -20,7 +20,7 @@
                 <div class="col-md-4 text-left">
                     <h2 class="h2-adapt">{{$member->username}}
 
-                        <a href={{URL::to('profile/{username}/edit')}} role="button" class="btn" id="editBtn" style="max-width: 40px;">
+                        <a href={{URL::to('profile/' .$member->username .'/edit')}} role="button" class="btn" id="editBtn" style="max-width: 40px;">
                             <i class="fas fa-pen"></i>
                         </a>
 
