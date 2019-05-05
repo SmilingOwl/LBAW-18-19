@@ -17,15 +17,7 @@
         <div class="row">
             <h1 style="margin: 5%; text-align: center;">My Account</h1>
         </div>
-        <div class="row">
-            <input style="width: 70%" type="password" class="form-control input-h4 mt-2 passwordInput" placeholder="New password..."
-                required>
-            <input style="width: 70%" type="password" class="form-control input-h4 mt-2 passwordInput" placeholder="Confirm password"
-                required>
-        </div>
-        <div class="row">
-            <button class="btn btn-dark row" style="width: 10em; margin-top: 20px; margin-bottom: 20px;">Save</button>
-        </div>
+       
         <div class="row">
             <h1 style=" margin: 5%; text-align: center;">Connected Accounts</h1>
         </div>
