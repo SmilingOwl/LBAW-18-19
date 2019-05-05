@@ -3,7 +3,20 @@
 -----------------------------------------
 
 -- Obtain a member’s profile information
-SELECT username, bioDescription, points, profilePhoto, name
+SELECT username, bioDescription, points, profilePhoto, name , (
+    SELECT COUNT(*)
+    FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)
+    GROUP BY "user".id_user
+) AS nr_questions, (
+    SELECT COUNT(*)
+    FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)
+    GROUP BY "user".id_user
+) AS nr_answers, (
+    SELECT COUNT(*)
+    FROM "user",answer,bestAnswer
+    Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post
+    GROUP BY "user".id_user
+) AS nr_best_answers
 FROM "user", rank
 Where  "user".id_rank=rank.id_rank AND "user".id_user = $id_user; 
 

@@ -4,13 +4,13 @@ namespace App\Http\Controllers\Profile;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 use App\Models\Member;
-use App\Models\Question;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
+
     public function __construct(){
         $this->middleware('auth')->except(['show','followers','following','getType']);
     }
@@ -49,11 +49,12 @@ class ProfileController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  Member  $member
+     * @param  int  $username
      * @return \Illuminate\Http\Response
      */
-    public function show(Member $member)
+    public function show($username)
     {
+        $member = collect(DB::select('SELECT username, rank.name as rank, bioDescription, points, profilePhoto, name ,(SELECT COUNT(*) FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)) AS nr_questions, (SELECT COUNT(*) FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)) AS nr_answers, (SELECT COUNT(*) FROM "user",answer,bestAnswer Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post) AS nr_best_answers FROM "user", rank Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
         return view('pages.profile.show', compact('member'));
     }
 
@@ -72,10 +73,10 @@ class ProfileController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $username
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($username)
     {
         $member = Auth::user();
         return view('pages.profile.edit', compact('member'));
@@ -85,10 +86,10 @@ class ProfileController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $username
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $username)
     {
         $member = Auth::user();
         $this->validate(request(), [
@@ -97,16 +98,16 @@ class ProfileController extends Controller
         $member->username = request('username');
         $member->bioDescription = request('bioDescription');
         $member->save();
-        return redirect()->route('profile', $member);//
+        return redirect()->route('profile', $member);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  int  $username
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($username)
     {
         //
     }
@@ -209,7 +210,7 @@ class ProfileController extends Controller
     public function getType()
     {
         if(!Auth::check())return 'null';
-        $response = DB::select('select role.type as type from "user",role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user');
+        $response = DB::select('select "user".username as username ,role.type as type from "user",role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user');
         return response()->json($response);
     }
 }
