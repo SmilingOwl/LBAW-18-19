@@ -17,8 +17,8 @@
             <form method="POST" action="{{route('updateprofile', $member)}}">
                 {{ csrf_field() }}
             <div class="row" >
-                <div class="col-md-3 text-center ">
-                    <div class="container" >
+              <div class="col-md-3 text-center ">
+         <!--             <div class="container" >
                         <div class="avatar-upload" style="justify-content: center">
                             <div class="avatar-edit edit" >
                                 <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -29,7 +29,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --> 
                 </div>
            
                 
@@ -37,7 +37,7 @@
 
                     <input id="nameInput" type="text" class="form-control input-h2" value="{{$member->username}}">
                     <input id="emailInput" type="text" class="form-control input-h4 mt-2"value="{{$member->email}}">
-                        <input id="bioInput" type="text" class="form-control input-h6 lead-adapt mt-2" value="{{$member->biodescription}}">
+              <!--          <input id="bioInput" type="text" class="form-control input-h6 lead-adapt mt-2" value="{{$member->biodescription}}">-->
                     <input id="passWord" type="password" class="form-control input-h4 mt-2" placeholder="Enter your Password"
                         required>
                     <input id="rePassWord" type="password" class="form-control input-h4 mt-2" placeholder="Re-enter your Password"
