@@ -23,10 +23,12 @@ Route::get('/terms', 'StaticPages\InformationController@createTerms')->name('UI0
 Route::get('/faq', 'StaticPages\InformationController@createFaq')->name('UI07');
 Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
 
+
 // Profile
 Route::resource('profile', 'Profile\ProfileController');
 Route::post('profile', 'Profile\ProfileController@update');
 Route::post('updatepic', 'Profile\ProfileController@updateupdatePicture');
+Route::get('/profile/{username}/edit', 'Profile\ProfileController@editProfile');
 // Question
 Route::resource('question', 'Question\QuestionController');//TODO
 

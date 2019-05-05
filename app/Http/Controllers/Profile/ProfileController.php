@@ -57,6 +57,18 @@ class ProfileController extends Controller
         return view('pages.profile.show', compact('member'));
     }
 
+       /**
+     * Display the edit profile resource.
+     *
+     * @param  Member  $member
+     * @return \Illuminate\Http\Response
+     */
+    public function editProfile(Member $member)
+    {
+        return view('pages.profile.edit', compact('member'));
+    }
+
+
     /**
      * Show the form for editing the specified resource.
      *
