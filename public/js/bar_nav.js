@@ -60,32 +60,33 @@ function addDropEvent() {
 }
 
 function changeImageDropdown(e) {
-    console.log(e);
     let src = e.srcElement.querySelector("img").getAttribute("src");
     let image = document.querySelector(".drop-menu-cat");
+    let hidden_cat= document.querySelector(".category-choice");
+    hidden_cat.setAttribute("value",e.srcElement.querySelector("img").getAttribute("alt"));
     image.setAttribute("src", src);
     image.setAttribute("alt", e.srcElement.querySelector("img").getAttribute("alt"));
 }
 //  -------------------------------- LOGGED ----------------------------------------------------
 function hyperSmallScreen() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
+    img_logo.setAttribute("src", "/images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button"><i class="fas fa-search search-icon"></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><i class="fas fa-question"></i></a>';
+    profile_bar.innerHTML += '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><i class="fas fa-question"></i></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;   "></img> <p class="item 2"style="margin:0px;font-size:13px;" > Luis started follow you </p><p> </p> <span class="item 3"> <i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="./questionDetail.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis voted up your question  </p><p> </p> <span class="item 3"><i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;   "></img> <p class="item 2"style="margin:0px;font-size:13px;" > Luis started follow you </p><p> </p> <span class="item 3"> <i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="/questionDetail.html"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis voted up your question  </p><p> </p> <span class="item 3"><i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user" style="margin-right:5px;"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/settings">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -93,24 +94,24 @@ function hyperSmallScreen() {
 }
 
 function superSmallScreen() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
+    img_logo.setAttribute("src", "/images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon" ></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
+    profile_bar.innerHTML += '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./questionDetail.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/questionDetail.html"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./'+ username +' /settings">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/'+ username +' /settings">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -118,23 +119,23 @@ function superSmallScreen() {
 }
 
 function smallMScreen() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
+    img_logo.setAttribute("src", "/images/icon-14.svg");
+    profile_bar.innerHTML = '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./questionDetail.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question  </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/questionDetail.html"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question  </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/settings">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -143,23 +144,23 @@ function smallMScreen() {
 }
 
 function smallScreen() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
+    img_logo.setAttribute("src", "/images/icon-14.svg");
+    profile_bar.innerHTML = '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2"font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./questionDetail.html"><img class="item-1 rounded-circle " src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2" font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2"font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/questionDetail.html"><img class="item-1 rounded-circle " src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2" font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/settings">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -169,9 +170,9 @@ function smallScreen() {
 //------------------------------- Un logged ---------------------------------------
 
 function hyperSmallScreenUnLogged() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
+    img_logo.setAttribute("src", "/images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon"></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><i class="fas fa-question"></i></a>';
+    profile_bar.innerHTML += '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><i class="fas fa-question"></i></a>';
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user" style="margin-right:5px;"></i></button>';
@@ -184,9 +185,9 @@ function hyperSmallScreenUnLogged() {
 }
 
 function superSmallScreenUnLogged() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
+    img_logo.setAttribute("src", "/images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon" ></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
+    profile_bar.innerHTML += '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i></button>';
@@ -199,9 +200,9 @@ function superSmallScreenUnLogged() {
 }
 
 function smallMScreenUnLogged() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
-    img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
+    img_logo.setAttribute("src", "/images/icon-14.svg");
+    img_logo.setAttribute("src", "/images/icon-14.svg");
+    profile_bar.innerHTML = '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
@@ -215,8 +216,8 @@ function smallMScreenUnLogged() {
 }
 
 function smallScreenUnLogged() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
+    img_logo.setAttribute("src", "/images/icon-14.svg");
+    profile_bar.innerHTML = '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
@@ -229,25 +230,25 @@ function smallScreenUnLogged() {
 }
 //  -------------------------------- Admin ----------------------------------------------------
 function hyperSmallScreenAdmin() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
+    img_logo.setAttribute("src", "/images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button"><i class="fas fa-search search-icon"></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><i class="fas fa-question"></i></a>';
+    profile_bar.innerHTML += '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><i class="fas fa-question"></i></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;   "></img> <p class="item 2"style="margin:0px;font-size:13px;" > Luis started follow you </p><p> </p> <span class="item 3"> <i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="./questionDetail.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis voted up your question  </p><p> </p> <span class="item 3"><i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;   "></img> <p class="item 2"style="margin:0px;font-size:13px;" > Luis started follow you </p><p> </p> <span class="item 3"> <i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="/questionDetail.html"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis voted up your question  </p><p> </p> <span class="item 3"><i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user" style="margin-right:5px;"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/settings">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/admin">Admin page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -255,25 +256,25 @@ function hyperSmallScreenAdmin() {
 }
 
 function superSmallScreenAdmin() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
+    img_logo.setAttribute("src", "/images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon" ></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
+    profile_bar.innerHTML += '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./questionDetail.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/questionDetail.html"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/settings">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/admin">Admin page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -281,24 +282,24 @@ function superSmallScreenAdmin() {
 }
 
 function smallMScreenAdmin() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
+    img_logo.setAttribute("src", "/images/icon-14.svg");
+    profile_bar.innerHTML = '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./questionDetail.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question  </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/questionDetail.html"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question  </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/settings">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/admin">Admin page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -307,24 +308,24 @@ function smallMScreenAdmin() {
 }
 
 function smallScreenAdmin() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
+    img_logo.setAttribute("src", "/images/icon-14.svg");
+    profile_bar.innerHTML = '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2"font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./questionDetail.html"><img class="item-1 rounded-circle " src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2" font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2"font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/questionDetail.html"><img class="item-1 rounded-circle " src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2" font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./admin.html">Admin page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/settings">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/admin">Admin page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -332,25 +333,25 @@ function smallScreenAdmin() {
 }
 //  -------------------------------- Moderator ----------------------------------------------------
 function hyperSmallScreenModerator() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
+    img_logo.setAttribute("src", "/images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button"><i class="fas fa-search search-icon"></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><i class="fas fa-question"></i></a>';
+    profile_bar.innerHTML += '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><i class="fas fa-question"></i></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;   "></img> <p class="item 2"style="margin:0px;font-size:13px;" > Luis started follow you </p><p> </p> <span class="item 3"> <i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item" href="./questionDetail.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis voted up your question  </p><p> </p> <span class="item 3"><i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;   "></img> <p class="item 2"style="margin:0px;font-size:13px;" > Luis started follow you </p><p> </p> <span class="item 3"> <i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item" href="/questionDetail.html"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis voted up your question  </p><p> </p> <span class="item 3"><i class="fa fa-clock-o" aria-hidden="true"></i>09/03/19</a></span>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user" style="margin-right:5px;"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/settings">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/moderator">Moderator page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -358,25 +359,25 @@ function hyperSmallScreenModerator() {
 }
 
 function superSmallScreenModerator() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
+    img_logo.setAttribute("src", "/images/icon-14.svg");
     profile_bar.innerHTML = '<button type="button" class="btn search-button" ><i class="fas fa-search search-icon" ></i></button>';
-    profile_bar.innerHTML += '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
+    profile_bar.innerHTML += '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./questionDetail.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/questionDetail.html"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/settings">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/moderator">Moderator page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -384,24 +385,24 @@ function superSmallScreenModerator() {
 }
 
 function smallMScreenModerator() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"<strong>Ask</strong></a>';
+    img_logo.setAttribute("src", "/images/icon-14.svg");
+    profile_bar.innerHTML = '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"<strong>Ask</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./questionDetail.html"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question  </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px;font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/questionDetail.html"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em;display: inline-block;  "></img><p class="item 2" style="margin:0px; font-size:13px;"> Luis voted up your question  </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./edit_profile.html">Edit profile</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/edit_profile.html">Edit profile</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/moderator">Moderator page</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
     profile_bar.appendChild(div);
@@ -409,24 +410,24 @@ function smallMScreenModerator() {
 }
 
 function smallScreenModerator() {
-    img_logo.setAttribute("src", "../images/icon-14.svg");
-    profile_bar.innerHTML = '<a href="../pages/ask.html" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
+    img_logo.setAttribute("src", "/images/icon-14.svg");
+    profile_bar.innerHTML = '<a href="/question/add" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
     let div_bell = document.createElement("div");
     div_bell.setAttribute("class", "btn-group");
     div_bell.innerHTML = '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fas fa-bell"></i> <span class="badge badge-warning">2</span></button>';
     let div_bell_menu = document.createElement("div");
     div_bell_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./profile/' + username + '"><img class="item-1 rounded-circle" src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2"font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
-    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="./questionDetail.html"><img class="item-1 rounded-circle " src="../images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2" font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/profile/' + username + '"><img class="item-1 rounded-circle" src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2"font-size:13px;"> Luis started follow you </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
+    div_bell_menu.innerHTML += '<a class="dropdown-item notification" href="/questionDetail.html"><img class="item-1 rounded-circle " src="/images/yves.jpg" style="width: 1.8em; height: 1.8em; display: inline-block;  "></img><p style="margin:0px; class="item 2" font-size:13px;"> Luis voted up your question </p><p> </p><span class="item 3"><i class="fa fa-clock-o" aria-hidden="true" style="margin-right:5px;"></i>09/03/19</span></a>';
     div_bell.appendChild(div_bell_menu);
     let div = document.createElement("div");
     div.setAttribute("class", "btn-group");
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./moderator.html">Moderator page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '">Profile page</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/settings">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/profile/' + username + '/moderator">Moderator page</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign Out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);
@@ -457,7 +458,7 @@ function testIconLogged() {
         addDropEvent();
     } else {
         smallScreen();
-        img_logo.setAttribute("src", "../images/logo.png");
+        img_logo.setAttribute("src", "/images/logo.png");
         search_bar.innerHTML = original_search_bar.innerHTML;
         addDropEvent();
     }
@@ -485,7 +486,7 @@ function testIconUnLogged() {
         profile_bar.innerHTML = '<a href="login" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
         profile_bar.innerHTML += '<a href="login" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Sign in</a>';
         profile_bar.innerHTML += '<a href="register" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Register</a>';
-        img_logo.setAttribute("src", "../images/logo.png");
+        img_logo.setAttribute("src", "/images/logo.png");
         img_logo.setAttribute("style", "max-width: 160px;");
         search_bar.innerHTML = original_search_bar.innerHTML;
         addDropEvent();
@@ -511,7 +512,7 @@ function testIconAdmin() {
         addDropEvent();
     } else {
         smallScreenAdmin();
-        img_logo.setAttribute("src", "../images/logo.png");
+        img_logo.setAttribute("src", "/images/logo.png");
         search_bar.innerHTML = original_search_bar.innerHTML;
         addDropEvent();
     }
@@ -536,7 +537,7 @@ function testIconModerator() {
         addDropEvent();
     } else {
         smallScreenModerator();
-        img_logo.setAttribute("src", "../images/logo.png");
+        img_logo.setAttribute("src", "/images/logo.png");
         search_bar.innerHTML = original_search_bar.innerHTML;
         addDropEvent();
     }
@@ -591,27 +592,26 @@ function showCategories(info) {
     grid_bar = document.querySelector(".grid-bar");
     original_search_bar = document.createElement("div");
     original_search_bar.setAttribute("class", "ask-search-bar");
-    let form_search = document.createElement("form");
-    form_search.setAttribute("class", "form-inline");
-    form_search.setAttribute("action", "/action_page.php");
+    let form_search = document.querySelector(".search-bar-form");
+    form_search.innerHTML="";
     let div_form = document.createElement("div");
     div_form.setAttribute("class", "form-control form-control-lg search-container");
     let div_container2 = document.createElement("div");
     div_container2.setAttribute("class", "search-container2");
     let div_search_bar_cat = document.createElement("div");
     div_search_bar_cat.setAttribute("class", "search-bar-cat dropdown");
-    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/icon-14.svg" class="drop-menu-cat" alt="all"></button>';
+    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="/images/icon-14.svg" class="drop-menu-cat" alt="all"></button>';
     let div_group_drop_down = document.createElement("div");
     div_group_drop_down.setAttribute("class", "dropdown-menu");
-    div_group_drop_down.innerHTML = '<a class="dropdown-item drop-cat" ><img src="../images/icon-14.svg" class="rounded dropdown-image-cat" alt="All"> All</a>';
+    div_group_drop_down.innerHTML = '<a class="dropdown-item drop-cat" ><img src="/images/icon-14.svg" class="rounded dropdown-image-cat" alt="All"> All</a>';
     for (let i = 0; i < info.length; i++) {
         let name = info[i].name.charAt(0).toUpperCase() + info[i].name.slice(1)
-        div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" ><img src="../images/' + info[i].icon + '" class="rounded dropdown-image-cat" alt="' + name + '"> ' + name + '</a>';
+        div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" ><img src="/images/' + info[i].icon + '" class="rounded dropdown-image-cat" alt="' + name + '"> ' + name + '</a>';
     }
     div_search_bar_cat.appendChild(div_group_drop_down);
     let div_search_bar_div = document.createElement("div");
     div_search_bar_div.setAttribute("class", "search-bar-div");
-    div_search_bar_div.innerHTML = '<input type="text" class="fluid search-bar" placeholder="Want to learn something?" >';
+    div_search_bar_div.innerHTML = '<input type="text" class="fluid search-bar" placeholder="Want to learn something?" name="search">';
     let div_search_icon_div = document.createElement("div");
     div_search_icon_div.setAttribute("class", "search-icon-div");
     div_search_icon_div.innerHTML = '<button type="submit" class="btn btn-outline-light a-search-icon"><i class="fas fa-search search-icon"></i></a>';
@@ -619,7 +619,13 @@ function showCategories(info) {
     div_container2.appendChild(div_search_bar_div);
     div_container2.appendChild(div_search_icon_div);
     div_form.appendChild(div_container2);
+    let hidden_input = document.createElement("input");
+    hidden_input.setAttribute("type","hidden");
+    hidden_input.setAttribute("class","category-choice");
+    hidden_input.setAttribute("name","category");
+    hidden_input.setAttribute("value","all");
     form_search.appendChild(div_form);
+    form_search.appendChild(hidden_input);
     original_search_bar.appendChild(form_search);
 }
 
@@ -630,12 +636,12 @@ function testIcon() {
         testIconUnLogged();
     } else if (user_type == "member") {
         testIconLogged();
-        logo_redirect.setAttribute("href", "./feed.html");
+        logo_redirect.setAttribute("href", "/");
     } else if (user_type == "administrator") {
         testIconAdmin();
-        logo_redirect.setAttribute("href", "./feed.html");
+        logo_redirect.setAttribute("href", "/");
     } else if (user_type == "moderator") {
         testIconModerator();
-        logo_redirect.setAttribute("href", "./feed.html");
+        logo_redirect.setAttribute("href", "/");
     }
 }

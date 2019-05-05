@@ -25,12 +25,19 @@ Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
 
 
 // Profile
-Route::resource('profile', 'Profile\ProfileController');
 Route::post('profile', 'Profile\ProfileController@update');
 Route::post('updatepic', 'Profile\ProfileController@updateupdatePicture');
-Route::get('/profile/{username}/edit', 'Profile\ProfileController@editProfile');
+Route::get('profile/{username}', 'Profile\ProfileController@show');
+Route::get('profile/{username}/settings', 'Profile\ProfileController@settings');
+Route::get('profile/{username}/admin', 'Profile\ProfileController@admin');
+Route::get('profile/{username}/moderator', 'Profile\ProfileController@moderator');
+
+
 // Question
-Route::resource('question', 'Question\QuestionController');//TODO
+//Route::resource('question', 'Question\QuestionController');//TODO
+Route::get('/question/add', 'Question\QuestionController@create')->name('UI18');
+Route::get('/topic/{category}', 'Question\QuestionController@topic')->name('UI18');
+
 
 // API
 Route::put('api/cards', 'CardController@create');
@@ -47,13 +54,9 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
-Auth::routes();
+//Search
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('search','Question\SearchController@search')->name('search');
 
 
 //Aux
@@ -61,7 +64,5 @@ Route::get('/auth/info', 'Profile\ProfileController@getType');
 Route::get('/category/all', 'CategoryController@getCategories');
 
 
-//Profile
-Route::resource('/profile/{username}', 'Profile\ProfileController@show');
-Route::get('profile/{username}/edit', 'Profile\ProfileController@update');
+
 

@@ -9,9 +9,11 @@
     <h2 style="text-align:center;"> Question everything, Learn something! </h2>
 
     <div class="ask-search-bar">
-        <form class="form-inline" action="/action_page.php">
+        <form class="search-bar-form form-inline" method="GET" action={{route('search')}}>
+            {{ csrf_field() }}
             <div class="form-control form-control-lg search-container">
                 <div class="search-container2">
+                    <input class="category-choice" type="hidden" name="category" value="all">
                     <div class="search-bar-cat dropdown">
                         <button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/icon-14.svg" alt="logo" class="drop-menu-cat" value="all"></button>
                         <div class="dropdown-menu">
@@ -31,7 +33,7 @@
                         </div>
                     </div>
                     <div class="search-bar-div">
-                        <input type="text" class="fluid search-bar" placeholder="Want to learn something?">
+                        <input type="text" class="fluid search-bar" placeholder="Want to learn something?" name="search">
                     </div>
                     <div class="search-icon-div">
                         <button type="submit" class="btn btn-outline-light a-search-icon"><i class="fas fa-search search-icon"></i></button>
@@ -40,7 +42,7 @@
             </div>
         </form>
     </div>
-    <a href="../pages/login.html" class="btn btn btn-dark btn-lg" id="ask-question-main" role="button">
+    <a href="/question/add" class="btn btn btn-dark btn-lg" id="ask-question-main" role="button">
         Ask a Question
     </a>
 </div>

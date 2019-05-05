@@ -31,7 +31,7 @@ class QuestionController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.question.add');
     }
 
     /**
@@ -123,5 +123,10 @@ class QuestionController extends Controller
             $result = true;
        
             return compact('result');
+    }
+
+    public function topic($category)
+    {
+        return view('pages.question.topic');
     }
 }

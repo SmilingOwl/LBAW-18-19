@@ -6,9 +6,8 @@ function onLoad() {
     search_bar = document.querySelector(".ask-search-bar");
     original_search_bar = document.createElement("div");
     original_search_bar.setAttribute("class", "ask-search-bar");
-    let form_search = document.createElement("form");
-    form_search.setAttribute("class", "form-inline");
-    form_search.setAttribute("action", "/action_page.php");
+    let form_search = document.querySelector(".search-bar-form");
+    form_search.innerHTML="";
     let div_form = document.createElement("div");
     div_form.setAttribute("class", "form-control form-control-lg search-container");
     let div_container2 = document.createElement("div");
@@ -27,7 +26,7 @@ function onLoad() {
     div_search_bar_cat.appendChild(div_group_drop_down);
     let div_search_bar_div = document.createElement("div");
     div_search_bar_div.setAttribute("class", "search-bar-div");
-    div_search_bar_div.innerHTML = '<input type="text" class="fluid search-bar" placeholder="Want to learn something?" >';
+    div_search_bar_div.innerHTML = '<input type="text" class="fluid search-bar" placeholder="Want to learn something?" name="search">';
     let div_search_icon_div = document.createElement("div");
     div_search_icon_div.setAttribute("class", "search-icon-div");
     div_search_icon_div.innerHTML = '<button type="submit" class="btn btn-outline-light a-search-icon"><i class="fas fa-search search-icon"></i></a>';
@@ -35,7 +34,13 @@ function onLoad() {
     div_container2.appendChild(div_search_bar_div);
     div_container2.appendChild(div_search_icon_div);
     div_form.appendChild(div_container2);
+    let hidden_input = document.createElement("input");
+    hidden_input.setAttribute("type","hidden");
+    hidden_input.setAttribute("class","category-choice");
+    hidden_input.setAttribute("name","category");
+    hidden_input.setAttribute("value","all");
     form_search.appendChild(div_form);
+    form_search.appendChild(hidden_input);
     original_search_bar.appendChild(form_search);
     search_bar.innerHTML = original_search_bar.innerHTML;
     addDropEvent();
@@ -52,6 +57,8 @@ function addDropEvent() {
 function changeImageDropdown(e) {
     let src = e.srcElement.querySelector("img").getAttribute("src");
     let image = document.querySelector(".drop-menu-cat");
+    let hidden_cat= document.querySelector(".category-choice");
+    hidden_cat.setAttribute("value",e.srcElement.querySelector("img").getAttribute("alt"));
     image.setAttribute("src", src);
     image.setAttribute("value", e.srcElement.querySelector("img").getAttribute("alt"));
 }
