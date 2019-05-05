@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Member;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 
 class ProfileController extends Controller
 {
@@ -218,5 +219,31 @@ class ProfileController extends Controller
         $member = Member::find($username);
         $member->delete();
         return $member;
+    }
+
+    public function admin($username)
+    {
+        $type = collect(DB::select('select role.type as type from "user",role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user'))->first();
+        if($type->type === "administrator")
+        {
+            return view('pages.profile.admin');
+        }
+        else
+        {
+            return redirect('404');
+        }
+    }
+
+    public function moderator($username)
+    {
+        $type = collect(DB::select('select role.type as type from "user",role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user'))->first();
+        if($type->type === "moderator")
+        {
+            return view('pages.profile.moderator');
+        }
+        else
+        {
+            return redirect('404');
+        }
     }
 }

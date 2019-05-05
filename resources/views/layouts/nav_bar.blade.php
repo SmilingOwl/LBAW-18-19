@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg  navbar-ligh sticky-top form-bar">
     <div class="grid-bar">
         <div class="logo">
-            <a href="/"><img src="../images/logo.png" alt="logo" class="logo-image"></a>
+            <a href="/"><img src="/images/logo.png" alt="logo" class="logo-image"></a>
         </div>
         <div class="ask-search-bar">
             <form class="search-bar-form" method="GET" action={{route('search')}}>
@@ -10,34 +10,34 @@
                     <div class="search-container2">
                         <input class="category-choice" type="hidden" name="category" value="all">
                         <div class="search-bar-cat">
-                            <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
+                            <img src="/images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
                                 width="33" alt="logo">
                             <div class="dropdown-menu">
-                                <a class="dropdown-item drop-cat"><img src="../images/icon-14.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/icon-14.svg"
                                         class="rounded dropdown-image-cat" alt="All"> All</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/art-06.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/art-06.svg"
                                         class="rounded dropdown-image-cat" alt="Art"> Art</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/biology-01.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/biology-01.svg"
                                         class="rounded dropdown-image-cat" alt="Biology"> Biology</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/business-07.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/business-07.svg"
                                         class="rounded dropdown-image-cat" alt="Business"> Business</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/chemistry-03.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/chemistry-03.svg"
                                         class="rounded dropdown-image-cat" alt="Chemistry"> Chemistry</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/geology-10.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/geology-10.svg"
                                         class="rounded dropdown-image-cat" alt="Geology"> Geology</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/history-08.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/history-08.svg"
                                         class="rounded dropdown-image-cat" alt="History"> History</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/maths-12.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/maths-12.svg"
                                         class="rounded dropdown-image-cat" alt="Math"> Math</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/health-04.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/health-04.svg"
                                         class="rounded dropdown-image-cat" alt="Medicine"> Medicine</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/linguistics-09.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/linguistics-09.svg"
                                         class="rounded dropdown-image-cat" alt="Linguistics"> Linguistics</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/physics-02.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/physics-02.svg"
                                         class="rounded dropdown-image-cat" alt="Physics"> Physics</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/psychology-11.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/psychology-11.svg"
                                         class="rounded dropdown-image-cat" alt="Psychology"> Psychology</a>
-                                <a class="dropdown-item drop-cat"><img src="../images/tech-05.svg"
+                                <a class="dropdown-item drop-cat"><img src="/images/tech-05.svg"
                                         class="rounded dropdown-image-cat" alt="Technology"> Technology</a>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                             <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
                         </div>
                         <div class="search-icon-div">
-                            <a href="../pages/search.html" class="a-search-icon">
+                            <a href="/pages/search.html" class="a-search-icon">
                                 <i class="fas fa-search search-icon"></i>
                             </a>
                         </div>
@@ -69,14 +69,14 @@
                 <div class="form-control form-control-lg search-container">
                     <div class="search-container2">
                         <div class="search-bar-cat">
-                            <img src="../images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
+                            <img src="/images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
                                 width="33" alt="logo">
                         </div>
                         <div class="search-bar-div">
                             <input type="text" class="fluid search-bar" placeholder="Let us know your doubts">
                         </div>
                         <div class="search-icon-div">
-                            <a href="../pages/search.html" class="a-search-icon">
+                            <a href="/pages/search.html" class="a-search-icon">
                                 <i class="fas fa-search search-icon"></i>
                             </a>
                         </div>
