@@ -14,8 +14,7 @@
     <div class="container">
         <h1 class="h1-responsive font-weight-bold text-center my-4">Edit your profile</h1>
         <div class="container" >
-            <form method="POST" action="{{Route('profile.update', $member)}}">
-                {{ method_field('PUT') }}    
+            <form method="POST" action="{{route('updateprofile', $member)}}">
                 {{ csrf_field() }}
             <div class="row" >
                 <div class="col-md-3 text-center ">

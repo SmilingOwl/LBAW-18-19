@@ -90,17 +90,17 @@ class ProfileController extends Controller
      * @param  int  $username
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $username)
+    public function update(Request $request)
     {
-       // $member = Auth::user();
-        $member = collect(DB::select('SELECT username, rank.name as rank, bioDescription, points, profilePhoto, name ,(SELECT COUNT(*) FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)) AS nr_questions, (SELECT COUNT(*) FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)) AS nr_answers, (SELECT COUNT(*) FROM "user",answer,bestAnswer Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post) AS nr_best_answers FROM "user", rank Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
+        $member = Auth::user();
+        //$member = collect(DB::select('SELECT username, rank.name as rank, bioDescription, points, profilePhoto, name ,(SELECT COUNT(*) FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)) AS nr_questions, (SELECT COUNT(*) FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)) AS nr_answers, (SELECT COUNT(*) FROM "user",answer,bestAnswer Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post) AS nr_best_answers FROM "user", rank Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
         $this->validate(request(), [
-       
+    
         ]);
         $member->username = request('username');
-        $member->bioDescription = request('biodescription');
+        $member->email = request('email');
+        $member->bioDescription = request('bioDescription');
         $member->save();
-        //$member->update(Input::all());
         return redirect()->route('profile', $member);
     }
 
@@ -140,7 +140,7 @@ class ProfileController extends Controller
      * @param Request $request
      * @return \Illuminate\Http\Response
      */
-    public function updateEmail(Request $request) {
+     public function updateEmail(Request $request) {
         $member = Auth::user(); 
        
         $request->validate([

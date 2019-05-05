@@ -25,12 +25,14 @@ Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
 
 
 // Profile
-Route::post('profile', 'Profile\ProfileController@update');
+Route::post('profile/{username}/edit', 'Profile\ProfileController@update')->name('updateprofile');
 Route::post('updatepic', 'Profile\ProfileController@updateupdatePicture');
 Route::get('profile/{username}', 'Profile\ProfileController@show');
 Route::get('profile/{username}/settings', 'Profile\ProfileController@settings');
 Route::get('profile/{username}/admin', 'Profile\ProfileController@admin');
 Route::get('profile/{username}/moderator', 'Profile\ProfileController@moderator');
+Route::get('profile/{username}/edit', 'Profile\ProfileController@edit');
+
 
 
 // Question
