@@ -75,17 +75,6 @@ class ProfileController extends Controller
         return view('pages.profile.show')->with('member',$member)->with('followers',$followers)->with('followings',$following);
     }
 
-       /**
-     * Display the edit profile resource.
-     *
-     * @param  Member  $member
-     * @return \Illuminate\Http\Response
-     */
- /*   public function editProfile(Member $member)
-    {
-        return view('pages.profile.edit', compact('member'));
-    }
-*/
 
     /**
      * Show the form for editing the specified resource.
@@ -113,9 +102,9 @@ class ProfileController extends Controller
         $this->validate(request(), [
     
         ]);
-        $member->username = $request['username'];//request('');
-        $member->email = $request['username'];
-      //  $member->bioDescription = request('bioDescription');
+        $member->username = $request['username'];
+        $member->email = $request['email'];
+        $member->biodescription = $request['biodescription'];
         $member->save();
         return redirect()->action('Profile\ProfileController@show', $member);
     }
@@ -221,7 +210,8 @@ class ProfileController extends Controller
     public function following($username){
         $member = collect(DB::select('SELECT id_user, username , profilePhoto , points, id_rank from follow inner join "user" on (follow.follower="user".id_user) where follow.following = (SELECT "user".id_user  where "user".username = \''. $username .'\''))->first();
        
-        return view('pages.profile.following', compact('$member'));
+        //return var_dump($member);
+       return view('pages.profile.following', compact('$member'));
     }
 
     /**

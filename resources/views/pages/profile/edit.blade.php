@@ -37,7 +37,7 @@
 
                     <input id="nameInput" type="text" class="form-control input-h2" value="{{$member->username}}">
                     <input id="emailInput" type="text" class="form-control input-h4 mt-2"value="{{$member->email}}">
-              <!--          <input id="bioInput" type="text" class="form-control input-h6 lead-adapt mt-2" value="{{$member->biodescription}}">-->
+                    <input id="bioInput" type="text" class="form-control input-h6 lead-adapt mt-2" value="{{$member->biodescription}}">
                     <input id="passWord" type="password" class="form-control input-h4 mt-2" placeholder="Enter your Password"
                         required>
                     <input id="rePassWord" type="password" class="form-control input-h4 mt-2" placeholder="Re-enter your Password"
