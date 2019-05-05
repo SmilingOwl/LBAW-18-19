@@ -97,7 +97,7 @@ class ProfileController extends Controller
      */
     public function update()
     {
-        $member = Auth::user();
+        $member =Member::find(Auth::user()->id_user);
        
         $this->validate(request(), [
     
@@ -108,7 +108,7 @@ class ProfileController extends Controller
         
         $member->save();
         
-        return redirect()->route('profile', $member);
+        return redirect('/profile/' . $member->username);
     }
 
     /**

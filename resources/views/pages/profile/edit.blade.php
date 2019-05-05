@@ -36,13 +36,13 @@
                 
                 <div class="col-md-7 mobile-center text-shadow edit-content" style="margin-top: 20px;">
 
-                    <input id="nameInput" type="text" class="form-control input-h2" value="{{$member->username}}">
-                    <input id="emailInput" type="text" class="form-control input-h4 mt-2"value="{{$member->email}}">
-                    <input id="bioInput" type="text" class="form-control input-h6 lead-adapt mt-2" value="{{$member->biodescription}}">
+                    <input id="nameInput" type="text" class="form-control input-h2" value="{{$member->username}}" name="username">
+                    <input id="emailInput" type="text" class="form-control input-h4 mt-2"value="{{$member->email}}" name="email">
+                    <input id="bioInput" type="text" class="form-control input-h6 lead-adapt mt-2" value="{{$member->biodescription}}" name="biodescription">
                     <input id="passWord" type="password" class="form-control input-h4 mt-2" placeholder="Enter your Password"
-                        required>
+                        required name="password">
                     <input id="rePassWord" type="password" class="form-control input-h4 mt-2" placeholder="Re-enter your Password"
-                        required>
+                        required name="password_confirmation">
                     
 
                 </div>
