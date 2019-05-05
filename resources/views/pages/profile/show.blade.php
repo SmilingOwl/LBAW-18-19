@@ -1,12 +1,12 @@
 @extends('layouts.layout')
 @section('include')
-    
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/general.css')}}>
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/style.css')}}>
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/login.css')}}>
 
-    <script src={{asset('js/bar_nav.js')}}></script>
-    <script src={{asset('js/footer_position.js')}}></script>
+<link rel="stylesheet" type="text/css" media="screen" href={{asset('css/general.css')}}>
+<link rel="stylesheet" type="text/css" media="screen" href={{asset('css/style.css')}}>
+<link rel="stylesheet" type="text/css" media="screen" href={{asset('css/login.css')}}>
+
+<script src={{asset('js/bar_nav.js')}}></script>
+<script src={{asset('js/footer_position.js')}}></script>
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
 
 <div class="mt-5 grey-background container">
 
-    
+
     @include('pages.profile.profile_card');
 
     <!--separadores-->
@@ -57,7 +57,7 @@
                                     <p class="resultFooter align-self-center">3 answers</p>
                                     <p class="resultFooter align-self-center">10 upvotes 2 downvotes</p>
                                     <p class="resultFooter align-self-center">10 Jan 2019</p>
-                                    <img src="../images/biology-01.svg"  alt="category" class="media-object"
+                                    <img src="../images/biology-01.svg" alt="category" class="media-object"
                                         style="width:2rem; height: 2rem;">
                                 </div>
                             </div>
@@ -75,7 +75,8 @@
                                     <p class="resultFooter align-self-center">0 answers</p>
                                     <p class="resultFooter align-self-center">1 upvote</p>
                                     <p class="resultFooter align-self-center">8 Jan 2019</p>
-                                    <img src="../images/tech-05.svg" alt="category" class="media-object" style="width:2rem; height: 2rem;">
+                                    <img src="../images/tech-05.svg" alt="category" class="media-object"
+                                        style="width:2rem; height: 2rem;">
                                 </div>
                             </div>
                         </div>
@@ -92,7 +93,8 @@
                                     <p class="resultFooter align-self-center">5 answers</p>
                                     <p class="resultFooter align-self-center">5 upvotes</p>
                                     <p class="resultFooter align-self-center">7 Jan 2019</p>
-                                    <img src="../images/physics-02.svg" alt="category" class="media-object" style="width:2rem; height: 2rem;">
+                                    <img src="../images/physics-02.svg" alt="category" class="media-object"
+                                        style="width:2rem; height: 2rem;">
                                 </div>
                             </div>
                         </div>
@@ -101,34 +103,9 @@
 
 
             </div>
-
-            <div id="Followers" class="container tab-pane fade"><br>
-                <div class="box">
-                    <div class="container">
-                        <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
-
-                
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div id="Following" class="container tab-pane fade"><br>
-                <div class="box">
-                    <div class="container">
-                        <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
-
-
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+            @include('pages.profile.followers');
+            @include('pages.profile.following');
         </div>
-
     </div>
 </div>
 @endsection

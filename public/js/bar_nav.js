@@ -557,8 +557,8 @@ function getMessage() {
             if(data=="null") 
                 user_type=null;
             else
-                user_type = data[0].type;
-                username = data[0].username;
+                user_type = data.type;
+                username = data.username;
             testIcon();
         },
         error: function (data) {
