@@ -27,13 +27,13 @@ Route::get('/404', 'StaticPages\InformationController@create404')->name('UI22');
 // Profile
 Route::post('profile', 'Profile\ProfileController@update');
 Route::post('updatepic', 'Profile\ProfileController@updateupdatePicture');
-Route::get('/profile/{username}', 'Profile\ProfileController@show');
-Route::get('profile/{username}/edit', 'Profile\ProfileController@update');
-Route::get('/{username}/settings', 'Profile\ProfileController@update');
+Route::get('profile/{username}', 'Profile\ProfileController@show');
+Route::get('profile/{username}/settings', 'Profile\ProfileController@settings');
 
 
 // Question
-Route::resource('question', 'Question\QuestionController');//TODO
+//Route::resource('question', 'Question\QuestionController');//TODO
+Route::get('/question/add', 'Question\QuestionController@create')->name('UI18');
 
 // API
 Route::put('api/cards', 'CardController@create');

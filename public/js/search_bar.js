@@ -34,7 +34,13 @@ function onLoad() {
     div_container2.appendChild(div_search_bar_div);
     div_container2.appendChild(div_search_icon_div);
     div_form.appendChild(div_container2);
+    let hidden_input = document.createElement("input");
+    hidden_input.setAttribute("type","hidden");
+    hidden_input.setAttribute("class","category-choice");
+    hidden_input.setAttribute("name","category");
+    hidden_input.setAttribute("value","all");
     form_search.appendChild(div_form);
+    form_search.appendChild(hidden_input);
     original_search_bar.appendChild(form_search);
     search_bar.innerHTML = original_search_bar.innerHTML;
     addDropEvent();
@@ -51,6 +57,8 @@ function addDropEvent() {
 function changeImageDropdown(e) {
     let src = e.srcElement.querySelector("img").getAttribute("src");
     let image = document.querySelector(".drop-menu-cat");
+    let hidden_cat= document.querySelector(".category-choice");
+    hidden_cat.setAttribute("value",e.srcElement.querySelector("img").getAttribute("alt"));
     image.setAttribute("src", src);
     image.setAttribute("value", e.srcElement.querySelector("img").getAttribute("alt"));
 }
