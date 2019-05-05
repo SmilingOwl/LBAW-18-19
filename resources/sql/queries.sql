@@ -4,15 +4,15 @@
 
 -- Obtain a member’s profile information
 SELECT username, bioDescription, points, profilePhoto, name , (
-    SELECT COUNT(*)
+    SELECT COUNT("user".id_user)
     FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)
     GROUP BY "user".id_user
 ) AS nr_questions, (
-    SELECT COUNT(*)
+    SELECT COUNT("user".id_user)
     FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)
     GROUP BY "user".id_user
 ) AS nr_answers, (
-    SELECT COUNT(*)
+    SELECT COUNT("user".id_user)
     FROM "user",answer,bestAnswer
     Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post
     GROUP BY "user".id_user
@@ -28,7 +28,8 @@ WHERE follow.following = $id_user;
 
 
 -- Obtain a member’s followers
-SELECT id_user,username , profilePhoto , points, id_rank 
+SELECT id_user,username , profilePhoto , points, id_rank , 
+(Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.follower) as rank
 FROM follow INNER JOIN "user" ON (follow.follower="user".id_user)
 WHERE follow.following = $id_user;
 
@@ -39,7 +40,8 @@ FROM follow
 WHERE follow.follower = $id_user;
 
 -- Obtain a member´s following
-SELECT id_user,username , profilePhoto , points, id_rank 
+SELECT id_user,username , profilePhoto , points, id_rank ,
+(Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.following) as rank
 FROM follow INNER JOIN "user" ON follow.following ="user".id_user
 WHERE follow.follower = $id_user;
 

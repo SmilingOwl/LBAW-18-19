@@ -55,8 +55,24 @@ class ProfileController extends Controller
      */
     public function show($username)
     {
-        $member = collect(DB::select('SELECT username, rank.name as rank, bioDescription, points, profilePhoto, name ,(SELECT COUNT(*) FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)) AS nr_questions, (SELECT COUNT(*) FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)) AS nr_answers, (SELECT COUNT(*) FROM "user",answer,bestAnswer Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post) AS nr_best_answers FROM "user", rank Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
-        return view('pages.profile.show', compact('member'));
+        $member = collect(DB::select('
+        SELECT "user".id_user as id,username, rank.name as rank, bioDescription, points, profilePhoto, name ,
+        (SELECT COUNT("user".id_user) FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)) AS nr_questions, 
+        (SELECT COUNT("user".id_user) FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)) AS nr_answers, 
+        (SELECT COUNT("user".id_user) FROM "user",answer,bestAnswer Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post) AS nr_best_answers 
+        FROM "user", rank 
+        Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
+        $followers = DB::select('
+        SELECT id_user,username , profilePhoto , points, id_rank , 
+        (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.follower) as rank
+        FROM follow INNER JOIN "user" ON (follow.follower="user".id_user)
+        WHERE follow.following = '. $member->id);
+        $following = DB::select('
+        SELECT id_user,username , profilePhoto , points, id_rank ,
+        (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.following) as rank
+        FROM follow INNER JOIN "user" ON follow.following ="user".id_user
+        WHERE follow.follower = '. $member->id);
+        return view('pages.profile.show')->with('member',$member)->with('followers',$followers)->with('followings',$following);
     }
 
        /**
@@ -218,7 +234,7 @@ class ProfileController extends Controller
     public function getType()
     {
         if(!Auth::check())return 'null';
-        $response = DB::select('select "user".username as username ,role.type as type from "user", role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user');
+        $response = collect(DB::select('select "user".username as username ,role.type as type from "user", role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user'))->first();
         return response()->json($response);
     }
 
