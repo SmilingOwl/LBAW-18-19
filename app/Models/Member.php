@@ -99,14 +99,5 @@ use App\Models\Follow;
         return $this->where('username',$username)->first();
     }
 
-    public function followers()
-    {
-        return $this->belongsToMany(Member::class, 'follow', 'following', 'follower');
-    }
-
-    public function followings()
-    {
-        return $this->belongsToMany(Member::class, 'follow', 'follower', 'following');
-    }
-
+   
 }

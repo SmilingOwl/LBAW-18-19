@@ -13,8 +13,6 @@
 <body class="grey-background">
     <main role="main" class="my-5">
 
-        @include('pages.profile.profile_card')
-
         <!-- content -->
         <section class="container">
             <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
@@ -26,7 +24,7 @@
                                
                                 <div class="title">
 
-                                    <h3>{{ $follower->name }}</h3>                                    
+                                    <h3>{{ $follower->username }}</h3>                                    
 
                                     <i class="far fa-lightbulb" style="font-size: 18px; margin-right: 5px;"
                                         data-fa-transform="up-2 grow-2"></i> {{$follower->rank}}
