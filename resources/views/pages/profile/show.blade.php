@@ -107,7 +107,7 @@
                     <div class="container">
                         <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
 
-
+                            @include('pages.profile.followers');
 
                         </div>
                     </div>

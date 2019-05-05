@@ -19,10 +19,10 @@
         <section class="container">
             <div class="row" style="margin-top: 10px; margin-bottom: 10px;">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="margin-bottom: 40px;">
-                   /** @foreach($member->followings as $following)
-                        <div onclick="location.assign('{{Route('profile', $following->username)}}');" class="list-group-item list-group-item-action flex-column align-items-start">
+                   /@foreach($member->followings as $following)
+                        
                             <div class="box-part text-center">
-                                <img class="rounded-circle followering" alt="profile_pic" src="{{$following->profile_picture}}">
+                                <img class="rounded-circle followering" alt="profile_pic" src="{{$following->profilephoto}}">
                                
                                 <div class="title">
 
@@ -33,12 +33,10 @@
                                         
                                 </div>
                         
-                                <div class="ml-auto align-self-center flex-wrap">
-                                    @include('partials.follow', ['followTarget' => $following])
-                                </div>
+                                
                             </div>
-                        </div>
-                    @endforeach**/
+        
+                    @endforeach
                 </div>
             </div>
         </section>
