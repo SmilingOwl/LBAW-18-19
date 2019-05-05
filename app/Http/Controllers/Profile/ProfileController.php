@@ -213,4 +213,10 @@ class ProfileController extends Controller
         $response = DB::select('select "user".username as username ,role.type as type from "user",role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user');
         return response()->json($response);
     }
+
+    public function delete_account(Request $request, $username){
+        $member = Member::find($username);
+        $member->delete();
+        return $member;
+    }
 }
