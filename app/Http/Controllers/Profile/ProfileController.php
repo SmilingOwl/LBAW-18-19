@@ -88,7 +88,7 @@ class ProfileController extends Controller
         ]);
         $member->username = $request['username'];
         $member->email = $request['email'];
-       // $member->bioDescription = $request['biodescription'];
+        $member->biodescription = $request['biodescription'];
         $member->save();
         return redirect()->action('Profile\ProfileController@show', $member);
     }
