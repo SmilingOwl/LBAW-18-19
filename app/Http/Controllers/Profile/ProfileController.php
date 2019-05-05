@@ -84,7 +84,7 @@ class ProfileController extends Controller
        
         ]);
         $member->username = request('username');
-        $member->bioDescription = request('bioDescription');
+        $member->bioDescription = request('biodescription');
         $member->save();
         return redirect()->route('profile', $member);
     }

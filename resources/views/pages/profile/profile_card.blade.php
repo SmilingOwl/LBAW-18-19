@@ -1,4 +1,13 @@
+@section('include')
+    
+    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/general.css')}}>
+    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/style.css')}}>
+    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/login.css')}}>
+
+    <script src={{asset('js/profile.js')}}></script>
+@endsection
 <section>
+
     <div class="jumbotron profile-jumbotron">
         <div class="container">
             <div class="row align-items-center">
@@ -11,7 +20,7 @@
                 <div class="col-md-4 text-left">
                     <h2 class="h2-adapt">{{$member->username}}
 
-                        <a href="../pages/edit_profile.html" role="button" class="btn" id="editBtn" style="max-width: 40px;">
+                        <a href={{URL::to('profile/{username}/edit')}} role="button" class="btn" id="editBtn" style="max-width: 40px;">
                             <i class="fas fa-pen"></i>
                         </a>
 
@@ -54,7 +63,7 @@
                             <div class="d-flex flex-column justify-content-around flex-wrap">
                                 <div class="d-flex p-1 stat">
                                     <div class="mx-2">
-                                        <img src="../images/points-16.svg" alt="category" style="width: 1.7em"></img>
+                                        <img src="../images/points-16.svg" alt="category" style="width: 1.7em">
                                     </div>
                                     <h6>{{$member->points}}
                                         <small>points</small>
@@ -63,7 +72,7 @@
 
                                 <div class="d-flex p-1 stat">
                                     <div class="mx-2">
-                                        <img src="../images/question-17.svg" alt="category" style="width: 1.7em"></img>
+                                        <img src="../images/question-17.svg" alt="category" style="width: 1.7em">
                                     </div>
                                     <h6>{{$member->nr_questions}}
                                         <small>questions</small>
@@ -72,7 +81,7 @@
 
                                 <div class="d-flex p-1 stat">
                                     <div class="mx-2">
-                                        <img src="../images/edit-18.svg" alt="category" style="width: 1.7em"></img>
+                                        <img src="../images/edit-18.svg" alt="category" style="width: 1.7em">
                                     </div>
                                     <h6>{{$member->nr_answers}}
                                         <small>answers</small>
@@ -81,7 +90,7 @@
 
                                 <div class="d-flex p-1 stat">
                                     <div class="mx-2">
-                                        <img src="../images/answered-13.svg" alt="category" style="width: 1.7em"></img>
+                                        <img src="../images/answered-13.svg" alt="category" style="width: 1.7em">
                                     </div>
                                     <h6>{{$member->nr_best_answers}}
                                         <small>best answers</small>

@@ -110,7 +110,7 @@ function superSmallScreen() {
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
     div_menu.innerHTML += '<a class="dropdown-item" href="./profile/' + username + '">Profile page</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="./settings.html">Settings</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="./'+ username +' /settings">Settings</a>';
     div_menu.innerHTML += '<a class="dropdown-item" href="logout">Sign out</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div_bell);

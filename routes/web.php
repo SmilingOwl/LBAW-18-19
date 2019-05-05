@@ -61,4 +61,5 @@ Route::get('/category/all', 'CategoryController@getCategories');
 
 //Profile
 Route::resource('/profile/{username}', 'Profile\ProfileController@show');
+Route::get('profile/{username}/edit', 'Profile\ProfileController@update');
 
