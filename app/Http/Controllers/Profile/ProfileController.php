@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Member;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 
 class ProfileController extends Controller
 {
@@ -64,11 +65,11 @@ class ProfileController extends Controller
      * @param  Member  $member
      * @return \Illuminate\Http\Response
      */
-    public function editProfile(Member $member)
+ /*   public function editProfile(Member $member)
     {
         return view('pages.profile.edit', compact('member'));
     }
-
+*/
 
     /**
      * Show the form for editing the specified resource.
@@ -91,13 +92,15 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $username)
     {
-        $member = Auth::user();
+       // $member = Auth::user();
+        $member = collect(DB::select('SELECT username, rank.name as rank, bioDescription, points, profilePhoto, name ,(SELECT COUNT(*) FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)) AS nr_questions, (SELECT COUNT(*) FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)) AS nr_answers, (SELECT COUNT(*) FROM "user",answer,bestAnswer Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post) AS nr_best_answers FROM "user", rank Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
         $this->validate(request(), [
        
         ]);
         $member->username = request('username');
         $member->bioDescription = request('biodescription');
         $member->save();
+        //$member->update(Input::all());
         return redirect()->route('profile', $member);
     }
 
