@@ -124,4 +124,9 @@ class QuestionController extends Controller
        
             return compact('result');
     }
+
+    public function topic($category)
+    {
+        return view('pages.question.topic');
+    }
 }

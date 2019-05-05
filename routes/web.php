@@ -29,11 +29,15 @@ Route::post('profile', 'Profile\ProfileController@update');
 Route::post('updatepic', 'Profile\ProfileController@updateupdatePicture');
 Route::get('profile/{username}', 'Profile\ProfileController@show');
 Route::get('profile/{username}/settings', 'Profile\ProfileController@settings');
+//Route::get('profile/{username}/admin', 'Profile\ProfileController@admin');//TODO
+//Route::get('profile/{username}/moderator', 'Profile\ProfileController@moderator');//TODO
 
 
 // Question
 //Route::resource('question', 'Question\QuestionController');//TODO
 Route::get('/question/add', 'Question\QuestionController@create')->name('UI18');
+Route::get('/topic/{category}', 'Question\QuestionController@topic')->name('UI18');
+
 
 // API
 Route::put('api/cards', 'CardController@create');
