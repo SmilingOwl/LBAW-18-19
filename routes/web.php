@@ -41,13 +41,6 @@ Route::get('/question/add', 'Question\QuestionController@create')->name('UI18');
 Route::get('/topic/{category}', 'Question\QuestionController@topic')->name('UI18');
 
 
-// API
-Route::put('api/cards', 'CardController@create');
-Route::delete('api/cards/{card_id}', 'CardController@delete');
-Route::put('api/cards/{card_id}/', 'ItemController@create');
-Route::post('api/item/{id}', 'ItemController@update');
-Route::delete('api/item/{id}', 'ItemController@delete');
-
 // Authentication
 
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
