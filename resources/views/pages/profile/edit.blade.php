@@ -51,6 +51,15 @@
             <div class="row" style="justify-content: center">
                 <button type="submit" class="btn btn-dark" style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Submit</button>
             </div>
+            @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
         </form>
         </div>
     </div>
