@@ -32,6 +32,7 @@ Route::put('profile/{username}/edit', 'Profile\ProfileController@update')->name(
 Route::get('profile/{username}/settings', 'Profile\ProfileController@settings');
 Route::get('profile/{username}/admin', 'Profile\ProfileController@admin');
 Route::get('profile/{username}/moderator', 'Profile\ProfileController@moderator');
+Route::delete('profile/{username}/delete', 'Profile\ProfileController@destroy');
 
 
 

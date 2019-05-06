@@ -8,6 +8,7 @@ use App\Models\Member;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
@@ -111,7 +112,7 @@ class ProfileController extends Controller
         
         $member->save();
         
-        return redirect('/profile/' . $member->username);
+        return redirect('logout');
     }
 
     /**
@@ -120,9 +121,15 @@ class ProfileController extends Controller
      * @param  int  $username
      * @return \Illuminate\Http\Response
      */
-    public function destroy($username)
+    public function destroy(Request $request,$username)
     {
-        //
+        if (Hash::check(request('password'), collect(DB::select('select password from "user" where id_user = ' . Auth::user()->id_user))->first()->password)) {
+            $member=Member::find(Auth::user()->id_user);
+            $member->deleted = true;
+            $member->save();
+            return  redirect('logout');
+        }
+        return redirect()->back()->withErrors('Wrong Password')->withInput();
     }
 
     /**
@@ -223,7 +230,7 @@ class ProfileController extends Controller
     * Redirects to the settings page
     */ 
     public function settings(){
-        return view('pages.profile.settings');  
+        return view('pages.profile.settings')->with('username',Auth::user()->username);  
     }
 
     public function getType()
