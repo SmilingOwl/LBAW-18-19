@@ -74,12 +74,16 @@ class ProfileController extends Controller
         FROM follow INNER JOIN "user" ON follow.following ="user".id_user
         WHERE follow.follower = '. $member->id);
         $questions = DB::select('
-        SELECT title, description, date
-        FROM question INNER JOIN "user" ON (question.id_user = "user".id_user)
-        GROUP BY title, description, date
+        SELECT title, description, date , contagem
+        FROM question as q1 , "user" , 
+        (SELECT comment.firstAnswer as q2_id, count(comment.secondAnswer) as contagem
+        FROM question as q2 INNER JOIN comment ON ( q2.id_question = comment.firstAnswer)
+        GROUP BY comment.firstAnswer) As subq 
+        WHERE q1.id_user = "user".id_user AND q1.id_question = q2_id
+        GROUP BY title, description, date, contagem
         ORDER BY date DESC
         LIMIT 10');
-        return view('pages.profile.show')->with('member',$member)->with('followers',$followers)->with('followings',$following);
+        return view('pages.profile.show')->with('member',$member)->with('followers',$followers)->with('followings',$following)->with('questions',$questions);
     }
 
 

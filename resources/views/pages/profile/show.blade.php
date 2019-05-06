@@ -55,7 +55,7 @@
                                     <img src="../images/answered-13.svg" alt="answered"
                                         class="media-object align-self-center column" style="width:2rem"
                                         id="catQuestion">
-                                    <p class="resultFooter align-self-center">{{ $question->getNumAnswers()->get() }}</p>
+                                    <p class="resultFooter align-self-center">{{ $question->contagem }}</p>
                                     <p class="resultFooter align-self-center">10 upvotes 2 downvotes</p>
                                     <p class="resultFooter align-self-center">{{ $question->date }}</p>
                                     <img src="../images/biology-01.svg" alt="category" class="media-object"
