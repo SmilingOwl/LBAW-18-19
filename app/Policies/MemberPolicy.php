@@ -23,4 +23,9 @@ class MemberPolicy
     public function follow(Member $user, Member $followTarget){
         return $user->id != $followTarget->id;
     }
+
+    public function delete(Member $user, Member $user2)      
+    {
+        return $user->id_user === $user2->id_user;
+    }
 }

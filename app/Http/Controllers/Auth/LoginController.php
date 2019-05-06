@@ -57,4 +57,12 @@ class LoginController extends Controller
         Auth::logout();
         return redirect()->back();
     }
+
+    public function authenticate()
+    {
+        if (Auth::attempt(['email' => $email, 'password' => $password , 'deleted' => false] )) {
+            // Authentication passed...
+            return redirect()->intended('dashboard');
+        }
+    }
 }
