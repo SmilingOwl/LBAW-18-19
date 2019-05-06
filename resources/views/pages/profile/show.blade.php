@@ -40,36 +40,36 @@
         </ul>
         <div class="tab-content">
 
+
             <div id="Questions" class="container tab-pane active"><br>
                 <div class="container pb-3">
-                @foreach($questions as $question)
                     <div class="row-lg-4 row-md-4 row-sm-4 row-xs-4">
                         <div class="media profile_result">
                             <div class="media-left d-flex">
                             </div>
                             <div class="media-body">
                                 <div class="container">
-                                    <a class="question" href="#">{{ $question->title }}</a>
+                                    <a class="question" href="#">The presence of three sex chromosomes in a persons
+                                        cells is
+                                        best
+                                        explained by what cell process going wrong?​</a>
                                 </div>
                                 <div class="row footerResult">
                                     <img src="../images/answered-13.svg" alt="answered"
                                         class="media-object align-self-center column" style="width:2rem"
                                         id="catQuestion">
-                                    <p class="resultFooter align-self-center">{{ $question->getNumAnswers()->get() }}</p>
+                                    <p class="resultFooter align-self-center">3 answers</p>
                                     <p class="resultFooter align-self-center">10 upvotes 2 downvotes</p>
-                                    <p class="resultFooter align-self-center">{{ $question->date }}</p>
-                                    <img src="../images/biology-01.svg" alt="category" class="media-object"
+                                    <p class="resultFooter align-self-center">10 Jan 2019</p>
+                                    <img src="../images/biology-01.svg"  alt="category" class="media-object"
                                         style="width:2rem; height: 2rem;">
                                 </div>
                             </div>
                         </div>
                     </div>
-                 @endforeach
-                    
                 </div>
-
-
             </div>
+
             @include('pages.profile.followers');
             @include('pages.profile.following');
         </div>
