@@ -101,16 +101,19 @@ class ProfileController extends Controller
      * @param  int  $username
      * @return \Illuminate\Http\Response
      */
-    public function update()
+    public function update(Request $request)
     {
+        $request->validate([
+            'username' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:user',
+            'password' => 'required|string|min:6|confirmed',
+        ]);
         $member =Member::find(Auth::user()->id_user);
        
-        $this->validate(request(), [
-    
-        ]);
         $member->username = request('username');
         $member->email = request('email');
         $member->biodescription = request('biodescription');
+        $member->password = bcrypt(request('password'));
         
         $member->save();
         
