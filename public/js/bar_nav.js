@@ -178,8 +178,8 @@ function hyperSmallScreenUnLogged() {
     div.innerHTML += '<button type="button" class="btn dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user" style="margin-right:5px;"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="login">Sign In</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="register">Register</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/login">Sign In</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/register">Register</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div);
 }
@@ -193,8 +193,8 @@ function superSmallScreenUnLogged() {
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i></button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="login">Sign In</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="register">Register</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/login">Sign In</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/register">Register</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div);
 }
@@ -208,8 +208,8 @@ function smallMScreenUnLogged() {
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="login">Sign In</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="register">Register</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/login">Sign In</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/register">Register</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div);
 
@@ -223,8 +223,8 @@ function smallScreenUnLogged() {
     div.innerHTML += '<button type="button" class="btn   dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-user"></i> Profile </button>';
     let div_menu = document.createElement("div");
     div_menu.setAttribute("class", "dropdown-menu dropdown-menu-right");
-    div_menu.innerHTML += '<a class="dropdown-item" href="login">Sign In</a>';
-    div_menu.innerHTML += '<a class="dropdown-item" href="register">Register</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/login">Sign In</a>';
+    div_menu.innerHTML += '<a class="dropdown-item" href="/register">Register</a>';
     div.appendChild(div_menu);
     profile_bar.appendChild(div);
 }
@@ -483,9 +483,9 @@ function testIconUnLogged() {
         img_logo.setAttribute("style", "max-width: 50px;");
         addDropEvent();
     } else {
-        profile_bar.innerHTML = '<a href="login" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
-        profile_bar.innerHTML += '<a href="login" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Sign in</a>';
-        profile_bar.innerHTML += '<a href="register" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Register</a>';
+        profile_bar.innerHTML = '<a href="/login" class="ask-button btn btn-dark" role="button" style="border-radius:0.3em;"><strong>Ask a Question</strong></a>';
+        profile_bar.innerHTML += '<a href="/login" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Sign in</a>';
+        profile_bar.innerHTML += '<a href="/register" class="ask-button btn" role="button" style="border-radius:0.3em;"><i class="fa fa-fw fa-user"></i> Register</a>';
         img_logo.setAttribute("src", "/images/logo.png");
         img_logo.setAttribute("style", "max-width: 160px;");
         search_bar.innerHTML = original_search_bar.innerHTML;
