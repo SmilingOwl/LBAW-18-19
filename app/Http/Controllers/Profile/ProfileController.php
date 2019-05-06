@@ -72,6 +72,12 @@ class ProfileController extends Controller
         (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.following) as rank
         FROM follow INNER JOIN "user" ON follow.following ="user".id_user
         WHERE follow.follower = '. $member->id);
+        $questions = DB::select('
+        SELECT title, description, date
+        FROM question INNER JOIN "user" ON (question.id_user = "user".id_user)
+        GROUP BY title, description, date
+        ORDER BY date DESC
+        LIMIT 10');
         return view('pages.profile.show')->with('member',$member)->with('followers',$followers)->with('followings',$following);
     }
 
