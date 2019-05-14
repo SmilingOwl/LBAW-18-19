@@ -35,11 +35,14 @@ Route::get('profile/{username}/moderator', 'Profile\ProfileController@moderator'
 Route::delete('profile/{username}/delete', 'Profile\ProfileController@destroy');
 
 
-
 // Question
-//Route::resource('question', 'Question\QuestionController');//TODO
-Route::get('/question/add', 'Question\QuestionController@create')->name('UI18');
-Route::get('/topic/{category}', 'Question\QuestionController@topic')->name('UI18');
+Route::get('question/add', 'Question\QuestionController@showCreate');
+Route::put('questions/add', 'Question\QuestionController@create')->name('question.create');
+Route::get('questions/{id_question}', 'Question\QuestionController@show');
+Route::delete('questions/{id_question}/delete', 'Question\QuestionController@destroy');
+Route::get('questions/{id_question}/edit', 'Question\QuestionController@edit');
+Route::put('questions/{id_question}/edit', 'Question\QuestionController@update');
+Route::get('topic/{category}', 'Question\QuestionController@topic');
 
 
 // Authentication

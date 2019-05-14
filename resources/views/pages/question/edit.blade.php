@@ -98,12 +98,10 @@
         <div class="col-md-1"></div>
 
         <div class="col-md-10">
-            <form method="POST" action="{{route('question.create')}}">
-                {{ method_field('PUT') }}
-                {{ csrf_field() }}
+            <form class="needs-validation" action="../pages/questionDetail.html" method="get" id="form-ask" novalidate>
                 <div class="form-group col-md-12 mb-5">
                     <input class="form-control form-control-lg question_line" type="text" name="question"
-                        placeholder="Ask away!" required>
+                    value="{{$question->title}}" required>
                         <div class="invalid-feedback">
                             There needs to be a title
                         </div>
@@ -111,14 +109,14 @@
                 </div>
 
                 <div class="form-group col-md-12 mb-5">
-                    <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" placeholder="Describe your doubts here!"
+                    <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1"  value="{{$question->description}}" 
                         rows="5" required></textarea>
                         <div class="invalid-feedback">
                             There needs to be a description
                         </div>
                 </div>
 
-                <div class="form-group col-md-12">
+               <!-- <div class="form-group col-md-12">
                     <h6>Upload images for your question</h6>
                     <div class="input-group">
                         <span class="input-group-btn">
@@ -128,18 +126,14 @@
                         </span>
                         <input type="text" class="form-control" readonly>
                     </div>
-                </div>
-
-                <div class="col-md-12 text-center">
-                    <button type="submit" value="Submit" class="btn btn-dark submit" style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Post</button>
-                </div>
-
+                </div>-->
+                
             </form>
+
+
+            <div class="col-md-12 text-center">
+                <button type="submit" form="form-ask" value="Submit" class="btn btn-dark submit" style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Edit</a>
+            </div>
 
         </div>
     </div>
-
-
-</div>
-
-@endsection
