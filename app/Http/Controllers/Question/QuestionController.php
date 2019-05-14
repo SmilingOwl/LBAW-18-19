@@ -36,7 +36,7 @@ class QuestionController extends Controller
     {
         $this->validate([
             'title' => 'required',
-            'category' => 'required',
+            //'category' => 'required',
         ]);
           
         $question = new Question();
@@ -47,10 +47,7 @@ class QuestionController extends Controller
 
         request()->user()->questions()->save($question);
 
-        
-        session()->flash('message','Your question has now been published');
-       
-        
+        session()->flash('message','Your question has now been published');        
     }
 
 

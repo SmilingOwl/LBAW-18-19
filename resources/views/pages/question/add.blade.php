@@ -98,8 +98,8 @@
         <div class="col-md-1"></div>
 
         <div class="col-md-10">
-            <form method="POST" action="{{Route('question.create')}}">
-                {{ method_field('POST') }}
+            <form method="POST" action="{{route('question.create')}}">
+                {{ method_field('PUT') }}
                 {{ csrf_field() }}
                 <div class="form-group col-md-12 mb-5">
                     <input class="form-control form-control-lg question_line" type="text" name="question"
@@ -129,12 +129,12 @@
                         <input type="text" class="form-control" readonly>
                     </div>
                 </div>
+
+                <div class="col-md-12 text-center">
+                    <button type="submit" value="Submit" class="btn btn-dark submit" style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Post</button>
+                </div>
+
             </form>
-
-
-            <div class="col-md-12 text-center">
-                <button type="submit" form="form-ask" value="Submit" class="btn btn-dark submit" style="width: 9em; margin-top: 20px; margin-bottom: 20px;">Post</a>
-            </div>
 
         </div>
     </div>
