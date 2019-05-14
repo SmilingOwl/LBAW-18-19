@@ -98,7 +98,9 @@
         <div class="col-md-1"></div>
 
         <div class="col-md-10">
-            <form class="needs-validation" action="../pages/questionDetail.html" method="get" id="form-ask" novalidate>
+            <form method="POST" action="{{Route('question.create')}}">
+                {{ method_field('POST') }}
+                {{ csrf_field() }}
                 <div class="form-group col-md-12 mb-5">
                     <input class="form-control form-control-lg question_line" type="text" name="question"
                         placeholder="Ask away!" required>

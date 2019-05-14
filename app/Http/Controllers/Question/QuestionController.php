@@ -34,7 +34,7 @@ class QuestionController extends Controller
      */
     public function create(Request $request)
     {
-        $this->validate(request(), [
+        $this->validate([
             'title' => 'required',
             'category' => 'required',
         ]);
@@ -49,7 +49,8 @@ class QuestionController extends Controller
 
         
         session()->flash('message','Your question has now been published');
-        return redirect()->route('question', $question); 
+       
+        
     }
 
 
@@ -59,11 +60,12 @@ class QuestionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id_question)
+    public function showCreate()
     {
-        return view('pages.question.show', compact($id_question));
+        return view('pages.question.add');
     }
 
+    
     /**
      * Show the form for editing the specified resource.
      *
@@ -82,7 +84,8 @@ class QuestionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Question $question)
+
+     public function update(Question $question)
     {
         $this->authorize('update', $question);
         
@@ -98,7 +101,7 @@ class QuestionController extends Controller
 
         $question->save();
         
-        return redirect('');
+        return redirect('pages.question.show');
         }
 
     /**
@@ -109,17 +112,16 @@ class QuestionController extends Controller
      */
     public function destroy(Question $question)
     {
-        $this->authorize('delete', $question);
-        $result = false;
-       
-        if($question->delete())
-            $result = true;
-       
-            return compact('result');
+        //TODO
+        $question= Question::find();
+        $question->deleted = true;
+        $question->save();
+        return redirect()->back()->withErrors('Wrong Password')->withInput();
     }
 
     public function topic($category)
     {
+
         return view('pages.question.topic');
     }
 }
