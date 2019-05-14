@@ -3,15 +3,14 @@
 namespace App\Http\Controllers\Question;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Question;
+use App\Models\Question;
 
-class QuestionController extends Controller
+class QuestionController
 {
 
     public function __construct()
     {
-        $this->middleware('auth')->except(['get', 'getAnswers']);
+       // $this->middleware('auth')->except(['get', 'getAnswers']);
     }
 
     /**
@@ -29,33 +28,26 @@ class QuestionController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('pages.question.add');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function create(Request $request)
     {
         $this->validate(request(), [
             'title' => 'required',
+            'category' => 'required',
         ]);
           
         $question = new Question();
         $question->title = request('title');
+        $question->description = request('description');
         $question->date = now();
         $question->category = request('category');
+
         request()->user()->questions()->save($question);
 
         
         session()->flash('message','Your question has now been published');
-        return redirect()->route('question', $question);
+        return redirect()->route('question', $question); 
     }
+
 
     /**
      * Display the specified resource.
@@ -74,9 +66,9 @@ class QuestionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($question)
     {
-        //
+        return view('pages.question.edit');
     }
 
     /**
@@ -90,23 +82,20 @@ class QuestionController extends Controller
     {
         $this->authorize('update', $question);
         
-        $this->validate(request(), [
+        $this->validate([
             'title' => 'required',
             'description' => 'required',
             'category' => 'required'
         ]);
+
         $question->title = request('title');
         $question->content = request('description');
         $question->category = request('name');
 
         $question->save();
-        $response = [
-            'title' => $question->title,
-            'description' => $question->description,
-            'category' => $question->name
-        ];
-        return $response;
-    }
+        
+        return redirect('');
+        }
 
     /**
      * Remove the specified resource from storage.
