@@ -110,7 +110,7 @@ class ProfileController extends Controller
     {
         $request->validate([
             'username' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:user',
+            'email' => 'required|string|email|max:255|unique:user,email,'.Auth::user()->id_user.',id_user',
             'password' => 'required|string|min:6|confirmed',
         ]);
         $member =Member::find(Auth::user()->id_user);

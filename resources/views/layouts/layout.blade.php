@@ -2,20 +2,22 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
+    <script>
+        @if (Auth::check())
+            let user_type = "{{session('type')->type}}";
+            let username = "{{session('type')->username}}"
+        
+        @else
+            let user_type = null
+            
+        @endif
+    </script>
     @include('includes')
     @yield('include')
 
 </head>
 
 <body>
-    @if (Auth::check())
-        @if (Auth::user()['username'])
-            
-        @endif
-        <input type="hidden" value="logged" id="type">
-    @else
-        <input type="hidden" value="unlogged" id="type">
-    @endif
 
     @include('layouts.nav_bar')
 

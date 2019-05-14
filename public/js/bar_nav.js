@@ -4,9 +4,6 @@ let search_bar;
 let grid_bar;
 let original_search_bar;
 let user = null;
-let username;
-
-
 
 window.addEventListener("load", onLoad);
 window.addEventListener("resize", testIcon);
@@ -28,9 +25,13 @@ https: //getbootstrap.com/docs/4.0/components/forms/#validation
     }, false);
 
 function onLoad() {
+    img_logo = document.querySelector(".logo-image");
+    profile_bar = document.querySelector(".info-user");
+    search_bar = document.querySelector(".ask-search-bar");
+    grid_bar = document.querySelector(".grid-bar");
+    showCategories();
+    testIcon();
     getCategories();
-    getMessage();
-
 
 }
 
@@ -542,30 +543,6 @@ function testIconModerator() {
         addDropEvent();
     }
 }
-let user_type;
-
-function getMessage() {
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-    $.ajax({
-        method: 'get',
-        url: '/auth/info',
-        success: function (data) {
-            if(data=="null") 
-                user_type=null;
-            else
-                user_type = data.type;
-                username = data.username;
-            testIcon();
-        },
-        error: function (data) {
-            console.log("server error");
-        }
-    });
-}
 
 function getCategories() {
     $.ajaxSetup({
@@ -577,7 +554,7 @@ function getCategories() {
         method: 'get',
         url: '/category/all',
         success: function (data) {
-            showCategories(data);
+            addCat(data);
         },
         error: function (data) {
             console.log("server error");
@@ -585,15 +562,23 @@ function getCategories() {
     });
 }
 
-function showCategories(info) {
-    img_logo = document.querySelector(".logo-image");
-    profile_bar = document.querySelector(".info-user");
-    search_bar = document.querySelector(".ask-search-bar");
-    grid_bar = document.querySelector(".grid-bar");
+function addCat(info) {
+    let drop_down = document.querySelector(".dropdown-menu");
+    for (let i = 0; i < info.length; i++) {
+        let name = info[i].name.charAt(0).toUpperCase() + info[i].name.slice(1)
+        drop_down.innerHTML += '<a class="dropdown-item drop-cat" ><img src="/images/' + info[i].icon + '" class="rounded dropdown-image-cat" alt="' + name + '"> ' + name + '</a>';
+    }
+    addDropEvent();
+}
+
+
+function showCategories() {
     original_search_bar = document.createElement("div");
     original_search_bar.setAttribute("class", "ask-search-bar");
     let form_search = document.querySelector(".search-bar-form");
+    let token = document.querySelector(".search-bar-form > input");
     form_search.innerHTML="";
+    form_search.appendChild(token);
     let div_form = document.createElement("div");
     div_form.setAttribute("class", "form-control form-control-lg search-container");
     let div_container2 = document.createElement("div");
@@ -604,10 +589,6 @@ function showCategories(info) {
     let div_group_drop_down = document.createElement("div");
     div_group_drop_down.setAttribute("class", "dropdown-menu");
     div_group_drop_down.innerHTML = '<a class="dropdown-item drop-cat" ><img src="/images/icon-14.svg" class="rounded dropdown-image-cat" alt="All"> All</a>';
-    for (let i = 0; i < info.length; i++) {
-        let name = info[i].name.charAt(0).toUpperCase() + info[i].name.slice(1)
-        div_group_drop_down.innerHTML += '<a class="dropdown-item drop-cat" ><img src="/images/' + info[i].icon + '" class="rounded dropdown-image-cat" alt="' + name + '"> ' + name + '</a>';
-    }
     div_search_bar_cat.appendChild(div_group_drop_down);
     let div_search_bar_div = document.createElement("div");
     div_search_bar_div.setAttribute("class", "search-bar-div");

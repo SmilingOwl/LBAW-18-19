@@ -8,6 +8,8 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Member;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\ValidationException;
 
 class LoginController extends Controller
 {
@@ -24,13 +26,17 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    /**
-     * Where to redirect users after login.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/';
 
+    
+    public function redirectTo()
+    {  
+        if(!Auth::check())
+            $type='null';
+        else
+            $type = collect(DB::select('select "user".username as username ,role.type as type from "user", role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user'))->first();
+        session(['type' => $type]);
+        return '/topic/all';
+    }
     /**
      * Create a new controller instance.
      *
@@ -54,18 +60,10 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
+        session()->forget('type');
         Auth::logout();
         return redirect()->back();
     }
-
-    public function authenticate()
-    {
-        if (Auth::attempt(['email' => $email, 'password' => $password , 'deleted' => false] )) {
-            // Authentication passed...
-            return redirect()->intended('dashboard');
-        }
-    }
-
     public function login(Request $request)
     {
         $this->validateLogin($request);
@@ -78,9 +76,15 @@ class LoginController extends Controller
 
             return $this->sendLockoutResponse($request);
         }
+        $user = Member::where('username',$request->username)->first();
 
-        if ($this->attemptLogin($request) && !Member::where('username',Auth::user()->username)->first()->deleted) {
+        if($user->deleted || $user->removed)
+        {
+            $this->incrementLoginAttempts($request);
+            return $this->sendFailedLoginRemoved($request);
+        }
 
+        if ($this->attemptLogin($request)) {
             return $this->sendLoginResponse($request);
         }
 
@@ -90,5 +94,21 @@ class LoginController extends Controller
         $this->incrementLoginAttempts($request);
 
         return $this->sendFailedLoginResponse($request);
+    }
+
+    
+    /**
+     * Get the failed login removed response instance.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws ValidationException
+     */
+    protected function sendFailedLoginRemoved(Request $request)
+    {
+        throw ValidationException::withMessages([
+            $this->username() => [trans('auth.removed')],
+        ]);
     }
 }
