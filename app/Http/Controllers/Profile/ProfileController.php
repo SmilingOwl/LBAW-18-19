@@ -3,13 +3,14 @@
 namespace App\Http\Controllers\Profile;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use App\Models\Member;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Hash;
 
-class ProfileController
+class ProfileController extends Controller
 {
 
     public function __construct(){
@@ -62,19 +63,16 @@ class ProfileController
         (SELECT COUNT("user".id_user) FROM "user",answer,bestAnswer Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post) AS nr_best_answers 
         FROM "user", rank 
         Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
-        
         $followers = DB::select('
         SELECT id_user,username , profilePhoto , points, id_rank , 
         (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.follower) as rank
         FROM follow INNER JOIN "user" ON (follow.follower="user".id_user)
         WHERE follow.following = '. $member->id);
-        
         $following = DB::select('
         SELECT id_user,username , profilePhoto , points, id_rank ,
         (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.following) as rank
         FROM follow INNER JOIN "user" ON follow.following ="user".id_user
         WHERE follow.follower = '. $member->id);
-        
         $questions = DB::select('
         SELECT title, description, date , contagem
         FROM question as q1 , "user" , 

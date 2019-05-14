@@ -3,14 +3,18 @@
 namespace App\Http\Controllers\Question;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\URL;
 use App\Models\Question;
 
-class QuestionController
+class QuestionController extends Controller 
 {
 
     public function __construct()
     {
-       // $this->middleware('auth')->except(['get', 'getAnswers']);
+       $this->middleware('auth')->except(['get', 'getAnswers']);
     }
 
     /**
@@ -55,9 +59,9 @@ class QuestionController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id_question)
     {
-        return view('pages.question.show', compact('question'));
+        return view('pages.question.show', compact($id_question));
     }
 
     /**
@@ -66,7 +70,7 @@ class QuestionController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($question)
+    public function edit($id_question)
     {
         return view('pages.question.edit');
     }
