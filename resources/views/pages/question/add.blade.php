@@ -20,73 +20,74 @@
     <div class="row cat-row" style="font-size:100px;">
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Art">
-                <img src="../images/art-06.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/art-06.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Biology">
-                <img src="../images/biology-01.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/biology-01.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
 
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Business">
-                <img src="../images/business-07.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/business-07.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
 
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Chemistry">
-                <img src="../images/chemistry-03.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/chemistry-03.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
 
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Geology">
-                <img src="../images/geology-10.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/geology-10.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="History">
-                <img src="../images/history-08.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/history-08.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
 
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Math">
-                <img src="../images/maths-12.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/maths-12.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
 
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Medicine">
-                <img src="../images/health-04.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/health-04.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
 
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Linguistics">
-                <img src="../images/linguistics-09.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/linguistics-09.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Physics">
-                <img src="../images/physics-02.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/physics-02.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
 
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Psychology">
-                <img src="../images/psychology-11.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src = {{asset('images/psychology-11.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
 
         </div>
         <div class="col-sm-1 col-2 div-cat">
             <a href="#" data-toggle="tooltip" title="Technology">
-                <img src="../images/tech-05.svg" alt="categories" class="mx-auto d-block img-fluid rounded image">
+                <img src  = {{asset('images/tech-05.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
 
         </div>
+
     </div>
 
 </div>
