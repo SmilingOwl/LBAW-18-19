@@ -102,7 +102,7 @@
                 {{ method_field('PUT') }}
                 {{ csrf_field() }}
                 <div class="form-group col-md-12 mb-5">
-                    <input class="form-control form-control-lg question_line" type="text" name="question"
+                    <input class="form-control form-control-lg question_line" type="text" name="title"
                         placeholder="Ask away!" required>
                         <div class="invalid-feedback">
                             There needs to be a title
@@ -111,8 +111,7 @@
                 </div>
 
                 <div class="form-group col-md-12 mb-5">
-                    <textarea class="form-control form-control-lg" id="exampleFormControlTextarea1" placeholder="Describe your doubts here!"
-                        rows="5" required></textarea>
+                    <input type="text" name="description" class="form-control form-control-lg" placeholder="Describe your doubts here!" required>
                         <div class="invalid-feedback">
                             There needs to be a description
                         </div>

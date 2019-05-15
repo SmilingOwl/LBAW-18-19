@@ -1,5 +1,5 @@
 <?php
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -18,6 +18,7 @@ use Illuminate\Database\Eloquent\Model;
 class Question extends Model
 {
     public $timestamps  = false;
+    protected $primaryKey= 'id_question';
 
     /**
      * The table associated with the model.
@@ -29,7 +30,7 @@ class Question extends Model
     /**
      * @var array
      */
-    protected $fillable = ['id_user', 'title', 'description', 'date', 'deleted', 'photo', 'search'];
+    protected $fillable = ['id_user', 'title', 'description', 'deleted', 'photo', 'id_category'];
     
     /**
      * Queries

@@ -34,7 +34,7 @@ class QuestionController extends Controller
      */
     public function create(Request $request)
     {
-        $this->validate([
+        $request->validate([
             'title' => 'required',
             //'category' => 'required',
         ]);
@@ -42,12 +42,10 @@ class QuestionController extends Controller
         $question = new Question();
         $question->title = request('title');
         $question->description = request('description');
-        $question->date = now();
-        $question->category = request('category');
+        $question->id_category = 2;
+        $question->id_user = Auth::user()->id_user;
 
-        request()->user()->questions()->save($question);
-
-        session()->flash('message','Your question has now been published');        
+        $question->save();      
     }
 
 
