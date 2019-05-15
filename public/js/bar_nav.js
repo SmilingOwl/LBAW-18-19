@@ -576,7 +576,11 @@ function showNotifications(data) {
     let label = document.querySelector(".notification-label");
     let dropdown = document.querySelector(".notification-dropdown");
     if(data.length==0)
+    {
+        dropdown.innerHTML="<span>No notifications</span>";
         label.innerHTML="";
+        return ;
+    }
     else
         label.innerHTML=data.length;
     dropdown.innerHTML="";
