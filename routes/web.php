@@ -38,10 +38,10 @@ Route::delete('profile/{username}/delete', 'Profile\ProfileController@destroy');
 // Question
 Route::get('question/add', 'Question\QuestionController@showCreate');
 Route::put('questions/add', 'Question\QuestionController@create')->name('question.create');
-Route::get('questions/{id_question}', 'Question\QuestionController@show');
+Route::get('questions/{id_question}', 'Question\QuestionController@show')->name('questions.show');
 Route::delete('questions/{id_question}/delete', 'Question\QuestionController@destroy');
 Route::get('questions/{id_question}/edit', 'Question\QuestionController@edit');
-Route::put('questions/{id_question}/edit', 'Question\QuestionController@update');
+Route::put('questions/{id_question}/edit', 'Question\QuestionController@update')->name('question.update');
 Route::get('topic/{category}', 'Question\QuestionController@topic');
 
 

@@ -45,7 +45,9 @@ class QuestionController extends Controller
         $question->id_category = 2;
         $question->id_user = Auth::user()->id_user;
 
-        $question->save();      
+        $id_question = $question->save(); 
+        
+       return view('pages.question.show', compact($id_question));
     }
 
 
@@ -69,7 +71,9 @@ class QuestionController extends Controller
      */
     public function edit($id_question)
     {
-        return view('pages.question.edit');
+        $question = collect(DB::select('SELECT id_question, title, description, "date", votes, photo, deleted, id_category, id_user FROM question WHERE id_question = \''. $id_question .'\''))->first();
+
+        return view('pages.question.edit')->with('question', $question);
     }
 
     /**
@@ -80,19 +84,20 @@ class QuestionController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function update(Question $question)
-    {
-        $this->authorize('update', $question);
+     public function update(Request $request, $id_question)
+    {      
         
-        $this->validate([
+        $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'category' => 'required'
+            //'category' => 'required'
         ]);
+        
+        $question = Question::find($id_question);
 
         $question->title = request('title');
-        $question->content = request('description');
-        $question->category = request('name');
+        $question->description = request('description');
+       // $question->category = request('name');
 
         $question->save();
         
@@ -122,6 +127,8 @@ class QuestionController extends Controller
 
     public function show($id_question)
     {
-        return 'ola';//TODO
+        $question = collect(DB::select('SELECT id_question, title, description, "date", votes, photo, deleted, id_category, id_user FROM question WHERE id_question = \''. $id_question .'\''))->first();
+
+        return view('pages.question.show')->with('question', $question);
     }
 }
