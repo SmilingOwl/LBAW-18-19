@@ -127,6 +127,6 @@ class QuestionController extends Controller
 
     public function show($id_question)
     {
-        //todo
+        return view('pages.question.show');
     }
 }
