@@ -45,7 +45,9 @@ class QuestionController extends Controller
         $question->id_category = 2;
         $question->id_user = Auth::user()->id_user;
 
-        $question->save();      
+        $id_question = $question->save(); 
+        
+       return view('pages.question.show', compact($id_question));
     }
 
 
@@ -81,13 +83,11 @@ class QuestionController extends Controller
      */
 
      public function update(Question $question)
-    {
-        $this->authorize('update', $question);
-        
-        $this->validate([
+    {      
+        $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'category' => 'required'
+            //'category' => 'required'
         ]);
 
         $question->title = request('title');
@@ -122,6 +122,6 @@ class QuestionController extends Controller
 
     public function show($id_question)
     {
-        return 'ola';//TODO
+        //todo
     }
 }

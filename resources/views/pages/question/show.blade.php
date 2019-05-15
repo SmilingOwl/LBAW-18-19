@@ -9,5 +9,5 @@
     <script src={{asset('js/profile.js')}}></script>
 @endsection
 @section('content')
-    ola
+    
 @endsection
