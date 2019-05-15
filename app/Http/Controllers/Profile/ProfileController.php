@@ -135,7 +135,7 @@ class ProfileController extends Controller
             'email' => 'required|string|email|max:255|unique:user,email,'.Auth::user()->id_user.',id_user',
             'password' => 'required|string|min:6|confirmed',
         ]);
-        $member =Member::find(Auth::user()->id_user);
+        $member = Member::find(Auth::user()->id_user);
        
         $member->username = request('username');
         $member->email = request('email');

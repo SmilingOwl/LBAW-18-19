@@ -84,17 +84,20 @@ class QuestionController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function update(Question $question)
+     public function update(Request $request, $id_question)
     {      
+        
         $request->validate([
             'title' => 'required',
             'description' => 'required',
             //'category' => 'required'
         ]);
+        
+        $question = Question::find($id_question);
 
         $question->title = request('title');
-        $question->content = request('description');
-        $question->category = request('name');
+        $question->description = request('description');
+       // $question->category = request('name');
 
         $question->save();
         
