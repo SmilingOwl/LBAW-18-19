@@ -3,22 +3,24 @@
 -----------------------------------------
 
 -- Obtain a member’s profile information
-SELECT username, bioDescription, points, profilePhoto, name , (
-    SELECT COUNT("user".id_user)
+SELECT "user".id_user as id,username, rank.name as rank,username, bioDescription, points, profilePhoto, name , (
+    SELECT COUNT(question.id_question)
     FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)
+    WHERE "user".username=$username
     GROUP BY "user".id_user
 ) AS nr_questions, (
-    SELECT COUNT("user".id_user)
+    SELECT COUNT(answer.id_answer)
     FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)
+    WHERE "user".username=$username
     GROUP BY "user".id_user
 ) AS nr_answers, (
-    SELECT COUNT("user".id_user)
+    SELECT COUNT(bestAnswer.id_bestAnswer)
     FROM "user",answer,bestAnswer
-    Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post
+    Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post AND "user".username=$username
     GROUP BY "user".id_user
 ) AS nr_best_answers
 FROM "user", rank
-Where  "user".id_rank=rank.id_rank AND "user".id_user = $id_user; 
+Where  "user".id_rank=rank.id_rank AND "user".username = $username; 
 
 
 -- Obtain a member´s number of followers 
@@ -121,6 +123,19 @@ FROM question
 WHERE search @@ plainto_tsquery('english',$search) AND question.deleted = false
 ORDER BY ts_rank(search,plainto_tsquery('english',$search)) DESC
 LIMIT 10;
+
+--Preview of questions of a user
+SELECT question.id_question as id, question.title as title, question."date" as "date", question.votes as votes, question.deleted as deleted , count(answer.id_answer) as contagem, 
+(
+    SELECT count(bestAnswer.id_bestAnswer) as hasBest
+    FROM answer INNER JOIN bestAnswer ON ( answer.id_answer = bestAnswer.id_bestAnswer)
+    WHERE answer.id_question = question.id_question
+) as hasBest,question.icon as catIcon
+FROM (question INNER JOIN category ON (question.id_category = category.id_category)) as question INNER JOIN answer ON (question.id_question = answer.id_question) 
+WHERE question.id_user = $id_user
+GROUP BY question.id_question, question.icon
+ORDER BY question."date" DESC
+LIMIT 10
 
 
 -----------------------------------------

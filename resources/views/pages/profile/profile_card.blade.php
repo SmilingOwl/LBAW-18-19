@@ -19,10 +19,11 @@
 
                 <div class="col-md-4 text-left">
                     <h2 class="h2-adapt">{{$member->username}}
-
+                        @if (Auth::user()->username === $member->username)
                         <a href={{URL::to('profile/' .$member->username .'/edit')}} role="button" class="btn" id="editBtn" style="max-width: 40px;">
                             <i class="fas fa-pen"></i>
-                        </a>
+                        </a> 
+                        @endif
 
                         <span class="fa-layers fa-fw">
                             <i style="font-family: 'Prompt', sans-serif; font-size: 18px;">{{$member->rank}}</i>
@@ -38,15 +39,30 @@
                         <div class="d-flex justify-content-sm-start">
 
                             <div>
-                                <h5>100
-                                    <small style="margin-right: 30px;">followers</small>
+                                <h5>
+                                    <?php $follower_number=count($followers) ?>
+                                    @if ($follower_number===1)
+                                        {{$follower_number}}
+                                        <small style="margin-right: 30px;">follower</small>
+                                    @else
+                                        {{$follower_number}}
+                                        <small style="margin-right: 30px;">followers</small>
+                                    @endif
                                 </h5>
                             </div>
 
 
                             <div>
-                                <h5 style="margin-left: 30px;">70
-                                    <small> following</small>
+                                <h5 style="margin-left: 30px;">
+                                    
+                                    <?php $following_number=count($followings) ?>
+                                    @if ($following_number===1)
+                                        {{$following_number}}
+                                        <small> following</small>
+                                    @else
+                                        {{$following_number}}
+                                        <small> followings</small>
+                                    @endif
                                 </h5>
                             </div>
 
@@ -74,8 +90,17 @@
                                     <div class="mx-2">
                                         <img src="../images/question-17.svg" alt="category" style="width: 1.7em">
                                     </div>
-                                    <h6>{{$member->nr_questions}}
-                                        <small>questions</small>
+                                    <h6>
+                                        @if (is_null($member->nr_questions))
+                                            0
+                                            <small>questions</small>
+                                        @elseif ($member->nr_questions === 1)
+                                            {{$member->nr_questions}}
+                                            <small>question</small>
+                                        @else
+                                            {{$member->nr_questions}}
+                                            <small>questions</small>
+                                        @endif
                                     </h6>
                                 </div>
 
@@ -83,8 +108,17 @@
                                     <div class="mx-2">
                                         <img src="../images/edit-18.svg" alt="category" style="width: 1.7em">
                                     </div>
-                                    <h6>{{$member->nr_answers}}
-                                        <small>answers</small>
+                                    <h6>
+                                        @if (is_null($member->nr_answers))
+                                            0
+                                            <small>answers</small>
+                                        @elseif ($member->nr_answers === 1)
+                                            {{$member->nr_answers}}
+                                            <small>answer</small>
+                                        @else
+                                            {{$member->nr_answers}}
+                                            <small>answers</small>
+                                        @endif
                                     </h6>
                                 </div>
 
@@ -92,8 +126,17 @@
                                     <div class="mx-2">
                                         <img src="../images/answered-13.svg" alt="category" style="width: 1.7em">
                                     </div>
-                                    <h6>{{$member->nr_best_answers}}
-                                        <small>best answers</small>
+                                    <h6>
+                                        @if (is_null($member->nr_best_answers))
+                                            0
+                                            <small>best answers</small>
+                                        @elseif ($member->nr_best_answers === 1)
+                                            {{$member->nr_best_answers}}
+                                            <small>best answer</small>
+                                        @else
+                                            {{$member->nr_best_answers}}
+                                            <small>best answers</small>
+                                        @endif
                                     </h6>
                                 </div>
 

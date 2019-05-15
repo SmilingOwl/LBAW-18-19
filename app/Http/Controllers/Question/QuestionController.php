@@ -121,4 +121,9 @@ class QuestionController extends Controller
 
         return view('pages.question.topic');
     }
+
+    public function show($id_question)
+    {
+        return 'ola';//TODO
+    }
 }

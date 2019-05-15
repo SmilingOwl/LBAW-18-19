@@ -12,7 +12,7 @@
 
                         <div class="title">
 
-                            <a href="#">
+                            <a href={{URL::to('/profile/'. $follower->username)}}>
                                 <h3>{{ $follower->username }}</h3>
                             </a>
 

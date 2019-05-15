@@ -57,11 +57,23 @@ class ProfileController extends Controller
     public function show($username)
     {
         $member = collect(DB::select('
-        SELECT "user".id_user as id,username, rank.name as rank, bioDescription, points, profilePhoto, name ,
-        (SELECT COUNT("user".id_user) FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)) AS nr_questions, 
-        (SELECT COUNT("user".id_user) FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)) AS nr_answers, 
-        (SELECT COUNT("user".id_user) FROM "user",answer,bestAnswer Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post) AS nr_best_answers 
-        FROM "user", rank 
+        SELECT "user".id_user as id,username, rank.name as rank,username, bioDescription, points, profilePhoto, name , (
+            SELECT COUNT(question.id_question)
+            FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)
+            WHERE "user".username=\''. $username .'\'
+            GROUP BY "user".id_user
+        ) AS nr_questions, (
+            SELECT COUNT(answer.id_answer)
+            FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)
+            WHERE "user".username=\''. $username .'\'
+            GROUP BY "user".id_user
+        ) AS nr_answers, (
+            SELECT COUNT(bestAnswer.id_bestAnswer)
+            FROM "user",answer,bestAnswer
+            Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post AND "user".username=\''. $username .'\'
+            GROUP BY "user".id_user
+        ) AS nr_best_answers
+        FROM "user", rank
         Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
         $followers = DB::select('
         SELECT id_user,username , profilePhoto , points, id_rank , 
@@ -74,14 +86,16 @@ class ProfileController extends Controller
         FROM follow INNER JOIN "user" ON follow.following ="user".id_user
         WHERE follow.follower = '. $member->id);
         $questions = DB::select('
-        SELECT title, description, date , contagem
-        FROM question as q1 , "user" , 
-        (SELECT comment.firstAnswer as q2_id, count(comment.secondAnswer) as contagem
-        FROM question as q2 INNER JOIN comment ON ( q2.id_question = comment.firstAnswer)
-        GROUP BY comment.firstAnswer) As subq 
-        WHERE q1.id_user = "user".id_user AND q1.id_question = q2_id
-        GROUP BY title, description, date, contagem
-        ORDER BY date DESC
+        SELECT question.id_question as id, question.title as title, question."date" as "date", question.votes as votes, question.deleted as deleted , count(answer.id_answer) as contagem, 
+        (
+            SELECT count(bestAnswer.id_bestAnswer) as hasBest
+            FROM answer INNER JOIN bestAnswer ON ( answer.id_answer = bestAnswer.id_bestAnswer)
+            WHERE answer.id_question = question.id_question
+        ) as hasBest,question.icon as catIcon
+        FROM (question INNER JOIN category ON (question.id_category = category.id_category)) as question INNER JOIN answer ON (question.id_question = answer.id_question) 
+        WHERE question.id_user = '. $member->id.'
+        GROUP BY question.id_question, question.icon
+        ORDER BY question."date" DESC
         LIMIT 10');
         return view('pages.profile.show')->with('member',$member)->with('followers',$followers)->with('followings',$following)->with('questions',$questions);
     }
@@ -96,7 +110,10 @@ class ProfileController extends Controller
     public function edit($username)
     {
         $member = Auth::user();
-        return view('pages.profile.edit', compact('member'));
+        if($username == $member->username)
+            return view('pages.profile.edit', compact('member'));
+        else
+            return redirect('/404');
     }
 
     /**
