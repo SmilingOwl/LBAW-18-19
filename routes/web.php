@@ -41,7 +41,7 @@ Route::put('questions/add', 'Question\QuestionController@create')->name('questio
 Route::get('questions/{id_question}', 'Question\QuestionController@show')->name('questions.show');
 Route::delete('questions/{id_question}/delete', 'Question\QuestionController@destroy');
 Route::get('questions/{id_question}/edit', 'Question\QuestionController@edit');
-Route::put('questions/{id_question}/edit', 'Question\QuestionController@update');
+Route::put('questions/{id_question}/edit', 'Question\QuestionController@update')->name('question.update');
 Route::get('topic/{category}', 'Question\QuestionController@topic');
 
 

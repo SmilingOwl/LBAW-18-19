@@ -118,7 +118,7 @@
                 </div>
 
                 <div class="form-group col-md-12">
-                    <h6>Upload images for your question</h6>
+                    <h6> Upload images for your question</h6>
                     <div class="input-group">
                         <span class="input-group-btn">
                             <span class="btn btn-default btn-file btn-dark">
