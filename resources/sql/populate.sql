@@ -164,20 +164,6 @@ INSERT INTO "follow"(following, follower) VALUES(38,17);
 INSERT INTO "follow"(following, follower) VALUES(38,19);
 INSERT INTO "follow"(following, follower) VALUES(38,21);
 
-
------------------------------------------
---NOTIFICATION
------------------------------------------
-INSERT INTO "notification"(description, type, view, "date", id_user) VALUES('FateTalk commented on your post', 'comment', false, '2016-05-06 17:28:33', 8);
-INSERT INTO "notification"(description, type, view, "date", id_user) VALUES('Orbital upvoted your answer', 'vote', false, '2017-02-08 01:32:18', 16);
-INSERT INTO "notification"(description, type, view, "date", id_user) VALUES('Chessbeans upvoted your question', 'vote', true, '2017-02-08 12:14:41', 28);
-INSERT INTO "notification"(description, type, view, "date", id_user) VALUES('Vikingkong upvoted your question', 'vote', true, '2017-02-09 13:25:40', 28);
-INSERT INTO "notification"(description, type, view, "date", id_user) VALUES('Vikingkong answered your question', 'answer', false, '2017-05-06 13:22:55', 35);
-INSERT INTO "notification"(description, type, view, "date", id_user) VALUES('FateTalk answered your question', 'answer', false, '2017-02-07 23:36:48', 28);
-INSERT INTO "notification"(description, type, view, "date", id_user) VALUES('Hexapod started following you', 'follow', true, '2019-01-25 16:27:38', 7);
-INSERT INTO "notification"(description, type, view, "date", id_user) VALUES('Triangletopic started following you', 'follow', false, '2019-02-15 22:04:35', 38);
-
-
 -----------------------------------------
 --CATEGORY
 -----------------------------------------
@@ -1339,6 +1325,18 @@ The best online reference I know of for hand-written Japanese characters is the 
 INSERT INTO "bestanswer"(id_bestAnswer,attributionDate,"text" , "date", deleted, active, votes, photo) VALUES(61,'2018-12-03 15:14:57', 'Not in water. Free electron in water is really unfavorable, so no significant concentration of them can be generated chemically, and it almost immediately reduces water itself to hydrogen (but I heard rumors about generation of solvated electrons in water in very special experiment with short half-life)
 
 In liquid NH3, however, solvated electrons can occur, so self-discharge of galvanic cells with NH3-based electrolyte may occur through travel of electrons via electrolyte.', '2018-04-03 07:09:13',false, false, 12, NULL);
+
+-----------------------------------------
+--NOTIFICATION
+-----------------------------------------
+INSERT INTO "notification"(description, type, view, "date", questionTarget, target, creator) VALUES('FateTalk commented on your post', 'comment', false, '2016-05-06 17:28:33', 1, 8,16);
+INSERT INTO "notification"(description, type, view, "date", questionTarget, target, creator) VALUES('Orbital upvoted your answer', 'vote', false, '2017-02-08 01:32:18',2, 16,36);
+INSERT INTO "notification"(description, type, view, "date", questionTarget, target, creator) VALUES('Chessbeans upvoted your question', 'vote', true, '2017-02-08 12:14:41',3, 28,8);
+INSERT INTO "notification"(description, type, view, "date", questionTarget, target, creator) VALUES('Vikingkong upvoted your question', 'vote', true, '2017-02-09 13:25:40',4, 28,14);
+INSERT INTO "notification"(description, type, view, "date", questionTarget, target, creator) VALUES('Vikingkong answered your question', 'answer', false, '2017-05-06 13:22:55',5, 35,14);
+INSERT INTO "notification"(description, type, view, "date", questionTarget, target, creator) VALUES('FateTalk answered your question', 'answer', false, '2017-02-07 23:36:48',6, 28,16);
+INSERT INTO "notification"(description, type, view, "date", questionTarget, target, creator) VALUES('Hexapod started following you', 'follow', true, '2019-01-25 16:27:38',null, 7,26);
+INSERT INTO "notification"(description, type, view, "date", questionTarget, target, creator) VALUES('Triangletopic started following you', 'follow', false, '2019-02-15 22:04:35',null, 38,21);
 
 
 -----------------------------------------

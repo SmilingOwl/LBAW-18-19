@@ -108,15 +108,6 @@ CREATE TABLE follow (
     PRIMARY KEY(follower,following)
 );
 
-CREATE TABLE notification (
-    id_notification SERIAL PRIMARY KEY,
-    description text NOT NULL,
-    type notificationType NOT NULL,
-    view boolean NOT NULL,
-    "date" DateTime NOT NULL,
-    id_user integer NOT NULL REFERENCES "user" (id_user) ON UPDATE CASCADE
-);
-
 CREATE TABLE category(
     id_category SERIAL PRIMARY KEY,
     name text NOT NULL CONSTRAINT categoryname_uk UNIQUE,
@@ -174,6 +165,18 @@ CREATE TABLE bestAnswer(
     active boolean NOT NULL,
     votes integer NOT NULL DEFAULT 0,
     photo text
+);
+
+
+CREATE TABLE notification (
+    id_notification SERIAL PRIMARY KEY,
+    description text NOT NULL,
+    type notificationType NOT NULL,
+    view boolean NOT NULL,
+    "date" DateTime NOT NULL,
+    questionTarget integer REFERENCES question (id_question) ON UPDATE CASCADE,
+    target integer NOT NULL REFERENCES "user" (id_user) ON UPDATE CASCADE,
+    creator integer NOT NULL REFERENCES "user" (id_user) ON UPDATE CASCADE
 );
 
 CREATE TABLE faq(

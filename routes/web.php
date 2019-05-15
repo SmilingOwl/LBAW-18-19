@@ -53,6 +53,10 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
+//API
+Route::get('api/members/{username}/notifications','Profile\ApiController@notifications');
+
+
 //Search
 
 Route::get('search','Question\SearchController@search')->name('search');

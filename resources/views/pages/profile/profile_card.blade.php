@@ -72,7 +72,7 @@
                     </div>
                 </div>
                 <!--Bio-->
-                <div class="col-md-3" style="align-content: flex-end;">
+                <div class="col-md-4" style="align-content: flex-end;">
                     <div class="card card-body p-1" id="stats">
                         <div class="container m-3 align-self-center" id="newBorder">
                             <h5 class="text-dark" id="statsTitle" style=" text-align: center">Stats</h5>
@@ -94,7 +94,7 @@
                                         @if (is_null($member->nr_questions))
                                             0
                                             <small>questions</small>
-                                        @elseif ($member->nr_questions === 1)
+                                        @elseif ($member->nr_questions == 1)
                                             {{$member->nr_questions}}
                                             <small>question</small>
                                         @else
@@ -112,7 +112,7 @@
                                         @if (is_null($member->nr_answers))
                                             0
                                             <small>answers</small>
-                                        @elseif ($member->nr_answers === 1)
+                                        @elseif ($member->nr_answers == 1)
                                             {{$member->nr_answers}}
                                             <small>answer</small>
                                         @else
@@ -130,7 +130,7 @@
                                         @if (is_null($member->nr_best_answers))
                                             0
                                             <small>best answers</small>
-                                        @elseif ($member->nr_best_answers === 1)
+                                        @elseif ($member->nr_best_answers == 1)
                                             {{$member->nr_best_answers}}
                                             <small>best answer</small>
                                         @else

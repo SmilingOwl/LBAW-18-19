@@ -137,6 +137,13 @@ GROUP BY question.id_question, question.icon
 ORDER BY question."date" DESC
 LIMIT 10
 
+--Obtain member notifications
+SELECT id_notification as id, description ,type , notification."date" as notDate, "user".username as username, "user".profilePhoto as profilePhoto , notification.questionTarget
+FROM "user" INNER JOIN notification ON ("user".id_user = notification.creator)
+WHERE notification.view = false  AND notification.target = $id_user
+ORDER BY notification."date" DESC
+LIMIT 10
+
 
 -----------------------------------------
 --UPDATES
