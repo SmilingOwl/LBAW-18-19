@@ -16,7 +16,7 @@
         <!-- Search form -->
     
         <div class="row search-bar-moderator">
-          <input class="form-control" type="text" placeholder="Search an user..." aria-label="Search" style="margin-bottom: 60px; margin-top: 30px;">
+          <input class="form-control search-admin-user" type="text" placeholder="Search an user..." aria-label="Search" style="margin-bottom: 60px; margin-top: 30px;">
         </div>
     
     
@@ -100,7 +100,7 @@
           <div id="menu1" class="container tab-pane fade"><br>
             <div class="card-body tabela-mod">
               <div class="table-responsive">
-                <table class="table" style="width:100%">
+                <table class="table table-users" style="width:100%">
                   <thead class="thead-dark">
                     <tr>
                       <th>Username</th>
@@ -111,13 +111,10 @@
                   </thead>
     
                   <tbody>
-
-                    @foreach ($moderators as $mod)
                     <tr>
-                      ola
-                      <td><a href={{URL::to('profile/'.$mod->username)}}>{{$mod->username}}</a></td>
-                      <td>{{$mod->email}}</td>
-                      <td>{{$mod->rankname}}</td>
+                      <td>Tiger Nixon</td>
+                      <td>tiger@gmail.com</td>
+                      <td>Rookie</td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
                           <button type="button" class="btn btn-success .btn-sm">Promote</button>
@@ -127,7 +124,104 @@
                       </td>
     
                     </tr>
-                    @endforeach
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>ggarrett@gmail.com</td>
+                      <td>Beginner</td>
+                      <td>
+    
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                        </div>
+                      </td>
+    
+                    </tr>
+                    <tr>
+                      <td>Ashton Cox</td>
+                      <td>foxcoxxx@gmail.com</td>
+                      <td>Intermediate</td>
+                      <td>
+    
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                        </div>
+                      </td>
+    
+                    </tr>
+                    <tr>
+                      <td>Cedric Kelly</td>
+                      <td>cedricBoxed@gmail.com</td>
+                      <td>Enthusiast</td>
+                      <td>
+    
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Airi Satou</td>
+                      <td>accountAir@hotmail.com</td>
+                      <td>Advanced</td>
+                      <td>
+    
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Brielle Williamson</td>
+                      <td>brielle@hotmail.com</td>
+                      <td>Veteran</td>
+                      <td>
+    
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Herrod Chandler</td>
+                      <td>herold@gmail.cokm</td>
+                      <td>Rookie</td>
+                      <td>
+    
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Rhona Davidson</td>
+                      <td>davidson1998@gmail.com</td>
+                      <td>Advanced</td>
+                      <td>
+    
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Colleen Hurst</td>
+                      <td>develperCollen@hotmail.com</td>
+                      <td>Beginner</td>
+                      <td>
+    
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                        </div>
+                      </td>
+                    </tr>
     
                   </tbody>
                 </table>
@@ -150,117 +244,22 @@
                   </thead>
     
                   <tbody>
+
+                    @foreach ($moderators as $mod)
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>tiger@gmail.com</td>
-                      <td>Rookie</td>
+                      <td><a href={{URL::to('profile/'.$mod->username)}}>{{$mod->username}}</a></td>
+                      <td>{{$mod->email}}</td>
+                      <td>{{$mod->rankname}}</td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
                           <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Demote</button>
+                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
                         </div>
     
                       </td>
     
                     </tr>
-                    <tr>
-                      <td>Garrett Winters</td>
-                      <td>ggarrett@gmail.com</td>
-                      <td>Beginner</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                        </div>
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Ashton Cox</td>
-                      <td>foxcoxxx@gmail.com</td>
-                      <td>Intermediate</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                        </div>
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Cedric Kelly</td>
-                      <td>cedricBoxed@gmail.com</td>
-                      <td>Enthusiast</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Airi Satou</td>
-                      <td>accountAir@hotmail.com</td>
-                      <td>Advanced</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Brielle Williamson</td>
-                      <td>brielle@hotmail.com</td>
-                      <td>Veteran</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Herrod Chandler</td>
-                      <td>herold@gmail.cokm</td>
-                      <td>Rookie</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Rhona Davidson</td>
-                      <td>davidson1998@gmail.com</td>
-                      <td>Advanced</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Colleen Hurst</td>
-                      <td>develperCollen@hotmail.com</td>
-                      <td>Beginner</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Demote</button>
-                        </div>
-                      </td>
-                    </tr>
+                    @endforeach
     
                   </tbody>
                 </table>
@@ -284,151 +283,27 @@
                   </thead>
     
                   <tbody>
+                    @foreach ($reports as $report)
                     <tr>
-                      <td>Tiger Nixon</td>
-                      <td>Commercial or spam</td>
-                      <td>Anna</td>
-                      <td><a href="/pages/questionDetail.html">In a question</a> </td>
-                      <td>13/02/19</td>
+                      <td>{{$report->reporter}}</td>
+                      <td>{{$report->reason}}</td>
+                      <td>{{$report->target->username}}</td>
+                      @if (is_null($report->answer))
+                      <td><a href={{URL::to('question/'.$report->question)}}>In a question</a> </td>
+                      @else
+                      <td><a href={{URL::to('question/'.$report->target->question)}}>In a answer</a> </td>
+                      @endif
+                      <td>{{$report->date}}</td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
                           <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
                           <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
                           <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                         </div>
-    
                       </td>
     
                     </tr>
-                    <tr>
-                      <td>Garrett Winters</td>
-                      <td>Inappropriate or offencive</td>
-                      <td>Marcos</td>
-                      <td><a href="/pages/questionDetail.html">In a question</a> </td>
-                      <td>13/02/19</td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
-                          <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
-                        </div>
-    
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Ashton Cox</td>
-                      <td>Commercial or spam</td>
-                      <td>Anabela</td>
-                      <td><a href="/pages/questionDetail.html">In a question</a> </td>
-                      <td>13/02/19</td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
-                          <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
-                        </div>
-    
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Cedric Kelly</td>
-                      <td>Inappropriate or offencive </td>
-                      <td>Pedro</td>
-                      <td><a href="/pages/questionDetail.html">In a question</a> </td>
-                      <td>13/02/19</td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
-                          <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
-                        </div>
-    
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Airi Satou</td>
-                      <td>Inappropriate or offencive</td>
-                      <td>Anna</td>
-                      <td><a href="/pages/questionDetail.html">In a question</a> </td>
-                      <td>13/02/19</td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
-                          <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
-                        </div>
-    
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Brielle Williamson</td>
-                      <td>Safety issue or illegal</td>
-                      <td>Jack</td>
-                      <td><a href="/pages/questionDetail.html">In a question</a> </td>
-                      <td>13/02/19</td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
-                          <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
-                        </div>
-    
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Herrod Chandler</td>
-                      <td>Commercial or spam</td>
-                      <td>Anna</td>
-                      <td><a href="/pages/questionDetail.html">In a question</a> </td>
-                      <td>13/02/19</td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
-                          <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
-    
-                        </div>
-    
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Rhona Davidson</td>
-                      <td>Inappropriate or offencive</td>
-                      <td>Margarida</td>
-                      <td><a href="/pages/questionDetail.html">In a question</a> </td>
-                      <td>13/02/19</td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
-                          <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
-                        </div>
-    
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Colleen Hurst</td>
-                      <td>Safety issue or illegal</td>
-                      <td>Justin</td>
-                      <td><a href="/pages/questionDetail.html">In a question</a> </td>
-                      <td>13/02/19</td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
-                          <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
-                        </div>
-    
-                      </td>
-    
-                    </tr>
+                    @endforeach
     
                   </tbody>
                 </table>

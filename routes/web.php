@@ -55,6 +55,7 @@ Route::post('register', 'Auth\RegisterController@register');
 
 //API
 Route::get('api/members/{username}/notifications','Profile\ApiController@notifications');
+Route::post('api/search/user','Profile\ApiController@likeUser');
 
 
 //Search

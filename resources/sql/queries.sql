@@ -163,6 +163,26 @@ SELECT DISTINCT "user".username as username, "user".email as email, rank.name as
 FROM ("user" INNER JOIN role ON ("user".id_user = role.id_user)) as "user" INNER JOIN rank ON ("user".id_rank = rank.id_rank)
 Where "user".endDate is NULL AND "user".type = 'moderator'
 
+--Obtain reports
+SELECT "user".username as reporter, report."date" as "date", report.reason as reason, report.id_question as question , report.id_answer as answer
+FROM (userReport INNER JOIN report ON (report.id_report = userReport.id_report)) as report 
+INNER JOIN "user" ON ("user".id_user = report.username)
+
+--Obtain owner of content of question
+SELECT username
+FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)
+WHERE question.id_question = $id_question
+--Obtain owner of content of question
+SELECT username, answer.id_question as question
+FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)
+WHERE answer.id_answer = $id_answer
+
+--Obtain users like name
+SELECT "user".username as username, "user".email as email, rank.name as rankName
+FROM "user" INNER JOIN rank ON ("user".id_rank = rank.id_rank)
+WHERE "user".username ILIKE '{$username}%'
+
+
 -----------------------------------------
 --UPDATES
 -----------------------------------------

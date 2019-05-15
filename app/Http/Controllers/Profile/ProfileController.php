@@ -295,7 +295,30 @@ class ProfileController extends Controller
             SELECT DISTINCT "user".username as username, "user".email as email, rank.name as rankName
             FROM ("user" INNER JOIN role ON ("user".id_user = role.id_user)) as "user" INNER JOIN rank ON ("user".id_rank = rank.id_rank)
             Where "user".endDate is NULL AND "user".type = \'moderator\'');
-            return view('pages.profile.admin')->with('catInfo',$categories_info)->with('moderators',$moderators);
+            $reports = DB::select('
+            SELECT "user".username as reporter, report."date" as "date", report.reason as reason, report.id_question as question , report.id_answer as answer
+            FROM (userReport INNER JOIN report ON (report.id_report = userReport.id_report)) as report 
+            INNER JOIN "user" ON ("user".id_user = report.username)
+            ');
+            foreach ($reports as $report ) {
+                if(is_null($report->answer))
+                {
+                    $report->target = collect(DB::select('
+                    SELECT username
+                    FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)
+                    WHERE question.id_question = '. $report->question .'
+                    '))->first();
+                }
+                else
+                {
+                    $report->target = collect(DB::select('
+                    SELECT username, answer.id_question as question
+                    FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)
+                    WHERE answer.id_answer = '. $report->answer .'
+                    '))->first();
+                }
+            }
+            return view('pages.profile.admin')->with('catInfo',$categories_info)->with('moderators',$moderators)->with('reports',$reports);
         }
         else
         {

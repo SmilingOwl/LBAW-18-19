@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Member;
 
 class ApiController extends Controller
 {
@@ -101,5 +102,20 @@ class ApiController extends Controller
         {
             return "";
         }
+    }
+    
+
+    public function likeUser(Request $request)  
+    {
+        if(is_null($request->name))
+        {
+            return response()->json(null);
+        }
+        $userlike = DB::select('
+        SELECT "user".username as username, "user".email as email, rank.name as rankName
+        FROM "user" INNER JOIN rank ON ("user".id_rank = rank.id_rank)
+        WHERE "user".username ILIKE \''.$request->name.'%\'
+        ');
+        return response()->json($userlike);
     }
 }
