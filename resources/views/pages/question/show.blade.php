@@ -42,12 +42,12 @@
                             <img src="../images/broken-19.svg" alt="down-vote" class="media-object" style="width:1.5rem; height: 1.5rem;">
                         </div>
                         <a class="card-link" data-toggle="collapse" href="#description">
-                            <h2>How do black holes impact time?</h2>
+                            <h2>{{$question->title}}</h2>
                         </a>
                     </div>
                     <div id="description" class="collapse show" data-parent="#accordion">
                         <div class="card-body" style="border-style:none;">
-                            I need real information soo I can use it in a my project.
+                            {{$question->description}}
                         </div>
                     </div>
                 </div>

@@ -127,6 +127,8 @@ class QuestionController extends Controller
 
     public function show($id_question)
     {
-        return view('pages.question.show');
+        $question = collect(DB::select('SELECT id_question, title, description, "date", votes, photo, deleted, id_category, id_user FROM question WHERE id_question = \''. $id_question .'\''))->first();
+
+        return view('pages.question.show')->with('question', $question);
     }
 }
