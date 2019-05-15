@@ -121,7 +121,7 @@ CREATE TABLE question(
     "date" DateTime NOT NULL DEFAULT now(),
     votes integer NOT NULL DEFAULT 0,
     photo text,
-    deleted boolean NOT NULL,
+    deleted boolean NOT NULL DEFAULT false,
     id_category integer NOT NULL REFERENCES category (id_category) ON UPDATE CASCADE,
     id_user integer NOT NULL REFERENCES "user" (id_user) ON UPDATE CASCADE,
     search tsvector

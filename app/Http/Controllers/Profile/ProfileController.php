@@ -278,7 +278,19 @@ class ProfileController extends Controller
         $type = collect(DB::select('select role.type as type from "user",role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user'))->first();
         if($type->type === "administrator")
         {
-            return view('pages.profile.admin');
+            $categories_info= DB::select('
+            SELECT category.name as name, category.icon as icon, count(question.id_question) as number,
+            (
+                SELECT count(question.id_question)
+                FROM question
+            ) as total
+            FROM category INNER JOIN question ON ( category.id_category = question.id_category)
+            GROUP BY category.name,category.icon');
+            $moderators = DB::select('
+            SELECT DISTINCT "user".username as username, "user".email as email, rank.name as rankName
+            FROM ("user" INNER JOIN role ON ("user".id_user = role.id_user)) as "user" INNER JOIN rank ON ("user".id_rank = rank.id_rank)
+            Where "user".endDate is NULL AND "user".type = \'moderator\'');
+            return view('pages.profile.admin')->with('catInfo',$categories_info)->with('moderators',$moderators);
         }
         else
         {
