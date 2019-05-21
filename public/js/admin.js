@@ -41,7 +41,7 @@ function displayUsers(data)
     table.appendChild(org);
     for(let i=0;i<data.length;i++)
     {
-        table.innerHTML+='<tr><td>'+data[i].username+'</td><td>'+data[i].email+'</td><td>'+data[i].rankname+'</td><td><div class="btn-group" role="group" aria-label="Basic example"><button type="button" class="btn btn-success .btn-sm">Promote</button><button type="button" class="btn btn-danger .btn-sm">Ban</button></div></td></tr>';
+        table.innerHTML+='<tr<td><a href="/profile/'+data[i].username+'">'+data[i].username+'</a></td><td>'+data[i].email+'</td><td>'+data[i].rankname+'</td><td><div class="btn-group" role="group" aria-label="Basic example"><button type="button" class="btn btn-success .btn-sm">Promote</button><button type="button" class="btn btn-danger .btn-sm">Ban</button></div></td></tr>';
     }
 }
 

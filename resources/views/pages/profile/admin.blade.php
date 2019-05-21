@@ -111,117 +111,6 @@
                   </thead>
     
                   <tbody>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>tiger@gmail.com</td>
-                      <td>Rookie</td>
-                      <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
-                        </div>
-    
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Garrett Winters</td>
-                      <td>ggarrett@gmail.com</td>
-                      <td>Beginner</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
-                        </div>
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Ashton Cox</td>
-                      <td>foxcoxxx@gmail.com</td>
-                      <td>Intermediate</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
-                        </div>
-                      </td>
-    
-                    </tr>
-                    <tr>
-                      <td>Cedric Kelly</td>
-                      <td>cedricBoxed@gmail.com</td>
-                      <td>Enthusiast</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Airi Satou</td>
-                      <td>accountAir@hotmail.com</td>
-                      <td>Advanced</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Brielle Williamson</td>
-                      <td>brielle@hotmail.com</td>
-                      <td>Veteran</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Herrod Chandler</td>
-                      <td>herold@gmail.cokm</td>
-                      <td>Rookie</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Rhona Davidson</td>
-                      <td>davidson1998@gmail.com</td>
-                      <td>Advanced</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Colleen Hurst</td>
-                      <td>develperCollen@hotmail.com</td>
-                      <td>Beginner</td>
-                      <td>
-    
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
-                        </div>
-                      </td>
-                    </tr>
     
                   </tbody>
                 </table>
@@ -285,13 +174,13 @@
                   <tbody>
                     @foreach ($reports as $report)
                     <tr>
-                      <td>{{$report->reporter}}</td>
+                      <td><a href={{URL::to('profile/'.$report->reporter)}}>{{$report->reporter}}</a></td>
                       <td>{{$report->reason}}</td>
-                      <td>{{$report->target->username}}</td>
+                      <td><a href={{URL::to('profile/'.$report->target->username)}}>{{$report->target->username}}</a></td>
                       @if (is_null($report->answer))
-                      <td><a href={{URL::to('question/'.$report->question)}}>In a question</a> </td>
+                      <td><a href={{URL::to('questions/'.$report->question)}}>In a question</a> </td>
                       @else
-                      <td><a href={{URL::to('question/'.$report->target->question)}}>In a answer</a> </td>
+                      <td><a href={{URL::to('questions/'.$report->target->question)}}>In a answer</a> </td>
                       @endif
                       <td>{{$report->date}}</td>
                       <td>
