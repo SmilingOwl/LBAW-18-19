@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\URL;
 use App\Models\Question;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Illuminate\Contracts\Debug\ExceptionHandler;
+use Illuminate\Support\Facades\Redirect;
 
 class QuestionController extends Controller 
 {
@@ -44,10 +47,15 @@ class QuestionController extends Controller
         $question->description = request('description');
         $question->id_category = 2;
         $question->id_user = Auth::user()->id_user;
-
-        $id_question = $question->save(); 
+        if($question->save())
+        {
+            return redirect('/questions/'.$question->id_question);
+        }
+        else
+        {
+            return Redirect::back()->withErrors(['Unable to create a new question.']);
+        }
         
-       return view('pages.question.show', compact($id_question));
     }
 
 
