@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/style.css')}}>
 
     <script src={{asset('js/bar_nav.js')}}></script>
+    <script src={{asset('js/questionDetail.js')}}></script>
 @endsection
 
 @section('content')
@@ -58,11 +59,15 @@
             <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</a>
         </div>
     </div>
+        
     <div id="accordion2">
         <div class="card no-thin-line">
             <div class="card-header answer-header">
                 <a class="card-link" data-toggle="collapse" href="#answers-to-question">
                     <span class="info-answers expand-icon"><i class="fas fa-minus-circle"></i>
+                        @if (is_null($question->nr_answers))
+                            0
+                        @endif
                         {{$question->nr_answers}}
                         @if ($question->nr_answers == 1)
                             answer
@@ -72,6 +77,7 @@
                     </span>
                 </a>
             </div>
+            @foreach ($answers as $answer)
             <div id="answers-to-question" class="collapse show" data-parent="#accordion2">
                 <div class="card-body answer-body-all">
                     <div class="card" style="border-style:none;">
@@ -79,11 +85,11 @@
                             <div class="card-link answer-header-icon" >
                             <div class="row">
                                 <div class="answer-user">
-                                    <a href="../pages/profile.html">
-                                        <img src="../images/user2.png" alt="User2" class="rounded-circle" style="width:2em; margin:0;">
+                                    <a href={{URL::to('profile/'.$answer->username)}}>
+                                        <img src={{asset('images/'.$answer->profilephoto)}} alt="User2" class="rounded-circle" style="width:2em; margin:0;">
                                     </a>
-                                    <a href="../pages/profile.html">
-                                        Pedro Carvalho
+                                    <a href={{URL::to('profile/'.$answer->username)}}>
+                                        {{$answer->username}}
                                     </a>
                                 </div>
                                 <div>
@@ -91,52 +97,15 @@
                                 </div>
                             </div>
                                 <small>
-                                    9 March 2019
+                                    {{$answer->date}}
                                 </small>
                             </div>
                         </div>
                             <div class="card-body comment-body">
                                 <div class="media border p-3 answer-question">
-
                                     <div class="media-body">
-
                                         <div>
-                                            <p style="margin: 1em 1em 1em 1em;">
-                                                A black hole is a place in space where gravity pulls so
-                                                much that even
-                                                light can not get
-                                                out. The gravity is so strong because
-                                                matter has been squeezed into a tiny space.
-                                            </p>
-                                            <p style="margin: 1em 1em 1em 1em;">
-                                                Gravity doesn’t just attract the objects having mass but it
-                                                attracts
-                                                everything such as
-                                                electromagnetic waves( such as light ),
-                                                gravitons and spacetime curve which in turn expands the
-                                                spacetime curve due
-                                                to which the
-                                                rate of change of time gets slower near it..
-                                                Sheet shown in picture below is equivalent to the space
-                                                time web which is
-                                                getting expanded
-                                                near the singularity(center of black hole).
-                                            </p>
-                                            <p style="margin: 1em 1em 1em 1em;">
-                                                The curvature of spacetime by matter therefore not only
-                                                stretches or
-                                                shrinks distances,
-                                                depending on their direction with respect to
-                                                the gravitational field, but also appears to slow down the
-                                                flow of time.
-                                                This effect is
-                                                called gravitational time dilation. In most
-                                                circumstances, such gravitational time dilation is
-                                                minuscule and hardly
-                                                observable, but it
-                                                can become very significant when spacetime
-                                                is curved by a massive object, such as a black hole.
-                                            </p>
+                                            {{$answer->text}}
                                         </div>
 
                                         <div class="bottom-answer">
@@ -152,21 +121,26 @@
                                             <a href="#" ><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i></a>
                                         </div>
 
-
-                                        <div class="media p-3">
-
-                                            <div id="accordion4">
+                                        @if (!is_null($answer->nr_answers))
+                                        <div class="media p-3 container-accordion">
+                                            <div id="accordion{{$answer->id_answer+4}}" value={{$answer->id_answer+4}}>
                                                 <div class="card no-thin-line">
                                                     <div class="card-header answer-header">
-                                                        <a class="card-link" data-toggle="collapse" href="#answers-to-question2">
+                                                        <a class="card-link" data-toggle="collapse" href="#answers-to-answers{{$answer->id_answer+4}}">
                                                             <span class="info-answers expand-icon"><i class="fas fa-plus-circle"></i>
-                                                                1 answer </span>
+                                                                {{$answer->nr_answers}}
+                                                                @if ($answer->nr_answers== 1)
+                                                                    answer
+                                                                @else
+                                                                    answers
+                                                                @endif
+                                                            </span>
                                                         </a>
                                                     </div>
-                                                    <div id="answers-to-question2" class="collapse" data-parent="#accordion4">
+                                                    <div id="answers-to-answers{{$answer->id_answer+4}}" class="collapse" data-parent="#accordion{{$answer->id_answer+4}}">
                                                         <div class="card-body answer-body-all">
-                                                                <div class="card" style="border-style:none;">
-                                                                    <div class="card-header comment-title">
+                                                            <div class="card" style="border-style:none;">
+                                                                <!--<div class="card-header comment-title">
                                                                         <div class="card-link answer-header-icon">
                                                                             <span class="answer-user">
 
@@ -210,21 +184,27 @@
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                        </div>
+                                                                        </div>-->
                                                                 </div>
                                                         </div>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
+
+
+
     <div class="card" style="margin-bottom:1em;" id="no-thin-line2">
         <div class="card-body add-comment-body" id="commentAdd">
             <form action="/action_page.php" class="add-comment-body">

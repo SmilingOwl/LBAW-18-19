@@ -86,6 +86,30 @@ SELECT "user".username, "user".profilePhoto, answer."text", answer.date, answer.
 FROM (question INNER JOIN answer ON (question.id_question = answer.id_question)) INNER JOIN "user" ON (answer.user_post = "user".id_user)
 WHERE question.id_question = $id_question;
 
+SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo,
+(
+    SELECT count(secondAnswer)
+    FROM comment
+    WHERE comment.firstAnswer = answer.id_answer
+    GROUP BY comment.secondAnswer
+) as nr_answers
+FROM answer INNER JOIN "user" ON (answer.user_post = "user".id_user)
+WHERE answer.id_question = $id_question AND answer.id_answer NOT IN (
+    SELECT secondAnswer
+    FROM comment
+);
+
+--Obtain the answers to a answer
+SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo,
+(
+    SELECT count(secondAnswer)
+    FROM comment
+    WHERE comment.firstAnswer = answer.id_answer
+    GROUP BY comment.secondAnswer
+) as nr_answers
+FROM (answer INNER JOIN comment ON (answer.id_answer =comment.secondAnswer)) as answer INNER JOIN "user" ON (answer.user_post = "user".id_user)
+WHERE answer.firstAnswer = $id_answer;
+
 
 -- Obtain the top users (highest score)
 SELECT username, profilePhoto, points

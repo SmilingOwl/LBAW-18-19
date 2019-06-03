@@ -43,6 +43,7 @@ Route::delete('questions/{id_question}/delete', 'Question\QuestionController@des
 Route::get('questions/{id_question}/edit', 'Question\QuestionController@edit');
 Route::put('questions/{id_question}/edit', 'Question\QuestionController@update')->name('question.update');
 Route::get('topic/{category}', 'Question\QuestionController@topic');
+Route::get('answersToAnswer/{id}', 'Question\QuestionController@answersToAnswer');
 
 
 // Authentication

@@ -79,7 +79,10 @@ class QuestionController extends Controller
      */
     public function edit($id_question)
     {
-        $question = collect(DB::select('SELECT id_question, title, description, "date", votes, photo, deleted, id_category, id_user FROM question WHERE id_question = \''. $id_question .'\''))->first();
+        $replaces = [
+            'id_question' => $id_question
+        ];
+        $question = collect(DB::select('SELECT id_question, title, description, "date", votes, photo, deleted, id_category, id_user FROM question WHERE id_question = \':id_question\'',$replaces))->first();
 
         return view('pages.question.edit')->with('question', $question);
     }
@@ -135,17 +138,57 @@ class QuestionController extends Controller
 
     public function show($id_question)
     {
+        $replaces = [
+            'id_question' => $id_question
+        ];
+
         $question = collect(DB::select('
         SELECT "user".username as username, "user".profilePhoto as profilePhoto, question.title as title, question.description as description, question."date" as date, question.votes as votes,
         (
             SELECT count(id_answer)
             FROM answer
-            WHERE answer.id_question = '.$id_question.'
+            WHERE answer.id_question = :id_question
         ) as nr_answers
         FROM question INNER JOIN "user" ON (question.id_user = "user".id_user)
-        WHERE question.id_question = '.$id_question.'
-        '))->first();
+        WHERE question.id_question = :id_question
+        ',$replaces
+        ))->first();
 
-        return view('pages.question.show')->with('question', $question);
+        $answers = DB::select('
+        SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo,
+        (
+            SELECT count(secondAnswer)
+            FROM comment
+            WHERE comment.firstAnswer = answer.id_answer
+            GROUP BY comment.secondAnswer
+        ) as nr_answers
+        FROM answer INNER JOIN "user" ON (answer.user_post = "user".id_user)
+        WHERE answer.id_question = :id_question AND answer.id_answer NOT IN (
+            SELECT secondAnswer
+            FROM comment
+        );
+        ',$replaces);
+
+        return view('pages.question.show')->with('question', $question)->with('answers',$answers);
+    }
+
+    public function answersToAnswer($id)
+    {
+        $replaces = [
+            'id_answer' => $id
+        ];
+        $answers = DB::select('
+        SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo,
+        (
+            SELECT count(secondAnswer)
+            FROM comment
+            WHERE comment.firstAnswer = answer.id_answer
+            GROUP BY comment.secondAnswer
+        ) as nr_answers
+        FROM (answer INNER JOIN comment ON (answer.id_answer =comment.secondAnswer)) as answer INNER JOIN "user" ON (answer.user_post = "user".id_user)
+        WHERE answer.firstAnswer = :id_answer;
+        ',$replaces);
+
+        return response()->json($answers);
     }
 }
