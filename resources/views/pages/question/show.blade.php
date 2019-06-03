@@ -48,8 +48,8 @@
                             <h2>{{$question->title}}</h2>
                         </a>
                     </div>
-                    <div id="description" class="collapse show" data-parent="#accordion">
-                        <div class="card-body" style="border-style:none;">
+                    <div id="description"   class="collapse show" data-parent="#accordion">
+                        <div class="card-body" style="border-style:none; white-space: pre-line;">
                             {{$question->description}}
                         </div>
                     </div>

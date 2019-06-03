@@ -112,7 +112,7 @@
                 </div>
 
                 <div class="form-group col-md-12 mb-5">
-                    <input type="text" name="description" class="form-control form-control-lg" placeholder="Describe your doubts here!" required>
+                    <textarea rows="5" name="description" class="form-control form-control-lg" placeholder="Describe your doubts here!" required></textarea>
                         <div class="invalid-feedback">
                             There needs to be a description
                         </div>
