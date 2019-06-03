@@ -5,7 +5,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/style.css')}}>
 
     <script src={{asset('js/bar_nav.js')}}></script>
-    <script src={{asset('js/profile.js')}}></script>
 @endsection
 
 @section('content')
@@ -14,16 +13,16 @@
     <div class="card detail mt-5">
         <div class="card-header" id="question-header">
             <div class="name-aproved">
-                <h6 class="media-heading resultHeader text-nowrap text-truncate" style="max-width:235px ;"><a href="./profile.html"><img
-                            src="../images/yves.jpg" alt="profile_pic" class="media-object rounded-circle profilePic "
+                <h6 class="media-heading resultHeader text-nowrap text-truncate" style="max-width:235px ;"><a href={{URL::to('profile/'.$question->username)}}><img
+                            src={{asset('images/'.$question->profilephoto)}} alt="profile_pic" class="media-object rounded-circle profilePic "
                             style="width:3rem; ">
-                        shebookworm4</a></h6>
+                        {{$question->username}}</a></h6>
                     <a href="./topic.html" id="categoryQuestion"><img src="../images/physics-02.svg" alt="category" class="media-object"
                             style="width:3rem; height: 3rem;">Physics</a>
                
             </div>
             <div class="cat-date">
-                <p class="resultFooter align-self-center">7 Jan 2019</p>
+                <p class="resultFooter align-self-center">{{$question->date}}</p>
                 <div>
                     <img src="../images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">
                 </div>
@@ -38,7 +37,11 @@
                     <div class="card-header title-upvotes">
                         <div class="answer-up-votes-mainquestion">
                             <img src="../images/icon-14.svg" alt="up-vote" class="media-object" style="width:1.5rem; height: 1.5rem;">
-                            14.3K
+                            @if ($question->votes>=1000)
+                                {{number_format($question->votes/1000,1,',','.')}}
+                            @else
+                                {{$question->votes}}
+                            @endif
                             <img src="../images/broken-19.svg" alt="down-vote" class="media-object" style="width:1.5rem; height: 1.5rem;">
                         </div>
                         <a class="card-link" data-toggle="collapse" href="#description">
@@ -60,7 +63,13 @@
             <div class="card-header answer-header">
                 <a class="card-link" data-toggle="collapse" href="#answers-to-question">
                     <span class="info-answers expand-icon"><i class="fas fa-minus-circle"></i>
-                        1 answer </span>
+                        {{$question->nr_answers}}
+                        @if ($question->nr_answers == 1)
+                            answer
+                        @else
+                            answers
+                        @endif
+                    </span>
                 </a>
             </div>
             <div id="answers-to-question" class="collapse show" data-parent="#accordion2">

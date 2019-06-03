@@ -71,7 +71,12 @@ ORDER BY "date" DESC;
 
 
 -- Obtain a question’s details
-SELECT "user".username, "user".profilePhoto, question.title, question.description, question."date", question.votes
+SELECT "user".username as username, "user".profilePhoto as profilePhoto, question.title as title, question.description as description, question."date" as date, question.votes as votes,
+(
+    SELECT count(id_answer)
+    FROM answer
+    WHERE answer.id_question = $id_question
+) as nr_answers
 FROM question INNER JOIN "user" ON (question.id_user = "user".id_user)
 WHERE question.id_question = $id_question;
 

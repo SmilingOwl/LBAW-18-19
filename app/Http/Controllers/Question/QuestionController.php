@@ -135,7 +135,16 @@ class QuestionController extends Controller
 
     public function show($id_question)
     {
-        $question = collect(DB::select('SELECT id_question, title, description, "date", votes, photo, deleted, id_category, id_user FROM question WHERE id_question = \''. $id_question .'\''))->first();
+        $question = collect(DB::select('
+        SELECT "user".username as username, "user".profilePhoto as profilePhoto, question.title as title, question.description as description, question."date" as date, question.votes as votes,
+        (
+            SELECT count(id_answer)
+            FROM answer
+            WHERE answer.id_question = '.$id_question.'
+        ) as nr_answers
+        FROM question INNER JOIN "user" ON (question.id_user = "user".id_user)
+        WHERE question.id_question = '.$id_question.'
+        '))->first();
 
         return view('pages.question.show')->with('question', $question);
     }
