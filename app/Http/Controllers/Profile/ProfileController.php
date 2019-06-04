@@ -75,16 +75,19 @@ class ProfileController extends Controller
         ) AS nr_best_answers
         FROM "user", rank
         Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
+        
         $followers = DB::select('
         SELECT id_user,username , profilePhoto , points, id_rank , 
         (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.follower) as rank
         FROM follow INNER JOIN "user" ON (follow.follower="user".id_user)
         WHERE follow.following = '. $member->id);
+        
         $following = DB::select('
         SELECT id_user,username , profilePhoto , points, id_rank ,
         (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.following) as rank
         FROM follow INNER JOIN "user" ON follow.following ="user".id_user
         WHERE follow.follower = '. $member->id);
+        
         $questions = DB::select('
         SELECT question.id_question as id, question.title as title, question."date" as "date", question.votes as votes, question.deleted as deleted ,
         (
@@ -162,6 +165,56 @@ class ProfileController extends Controller
             return  redirect('logout');
         }
         return redirect()->back()->withErrors('Wrong Password')->withInput();
+    }
+
+    public function ban(Request $request,$username){
+        $member=Member::find(Auth::user()->id_user);
+        $member->banned = true;
+        $member->save();
+        return redirect()->back();
+
+    }
+
+    //TODOOOOOOOOOOO
+    public function dismissModerator(Request $request,$username){
+        $member=Member::find(Auth::user()->id_user);
+       
+        $role = new Role();
+        $role->type = request('member');
+        $role->beginningDate = request('');
+        $role->endDate = request('');
+        $role->id_user = Auth::user()->id_user;
+        
+        if($role->save())
+        {
+            return redirect()->back();
+        }
+        else
+        {
+            return Redirect::back()->withErrors(['Unable to create a new question.']);
+        }
+
+    }
+    //TODOOOOOOOOOOOo
+    public function promoteToModerator(Request $request,$username){
+        $member=Member::find(Auth::user()->id_user);
+       
+        $role = new Role();
+        $role->type = request('moderator');
+        $role->beginningDate = request('');
+        $role->endDate = request('');
+        $role->id_user = Auth::user()->id_user;
+        
+        if($role->save())
+        {
+            return redirect()->back();
+        }
+        else
+        {
+            return Redirect::back()->withErrors(['Unable to create a new question.']);
+        }
+
+
     }
 
     /**
@@ -291,15 +344,18 @@ class ProfileController extends Controller
             ) as total
             FROM category INNER JOIN question ON ( category.id_category = question.id_category)
             GROUP BY category.name,category.icon');
+           
             $moderators = DB::select('
             SELECT DISTINCT "user".username as username, "user".email as email, rank.name as rankName
             FROM ("user" INNER JOIN role ON ("user".id_user = role.id_user)) as "user" INNER JOIN rank ON ("user".id_rank = rank.id_rank)
             Where "user".endDate is NULL AND "user".type = \'moderator\'');
+           
             $reports = DB::select('
             SELECT "user".username as reporter, report."date" as "date", report.reason as reason, report.id_question as question , report.id_answer as answer
             FROM (userReport INNER JOIN report ON (report.id_report = userReport.id_report)) as report 
             INNER JOIN "user" ON ("user".id_user = report.username)
             ');
+           
             foreach ($reports as $report ) {
                 if(is_null($report->answer))
                 {
@@ -336,6 +392,7 @@ class ProfileController extends Controller
             FROM (userReport INNER JOIN report ON (report.id_report = userReport.id_report)) as report 
             INNER JOIN "user" ON ("user".id_user = report.username)
             ');
+           
             foreach ($reports as $report ) {
                 if(is_null($report->answer))
                 {
@@ -361,4 +418,5 @@ class ProfileController extends Controller
             return redirect('404');
         }
     }
+
 }

@@ -83,11 +83,12 @@
                   <td>{{$report->date}}</td>
                   <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                      <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
+                      <button type="button" class="btn btn-success .btn-sm">Ignore</button>
                       <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
                       <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
                     </div>
                   </td>
+
 
                 </tr>
                 @endforeach

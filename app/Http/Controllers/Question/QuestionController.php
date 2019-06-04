@@ -115,6 +115,26 @@ class QuestionController extends Controller
         return redirect('pages.question.show');
         }
 
+        
+    public function delete(Request $request, $id_question)
+    {      
+            
+            $request->validate([
+                'title' => 'required',
+                'description' => 'required',
+                //'category' => 'required'
+            ]);
+            
+            $question = Question::find($id_question);
+    
+            $question->deleted = true;
+            $question->save();
+    
+            return redirect()->back();
+        }
+    
+
+
     /**
      * Remove the specified resource from storage.
      *

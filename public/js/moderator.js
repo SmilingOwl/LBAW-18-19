@@ -45,6 +45,7 @@ function displayUsers(data)
     }
 }
 
+
 function moderatorIcon()
 {
     let select=document.querySelectorAll(".moderator-tabs li a");
