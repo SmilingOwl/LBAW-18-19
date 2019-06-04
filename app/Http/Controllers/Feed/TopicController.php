@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Topic;
+namespace App\Http\Controllers\Feed;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -60,7 +60,7 @@ class TopicController extends Controller
         ];
 
         $questions = DB::select('
-        SELECT username, profilePhoto, title, description, date, votes, category.name, 
+        SELECT id_question, username, "user".profilePhoto as photo, title, description, date, votes, category.name, 
         (
             Select count(answer.id_answer)
             From answer 
@@ -79,7 +79,7 @@ class TopicController extends Controller
         LIMIT 10;', $replaces);
         
         $top_users=DB::select('
-        SELECT username, profilePhoto, points
+        SELECT username, "user".profilePhoto as photo, points
         FROM "user"
         ORDER BY points DESC
         LIMIT 5;');
