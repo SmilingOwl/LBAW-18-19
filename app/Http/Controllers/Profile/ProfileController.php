@@ -191,7 +191,7 @@ class ProfileController extends Controller
         }
         else
         {
-            return Redirect::back()->withErrors(['Unable to create a new question.']);
+            return Redirect::back()->withErrors(['Unable to create a new role.']);
         }
 
     }
@@ -211,7 +211,7 @@ class ProfileController extends Controller
         }
         else
         {
-            return Redirect::back()->withErrors(['Unable to create a new question.']);
+            return Redirect::back()->withErrors(['Unable to create a new role.']);
         }
 
 
