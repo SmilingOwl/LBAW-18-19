@@ -79,18 +79,20 @@ function getAnswers(answer,element) {
             }
             element.innerHTML+='</div></div></div>';
             let answer = element.querySelector(".expand-icon");
-            let info_i=answer.querySelector("i");
-            console.log(answer);
-            answer.addEventListener("click",function () {
-                if(info_i.getAttribute("class") == "fas fa-plus-circle")
-                {
-                    info_i.setAttribute("class","fas fa-minus-circle");
-                }
-                else  if(info_i.getAttribute("class") == "fas fa-minus-circle")
-                {
-                    info_i.setAttribute("class","fas fa-plus-circle");
-                }
-            });
+            if(answer!=null)
+            {
+                let info_i=answer.querySelector("i");
+                answer.addEventListener("click",function () {
+                    if(info_i.getAttribute("class") == "fas fa-plus-circle")
+                    {
+                        info_i.setAttribute("class","fas fa-minus-circle");
+                    }
+                    else  if(info_i.getAttribute("class") == "fas fa-minus-circle")
+                    {
+                        info_i.setAttribute("class","fas fa-plus-circle");
+                    }
+                });
+            }
 
             expandClick();
 
