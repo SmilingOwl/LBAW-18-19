@@ -18,70 +18,70 @@
 
         <div class="row cat-row" style="font-size:100px;">
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Art">
+                <a href="{{URL::to('topic/art')}}" data-toggle="tooltip" title="Art">
                     <img src="../images/art-06.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Biology">
+                <a href="{{URL::to('topic/biology')}}" data-toggle="tooltip" title="Biology">
                     <img id="active" src="../images/biology-01.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Business">
+                <a href="{{URL::to('topic/business')}}" data-toggle="tooltip" title="Business">
                     <img src="../images/business-07.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Chemistry">
+                <a href="{{URL::to('topic/chemistry')}}" data-toggle="tooltip" title="Chemistry">
                     <img src="../images/chemistry-03.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Geology">
+                <a href="{{URL::to('topic/geology')}}" data-toggle="tooltip" title="Geology">
                     <img src="../images/geology-10.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="History">
+                <a href="{{URL::to('topic/history')}}" data-toggle="tooltip" title="History">
                     <img src="../images/history-08.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Math">
+                <a href="{{URL::to('topic/math')}}" data-toggle="tooltip" title="Math">
                     <img src="../images/maths-12.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Medicine">
+                <a href="{{URL::to('topic/medicine')}}" data-toggle="tooltip" title="Medicine">
                     <img src="../images/health-04.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Linguistics">
+                <a href="{{URL::to('topic/linguistics')}}" data-toggle="tooltip" title="Linguistics">
                     <img src="../images/linguistics-09.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Physics">
+                <a href="{{URL::to('topic/physics')}}" data-toggle="tooltip" title="Physics">
                     <img src="../images/physics-02.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Psychology">
+                <a href="{{URL::to('topic/psychology')}}" data-toggle="tooltip" title="Psychology">
                     <img src="../images/psychology-11.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
-                <a href="#" data-toggle="tooltip" title="Technology">
+                <a href="{{URL::to('topic/technology')}}" data-toggle="tooltip" title="Technology">
                     <img src="../images/tech-05.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
@@ -124,20 +124,17 @@
                     </div>
                     <div class="media-body">
                         <a href="./profile.html">
-                            <h4 class="media-heading resultHeader"><img src={{asset('images/'.$question->profilePhoto)}} alt="profile"
-                                    class="media-object rounded-circle profilePic" style="width:3rem">{{ $question->username }}</h4>
+                            <h4 class="media-heading resultHeader"><img src={{asset('images/'.$question->photo)}} alt="profile"
+                                class="media-object rounded-circle profilePic" style="width:3rem">{{ $question->username }}</h4>
                         </a>
                         <div class="container">
-                            <a class="question" href={{URL::to('questions/'.$question->id)}}>{{ $question->title }}</a>
-                        </div>
-                        @if ($question->hasbest>=1)
-                            <img src="../images/answered-13.svg" alt="answered"
-                            class="media-object align-self-center column" style="width:2rem"
-                            id="catQuestion">
-                        @endif
+                            <a class="question" href={{URL::to('questions/'.$question->id_question)}}>{{ $question->title }}</a>
+                        </div>                     
                         <div class="row footerResult">
+                                @if ($question->hasbest>=1)
                             <img src="../images/answered-13.svg" alt="corret" class="media-object align-self-center column"
                                 style="width:2rem" id="catQuestion">
+                                @endif
                             <p class="resultFooter align-self-center">
                                 {{ $question->contagem }}
                                 @if ($question->contagem==1)
@@ -178,8 +175,8 @@
                         </div>
                         <div class="media-body">
                             <div class="row leaderResult justify-content-center">
-                                <h4 class="media-heading align-self-center leaderInfo"><img src={{asset('images/'.$user->profilePhoto)}}
-                                        alt="profile" class="media-object rounded-circle profilePic" style="width:1.75rem">{{ $user->username }}</h4>
+                                <h4 class="media-heading align-self-center leaderInfo"><img src={{asset('images/'.$user->photo)}}
+                                    alt="profile" class="media-object rounded-circle profilePic" style="width:1.75rem">{{ $user->username }}</h4>
                                 <p class="points"><img src="../images/points-16.svg" alt="categorie" class="media-object"
                                         style="width:1rem">{{ $user->points }}
                                     points</p>
