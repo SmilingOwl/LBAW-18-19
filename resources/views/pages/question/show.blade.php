@@ -18,14 +18,16 @@
                             src={{asset('images/'.$question->profilephoto)}} alt="profile_pic" class="media-object rounded-circle profilePic "
                             style="width:3rem; ">
                         {{$question->username}}</a></h6>
-                    <a href="./topic.html" id="categoryQuestion"><img src="../images/physics-02.svg" alt="category" class="media-object"
-                            style="width:3rem; height: 3rem;">Physics</a>
+                    <a href="./topic.html" id="categoryQuestion"><img src={{asset('images/'.$question->caticon)}} alt="category" class="media-object"
+                            style="width:3rem; height: 3rem;">{{ucfirst($question->catname)}}</a>
                
             </div>
             <div class="cat-date">
                 <p class="resultFooter align-self-center">{{$question->date}}</p>
                 <div>
-                    <img src="../images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">
+                    @if (!is_null($question->best))
+                        <img src="/images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">
+                    @endif
                 </div>
             </div>
         </div>
@@ -93,7 +95,9 @@
                                     </a>
                                 </div>
                                 <div>
+                                    @if (!is_null($answer->best))
                                         <img src="../images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">
+                                    @endif
                                 </div>
                             </div>
                                 <small>
@@ -112,10 +116,10 @@
                                             <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</a>
                                             <div class="answer-up-votes">
 
-                                                <img src="../images/icon-14.svg" alt="up-vote" class="media-object"
+                                                <img src="/images/icon-14.svg" alt="up-vote" class="media-object"
                                                     style="width:1.2rem; height: 1.2rem;">
-                                                100
-                                                <img src="../images/broken-19.svg" alt="down-vote" class="media-object"
+                                                {{$answer->votes}}
+                                                <img src="/images/broken-19.svg" alt="down-vote" class="media-object"
                                                     style="width:1.2rem; height: 1.2rem;">
                                             </div>
                                             <a href="#" ><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i></a>

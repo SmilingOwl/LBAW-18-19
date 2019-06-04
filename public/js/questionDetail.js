@@ -36,7 +36,7 @@ function getAnswers(answer,element) {
         url: '/answersToAnswer/' + answer,
         success: function (data) {
             let info=data[0];
-            element.innerHTML='<div class="card-header comment-title">'
+            let htmlContent='<div class="card-header comment-title">'
             +'<div class="card-link answer-header-icon" >'
             +'<div class="row">'
             +'<div class="answer-user">'
@@ -44,9 +44,12 @@ function getAnswers(answer,element) {
             +'<img src="/images/'+info.profilephoto+'" alt="User2" class="rounded-circle" style="width:2em; margin:0;">'
             +'</a>'
             +'<a href="/profile/'+info.username+'">'+info.username
-            +'</a></div><div>'
-            +'<img src="../images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">'
-            +'</div></div><small>'+info.date
+            +'</a></div><div>';
+            if(info.best != null)
+            {
+                htmlContent+='<img src="/images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">';
+            }
+            htmlContent+='</div></div><small>'+info.date
             +'</small></div></div>'
             +'<div class="card-body comment-body">'
             +'<div class="media border p-3 answer-question">'
@@ -55,15 +58,15 @@ function getAnswers(answer,element) {
             +'</div><div class="bottom-answer">'
             +'<a href="#" style="font-family: \'Prompt\', sans-serif; color: #BE4627;">Report</a>'
             +'<div class="answer-up-votes">'
-            +'<img src="../images/icon-14.svg" alt="up-vote" class="media-object" style="width:1.2rem; height: 1.2rem;">'
+            +'<img src="/images/icon-14.svg" alt="up-vote" class="media-object" style="width:1.2rem; height: 1.2rem;">'
             +info.votes
-            +'<img src="../images/broken-19.svg" alt="down-vote" class="media-object" style="width:1.2rem; height: 1.2rem;">'
+            +'<img src="/images/broken-19.svg" alt="down-vote" class="media-object" style="width:1.2rem; height: 1.2rem;">'
             +'</div>'
             +'<a href="#" ><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i></a>'
             +'</div>';
             if(info.nr_answers!=null)
             {
-                element.innerHTML+='<div class="media p-3 container-accordion">'
+                htmlContent+='<div class="media p-3 container-accordion">'
                 +'<div id="accordion'+(info.id_answer+4)+'" value='+(info.id_answer+4)+'>'
                 +'<div class="card no-thin-line">'
                 +'<div class="card-header answer-header">'
@@ -77,7 +80,8 @@ function getAnswers(answer,element) {
                 +'<div class="card" style="border-style:none;">'
                 +'</div></div></div></div></div></div>';
             }
-            element.innerHTML+='</div></div></div>';
+            htmlContent+='</div></div></div>';
+            element.innerHTML=htmlContent;
             let answer = element.querySelector(".expand-icon");
             if(answer!=null)
             {
@@ -95,8 +99,6 @@ function getAnswers(answer,element) {
             }
 
             expandClick();
-
-            //$('#accordion'+(info.id_answer+4)+' #answers-to-answers'+(info.id_answer+4)).collapse('toggle');
             
         },
         error: function (data) {

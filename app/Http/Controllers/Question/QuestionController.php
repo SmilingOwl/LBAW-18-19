@@ -148,9 +148,15 @@ class QuestionController extends Controller
             SELECT count(id_answer)
             FROM answer
             WHERE answer.id_question = :id_question
-        ) as nr_answers
-        FROM question INNER JOIN "user" ON (question.id_user = "user".id_user)
-        WHERE question.id_question = :id_question
+        ) as nr_answers, question.name as catName, question.icon as catIcon,
+        (
+            SELECT count(id_bestAnswer)
+            FROM bestAnswer INNER JOIN answer ON ( bestAnswer.id_bestAnswer = answer.id_answer)
+            WHERE answer.id_question= :id_question AND bestAnswer.active = true
+            GROUP BY bestAnswer.id_bestAnswer
+        ) as best
+        FROM (question INNER JOIN category ON (category.id_category = question.id_category)) as question INNER JOIN "user" ON (question.id_user = "user".id_user)
+        WHERE question.id_question = :id_question;
         ',$replaces
         ))->first();
 
@@ -161,7 +167,13 @@ class QuestionController extends Controller
             FROM comment
             WHERE comment.firstAnswer = answer.id_answer
             GROUP BY comment.secondAnswer
-        ) as nr_answers
+        ) as nr_answers,
+        (
+            SELECT count(id_bestAnswer)
+            FROM bestAnswer
+            WHERE bestAnswer.id_bestAnswer = answer.id_answer AND bestAnswer.active = true
+            GROUP BY bestAnswer.id_bestAnswer
+        ) as best
         FROM answer INNER JOIN "user" ON (answer.user_post = "user".id_user)
         WHERE answer.id_question = :id_question AND answer.id_answer NOT IN (
             SELECT secondAnswer
@@ -184,7 +196,13 @@ class QuestionController extends Controller
             FROM comment
             WHERE comment.firstAnswer = answer.id_answer
             GROUP BY comment.secondAnswer
-        ) as nr_answers
+        ) as nr_answers ,
+        (
+            SELECT count(id_bestAnswer)
+            FROM bestAnswer
+            WHERE bestAnswer.id_bestAnswer = answer.id_answer
+            GROUP BY bestAnswer.id_bestAnswer
+        ) as best
         FROM (answer INNER JOIN comment ON (answer.id_answer =comment.secondAnswer)) as answer INNER JOIN "user" ON (answer.user_post = "user".id_user)
         WHERE answer.firstAnswer = :id_answer;
         ',$replaces);
