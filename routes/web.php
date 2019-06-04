@@ -42,7 +42,7 @@ Route::get('questions/{id_question}', 'Question\QuestionController@show')->name(
 Route::delete('questions/{id_question}/delete', 'Question\QuestionController@destroy');
 Route::get('questions/{id_question}/edit', 'Question\QuestionController@edit');
 Route::put('questions/{id_question}/edit', 'Question\QuestionController@update')->name('question.update');
-Route::get('topic/{category}', 'Question\QuestionController@topic');
+//Route::get('topic/{category}', 'Question\QuestionController@topic');
 Route::get('answersToAnswer/{id}', 'Question\QuestionController@answersToAnswer');
 
 
@@ -53,6 +53,10 @@ Route::post('login', 'Auth\LoginController@login');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
+
+// Feed 
+Route::get('topic/{category}', 'Feed\TopicController@show');
+
 
 //API
 Route::get('api/members/{username}/notifications','Profile\ApiController@notifications');

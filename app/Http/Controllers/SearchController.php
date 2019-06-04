@@ -43,4 +43,13 @@ class SearchController extends Controller
         $res['data'] = MemberResource::collection($res['data']);
         return $res;
     }
+
+   /* public function autocomplete(Request $request)
+    {
+        
+        $data =Member::select("username")
+        ->where("username","LIKE","%{$request->input('query')}%")
+        ->get();
+        return response()->json($data);
+    }*/
 }
