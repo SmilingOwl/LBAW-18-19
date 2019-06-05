@@ -10,13 +10,17 @@
     <script src={{asset('js/toolTip.js')}}></script>
 @endsection
 @section('content')
-    
+
+@if (Request::path() == 'topic/all')
+<h1 class="h1-responsive font-weight-bold text-center my-5 py-3">Here are all the questions...</h1>
+@else
 <h1 class="h1-responsive font-weight-bold text-center my-5 py-3">Here's what we found...</h1>
+@endif
 
 <div class="container" id="topBar">
     <div class="container" id="categories">
 
-        <div class="row cat-row" style="font-size:100px;">
+        <div class="row cat-row" style="font-size:100px;">                
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/art')}}" data-toggle="tooltip" title="Art">                                        
                 <img  @if(Request::path() == 'topic/art') id="active" @endif src="../images/art-06.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
@@ -100,10 +104,8 @@
 
         <div class="dropdown-menu" >
             <a class="dropdown-item" href="#">Newest</a>
-            <a class="dropdown-item" href="#">Most Upvoted up</a>
-            <a class="dropdown-item" href="#">Most Upvoted down</a>
-            <a class="dropdown-item" href="#">More Answers</a>
-            <a class="dropdown-item" href="#">Less Answers</a>
+            <a class="dropdown-item" href="#">Most Upvoted</a>
+            <a class="dropdown-item" href="#">Most Answered</a>
         </div>
     </div>
 
@@ -124,7 +126,7 @@
                         <div class="media-left d-flex">
                         </div>
                         <div class="media-body">
-                            <a href="./profile.html">
+                            <a href={{URL::to('profile/'.$question->username)}}>
                                 <h4 class="media-heading resultHeader"><img src={{asset('images/'.$question->photo)}} alt="profile"
                                     class="media-object rounded-circle profilePic" style="width:3rem">{{ $question->username }}</h4>
                             </a>
@@ -168,7 +170,7 @@
                         <div class="media-left d-flex">
                         </div>
                         <div class="media-body">
-                            <a href="./profile.html">
+                            <a href={{URL::to('profile/'.$question->username)}}>
                                 <h4 class="media-heading resultHeader"><img src={{asset('images/'.$question->photo)}} alt="profile"
                                     class="media-object rounded-circle profilePic" style="width:3rem">{{ $question->username }}</h4>
                             </a>
