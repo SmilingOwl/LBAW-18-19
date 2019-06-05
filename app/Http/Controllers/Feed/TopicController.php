@@ -60,7 +60,7 @@ class TopicController extends Controller
         ];
 
 
-        $all_questions = DB::select('
+        $all_questions = collect(DB::select('
         SELECT id_question, username, "user".profilePhoto as photo, title, description, date, votes, category.name, 
         (
             Select count(answer.id_answer)
@@ -75,10 +75,10 @@ class TopicController extends Controller
         FROM (question
         INNER JOIN "user" ON (question.id_user = "user".id_user))
         INNER JOIN category ON (question.id_category = category.id_category)
-        ORDER BY question.date DESC;');
+        ORDER BY question.date DESC;'));
 
 
-        $questions = DB::select('
+        $questions = collect(DB::select('
         SELECT id_question, username, "user".profilePhoto as photo, title, description, date, votes, category.name, 
         (
             Select count(answer.id_answer)
@@ -94,8 +94,7 @@ class TopicController extends Controller
         INNER JOIN "user" ON (question.id_user = "user".id_user))
         INNER JOIN category ON (question.id_category = category.id_category)
         WHERE category.name = :category
-        ORDER BY question.date DESC
-        LIMIT 10;', $replaces);
+        LIMIT 10;', $replaces));
         
         $top_users=DB::select('
         SELECT username, "user".profilePhoto as photo, points
@@ -103,8 +102,15 @@ class TopicController extends Controller
         ORDER BY points DESC
         LIMIT 5;');
 
+        $questions_date = $questions->sortBy('date');
 
-        return view('pages.feed.show')->with('questions',$questions)->with('top_users',$top_users)->with('all_questions', $all_questions);
+        $questions_answers = $questions->sortBy('contagem');
+
+        $questions_upvotes = $questions->sortBy('votes');
+    
+
+
+        return view('pages.feed.show')->with('questions_date',$questions_date)->with('top_users',$top_users)->with('all_questions', $all_questions);
 
     }
 }
