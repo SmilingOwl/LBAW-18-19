@@ -68,6 +68,11 @@ Route::get('topic/{category}', 'Feed\TopicController@show');
 Route::get('api/members/{username}/notifications','Profile\ApiController@notifications');
 Route::post('api/search/user','Profile\ApiController@likeUser');
 
+//Admin options
+Route::post('api/members/{username}/ban', 'Profile\ProfileController@ban');
+Route::post('api/members/{username}/dismiss', 'Profile\ProfileController@dismissModerator');
+Route::post('api/members/{username}/promote', 'Profile\ProfileController@promoteToModerator');
+
 
 //Search
 
