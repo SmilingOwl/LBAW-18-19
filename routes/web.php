@@ -41,6 +41,12 @@ Route::put('questions/add', 'Question\QuestionController@create')->name('questio
 Route::get('questions/{id_question}', 'Question\QuestionController@show')->name('questions.show');
 Route::delete('questions/{id_question}/delete', 'Question\QuestionController@destroy');
 Route::get('questions/{id_question}/edit', 'Question\QuestionController@edit');
+Route::get('questions/{id_question}/upVote', 'VoteController@upVoteQuestion');
+Route::get('questions/{id_question}/downVote', 'VoteController@downVoteQuestion');
+Route::get('questions/{id_question}/nothingVote', 'VoteController@nothingVoteQuestion');
+Route::get('answers/{id_answer}/upVote', 'VoteController@upVoteAnswer');
+Route::get('answers/{id_answer}/downVote', 'VoteController@downVoteAnswer');
+Route::get('answers/{id_answer}/nothingVote', 'VoteController@nothingVoteAnswer');
 Route::put('questions/{id_question}/edit', 'Question\QuestionController@update')->name('question.update');
 //Route::get('topic/{category}', 'Question\QuestionController@topic');
 Route::get('answersToAnswer/{id}', 'Question\QuestionController@answersToAnswer');
@@ -61,6 +67,11 @@ Route::get('topic/{category}', 'Feed\TopicController@show');
 //API
 Route::get('api/members/{username}/notifications','Profile\ApiController@notifications');
 Route::post('api/search/user','Profile\ApiController@likeUser');
+
+//Admin options
+Route::post('api/members/{username}/ban', 'Profile\ProfileController@ban');
+Route::post('api/members/{username}/dismiss', 'Profile\ProfileController@dismissModerator');
+Route::post('api/members/{username}/promote', 'Profile\ProfileController@promoteToModerator');
 
 
 //Search

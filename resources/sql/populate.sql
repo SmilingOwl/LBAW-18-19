@@ -15,40 +15,40 @@ INSERT INTO "rank"(name, minValue, maxValue) VALUES('veteran', 1000, 100000);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Infectedsea', '$2y$10$mMdnZ2Y8u1pfHXhn3HuoA.fdi/yZdDLO20QKYP8DAPV90QZHB8W5u', 'infectedsea166@gmail.com', 'photography lover', '1980-05-17', 'sophie.jpg', 120,1, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Avocadoroxy', '$2y$10$l8cfUGtlM/J7hoc930FcCO8xKLexFKbIHv8xstrfRGq2FHR2cSGzi', 'avocadoroxy@Hi.com','just learning things..', '1993-02-07', 'yves.jpg', 530,2, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Pepperliving','$2y$10$0ET0ltEPQY0DnzGo1jXJ5uYUKs9Qk3tyqFIDBVfbEqPc0MkgQbpcq', 'peppernsalt@yahoo.com', 'simplicity is prerequisite for reliability', '1997-03-20', 'yves.jpg', 100,3, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Unlinedminiature', '$2y$10$..s7M/XxEor/hYBD4yFrZuxFo/HX2qdx/EWwunoHH7zpdkDdcWHLu', 'creaturesss12@sapo.com', 'admirer of nature', '2000-08-30', 'user4.png', 210,3, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Activisthaiku', '$2y$10$8PkFcJvkyqTXqjhZ9mY1leeMu5jzsakMq7zYnxKZAcwBi.ebbbTly', 'activist178@gmail.com', 'getting smarter', '1998-02-17', 'photo1.png', 300,4, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Unlinedminiature', '$2y$10$..s7M/XxEor/hYBD4yFrZuxFo/HX2qdx/EWwunoHH7zpdkDdcWHLu', 'creaturesss12@sapo.com', 'admirer of nature', '2000-08-30', 'yves.jpg', 210,3, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Activisthaiku', '$2y$10$8PkFcJvkyqTXqjhZ9mY1leeMu5jzsakMq7zYnxKZAcwBi.ebbbTly', 'activist178@gmail.com', 'getting smarter', '1998-02-17', 'yves.jpg', 300,4, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Flycommon','$2y$10$IoWPVsH/bDedm/WeCN8.e.LRqNh2dpH9Y1qVG5F1/2sX.RISi4I2C', 'flyingbird@io.org', null, '1975-02-17',null, 330,4, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Moonshadows', '$2y$10$MNhkvLoQNVFmUSYR4ZTaNuc3et2dpPmXsUbCyxbFGWsvsZYBS3h.i','moonlight@mimi.com', 'engineering master', '1965-02-17', 'yves.jpg', 30,1, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Chessbeans', '$2y$10$8TG5GIMBdnHE7DtmhoE0nujuQtTJLN6Grp10x6P02DACB8RUBTyIG', 'chessLover@beans.com', 'quantum physicist', '2000-02-17','photo12.png', 209,2, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Chessbeans', '$2y$10$8TG5GIMBdnHE7DtmhoE0nujuQtTJLN6Grp10x6P02DACB8RUBTyIG', 'chessLover@beans.com', 'quantum physicist', '2000-02-17','yves.jpg', 209,2, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Luminous','$2y$10$11LFFYDG8Xtu8J1Z8C8ybuWLU63.SL.XlVvCP1Ooa2iRWjPmhJ9Ne', 'lumi123@gamil.com', null, '1957-02-17','photo49.png', 205,2, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Pizzazz','$2y$10$cyL5KoUHSLdbUibmHXBMDe0kY5aC7bNaCglgM8q3W1Wgm3nZeDI/m', 'pizzaAndChips@yahoo.com', 'coffee and pizza! ', '1993-02-17', 'olght.png', 520,5, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Pizzazz','$2y$10$cyL5KoUHSLdbUibmHXBMDe0kY5aC7bNaCglgM8q3W1Wgm3nZeDI/m', 'pizzaAndChips@yahoo.com', 'coffee and pizza! ', '1993-02-17', 'yves.jpg', 520,5, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Pantaloons','$2y$10$7JTXs6LV3RW6ID.O3l5CxeS1Ct//6QFD62KgGrW7PMGUv2lm1lF1O', 'sleepingsheep@hotmail.com', 'always tired..', '1999-02-17', null, 400,5, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Sparky', '$2y$10$cm/VGHnwuFfw9pVr5is9OOx3rr47TJAB80lzL0IzL/s5HFZLYxFIa', 'sparkytube@sapo.com', null, '1996-02-17', 'pho.png', 100,2, true, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Cooper', '$2y$10$7iZnvci1BlK7jsjKWb1DUuHdbh/a7TlPOnIhdIJGWU/2mHBYdxnNq', 'doccooper@un02.com', null, '1988-02-17','photott.png', 600,6, false, true);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Vikingkong', '$2y$10$biLdp6g9hR65hJ9A./OmN.TPL1klEjukkyItwPeGlqFQWAF1XMaOe', 'vikingargh@hotmail.com', 'we are made by history', '2003-02-17', 'photo45.png', 50,1, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('FieryBoy', '$2y$10$8SzhCFNzi1Ulz/2/hX4OUODqKwbg/1PiIO3DQDrv.gCKxV4PEoYau', 'fieryboy123@piripiri.com', 'Mathssssssss', '2002-02-17', 'photo98.png', 320,2, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('FateTalk', '$2y$10$AxJEq4PIpx4zB4dZBqnUk.fhQ4FgceltqKEESNspkJ3/TV7X8KNZe', 'sadfate98@gmail.com', 'anti-social behaviour is a trait of intelligence in a world full of conformists', '1984-09-17', 'photo1.png', 500,4, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('LittleRoses','$2y$10$A/VgS2GRCfki5TtLb2rHHe0mwbElel.7PSHAuSLFZ6M44v2PfjX7m', 'blueroses@gmail.com', null, '2000-06-28', 'photooo.png', 40,1, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Sparky', '$2y$10$cm/VGHnwuFfw9pVr5is9OOx3rr47TJAB80lzL0IzL/s5HFZLYxFIa', 'sparkytube@sapo.com', null, '1996-02-17', 'yves.jpg', 100,2, true, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Cooper', '$2y$10$7iZnvci1BlK7jsjKWb1DUuHdbh/a7TlPOnIhdIJGWU/2mHBYdxnNq', 'doccooper@un02.com', null, '1988-02-17','yves.jpg', 600,6, false, true);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Vikingkong', '$2y$10$biLdp6g9hR65hJ9A./OmN.TPL1klEjukkyItwPeGlqFQWAF1XMaOe', 'vikingargh@hotmail.com', 'we are made by history', '2003-02-17', 'yves.jpg', 50,1, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('FieryBoy', '$2y$10$8SzhCFNzi1Ulz/2/hX4OUODqKwbg/1PiIO3DQDrv.gCKxV4PEoYau', 'fieryboy123@piripiri.com', 'Mathssssssss', '2002-02-17', 'yves.jpg', 320,2, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('FateTalk', '$2y$10$AxJEq4PIpx4zB4dZBqnUk.fhQ4FgceltqKEESNspkJ3/TV7X8KNZe', 'sadfate98@gmail.com', 'anti-social behaviour is a trait of intelligence in a world full of conformists', '1984-09-17', 'yves.jpg', 500,4, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('LittleRoses','$2y$10$A/VgS2GRCfki5TtLb2rHHe0mwbElel.7PSHAuSLFZ6M44v2PfjX7m', 'blueroses@gmail.com', null, '2000-06-28', 'yves.jpg', 40,1, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('RainbowRecipe','$2y$10$kEZUCZygpXk2XoAbyWMm/OGYe5n4tI98kkENmKKYxlC9MFgWICNS.', 'diamondspot@oreo.org', 'music is life', '1974-02-17', null, 300,3, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('YoungerDivision','$2y$10$G94PHRQJ3EjQL.hlQshVFOX.ufb054IaVYhD82hZL9GmB/K8FdCve', 'divisionbell@yahoo.com', null, '1981-02-10', 'photo1.png', 120,2, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('HappyCat','$2y$10$YWaBx0Qst0a4hgkZe4I4v.2h10OrGEj3bJZYa/lTWmwo0fqSDLhqW', 'catskittens@pic.com', 'looking for inspiration', '2001-12-05', 'photo5.png', 200,2, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Triangletopic', '$2y$10$mMdnZ2Y8u1pfHXhn3HuoA.fdi/yZdDLO20QKYP8DAPV90QZHB8W5u', 'jbailie@optonline.net', 'what do you call an eel with a medical degree? a heeler', '1980-05-17', 'photo1.png', 120,2, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Heliosphere', '$2y$10$l8cfUGtlM/J7hoc930FcCO8xKLexFKbIHv8xstrfRGq2FHR2cSGzi', 'duchamp@sbcglobal.net','hope to be of assistence', '1993-02-07', 'user12.png', 530,4, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Sofia_15','$2y$10$0ET0ltEPQY0DnzGo1jXJ5uYUKs9Qk3tyqFIDBVfbEqPc0MkgQbpcq', 'jcholewa@optonline.net', 'takin care of business', '1997-03-20', 'user3.png', 100,2, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Argon', '$2y$10$..s7M/XxEor/hYBD4yFrZuxFo/HX2qdx/EWwunoHH7zpdkDdcWHLu', 'burniske@aol.com', null, '2000-08-30', 'user4.png', 210,2, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Carbonradio', '$2y$10$8PkFcJvkyqTXqjhZ9mY1leeMu5jzsakMq7zYnxKZAcwBi.ebbbTly', 'luvirini@sbcglobal.net', 'planning to major in seismology', '1998-02-17', 'photo1.png', 300,3, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('YoungerDivision','$2y$10$G94PHRQJ3EjQL.hlQshVFOX.ufb054IaVYhD82hZL9GmB/K8FdCve', 'divisionbell@yahoo.com', null, '1981-02-10', 'yves.jpg', 120,2, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('HappyCat','$2y$10$YWaBx0Qst0a4hgkZe4I4v.2h10OrGEj3bJZYa/lTWmwo0fqSDLhqW', 'catskittens@pic.com', 'looking for inspiration', '2001-12-05', 'yves.jpg', 200,2, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Triangletopic', '$2y$10$mMdnZ2Y8u1pfHXhn3HuoA.fdi/yZdDLO20QKYP8DAPV90QZHB8W5u', 'jbailie@optonline.net', 'what do you call an eel with a medical degree? a heeler', '1980-05-17', 'yves.jpg', 120,2, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Heliosphere', '$2y$10$l8cfUGtlM/J7hoc930FcCO8xKLexFKbIHv8xstrfRGq2FHR2cSGzi', 'duchamp@sbcglobal.net','hope to be of assistence', '1993-02-07', 'yves.jpg', 530,4, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Sofia_15','$2y$10$0ET0ltEPQY0DnzGo1jXJ5uYUKs9Qk3tyqFIDBVfbEqPc0MkgQbpcq', 'jcholewa@optonline.net', 'takin care of business', '1997-03-20', 'yves.jpg', 100,2, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Argon', '$2y$10$..s7M/XxEor/hYBD4yFrZuxFo/HX2qdx/EWwunoHH7zpdkDdcWHLu', 'burniske@aol.com', null, '2000-08-30', 'yves.jpg', 210,2, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Carbonradio', '$2y$10$8PkFcJvkyqTXqjhZ9mY1leeMu5jzsakMq7zYnxKZAcwBi.ebbbTly', 'luvirini@sbcglobal.net', 'planning to major in seismology', '1998-02-17', 'yves.jpg', 300,3, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Hexapod','$2y$10$IoWPVsH/bDedm/WeCN8.e.LRqNh2dpH9Y1qVG5F1/2sX.RISi4I2C', 'aardwolf@aol.com', null, '1975-02-17',null, 330,3, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('EdgeofSoul', '$2y$10$MNhkvLoQNVFmUSYR4ZTaNuc3et2dpPmXsUbCyxbFGWsvsZYBS3h.i','dmbkiwi@att.net', 'design the future!', '1965-02-17', null, 30,1, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Nero', '$2y$10$8TG5GIMBdnHE7DtmhoE0nujuQtTJLN6Grp10x6P02DACB8RUBTyIG', 'smpeters@hotmail.com', 'high school student', '2001-02-17','photo12.png', 209,2, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('GalaxyBear','$2y$10$11LFFYDG8Xtu8J1Z8C8ybuWLU63.SL.XlVvCP1Ooa2iRWjPmhJ9Ne', 'pariscat@aol.com', null, '1957-02-17','photo49.png', 205,2, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Infinitesimal','$2y$10$cyL5KoUHSLdbUibmHXBMDe0kY5aC7bNaCglgM8q3W1Wgm3nZeDI/m', 'rafasgj@yahoo.com', null, '1993-02-17', 'olght.png', 520,4, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Nero', '$2y$10$8TG5GIMBdnHE7DtmhoE0nujuQtTJLN6Grp10x6P02DACB8RUBTyIG', 'smpeters@hotmail.com', 'high school student', '2001-02-17','yves.jpg', 209,2, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('GalaxyBear','$2y$10$11LFFYDG8Xtu8J1Z8C8ybuWLU63.SL.XlVvCP1Ooa2iRWjPmhJ9Ne', 'pariscat@aol.com', null, '1957-02-17','yves.jpg', 205,2, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Infinitesimal','$2y$10$cyL5KoUHSLdbUibmHXBMDe0kY5aC7bNaCglgM8q3W1Wgm3nZeDI/m', 'rafasgj@yahoo.com', null, '1993-02-17', 'yves.jpg', 520,4, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Psychmaster','$2y$10$7JTXs6LV3RW6ID.O3l5CxeS1Ct//6QFD62KgGrW7PMGUv2lm1lF1O', 'gallivant@yahoo.com', null, '1999-02-17', null, 400,4, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Yuan', '$2y$10$7JTXs6LV3RW6ID.O3l5CxeS1Ct//6QFD62KgGrW7PMGUv2lm1lF1O', 'budinger@icloud.com', null, '1996-02-17', 'pho.png', 100,2, true, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Yuan', '$2y$10$7JTXs6LV3RW6ID.O3l5CxeS1Ct//6QFD62KgGrW7PMGUv2lm1lF1O', 'budinger@icloud.com', null, '1996-02-17', 'yves.jpg', 100,2, true, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Glitcher', '$2y$10$7iZnvci1BlK7jsjKWb1DUuHdbh/a7TlPOnIhdIJGWU/2mHBYdxnNq', 'rnelson@comcast.net', 'hunting down malware', '1988-02-17','sophie.jpg', 600,6, false, true);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Ned21', '$2y$10$biLdp6g9hR65hJ9A./OmN.TPL1klEjukkyItwPeGlqFQWAF1XMaOe', 'sarahs@att.net', 'sippin on straight chlorine', '2002-02-17', 'photo45.png', 50,1, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Modernzoic', '$2y$10$8SzhCFNzi1Ulz/2/hX4OUODqKwbg/1PiIO3DQDrv.gCKxV4PEoYau', 'bflong@gmail.com', 'i love this site!', '2002-02-17', 'photo98.png', 320,3, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Orbital', '$2y$10$AxJEq4PIpx4zB4dZBqnUk.fhQ4FgceltqKEESNspkJ3/TV7X8KNZe', 'daveed@sbcglobal.net', 'let''s get physical', '1984-09-17', 'photo1.png', 500,4, false, false);
-INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Proton','$2y$10$A/VgS2GRCfki5TtLb2rHHe0mwbElel.7PSHAuSLFZ6M44v2PfjX7m', 'scottlee@panganiban.ph', null, '2005-06-28', 'photooo.png', 40,1, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Ned21', '$2y$10$biLdp6g9hR65hJ9A./OmN.TPL1klEjukkyItwPeGlqFQWAF1XMaOe', 'sarahs@att.net', 'sippin on straight chlorine', '2002-02-17', 'yves.jpg', 50,1, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Modernzoic', '$2y$10$8SzhCFNzi1Ulz/2/hX4OUODqKwbg/1PiIO3DQDrv.gCKxV4PEoYau', 'bflong@gmail.com', 'i love this site!', '2002-02-17', 'yves.jpg', 320,3, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Orbital', '$2y$10$AxJEq4PIpx4zB4dZBqnUk.fhQ4FgceltqKEESNspkJ3/TV7X8KNZe', 'daveed@sbcglobal.net', 'let''s get physical', '1984-09-17', 'yves.jpg', 500,4, false, false);
+INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Proton','$2y$10$A/VgS2GRCfki5TtLb2rHHe0mwbElel.7PSHAuSLFZ6M44v2PfjX7m', 'scottlee@panganiban.ph', null, '2005-06-28', 'yves.jpg', 40,1, false, false);
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) VALUES ('Ankara','$2y$10$kEZUCZygpXk2XoAbyWMm/OGYe5n4tI98kkENmKKYxlC9MFgWICNS.', 'zodiacrocket@yahoo.com', null, '1974-02-17', null, 300,2, false, false);
 
 
@@ -595,18 +595,18 @@ I assume there are no “waves” and thus no detectable wavelength per se while
 -----------------------------------------
 --VOTEQUESTION
 -----------------------------------------
-INSERT INTO "votequestion"(username, id_question) VALUES(1, 59);
-INSERT INTO "votequestion"(username, id_question) VALUES(13, 59);
-INSERT INTO "votequestion"(username, id_question) VALUES(33, 59);
-INSERT INTO "votequestion"(username, id_question) VALUES(9, 60);
-INSERT INTO "votequestion"(username, id_question) VALUES(6, 61);
-INSERT INTO "votequestion"(username, id_question) VALUES(11, 62);
-INSERT INTO "votequestion"(username, id_question) VALUES(14, 62);
-INSERT INTO "votequestion"(username, id_question) VALUES(10, 63);
-INSERT INTO "votequestion"(username, id_question) VALUES(34, 63);
-INSERT INTO "votequestion"(username, id_question) VALUES(32, 64);
-INSERT INTO "votequestion"(username, id_question) VALUES(8, 65);
-INSERT INTO "votequestion"(username, id_question) VALUES(14, 65);
+INSERT INTO "votequestion"(username, id_question,type) VALUES(1, 59,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(13, 59,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(33, 59,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(9, 60,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(6, 61,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(11, 62,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(14, 62,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(10, 63,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(34, 63,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(32, 64,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(8, 65,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(14, 65,'upvote');
 
 
 -----------------------------------------
@@ -1246,14 +1246,14 @@ Waves cancelling or ''interference'' is one of the most poorly explained phenome
 -----------------------------------------
 --VOTEANSWER
 -----------------------------------------
-INSERT INTO "voteanswer"(username, id_answer) VALUES(3, 73);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(34, 73);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(12, 74);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(12, 75);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(11, 76);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(35, 76);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(13, 77);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(36, 77);
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(3, 73,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(34, 73,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(12, 74,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(12, 75,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(11, 76,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(35, 76,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(13, 77,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(36, 77,'upvote');
 
 
 -----------------------------------------

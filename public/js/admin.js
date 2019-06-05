@@ -13,6 +13,61 @@ function onLoadAdimn() {
     org=document.querySelector(".table-users thead");
 }
 
+//-----------------------Admin buttons---------------------------
+
+function banUser(e){
+    console.log(e);
+    $.ajax({
+        type:'post',
+        url:'api/members/'+ '".username."' +'/ban',
+        data:'_token = <?php echo csrf_token() ?>',
+        success:function(data){
+       
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
+}
+
+
+function dismissModerator(username){
+    $.ajax({
+        method:'post',
+        url:'api/members/'+ username +'/dismiss',
+        data:'_token = <?php echo csrf_token() ?>',
+        success:function(data){
+       
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
+}
+
+function promoteUser(username){
+    $.ajax({
+        method:'post',
+        url:'api/members/'+username+'/promote',
+        data:'_token = <?php echo csrf_token() ?>',
+        success:function(data){
+       
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
+}
+
+function deleteContent(){
+  
+}
+
+function ignoreReport(){
+    
+}
+
+
 function requestUsers(e)
 {
     if($(this).val()=="")return ;
@@ -21,6 +76,7 @@ function requestUsers(e)
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
         }
     });
+
     $.ajax({
         method: 'post',
         url: '/api/search/user',
@@ -41,7 +97,7 @@ function displayUsers(data)
     table.appendChild(org);
     for(let i=0;i<data.length;i++)
     {
-        table.innerHTML+='<tr><td><a href="/profile/'+data[i].username+'">'+data[i].username+'</a></td><td>'+data[i].email+'</td><td>'+data[i].rankname+'</td><td><div class="btn-group" role="group" aria-label="Basic example"><button type="button" class="btn btn-success .btn-sm">Promote</button><button type="button" class="btn btn-danger .btn-sm">Ban</button></div></td></tr>';
+        table.innerHTML+='<tr><td><a href="/profile/'+data[i].username+'">'+data[i].username+'</a></td><td>'+data[i].email+'</td><td>'+data[i].rankname+'</td><td><div class="btn-group" role="group" aria-label="Basic example"><button type="button" onclick="promoteUser('+data[i].username+')"class="btn btn-success .btn-sm">Promote</button><button type="button" class="btn btn-danger .btn-sm" onclick="banUser('+data[i].username+')">Ban</button></div></td></tr>';
     }
 }
 

@@ -18,6 +18,7 @@
         <div class="row search-bar-moderator">
           <input class="form-control search-admin-user" type="text" placeholder="Search an user..." aria-label="Search" style="margin-bottom: 60px; margin-top: 30px;">
         </div>
+
     
     
         <ul class="nav nav-tabs admin-tabs" role="tablist">
@@ -141,8 +142,7 @@
                       <td>{{$mod->rankname}}</td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Promote</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban</button>
+                          <button type="button" class="btn btn-danger .btn-sm" onclick="dismissModerator('{{$mod->username}}')">Dismiss</button>
                         </div>
     
                       </td>
@@ -185,9 +185,9 @@
                       <td>{{$report->date}}</td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-success .btn-sm">Dismiss</button>
-                          <button type="button" class="btn btn-warning .btn-sm">Delete content</button>
-                          <button type="button" class="btn btn-danger .btn-sm">Ban user</button>
+                          <button type="button" class="btn btn-success .btn-sm" onclick="ignoreReport()" >Ignore</button>
+                          <button type="button" class="btn btn-warning .btn-sm" onclick="deleteContent()" >Delete content</button>
+                          <button type="button" class="btn btn-danger .btn-sm"  onclick="banUser('{{$report->target->username}}')">Ban user</button>
                         </div>
                       </td>
     

@@ -18,8 +18,4 @@ class Role extends Model
 
     protected $fillable = ['type', 'beginningDate', 'endDate', 'id_user'];
 
-    public function __construct()
-    {
-         
-    }
 }

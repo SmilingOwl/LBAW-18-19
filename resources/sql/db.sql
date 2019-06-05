@@ -33,6 +33,9 @@ CREATE TYPE rankType AS ENUM ('rookie', 'beginner', 'intermediate', 'enthusiasti
 DROP TYPE IF EXISTS roleType;
 CREATE TYPE roleType AS ENUM ('member','moderator', 'administrator');
 
+DROP TYPE IF EXISTS voteType;
+CREATE TYPE voteType AS ENUM ('downvote','nothing', 'upvote');
+
 
 -----------------------------------------
 --DOMAINS
@@ -130,6 +133,7 @@ CREATE TABLE question(
 CREATE TABLE voteQuestion(
     username integer NOT NULL REFERENCES "user" (id_user) ON UPDATE CASCADE,
     id_question integer NOT NULL REFERENCES question (id_question) ON UPDATE CASCADE,
+    type voteType NOT NULL DEFAULT 'nothing',
     PRIMARY KEY (username,id_question)
 );
 
@@ -147,6 +151,7 @@ CREATE TABLE answer(
 CREATE TABLE voteAnswer(
     username integer NOT NULL REFERENCES "user" (id_user) ON UPDATE CASCADE,
     id_answer integer NOT NULL REFERENCES answer (id_answer) ON UPDATE CASCADE,
+    type voteType NOT NULL DEFAULT 'nothing',
     PRIMARY KEY (username,id_answer)
 );
 

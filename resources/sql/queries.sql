@@ -272,6 +272,11 @@ UPDATE answer
 SET votes = votes + $quantidade
 WHERE id_answer = $id_answer;
 
+-- update vote question
+UPDATE voteQuestion
+SET type = $type
+WHERE username = $username AND id_question = $id_question;
+
 
 -----------------------------------------
 --DELETES
@@ -340,3 +345,7 @@ VALUES($username, $id_answer);
 -- add new connection betweeb report and question
 INSERT INTO userReport(username, id_question)
 VALUES($username, $id_question);
+
+-- add new vote Question
+INSERT INTO voteQuestion(username,id_question,type)
+Values($username,$id_question,$type)
