@@ -59,6 +59,7 @@ class TopicController extends Controller
             'category' => $category
         ];
 
+
         $questions = DB::select('
         SELECT id_question, username, "user".profilePhoto as photo, title, description, date, votes, category.name, 
         (

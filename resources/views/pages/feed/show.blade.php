@@ -19,70 +19,74 @@
         <div class="row cat-row" style="font-size:100px;">
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/art')}}" data-toggle="tooltip" title="Art">
-                    <img src="../images/art-06.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    @if(Request::url() == 'http://localhost:8000/topic/art')                    
+                    <img  id="active" src="../images/art-06.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    @else
+                    <img  src="../images/art-06.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    @endif
                 </a>
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/biology')}}" data-toggle="tooltip" title="Biology">
-                    <img id="active" src="../images/biology-01.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'http://localhost:8000/topic/biology') id="active" @endif src="../images/biology-01.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/business')}}" data-toggle="tooltip" title="Business">
-                    <img src="../images/business-07.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'topic/art') id="business" @endif src="../images/business-07.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/chemistry')}}" data-toggle="tooltip" title="Chemistry">
-                    <img src="../images/chemistry-03.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'topic/chemistry') id="active" @endif src="../images/chemistry-03.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/geology')}}" data-toggle="tooltip" title="Geology">
-                    <img src="../images/geology-10.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'topic/geology') id="active" @endif src="../images/geology-10.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/history')}}" data-toggle="tooltip" title="History">
-                    <img src="../images/history-08.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'topic/history') id="active" @endif src="../images/history-08.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/math')}}" data-toggle="tooltip" title="Math">
-                    <img src="../images/maths-12.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'topic/math') id="active" @endif src="../images/maths-12.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/medicine')}}" data-toggle="tooltip" title="Medicine">
-                    <img src="../images/health-04.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'topic/medicine') id="active" @endif src="../images/health-04.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/linguistics')}}" data-toggle="tooltip" title="Linguistics">
-                    <img src="../images/linguistics-09.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'topic/linguistics') id="active" @endif src="../images/linguistics-09.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/physics')}}" data-toggle="tooltip" title="Physics">
-                    <img src="../images/physics-02.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'topic/physics') id="active" @endif src="../images/physics-02.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/psychology')}}" data-toggle="tooltip" title="Psychology">
-                    <img src="../images/psychology-11.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'topic/psychology') id="active" @endif src="../images/psychology-11.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
             <div class="col-lg-1 col-2 div-cat">
                 <a href="{{URL::to('topic/technology')}}" data-toggle="tooltip" title="Technology">
-                    <img src="../images/tech-05.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
+                    <img @if(Request::url() === 'topic/technology') id="active" @endif src="../images/tech-05.svg" alt="Categorie" class="mx-auto d-block img-fluid rounded image icon">
                 </a>
 
             </div>
