@@ -38,7 +38,7 @@ function firstAnswersVotes() {
                 window.location.href = "/login";
                 return ;
             }
-            if(voteType.length == 0 || voteType=="nothing")
+            if(voteType == "null" || voteType.length == 0 || voteType=="nothing")
             {
                 voteAnswer(id,"upVote");
                 upvote.setAttribute("src","/images/icon-14.svg");
@@ -77,7 +77,7 @@ function firstAnswersVotes() {
                 window.location.href = "/login";
                 return ;
             }
-            if(voteType.length == 0 || voteType=="nothing")
+            if(voteType == "null" || voteType.length == 0 || voteType=="nothing")
             {
                 voteAnswer(id,"downVote");
                 upvote.setAttribute("src","/images/upvote-14.svg");
@@ -147,7 +147,7 @@ function questionVotes() {
             window.location.href = "/login";
             return ;
         }
-        if(voteType.length == 0 || voteType=="nothing")
+        if(voteType == "null" || voteType.length == 0 || voteType=="nothing")
         {
             voteQuestion(id,"upVote");
             upvote.setAttribute("src","/images/icon-14.svg");
@@ -186,7 +186,7 @@ function questionVotes() {
             window.location.href = "/login";
             return ;
         }
-        if(voteType.length == 0 || voteType=="nothing")
+        if(voteType == "null" || voteType.length == 0 || voteType=="nothing")
         {
             voteQuestion(id,"downVote");
             upvote.setAttribute("src","/images/upvote-14.svg");

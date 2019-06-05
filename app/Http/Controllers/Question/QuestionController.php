@@ -17,7 +17,7 @@ class QuestionController extends Controller
 
     public function __construct()
     {
-       $this->middleware('auth')->except(['get', 'getAnswers','show']);
+       $this->middleware('auth')->except(['get', 'getAnswers','show','answersToAnswer']);
     }
 
     /**

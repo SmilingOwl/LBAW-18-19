@@ -6,6 +6,111 @@ function onLoadDetail() {
     expandClick();
 }
 
+function voteAnswer(id,type) {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        method: 'get',
+        url: '/answers/' + id + "/" + type,
+        success: function (data) {
+            console.log("voted");
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
+}
+
+function voteAnswerEvent(element) {
+    let divVote = element;
+    let voteType = divVote.getAttribute("data-type");
+    let auth = divVote.getAttribute("data-auth");
+    let id= divVote.getAttribute("data-id");
+    let voteTextNumber = divVote.querySelector(".number-votes").getAttribute("data-number");
+    let upvote = divVote.querySelector(".answer-upvote");
+    let downvote = divVote.querySelector(".answer-downvote");
+    upvote.addEventListener("click",function() {
+        if(auth=="0")
+        {
+            window.location.href = "/login";
+            return ;
+        }
+        if(voteType == "null" || voteType.length == 0 || voteType=="nothing")
+        {
+            voteAnswer(id,"upVote");
+            upvote.setAttribute("src","/images/icon-14.svg");
+            downvote.setAttribute("src","/images/broken-19.svg");
+            divVote.setAttribute("data-type","upvote");
+            voteTextNumber=(parseInt(voteTextNumber)+1);
+        }
+        else if(voteType == "downvote")
+        {
+            voteAnswer(id,"upVote");
+            upvote.setAttribute("src","/images/icon-14.svg");
+            downvote.setAttribute("src","/images/broken-19.svg");
+            divVote.setAttribute("data-type","upvote");
+            voteTextNumber=(parseInt(voteTextNumber)+2);
+        }
+        else if(voteType == "upvote")
+        {
+            voteAnswer(id,"nothingVote");
+            upvote.setAttribute("src","/images/upvote-14.svg");
+            downvote.setAttribute("src","/images/broken-19.svg");
+            divVote.setAttribute("data-type","nothing");
+            voteTextNumber=(parseInt(voteTextNumber)-1);
+        }
+        divVote.querySelector(".number-votes").setAttribute("data-number",voteTextNumber);
+        if(voteTextNumber>1000)
+        {
+            divVote.querySelector(".number-votes").innerHTML=parseFloat(voteTextNumber/1000).toFixed(1) + "K";
+        }
+        else
+            divVote.querySelector(".number-votes").innerHTML=voteTextNumber;
+        voteType=divVote.getAttribute("data-type");
+    });
+    downvote.addEventListener("click",function() {
+        if(auth=="0")
+        {
+            window.location.href = "/login";
+            return ;
+        }
+        if(voteType == "null" || voteType.length == 0 || voteType=="nothing")
+        {
+            voteAnswer(id,"downVote");
+            upvote.setAttribute("src","/images/upvote-14.svg");
+            downvote.setAttribute("src","/images/downvote-19.svg");
+            divVote.setAttribute("data-type","downvote");
+            voteTextNumber=(parseInt(voteTextNumber)-1);
+        }
+        else if(voteType == "downvote")
+        {
+            voteAnswer(id,"nothingVote");
+            upvote.setAttribute("src","/images/upvote-14.svg");
+            downvote.setAttribute("src","/images/broken-19.svg");
+            divVote.setAttribute("data-type","nothing");
+            voteTextNumber=(parseInt(voteTextNumber)+1);
+        }
+        else if(voteType == "upvote")
+        {
+            voteAnswer(id,"downVote");
+            upvote.setAttribute("src","/images/upvote-14.svg");
+            downvote.setAttribute("src","/images/downvote-19.svg");
+            divVote.setAttribute("data-type","downvote");
+            voteTextNumber=(parseInt(voteTextNumber)-2);
+        }
+        divVote.querySelector(".number-votes").setAttribute("data-number",voteTextNumber);
+        if(voteTextNumber>1000)
+        {
+            divVote.querySelector(".number-votes").innerHTML=parseFloat(voteTextNumber/1000).toFixed(1) + "K";
+        }
+        else
+            divVote.querySelector(".number-votes").innerHTML=voteTextNumber;
+        voteType=divVote.getAttribute("data-type");
+    });
+}
 
 
 function addAnswer()
@@ -60,10 +165,29 @@ function getAnswers(answer,element) {
             +'</div><div class="bottom-answer">'
             +'<a href="#" style="font-family: \'Prompt\', sans-serif; color: #BE4627;">Report</a>'
             +'<div class="answer-up-votes" data-auth="'+info.auth+'" data-type="'+info.votetype+'" data-id="'+info.id_answer+'" >'
-            +'<img src="/images/icon-14.svg" alt="up-vote" class="media-object" style="width:1.2rem; height: 1.2rem;">'
-            +info.votes
-            +'<img src="/images/broken-19.svg" alt="down-vote" class="media-object" style="width:1.2rem; height: 1.2rem;">'
-            +'</div>'
+            if(info.votetype == "upvote")
+            {
+                htmlContent+='<img src="/images/icon-14.svg" alt="up-vote" class="media-object answer-upvote" style="width:1.2rem; height: 1.2rem;">';
+            }
+            else
+            {
+                htmlContent+='<img src="/images/upvote-14.svg" alt="up-vote" class="media-object answer-upvote" style="width:1.2rem; height: 1.2rem;">';
+            }
+            htmlContent+='<span class="number-votes" data-number="'+info.votes+'">';
+            if(info.votes > 1000)
+                htmlContent+=parseFloat(info.votes/1000).toFixed(1) + "K";
+            else
+                htmlContent+=info.votes;
+            htmlContent+='</span>';
+            if(info.votetype == "downvote")
+            {
+                htmlContent+='<img src="/images/downvote-19.svg" alt="down-vote" class="media-object answer-downvote" style="width:1.2rem; height: 1.2rem;">';
+            }
+            else
+            {
+                htmlContent+='<img src="/images/broken-19.svg" alt="down-vote" class="media-object answer-downvote" style="width:1.2rem; height: 1.2rem;">';
+            }
+            htmlContent+='</div>'
             +'<a href="#" ><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i></a>'
             +'</div>';
             if(info.nr_answers!=null)
@@ -101,6 +225,7 @@ function getAnswers(answer,element) {
             }
 
             expandClick();
+            voteAnswerEvent(element.querySelector(".answer-up-votes"));
             
         },
         error: function (data) {
