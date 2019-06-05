@@ -168,49 +168,76 @@ class ProfileController extends Controller
     }
 
     public function ban(Request $request,$username){
-        $member=Member::find(Auth::user()->id_user);
-        $member->banned = true;
-        $member->save();
-        return redirect()->back();
+        $replace = [
+            'username' => Auth::user()['username']
+        ];
+        $type = collect(DB::select('select role.type as type from "user",role where "user".username = :username and role.id_user = "user".id_user',$replace))->first();
+        if($type->type === "administrator" || $type->type === "moderator")
+        {
+            DB::select('
+            UPDATE "user"
+            SET banned = true
+            WHERE "user".username = :username;
+            ',['username' => $username]
+            );
+        }
     }
 
-    //TODOOOOOOOOOOO
     public function dismissModerator(Request $request,$username){
+        $replace = [
+            'username' => Auth::user()['username']
+        ];
+        $type = collect(DB::select('select role.type as type from "user",role where "user".username = :username and role.id_user = "user".id_user',$replace))->first();
+        if($type->type === "administrator")
+        {
+            $id_user = collect(DB::select('
+            SELECT id_user
+            FROM "user"
+            WHERE "user".username LIKE :username
+            ',['username' => $username]))->first()->id_user;
 
-        $member=Member::find(Auth::user()->id_user);
-        $role = new Role();
-        $role->type = request('member');
-        $role->beginningDate = request('');
-        $role->endDate = request('');
-        $role->id_user = Auth::user()->id_user;
+            DB::select('
+            UPDATE role
+            SET endDate = now()
+            WHERE id_user = :id_user AND endDate IS NULL;
+            ',['id_user' => $id_user]
+            );
+
+            DB::select('
+            INSERT INTO role(type,beginningDate,endDate,id_user)
+            VALUES(:type,now(),NULL,:id_user)
+            ',['type' => 'member','id_user' => $id_user]
+            );
+        }
         
-        if($role->save())
-        {
-            return redirect()->back();
-        }
-        else
-        {
-            return Redirect::back()->withErrors(['Unable to create a new role.']);
-        }
 
     }
-    //TODOOOOOOOOOOOo
+
     public function promoteToModerator(Request $request,$username){
-        $member=Member::find(Auth::user()->id_user);
-       
-        $role = new Role();
-        $role->type = request('moderator');
-        $role->beginningDate = request('');
-        $role->endDate = request('');
-        $role->id_user = Auth::user()->id_user;
-        
-        if($role->save())
+        $replace = [
+            'username' => Auth::user()['username']
+        ];
+        $type = collect(DB::select('select role.type as type from "user",role where "user".username = :username and role.id_user = "user".id_user',$replace))->first();
+        if($type->type === "administrator")
         {
-            return redirect()->back();
-        }
-        else
-        {
-            return Redirect::back()->withErrors(['Unable to create a new role.']);
+            $id_user = collect(DB::select('
+            SELECT id_user
+            FROM "user"
+            WHERE "user".username LIKE :username
+            ',['username' => $username]))->first()->id_user;
+
+            DB::select('
+            UPDATE role
+            SET endDate = now()
+            WHERE id_user = :id_user AND endDate IS NULL;
+            ',['id_user' => $id_user]
+            );
+
+            DB::select('
+            INSERT INTO role(type,beginningDate,endDate,id_user)
+            VALUES(:type,now(),NULL,:id_user)
+            ',['type' => 'moderator','id_user' => $id_user]
+            );
         }
 
 

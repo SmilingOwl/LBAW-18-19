@@ -287,6 +287,11 @@ UPDATE voteQuestion
 SET type = $type
 WHERE username = $username AND id_question = $id_question;
 
+-- end a role 
+UPDATE role
+SET endDate = now()
+WHERE id_user = $id_user;
+
 
 -----------------------------------------
 --DELETES
@@ -358,4 +363,8 @@ VALUES($username, $id_question);
 
 -- add new vote Question
 INSERT INTO voteQuestion(username,id_question,type)
-Values($username,$id_question,$type)
+Values($username,$id_question,$type);
+
+-- add new role
+INSERT INTO role(type,beginningDate,endDate,id_user)
+VALUES($type,now(),NULL,$id_user);
