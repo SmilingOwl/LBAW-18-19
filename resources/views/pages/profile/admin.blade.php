@@ -142,7 +142,7 @@
                       <td>{{$mod->rankname}}</td>
                       <td>
                         <div class="btn-group" role="group" aria-label="Basic example">
-                          <button type="button" class="btn btn-danger .btn-sm" value ="{{$mod->username}}" onclick="dismissModerator()">Dismiss</button>
+                          <button type="button" class="btn btn-danger .btn-sm" onclick="dismissModerator('{{$mod->username}}')">Dismiss</button>
                         </div>
     
                       </td>
