@@ -15,9 +15,13 @@ function voteAnswer(id,type) {
         method: 'get',
         url: '/answers/' + id + "/" + type,
         success: function (data) {
+            if(data=="ok")
+                return true;
+            else
+                return false;
         },
         error: function (data) {
-            console.log("server error");
+            return false;
         }
     });
 }
@@ -29,6 +33,8 @@ function firstAnswersVotes() {
         let voteType = divVote.getAttribute("data-type");
         let auth = divVote.getAttribute("data-auth");
         let id= divVote.getAttribute("data-id");
+        let owner = divVote.getAttribute("data-owner");
+        if(owner == username) continue;
         let voteTextNumber = divVote.querySelector(".number-votes").getAttribute("data-number");
         let upvote = divVote.querySelector(".answer-upvote");
         let downvote = divVote.querySelector(".answer-downvote");
@@ -126,9 +132,10 @@ function voteQuestion(id,type) {
         method: 'get',
         url: '/questions/' + id + "/" + type,
         success: function (data) {
+            return true;
         },
         error: function (data) {
-            console.log("server error");
+            return false;
         }
     });
 }
@@ -138,6 +145,9 @@ function questionVotes() {
     let voteType = divVote.getAttribute("data-type");
     let auth = divVote.getAttribute("data-auth");
     let id= divVote.getAttribute("data-id");
+    let owner = divVote.getAttribute("data-owner");
+    if(owner == username)
+        return;
     let voteTextNumber = divVote.querySelector(".number-votes").getAttribute("data-number");
     let upvote = divVote.querySelector(".question-upvote");
     let downvote = divVote.querySelector(".question-downvote");
@@ -149,7 +159,7 @@ function questionVotes() {
         }
         if(voteType == "null" || voteType.length == 0 || voteType=="nothing")
         {
-            voteQuestion(id,"upVote");
+            voteAnswer(id,"upVote");
             upvote.setAttribute("src","/images/icon-14.svg");
             downvote.setAttribute("src","/images/broken-19.svg");
             divVote.setAttribute("data-type","upvote");
@@ -157,7 +167,7 @@ function questionVotes() {
         }
         else if(voteType == "downvote")
         {
-            voteQuestion(id,"upVote");
+            voteAnswer(id,"upVote");
             upvote.setAttribute("src","/images/icon-14.svg");
             downvote.setAttribute("src","/images/broken-19.svg");
             divVote.setAttribute("data-type","upvote");
@@ -165,7 +175,7 @@ function questionVotes() {
         }
         else if(voteType == "upvote")
         {
-            voteQuestion(id,"nothingVote");
+            voteAnswer(id,"nothingVote");
             upvote.setAttribute("src","/images/upvote-14.svg");
             downvote.setAttribute("src","/images/broken-19.svg");
             divVote.setAttribute("data-type","nothing");
@@ -188,7 +198,7 @@ function questionVotes() {
         }
         if(voteType == "null" || voteType.length == 0 || voteType=="nothing")
         {
-            voteQuestion(id,"downVote");
+            voteAnswer(id,"downVote");
             upvote.setAttribute("src","/images/upvote-14.svg");
             downvote.setAttribute("src","/images/downvote-19.svg");
             divVote.setAttribute("data-type","downvote");
@@ -196,7 +206,7 @@ function questionVotes() {
         }
         else if(voteType == "downvote")
         {
-            voteQuestion(id,"nothingVote");
+            voteAnswer(id,"nothingVote");
             upvote.setAttribute("src","/images/upvote-14.svg");
             downvote.setAttribute("src","/images/broken-19.svg");
             divVote.setAttribute("data-type","nothing");
@@ -204,7 +214,7 @@ function questionVotes() {
         }
         else if(voteType == "upvote")
         {
-            voteQuestion(id,"downVote");
+            voteAnswer(id,"downVote");
             upvote.setAttribute("src","/images/upvote-14.svg");
             downvote.setAttribute("src","/images/downvote-19.svg");
             divVote.setAttribute("data-type","downvote");

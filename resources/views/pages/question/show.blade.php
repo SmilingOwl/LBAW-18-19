@@ -39,7 +39,7 @@
             <div id="accordion">
                 <div class="card" style="border-style:none;">
                     <div class="card-header title-upvotes">
-                        <div class="answer-up-votes-mainquestion" data-auth="{{$user}}" data-type="{{$question->votetype}}" data-id={{$question->id_question}}>
+                        <div class="answer-up-votes-mainquestion" data-auth="{{$user}}" data-type="{{$question->votetype}}" data-id="{{$question->id_question}}" data-owner="{{$question->username}}">
                             @if ($question->votetype=='upvote')
                                 <img src="/images/icon-14.svg" alt="up-vote" class="media-object question-upvote" style="width:1.5rem; height: 1.5rem;">
                             @else
@@ -74,16 +74,23 @@
         </div>
     </div>
     <div class="card make-comment" style="margin-bottom:1em;" id="no-thin-line2">
-        <div class="card-body add-comment-body" id="commentAdd">
-            <div class="form-group">
-                <label for="comment">Comment:</label>
-                <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
+        <form action="/answers/addToQuestion" method="post">
+            {{ method_field('PUT') }}
+            {{ csrf_field() }}
+            <div class="card-body add-comment-body" id="commentAdd">
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <input type="hidden" name="id_question" value="{{$question->id_question}}">
+                    <textarea class="form-control" rows="3" id="comment" name="text" required></textarea>
+                    <div class="invalid-feedback">
+                            There needs to be a comment
+                    </div>
+                </div>
+                <div class="btn-group" style="align-self:flex-end;">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
             </div>
-            <div class="btn-group" style="align-self:flex-end;">
-                <button type="button" class="btn btn-dark">Submit</button>
-                <button type="button" class="btn btn-secondary">Cancel</button>
-            </div>
-        </div>
+        </form>
     </div>  
     <div id="accordion2">
         <div class="card no-thin-line">
@@ -137,7 +144,7 @@
 
                                         <div class="bottom-answer">
                                             <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</a>
-                                            <div class="answer-up-votes" data-auth="{{$user}}" data-type="{{$answer->votetype}}" data-id={{$answer->id_answer}}>
+                                            <div class="answer-up-votes" data-auth="{{$user}}" data-type="{{$answer->votetype}}" data-id="{{$answer->id_answer}}" data-owner="{{$answer->username}}">
                                                 @if ($answer->votetype=='upvote')
                                                     <img src="/images/icon-14.svg" alt="up-vote" class="media-object answer-upvote" style="width:1.2rem; height: 1.2rem;">
                                                 @else

@@ -47,6 +47,7 @@ Route::get('questions/{id_question}/nothingVote', 'VoteController@nothingVoteQue
 Route::get('answers/{id_answer}/upVote', 'VoteController@upVoteAnswer');
 Route::get('answers/{id_answer}/downVote', 'VoteController@downVoteAnswer');
 Route::get('answers/{id_answer}/nothingVote', 'VoteController@nothingVoteAnswer');
+Route::put('answers/addToQuestion', 'Question\AnswerController@addToQuestion');
 Route::put('questions/{id_question}/edit', 'Question\QuestionController@update')->name('question.update');
 //Route::get('topic/{category}', 'Question\QuestionController@topic');
 Route::get('answersToAnswer/{id}', 'Question\QuestionController@answersToAnswer');

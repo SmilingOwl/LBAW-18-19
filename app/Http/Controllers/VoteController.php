@@ -16,6 +16,14 @@ class VoteController extends Controller
                 'id_question' => $id,
                 'id_user' => Auth::user()->id_user
             ];
+            $questionOwner = collect(DB::select('
+            SELECT id_user
+            FROM question
+            WHERE id_question = :id_question 
+            ',['id_question' => $id]
+            ))->first()->id_user;
+            if(Auth::user()->id_user == $questionOwner)
+                return 'error';
             $alreadyVoted=DB::select('
             SELECT type
             FROM voteQuestion
@@ -79,6 +87,7 @@ class VoteController extends Controller
                     );
                 }
             }
+            return 'ok';
         }
         else
         {
@@ -93,7 +102,14 @@ class VoteController extends Controller
                 'id_question' => $id,
                 'id_user' => Auth::user()->id_user
             ];
-
+            $questionOwner =collect(DB::select('
+            SELECT id_user
+            FROM question
+            WHERE id_question = :id_question 
+            ',['id_question' => $id]
+            ))->first()->id_user;
+            if(Auth::user()->id_user == $questionOwner)
+                return 'error';
             $alreadyVoted=DB::select('
             SELECT type
             FROM voteQuestion
@@ -157,6 +173,7 @@ class VoteController extends Controller
                     );
                 }
             }
+            return 'ok';
         }
         else
         {
@@ -171,6 +188,14 @@ class VoteController extends Controller
                 'id_question' => $id,
                 'id_user' => Auth::user()->id_user
             ];
+            $questionOwner =collect(DB::select('
+            SELECT id_user
+            FROM question
+            WHERE id_question = :id_question 
+            ',['id_question' => $id]
+            ))->first()->id_user;
+            if(Auth::user()->id_user == $questionOwner)
+                return 'error';
             $alreadyVoted=DB::select('
             SELECT type
             FROM voteQuestion
@@ -225,6 +250,7 @@ class VoteController extends Controller
                     );
                 }
             }
+            return 'ok';
         }
         else
         {
@@ -247,6 +273,14 @@ class VoteController extends Controller
                 'id_answer' => $id,
                 'id_user' => Auth::user()->id_user
             ];
+            $answerOwner =collect(DB::select('
+            SELECT user_post as id_user
+            FROM answer
+            WHERE id_answer = :id_answer 
+            ',['id_answer' => $id]
+            ))->first()->id_user;
+            if(Auth::user()->id_user == $answerOwner)
+                return 'error';
             $alreadyVoted=DB::select('
             SELECT type
             FROM voteAnswer
@@ -310,6 +344,7 @@ class VoteController extends Controller
                     );
                 }
             }
+            return 'ok';
         }
         else
         {
@@ -324,6 +359,14 @@ class VoteController extends Controller
                 'id_answer' => $id,
                 'id_user' => Auth::user()->id_user
             ];
+            $answerOwner =collect(DB::select('
+            SELECT user_post as id_user
+            FROM answer
+            WHERE id_answer = :id_answer 
+            ',['id_answer' => $id]
+            ))->first()->id_user;
+            if(Auth::user()->id_user == $answerOwner)
+                return 'error';
             $alreadyVoted=DB::select('
             SELECT type
             FROM voteAnswer
@@ -387,6 +430,7 @@ class VoteController extends Controller
                     );
                 }
             }
+            return 'ok';
         }
         else
         {
@@ -401,6 +445,14 @@ class VoteController extends Controller
                 'id_answer' => $id,
                 'id_user' => Auth::user()->id_user
             ];
+            $answerOwner =collect(DB::select('
+            SELECT user_post as id_user
+            FROM answer
+            WHERE id_answer = :id_answer 
+            ',['id_answer' => $id]
+            ))->first()->id_user;
+            if(Auth::user()->id_user == $answerOwner)
+                return 'error';
             $alreadyVoted=DB::select('
             SELECT type
             FROM voteAnswer
@@ -455,6 +507,7 @@ class VoteController extends Controller
                     );
                 }
             }
+            return 'ok';
         }
         else
         {

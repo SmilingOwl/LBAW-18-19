@@ -27,10 +27,13 @@ function voteAnswer(id,type) {
         method: 'get',
         url: '/answers/' + id + "/" + type,
         success: function (data) {
-            console.log("voted");
+            if(data=="ok")
+                return true;
+            else
+                return false;
         },
         error: function (data) {
-            console.log("server error");
+            return false;
         }
     });
 }
@@ -40,6 +43,8 @@ function voteAnswerEvent(element) {
     let voteType = divVote.getAttribute("data-type");
     let auth = divVote.getAttribute("data-auth");
     let id= divVote.getAttribute("data-id");
+    let owner = divVote.getAttribute("data-owner");
+    if(owner == username) return;
     let voteTextNumber = divVote.querySelector(".number-votes").getAttribute("data-number");
     let upvote = divVote.querySelector(".answer-upvote");
     let downvote = divVote.querySelector(".answer-downvote");
@@ -175,7 +180,7 @@ function getAnswers(answer,element) {
             +info.text
             +'</div><div class="bottom-answer">'
             +'<a href="#" style="font-family: \'Prompt\', sans-serif; color: #BE4627;">Report</a>'
-            +'<div class="answer-up-votes" data-auth="'+info.auth+'" data-type="'+info.votetype+'" data-id="'+info.id_answer+'" >'
+            +'<div class="answer-up-votes" data-auth="'+info.auth+'" data-type="'+info.votetype+'" data-id="'+info.id_answer+'" data-owner="'+info.username+'">'
             if(info.votetype == "upvote")
             {
                 htmlContent+='<img src="/images/icon-14.svg" alt="up-vote" class="media-object answer-upvote" style="width:1.2rem; height: 1.2rem;">';
@@ -262,6 +267,5 @@ function expandClick() {
         if(aq.innerHTML.length==0)
             answer.addEventListener("click",load);
         
-    }
-    
+    }   
 }
