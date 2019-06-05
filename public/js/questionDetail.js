@@ -4,7 +4,18 @@ window.addEventListener("load",onLoadDetail);
 function onLoadDetail() {
     addAnswer();
     expandClick();
+    commentActivate();
 }
+
+
+function commentActivate() {
+    
+}
+
+
+
+
+
 
 function voteAnswer(id,type) {
     $.ajaxSetup({
@@ -188,7 +199,7 @@ function getAnswers(answer,element) {
                 htmlContent+='<img src="/images/broken-19.svg" alt="down-vote" class="media-object answer-downvote" style="width:1.2rem; height: 1.2rem;">';
             }
             htmlContent+='</div>'
-            +'<a href="#" ><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i></a>'
+            +'<span class="make-comment"><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i>Reply</span>'
             +'</div>';
             if(info.nr_answers!=null)
             {

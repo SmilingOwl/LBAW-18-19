@@ -73,7 +73,18 @@
             <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</a>
         </div>
     </div>
-        
+    <div class="card make-comment" style="margin-bottom:1em;" id="no-thin-line2">
+        <div class="card-body add-comment-body" id="commentAdd">
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
+            </div>
+            <div class="btn-group" style="align-self:flex-end;">
+                <button type="button" class="btn btn-dark">Submit</button>
+                <button type="button" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>  
     <div id="accordion2">
         <div class="card no-thin-line">
             <div class="card-header answer-header">
@@ -147,7 +158,7 @@
 
 
                                             </div>
-                                            <a href="#" ><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i></a>
+                                            <span class="make-comment"><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i>Reply</span>
                                         </div>
 
                                         @if (!is_null($answer->nr_answers))
@@ -188,21 +199,7 @@
 
 
 
-    <div class="card" style="margin-bottom:1em;" id="no-thin-line2">
-        <div class="card-body add-comment-body" id="commentAdd">
-            <form action="/action_page.php" class="add-comment-body">
-                <div class="form-group">
-                    <label for="comment">Comment:</label>
-                    <textarea class="form-control" rows="3" id="comment" name="text"></textarea>
-                </div>
-                <div class="btn-group" style="align-self:flex-end;">
-                    <button type="button" class="btn btn-dark">Submit</button>
-                    <button type="button" class="btn btn-secondary">Cancel</button>
-                </div>
-            </form>
-        </div>
-
-    </div>
+    
 
 </div>
 
