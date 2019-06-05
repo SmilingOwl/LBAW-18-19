@@ -93,6 +93,7 @@ class VoteController extends Controller
                 'id_question' => $id,
                 'id_user' => Auth::user()->id_user
             ];
+
             $alreadyVoted=DB::select('
             SELECT type
             FROM voteQuestion

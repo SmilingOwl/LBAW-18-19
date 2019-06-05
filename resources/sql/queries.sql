@@ -313,8 +313,8 @@ WHERE "user".id_user = $id_user;
 -----------------------------------------
 
 -- add new notification to an user
-INSERT INTO notification (description, type, view,"date",id_user)
-VALUES ($description, $type, $view, now(), $id_user);
+INSERT INTO notification (description, type, view,"date",questionTarget,target,)
+VALUES ($description, $type, $view, now(), $questionTarget,$target,$creator);
 
 
 -- add new user
