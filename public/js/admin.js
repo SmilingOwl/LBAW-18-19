@@ -15,11 +15,10 @@ function onLoadAdimn() {
 
 //-----------------------Admin buttons---------------------------
 
-function banUser(e){
-    console.log(e);
+function banUser(username){
     $.ajax({
         type:'post',
-        url:'api/members/'+ '".username."' +'/ban',
+        url:'/api/members/'+ username +'/ban',
         data:'_token = <?php echo csrf_token() ?>',
         success:function(data){
        
@@ -34,7 +33,7 @@ function banUser(e){
 function dismissModerator(username){
     $.ajax({
         method:'post',
-        url:'api/members/'+ username +'/dismiss',
+        url:'/api/members/'+ username +'/dismiss',
         data:'_token = <?php echo csrf_token() ?>',
         success:function(data){
        
@@ -60,11 +59,26 @@ function promoteUser(username){
 }
 
 function deleteContent(){
+    $.ajax({
+        success:function(data){
+       
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
   
 }
 
 function ignoreReport(){
-    
+    $.ajax({
+        success:function(data){
+       
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
 }
 
 
