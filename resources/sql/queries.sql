@@ -103,7 +103,7 @@ SELECT answer.id_answer as id_answer,"user".username as username, "user".profile
     SELECT count(secondAnswer)
     FROM comment
     WHERE comment.firstAnswer = answer.id_answer
-    GROUP BY comment.secondAnswer
+    GROUP BY comment.firstAnswer
 ) as nr_answers,
 (
     SELECT count(id_bestAnswer)
@@ -321,6 +321,9 @@ WHERE "user".id_user = $id_user;
 INSERT INTO notification (description, type, view,"date",questionTarget,target,creator)
 VALUES ($description, $type, $view, now(), $questionTarget,$target,$creator);
 
+-- add new notification to an user
+INSERT INTO comment (firstAnswer, secondAnswer)
+VALUES ($firstAnswer,$secondAnswer);
 
 -- add new user
 INSERT INTO "user" (username, password, email, bioDescription, birthdate, profilePhoto, points, id_rank, banned, deleted) 

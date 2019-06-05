@@ -158,7 +158,7 @@ class QuestionController extends Controller
             'id_question' => $id_question,
             'id_user' => $user
         ];
-
+        DB::beginTransaction();
         $question = collect(DB::select('
         SELECT "user".username as username, "user".profilePhoto as profilePhoto, question.title as title, question.description as description, question."date" as date, question.votes as votes, question.id_question as id_question,
         (
@@ -188,7 +188,7 @@ class QuestionController extends Controller
             SELECT count(secondAnswer)
             FROM comment
             WHERE comment.firstAnswer = answer.id_answer
-            GROUP BY comment.secondAnswer
+            GROUP BY comment.firstAnswer
         ) as nr_answers,
         (
             SELECT count(id_bestAnswer)
@@ -207,6 +207,7 @@ class QuestionController extends Controller
             FROM comment
         );
         ',$replaces);
+        DB::commit();
         if(Auth::check())
             return view('pages.question.show')->with('question', $question)->with('answers',$answers)->with('user',1);
         else
@@ -224,7 +225,7 @@ class QuestionController extends Controller
             'id_user' => $user
         ];
         $answers = DB::select('
-        SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo,
+        SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo,answer.id_question as id_question,
         (
             SELECT count(secondAnswer)
             FROM comment

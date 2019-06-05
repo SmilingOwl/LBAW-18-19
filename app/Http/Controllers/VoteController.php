@@ -40,6 +40,7 @@ class VoteController extends Controller
                 $updateVote = [
                     'id_question' => $id
                 ];
+                DB::beginTransaction();
                 DB::select('
                 INSERT INTO voteQuestion(username,id_question,type)
                 Values(:username,:id_question,:type)
@@ -51,6 +52,7 @@ class VoteController extends Controller
                 WHERE id_question = :id_question;
                 ',$updateVote
                 );
+                DB::commit();
             }
             else
             {
@@ -62,6 +64,7 @@ class VoteController extends Controller
                 $updateVote = [
                     'id_question' => $id
                 ];
+                DB::beginTransaction();
                 DB::select('
                 UPDATE voteQuestion
                 SET type = :type
@@ -86,6 +89,7 @@ class VoteController extends Controller
                     ',$updateVote
                     );
                 }
+                DB::commit();
             }
             return 'ok';
         }
@@ -126,6 +130,7 @@ class VoteController extends Controller
                 $updateVote = [
                     'id_question' => $id
                 ];
+                DB::beginTransaction();
                 DB::select('
                 INSERT INTO voteQuestion(username,id_question,type)
                 Values(:username,:id_question,:type)
@@ -137,6 +142,7 @@ class VoteController extends Controller
                 WHERE id_question = :id_question;
                 ',$updateVote
                 );
+                DB::commit();
             }
             else
             {
@@ -148,6 +154,7 @@ class VoteController extends Controller
                 $updateVote = [
                     'id_question' => $id
                 ];
+                DB::beginTransaction();
                 DB::select('
                 UPDATE voteQuestion
                 SET type = :type
@@ -172,6 +179,7 @@ class VoteController extends Controller
                     ',$updateVote
                     );
                 }
+                DB::commit();
             }
             return 'ok';
         }
@@ -225,6 +233,7 @@ class VoteController extends Controller
                 $updateVote = [
                     'id_question' => $id
                 ];
+                DB::beginTransaction();
                 DB::select('
                 UPDATE voteQuestion
                 SET type = :type
@@ -249,6 +258,7 @@ class VoteController extends Controller
                     ',$updateVote
                     );
                 }
+                DB::commit();
             }
             return 'ok';
         }
@@ -297,6 +307,7 @@ class VoteController extends Controller
                 $updateVote = [
                     'id_answer' => $id
                 ];
+                DB::beginTransaction();
                 DB::select('
                 INSERT INTO voteAnswer(username,id_answer,type)
                 Values(:username,:id_answer,:type)
@@ -308,6 +319,7 @@ class VoteController extends Controller
                 WHERE id_answer = :id_answer;
                 ',$updateVote
                 );
+                DB::commit();
             }
             else
             {
@@ -319,6 +331,7 @@ class VoteController extends Controller
                 $updateVote = [
                     'id_answer' => $id
                 ];
+                DB::beginTransaction();
                 DB::select('
                 UPDATE voteAnswer
                 SET type = :type
@@ -343,6 +356,7 @@ class VoteController extends Controller
                     ',$updateVote
                     );
                 }
+                DB::commit();
             }
             return 'ok';
         }
@@ -383,6 +397,7 @@ class VoteController extends Controller
                 $updateVote = [
                     'id_answer' => $id
                 ];
+                DB::beginTransaction();
                 DB::select('
                 INSERT INTO voteAnswer(username,id_answer,type)
                 Values(:username,:id_answer,:type)
@@ -394,6 +409,7 @@ class VoteController extends Controller
                 WHERE id_answer = :id_answer;
                 ',$updateVote
                 );
+                DB::commit();
             }
             else
             {
@@ -405,6 +421,7 @@ class VoteController extends Controller
                 $updateVote = [
                     'id_answer' => $id
                 ];
+                DB::beginTransaction();
                 DB::select('
                 UPDATE voteAnswer
                 SET type = :type
@@ -429,6 +446,7 @@ class VoteController extends Controller
                     ',$updateVote
                     );
                 }
+                DB::commit();
             }
             return 'ok';
         }

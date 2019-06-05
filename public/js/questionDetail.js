@@ -6,9 +6,68 @@ function onLoadDetail() {
     expandClick();
     commentActivate();
 }
-
+function commentDiv(id_answer,id_question) {
+    let devolver = document.createElement("div");
+    devolver.setAttribute("class","card make-comment");
+    devolver.setAttribute("style","margin-bottom:1em;");
+    devolver.innerHTML='<form action="/answers/addToAnswer" method="post">'
+    +'<input type="hidden" name="_token" id="csrf-token" value="'+$('meta[name="csrf-token"]').attr('content')+'" />'
+    +'<input type="hidden" name="_method" value="PUT">'
+    +'<div class="card-body add-comment-body" id="commentAdd">'
+    +'<div class="form-group">'
+    +'<label for="comment">Comment:</label>'
+    +'<input type="hidden" name="id_answer" value="'+id_answer+'">'
+    +'<input type="hidden" name="id_question" value="'+id_question+'">'
+    +'<textarea class="form-control" rows="3" id="comment" name="text" required></textarea>'
+    +'<div class="invalid-feedback">There needs to be a comment</div></div>'
+    +'<div class="btn-group" style="align-self:flex-end;">'
+    +'<button type="submit" class="btn btn-dark">Submit</button>'
+    +'</div></div></form>';
+    return devolver;
+} 
 
 function commentActivate() {
+
+    let answerCards = document.querySelectorAll(".answer-question .media-body");
+    for(let i=0;i<answerCards.length;i++)
+    {
+        let replyButton = answerCards[i].querySelector(".make-comment");
+        let open=false;
+        let element = commentDiv(replyButton.getAttribute("data-id"),replyButton.getAttribute("data-belongs"));
+
+        replyButton.addEventListener("click",function() {
+            if(open)
+            {
+                answerCards[i].removeChild(element);
+                open=false;
+            }
+            else
+            {
+                answerCards[i].appendChild(element);
+                open=true;
+            }
+            
+        });
+    }
+}
+function activateSingleComment(card) {
+    let replyButton = card.querySelector(".make-comment");
+    let open=false;
+    let element = commentDiv(replyButton.getAttribute("data-id"),replyButton.getAttribute("data-belongs"));
+
+    replyButton.addEventListener("click",function() {
+        if(open)
+        {
+            card.removeChild(element);
+            open=false;
+        }
+        else
+        {
+            card.appendChild(element);
+            open=true;
+        }
+        
+    });
     
 }
 
@@ -158,93 +217,106 @@ function getAnswers(answer,element) {
         method: 'get',
         url: '/answersToAnswer/' + answer,
         success: function (data) {
-            let info=data[0];
-            let htmlContent='<div class="card-header comment-title">'
-            +'<div class="card-link answer-header-icon" >'
-            +'<div class="row">'
-            +'<div class="answer-user">'
-            +'<a href="/profile/'+info.username+'">'
-            +'<img src="/images/'+info.profilephoto+'" alt="User2" class="rounded-circle" style="width:2em; margin:0;">'
-            +'</a>'
-            +'<a href="/profile/'+info.username+'">'+info.username
-            +'</a></div><div>';
-            if(info.best != null)
+            let htmlContent='';
+            for(let i=0;i<data.length;i++)
             {
-                htmlContent+='<img src="/images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">';
+                let info=data[i];
+                htmlContent+='<div class="card-header comment-title">'
+                +'<div class="card-link answer-header-icon" >'
+                +'<div class="row">'
+                +'<div class="answer-user">'
+                +'<a href="/profile/'+info.username+'">'
+                +'<img src="/images/'+info.profilephoto+'" alt="User2" class="rounded-circle" style="width:2em; margin:0;">'
+                +'</a>'
+                +'<a href="/profile/'+info.username+'">'+info.username
+                +'</a></div><div>';
+                if(info.best != null)
+                {
+                    htmlContent+='<img src="/images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">';
+                }
+                htmlContent+='</div></div><small>'+info.date
+                +'</small></div></div>'
+                +'<div class="card-body comment-body">'
+                +'<div class="media border p-3 answer-question">'
+                +'<div class="media-body"><div>'
+                +info.text
+                +'</div><div class="bottom-answer">'
+                +'<a href="#" style="font-family: \'Prompt\', sans-serif; color: #BE4627;">Report</a>'
+                +'<div class="answer-up-votes" data-auth="'+info.auth+'" data-type="'+info.votetype+'" data-id="'+info.id_answer+'" data-owner="'+info.username+'">'
+                if(info.votetype == "upvote")
+                {
+                    htmlContent+='<img src="/images/icon-14.svg" alt="up-vote" class="media-object answer-upvote" style="width:1.2rem; height: 1.2rem;">';
+                }
+                else
+                {
+                    htmlContent+='<img src="/images/upvote-14.svg" alt="up-vote" class="media-object answer-upvote" style="width:1.2rem; height: 1.2rem;">';
+                }
+                htmlContent+='<span class="number-votes" data-number="'+info.votes+'">';
+                if(info.votes > 1000)
+                    htmlContent+=parseFloat(info.votes/1000).toFixed(1) + "K";
+                else
+                    htmlContent+=info.votes;
+                htmlContent+='</span>';
+                if(info.votetype == "downvote")
+                {
+                    htmlContent+='<img src="/images/downvote-19.svg" alt="down-vote" class="media-object answer-downvote" style="width:1.2rem; height: 1.2rem;">';
+                }
+                else
+                {
+                    htmlContent+='<img src="/images/broken-19.svg" alt="down-vote" class="media-object answer-downvote" style="width:1.2rem; height: 1.2rem;">';
+                }
+                htmlContent+='</div>'
+                +'<span class="make-comment" data-id="'+info.id_answer+'" data-belongs="'+info.id_question+'"><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i>Reply</span>'
+                +'</div>';
+                if(info.nr_answers!=null)
+                {
+                    htmlContent+='<div class="media p-3 container-accordion">'
+                    +'<div id="accordion'+(info.id_answer+4)+'" value='+(info.id_answer+4)+'>'
+                    +'<div class="card no-thin-line">'
+                    +'<div class="card-header answer-header">'
+                    +'<a class="card-link" data-toggle="collapse" href="#answers-to-answers'+(info.id_answer+4)+'">'
+                    +'<span class="info-answers expand-icon"><i class="fas fa-plus-circle"></i>'
+                    +' '+info.nr_answers+ ' answer'+ ((info.nr_answers == 1) ? '' : 's')
+                    +'</span>'
+                    +'</a></div>'
+                    +'<div id="answers-to-answers'+(info.id_answer+4)+'" class="collapse" data-parent="#accordion'+(info.id_answer+4)+'">'
+                    +'<div class="card-body answer-body-all">'
+                    +'<div class="card" style="border-style:none;">'
+                    +'</div></div></div></div></div></div>';
+                }
+                htmlContent+='</div></div></div>';
             }
-            htmlContent+='</div></div><small>'+info.date
-            +'</small></div></div>'
-            +'<div class="card-body comment-body">'
-            +'<div class="media border p-3 answer-question">'
-            +'<div class="media-body"><div>'
-            +info.text
-            +'</div><div class="bottom-answer">'
-            +'<a href="#" style="font-family: \'Prompt\', sans-serif; color: #BE4627;">Report</a>'
-            +'<div class="answer-up-votes" data-auth="'+info.auth+'" data-type="'+info.votetype+'" data-id="'+info.id_answer+'" data-owner="'+info.username+'">'
-            if(info.votetype == "upvote")
-            {
-                htmlContent+='<img src="/images/icon-14.svg" alt="up-vote" class="media-object answer-upvote" style="width:1.2rem; height: 1.2rem;">';
-            }
-            else
-            {
-                htmlContent+='<img src="/images/upvote-14.svg" alt="up-vote" class="media-object answer-upvote" style="width:1.2rem; height: 1.2rem;">';
-            }
-            htmlContent+='<span class="number-votes" data-number="'+info.votes+'">';
-            if(info.votes > 1000)
-                htmlContent+=parseFloat(info.votes/1000).toFixed(1) + "K";
-            else
-                htmlContent+=info.votes;
-            htmlContent+='</span>';
-            if(info.votetype == "downvote")
-            {
-                htmlContent+='<img src="/images/downvote-19.svg" alt="down-vote" class="media-object answer-downvote" style="width:1.2rem; height: 1.2rem;">';
-            }
-            else
-            {
-                htmlContent+='<img src="/images/broken-19.svg" alt="down-vote" class="media-object answer-downvote" style="width:1.2rem; height: 1.2rem;">';
-            }
-            htmlContent+='</div>'
-            +'<span class="make-comment"><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i>Reply</span>x'
-            +'</div>';
-            if(info.nr_answers!=null)
-            {
-                htmlContent+='<div class="media p-3 container-accordion">'
-                +'<div id="accordion'+(info.id_answer+4)+'" value='+(info.id_answer+4)+'>'
-                +'<div class="card no-thin-line">'
-                +'<div class="card-header answer-header">'
-                +'<a class="card-link" data-toggle="collapse" href="#answers-to-answers'+(info.id_answer+4)+'">'
-                +'<span class="info-answers expand-icon"><i class="fas fa-plus-circle"></i>'
-                +' '+info.nr_answers+ ' answer'+ ((info.nr_answers == 1) ? '' : 's')
-                +'</span>'
-                +'</a></div>'
-                +'<div id="answers-to-answers'+(info.id_answer+4)+'" class="collapse" data-parent="#accordion'+(info.id_answer+4)+'">'
-                +'<div class="card-body answer-body-all">'
-                +'<div class="card" style="border-style:none;">'
-                +'</div></div></div></div></div></div>';
-            }
-            htmlContent+='</div></div></div>';
+
+
             element.innerHTML=htmlContent;
-            let answer = element.querySelector(".expand-icon");
+            let answer = element.querySelectorAll(".expand-icon");
             if(answer!=null)
             {
-                let info_i=answer.querySelector("i");
-                answer.addEventListener("click",function () {
-                    if(info_i.getAttribute("class") == "fas fa-plus-circle")
-                    {
-                        info_i.setAttribute("class","fas fa-minus-circle");
-                    }
-                    else  if(info_i.getAttribute("class") == "fas fa-minus-circle")
-                    {
-                        info_i.setAttribute("class","fas fa-plus-circle");
-                    }
-                });
+                for(let j=0;j<answer.length;j++)
+                {
+                    let info_i=answer[j].querySelector("i");
+                    answer[j].addEventListener("click",function () {
+                        if(info_i.getAttribute("class") == "fas fa-plus-circle")
+                        {
+                            info_i.setAttribute("class","fas fa-minus-circle");
+                        }
+                        else  if(info_i.getAttribute("class") == "fas fa-minus-circle")
+                        {
+                            info_i.setAttribute("class","fas fa-plus-circle");
+                        }
+                    });
+                }
             }
 
             expandClick();
-            voteAnswerEvent(element.querySelector(".answer-up-votes"));
+            activateSingleComment(element.querySelector(".media-body"));
+            let answersVotes = element.querySelectorAll(".answer-up-votes");
+            for(let k=0;k<answersVotes.length;k++)
+                voteAnswerEvent(answersVotes[k]);
             
         },
         error: function (data) {
+            console.log(data);
             element.innerHTML="Server Error";
             console.log("server error");
         }

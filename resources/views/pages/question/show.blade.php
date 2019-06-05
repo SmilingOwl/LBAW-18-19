@@ -165,7 +165,7 @@
 
 
                                             </div>
-                                            <span class="make-comment"><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i>Reply</span>
+                                            <span class="make-comment" data-id="{{$answer->id_answer}}" data-belongs="{{$question->id_question}}"><i class="far fa-comment make-comment" style="width: 2rem; height: 2rem;"></i>Reply</span>
                                         </div>
 
                                         @if (!is_null($answer->nr_answers))
