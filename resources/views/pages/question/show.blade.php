@@ -19,7 +19,7 @@
                             src={{asset('images/'.$question->profilephoto)}} alt="profile_pic" class="media-object rounded-circle profilePic "
                             style="width:3rem; ">
                         {{$question->username}}</a></h6>
-                    <a href="./topic.html" id="categoryQuestion"><img src={{asset('images/'.$question->caticon)}} alt="category" class="media-object"
+                    <a href={{URL::to('topic/'.$question->catname)}} id="categoryQuestion"><img src={{asset('images/'.$question->caticon)}} alt="category" class="media-object"
                             style="width:3rem; height: 3rem;">{{ucfirst($question->catname)}}</a>
                
             </div>
