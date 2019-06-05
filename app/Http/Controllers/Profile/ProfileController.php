@@ -176,8 +176,8 @@ class ProfileController extends Controller
 
     //TODOOOOOOOOOOO
     public function dismissModerator(Request $request,$username){
+
         $member=Member::find(Auth::user()->id_user);
-       
         $role = new Role();
         $role->type = request('member');
         $role->beginningDate = request('');

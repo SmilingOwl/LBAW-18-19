@@ -118,13 +118,6 @@ class QuestionController extends Controller
         
     public function delete(Request $request, $id_question)
     {      
-            
-            $request->validate([
-                'title' => 'required',
-                'description' => 'required',
-                //'category' => 'required'
-            ]);
-            
             $question = Question::find($id_question);
     
             $question->deleted = true;

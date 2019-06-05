@@ -59,6 +59,25 @@ class TopicController extends Controller
             'category' => $category
         ];
 
+
+        $all_questions = DB::select('
+        SELECT id_question, username, "user".profilePhoto as photo, title, description, date, votes, category.name, 
+        (
+            Select count(answer.id_answer)
+            From answer 
+            WHERE question.id_question = answer.id_question
+        ) as contagem, 
+        (
+            SELECT count(bestAnswer.id_bestAnswer) as hasBest
+            FROM answer INNER JOIN bestAnswer ON ( answer.id_answer = bestAnswer.id_bestAnswer)
+            WHERE answer.id_question = question.id_question
+        ) as hasBest, category.icon as catIcon
+        FROM (question
+        INNER JOIN "user" ON (question.id_user = "user".id_user))
+        INNER JOIN category ON (question.id_category = category.id_category)
+        ORDER BY question.date DESC;');
+
+
         $questions = DB::select('
         SELECT id_question, username, "user".profilePhoto as photo, title, description, date, votes, category.name, 
         (
@@ -84,7 +103,8 @@ class TopicController extends Controller
         ORDER BY points DESC
         LIMIT 5;');
 
-        return view('pages.feed.show')->with('questions',$questions)->with('top_users',$top_users);
+
+        return view('pages.feed.show')->with('questions',$questions)->with('top_users',$top_users)->with('all_questions', $all_questions);
 
     }
 }
