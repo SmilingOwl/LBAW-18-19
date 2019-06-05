@@ -595,18 +595,18 @@ I assume there are no “waves” and thus no detectable wavelength per se while
 -----------------------------------------
 --VOTEQUESTION
 -----------------------------------------
-INSERT INTO "votequestion"(username, id_question) VALUES(1, 59);
-INSERT INTO "votequestion"(username, id_question) VALUES(13, 59);
-INSERT INTO "votequestion"(username, id_question) VALUES(33, 59);
-INSERT INTO "votequestion"(username, id_question) VALUES(9, 60);
-INSERT INTO "votequestion"(username, id_question) VALUES(6, 61);
-INSERT INTO "votequestion"(username, id_question) VALUES(11, 62);
-INSERT INTO "votequestion"(username, id_question) VALUES(14, 62);
-INSERT INTO "votequestion"(username, id_question) VALUES(10, 63);
-INSERT INTO "votequestion"(username, id_question) VALUES(34, 63);
-INSERT INTO "votequestion"(username, id_question) VALUES(32, 64);
-INSERT INTO "votequestion"(username, id_question) VALUES(8, 65);
-INSERT INTO "votequestion"(username, id_question) VALUES(14, 65);
+INSERT INTO "votequestion"(username, id_question,type) VALUES(1, 59,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(13, 59,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(33, 59,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(9, 60,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(6, 61,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(11, 62,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(14, 62,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(10, 63,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(34, 63,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(32, 64,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(8, 65,'upvote');
+INSERT INTO "votequestion"(username, id_question,type) VALUES(14, 65,'upvote');
 
 
 -----------------------------------------
@@ -1246,14 +1246,14 @@ Waves cancelling or ''interference'' is one of the most poorly explained phenome
 -----------------------------------------
 --VOTEANSWER
 -----------------------------------------
-INSERT INTO "voteanswer"(username, id_answer) VALUES(3, 73);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(34, 73);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(12, 74);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(12, 75);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(11, 76);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(35, 76);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(13, 77);
-INSERT INTO "voteanswer"(username, id_answer) VALUES(36, 77);
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(3, 73,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(34, 73,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(12, 74,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(12, 75,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(11, 76,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(35, 76,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(13, 77,'upvote');
+INSERT INTO "voteanswer"(username, id_answer,type) VALUES(36, 77,'upvote');
 
 
 -----------------------------------------

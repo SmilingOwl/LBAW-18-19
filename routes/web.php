@@ -41,6 +41,12 @@ Route::put('questions/add', 'Question\QuestionController@create')->name('questio
 Route::get('questions/{id_question}', 'Question\QuestionController@show')->name('questions.show');
 Route::delete('questions/{id_question}/delete', 'Question\QuestionController@destroy');
 Route::get('questions/{id_question}/edit', 'Question\QuestionController@edit');
+Route::get('questions/{id_question}/upVote', 'VoteController@upVoteQuestion');
+Route::get('questions/{id_question}/downVote', 'VoteController@downVoteQuestion');
+Route::get('questions/{id_question}/nothingVote', 'VoteController@nothingVoteQuestion');
+Route::get('answers/{id_answer}/upVote', 'VoteController@upVoteAnswer');
+Route::get('answers/{id_answer}/downVote', 'VoteController@downVoteAnswer');
+Route::get('answers/{id_answer}/nothingVote', 'VoteController@nothingVoteAnswer');
 Route::put('questions/{id_question}/edit', 'Question\QuestionController@update')->name('question.update');
 //Route::get('topic/{category}', 'Question\QuestionController@topic');
 Route::get('answersToAnswer/{id}', 'Question\QuestionController@answersToAnswer');
