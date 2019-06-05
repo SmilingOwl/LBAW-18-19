@@ -172,7 +172,6 @@ class ProfileController extends Controller
         $member->banned = true;
         $member->save();
         return redirect()->back();
-
     }
 
     //TODOOOOOOOOOOO

@@ -15,10 +15,11 @@ function onLoadAdimn() {
 
 //-----------------------Admin buttons---------------------------
 
-function banUser(){
+function banUser(e){
+    console.log(e);
     $.ajax({
-        method:'post',
-        url:'api/members/{username}/ban',
+        type:'post',
+        url:'api/members/'+ '".username."' +'/ban',
         data:'_token = <?php echo csrf_token() ?>',
         success:function(data){
        
@@ -30,7 +31,8 @@ function banUser(){
 }
 
 
-function dismissModerator(){
+function dismissModerator(e){
+    console.log(e.value);
     $.ajax({
         method:'post',
         url:'api/members/{username}/dismiss',
