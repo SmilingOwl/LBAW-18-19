@@ -71,7 +71,7 @@ ORDER BY "date" DESC;
 
 
 -- Obtain a question’s details
-SELECT "user".username as username, "user".profilePhoto as profilePhoto, question.title as title, question.description as description, question."date" as date, question.votes as votes,
+SELECT "user".username as username, "user".profilePhoto as profilePhoto, question.title as title, question.description as description, question."date" as date, question.votes as votes, question.id_question as id_question,
 (
     SELECT count(id_answer)
     FROM answer
@@ -82,7 +82,12 @@ SELECT "user".username as username, "user".profilePhoto as profilePhoto, questio
     FROM bestAnswer INNER JOIN answer ON ( bestAnswer.id_bestAnswer = answer.id_answer)
     WHERE answer.id_question= $id_question AND bestAnswer.active = true
     GROUP BY bestAnswer.id_bestAnswer
-) as best
+) as best,
+(
+    SELECT type
+    FROM voteQuestion
+    WHERE voteQuestion.id_question = $id_question
+) as voteType
 FROM (question INNER JOIN category ON (category.id_category = question.id_category)) as question INNER JOIN "user" ON (question.id_user = "user".id_user)
 WHERE question.id_question = $id_question;
 

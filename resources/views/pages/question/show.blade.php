@@ -6,6 +6,7 @@
 
     <script src={{asset('js/bar_nav.js')}}></script>
     <script src={{asset('js/questionDetail.js')}}></script>
+    <script src={{asset('js/voteQuestionDetail.js')}}></script>
 @endsection
 
 @section('content')
@@ -38,14 +39,25 @@
             <div id="accordion">
                 <div class="card" style="border-style:none;">
                     <div class="card-header title-upvotes">
-                        <div class="answer-up-votes-mainquestion">
-                            <img src="../images/icon-14.svg" alt="up-vote" class="media-object" style="width:1.5rem; height: 1.5rem;">
+                        <div class="answer-up-votes-mainquestion" data-type={{$question->votetype}} data-id={{$question->id_question}}>
+                            @if ($question->votetype=='upvote')
+                                <img src="/images/icon-14.svg" alt="up-vote" class="media-object question-upvote" style="width:1.5rem; height: 1.5rem;">
+                            @else
+                                <img src="/images/upvote-14.svg" alt="up-vote" class="media-object question-upvote" style="width:1.5rem; height: 1.5rem;">
+                            @endif
+                            <span class="number-votes" data-number={{$question->votes}}>
                             @if ($question->votes>=1000)
-                                {{number_format($question->votes/1000,1,',','.')}}
+                                {{number_format($question->votes/1000,1,',','')}}K
                             @else
                                 {{$question->votes}}
                             @endif
-                            <img src="../images/broken-19.svg" alt="down-vote" class="media-object" style="width:1.5rem; height: 1.5rem;">
+                            </span>
+                            @if ($question->votetype=='downvote')
+                                <img src="/images/downvote-19.svg" alt="down-vote" class="media-object question-downvote" style="width:1.5rem; height: 1.5rem;">
+                            @else
+                                <img src="/images/broken-19.svg" alt="down-vote" class="media-object question-downvote" style="width:1.5rem; height: 1.5rem;">
+                            @endif
+                            
                         </div>
                         <a class="card-link" data-toggle="collapse" href="#description">
                             <h2>{{$question->title}}</h2>
