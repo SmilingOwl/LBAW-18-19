@@ -163,7 +163,7 @@
                   <thead class="thead-dark">
                     <tr>
                       <th>Author</th>
-                      <th>Type</th>
+                      <th>Reason</th>
                       <th>Reported User</th>
                       <th>Content</th>
                       <th>Date</th>

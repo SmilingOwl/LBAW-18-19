@@ -4,8 +4,10 @@ window.addEventListener("load",onLoadDetail);
 function onLoadDetail() {
     addAnswer();
     expandClick();
-
 }
+
+
+
 function addAnswer()
 {
     let answer = document.querySelectorAll(".expand-icon");
@@ -57,7 +59,7 @@ function getAnswers(answer,element) {
             +info.text
             +'</div><div class="bottom-answer">'
             +'<a href="#" style="font-family: \'Prompt\', sans-serif; color: #BE4627;">Report</a>'
-            +'<div class="answer-up-votes">'
+            +'<div class="answer-up-votes" data-auth="'+info.auth+'" data-type="'+info.votetype+'" data-id="'+info.id_answer+'" >'
             +'<img src="/images/icon-14.svg" alt="up-vote" class="media-object" style="width:1.2rem; height: 1.2rem;">'
             +info.votes
             +'<img src="/images/broken-19.svg" alt="down-vote" class="media-object" style="width:1.2rem; height: 1.2rem;">'
