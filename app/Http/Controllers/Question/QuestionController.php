@@ -17,7 +17,7 @@ class QuestionController extends Controller
 
     public function __construct()
     {
-       $this->middleware('auth')->except(['get', 'getAnswers']);
+       $this->middleware('auth')->except(['get', 'getAnswers','show','answersToAnswer']);
     }
 
     /**
@@ -151,8 +151,12 @@ class QuestionController extends Controller
 
     public function show($id_question)
     {
+        $user = NULL;
+        if(Auth::check())
+            $user = Auth::user()->id_user;
         $replaces = [
-            'id_question' => $id_question
+            'id_question' => $id_question,
+            'id_user' => $user
         ];
 
         $question = collect(DB::select('
@@ -171,7 +175,7 @@ class QuestionController extends Controller
         (
             SELECT type
             FROM voteQuestion
-            WHERE voteQuestion.id_question = :id_question
+            WHERE voteQuestion.id_question = :id_question AND voteQuestion.username = :id_user
         ) as voteType
         FROM (question INNER JOIN category ON (category.id_category = question.id_category)) as question INNER JOIN "user" ON (question.id_user = "user".id_user)
         WHERE question.id_question = :id_question;
@@ -191,21 +195,33 @@ class QuestionController extends Controller
             FROM bestAnswer
             WHERE bestAnswer.id_bestAnswer = answer.id_answer AND bestAnswer.active = true
             GROUP BY bestAnswer.id_bestAnswer
-        ) as best
+        ) as best,
+        (
+            SELECT type
+            FROM voteAnswer
+            WHERE voteAnswer.id_answer = answer.id_answer AND voteAnswer.username = :id_user
+        ) as voteType
         FROM answer INNER JOIN "user" ON (answer.user_post = "user".id_user)
         WHERE answer.id_question = :id_question AND answer.id_answer NOT IN (
             SELECT secondAnswer
             FROM comment
         );
         ',$replaces);
-
-        return view('pages.question.show')->with('question', $question)->with('answers',$answers);
+        if(Auth::check())
+            return view('pages.question.show')->with('question', $question)->with('answers',$answers)->with('user',1);
+        else
+            return view('pages.question.show')->with('question', $question)->with('answers',$answers)->with('user',0);
+        
     }
 
     public function answersToAnswer($id)
     {
+        $user = NULL;
+        if(Auth::check())
+            $user = Auth::user()->id_user;
         $replaces = [
-            'id_answer' => $id
+            'id_answer' => $id,
+            'id_user' => $user
         ];
         $answers = DB::select('
         SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo,
@@ -220,10 +236,21 @@ class QuestionController extends Controller
             FROM bestAnswer
             WHERE bestAnswer.id_bestAnswer = answer.id_answer
             GROUP BY bestAnswer.id_bestAnswer
-        ) as best
+        ) as best,
+        (
+            SELECT type
+            FROM voteAnswer
+            WHERE voteAnswer.id_answer = answer.id_answer AND voteAnswer.username = :id_user
+        ) as voteType
         FROM (answer INNER JOIN comment ON (answer.id_answer =comment.secondAnswer)) as answer INNER JOIN "user" ON (answer.user_post = "user".id_user)
         WHERE answer.firstAnswer = :id_answer;
         ',$replaces);
+        foreach ($answers as $answer ) {
+            if(Auth::check())
+                $answer->auth=1;
+            else
+                $answer->auth=0;
+        }
 
         return response()->json($answers);
     }

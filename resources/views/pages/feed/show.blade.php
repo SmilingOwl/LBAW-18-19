@@ -126,7 +126,7 @@
                         <div class="media-left d-flex">
                         </div>
                         <div class="media-body">
-                            <a href="./profile.html">
+                            <a href={{URL::to('profile/'.$question->username)}}>
                                 <h4 class="media-heading resultHeader"><img src={{asset('images/'.$question->photo)}} alt="profile"
                                     class="media-object rounded-circle profilePic" style="width:3rem">{{ $question->username }}</h4>
                             </a>
@@ -170,7 +170,7 @@
                         <div class="media-left d-flex">
                         </div>
                         <div class="media-body">
-                            <a href="./profile.html">
+                            <a href={{URL::to('profile/'.$question->username)}}>
                                 <h4 class="media-heading resultHeader"><img src={{asset('images/'.$question->photo)}} alt="profile"
                                     class="media-object rounded-circle profilePic" style="width:3rem">{{ $question->username }}</h4>
                             </a>

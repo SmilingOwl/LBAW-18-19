@@ -86,7 +86,7 @@ SELECT "user".username as username, "user".profilePhoto as profilePhoto, questio
 (
     SELECT type
     FROM voteQuestion
-    WHERE voteQuestion.id_question = $id_question
+    WHERE voteQuestion.id_question = $id_question AND voteQuestion.username = $id_user
 ) as voteType
 FROM (question INNER JOIN category ON (category.id_category = question.id_category)) as question INNER JOIN "user" ON (question.id_user = "user".id_user)
 WHERE question.id_question = $id_question;
@@ -110,7 +110,12 @@ SELECT answer.id_answer as id_answer,"user".username as username, "user".profile
     FROM bestAnswer
     WHERE bestAnswer.id_bestAnswer = answer.id_answer AND bestAnswer.active = true
     GROUP BY bestAnswer.id_bestAnswer
-) as best
+) as best,
+(
+    SELECT type
+    FROM voteAnswer
+    WHERE voteAnswer.id_answer = answer.id_answer AND voteAnswer.username = $id_user
+) as voteType
 FROM answer INNER JOIN "user" ON (answer.user_post = "user".id_user)
 WHERE answer.id_question = $id_question AND answer.id_answer NOT IN (
     SELECT secondAnswer
