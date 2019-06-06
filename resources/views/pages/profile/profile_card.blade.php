@@ -24,17 +24,15 @@
                             <i class="fas fa-pen"></i>
                         </a> 
                         @endif
-
-                        @if(Auth::user()->username != $member->username && !($followings->flatten()->where('username', $member->username)->isEmpty()))
+                        @if(Auth::user()->username != $member->username && !($followers->flatten()->where('username', Auth::user()->username)->isEmpty()))
                             <h5>
                                 <button type="button" class="btn btn-light">Unfollow</button> 
                             </h5>   
-                        @elseif(Auth::user()->username != $member->username && ($followings->flatten()->where('username', $member->username)->isEmpty()))  
+                        @elseif(Auth::user()->username != $member->username && ($followers->flatten()->where('username', Auth::user()->username)->isEmpty()))  
                             <h5>
                                 <button type="button" class="btn btn-light">Follow</button> 
                             </h5>            
                         @endif
-
                         <span class="fa-layers fa-fw">
                             <i style="font-family: 'Prompt', sans-serif; font-size: 18px;">{{$member->rank}}</i>
 
