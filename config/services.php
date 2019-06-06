@@ -34,5 +34,17 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+	
+	'facebook' => [
+		'client_id' => env('FB_CLIENT_ID'),        
+		'client_secret' => env('FB_CLIENT_SECRET'),
+		'redirect' => 'http://localhost:8000',
+	],
+	
+	'google' => [
+		'client_id' => env('GOOGLE_CLIENT_ID'),         
+		'client_secret' => env('GOOGLE_CLIENT_SECRET'),
+		'redirect' => 'http://localhost:8000',
+	],
 
 ];
