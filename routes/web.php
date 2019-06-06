@@ -62,6 +62,12 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::post('register', 'Auth\RegisterController@register');
 
+// External Authentication
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider_Fb');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback_Fb');
+Route::get('login/google', 'Auth\LoginController@redirectToProvider_Gl');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback_Gl');
+
 // Feed 
 Route::get('topic/{category}', 'Feed\TopicController@show');
 
@@ -94,3 +100,7 @@ Route::get('/category/all', 'CategoryController@getCategories');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

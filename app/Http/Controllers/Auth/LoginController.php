@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Member;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
+use Socialite;
 
 class LoginController extends Controller
 {
@@ -110,5 +111,78 @@ class LoginController extends Controller
         throw ValidationException::withMessages([
             $this->username() => [trans('auth.removed')],
         ]);
+    }
+
+    /**
+     * Redirect the user to the Facebook authentication page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider_Fb()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    /**
+     * Obtain the user information from Facebook.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback_Fb()
+    {
+        $user = Socialite::driver('facebook')->user();
+
+        $newUser = Member::where('provider_id', $user->getId())->first();
+
+        if(!$newUser) {
+         $newUser = Member::create([
+                'email' => $user->getEmail(),
+                'username' => $user->getName(),
+                'id_user' => $user->getId(),
+                'provider_id' => 'facebook',
+        ]);
+        }
+
+        Auth::login($newUser, true);
+
+        return redirect($this->redirectTo);
+
+        // $user->token;
+    }
+    /**
+     * Redirect the user to the Google authentication page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider_Gl()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    /**
+     * Obtain the user information from Google.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback_Gl()
+    {
+        $user = Socialite::driver('google')->user();
+
+        $newUser = Member::where('provider_id', $user->getId())->first();
+
+        if(!$newUser) {
+         $newUser = Member::create([
+                'email' => $user->getEmail(),
+                'username' => $user->getName(),
+                'id_user' => $user->getId(),
+                'provider_id' => 'google',
+        ]);
+        }
+
+        Auth::login($newUser, true);
+
+        return redirect($this->redirectTo);
+
+        // $user->token;
     }
 }
