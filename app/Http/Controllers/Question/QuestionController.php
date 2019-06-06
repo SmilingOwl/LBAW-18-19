@@ -39,15 +39,33 @@ class QuestionController extends Controller
     public function create(Request $request)
     {
         $request->validate([
+        ]);
+        request()->validate([
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'title' => 'required',
             //'category' => 'required',
-        ]);
 
+        ]);
+        if($request->hasFile('image'))
+        {
+            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            request()->image->move(public_path('images/uploaded'), $imageName);
+        }
+
+        $category = collect(DB::select('
+        SELECT id_category
+        FROM category
+        WHERE category.name = :name
+        ', ['name' => request('catType')]))->first()->id_category;
         $question = new Question();
         $question->title = request('title');
         $question->description = request('description');
-        $question->id_category = 2;
+        $question->id_category = $category;
         $question->id_user = Auth::user()->id_user;
+        if($request->hasFile('image'))
+            $question->photo = $imageName;
+        else
+            $question->photo = null;
         if ($question->save()) {
             return redirect('/questions/' . $question->id_question);
         } else {
@@ -159,7 +177,7 @@ class QuestionController extends Controller
         ];
         $question = collect(DB::select(
             '
-        SELECT "user".username as username, "user".profilePhoto as profilePhoto, question.title as title, question.description as description, question."date" as date, question.votes as votes, question.id_question as id_question,question.deleted as deleted,
+        SELECT "user".username as username, "user".profilePhoto as profilePhoto, question.title as title, question.description as description, question."date" as date, question.votes as votes, question.id_question as id_question,question.deleted as deleted,question.photo as photo,
         (
             SELECT count(id_answer)
             FROM answer

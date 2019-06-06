@@ -25,6 +25,7 @@ function banUser(username){
         type:'post',
         url:'/api/members/'+ username +'/ban',
         success:function(data){
+            window.location.reload();
         },
         error: function (data) {
             console.log("server error");
@@ -43,6 +44,7 @@ function dismissModerator(username){
         method:'post',
         url:'/api/members/'+ username +'/dismiss',
         success:function(data){
+            window.location.reload();
         },
         error: function (data) {
             console.log("server error");
@@ -60,6 +62,7 @@ function promoteUser(username){
         method:'post',
         url:'/api/members/'+username+'/promote',
         success:function(data){
+            window.location.reload();
         },
         error: function (data) {
             console.log("server error");
@@ -115,9 +118,11 @@ function requestUsers(e)
         url: '/api/search/user',
         data:{name:$(this).val()},
         success: function (data) {
+            console.log(data);
             displayUsers(data);
         },
         error: function (data) {
+            console.log(data);
             console.log("server error");
         }
     });
