@@ -107,9 +107,9 @@ class TopicController extends Controller
         $questions_answers = $questions->sortBy('contagem');
 
         $questions_upvotes = $questions->sortBy('votes');
+
+
     
-
-
         return view('pages.feed.show')->with('questions_date',$questions_date)->with('top_users',$top_users)->with('all_questions', $all_questions)->with('questions',$questions);
 
     }
