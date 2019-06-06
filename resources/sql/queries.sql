@@ -381,3 +381,7 @@ Values($username,$id_question,$type);
 -- add new role
 INSERT INTO role(type,beginningDate,endDate,id_user)
 VALUES($type,now(),NULL,$id_user);
+
+-- add new best answer
+INSERT INTO bestAnswer(id_bestAnswer,attributionDate,"text","date",deleted,active,votes,photo)
+VALUES($id_bestAnswer,now(),$"text",$"date",$deleted,true,$votes,$photo);

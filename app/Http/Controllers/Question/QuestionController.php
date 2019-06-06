@@ -11,13 +11,14 @@ use App\Models\Question;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Support\Facades\Redirect;
+use App\Models\Category;
 
-class QuestionController extends Controller 
+class QuestionController extends Controller
 {
 
     public function __construct()
     {
-       $this->middleware('auth')->except(['get', 'getAnswers','show','answersToAnswer']);
+        $this->middleware('auth')->except(['get', 'getAnswers', 'show', 'answersToAnswer']);
     }
 
     /**
@@ -27,7 +28,7 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        return view('pages.question.show', compact('question'))->with('catinfo',$this->catinfo);
+        return view('pages.question.show', compact('question'))->with('catinfo', $this->catinfo);
     }
 
     /**
@@ -41,21 +42,17 @@ class QuestionController extends Controller
             'title' => 'required',
             //'category' => 'required',
         ]);
-          
+
         $question = new Question();
         $question->title = request('title');
         $question->description = request('description');
         $question->id_category = 2;
         $question->id_user = Auth::user()->id_user;
-        if($question->save())
-        {
-            return redirect('/questions/'.$question->id_question);
-        }
-        else
-        {
+        if ($question->save()) {
+            return redirect('/questions/' . $question->id_question);
+        } else {
             return Redirect::back()->withErrors(['Unable to create a new question.']);
         }
-        
     }
 
 
@@ -67,10 +64,10 @@ class QuestionController extends Controller
      */
     public function showCreate()
     {
-        return view('pages.question.add');
+        return view('pages.question.add')->with('catinfo',Category::all());
     }
 
-    
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -82,7 +79,7 @@ class QuestionController extends Controller
         $replaces = [
             'id_question' => $id_question
         ];
-        $question = collect(DB::select('SELECT id_question, title, description, "date", votes, photo, deleted, id_category, id_user FROM question WHERE id_question = \':id_question\'',$replaces))->first();
+        $question = collect(DB::select('SELECT id_question, title, description, "date", votes, photo, deleted, id_category, id_user FROM question WHERE id_question = \':id_question\'', $replaces))->first();
 
         return view('pages.question.edit')->with('question', $question);
     }
@@ -95,37 +92,39 @@ class QuestionController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-     public function update(Request $request, $id_question)
-    {      
-        
+    public function update(Request $request, $id_question)
+    {
+
         $request->validate([
             'title' => 'required',
             'description' => 'required',
             //'category' => 'required'
         ]);
-        
+
         $question = Question::find($id_question);
 
         $question->title = request('title');
         $question->description = request('description');
-       // $question->category = request('name');
+        // $question->category = request('name');
 
         $question->save();
-        
-        return redirect('pages.question.show');
-        }
 
-        
-    public function delete(Request $request, $id_question)
-    {      
-            $question = Question::find($id_question);
-    
+        return redirect('pages.question.show');
+    }
+
+
+    public function delete($id_question)
+    {
+        $question = Question::find($id_question);
+        if(Auth::user()->id_user == $question->id_user)
+        {
             $question->deleted = true;
             $question->save();
-    
-            return redirect()->back();
+            return  'ok';
         }
-    
+        return 'error';
+    }
+
 
 
     /**
@@ -137,7 +136,7 @@ class QuestionController extends Controller
     public function destroy(Question $question)
     {
         //TODO
-        $question= Question::find();
+        $question = Question::find();
         $question->deleted = true;
         $question->save();
         return redirect()->back()->withErrors('Wrong Password')->withInput();
@@ -152,15 +151,15 @@ class QuestionController extends Controller
     public function show($id_question)
     {
         $user = NULL;
-        if(Auth::check())
+        if (Auth::check())
             $user = Auth::user()->id_user;
         $replaces = [
             'id_question' => $id_question,
             'id_user' => $user
         ];
-        DB::beginTransaction();
-        $question = collect(DB::select('
-        SELECT "user".username as username, "user".profilePhoto as profilePhoto, question.title as title, question.description as description, question."date" as date, question.votes as votes, question.id_question as id_question,
+        $question = collect(DB::select(
+            '
+        SELECT "user".username as username, "user".profilePhoto as profilePhoto, question.title as title, question.description as description, question."date" as date, question.votes as votes, question.id_question as id_question,question.deleted as deleted,
         (
             SELECT count(id_answer)
             FROM answer
@@ -169,7 +168,7 @@ class QuestionController extends Controller
         (
             SELECT count(id_bestAnswer)
             FROM bestAnswer INNER JOIN answer ON ( bestAnswer.id_bestAnswer = answer.id_answer)
-            WHERE answer.id_question= :id_question AND bestAnswer.active = true
+            WHERE answer.id_question= :id_question AND bestAnswer.active = true AND bestAnswer.deleted = false
             GROUP BY bestAnswer.id_bestAnswer
         ) as best,
         (
@@ -179,11 +178,15 @@ class QuestionController extends Controller
         ) as voteType
         FROM (question INNER JOIN category ON (category.id_category = question.id_category)) as question INNER JOIN "user" ON (question.id_user = "user".id_user)
         WHERE question.id_question = :id_question;
-        ',$replaces
+        ',
+            $replaces
         ))->first();
+        if ($question->deleted == true) {
+            return redirect(URL::to('404'));
+        }
 
         $answers = DB::select('
-        SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo,
+        SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo, answer.deleted as deleted,
         (
             SELECT count(secondAnswer)
             FROM comment
@@ -193,7 +196,7 @@ class QuestionController extends Controller
         (
             SELECT count(id_bestAnswer)
             FROM bestAnswer
-            WHERE bestAnswer.id_bestAnswer = answer.id_answer AND bestAnswer.active = true
+            WHERE bestAnswer.id_bestAnswer = answer.id_answer AND bestAnswer.active = true AND bestAnswer.deleted = false
             GROUP BY bestAnswer.id_bestAnswer
         ) as best,
         (
@@ -206,26 +209,44 @@ class QuestionController extends Controller
             SELECT secondAnswer
             FROM comment
         );
-        ',$replaces);
-        DB::commit();
-        if(Auth::check())
-            return view('pages.question.show')->with('question', $question)->with('answers',$answers)->with('user',1);
+        ', $replaces);
+        if (Auth::check())
+            return view('pages.question.show')->with('question', $question)->with('answers', $answers)->with('user', 1);
         else
-            return view('pages.question.show')->with('question', $question)->with('answers',$answers)->with('user',0);
-        
+            return view('pages.question.show')->with('question', $question)->with('answers', $answers)->with('user', 0);
+    }
+
+    public function report($id_question)
+    {
+        $replace = [
+            'reason' => request('text'),
+            'id_question' => $id_question
+        ];
+        DB::beginTransaction();
+        $id = collect(DB::select('
+        INSERT INTO report("date", reason, id_question, id_answer)
+        VALUES(now(), :reason, :id_question, null)
+        RETURNING id_report;
+        ', $replace))->first()->id_report;
+        DB::select('
+        INSERT INTO userReport(username, id_report)
+        VALUES(:username, :id_report);
+        ', ['username' => Auth::user()->id_user , 'id_report' => $id]);
+        DB::commit();
+        return 'ok';
     }
 
     public function answersToAnswer($id)
     {
         $user = NULL;
-        if(Auth::check())
+        if (Auth::check())
             $user = Auth::user()->id_user;
         $replaces = [
             'id_answer' => $id,
             'id_user' => $user
         ];
         $answers = DB::select('
-        SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo,answer.id_question as id_question,
+        SELECT answer.id_answer as id_answer,"user".username as username, "user".profilePhoto as profilePhoto, answer."text" as text, answer.date as date, answer.votes as votes, answer.photo as photo,answer.id_question as id_question, answer.deleted as deleted,
         (
             SELECT count(secondAnswer)
             FROM comment
@@ -235,7 +256,7 @@ class QuestionController extends Controller
         (
             SELECT count(id_bestAnswer)
             FROM bestAnswer
-            WHERE bestAnswer.id_bestAnswer = answer.id_answer
+            WHERE bestAnswer.id_bestAnswer = answer.id_answer AND bestAnswer.deleted = false
             GROUP BY bestAnswer.id_bestAnswer
         ) as best,
         (
@@ -245,12 +266,12 @@ class QuestionController extends Controller
         ) as voteType
         FROM (answer INNER JOIN comment ON (answer.id_answer =comment.secondAnswer)) as answer INNER JOIN "user" ON (answer.user_post = "user".id_user)
         WHERE answer.firstAnswer = :id_answer;
-        ',$replaces);
-        foreach ($answers as $answer ) {
-            if(Auth::check())
-                $answer->auth=1;
+        ', $replaces);
+        foreach ($answers as $answer) {
+            if (Auth::check())
+                $answer->auth = 1;
             else
-                $answer->auth=0;
+                $answer->auth = 0;
         }
 
         return response()->json($answers);

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Models\Member;
 use App\Models\Category;
+use Illuminate\Support\Facades\DB;
 
 class RegisterController extends Controller
 {
@@ -64,8 +65,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        redirect('login');
-        return Member::create([
+        $member = Member::create([
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
@@ -74,6 +74,18 @@ class RegisterController extends Controller
             'banned' => false,
             'deleted' => false
         ]);
+        DB::select('
+        INSERT INTO role(type,beginningDate,endDate,id_user)
+        VALUES(\'member\',now(),NULL,:id_user);
+        ', ['id_user' => $member->id_user]);
+        $type = collect(DB::select('
+        select "user".username as username ,role.type as type 
+        from "user", role 
+        where "user".username = :username and role.id_user = "user".id_user'
+        ,['username' => $member->username]))->first();
+        session(['type' => $type]);
+        redirect('login');
+        return $member;
     }
 
     public function showRegistrationForm()

@@ -18,75 +18,14 @@
     <h5 class="h5-responsive font-weight-bold text-left mb-3 py-3"> Select a category for your question!</h5>
 
     <div class="row cat-row" style="font-size:100px;">
+        @foreach ($catinfo as $cat)
         <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Art">
-                <img src = {{asset('images/art-06.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
+            <a href="#" data-toggle="tooltip" title="{{$cat->name}}">
+                <img src = {{asset('/images/'.$cat->icon)}} alt="categories" class="mx-auto d-block img-fluid rounded image">
             </a>
         </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Biology">
-                <img src = {{asset('images/biology-01.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-
-        </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Business">
-                <img src = {{asset('images/business-07.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-
-        </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Chemistry">
-                <img src = {{asset('images/chemistry-03.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-
-        </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Geology">
-                <img src = {{asset('images/geology-10.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-        </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="History">
-                <img src = {{asset('images/history-08.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-
-        </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Math">
-                <img src = {{asset('images/maths-12.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-
-        </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Medicine">
-                <img src = {{asset('images/health-04.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-
-        </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Linguistics">
-                <img src = {{asset('images/linguistics-09.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-        </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Physics">
-                <img src = {{asset('images/physics-02.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-
-        </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Psychology">
-                <img src = {{asset('images/psychology-11.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-
-        </div>
-        <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="Technology">
-                <img src  = {{asset('images/tech-05.svg')}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
-
-        </div>
+            
+        @endforeach
 
     </div>
 

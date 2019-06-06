@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Question;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
 
 class SearchController extends Controller
 {
@@ -52,9 +53,11 @@ class SearchController extends Controller
 
     public function search()
     {
+        if(strlen(request('search'))==0)
+            return redirect(URL::to('/topic/'.strtolower(request('category'))));
         $replace = [
             'search' => request('search'),
-            'category' => request('category')
+            'category' => strtolower(request('category'))
         ];
         if(request('category')=='all')
         {
@@ -92,7 +95,7 @@ class SearchController extends Controller
                 WHERE answer.id_question = question.id_question
             ) as hasBest,category.icon as catIcon
             FROM (question INNER JOIN "user" ON (question.id_user = "user".id_user)) INNER JOIN category ON (category.id_category = question.id_category)
-            WHERE search @@ plainto_tsquery(\'english\',:search) AND question.deleted = false AND category.name LIKE :catName AND "user".deleted = false AND "user".banned = false AND question.deleted = false
+            WHERE search @@ plainto_tsquery(\'english\',:search) AND question.deleted = false AND category.name LIKE :category AND "user".deleted = false AND "user".banned = false AND question.deleted = false
             ORDER BY ts_rank(search,plainto_tsquery(\'english\',:search)) DESC
             LIMIT 10;
             ',$replace

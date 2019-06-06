@@ -34,7 +34,11 @@ class LoginController extends Controller
         if(!Auth::check())
             $type='null';
         else
-            $type = collect(DB::select('select "user".username as username ,role.type as type from "user", role where "user".username = \'' . Auth::user()['username'] .'\' and role.id_user = "user".id_user'))->first();
+            $type = collect(DB::select('
+            select "user".username as username ,role.type as type 
+            from "user", role 
+            where "user".username = :username and role.id_user = "user".id_user'
+            ,['username' => Auth::user()['username']]))->first();
         session(['type' => $type]);
         return '/topic/all';
     }
@@ -63,7 +67,7 @@ class LoginController extends Controller
     {
         session()->forget('type');
         Auth::logout();
-        return redirect()->back();
+        return redirect(URL::to('/topic/all'));
     }
     public function login(Request $request)
     {

@@ -75,6 +75,7 @@ class TopicController extends Controller
         FROM (question
         INNER JOIN "user" ON (question.id_user = "user".id_user))
         INNER JOIN category ON (question.id_category = category.id_category)
+        WHERE question.deleted = false
         ORDER BY question.date DESC;'));
 
 
@@ -93,7 +94,7 @@ class TopicController extends Controller
         FROM (question
         INNER JOIN "user" ON (question.id_user = "user".id_user))
         INNER JOIN category ON (question.id_category = category.id_category)
-        WHERE category.name = :category
+        WHERE category.name = :category AND question.deleted = false
         LIMIT 10;', $replaces));
         
         $top_users=DB::select('

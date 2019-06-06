@@ -163,7 +163,7 @@
                   <thead class="thead-dark">
                     <tr>
                       <th>Author</th>
-                      <th>Reason</th>
+                      <th>Context</th>
                       <th>Reported User</th>
                       <th>Content</th>
                       <th>Date</th>
@@ -175,7 +175,21 @@
                     @foreach ($reports as $report)
                     <tr>
                       <td><a href={{URL::to('profile/'.$report->reporter)}}>{{$report->reporter}}</a></td>
-                      <td>{{$report->reason}}</td>
+                      <?php
+                      $string = strip_tags($report->reason);
+                      if (strlen($string) > 100) {
+
+                          // truncate string
+                          $stringCut = substr($string, 0, 100);
+                          $endPoint = strrpos($stringCut, ' ');
+
+                          //if the string doesn't contain any space then it will cut without word basis.
+                          $string = $endPoint? substr($stringCut, 0, $endPoint) : substr($stringCut, 0);
+                          $string .= '...';
+                      }
+                      ?>
+
+                      <td>{{$string}}</td>
                       <td><a href={{URL::to('profile/'.$report->target->username)}}>{{$report->target->username}}</a></td>
                       @if (is_null($report->answer))
                       <td><a href={{URL::to('questions/'.$report->question)}}>In a question</a> </td>

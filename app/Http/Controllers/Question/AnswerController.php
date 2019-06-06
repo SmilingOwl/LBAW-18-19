@@ -6,12 +6,28 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\Answer;
 
 class AnswerController extends Controller
 {
     public function __construct()
     {
        $this->middleware('auth');
+    }
+    protected $redirectTo = '/404';
+
+
+
+    public function delete($id_answer)
+    {
+        $answer = Answer::find($id_answer);
+        if(Auth::user()->id_user == $answer->user_post)
+        {
+            $answer->deleted = true;
+            $answer->save();
+            return  'ok';
+        }
+        return 'error';
     }
 
     public function addToQuestion()
@@ -109,5 +125,52 @@ class AnswerController extends Controller
 
         return redirect()->back();
         
+    }
+    public function report($id_answer)
+    {
+        $replace = [
+            'reason' => request('text'),
+            'id_answer' => $id_answer
+        ];
+        DB::beginTransaction();
+        $id = collect(DB::select('
+        INSERT INTO report("date", reason, id_question, id_answer)
+        VALUES(now(), :reason, null, :id_answer)
+        RETURNING id_report;
+        ', $replace))->first()->id_report;
+        DB::select('
+        INSERT INTO userReport(username, id_report)
+        VALUES(:username, :id_report);
+        ', ['username' => Auth::user()->id_user , 'id_report' => $id]);
+        DB::commit();
+        return 'ok';
+    }
+    public function bestAnswer($id_answer)
+    {
+        $replace = [
+            'id_answer' => $id_answer
+        ];
+        DB::beginTransaction();
+        $info = collect(DB::select('
+        SELECT answer.text as text , answer.date as date, answer.photo as photo,answer.votes as votes, answer.deleted as deleted, question.id_user as id_user
+        FROM answer INNER JOIN question ON (answer.id_question = question.id_question)
+        WHERE answer.id_answer = :id_answer 
+        ', $replace))->first();
+        if($info->id_user != Auth::user()->id_user)
+            return 'error';
+        $replaces = [
+            'id_bestAnswer' => $id_answer,
+            'text' => $info->text,
+            'date' => $info->date,
+            'deleted' => $info->deleted,
+            'votes' => $info->votes,
+            'photo' => $info->photo 
+        ];
+        DB::select('
+        INSERT INTO bestAnswer(id_bestAnswer,attributionDate,"text","date",deleted,active,votes,photo)
+        VALUES(:id_bestAnswer,now(),:text,:date,:deleted,true,:votes,:photo);
+        ', $replaces);
+        DB::commit();
+        return 'ok';
     }
 }

@@ -56,37 +56,44 @@ class ProfileController extends Controller
      */
     public function show($username)//TODO
     {
+        $replaces = [
+            'username' => $username
+        ];
         $member = collect(DB::select('
-        SELECT "user".id_user as id,username, rank.name as rank,username, bioDescription, points, profilePhoto, name , (
+        SELECT "user".id_user as id,username, rank.name as rank,username, bioDescription, points, profilePhoto, name , 
+        (
             SELECT COUNT(question.id_question)
             FROM "user" INNER JOIN question ON ("user".id_user = question.id_user)
-            WHERE "user".username=\''. $username .'\'
+            WHERE "user".username LIKE :username
             GROUP BY "user".id_user
         ) AS nr_questions, (
             SELECT COUNT(answer.id_answer)
             FROM "user" INNER JOIN answer ON ("user".id_user = answer.user_post)
-            WHERE "user".username=\''. $username .'\'
+            WHERE "user".username LIKE :username
             GROUP BY "user".id_user
         ) AS nr_answers, (
             SELECT COUNT(bestAnswer.id_bestAnswer)
             FROM "user",answer,bestAnswer
-            Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post AND "user".username=\''. $username .'\'
+            Where bestAnswer.id_bestAnswer = answer.id_answer AND "user".id_user = answer.user_post AND "user".username LIKE :username
             GROUP BY "user".id_user
         ) AS nr_best_answers
         FROM "user", rank
-        Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
+        Where  "user".id_rank=rank.id_rank AND "user".username LIKE :username'
+        ,$replaces))->first();
         
         $followers = collect(DB::select('
         SELECT id_user,username , profilePhoto , points, id_rank , 
-        (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.follower) as rank
+        (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".deleted = false AND "user".banned = false AND "user".id_user = follow.follower) as rank
         FROM follow INNER JOIN "user" ON (follow.follower="user".id_user)
-        WHERE follow.following = '. $member->id));
+        WHERE follow.following = :id',
+        ['id' => $member->id]));
         
         $following = collect(DB::select('
         SELECT id_user,username , profilePhoto , points, id_rank ,
         (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.following) as rank
         FROM follow INNER JOIN "user" ON follow.following ="user".id_user
-        WHERE follow.follower = '. $member->id));
+        WHERE follow.follower = :id'
+        ,['id' => $member->id]));
         
         $questions = DB::select('
         SELECT question.id_question as id, question.title as title, question."date" as "date", question.votes as votes, question.deleted as deleted ,
@@ -101,10 +108,11 @@ class ProfileController extends Controller
             WHERE answer.id_question = question.id_question
         ) as hasBest,category.icon as catIcon
         FROM question INNER JOIN category ON (question.id_category = category.id_category)
-        WHERE question.id_user = '. $member->id .'
+        WHERE question.id_user = :id AND question.deleted = false
         GROUP BY question.id_question, category.icon
         ORDER BY question."date" DESC
-        LIMIT 10');
+        LIMIT 10'
+        ,['id' => $member->id]);
         return view('pages.profile.show')->with('member',$member)->with('followers',$followers)->with('followings',$following)->with('questions',$questions);
     }
 
