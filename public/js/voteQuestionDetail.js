@@ -159,7 +159,7 @@ function questionVotes() {
         }
         if(voteType == "null" || voteType.length == 0 || voteType=="nothing")
         {
-            voteAnswer(id,"upVote");
+            voteQuestion(id,"upVote");
             upvote.setAttribute("src","/images/icon-14.svg");
             downvote.setAttribute("src","/images/broken-19.svg");
             divVote.setAttribute("data-type","upvote");
@@ -167,7 +167,7 @@ function questionVotes() {
         }
         else if(voteType == "downvote")
         {
-            voteAnswer(id,"upVote");
+            voteQuestion(id,"upVote");
             upvote.setAttribute("src","/images/icon-14.svg");
             downvote.setAttribute("src","/images/broken-19.svg");
             divVote.setAttribute("data-type","upvote");
@@ -175,7 +175,7 @@ function questionVotes() {
         }
         else if(voteType == "upvote")
         {
-            voteAnswer(id,"nothingVote");
+            voteQuestion(id,"nothingVote");
             upvote.setAttribute("src","/images/upvote-14.svg");
             downvote.setAttribute("src","/images/broken-19.svg");
             divVote.setAttribute("data-type","nothing");
@@ -198,7 +198,7 @@ function questionVotes() {
         }
         if(voteType == "null" || voteType.length == 0 || voteType=="nothing")
         {
-            voteAnswer(id,"downVote");
+            voteQuestion(id,"downVote");
             upvote.setAttribute("src","/images/upvote-14.svg");
             downvote.setAttribute("src","/images/downvote-19.svg");
             divVote.setAttribute("data-type","downvote");
@@ -206,7 +206,7 @@ function questionVotes() {
         }
         else if(voteType == "downvote")
         {
-            voteAnswer(id,"nothingVote");
+            voteQuestion(id,"nothingVote");
             upvote.setAttribute("src","/images/upvote-14.svg");
             downvote.setAttribute("src","/images/broken-19.svg");
             divVote.setAttribute("data-type","nothing");
@@ -214,7 +214,7 @@ function questionVotes() {
         }
         else if(voteType == "upvote")
         {
-            voteAnswer(id,"downVote");
+            voteQuestion(id,"downVote");
             upvote.setAttribute("src","/images/upvote-14.svg");
             downvote.setAttribute("src","/images/downvote-19.svg");
             divVote.setAttribute("data-type","downvote");
