@@ -101,7 +101,7 @@ CREATE TABLE role(
     id_role SERIAL PRIMARY KEY,
     type roleType NOT NULL DEFAULT 'member',
     beginningDate DateTime,
-    endDate DateTime CONSTRAINT endDateBigger_ck CHECK (endDate > beginningDate),
+    endDate DateTime CONSTRAINT endDateBigger_ck CHECK (endDate >= beginningDate),
     id_user integer REFERENCES "user" (id_user) ON UPDATE CASCADE
 );
 

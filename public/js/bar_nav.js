@@ -581,6 +581,8 @@ function showNotifications(data) {
         label.innerHTML="";
         return ;
     }
+    else if(data.length >9)
+        label.innerHTML= "9+";
     else
         label.innerHTML=data.length;
     dropdown.innerHTML="";
