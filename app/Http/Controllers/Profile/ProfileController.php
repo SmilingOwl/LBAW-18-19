@@ -54,7 +54,7 @@ class ProfileController extends Controller
      * @param  int  $username
      * @return \Illuminate\Http\Response
      */
-    public function show($username)
+    public function show($username)//TODO
     {
         $member = collect(DB::select('
         SELECT "user".id_user as id,username, rank.name as rank,username, bioDescription, points, profilePhoto, name , (

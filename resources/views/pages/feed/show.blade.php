@@ -139,14 +139,22 @@
                                     style="width:2rem" id="catQuestion">
                                     @endif
                                 <p class="resultFooter align-self-center">
-                                    {{ $question->contagem }}
+                                    @if (is_null($question->contagem))
+                                        0
+                                    @else
+                                        {{ $question->contagem }}
+                                    @endif
                                     @if ($question->contagem==1)
                                     answer
                                     @else
                                     answers
                                     @endif</p>
                                 <p class="resultFooter align-self-center">
-                                    {{$question->votes}}
+                                    @if (is_null($question->votes))
+                                        0
+                                    @else
+                                        {{$question->votes}}
+                                    @endif
                                     @if ($question->votes==1)
                                             vote
                                     @else
