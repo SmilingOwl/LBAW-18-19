@@ -10,81 +10,6 @@ use App\Models\Member;
 
 class ApiController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 
     public function notifications($username)
     {
@@ -93,9 +18,9 @@ class ApiController extends Controller
             $info = DB::select('
             SELECT id_notification as id, description ,type , notification."date" as notDate, "user".username as username, "user".profilePhoto as profilePhoto, notification.questionTarget
             FROM "user" INNER JOIN notification ON ("user".id_user = notification.creator)
-            WHERE notification.view = false  AND notification.target = '. Auth::user()->id_user .'
+            WHERE notification.view = false  AND notification.target = :id_user
             ORDER BY notification."date" DESC
-            LIMIT 10');
+            LIMIT 10',['id_user' => Auth::user()->id_user]);
             return response()->json($info);
         }
         else
@@ -104,6 +29,25 @@ class ApiController extends Controller
         }
     }
     
+    public function notificationsView($username,$id)
+    {
+        if(Auth::check() && $username === Auth::user()->username)
+        {
+            $replace =[
+                'id' => $id , 
+                'username' => Auth::user()->id_user
+            ];
+            DB::select('
+            UPDATE notification
+            SET view = true
+            WHERE id_notification = :id AND target = :username;
+            ',$replace);
+        }
+        else
+        {
+            return "";
+        }
+    }
 
     public function likeUser(Request $request)  
     {
@@ -114,8 +58,8 @@ class ApiController extends Controller
         $userlike = DB::select('
         SELECT "user".username as username, "user".email as email, rank.name as rankName
         FROM "user" INNER JOIN rank ON ("user".id_rank = rank.id_rank)
-        WHERE "user".username ILIKE \''.$request->name.'%\'
-        ');
+        WHERE "user".username ILIKE \':name%\'
+        ',['name' => $request->name]);
         return response()->json($userlike);
     }
 }
