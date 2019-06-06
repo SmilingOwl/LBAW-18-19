@@ -571,6 +571,23 @@ function notification() {
     });
     
 }
+function notificationViewed(id) {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        method: 'get',
+        url: '/api/members/'+ username+ '/notifications/' + id + '/viewed',
+        success: function (data) {
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
+    
+}
 
 function showNotifications(data) {
     let label = document.querySelector(".notification-label");
@@ -590,12 +607,19 @@ function showNotifications(data) {
     {
         if(data[i].type=="follow")
         {
-            dropdown.innerHTML+= '<a class="dropdown-item" href="profile/' + data[i].username + '"><img class="item-1 rounded-circle" src="/images/'+data[i].profilephoto+'" style="width: 1.8em; height: 1.8em;"></img> <p class="item 2"style="margin:0px;font-size:13px;" > '+data[i].description+' </p><p> </p> <span class="item 3"> <i class="fa fa-clock-o" aria-hidden="true"></i>'+data[i].notdate+'</span></a>';
+            dropdown.innerHTML+= '<a class="dropdown-item notification-dropdown" data-id="'+data[i].id+'" href="/profile/' + data[i].username + '"><img class="item-1 rounded-circle" src="/images/'+data[i].profilephoto+'" style="width: 1.8em; height: 1.8em;"></img> <p class="item 2"style="margin:0px;font-size:13px;" > '+data[i].description+' </p><p> </p> <span class="item 3"> <i class="fa fa-clock-o" aria-hidden="true"></i>'+data[i].notdate+'</span></a>';
         }
         else
         {
-            dropdown.innerHTML+= '<a class="dropdown-item" href="/questions/'+ data[i].questiontarget+ '"><img class="item-1 rounded-circle" src="/images/'+data[i].profilephoto+'" style="width: 1.8em; height: 1.8em;"></img> <p class="item 2"style="margin:0px;font-size:13px;" > '+data[i].description+' </p><p> </p> <span class="item 3"> <i class="fa fa-clock-o" aria-hidden="true"></i>'+data[i].notdate+'</span></a>';
+            dropdown.innerHTML+= '<a class="dropdown-item notification-dropdown" data-id="'+data[i].id+'" href="/questions/'+ data[i].questiontarget+'"><img class="item-1 rounded-circle" src="/images/'+data[i].profilephoto+'" style="width: 1.8em; height: 1.8em;"></img> <p class="item 2"style="margin:0px;font-size:13px;" > '+data[i].description+' </p><p> </p> <span class="item 3"> <i class="fa fa-clock-o" aria-hidden="true"></i>'+data[i].notdate+'</span></a>';
         }
+    }
+    let nots = dropdown.querySelectorAll('.notification-dropdown');
+    for(let i=0;i<nots.length;i++)
+    {
+        nots[i].addEventListener("click",function() {
+            notificationViewed(nots[i].getAttribute("data-id"));
+        });
     }
 }
 

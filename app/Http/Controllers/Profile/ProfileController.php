@@ -54,7 +54,7 @@ class ProfileController extends Controller
      * @param  int  $username
      * @return \Illuminate\Http\Response
      */
-    public function show($username)
+    public function show($username)//TODO
     {
         $member = collect(DB::select('
         SELECT "user".id_user as id,username, rank.name as rank,username, bioDescription, points, profilePhoto, name , (
@@ -76,17 +76,17 @@ class ProfileController extends Controller
         FROM "user", rank
         Where  "user".id_rank=rank.id_rank AND "user".username = \''. $username .'\''))->first();
         
-        $followers = DB::select('
+        $followers = collect(DB::select('
         SELECT id_user,username , profilePhoto , points, id_rank , 
         (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.follower) as rank
         FROM follow INNER JOIN "user" ON (follow.follower="user".id_user)
-        WHERE follow.following = '. $member->id);
+        WHERE follow.following = '. $member->id));
         
-        $following = DB::select('
+        $following = collect(DB::select('
         SELECT id_user,username , profilePhoto , points, id_rank ,
         (Select rank.name from "user" INNER JOIN rank ON ( "user".id_rank = rank.id_rank) WHERE "user".id_user = follow.following) as rank
         FROM follow INNER JOIN "user" ON follow.following ="user".id_user
-        WHERE follow.follower = '. $member->id);
+        WHERE follow.follower = '. $member->id));
         
         $questions = DB::select('
         SELECT question.id_question as id, question.title as title, question."date" as "date", question.votes as votes, question.deleted as deleted ,
@@ -323,7 +323,7 @@ class ProfileController extends Controller
     public function followers($username){
         $member = collect(DB::select('SELECT id_user, username , profilePhoto , points, id_rank from follow inner join "user" on (follow.following="user".id_user) where follow.follower = (SELECT "user".id_user  where "user".username = \''. $username .'\''))->first();
 
-        return view('pages.profile.followers', compact('member'));
+        return view('pages.profile.followers', compact('$member'));
     }
 
     /**

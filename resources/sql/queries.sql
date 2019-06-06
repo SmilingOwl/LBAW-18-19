@@ -176,14 +176,7 @@ INNER JOIN answer ON (sub.id_comment = answer.id_answer);
 
 
 -- Obtain questions matching a search input
-SELECT id_question, title
-FROM question
-WHERE search @@ plainto_tsquery('english',$search) AND question.deleted = false
-ORDER BY ts_rank(search,plainto_tsquery('english',$search)) DESC
-LIMIT 10;
-
---Preview of questions of a user
-SELECT question.id_question as id, question.title as title, question."date" as "date", question.votes as votes, question.deleted as deleted ,
+SELECT question.id_question as id, question.title as title, question."date" as "date", question.votes as votes, question.deleted as deleted ,"user".username,"user".profilePhoto,
 (
     Select count(answer.id_answer)
     From answer 
@@ -194,7 +187,24 @@ SELECT question.id_question as id, question.title as title, question."date" as "
     FROM answer INNER JOIN bestAnswer ON ( answer.id_answer = bestAnswer.id_bestAnswer)
     WHERE answer.id_question = question.id_question
 ) as hasBest,category.icon as catIcon
-FROM question INNER JOIN category ON (question.id_category = category.id_category)
+FROM (question INNER JOIN "user" ON (question.id_user = "user".id_user)) INNER JOIN category ON (category.id_category = question.id_category)
+WHERE search @@ plainto_tsquery(\'english\',$search) AND question.deleted = false AND category.name LIKE $catName AND "user".deleted = false AND "user".banned = false AND question.deleted = false
+ORDER BY ts_rank(search,plainto_tsquery(\'english\',$search)) DESC
+LIMIT 10;
+
+--Preview of questions of a user
+SELECT question.id_question as id, question.title as title, question."date" as "date", question.votes as votes, question.deleted as deleted ,"user".username,
+(
+    Select count(answer.id_answer)
+    From answer 
+    WHERE question.id_question = answer.id_question
+) as contagem, 
+(
+    SELECT count(bestAnswer.id_bestAnswer) as hasBest
+    FROM answer INNER JOIN bestAnswer ON ( answer.id_answer = bestAnswer.id_bestAnswer)
+    WHERE answer.id_question = question.id_question
+) as hasBest,category.icon as catIcon
+FROM (question INNER JOIN "user" ON (question.id_user = "user".id_user)) INNER JOIN category ON (question.id_category = category.id_category)
 WHERE question.id_user = $id_user
 GROUP BY question.id_question, category.icon
 ORDER BY question."date" DESC
