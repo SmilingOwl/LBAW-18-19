@@ -221,27 +221,51 @@ function getAnswers(answer,element) {
             for(let i=0;i<data.length;i++)
             {
                 let info=data[i];
-                htmlContent+='<div class="card-header comment-title">'
+                htmlContent+='<div class="card-header comment-title ">'
                 +'<div class="card-link answer-header-icon" >'
                 +'<div class="row">'
-                +'<div class="answer-user">'
-                +'<a href="/profile/'+info.username+'">'
-                +'<img src="/images/'+info.profilephoto+'" alt="User2" class="rounded-circle" style="width:2em; margin:0;">'
-                +'</a>'
-                +'<a href="/profile/'+info.username+'">'+info.username
-                +'</a></div><div>';
+                +'<div class="answer-user">';
+                if(info.deleted)
+                    htmlContent+="[deleted]";
+                else
+                {
+                    htmlContent+='<a href="/profile/'+info.username+'">'
+                    +'<img src="/images/'+info.profilephoto+'" alt="User2" class="rounded-circle" style="width:2em; margin:0;">'
+                    +'</a>'
+                    +'<a href="/profile/'+info.username+'">'+info.username
+                    +'</a></div><div>';
+                }
+                htmlContent+='</div><div>';
                 if(info.best != null)
                 {
                     htmlContent+='<img src="/images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">';
                 }
                 htmlContent+='</div></div><small>'+info.date
                 +'</small></div></div>'
-                +'<div class="card-body comment-body">'
+                +'<div class="card-body comment-body answer'+info.id_answer+'">'
                 +'<div class="media border p-3 answer-question">'
-                +'<div class="media-body"><div>'
-                +info.text
-                +'</div><div class="bottom-answer">'
-                +'<a href="#" style="font-family: \'Prompt\', sans-serif; color: #BE4627;">Report</a>'
+                +'<div class="media-body"><div>';
+                if(info.deleted)
+                    htmlContent+="[deleted]";
+                else
+                    htmlContent+=info.text
+                htmlContent+='</div><div class="bottom-answer">'
+                +'<div class="dropdown">'
+                +'<button type="button" class="btn" data-toggle="dropdown">'
+                +'<i class="fas fa-ellipsis-v"></i>'
+                +'</button>'
+                +'<div class="dropdown-menu">';
+                if(!info.deleted)
+                {
+                    if(info.username != username)
+                        htmlContent+='<span class="dropdown-item" onclick="reportAnswer(\''+info.id_answer+'\')" style="font-family: \'Prompt\', sans-serif; color: #BE4627;">Report</span>';
+                    if(info.username == username)
+                    {
+                        htmlContent+='<span class="dropdown-item" onclick="" >Edit</span>'
+                        +'<span class="dropdown-item" onclick="deleteAnswer('+info.id_answer+')" >Delete</span>';
+                    }
+                }
+                htmlContent+='</div></div>'
                 +'<div class="answer-up-votes" data-auth="'+info.auth+'" data-type="'+info.votetype+'" data-id="'+info.id_answer+'" data-owner="'+info.username+'">'
                 if(info.votetype == "upvote")
                 {
@@ -332,7 +356,7 @@ function expandClick() {
         let answer=media[i].querySelector(".expand-icon");
         let aq = media[i].querySelector(".answer-body-all > .card");
         function load() {
-            aq.innerHTML="Loading...";
+            aq.innerHTML='<span> Loading <span class="spinner-border spinner-border-sm"></span></span>';
             getAnswers(value,aq);
             answer.removeEventListener("click",load);
         }
@@ -340,4 +364,97 @@ function expandClick() {
             answer.addEventListener("click",load);
         
     }   
+}
+
+
+
+
+function deleteQuestion(id) {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        method: 'post',
+        url: '/api/questions/'+id,
+        data: {
+            "_method": 'DELETE',
+        },
+        success: function (data) {
+            if(data == "ok")
+            {
+                window.location.href="/topic/all";
+            }
+        },
+        error: function (data) {
+            console.log("Server error");
+        }
+    });
+}
+function deleteAnswer(id) {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        method: 'post',
+        url: '/api/answers/'+id,
+        data: {
+            "_method": 'DELETE',
+        },
+        success: function (data) {
+            if(data == "ok")
+            {
+                window.location.reload();
+            }
+        },
+        error: function (data) {
+            console.log(data);
+            console.log("Server error");
+        }
+    });
+}
+
+
+function reportQuestion(id,text) {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        method: 'post',
+        url: '/api/questions/'+id + '/report',
+        data: {
+            "text" : text,
+        },
+        success: function (data) {
+        },
+        error: function (data) {
+            console.log("Server error");
+        }
+    });
+}
+
+function reportAnswer(id) {
+    let text = document.querySelector(".answer"+id + " .media-body > div").innerHTML;
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        method: 'post',
+        url: '/api/answers/'+id + '/report',
+        data: {
+            "text" : text,
+        },
+        success: function (data) {
+        },
+        error: function (data) {
+            console.log("Server error");
+        }
+    });
 }

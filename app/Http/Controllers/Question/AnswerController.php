@@ -6,12 +6,28 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\Answer;
 
 class AnswerController extends Controller
 {
     public function __construct()
     {
        $this->middleware('auth');
+    }
+
+
+
+
+    public function delete($id_answer)
+    {
+        $answer = Answer::find($id_answer);
+        if(Auth::user()->id_user == $answer->user_post)
+        {
+            $answer->deleted = true;
+            $answer->save();
+            return  'ok';
+        }
+        return 'error';
     }
 
     public function addToQuestion()
@@ -109,5 +125,24 @@ class AnswerController extends Controller
 
         return redirect()->back();
         
+    }
+    public function report($id_answer)
+    {
+        $replace = [
+            'reason' => request('text'),
+            'id_answer' => $id_answer
+        ];
+        DB::beginTransaction();
+        $id = collect(DB::select('
+        INSERT INTO report("date", reason, id_question, id_answer)
+        VALUES(now(), :reason, null, :id_answer)
+        RETURNING id_report;
+        ', $replace))->first()->id_report;
+        DB::select('
+        INSERT INTO userReport(username, id_report)
+        VALUES(:username, :id_report);
+        ', ['username' => Auth::user()->id_user , 'id_report' => $id]);
+        DB::commit();
+        return 'ok';
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -22,6 +22,7 @@ class Answer extends Model
 {
     // Don't add create and update timestamps in database.
     public $timestamps  = false;
+    protected $primaryKey= 'id_answer';
 
     /**
      * The table associated with the model.

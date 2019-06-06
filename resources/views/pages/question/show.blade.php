@@ -70,7 +70,20 @@
                     </div>
                 </div>
             </div>
-            <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</a>
+            <div class="dropdown">
+                <button type="button" class="btn" data-toggle="dropdown">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+                <div class="dropdown-menu">
+                    @if ($question->username != Auth::user()->username)
+                        <span class="dropdown-item" onclick="reportQuestion('{{$question->id_question}}','{{$question->title}}')" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</span>
+                    @endif
+                    @if ($question->username == Auth::user()->username)
+                        <span class="dropdown-item" onclick="" >Edit</span>
+                        <span class="dropdown-item" onclick="deleteQuestion('{{$question->id_question}}')" >Delete</span>
+                    @endif
+                </div>
+            </div>
         </div>
     </div>
     <div class="card make-comment" style="margin-bottom:1em;" id="no-thin-line2">
@@ -113,37 +126,66 @@
             <div id="answers-to-question" class="collapse show" data-parent="#accordion2">
                 <div class="card-body answer-body-all">
                     <div class="card" style="border-style:none;">
-                        <div class="card-header comment-title">
+                        <div class="card-header comment-title ">
                             <div class="card-link answer-header-icon" >
-                            <div class="row">
-                                <div class="answer-user">
-                                    <a href={{URL::to('profile/'.$answer->username)}}>
-                                        <img src={{asset('images/'.$answer->profilephoto)}} alt="User2" class="rounded-circle" style="width:2em; margin:0;">
-                                    </a>
-                                    <a href={{URL::to('profile/'.$answer->username)}}>
-                                        {{$answer->username}}
-                                    </a>
+                                <div class="row">
+                                    <div class="answer-user">
+                                        @if ($answer->deleted)
+                                            [deleted]
+                                        @else
+                                            <a href={{URL::to('profile/'.$answer->username)}}>
+                                                <img src={{asset('images/'.$answer->profilephoto)}} alt="User2" class="rounded-circle" style="width:2em; margin:0;">
+                                            </a>
+                                            <a href={{URL::to('profile/'.$answer->username)}}>
+                                                {{$answer->username}}
+                                            </a>
+                                        @endif
+                                    </div>
+                                    <div>
+                                        @if (!is_null($answer->best))
+                                            <img src="../images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">
+                                        @endif
+                                    </div>
                                 </div>
-                                <div>
-                                    @if (!is_null($answer->best))
-                                        <img src="../images/answered-13.svg" alt="answered" class="media-object" style="width:2rem; height: 2rem;">
-                                    @endif
+                                    <small>
+                                        {{$answer->date}}
+                                    </small>
                                 </div>
                             </div>
-                                <small>
-                                    {{$answer->date}}
-                                </small>
-                            </div>
-                        </div>
-                            <div class="card-body comment-body">
+                            <div class="card-body comment-body answer{{$answer->id_answer}}">
                                 <div class="media border p-3 answer-question">
                                     <div class="media-body">
                                         <div>
-                                            {{$answer->text}}
+                                            @if ($answer->deleted)
+                                                [deleted]
+                                            @else
+                                                {{$answer->text}}
+                                            @endif
                                         </div>
 
                                         <div class="bottom-answer">
-                                            <a href="#" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</a>
+                                                
+                                            <div class="dropdown">
+                                                <button type="button" class="btn" data-toggle="dropdown">
+                                                    <i class="fas fa-ellipsis-v"></i>
+                                                </button>
+                                                <div class="dropdown-menu">
+                                                    @if (!$answer->deleted)
+                                                    @if ($answer->username != Auth::user()->username) 
+                                                        <span class="dropdown-item" onclick="reportAnswer('{{$answer->id_answer}}')"
+                                                             style="font-family: 'Prompt', sans-serif; color: #BE4627;"
+                                                              >
+                                                             Report</span>
+                                                    @endif
+                                                    @if ($answer->username == Auth::user()->username)
+                                                        <span class="dropdown-item" onclick="" >Edit</span>
+                                                        <span class="dropdown-item" onclick="deleteAnswer('{{$answer->id_answer}}')" >Delete</span>
+                                                    @endif
+                                                    @endif
+                                                </div>
+                                            </div>
+
+
                                             <div class="answer-up-votes" data-auth="{{$user}}" data-type="{{$answer->votetype}}" data-id="{{$answer->id_answer}}" data-owner="{{$answer->username}}">
                                                 @if ($answer->votetype=='upvote')
                                                     <img src="/images/icon-14.svg" alt="up-vote" class="media-object answer-upvote" style="width:1.2rem; height: 1.2rem;">
