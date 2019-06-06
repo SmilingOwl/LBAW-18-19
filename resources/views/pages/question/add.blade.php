@@ -7,6 +7,8 @@
 
     <script src={{asset('js/bar_nav.js')}}></script>
     <script src={{asset('js/footer_position.js')}}></script>
+    <script src={{asset('js/toolTip.js')}}></script>
+    <script src={{asset('js/addQuestion.js')}}></script>
 @endsection
 
 @section('content')
@@ -20,9 +22,9 @@
     <div class="row cat-row" style="font-size:100px;">
         @foreach ($catinfo as $cat)
         <div class="col-sm-1 col-2 div-cat">
-            <a href="#" data-toggle="tooltip" title="{{$cat->name}}">
+            <span data-type="{{$cat->name}}" data-toggle="tooltip" title="{{ucfirst($cat->name)}}">
                 <img src = {{asset('/images/'.$cat->icon)}} alt="categories" class="mx-auto d-block img-fluid rounded image">
-            </a>
+            </span>
         </div>
             
         @endforeach
@@ -38,9 +40,10 @@
         <div class="col-md-1"></div>
 
         <div class="col-md-10">
-            <form method="POST" action="{{route('question.create')}}">
+            <form method="POST" action="{{route('question.create')}}" enctype="multipart/form-data">
                 {{ method_field('PUT') }}
                 {{ csrf_field() }}
+                <input class="hidden-catType" type="hidden" name="catType" value="art">
                 <div class="form-group col-md-12 mb-5">
                     <input class="form-control form-control-lg question_line" type="text" name="title"
                         placeholder="Ask away!" required>
@@ -62,10 +65,10 @@
                     <div class="input-group">
                         <span class="input-group-btn">
                             <span class="btn btn-default btn-file btn-dark">
-                                Browse… <input type="file" id="imgInp">
+                                Browse… <input type="file" id="imgInp" name="image" class="form-control">
                             </span>
                         </span>
-                        <input type="text" class="form-control" readonly>
+                        <img id="image-preview" src="/images/icon-14.svg" alt="question-image" style="max-width:300px; max-height:300px;" />
                     </div>
                 </div>
 

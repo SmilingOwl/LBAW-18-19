@@ -72,6 +72,9 @@
                     <div id="description"   class="collapse show" data-parent="#accordion">
                         <div class="card-body" style="border-style:none; white-space: pre-line;">
                             {{$question->description}}
+                            @if (!is_null($question->photo))
+                                <img src="{{asset('images/uploaded/'.$question->photo)}}" class="img-fluid rounded" alt="photo" style="max-width:500px;">
+                            @endif
                         </div>
                     </div>
                 </div>
