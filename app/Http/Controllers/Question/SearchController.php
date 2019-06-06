@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Question;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\URL;
 
 class SearchController extends Controller
 {
@@ -52,6 +53,8 @@ class SearchController extends Controller
 
     public function search()
     {
+        if(strlen(request('search'))==0)
+            return redirect(URL::to('/topic/'.request('category')));
         $replace = [
             'search' => request('search'),
             'category' => request('category')

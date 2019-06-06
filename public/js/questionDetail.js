@@ -458,3 +458,22 @@ function reportAnswer(id) {
         }
     });
 }
+
+function addBestAnswer(id) {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        method: 'get',
+        url: '/api/answers/'+id + '/bestAnswer',
+        success: function (data) {
+            if(data == "ok")
+                window.location.reload();
+        },
+        error: function (data) {
+            console.log("Server error");
+        }
+    });
+}

@@ -11,6 +11,7 @@ use App\Models\Question;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Support\Facades\Redirect;
+use App\Models\Category;
 
 class QuestionController extends Controller
 {
@@ -63,7 +64,7 @@ class QuestionController extends Controller
      */
     public function showCreate()
     {
-        return view('pages.question.add');
+        return view('pages.question.add')->with('catinfo',Category::all());
     }
 
 
@@ -167,7 +168,7 @@ class QuestionController extends Controller
         (
             SELECT count(id_bestAnswer)
             FROM bestAnswer INNER JOIN answer ON ( bestAnswer.id_bestAnswer = answer.id_answer)
-            WHERE answer.id_question= :id_question AND bestAnswer.active = true
+            WHERE answer.id_question= :id_question AND bestAnswer.active = true AND bestAnswer.deleted = false
             GROUP BY bestAnswer.id_bestAnswer
         ) as best,
         (
@@ -195,7 +196,7 @@ class QuestionController extends Controller
         (
             SELECT count(id_bestAnswer)
             FROM bestAnswer
-            WHERE bestAnswer.id_bestAnswer = answer.id_answer AND bestAnswer.active = true
+            WHERE bestAnswer.id_bestAnswer = answer.id_answer AND bestAnswer.active = true AND bestAnswer.deleted = false
             GROUP BY bestAnswer.id_bestAnswer
         ) as best,
         (
@@ -255,7 +256,7 @@ class QuestionController extends Controller
         (
             SELECT count(id_bestAnswer)
             FROM bestAnswer
-            WHERE bestAnswer.id_bestAnswer = answer.id_answer
+            WHERE bestAnswer.id_bestAnswer = answer.id_answer AND bestAnswer.deleted = false
             GROUP BY bestAnswer.id_bestAnswer
         ) as best,
         (

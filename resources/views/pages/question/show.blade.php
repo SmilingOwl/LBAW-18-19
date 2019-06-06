@@ -181,6 +181,9 @@
                                                         <span class="dropdown-item" onclick="" >Edit</span>
                                                         <span class="dropdown-item" onclick="deleteAnswer('{{$answer->id_answer}}')" >Delete</span>
                                                     @endif
+                                                    @if ($question->username == Auth::user()->username && is_null($answer->best))
+                                                        <span class="dropdown-item" onclick="addBestAnswer('{{$answer->id_answer}}')" >Assign best answer</span>
+                                                    @endif
                                                     @endif
                                                 </div>
                                             </div>

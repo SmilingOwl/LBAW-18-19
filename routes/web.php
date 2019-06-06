@@ -79,6 +79,7 @@ Route::post('api/search/user','Profile\ApiController@likeUser');
 Route::delete('api/questions/{id_question}','Question\QuestionController@delete');
 Route::post('api/questions/{id_question}/report','Question\QuestionController@report');
 Route::post('api/answers/{id_answer}/report','Question\AnswerController@report');
+Route::get('api/answers/{id_answer}/bestAnswer','Question\AnswerController@bestAnswer');
 Route::delete('api/answers/{id_answer}','Question\AnswerController@delete');
 Route::delete('api/questions/{id_question}/answers/{id_answer}', 'Answer\AnswerController@delete');
 

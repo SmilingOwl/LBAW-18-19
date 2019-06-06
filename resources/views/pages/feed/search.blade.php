@@ -12,6 +12,7 @@
 
 <div class="container d-flex justify-content-end" id="sortBar">
 
+    @if (!(count($result)==0))
     <div class="dropdown show" id="sortBy">
         <a class="btn dropdown-toggle" href="#" role="button" id="sortByButton" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -25,6 +26,7 @@
             <a class="dropdown-item" href="#">Less Answers</a>
         </div>
     </div>
+    @endif
 
 </div>
 
@@ -32,6 +34,9 @@
 
     <div class="row">
         <div class="col-lg ">
+            @if (count($result)==0)
+                We didn't find what you were looking for. Try asking the question instead.
+            @else
             <div class="results">
                 @foreach ($result as $item)
                     <div class="media result">
@@ -89,6 +94,7 @@
                 <a href="#" class="btn" id="loadMore">Load
                     More</a>
             </div>
+            @endif
 
         </div>
     </div>
