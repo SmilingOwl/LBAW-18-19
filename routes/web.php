@@ -67,6 +67,7 @@ Route::get('topic/{category}', 'Feed\TopicController@show');
 
 
 //API
+Route::get('api/members/{username}/notifications/{id}/viewed','Profile\ApiController@notificationsView');
 Route::get('api/members/{username}/notifications','Profile\ApiController@notifications');
 Route::post('api/search/user','Profile\ApiController@likeUser');
 Route::delete('api/questions/{id_question}','Question\QuestionController@delete');
