@@ -13,6 +13,7 @@ class AnswerController extends Controller
     {
        $this->middleware('auth');
     }
+
     public function addToQuestion()
     {
         DB::transaction(function () {
@@ -21,6 +22,7 @@ class AnswerController extends Controller
                 'id_question' => request('id_question'),
                 'user_post' => Auth::user()->id_user
             ];
+            
             DB::select('
             INSERT INTO answer("text", "date", votes, photo,deleted, id_question, user_post)
             VALUES( :text, now(), 0, NULL, false, :id_question, :user_post);
