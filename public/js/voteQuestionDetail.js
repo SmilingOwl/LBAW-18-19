@@ -34,7 +34,8 @@ function firstAnswersVotes() {
         let auth = divVote.getAttribute("data-auth");
         let id= divVote.getAttribute("data-id");
         let owner = divVote.getAttribute("data-owner");
-        if(owner == username) continue;
+        if(user_type!=null)
+            if(owner == username) continue;
         let voteTextNumber = divVote.querySelector(".number-votes").getAttribute("data-number");
         let upvote = divVote.querySelector(".answer-upvote");
         let downvote = divVote.querySelector(".answer-downvote");
@@ -146,8 +147,11 @@ function questionVotes() {
     let auth = divVote.getAttribute("data-auth");
     let id= divVote.getAttribute("data-id");
     let owner = divVote.getAttribute("data-owner");
-    if(owner == username)
-        return;
+    if(user_type!=null)
+    {
+        if(owner == username)
+            return;
+    }
     let voteTextNumber = divVote.querySelector(".number-votes").getAttribute("data-number");
     let upvote = divVote.querySelector(".question-upvote");
     let downvote = divVote.querySelector(".question-downvote");

@@ -67,7 +67,7 @@ class LoginController extends Controller
     {
         session()->forget('type');
         Auth::logout();
-        return redirect()->back();
+        return redirect(URL::to('/topic/all'));
     }
     public function login(Request $request)
     {

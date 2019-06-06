@@ -15,9 +15,15 @@
     <div class="card detail mt-5">
         <div class="card-header" id="question-header">
             <div class="name-aproved">
-                <h6 class="media-heading resultHeader text-nowrap text-truncate" style="max-width:235px ;"><a href={{URL::to('profile/'.$question->username)}}><img
-                            src={{asset('images/'.$question->profilephoto)}} alt="profile_pic" class="media-object rounded-circle profilePic "
+                <h6 class="media-heading resultHeader text-nowrap text-truncate" style="max-width:235px ;"><a href={{URL::to('profile/'.$question->username)}}>
+                    @if (is_null($question->profilephoto))
+                        <img src={{asset('images/defaultPhoto.png')}} alt="profile_pic" class="media-object rounded-circle profilePic "
                             style="width:3rem; ">
+                    @else
+                        <img src={{asset('images/'.$question->profilephoto)}} alt="profile_pic" class="media-object rounded-circle profilePic "
+                            style="width:3rem; ">
+                    @endif
+                    
                         {{$question->username}}</a></h6>
                     <a href={{URL::to('topic/'.$question->catname)}} id="categoryQuestion"><img src={{asset('images/'.$question->caticon)}} alt="category" class="media-object"
                             style="width:3rem; height: 3rem;">{{ucfirst($question->catname)}}</a>
@@ -71,6 +77,7 @@
                 </div>
             </div>
             <div class="dropdown">
+                @if (Auth::check())
                 <button type="button" class="btn" data-toggle="dropdown">
                     <i class="fas fa-ellipsis-v"></i>
                 </button>
@@ -83,6 +90,7 @@
                         <span class="dropdown-item" onclick="deleteQuestion('{{$question->id_question}}')" >Delete</span>
                     @endif
                 </div>
+                @endif
             </div>
         </div>
     </div>
@@ -134,7 +142,12 @@
                                             [deleted]
                                         @else
                                             <a href={{URL::to('profile/'.$answer->username)}}>
-                                                <img src={{asset('images/'.$answer->profilephoto)}} alt="User2" class="rounded-circle" style="width:2em; margin:0;">
+                                                @if (is_null($answer->profilephoto))
+                                                    <img src={{asset('images/defaultPhoto.png')}} alt="User2" class="rounded-circle" style="width:2em; margin:0;">
+                                                @else
+                                                    <img src={{asset('images/'.$answer->profilephoto)}} alt="User2" class="rounded-circle" style="width:2em; margin:0;">
+                                                @endif
+                                                
                                             </a>
                                             <a href={{URL::to('profile/'.$answer->username)}}>
                                                 {{$answer->username}}
@@ -164,8 +177,8 @@
                                         </div>
 
                                         <div class="bottom-answer">
-                                                
                                             <div class="dropdown">
+                                                @if (Auth::check())
                                                 <button type="button" class="btn" data-toggle="dropdown">
                                                     <i class="fas fa-ellipsis-v"></i>
                                                 </button>
@@ -186,6 +199,7 @@
                                                     @endif
                                                     @endif
                                                 </div>
+                                                @endif
                                             </div>
 
 

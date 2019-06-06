@@ -103,7 +103,8 @@ function voteAnswerEvent(element) {
     let auth = divVote.getAttribute("data-auth");
     let id= divVote.getAttribute("data-id");
     let owner = divVote.getAttribute("data-owner");
-    if(owner == username) return;
+    if(user_type != null)
+        if(owner == username) return;
     let voteTextNumber = divVote.querySelector(".number-votes").getAttribute("data-number");
     let upvote = divVote.querySelector(".answer-upvote");
     let downvote = divVote.querySelector(".answer-downvote");
@@ -257,12 +258,15 @@ function getAnswers(answer,element) {
                 +'<div class="dropdown-menu">';
                 if(!info.deleted)
                 {
-                    if(info.username != username)
-                        htmlContent+='<span class="dropdown-item" onclick="reportAnswer(\''+info.id_answer+'\')" style="font-family: \'Prompt\', sans-serif; color: #BE4627;">Report</span>';
-                    if(info.username == username)
+                    if(user_type !=null)
                     {
-                        htmlContent+='<span class="dropdown-item" onclick="" >Edit</span>'
-                        +'<span class="dropdown-item" onclick="deleteAnswer('+info.id_answer+')" >Delete</span>';
+                        if(info.username != username)
+                            htmlContent+='<span class="dropdown-item" onclick="reportAnswer(\''+info.id_answer+'\')" style="font-family: \'Prompt\', sans-serif; color: #BE4627;">Report</span>';
+                        if(info.username == username)
+                        {
+                            htmlContent+='<span class="dropdown-item" onclick="" >Edit</span>'
+                            +'<span class="dropdown-item" onclick="deleteAnswer('+info.id_answer+')" >Delete</span>';
+                        }
                     }
                 }
                 htmlContent+='</div></div>'
