@@ -132,7 +132,20 @@ class LoginController extends Controller
     {
         $user = Socialite::driver('facebook')->user();
 
-        dd($user);
+        $newUser = Member::where('provider_id', $user->getId())->first();
+
+        if(!$newUser) {
+         $newUser = Member::create([
+                'email' => $user->getEmail(),
+                'username' => $user->getName(),
+                'id_user' => $user->getId(),
+                'provider_id' => 'facebook',
+        ]);
+        }
+
+        Auth::login($newUser, true);
+
+        return redirect($this->redirectTo);
 
         // $user->token;
     }
@@ -155,7 +168,20 @@ class LoginController extends Controller
     {
         $user = Socialite::driver('google')->user();
 
-        dd($user);
+        $newUser = Member::where('provider_id', $user->getId())->first();
+
+        if(!$newUser) {
+         $newUser = Member::create([
+                'email' => $user->getEmail(),
+                'username' => $user->getName(),
+                'id_user' => $user->getId(),
+                'provider_id' => 'google',
+        ]);
+        }
+
+        Auth::login($newUser, true);
+
+        return redirect($this->redirectTo);
 
         // $user->token;
     }
