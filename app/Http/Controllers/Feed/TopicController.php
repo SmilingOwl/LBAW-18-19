@@ -116,7 +116,11 @@ class TopicController extends Controller
 
     }
 
-    public function loadMorequestions(){
+    public function loadMorequestions($id_qstn){
+
+        $replaces = [
+            'id_qstn' => $id_qstn
+        ];
 
         $all_questions = collect(DB::select('
         SELECT id_question, username, "user".profilePhoto as photo, title, description, date, votes, category.name, 
@@ -134,7 +138,8 @@ class TopicController extends Controller
         INNER JOIN "user" ON (question.id_user = "user".id_user))
         INNER JOIN category ON (question.id_category = category.id_category)
         WHERE question.deleted = false
-        ORDER BY question.date DESC;'));
+        ORDER BY question.date DESC
+        OFFSET :id_qstn;'));
 
         return response()->json($all_questions);
     }

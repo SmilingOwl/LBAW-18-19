@@ -8,6 +8,8 @@
     <script src={{asset('js/bar_nav.js')}}></script>
     <script src={{asset('js/footer_position.js')}}></script>
     <script src={{asset('js/toolTip.js')}}></script>
+    <script src={{asset('js/questions_load.js')}}></script>
+
 @endsection
 @section('content')
 
@@ -215,8 +217,9 @@
             </div>
 
             <div class="row" style="justify-content: center">
-                <a href="#" class="btn" id="loadMore">Load
+                <button type="button" name="loadMore" class="btn" id="loadMore">Load
                     More</a>
+                    {{ csrf_field() }}
             </div>
 
         </div>

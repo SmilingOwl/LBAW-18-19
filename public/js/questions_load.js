@@ -1,10 +1,8 @@
-window.addEventListener("load",onLoadQuestions);
+let load = document.querySelectorAll("#loadMore");
+load.addEventListener("click", loadQuestions);
 
-function onLoadQuestions() {
-    load_data();
-}
 
-    function load_data(id="", category){
+    function loadQuestions(){
         $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -12,7 +10,7 @@ function onLoadQuestions() {
         });
         $.ajax({
                 method: 'get',
-                url: '/topic/' + category,
+                url: '/topic/all',
                 success: function (data) {
                     let htmlContent='';
         for(let i=0;i<data.length;i++)
@@ -55,6 +53,10 @@ function onLoadQuestions() {
                         '</div>';
         
                             }
+                
+                    document.querySelectorAll("#loadMore").remove();
+                    document.querySelectorAll(".results").append(htmlContent);
+                    
                 }
             });
         }
