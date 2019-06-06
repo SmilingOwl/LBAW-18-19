@@ -60,10 +60,10 @@
 
            <div class="col-md" id="socialBtn">
 
-               <a href="../pages/feed.html" class="fb btn">
+               <a href="login/facebook" class="fb btn">
                    <i class="fa fa-facebook fa-fw"></i> Register with Facebook
                </a>
-               <a href="../pages/feed.html" class="google btn"><i class="fa fa-google fa-fw">
+               <a href="login/google" class="google btn"><i class="fa fa-google fa-fw">
                    </i> Register with Google
                </a>
            </div>

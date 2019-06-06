@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Member;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
+use Socialite;
 
 class LoginController extends Controller
 {
@@ -110,5 +111,52 @@ class LoginController extends Controller
         throw ValidationException::withMessages([
             $this->username() => [trans('auth.removed')],
         ]);
+    }
+
+    /**
+     * Redirect the user to the Facebook authentication page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider_Fb()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+    /**
+     * Obtain the user information from Facebook.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback_Fb()
+    {
+        $user = Socialite::driver('facebook')->user();
+
+        dd($user);
+
+        // $user->token;
+    }
+    /**
+     * Redirect the user to the Google authentication page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function redirectToProvider_Gl()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    /**
+     * Obtain the user information from Google.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleProviderCallback_Gl()
+    {
+        $user = Socialite::driver('google')->user();
+
+        dd($user);
+
+        // $user->token;
     }
 }

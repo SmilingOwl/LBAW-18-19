@@ -53,8 +53,8 @@
        
 
             <div class="col-md" id="socialBtn">
-                <a href="../pages/feed.html" class="fb btn"> <i class="fa fa-facebook fa-fw"></i> Continue with Facebook</a>
-                <a href="../pages/feed.html" class="google btn"><i class="fa fa-google fa-fw"></i> Sign in with Google</a>
+                <a href="login/facebook" class="fb btn"> <i class="fa fa-facebook fa-fw"></i> Continue with Facebook</a>
+                <a href="login/google" class="google btn"><i class="fa fa-google fa-fw"></i> Sign in with Google</a>
             </div>
             
 
