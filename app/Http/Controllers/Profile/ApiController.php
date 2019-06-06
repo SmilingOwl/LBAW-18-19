@@ -55,11 +55,14 @@ class ApiController extends Controller
         {
             return response()->json(null);
         }
+        $replace =[
+            'name' => $request->name.'%'
+        ];
         $userlike = DB::select('
         SELECT "user".username as username, "user".email as email, rank.name as rankName
         FROM "user" INNER JOIN rank ON ("user".id_rank = rank.id_rank)
-        WHERE "user".username ILIKE \':name%\'
-        ',['name' => $request->name]);
+        WHERE "user".username ILIKE :name
+        ',$replace);
         return response()->json($userlike);
     }
 }
