@@ -46,8 +46,11 @@
             </div>
         </form>
     </div>
-    <a href="/question/add" class="btn btn btn-dark btn-lg" id="ask-question-main" role="button">
-        Ask a Question
+    <a href="/login" class="btn btn btn-dark btn-lg" id="ask-question-main" role="button">
+        Login
+    </a>
+    <a href="/register" class="btn btn btn-dark btn-lg" id="ask-question-main" role="button">
+        Register
     </a>
 </div>
 
