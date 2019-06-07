@@ -243,26 +243,35 @@ class ProfileController extends Controller
      * Follow user
      */
     public function follow(Request $request, $username) {
-        $replace = [
-            'username' => Auth::user()['username']
-        ];
-
-        $id_userFollower = collect(DB::select('
+        DB::beginTransaction();
+        $id_userFollowing = collect(DB::select('
             SELECT id_user
             FROM "user"
             WHERE "user".username LIKE :username
-            ',['username' => $username2]))->first()->id_user;
-        
-        $id_userFollowing = collect(DB::select('
-           SELECT id_user
-           FROM "user"
-           WHERE "user".username = $username'))->first()->id_user;
-
+            ',['username' => $username]))->first()->id_user;
+        $replace = [
+            'id_userFollower' => Auth::user()->id_user,
+            'id_userFollowing' => $id_userFollowing
+        ];
         DB::select('
           INSERT INTO follow(follower, following)
           VALUES(:id_userFollower, :id_userFollowing)
-          ',['id_userFollower' => $id_userFollower,'id_userFollowing' => $id_userFollowing]
+          ',$replace
         );
+        $replaces = [
+            'description' => Auth::user()->username.' has started following you',
+            'type' => 'follow',
+            'view' => false,
+            'questionTarget' => null,
+            'target' => $id_userFollowing,
+            'creator' => Auth::user()->id_user
+        ];
+        DB::select('
+        INSERT INTO notification (description, type, view,"date",questionTarget,target,creator)
+        VALUES (:description, :type, :view, now(), :questionTarget,:target,:creator);
+        ',$replaces
+        );
+        DB::commit();
     }
 
     /**
@@ -270,25 +279,38 @@ class ProfileController extends Controller
      */
     public function unFollow(Request $request, $username) {
   
-        $replace = [
-            'username' => Auth::user()['username']
-        ];
-
-        $id_userFollower = collect(DB::select('
+        DB::beginTransaction();
+        $id_userFollowing = collect(DB::select('
             SELECT id_user
             FROM "user"
             WHERE "user".username LIKE :username
-            ',['username' => $username2]))->first()->id_user;
+            ',['username' => $username]))->first()->id_user;
+            
+        $replace = [
+            'id_user' => Auth::user()->id_user,
+            'id_userFollowing' => $id_userFollowing
+        ];
         
-        $id_userFollowing = collect(DB::select('
-           SELECT id_user
-           FROM "user"
-           WHERE "user".username = $username'))->first()->id_user;
            
         DB::select('
         DELETE FROM follow 
-        where follower = $id_userFollower and following = $id_userFollowing'
+        where follower = :id_user and following = :id_userFollowing',$replace
+
         );
+        $replaces = [
+            'description' => Auth::user()->username.' has stopped following you',
+            'type' => 'follow',
+            'view' => false,
+            'questionTarget' => null,
+            'target' => $id_userFollowing,
+            'creator' => Auth::user()->id_user
+        ];
+        DB::select('
+        INSERT INTO notification (description, type, view,"date",questionTarget,target,creator)
+        VALUES (:description, :type, :view, now(), :questionTarget,:target,:creator);
+        ',$replaces
+        );
+        DB::commit();
     }
 
     public function promoteToModerator(Request $request,$username){

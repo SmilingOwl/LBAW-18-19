@@ -84,7 +84,7 @@ class LoginController extends Controller
         }
         $user = Member::where('username',$request->username)->first();
 
-        if($user->deleted || $user->removed)
+        if(!is_null($user) && ($user->deleted || $user->removed))
         {
             $this->incrementLoginAttempts($request);
             return $this->sendFailedLoginRemoved($request);

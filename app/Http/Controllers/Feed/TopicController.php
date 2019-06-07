@@ -77,7 +77,8 @@ class TopicController extends Controller
         INNER JOIN category ON (question.id_category = category.id_category)
         WHERE question.deleted = false
         ORDER BY question.date DESC
-        LIMIT 10;'));
+        
+        '));
 
 
         $questions = collect(DB::select('
@@ -96,7 +97,8 @@ class TopicController extends Controller
         INNER JOIN "user" ON (question.id_user = "user".id_user))
         INNER JOIN category ON (question.id_category = category.id_category)
         WHERE category.name = :category AND question.deleted = false
-        LIMIT 10;', $replaces));
+        ORDER BY question.date DESC
+        ', $replaces));
         
         $top_users=DB::select('
         SELECT username, "user".profilePhoto as photo, points

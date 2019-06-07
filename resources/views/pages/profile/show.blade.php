@@ -7,6 +7,7 @@
 
 <script src={{asset('js/bar_nav.js')}}></script>
 <script src={{asset('js/footer_position.js')}}></script>
+<script src={{asset('js/profile.js')}}></script>
 @endsection
 
 @section('content')

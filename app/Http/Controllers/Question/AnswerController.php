@@ -58,7 +58,7 @@ class AnswerController extends Controller
             ))->first()->username;
             $replaces = [
                 'description' => $questionOwnerUsername.' answered your question',
-                'type' => 'question',
+                'type' => 'answer',
                 'view' => false,
                 'questionTarget' => request('id_question'),
                 'target' => $questionOwner,
@@ -109,7 +109,7 @@ class AnswerController extends Controller
             ))->first()->username;
             $replaces = [
                 'description' => $answerOwnerUsername.' commented on your answer',
-                'type' => 'answer',
+                'type' => 'comment',
                 'view' => false,
                 'questionTarget' => request('id_question'),
                 'target' => $answerOwner,

@@ -1,11 +1,4 @@
-@section('include')
-    
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/general.css')}}>
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/style.css')}}>
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/login.css')}}>
 
-    <script src={{asset('js/profile.js')}}></script>
-@endsection
 <section>
 
     <div class="jumbotron profile-jumbotron">
@@ -31,11 +24,11 @@
                         @endif
                         @if(Auth::user()->username != $member->username && !($followers->flatten()->where('username', Auth::user()->username)->isEmpty()))
                             <h5>
-                                <button type="button" onclick="unfollow($member->username)" class="btn btn-light">Unfollow</button> 
+                                <button type="button" onclick="unfollow('{{$member->username}}')" class="btn btn-light">Unfollow</button> 
                             </h5>   
                         @elseif(Auth::user()->username != $member->username && ($followers->flatten()->where('username', Auth::user()->username)->isEmpty()))  
                             <h5>
-                                <button type="button" onclick="follow($member->username)" class="btn btn-light">Follow</button> 
+                                <button type="button" onclick="follow('{{$member->username}}')" class="btn btn-light">Follow</button> 
                             </h5>            
                         @endif
                         <span class="fa-layers fa-fw">
