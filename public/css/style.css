@@ -13,8 +13,6 @@ li{
     font-family: 'Prompt', sans-serif;
 }
 
-/* Bootstrap 4 text input with search icon on the right */
-
 .has-search-right {
     position: relative;
     left: 50%;
@@ -147,9 +145,7 @@ ul.pagination {
     margin-bottom: 50px;
 }
 
-/* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
+
 
 #content {
     width: 100%;
@@ -157,9 +153,6 @@ ul.pagination {
     transition: all 0.3s;
 }
 
-/* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
 
 @media (max-width: 768px) {
     #sidebar {
@@ -230,7 +223,6 @@ ul.pagination {
     background-position: center;
 }
 
-/**........Ask...........**/
 .btn-file {
     position: relative;
     overflow: hidden;
@@ -440,10 +432,6 @@ td > input:focus {
   outline: 0 none;
 }
 
-
-/*.form-control:focus{
-    border: 0.15em solid black;
-}*/
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: black;

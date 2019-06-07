@@ -9,6 +9,7 @@ body {
     --footer-color: #FFFDF8;
 }
 
+
 .card-footer {
     padding: .75rem 1.25rem;
     background-color: #FFFDF8;
@@ -47,7 +48,6 @@ nav.navbar{
     font-size: 15px;
     line-height: 25px;
     text-decoration: none;
-    /* remove underline from anchors */
 }
 
 .dropdown-image-cat {
@@ -124,13 +124,12 @@ nav.navbar{
 img.cat-icon {
     opacity: 0.5;
     filter: alpha(opacity=50);
-    /* For IE8 and earlier */
 }
 
 img.cat-icon:hover {
     opacity: 1.0;
     filter: alpha(opacity=100);
-    /* For IE8 and earlier */
+
 }
 
 .mobile-search-field {
