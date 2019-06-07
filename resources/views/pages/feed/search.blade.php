@@ -14,9 +14,7 @@
 
     @if (!(count($result)==0))
     <div class="dropdown show" id="sortBy">
-        <a class="btn dropdown-toggle" href="#" role="button" id="sortByButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Sort By </a>
+        
 
         <div class="dropdown-menu" >
             <a class="dropdown-item" href="#">Newest</a>
@@ -90,10 +88,6 @@
 
             </div>
 
-            <div class="row" style="justify-content: center">
-                <a href="#" class="btn" id="loadMore">Load
-                    More</a>
-            </div>
             @endif
 
         </div>
