@@ -7,7 +7,7 @@
             <form class="search-bar-form" method="GET" action={{route('search')}}>
                 <div class="form-control form-control-lg search-container">
                     <div class="search-container2">
-                        <input class="category-choice" type="hidden" name="category" value="all">
+                        <input class="category-choice" type="hidden" name="category" alt="all">
                         <div class="search-bar-cat">
                             <img src="/images/logo.png" class="mx-auto d-block img-fluid rounded-circle cat-icon"
                                 width="33" alt="logo">

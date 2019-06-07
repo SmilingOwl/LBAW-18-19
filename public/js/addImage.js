@@ -1,18 +1,1 @@
-window.addEventListener("load",onLoadAddImage);
-
-function onLoadAddImage() {
-    $("#imgInp").change(function() {
-        readURL(this);
-    });
-}
-
-function readURL(input) {
-    if (input.files && input.files[0]) {
-        var reader = new FileReader();
-
-        reader.onload = function(e) {
-            $('#image-preview').attr('src', e.target.result);
-        }
-        reader.readAsDataURL(input.files[0]);
-    }
-}
+function onLoadAddImage(){$("#imgInp").change(function(){readURL(this)})}function readURL(e){if(e.files&&e.files[0]){var a=new FileReader;a.onload=function(e){$("#image-preview").attr("src",e.target.result)},a.readAsDataURL(e.files[0])}}window.addEventListener("load",onLoadAddImage);

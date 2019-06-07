@@ -1,8 +1,8 @@
 @extends('layouts.layout')
 @section('include')
     
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/general.css')}}>
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/style.css')}}>
+    <link rel="stylesheet"  media="screen" href={{asset('css/general.css')}}>
+    <link rel="stylesheet"  media="screen" href={{asset('css/style.css')}}>
 
     <script src={{asset('js/bar_nav.js')}}></script>
     <script src={{asset('js/questionDetail.js')}}></script>
@@ -93,7 +93,7 @@
                         <span class="dropdown-item" onclick="reportQuestion('{{$question->id_question}}','{{$question->title}}')" style="font-family: 'Prompt', sans-serif; color: #BE4627;">Report</span>
                     @endif
                     @if ($question->username == Auth::user()->username)
-                        <span class="dropdown-item" onclick="" >Edit</span>
+                        <a href={{URL::to('questions/' .$question->id_question .'/edit')}} role="button" class="btn dropdown-item" id="editBtn" style="max-width: 40px;">Edit</a> </span>
                         <span class="dropdown-item" onclick="deleteQuestion('{{$question->id_question}}')" >Delete</span>
                     @endif
                 </div>

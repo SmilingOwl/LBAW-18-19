@@ -118,31 +118,4 @@ class TopicController extends Controller
 
     }
 
-    public function loadMorequestions($id_qstn){
-
-        $replaces = [
-            'id_qstn' => $id_qstn
-        ];
-
-        $all_questions = collect(DB::select('
-        SELECT id_question, username, "user".profilePhoto as photo, title, description, date, votes, category.name, 
-        (
-            Select count(answer.id_answer)
-            From answer 
-            WHERE question.id_question = answer.id_question
-        ) as contagem, 
-        (
-            SELECT count(bestAnswer.id_bestAnswer) as hasBest
-            FROM answer INNER JOIN bestAnswer ON ( answer.id_answer = bestAnswer.id_bestAnswer)
-            WHERE answer.id_question = question.id_question
-        ) as hasBest, category.icon as catIcon
-        FROM (question
-        INNER JOIN "user" ON (question.id_user = "user".id_user))
-        INNER JOIN category ON (question.id_category = category.id_category)
-        WHERE question.deleted = false
-        ORDER BY question.date DESC
-        OFFSET :id_qstn;'));
-
-        return response()->json($all_questions);
-    }
 }

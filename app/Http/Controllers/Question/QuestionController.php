@@ -97,9 +97,9 @@ class QuestionController extends Controller
         $replaces = [
             'id_question' => $id_question
         ];
-        $question = collect(DB::select('SELECT id_question, title, description, "date", votes, photo, deleted, id_category, id_user FROM question WHERE id_question = \':id_question\'', $replaces))->first();
+        $question = collect(DB::select('SELECT id_question, title, description, "date", votes, photo, deleted, id_category, id_user FROM question WHERE id_question = :id_question', $replaces))->first();
 
-        return view('pages.question.edit')->with('question', $question);
+        return view('pages.question.edit')->with('question', $question)->with('catinfo',Category::all());
     }
 
     /**
@@ -119,15 +119,34 @@ class QuestionController extends Controller
             //'category' => 'required'
         ]);
 
+        if($request->hasFile('image'))
+        {
+            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            request()->image->move(public_path('images/uploaded'), $imageName);
+        }
+
         $question = Question::find($id_question);
+
+       /* $category = collect(DB::select('
+        SELECT id_category
+        FROM category
+        WHERE category.name = :name
+        ', ['name' => request('catType')]))->first()->id_category;*/
 
         $question->title = request('title');
         $question->description = request('description');
-        // $question->category = request('name');
+        if($request->hasFile('image'))
+            $question->photo = $imageName;
+        else
+            $question->photo = null;
+        
+        //$question->id_category = $category;
 
-        $question->save();
-
-        return redirect('pages.question.show');
+        if ($question->save()) {
+            return redirect('/questions/' . $question->id_question);
+        } else {
+            return Redirect::back()->withErrors(['Unable to create a new question.']);
+        }
     }
 
 
@@ -160,11 +179,6 @@ class QuestionController extends Controller
         return redirect()->back()->withErrors('Wrong Password')->withInput();
     }
 
-    public function topic($category)
-    {
-
-        return view('pages.question.topic');
-    }
 
     public function show($id_question)
     {

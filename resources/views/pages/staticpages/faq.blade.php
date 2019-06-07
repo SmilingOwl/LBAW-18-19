@@ -1,8 +1,8 @@
 @extends('layouts.layout')
 @section('include')
     
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/general.css')}}>
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/style.css')}}>
+    <link rel="stylesheet"  media="screen" href={{asset('css/general.css')}}>
+    <link rel="stylesheet"  media="screen" href={{asset('css/style.css')}}>
 
     <script src={{asset('js/bar_nav.js')}}></script>
     <script src={{asset('js/footer_position.js')}}></script>
@@ -25,7 +25,7 @@
             <?php $i=1; ?>
             @foreach ($faqInfo as $item)
             <div class="card faq">
-                <div class="card-header" >
+                <div class="card-header faq_title" >
                     <h5 class="mb-0">
                     <button class="btn btn faq_line" type="button" data-toggle="collapse" data-target="#collapse<?= $i ?>" aria-expanded="true"
                         aria-controls="collapse<?= $i ?>">
@@ -35,7 +35,7 @@
                 </div>
         
                 <div id="collapse<?= $i ?>" class="collapse <?php if($i==1) echo 'show';?>" data-parent="#accordionExample">
-                    <div class="card-body">
+                    <div class="card-body faq_text">
                         {{$item->answer}}
                     </div>
                 </div>
