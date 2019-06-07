@@ -296,7 +296,7 @@ class ProfileController extends Controller
             'username' => Auth::user()['username']
         ];
         $type = collect(DB::select('select role.type as type from "user",role where "user".username = :username and role.id_user = "user".id_user',$replace))->first();
-        if($type->type === "administrator")
+        if($type->type === "administrator" || $type->type === "moderator" )
         {
             $id_user = collect(DB::select('
             SELECT id_user
