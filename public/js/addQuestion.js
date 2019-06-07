@@ -24,7 +24,6 @@ function onLoadAddQuestion() {
 function readURL(input) {
     if (input.files && input.files[0]) {
         var reader = new FileReader();
-        console.log("here");
 
         reader.onload = function(e) {
             $('#image-preview').attr('src', e.target.result);

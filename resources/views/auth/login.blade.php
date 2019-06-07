@@ -31,11 +31,6 @@
                     <input  class="form" type="password" name="password" id="insideInput2" placeholder="Password" required>
                 </div>
 
-                <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                    <label class="custom-control-label" for="customCheck1">Remember password</label>
-                </div>
-
                 <button type="submit" class="btn btn-dark" style="width: 100%; margin-top: 20px; margin-bottom: 20px;">Sign in</button>
                 <a href="recover" class="logInText" style="color:black"> Forgot password?</a>
                 <a href= {{ route('register') }} class="logInText" style="color:black"> New here? Create an

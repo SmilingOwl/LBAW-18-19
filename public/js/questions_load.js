@@ -1,4 +1,4 @@
-let load = document.querySelectorAll("#loadMore");
+/*let load = document.querySelectorAll("#loadMore");
 load.addEventListener("click", loadQuestions);
 
 
@@ -59,4 +59,4 @@ load.addEventListener("click", loadQuestions);
                     
                 }
             });
-        }
+        }*/

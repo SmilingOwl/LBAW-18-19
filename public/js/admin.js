@@ -118,11 +118,9 @@ function requestUsers(e)
         url: '/api/search/user',
         data:{name:$(this).val()},
         success: function (data) {
-            console.log(data);
             displayUsers(data);
         },
         error: function (data) {
-            console.log(data);
             console.log("server error");
         }
     });

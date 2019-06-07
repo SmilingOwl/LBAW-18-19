@@ -61,14 +61,14 @@
                 </div>
 
                 <div class="form-group col-md-12">
-                    <h6> Upload images for your question</h6>
+                    <h6> Upload image for your question</h6>
                     <div class="input-group">
                         <span class="input-group-btn">
                             <span class="btn btn-default btn-file btn-dark">
                                 Browse… <input type="file" id="imgInp" name="image" class="form-control">
                             </span>
                         </span>
-                        <img id="image-preview" src="/images/icon-14.svg" alt="question-image" style="max-width:300px; max-height:300px;" />
+                        <img id="image-preview" src="/images/icon-14.svg" alt="question-image" style="padding-left:10px; max-width:300px; max-height:300px;" />
                     </div>
                 </div>
 

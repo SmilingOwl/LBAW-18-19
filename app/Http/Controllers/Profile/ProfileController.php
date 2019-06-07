@@ -141,21 +141,40 @@ class ProfileController extends Controller
      */
     public function update(Request $request)
     {
-        $request->validate([
+        if(!is_null(request('password')))
+        request()->validate([
             'username' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:user,email,'.Auth::user()->id_user.',id_user',
             'password' => 'required|string|min:6|confirmed',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
+        else
+        $request->validate([
+            'username' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:user,email,'.Auth::user()->id_user.',id_user',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        $imageName = null;
+        if($request->hasFile('image'))
+        {
+            $imageName = time().'.'.request()->image->getClientOriginalExtension();
+            request()->image->move(public_path('images'), $imageName);
+        }
         $member = Member::find(Auth::user()->id_user);
        
         $member->username = request('username');
         $member->email = request('email');
         $member->biodescription = request('biodescription');
-        $member->password = bcrypt(request('password'));
+        if(!is_null(request('password')))
+            $member->password = bcrypt(request('password'));
+        if(!is_null($imageName))
+            $member->profilephoto = $imageName;
         
         $member->save();
-        
-        return redirect('logout');
+        if(!is_null(request('password')))
+            return redirect('logout');
+        else
+            return redirect(URL::to('/topic/all'));
     }
 
     /**
@@ -379,8 +398,12 @@ class ProfileController extends Controller
     /**
     * Redirects to the settings page
     */ 
-    public function settings(){
-        return view('pages.profile.settings')->with('username',Auth::user()->username);  
+    public function settings($username){
+        $member = Auth::user();
+        if($username == $member->username)
+            return view('pages.profile.settings', compact('member'));
+        else
+            return redirect('/404');
     }
 
     public function getType()

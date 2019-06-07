@@ -11,6 +11,7 @@ use App\Models\Member;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\ValidationException;
 use Socialite;
+use Illuminate\Support\Facades\URL;
 
 class LoginController extends Controller
 {
@@ -67,7 +68,7 @@ class LoginController extends Controller
     {
         session()->forget('type');
         Auth::logout();
-        return redirect(URL::to('/topic/all'));
+        return redirect(URL::to('/login'));
     }
     public function login(Request $request)
     {
