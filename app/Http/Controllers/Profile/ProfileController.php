@@ -218,7 +218,58 @@ class ProfileController extends Controller
             );
         }
         
+    }
+    
+    /**
+     * Follow user
+     */
+    public function follow(Request $request, $username) {
+        $replace = [
+            'username' => Auth::user()['username']
+        ];
 
+        $id_userFollower = collect(DB::select('
+            SELECT id_user
+            FROM "user"
+            WHERE "user".username LIKE :username
+            ',['username' => $username2]))->first()->id_user;
+        
+        $id_userFollowing = collect(DB::select('
+           SELECT id_user
+           FROM "user"
+           WHERE "user".username = $username'))->first()->id_user;
+
+        DB::select('
+          INSERT INTO follow(follower, following)
+          VALUES(:id_userFollower, :id_userFollowing)
+          ',['id_userFollower' => $id_userFollower,'id_userFollowing' => $id_userFollowing]
+        );
+    }
+
+    /**
+     * Unfollow user
+     */
+    public function unFollow(Request $request, $username) {
+  
+        $replace = [
+            'username' => Auth::user()['username']
+        ];
+
+        $id_userFollower = collect(DB::select('
+            SELECT id_user
+            FROM "user"
+            WHERE "user".username LIKE :username
+            ',['username' => $username2]))->first()->id_user;
+        
+        $id_userFollowing = collect(DB::select('
+           SELECT id_user
+           FROM "user"
+           WHERE "user".username = $username'))->first()->id_user;
+           
+        DB::select('
+        DELETE FROM follow 
+        where follower = $id_userFollower and following = $id_userFollowing'
+        );
     }
 
     public function promoteToModerator(Request $request,$username){
@@ -304,26 +355,6 @@ class ProfileController extends Controller
         return redirect()->route('settings');
     }
 
-    /**
-     * Follow user
-     * @param Member $follower
-     * @return reponse to the previous location 
-     */
-    public function follow(Member $follower) {
-        Auth::user()->follow($follower);
-        return back();
-    }
-
-    
-    /**
-     * Unfollow user
-     * @param Member $follower
-     * @return reponse to the previous location 
-     */
-    public function unFollow(Member $follower) {
-        Auth::user()->unFollow($follower);
-        return back();
-    }
      
    /**
     * Redirects to the followers page

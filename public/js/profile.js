@@ -1,5 +1,44 @@
 window.addEventListener("load",onLoadprofile);
 window.addEventListener("resize",profileIcon);
+
+
+function follow(){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        type:'post',
+        url:'/api/member/'+ username +'/toggle-follow',
+        success:function(data){
+            window.location.reload();
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
+}
+
+function unfollow(){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax({
+        type:'post',
+        url:'/api/member/'+ username +'/toggle-unfollow',
+        success:function(data){
+            window.location.reload();
+        },
+        error: function (data) {
+            console.log("server error");
+        }
+    });
+}
+
+
 function onLoadprofile() {
     profileIcon();
     let filhos=document.querySelectorAll("body > div");
