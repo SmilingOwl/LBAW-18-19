@@ -9,6 +9,10 @@
     <script src={{asset('js/voteQuestionDetail.js')}}></script>
 @endsection
 
+@section('title')
+    Question | LearnIt
+@endsection
+
 @section('content')
 
 <div class="container" id="question-big">

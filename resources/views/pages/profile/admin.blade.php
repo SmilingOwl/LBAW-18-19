@@ -10,6 +10,10 @@
     <script src={{asset('js/admin.js')}}></script>
 @endsection
 
+@section('title')
+    Admin | LearnIt
+@endsection
+
 @section('content')
     
   <div class="container" style="margin-bottom:1em;">

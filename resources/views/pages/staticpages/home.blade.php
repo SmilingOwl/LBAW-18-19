@@ -1,5 +1,9 @@
 @extends('layouts.homelayout')
 
+@section('title')
+    Home | LearnIt
+@endsection
+
 @section('content')
 
 

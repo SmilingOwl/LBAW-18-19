@@ -10,6 +10,10 @@
     <script src={{asset('js/footer_position.js')}}></script>
 @endsection
 
+@section('title')
+    Moderator | LearnIt
+@endsection
+
 @section('content')
   <div class="container" style="margin-bottom:1em;">
     <!-- Search form -->

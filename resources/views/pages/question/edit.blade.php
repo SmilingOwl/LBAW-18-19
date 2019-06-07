@@ -9,6 +9,10 @@
     <script src={{asset('js/footer_position.js')}}></script>
 @endsection
 
+@section('title')
+    Edit question | LearnIt
+@endsection
+
 @section('content')
     
 <h1 class="h1-responsive font-weight-bold text-center mt-5 mb-3 py-3">Want to ask something?</h1>

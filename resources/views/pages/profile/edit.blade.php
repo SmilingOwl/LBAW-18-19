@@ -9,6 +9,10 @@
     <script src={{asset('js/addImage.js')}}></script>
 @endsection
 
+@section('title')
+    Edit-profile | LearnIt
+@endsection
+
 @section('content')
 
     <div class="container">

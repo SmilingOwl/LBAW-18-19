@@ -7,6 +7,11 @@
     <script src={{asset('js/bar_nav.js')}}></script>
     <script src={{asset('js/footer_position.js')}}></script>
 @endsection
+
+@section('title')
+    Faq | LearnIt
+@endsection
+
 @section('content')
 
 

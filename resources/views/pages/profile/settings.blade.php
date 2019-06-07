@@ -9,6 +9,9 @@
 <script src={{asset('js/addImage.js')}}></script>
 @endsection
 
+@section('title')
+    Settings | LearnIt
+@endsection
 
 @section('content')
 

@@ -6,6 +6,11 @@
 
     <script src={{asset('js/bar_nav.js')}}></script>
 @endsection
+
+@section('title')
+    Contacts | LearnIt
+@endsection
+
 @section('content')
 
 <div class="container">

@@ -7,6 +7,10 @@
     <script src={{asset('js/bar_nav.js')}}></script>
     <script src={{asset('js/footer_position.js')}}></script>
 @endsection
+@section('title')
+    404 | LearnIt
+@endsection
+
 @section('content')
 
 <div class="container" id="notFound" >
