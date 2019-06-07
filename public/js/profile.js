@@ -2,7 +2,7 @@ window.addEventListener("load",onLoadprofile);
 window.addEventListener("resize",profileIcon);
 
 
-function follow(){
+function follow(username){
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -20,7 +20,7 @@ function follow(){
     });
 }
 
-function unfollow(){
+function unfollow(username){
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
