@@ -32,7 +32,7 @@
                 </div>
 
                 <button type="submit" class="btn btn-dark" style="width: 100%; margin-top: 20px; margin-bottom: 20px;">Sign in</button>
-                <a href="recover" class="logInText" style="color:black"> Forgot password?</a>
+                <!--<a href="recover" class="logInText" style="color:black"> Forgot password?</a>-->
                 <a href= {{ route('register') }} class="logInText" style="color:black"> New here? Create an
                     account!</a>
                 @if ($errors->any())

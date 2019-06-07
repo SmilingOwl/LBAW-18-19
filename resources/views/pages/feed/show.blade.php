@@ -129,8 +129,13 @@
                         </div>
                         <div class="media-body">
                             <a href={{URL::to('profile/'.$question->username)}}>
+                                @if (!is_null($question->photo))
                                 <h4 class="media-heading resultHeader"><img src={{asset('images/'.$question->photo)}} alt="profile"
                                     class="media-object rounded-circle profilePic" style="width:3rem">{{ $question->username }}</h4>
+                                @else
+                                <h4 class="media-heading resultHeader"><img src={{asset('images/defaultPhoto.png')}} alt="profile"
+                                    class="media-object rounded-circle profilePic" style="width:3rem">{{ $question->username }}</h4>
+                                @endif
                             </a>
                             <div class="container">
                                 <a class="question" href={{URL::to('questions/'.$question->id_question)}}>{{ $question->title }}</a>
@@ -181,8 +186,13 @@
                         </div>
                         <div class="media-body">
                             <a href={{URL::to('profile/'.$question->username)}}>
+                                @if (!is_null($question->photo))
                                 <h4 class="media-heading resultHeader"><img src={{asset('images/'.$question->photo)}} alt="profile"
                                     class="media-object rounded-circle profilePic" style="width:3rem">{{ $question->username }}</h4>
+                                @else
+                                <h4 class="media-heading resultHeader"><img src={{asset('images/defaultPhoto.png')}} alt="profile"
+                                    class="media-object rounded-circle profilePic" style="width:3rem">{{ $question->username }}</h4>
+                                @endif
                             </a>
                             <div class="container">
                                 <a class="question" href={{URL::to('questions/'.$question->id_question)}}>{{ $question->title }}</a>

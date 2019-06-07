@@ -13,8 +13,13 @@
             <div class="row align-items-center">
 
                 <div class="col-md-4 text-center">
+                    @if (!is_null($member->profilephoto))
                     <img class="rounded-circle img-fluid img-profile" alt="profile_pic" src={{asset('/images/' . $member->profilephoto)}}
                         style=" width:90%; max-width: 230px; max-height: 230px;">
+                    @else
+                    <img class="rounded-circle img-fluid img-profile" alt="profile_pic" src={{asset('/images/defaultPhoto.png')}}
+                        style=" width:90%; max-width: 230px; max-height: 230px;">
+                    @endif
                 </div>
 
                 <div class="col-md-4 text-left">

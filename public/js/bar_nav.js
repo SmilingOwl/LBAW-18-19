@@ -23,8 +23,9 @@ https: //getbootstrap.com/docs/4.0/components/forms/#validation
             }, false);
         });
     }, false);
-
+let loaded=false;
 function onLoad() {
+    loaded=true;
     img_logo = document.querySelector(".logo-image");
     profile_bar = document.querySelector(".info-user");
     search_bar = document.querySelector(".ask-search-bar");
@@ -662,6 +663,7 @@ function showCategories() {
 
 
 function testIcon() {
+    if(!loaded)return;
     let logo_redirect = document.querySelector(".logo a");
     if (user_type == null) {
         testIconUnLogged();
