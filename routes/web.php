@@ -89,6 +89,8 @@ Route::put('/api/member/{username}/toggle-unfollow', 'Profile\ProfileController@
 Route::post('api/members/{username}/ban', 'Profile\ProfileController@ban');
 Route::post('api/members/{username}/dismiss', 'Profile\ProfileController@dismissModerator');
 Route::post('api/members/{username}/promote', 'Profile\ProfileController@promoteToModerator');
+Route::delete('api/reports/{id_report}/ignore', 'Profile\ProfileController@ignoreReport');
+Route::delete('api/reports/{id_report}/deleteContent', 'Profile\ProfileController@deleteContent');
 
 
 //Search

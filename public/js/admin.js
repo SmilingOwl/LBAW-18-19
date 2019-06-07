@@ -52,6 +52,7 @@ function dismissModerator(username){
     });
 }
 
+
 function promoteUser(username){
     $.ajaxSetup({
         headers: {
@@ -87,7 +88,8 @@ function deleteContent(){
   
 }
 
-function ignoreReport(){
+function ignoreReport(id_report){
+    console.log(id_report)
     $.ajaxSetup({
         headers: {
             'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
