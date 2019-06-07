@@ -100,9 +100,7 @@
 <div class="container d-flex justify-content-end" id="sortBar">
 
     <div class="dropdown show" id="sortBy">
-        <a class="btn dropdown-toggle" href="#" role="button" id="sortByButton" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Sort By </a>
+        
 
         <div class="dropdown-menu" >
             <a class="dropdown-item" href="#">Newest</a>
@@ -224,12 +222,6 @@
                 @endforeach
                 @endif
             @endif
-            </div>
-
-            <div class="row" style="justify-content: center">
-                <button type="button" name="loadMore" class="btn" id="loadMore">Load
-                    More</a>
-                    {{ csrf_field() }}
             </div>
 
         </div>
