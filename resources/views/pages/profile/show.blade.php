@@ -12,6 +12,9 @@
 
 @section('content')
 
+@section('title')
+    All profile | LearnIt
+@endsection
 
 <div class="mt-5 grey-background container">
 

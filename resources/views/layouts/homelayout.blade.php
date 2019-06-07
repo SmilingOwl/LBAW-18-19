@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="{{ app()->getLocale() }}">
 
 <head>
     @include('includes')
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/home.css')}}>
-    <link rel="stylesheet" type="text/css" media="screen" href={{asset('css/general.css')}}>
+    <link rel="stylesheet" media="screen" href={{asset('css/home.css')}}>
+    <link rel="stylesheet" media="screen" href={{asset('css/general.css')}}>
     <script>
         let info = @json($catinfo);
     </script>

@@ -14,7 +14,7 @@ function onLoad() {
     div_container2.setAttribute("class", "search-container2");
     let div_search_bar_cat = document.createElement("div");
     div_search_bar_cat.setAttribute("class", "search-bar-cat dropdown");
-    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/icon-14.svg" alt="logo" class="drop-menu-cat" value="all"></button>';
+    div_search_bar_cat.innerHTML = '<button type="button" class="btn dropdown-toggle dropdown-bar-cat" data-toggle="dropdown"><img src="../images/icon-14.svg" alt="logo" class="drop-menu-cat"></button>';
     let div_group_drop_down = document.createElement("div");
     div_group_drop_down.setAttribute("class", "dropdown-menu");
     div_group_drop_down.innerHTML = '<a class="dropdown-item drop-cat" ><img src="../images/icon-14.svg" class="rounded dropdown-image-cat" alt="All"> All</a>';
