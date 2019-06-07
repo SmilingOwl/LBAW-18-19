@@ -46,12 +46,20 @@
             </div>
         </form>
     </div>
-    <a href="/login" class="btn btn btn-dark btn-lg" id="ask-question-main" role="button">
-        Login
-    </a>
-    <a href="/register" class="btn btn btn-dark btn-lg" id="ask-question-main" role="button">
-        Register
-    </a>
+    <div class="row">
+        <div class="column">
+            <a href="/login" class="btn btn btn-dark btn-lg" id="login-main" role="button">
+                Login
+            </a>
+        </div>
+        <div class="column" id="logreg">
+        </div>
+        <div class="column">
+            <a href="/register" class="btn btn btn-dark btn-lg" id="register-main" role="button">
+                 Register
+            </a>
+        </div>
+</div>
 </div>
 
 <div id="expand-down">

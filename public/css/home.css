@@ -165,7 +165,17 @@ a > p.under_icon:hover{
      background-color: #FFFDF8;
  }
  
- #ask-question-main
+ #logreg
  {
-     height: 50px;
+     width: 100px;
+ }
+
+ #login-main
+ {
+     width:150px;
+ }
+
+ #register-main
+ {
+     width:150px;
  }
