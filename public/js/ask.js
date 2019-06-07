@@ -1,4 +1,1 @@
-
-if ($('.question_line').val() == "Ask away!" ) {
-    $('.submit').addClass('disabled');    
-}
+"Ask away!"==$(".question_line").val()&&$(".submit").addClass("disabled");
