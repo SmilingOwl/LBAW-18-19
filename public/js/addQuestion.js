@@ -3,7 +3,7 @@ window.addEventListener("load",onLoadAddQuestion);
 function onLoadAddQuestion() {
     let cats = document.querySelectorAll(".div-cat");
     let inputType = document.querySelector(".hidden-catType");
-    cats[0].setAttribute("style","border:1px; border-style: solid; border-radius:10px;");
+    cats[0].setAttribute("style","border:3px; border-style: solid; border-radius:10px;");
     for(let i=0;i<cats.length;i++)
     {
         cats[i].addEventListener("click",function() {
@@ -12,7 +12,7 @@ function onLoadAddQuestion() {
             {
                 cats[j].setAttribute("style","");
             }
-            cats[i].setAttribute("style","border:1px; border-style: solid; border-radius:10px;");
+            cats[i].setAttribute("style","border:3px; border-style: solid; border-radius:10px;");
             inputType.setAttribute("value",type);
         });
     }

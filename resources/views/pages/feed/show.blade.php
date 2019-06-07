@@ -8,7 +8,6 @@
     <script src={{asset('js/bar_nav.js')}}></script>
     <script src={{asset('js/footer_position.js')}}></script>
     <script src={{asset('js/toolTip.js')}}></script>
-    <script src={{asset('js/questions_load.js')}}></script>
 
 @endsection
 @section('content')
