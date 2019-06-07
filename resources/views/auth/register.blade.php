@@ -23,27 +23,27 @@
 
                <div class="input-container">
                    <i class="fa fa-user icon"></i>
-                   <input class="form" id="insideInput1" type="text" placeholder="Username" name="username">
+                   <input class="form" id="insideInput1" type="text" placeholder="Username" name="username" required>
                </div>
 
 
                <div class="input-container">
                    <i class="fa fa-envelope icon"></i>
-                   <input class="form" id="insideInput2" type="text" placeholder="Email" name="email">
+                   <input class="form" id="insideInput2" type="text" placeholder="Email" name="email" required>
                </div>
 
                <div class="input-container">
                    <i class="fa fa-key icon"></i>
-                   <input class="form" id="insideInput3" type="password" placeholder="Password" name="password">
+                   <input class="form" id="insideInput3" type="password" placeholder="Password" name="password" required>
                </div>
                <div class="input-container">
                    <i class="fa fa-key icon"></i>
-                   <input class="form" id="insideInput3" type="password" placeholder="Confirm password" name="password_confirmation">
+                   <input class="form" id="insideInput3" type="password" placeholder="Confirm password" name="password_confirmation" required>
                </div>
 
                <div class="input-container">
                    <i class="fa fa-gift icon"></i>
-                   <input class="form" id="insideInput4" type="date" name="birthdate">
+                   <input class="form" id="insideInput4" type="date" name="birthdate" required>
                </div>
 
                <button type="submit" class="btn btn-dark" >Register</button>
