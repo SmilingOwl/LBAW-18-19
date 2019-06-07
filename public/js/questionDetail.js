@@ -442,6 +442,7 @@ function reportQuestion(id,text) {
     });
 }
 
+
 function reportAnswer(id) {
     let text = document.querySelector(".answer"+id + " .media-body > div").innerHTML;
     $.ajaxSetup({
