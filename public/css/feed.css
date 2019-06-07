@@ -7,7 +7,6 @@ body{
     box-shadow: none;
  }
 
-
 #topBar{
     font-family: 'Prompt', sans-serif;
     margin-bottom: 4%;
@@ -15,8 +14,6 @@ body{
     padding: 2% 0 4%;
     align-items: center;
     height: 10rem;
- /*   display: inline-grid;
-    grid-template-columns: 65% 5%;*/
 }
 
 
