@@ -13,4 +13,4 @@ Users can also edit their profiles, which include a small description and a pict
 
 More information [here](https://github.com/SmilingOwl/LBAW-18-19/tree/master/artefacts).
 
-You can also checkout LearnIt's[promotional video]().
+You can also checkout LearnIt's [promotional video](https://github.com/SmilingOwl/LBAW-18-19/blob/master/artefacts/video-1560175509.mp4).
