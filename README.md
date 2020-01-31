@@ -1,5 +1,12 @@
 # LearnIt
 
+**Curricular Unity:** LBAW - Database and Web Applications Laboratory <br>
+**Lective Year:** 2018/2019
+
+Developed in collaboration with *João Lima* and *Leonor Freitas*.
+<br>
+
+
 ## Brief description 
 
 **LearnIt** is an academic-themed Q&A site, which allows users to ask and answer questions related to different fields of knowledge. Users can also vote on posts to show their opinion on the quality or interest of a question or an answer, also contributing to the poster’s points number and rank.
@@ -13,4 +20,22 @@ Users can also edit their profiles, which include a small description and a pict
 
 More information [here](https://github.com/SmilingOwl/LBAW-18-19/tree/master/artefacts).
 
-You can also checkout LearnIt's [promotional video](https://github.com/SmilingOwl/LBAW-18-19/blob/master/artefacts/video-1560175509.mp4).
+You can also checkout LearnIt's [promotional video](https://youtu.be/JbBX9UjeL4k).
+<br>
+
+## Libraries Used
+We used the following libraries and frameworks:
+
+* **Bootstrap** : an open source toolkit for developing with HTML, CSS, and JS. Used in all styling pages.
+* **Laravel** : a PHP Framework For Web Artisans. Used throughout.
+* **Font Awesome** : icon set and toolkit. Used in icons and non-Unicode symbols.
+
+*NOTE: all icons are original, created by the development team.*
+<br>
+
+## Technologies
+* PHP
+* HTML
+* CSS
+* JavaScript
+* PostgreSQL
