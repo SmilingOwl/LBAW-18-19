@@ -30,7 +30,7 @@ We used the following libraries and frameworks:
 * **Laravel** : a PHP Framework For Web Artisans. Used throughout.
 * **Font Awesome** : icon set and toolkit. Used in icons and non-Unicode symbols.
 
-*NOTE: all icons are original, created by the development team.*
+*NOTE: all icons are original and created by the development team.*
 <br>
 
 ## Technologies
@@ -39,3 +39,17 @@ We used the following libraries and frameworks:
 * CSS
 * JavaScript
 * PostgreSQL
+
+## Some prints
+
+### Home
+![HOME](https://github.com/SmilingOwl/LBAW-18-19/blob/master/artefacts/A3/lbaw%20prints/home.png)
+
+### Profile
+![PROFILE](https://github.com/SmilingOwl/LBAW-18-19/blob/master/artefacts/A3/lbaw%20prints/profile.png)
+
+### Add question
+![ask](https://github.com/SmilingOwl/LBAW-18-19/blob/master/artefacts/A3/lbaw%20prints/ask.png)
+
+### Topic
+![topic](https://github.com/SmilingOwl/LBAW-18-19/blob/master/artefacts/A3/lbaw%20prints/topic.png)
