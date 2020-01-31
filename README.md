@@ -1,4 +1,4 @@
-# LearnIt
+# LearnIt (Q&A)
 
 **Curricular Unity:** LBAW - Database and Web Applications Laboratory <br>
 **Lective Year:** 2018/2019
