@@ -44,12 +44,15 @@ We used the following libraries and frameworks:
 
 ### Home
 ![HOME](https://github.com/SmilingOwl/LBAW-18-19/blob/master/artefacts/A3/lbaw%20prints/home.png)
+<br>
 
 ### Profile
 ![PROFILE](https://github.com/SmilingOwl/LBAW-18-19/blob/master/artefacts/A3/lbaw%20prints/profile.png)
+<br>
 
 ### Add question
 ![ask](https://github.com/SmilingOwl/LBAW-18-19/blob/master/artefacts/A3/lbaw%20prints/ask.png)
+<br>
 
 ### Topic
 ![topic](https://github.com/SmilingOwl/LBAW-18-19/blob/master/artefacts/A3/lbaw%20prints/topic.png)
