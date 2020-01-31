@@ -1,23 +1,16 @@
-# LBAW-18-19
-lbaw project
+# LearnIt
 
-[/lbaw/artefacts](https://git.fe.up.pt/lbaw/artefacts)
+## Brief description 
 
-[/lbaw/lbaw18/lbaw1834](https://git.fe.up.pt/lbaw/lbaw18/lbaw1834)
+**LearnIt** is an academic-themed Q&A site, which allows users to ask and answer questions related to different fields of knowledge. Users can also vote on posts to show their opinion on the quality or interest of a question or an answer, also contributing to the poster’s points number and rank.
 
-[Drive para documentação](https://drive.google.com/open?id=1jgxPaucu-IC_A_ew14pN-_Zn0_RNh-lP)
+**LearnIt** has an easy-to-use and straightforward interface in order to provide a seamless, pleasant and intuitive experience. The home page presents itself with a direct link to ask a question, and the twelve category hubs below, should the user choose to scroll down to see their feed.
 
-[Drive A1](https://drive.google.com/open?id=14Wg8jC64grnJS8M7-_50WIc10KhrhsHW)
+In a category hub (topic) or in the main feed, the users can see the available questions, as well as a navbar for searching and login purposes, a leaderboard featuring the highest ranking users and all the category logos, that redirect to their respective hub.
+When a user views a question, they can answer it, vote on it (or on any answer) or, if they were the original poster, mark an answer as the best one. Any post can also be reported to a moderator for inappropriate content.
 
-[Drive A2](https://drive.google.com/open?id=1991bnZ-58_8fgACh-aLt458oLoLRjlHy)
+Users can also edit their profiles, which include a small description and a picture, and follow other users. Moderators can review reported content and choose to either dismiss the report, delete the content or ban the user under review, and administrators can promote regular users to moderators or demote existing moderators back to regular users.
 
-[Drive A3](https://drive.google.com/open?id=1VBxyD7oATWhSnVT2s_Ys53xZP386q-kl)
+More information [here](https://github.com/SmilingOwl/LBAW-18-19/tree/master/artefacts).
 
-[GitLab A1](https://git.fe.up.pt/lbaw/lbaw18/lbaw1834/wikis/a1)
-
-[GitLab A2](https://git.fe.up.pt/lbaw/lbaw18/lbaw1834/wikis/a2)
-
-[GitLab A3](https://git.fe.up.pt/lbaw/lbaw18/lbaw1834/wikis/a3)
-
-
-[Bootstrap tutorial](https://www.w3schools.com/bootstrap4/default.asp)
+You can also checkout LearnIt's[promotional video]().
